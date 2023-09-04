@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="listeners.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="classes" name="Open Islamic Savings Account(failed)" verbose="0">
+    <classes>
+      <class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA">
+        <methods>
+          <include name="setAllureEnvironment"/>
+          <include name="after"/>
+          <include name="beforeTest"/>
+          <include name="test" invocation-numbers="0 2"/>
+        </methods>
+      </class> <!-- tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA -->
+      <class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA">
+        <methods>
+          <include name="after"/>
+          <include name="setAllureEnvironment"/>
+          <include name="test" invocation-numbers="1 2"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA -->
+    </classes>
+  </test> <!-- Open Islamic Savings Account(failed) -->
+</suite> <!-- Failed suite [Suite] -->

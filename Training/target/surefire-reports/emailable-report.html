@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Open Islamic Savings Account</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">82,012</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Open Islamic Savings Account &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA</td><td><a href="#m0">test</a></td><td rowspan="2">1693824261884</td><td rowspan="2">11197</td></tr><tr class="failedeven"><td><a href="#m1">test</a></td></tr><tr class="failedodd"><td rowspan="2">tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA</td><td><a href="#m2">test</a></td><td rowspan="2">1693824308801</td><td rowspan="2">13514</td></tr><tr class="failedodd"><td><a href="#m3">test</a></td></tr><tr><th colspan="4">Open Islamic Savings Account &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA</td><td><a href="#m4">test</a></td><td rowspan="1">1693824280949</td><td rowspan="1">27904</td></tr><tr class="passedodd"><td rowspan="1">tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA</td><td><a href="#m5">test</a></td><td rowspan="1">1693824262214</td><td rowspan="1">36796</td></tr></tbody>
+</table>
+<h2>Open Islamic Savings Account</h2><h3 id="m0">tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA#test</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>OISAC</td><td>QA46</td><td>Infy@123</td><td>1234567</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : The menu option is invalid or it is not available for the user.}
+  (Session info: chrome=90.0.4430.72): The menu option is invalid or it is not available for the user.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;F1TESTCORE2&apos;, ip: &apos;10.10.23.242&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.72, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\AMMAR~1.SHA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:56742}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 2579862f972812672e34274ec14...}
+Session ID: 2579862f972812672e34274ec1480f0d
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.parentFrame(RemoteWebDriver.java:897)
+	at pageobjects.OpenSavingsAccountPage.addAccountDetails(OpenSavingsAccountPage.java:41)
+	at procedures.OpenSavingsAccountProcedures.IslamicSavingsAccount_Maker(OpenSavingsAccountProcedures.java:10)
+	at tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA.test(ABE_OpenIslamicSavingsAccount_MudarabahSBA.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA#test</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>OISAC</td><td>QA48</td><td>Ali@12345</td><td>1234567</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : The menu option is invalid or it is not available for the user.}
+  (Session info: chrome=90.0.4430.72): The menu option is invalid or it is not available for the user.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;F1TESTCORE2&apos;, ip: &apos;10.10.23.242&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.72, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\AMMAR~1.SHA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:56847}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: fa960d1a2c453d2ed85e1581e9b...}
+Session ID: fa960d1a2c453d2ed85e1581e9b9e3cc
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.parentFrame(RemoteWebDriver.java:897)
+	at pageobjects.OpenSavingsAccountPage.addAccountDetails(OpenSavingsAccountPage.java:41)
+	at procedures.OpenSavingsAccountProcedures.IslamicSavingsAccount_Maker(OpenSavingsAccountProcedures.java:10)
+	at tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA.test(ABE_OpenIslamicSavingsAccount_MudarabahSBA.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA#test</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>VISAO</td><td>ABE25</td><td>Infy@123</td><td>170001843540010011</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Could not get a token for application.Core_ABE}
+  (Session info: chrome=90.0.4430.72): Could not get a token for application.Core_ABE
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;F1TESTCORE2&apos;, ip: &apos;10.10.23.242&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.72, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\AMMAR~1.SHA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:56824}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: b669f7f30dde3f9119fe6c2ded1...}
+Session ID: b669f7f30dde3f9119fe6c2ded15ae2c
+*** Element info: {Using=xpath, value=(//a[@id=&apos;GlobalbgMenu_anchor&apos;])[1]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at utils.PageFunctionUtils.sync(PageFunctionUtils.java:48)
+	at pageobjects.VerifyIslamicSavingsAccountPage.addAccountDetails(VerifyIslamicSavingsAccountPage.java:44)
+	at procedures.VerifyIslamicsavingsAccountProcedures.navigateToVerifyIslamicSavingsAccountPage(VerifyIslamicsavingsAccountProcedures.java:11)
+	at tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA.test(ABE_VerifyIslamicSavingsAccount_MudarabahSBA.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA#test</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>VISAO</td><td>ABE26</td><td>Infy@123</td><td>170001843540010028</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Could not get a token for application.Core_ABE}
+  (Session info: chrome=90.0.4430.72): Could not get a token for application.Core_ABE
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;F1TESTCORE2&apos;, ip: &apos;10.10.23.242&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.72, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\AMMAR~1.SHA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:56868}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: bb3e2f92302e5f99aa93eaf8625...}
+Session ID: bb3e2f92302e5f99aa93eaf8625dd63a
+*** Element info: {Using=xpath, value=(//a[@id=&apos;GlobalbgMenu_anchor&apos;])[1]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at utils.PageFunctionUtils.sync(PageFunctionUtils.java:48)
+	at pageobjects.VerifyIslamicSavingsAccountPage.addAccountDetails(VerifyIslamicSavingsAccountPage.java:44)
+	at procedures.VerifyIslamicsavingsAccountProcedures.navigateToVerifyIslamicSavingsAccountPage(VerifyIslamicsavingsAccountProcedures.java:11)
+	at tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA.test(ABE_VerifyIslamicSavingsAccount_MudarabahSBA.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA#test</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>OISAC</td><td>QA47</td><td>Infy@123</td><td>1234567</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA#test</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>VISAO</td><td>ABE22</td><td>Infy@123</td><td>170001103577010034</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

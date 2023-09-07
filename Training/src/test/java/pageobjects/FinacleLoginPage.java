@@ -45,8 +45,6 @@ public class FinacleLoginPage {
 	    		PageFunctionUtils.enterDataInWebElement(driver, passwordTextfield, keysToSend);
 	    		PageFunctionUtils.clickOnElement(driver, loginButton);
 	        } catch (Exception e) {
-	            // Handle the "No Such Alert" exception
-	            System.out.println("No alert is present on the page.");
 	        }
 		return this;
 	}

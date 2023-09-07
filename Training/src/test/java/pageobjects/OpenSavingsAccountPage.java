@@ -1,7 +1,11 @@
 package pageobjects;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import utils.PageFunctionUtils;
 
 public class OpenSavingsAccountPage {
@@ -21,6 +25,7 @@ public class OpenSavingsAccountPage {
 	private By SUBMIT = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By loginFrame_iframeID = By.xpath("(//iframe[@name='loginFrame'])[1]");
 	private By Core_ABE_iframeID = By.xpath("//iframe[@name='Core_ABE']");
+	public String successMessage;
 	public OpenSavingsAccountPage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -31,7 +36,14 @@ public class OpenSavingsAccountPage {
 			PageFunctionUtils.sync(driver, searchBar);
 	        PageFunctionUtils.enterDataInWebElement(driver, searchBar, menu);
 	        PageFunctionUtils.clickOnElement(driver, searchButton);
-	        
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBar, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+	        } catch (Exception e) {
+	        }
 	        return this;
 	}
 	
@@ -74,6 +86,8 @@ public class OpenSavingsAccountPage {
 		driver.findElement(SUBMIT).click();
 	    
 		Thread.sleep(3500);
+		
+		successMessage = driver.findElement(By.xpath("(//p[@id='_resMsg_paraMsg'])[1]")).getText().substring(0, 43);
 		
 		return this;
 	}

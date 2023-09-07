@@ -5,11 +5,10 @@
 <listeners>
 	<listener class-name="listeners.Listeners"/>
 </listeners>
-
-    <test thread-count="2" parallel = "classes" name="Open Islamic Savings Account">
+    <test thread-count="2" parallel = "classes" name="Islamic Savings Account">
          <classes>
-	 		<!--<class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA"/> -->
-	 		<class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA"/>
+	 		<class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA"/>
+	 		<!--<class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA"/>-->
           </classes>
-     </test> <!-- Test -->
-</suite> <!-- Suite -->
+     </test>
+</suite>

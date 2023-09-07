@@ -1,22 +1,30 @@
 package tests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.AssertJUnit;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.google.common.collect.ImmutableMap;
+import com.opencsv.exceptions.CsvValidationException;
 import data.OpenIslamicSavingsAccountData;
 import pageobjects.FinacleLoginPage;
-import procedures.OpenSavingsAccountProcedures;
-import utils.AssertionFactory;
+import pageobjects.OpenSavingsAccountPage;
+import procedures.OpenIslamicSavingsAccountProcedures;
 import utils.Properties;
 import utils.WebdriverFactory;
+import utils.csvPaths;
+import utils.OpenIslamicSavingsAccountCSVReader;
 import static com.github.automatedowl.tools.AllureEnvironmentWriter.allureEnvironmentWriter;
+
+import java.io.IOException;
 
 public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
 	
-    @BeforeSuite
+	@BeforeSuite
     void setAllureEnvironment() {
         allureEnvironmentWriter(
                 ImmutableMap.<String, String>builder()
@@ -33,20 +41,22 @@ public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FinacleURL);
 	}
-
-	@Test(dataProvider = "OpenIslamicSavingsAccountDataProvider", description="FCB-9792", dataProviderClass = OpenIslamicSavingsAccountData.class)
-	public void test(String menu, String username, String password, String val) throws Exception {
+	
+	@DataProvider(name="Open Islamic Savings Account DataProvider")
+	public Object[] dpMethod() throws CsvValidationException, IOException {
+		return OpenIslamicSavingsAccountCSVReader.csvReader(csvPaths.OISAC_CSV).toArray();
+	}
+	
+	@Test(dataProvider = "Open Islamic Savings Account DataProvider", dataProviderClass = ABE_OpenIslamicSavingsAccount_MudarabahSBA.class)
+	public void test(OpenIslamicSavingsAccountData data) throws Exception {
 		
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
-		.sendKeysUserNameTextfield(username)
-		.sendKeysPasswordTextfield(password)
-		.clickOnLoginButton(password);
-		
-		AssertionFactory.assertTrue(driver, true, this.getClass().getCanonicalName());
-        OpenSavingsAccountProcedures OSAP = new OpenSavingsAccountProcedures();
-        OSAP.IslamicSavingsAccount_Maker(driver, menu, val);
-		AssertionFactory.assertTrue(driver, true, this.getClass().getCanonicalName());		
+		.sendKeysUserNameTextfield(data.getUsername())
+		.sendKeysPasswordTextfield(data.getPassword())
+		.clickOnLoginButton(data.getPassword());
+        OpenIslamicSavingsAccountProcedures.IslamicSavingsAccount_Maker(driver, data);
+        AssertJUnit.assertEquals("The savings account is opened successfully.", driver.findElement(By.xpath("(//p[@id='_resMsg_paraMsg'])[1]")).getText().substring(0, 43));
 	}
 	
 	@AfterMethod

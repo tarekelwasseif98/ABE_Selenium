@@ -1,60 +1,41 @@
 package data;
 
-import org.testng.annotations.DataProvider;
-
-import utils.CSVReader;
-import utils.csvPaths;
-
 public class VerifyIslamicSavingsAccountData {
 	
-	private Object menu;
-	private Object username;
-	private Object password;
-	private Object accountid;
+	private String menu;
+	private String username;
+	private String password;
+	private String accountid;
 	
-	public Object getMenu() {
+	public String getMenu() {
 		return menu;
 	}
 
-	public void setMenu(Object menu) {
+	public void setMenu(String menu) {
 		this.menu = menu;
 	}
 	
-	public Object getUsername() {
+	public String getUsername() {
 		return username;
 	}
 
-	public void setUsername(Object username) {
+	public void setUsername(String username) {
 		this.username = username;
 	}
 
-	public Object getPassword() {
+	public String getPassword() {
 		return password;
 	}
 
-	public void setPassword(Object password) {
+	public void setPassword(String password) {
 		this.password = password;
 	}
 	
-	public Object getAccountid() {
+	public String getAccountid() {
 		return accountid;
 	}
 
-	public void setAccountid(Object accountid) {
+	public void setAccountid(String accountid) {
 		this.accountid = accountid;
 	}
-
-	@DataProvider (name = "VerifyIslamicSavingsAccountDataProvider")
-	public Object[][] extractionMethod() throws InterruptedException{
-		Object[][] x = CSVReader.csvReader(csvPaths.VISAO_CSV);
-	    for(int i=0; i<x.length; i++) {
-	    	for(int j=0; j<x.length-3; j++) {
-	    		setMenu(x[i][j]);
-	        	setUsername(x[i][j+1]);
-	        	setPassword(x[i][j+2]);
-	        	setAccountid(x[i][j+3]);
-	    }
-	 }
-		return x;
-   }
 }

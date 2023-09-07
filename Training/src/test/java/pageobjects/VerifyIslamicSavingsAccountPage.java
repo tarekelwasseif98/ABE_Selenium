@@ -1,7 +1,11 @@
 package pageobjects;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import utils.PageFunctionUtils;
 
 public class VerifyIslamicSavingsAccountPage {
@@ -18,9 +22,7 @@ public class VerifyIslamicSavingsAccountPage {
 
 	
 	public VerifyIslamicSavingsAccountPage(WebDriver driver) {
-		
 		this.driver = driver;
-		
 	}
 	
 	public VerifyIslamicSavingsAccountPage sendKeysMenuName(String menu) throws Exception {
@@ -30,7 +32,14 @@ public class VerifyIslamicSavingsAccountPage {
 		PageFunctionUtils.sync(driver, searchBar);
 		PageFunctionUtils.enterDataInWebElement(driver, searchBar, menu);
         PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        try {
+            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+            alert.accept();
+            PageFunctionUtils.enterDataInWebElement(driver, searchBar, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);
+        } catch (Exception e) {
+        }
 	return this;
 }
 	

@@ -5,71 +5,93 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import io.qameta.allure.Step;
 import utils.PageFunctionUtils;
 
 public class VerifyIslamicSavingsAccountPage {
 
 	private WebDriver driver;
-	private By searchBar = By.id("menuSelect");
+	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
-	private By AC_ID = By.xpath("(//input[@id='_tempAcid'])[1]");
-	private By Go_Button= By.xpath("(//button[normalize-space()='Go'])[1]");
-	private By Submit_Button= By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private String loginFrame_iframeID = "loginFrame";
+	private By acidTextField = By.xpath("(//input[@id='_tempAcid'])[1]");
+	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
+	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
+	private String loginFrameIframeID = "loginFrame";
 	private By but = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
-	private By formArea_iframeID =By.xpath("//iframe[@name='formArea']"); 
+	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']"); 
+	private String sideTab1 = "//a[@id='stepII_anchor']";
+	private String sideTab2 = "(//a[@id='stepII4_anchor'])[1]";  
+	private String sideTab3 = "(//a[@id='stepII10_anchor'])[1]";
+	private String sideTab4 = "(//a[@id='stepII5_anchor'])[1]";
+	private String sideTab5 = "(//a[@id='stepII7_anchor'])[1]";
+	private String sideTab6 = "(//a[@id='stepII3_anchor'])[1]";
+	private String sideTab7 = "(//a[@id='stepII1_anchor'])[1]";
+	private String sideTab8 = "(//a[@id='stepII19_anchor'])[1]";
 
-	
 	public VerifyIslamicSavingsAccountPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
+	@Step("Sending menu name")
 	public VerifyIslamicSavingsAccountPage sendKeysMenuName(String menu) throws Exception {
-        Thread.sleep(2000);
+		PageFunctionUtils.Sleep_5sec();
 		driver.switchTo().parentFrame();
-		driver.switchTo().frame((loginFrame_iframeID));
-		PageFunctionUtils.sync(driver, searchBar);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBar, menu);
+		driver.switchTo().frame((loginFrameIframeID));
+		PageFunctionUtils.sync(driver, searchBarTextField);
+		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
         PageFunctionUtils.clickOnElement(driver, searchButton);	       
         WebDriverWait wait = new WebDriverWait(driver, 10);
         try {
             Alert alert = wait.until(ExpectedConditions.alertIsPresent());
             alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBar, menu);
+            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
 	        PageFunctionUtils.clickOnElement(driver, searchButton);
-        } catch (Exception e) {
+	        }
+        catch (Exception e) {
         }
 	return this;
-}
+	}
 	
+	@Step("Frame switching")
+	public VerifyIslamicSavingsAccountPage switchFormAreaFrame() throws Exception {
+		PageFunctionUtils.Sleep_5sec();
+		driver.switchTo().parentFrame();
+	    driver.switchTo().frame(("loginFrame"));
+	    driver.switchTo().frame(("Core_ABE"));
+	    driver.switchTo().frame(("UX"));
+		PageFunctionUtils.sync(driver, but);
+		PageFunctionUtils.sync2(driver, formAreaIframeID);
+		return this;	
+	}
 	
-public VerifyIslamicSavingsAccountPage addAccountDetails(String val) throws Exception {
-	Thread.sleep(2000);
-	driver.switchTo().parentFrame();
-    driver.switchTo().frame(("loginFrame"));
-    driver.switchTo().frame(("Core_ABE"));
-    driver.switchTo().frame(("UX"));
-	PageFunctionUtils.sync(driver, but);
-	PageFunctionUtils.sync2(driver, formArea_iframeID);
+	@Step("Sending A/c. ID & Press GO")
+	public VerifyIslamicSavingsAccountPage addAccountID(String ACID) throws Exception {
+		ACID = ACID.substring(1, 19);
+		PageFunctionUtils.sync(driver, acidTextField);
+		driver.findElement(acidTextField).click();
+		driver.findElement(acidTextField).sendKeys(ACID);
+		driver.findElement(goButton).click();
+		return this;	
+	}
 	
-	PageFunctionUtils.sync(driver, AC_ID);
-	driver.findElement(AC_ID).click();
-	driver.findElement(AC_ID).sendKeys(val);
-	driver.findElement(Go_Button).click();
-	driver.findElement(By.xpath("(//a[@id='stepII_anchor'])[1]")).click();
-	driver.findElement(By.xpath("(//a[@id='stepII4_anchor'])[1]")).click();
-	driver.findElement(By.xpath("(//a[@id='stepII10_anchor'])[1]")).click();
-	driver.findElement(By.xpath("(//a[@id='stepII5_anchor'])[1]")).click();
-	driver.findElement(By.xpath("(//a[@id='stepII7_anchor'])[1]")).click();
-	driver.findElement(By.xpath("(//a[@id='stepII3_anchor'])[1]")).click();
-	driver.findElement(By.xpath("(//a[@id='stepII1_anchor'])[1]")).click();
-	driver.findElement(By.xpath("(//a[@id='stepII19_anchor'])[1]")).click();
-	driver.findElement(Submit_Button).click();
-    driver.switchTo().parentFrame();
-	driver.findElement(By.xpath("(//button[normalize-space()='Accept'])[1]")).click();
+	@Step("Side menu navigation")
+	public VerifyIslamicSavingsAccountPage navigateSideMenu() throws Exception {
+		driver.findElement(By.xpath(sideTab1)).click();
+		driver.findElement(By.xpath(sideTab2)).click();
+		driver.findElement(By.xpath(sideTab3)).click();
+		driver.findElement(By.xpath(sideTab4)).click();
+		driver.findElement(By.xpath(sideTab5)).click();
+		driver.findElement(By.xpath(sideTab6)).click();
+		driver.findElement(By.xpath(sideTab7)).click();
+		driver.findElement(By.xpath(sideTab8)).click();
+		return this;
+	}
 	
-	return this;
-		
+	@Step("Press SUBMIT")
+	public VerifyIslamicSavingsAccountPage pressSubmit() throws Exception {
+		driver.findElement(submitButton).click();
+	    driver.switchTo().parentFrame();
+		driver.findElement(By.xpath("(//button[normalize-space()='Accept'])[1]")).click();
+		return this;
 	}
 }

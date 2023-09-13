@@ -12,8 +12,8 @@ import utils.PageFunctionUtils;
 public class FinacleLoginPage {
 	
 	private By loginIframe = By.xpath("//*[@id=\"SSODiv\"]/iframe");
-	private By usernameTextfield = By.xpath("//*[@id=\"usertxt\"]");
-	private By passwordTextfield = By.xpath("//*[@id=\"passtxt\"]");
+	private By usernameTextField = By.xpath("//*[@id=\"usertxt\"]");
+	private By passwordTextField = By.xpath("//*[@id=\"passtxt\"]");
 	private By loginButton = By.xpath(String.format("//*[@id=\"Submit\"]"));
 	private WebDriver driver;
 	
@@ -22,16 +22,16 @@ public class FinacleLoginPage {
 	}
 	
 	@Step("Login with username: {0}")
-	public FinacleLoginPage sendKeysUserNameTextfield(String keysToSend) throws Exception {
+	public FinacleLoginPage sendKeysUserNameTextField(String keysToSend) throws Exception {
 
 		driver.switchTo().frame(driver.findElement(loginIframe));
-		PageFunctionUtils.enterDataInWebElement(driver, usernameTextfield, keysToSend);
+		PageFunctionUtils.enterDataInWebElement(driver, usernameTextField, keysToSend);
 		return this;
 	}
 	
-	@Step("Login with password: {1}")
-	public FinacleLoginPage sendKeysPasswordTextfield(String keysToSend) throws Exception {
-		PageFunctionUtils.enterDataInWebElement(driver, passwordTextfield, keysToSend);
+	@Step("Login with password: {0}")
+	public FinacleLoginPage sendKeysPasswordTextField(String keysToSend) throws Exception {
+		PageFunctionUtils.enterDataInWebElement(driver, passwordTextField, keysToSend);
 		return this;
 	}
 	
@@ -42,7 +42,7 @@ public class FinacleLoginPage {
 		  try {
 	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 	            alert.accept();
-	    		PageFunctionUtils.enterDataInWebElement(driver, passwordTextfield, keysToSend);
+	    		PageFunctionUtils.enterDataInWebElement(driver, passwordTextField, keysToSend);
 	    		PageFunctionUtils.clickOnElement(driver, loginButton);
 	        } catch (Exception e) {
 	        }

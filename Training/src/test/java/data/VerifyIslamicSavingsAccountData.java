@@ -2,10 +2,14 @@ package data;
 
 public class VerifyIslamicSavingsAccountData {
 	
-	private String menu;
+	private String tcID;
+	private String summary;
 	private String username;
 	private String password;
+	private String menu;
 	private String accountid;
+	private String expectedResult;
+	private String linkedTCID;
 	
 	public String getMenu() {
 		return menu;
@@ -37,5 +41,37 @@ public class VerifyIslamicSavingsAccountData {
 
 	public void setAccountid(String accountid) {
 		this.accountid = accountid;
+	}
+
+	public String getTCID() {
+		return tcID;
+	}
+
+	public void setTCID(String tCID) {
+		tcID = tCID;
+	}
+
+	public String getSummary() {
+		return summary;
+	}
+
+	public void setSummary(String summary) {
+		this.summary = summary;
+	}
+
+	public String getExpectedResult() {
+		return expectedResult;
+	}
+
+	public void setExpectedResult(String expectedResult) {
+		this.expectedResult = expectedResult;
+	}
+
+	public String getLinkedTCID() {
+		return linkedTCID;
+	}
+
+	public void setLinkedTCID(String linkedTCID) {
+		this.linkedTCID = linkedTCID;
 	}
 }

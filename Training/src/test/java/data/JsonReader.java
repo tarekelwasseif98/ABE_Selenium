@@ -9,7 +9,7 @@ import java.util.List;
 
 public class JsonReader<T> {
     private final Class<T> targetType;
-
+    private boolean github;
     public JsonReader(Class<T> targetType) {
         this.targetType = targetType;
     }

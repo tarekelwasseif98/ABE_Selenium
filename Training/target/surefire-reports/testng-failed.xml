@@ -5,12 +5,17 @@
     <listener class-name="listeners.Listeners"/>
   </listeners>
   <test thread-count="5" parallel="classes" name="Islamic Savings Account(failed)" verbose="0">
+    <groups>
+      <run>
+        <include name="open"/>
+        <include name="verify"/>
+      </run>
+    </groups>
     <classes>
       <class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA">
         <methods>
-          <include name="setAllureEnvironment"/>
-          <include name="after"/>
           <include name="beforeTest"/>
+          <include name="after"/>
           <include name="test" invocation-numbers="0"/>
         </methods>
       </class> <!-- tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA -->

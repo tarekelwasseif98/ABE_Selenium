@@ -1,11 +1,9 @@
 package utils;
 
 import org.testng.AssertJUnit;
-
 import java.io.File;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
-
 import org.openqa.selenium.WebDriver;
 
 public class AssertionFactory {
@@ -22,5 +20,9 @@ public class AssertionFactory {
 		String timeStampString = sdf3.format(timestamp);
 		String fileWithPath = "C://local//Run" + nameTimeStamp + "_" + result + "//" + timeStampString + "_" + result + ".png";
 		ScreenshotUtils.takeSnapShot(driver, fileWithPath);
+	}
+	
+	public static void checkExpectedResult(Boolean expectedResult) {
+		AssertJUnit.assertTrue(expectedResult);
 	}
 }

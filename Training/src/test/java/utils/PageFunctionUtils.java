@@ -54,14 +54,12 @@ public class PageFunctionUtils {
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(by));
 		}
 	
-//	public static void sync4(WebDriver driver) throws InterruptedException {
-//		Thread.sleep(3000);
-//		WebDriverWait wait = new WebDriverWait(driver, Properties.MAX_TIME);
-//		wait.until(ExpectedConditions.all);
-//	}
-	
 	public static void sync3(WebDriver driver, String by) {
 		WebDriverWait wait = new WebDriverWait(driver, Properties.MAX_TIME);
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(by));
 	}
+	
+	public static void Sleep_5sec() throws InterruptedException {
+		Thread.sleep(Properties.Sleep_TIME);
+		}
 }

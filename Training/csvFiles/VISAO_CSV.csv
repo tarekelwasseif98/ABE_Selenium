@@ -1,4 +1,1 @@
-﻿Menu,Username,Password,A/c. ID
-VISAO,ABE22,Infy@123,170001234567012216
-VISAO,ABE25,Infy@123,170001234567012223
-VISAO,ABE26,Infy@123,170001234567012230
+tcID,summary,username,password,menu,accountid,expectedResult,linkedTCID

@@ -14,7 +14,7 @@ import com.opencsv.CSVWriter;
 import io.qameta.allure.Step;
 import utils.CSVUtils;
 import utils.PageFunctionUtils;
-import utils.csvPaths;
+import utils.CSVPaths;
 
 public class OpenIslamicSavingsAccountPage {
 	private WebDriver driver;
@@ -101,10 +101,10 @@ public class OpenIslamicSavingsAccountPage {
 		
 		int columnIndex = 5;
 		int columnIndex2 = 7;
-		int oisacRowIndexToUpdate = CSVUtils.getNextEmptyCellIndex(csvPaths.OISAC_CSV, 7);
-		int visaoRowIndexToUpdate = CSVUtils.getNextEmptyCellIndex(csvPaths.VISAO_CSV, 5);
-		CSVReader oisacReader = new CSVReader(new FileReader(csvPaths.OISAC_CSV));
-		CSVReader visaoReader = new CSVReader(new FileReader(csvPaths.VISAO_CSV));
+		int oisacRowIndexToUpdate = CSVUtils.getNextEmptyCellIndex(CSVPaths.OISAC_CSV, 7);
+		int visaoRowIndexToUpdate = CSVUtils.getNextEmptyCellIndex(CSVPaths.VISAO_CSV, 5);
+		CSVReader oisacReader = new CSVReader(new FileReader(CSVPaths.OISAC_CSV));
+		CSVReader visaoReader = new CSVReader(new FileReader(CSVPaths.VISAO_CSV));
 		List<String[]> oisacLines = oisacReader.readAll();
 		List<String[]> visaoLines = visaoReader.readAll();
 		oisacReader.close();
@@ -122,8 +122,8 @@ public class OpenIslamicSavingsAccountPage {
 		    visaoLines.set(visaoRowIndexToUpdate, row);
 		}
 		
-		CSVWriter oisacWriter = new CSVWriter(new FileWriter(csvPaths.OISAC_CSV));
-		CSVWriter visaoWriter = new CSVWriter(new FileWriter(csvPaths.VISAO_CSV));
+		CSVWriter oisacWriter = new CSVWriter(new FileWriter(CSVPaths.OISAC_CSV));
+		CSVWriter visaoWriter = new CSVWriter(new FileWriter(CSVPaths.VISAO_CSV));
 		oisacWriter.writeAll(oisacLines,false);
 		visaoWriter.writeAll(visaoLines,false);
 		oisacWriter.flush();

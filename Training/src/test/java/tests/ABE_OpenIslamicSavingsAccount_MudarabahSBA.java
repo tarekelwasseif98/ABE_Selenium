@@ -23,7 +23,7 @@ import procedures.OpenIslamicSavingsAccountProcedures;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
-import utils.csvPaths;
+import utils.CSVPaths;
 import utils.AssertionFactory;
 import utils.CSVReaderHelper;
 import utils.CSVUtils;
@@ -35,8 +35,8 @@ public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
 	
 	@BeforeClass
 	public void oneTimeSetUp() throws IOException, CsvException {
-		CSVUtils.clearColumnByIndex(csvPaths.OISAC_CSV, 7);
-		CSVUtils.clearColumnByIndex(csvPaths.VISAO_CSV, 5);
+		CSVUtils.clearColumnByIndex(CSVPaths.OISAC_CSV, 7);
+		CSVUtils.clearColumnByIndex(CSVPaths.VISAO_CSV, 5);
 	}
 
 	WebDriver driver = null;
@@ -46,7 +46,7 @@ public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
 		OpenIslamicSavingsAccountData data = (OpenIslamicSavingsAccountData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FinacleURL);
-		testCaseId = CSVReaderHelper.getTestCaseId(csvPaths.OISAC_CSV);
+		testCaseId = CSVReaderHelper.getTestCaseId(CSVPaths.OISAC_CSV);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())
@@ -57,7 +57,7 @@ public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
 	@DataProvider(name="Open Islamic Savings Account DataProvider")
 	public Object[] dpMethod() throws Exception {
     	String jsonFilePath = "jsonFiles\\OpenIslamicSavingsAccount.json";
-    	Workbook workbook = new Workbook(csvPaths.OISAC_CSV);
+    	Workbook workbook = new Workbook(CSVPaths.OISAC_CSV);
 		workbook.save(jsonFilePath);
         Class<OpenIslamicSavingsAccountData> targetClass = OpenIslamicSavingsAccountData.class;
         JsonReader<OpenIslamicSavingsAccountData> jsonReader = new JsonReader<>(targetClass);

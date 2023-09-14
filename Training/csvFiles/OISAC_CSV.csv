@@ -1,4 +1,4 @@
-tcID,summary,username,password,menu,cif,expectedResult,reference,linkedTCID
-FCB-9727,Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker,QA46,Infy@123,OISAC,1111111,The savings account is opened successfully.,'170001111111011560,FCB-9728
-FCB-9727,Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker,QA46,Infy@123,OISAC,1234567,The savings account is opened successfully.,'170001234567014548,FCB-9728
-FCB-9727,Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker,QA46,Infy@123,OISAC,1234567,The savings account is opened successfully.,'170001234567014555,FCB-9728
+tcId,summary,username,password,menu,cif,expectedResult,reference,linkedTcid
+FCB-9727,Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker,QA46,Infy@123,OISAC,1111111,The savings account is opened successfully.,'170001111111011751,FCB-9728
+FCB-9727,Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker,QA46,Infy@123,OISAC,1234567,The savings account is opened successfully.,'170001234567014630,FCB-9728
+FCB-9727,Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker,QA46,Infy@123,OISAC,1111111,The savings account is opened successfully.,'170001111111011768,FCB-9728

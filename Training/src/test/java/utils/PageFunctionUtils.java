@@ -11,7 +11,7 @@ public class PageFunctionUtils {
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 		driver.findElement(by).click();
 	}
-	
+	@Deprecated
 	public static void clickOnElementWorkAround(WebDriver driver, By by) {
 		int count = 0;
 		boolean bool = true;
@@ -59,7 +59,7 @@ public class PageFunctionUtils {
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(by));
 	}
 	
-	public static void Sleep_5sec() throws InterruptedException {
+	public static void sleep() throws InterruptedException {
 		Thread.sleep(Properties.Sleep_TIME);
 		}
 }

@@ -11,8 +11,8 @@ public class VerifyIslamicSavingsAccountProcedures {
 		VerifyIslamicSavingsAccountPage VerifyIslamicSavingsAccountPage = new VerifyIslamicSavingsAccountPage(driver);
 		VerifyIslamicSavingsAccountPage.sendKeysMenuName(data.getMenu());
 		VerifyIslamicSavingsAccountPage.switchFormAreaFrame();
-		VerifyIslamicSavingsAccountPage.addAccountID(data.getAccountid());
+		VerifyIslamicSavingsAccountPage.sendKeysAcidTextField(data.getAccountid());
 		VerifyIslamicSavingsAccountPage.navigateSideMenu();
-		VerifyIslamicSavingsAccountPage.pressSubmit();
+		VerifyIslamicSavingsAccountPage.pressSubmitButton();
 		}
 	}

@@ -28,9 +28,37 @@ public class CSVUtils {
             writer.writeAll(lines);
         }
     }
-
+    
+    public static void clearColumnByName(String filePath, String columnName) throws IOException, CsvException {
+        List<String[]> lines = new ArrayList<>();
+        try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
+            lines = reader.readAll();
+        }
+      
+        int columnIndex = -1;
+        String[] header = lines.get(0);
+        for (int i = 0; i < header.length; i++) {
+            if (header[i].equals(columnName)) {
+                columnIndex = i;
+                break;
+            }
+        }
+      
+        if (columnIndex != -1) {
+            for (int i = 1; i < lines.size(); i++) {
+                String[] line = lines.get(i);
+                if (columnIndex < line.length) {
+                    line[columnIndex] = "";
+                }
+            }
+        }
+      
+        try (CSVWriter writer = new CSVWriter(new FileWriter(filePath))) {
+            writer.writeAll(lines);
+        }
+    }
+    
     public static int getNextEmptyCellIndex(String filePath, int columnIndex) throws IOException, CsvException {
-    	//clearColumnByIndex(filePath, columnIndex);
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             String[] nextLine;
             int rowIndex = 0;

@@ -12,7 +12,6 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.aspose.cells.Workbook;
 import com.opencsv.exceptions.CsvException;
-
 import data.JsonReader;
 import data.OpenIslamicSavingsAccountData;
 import io.qameta.allure.Allure;
@@ -66,7 +65,7 @@ public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Open Islamic Savings Account DataProvider" ,dataProviderClass = ABE_OpenIslamicSavingsAccount_MudarabahSBA.class)
+	@Test(dataProvider = "Open Islamic Savings Account DataProvider", dataProviderClass = ABE_OpenIslamicSavingsAccount_MudarabahSBA.class)
 	@Step("{testCaseId}")
 	public void test(OpenIslamicSavingsAccountData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
@@ -80,8 +79,7 @@ public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
 		Allure.parameter("Linked TCID: ", data.getLinkedTCID());
 		
         OpenIslamicSavingsAccountProcedures.islamicSavingsAccountByMaker(driver, data);
-        
-        AssertionFactory.checkExpectedResult(driver.getPageSource().contains(data.getExpectedResult()));
+        AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}
 
 	@Attachment(value = "Screenshot", type = "image/png")

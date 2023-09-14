@@ -2,14 +2,13 @@ package data;
 
 public class VerifyIslamicSavingsAccountData {
 	
-	private String tcID;
+	private String tcId;
 	private String summary;
 	private String username;
 	private String password;
 	private String menu;
-	private String accountid;
+	private String accountId;
 	private String expectedResult;
-	private String linkedTCID;
 	
 	public String getMenu() {
 		return menu;
@@ -36,19 +35,19 @@ public class VerifyIslamicSavingsAccountData {
 	}
 	
 	public String getAccountid() {
-		return accountid;
+		return accountId;
 	}
 
 	public void setAccountid(String accountid) {
-		this.accountid = accountid;
+		this.accountId = accountid;
 	}
 
 	public String getTCID() {
-		return tcID;
+		return tcId;
 	}
 
 	public void setTCID(String tCID) {
-		tcID = tCID;
+		tcId = tCID;
 	}
 
 	public String getSummary() {
@@ -65,13 +64,5 @@ public class VerifyIslamicSavingsAccountData {
 
 	public void setExpectedResult(String expectedResult) {
 		this.expectedResult = expectedResult;
-	}
-
-	public String getLinkedTCID() {
-		return linkedTCID;
-	}
-
-	public void setLinkedTCID(String linkedTCID) {
-		this.linkedTCID = linkedTCID;
 	}
 }

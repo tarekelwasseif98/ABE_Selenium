@@ -30,7 +30,6 @@ public class OpenIslamicSavingsAccountPage {
 	private By taxCategoryMenu = By.id("_wtaxFlg_select");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By loginFrameIframeID = By.xpath("(//iframe[@name='loginFrame'])[1]");
-	public static String successMessage;
 	public static String acid;
 	
 	public OpenIslamicSavingsAccountPage(WebDriver driver) {
@@ -38,7 +37,7 @@ public class OpenIslamicSavingsAccountPage {
 	}
 	
 	@Step("Sending menu name")
-	public OpenIslamicSavingsAccountPage sendKeysMenuName(String menu) throws Exception {
+	public OpenIslamicSavingsAccountPage sendKeysSearchBarTextField(String menu) throws Exception {
 	     	driver.switchTo().parentFrame();
 	     	PageFunctionUtils.sync2(driver, loginFrameIframeID);
 			PageFunctionUtils.sync(driver, searchBarTextField);
@@ -57,7 +56,7 @@ public class OpenIslamicSavingsAccountPage {
 	
 	@Step("Frame switching")
 	public OpenIslamicSavingsAccountPage switchFormAreaFrame() throws Exception {
-		PageFunctionUtils.Sleep_5sec();
+		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 	    driver.switchTo().frame(("loginFrame"));
 	    driver.switchTo().frame(("Core_ABE"));
@@ -90,14 +89,13 @@ public class OpenIslamicSavingsAccountPage {
 		return this;
 	}
 	
-	@Step("Press SUBMIT")
-	public OpenIslamicSavingsAccountPage pressSubmit() throws Exception {
+	@Step("Press SUBMIT button")
+	public OpenIslamicSavingsAccountPage pressSubmitButton() throws Exception {
 		driver.findElement(submitButton);
 		driver.findElement(submitButton).click();
 		Thread.sleep(3500);
-		successMessage = driver.findElement(By.xpath("(//p[@id='_resMsg_paraMsg'])[1]")).getText().substring(0, 43);
 		acid = driver.findElement(By.xpath("(//p[@id='_resMsg_paraMsg'])[1]")).getText().substring(53, 71);
-		System.out.println("ACID : "+ acid);
+		System.out.println("ACID: "+ acid);
 		
 		int columnIndex = 5;
 		int columnIndex2 = 7;

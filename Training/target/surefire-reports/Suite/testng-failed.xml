@@ -14,11 +14,19 @@
     <classes>
       <class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA">
         <methods>
+          <include name="oneTimeSetUp"/>
           <include name="beforeTest"/>
           <include name="after"/>
-          <include name="test" invocation-numbers="0 1"/>
+          <include name="test" invocation-numbers="0"/>
         </methods>
       </class> <!-- tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA -->
+      <class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA">
+        <methods>
+          <include name="after"/>
+          <include name="test"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA -->
     </classes>
   </test> <!-- Islamic Savings Account(failed) -->
 </suite> <!-- Failed suite [Suite] -->

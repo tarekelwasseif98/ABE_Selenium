@@ -34,7 +34,7 @@ public class VerifyIslamicSavingsAccountPage {
 	
 	@Step("Sending menu name")
 	public VerifyIslamicSavingsAccountPage sendKeysMenuName(String menu) throws Exception {
-		PageFunctionUtils.Sleep_5sec();
+		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 		driver.switchTo().frame((loginFrameIframeID));
 		PageFunctionUtils.sync(driver, searchBarTextField);
@@ -54,7 +54,7 @@ public class VerifyIslamicSavingsAccountPage {
 	
 	@Step("Frame switching")
 	public VerifyIslamicSavingsAccountPage switchFormAreaFrame() throws Exception {
-		PageFunctionUtils.Sleep_5sec();
+		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 	    driver.switchTo().frame(("loginFrame"));
 	    driver.switchTo().frame(("Core_ABE"));
@@ -65,16 +65,16 @@ public class VerifyIslamicSavingsAccountPage {
 	}
 	
 	@Step("Sending A/c. ID & Press GO")
-	public VerifyIslamicSavingsAccountPage addAccountID(String ACID) throws Exception {
+	public VerifyIslamicSavingsAccountPage sendKeysAcidTextField(String ACID) throws Exception {
 		ACID = ACID.substring(1, 19);
 		PageFunctionUtils.sync(driver, acidTextField);
 		driver.findElement(acidTextField).click();
 		driver.findElement(acidTextField).sendKeys(ACID);
 		driver.findElement(goButton).click();
-		return this;	
+		return this;
 	}
 	
-	@Step("Side menu navigation")
+	@Step("Side tab navigation")
 	public VerifyIslamicSavingsAccountPage navigateSideMenu() throws Exception {
 		driver.findElement(By.xpath(sideTab1)).click();
 		driver.findElement(By.xpath(sideTab2)).click();
@@ -87,8 +87,8 @@ public class VerifyIslamicSavingsAccountPage {
 		return this;
 	}
 	
-	@Step("Press SUBMIT")
-	public VerifyIslamicSavingsAccountPage pressSubmit() throws Exception {
+	@Step("Press SUBMIT button")
+	public VerifyIslamicSavingsAccountPage pressSubmitButton() throws Exception {
 		driver.findElement(submitButton).click();
 	    driver.switchTo().parentFrame();
 		driver.findElement(By.xpath("(//button[normalize-space()='Accept'])[1]")).click();

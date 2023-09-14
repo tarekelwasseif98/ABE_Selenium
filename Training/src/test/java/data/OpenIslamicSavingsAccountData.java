@@ -2,7 +2,7 @@ package data;
 
 public class OpenIslamicSavingsAccountData {
 	
-	private String tcID;
+	private String tcId;
 	private String summary;
 	private String username;
 	private String password;
@@ -10,7 +10,7 @@ public class OpenIslamicSavingsAccountData {
 	private String cif;
 	private String expectedResult;
 	private String reference;
-	private String linkedTCID;
+	private String linkedTcid;
 	
 	public String getMenu() {
 		return menu;
@@ -45,11 +45,11 @@ public class OpenIslamicSavingsAccountData {
 	}
 
 	public String getTCID() {
-		return tcID;
+		return tcId;
 	}
 
 	public void setTCID(String tCID) {
-		tcID = tCID;
+		tcId = tCID;
 	}
 
 	public String getSummary() {
@@ -77,10 +77,10 @@ public class OpenIslamicSavingsAccountData {
 	}
 
 	public String getLinkedTCID() {
-		return linkedTCID;
+		return linkedTcid;
 	}
 
 	public void setLinkedTCID(String linkedTCID) {
-		this.linkedTCID = linkedTCID;
+		this.linkedTcid = linkedTCID;
 	}
 }

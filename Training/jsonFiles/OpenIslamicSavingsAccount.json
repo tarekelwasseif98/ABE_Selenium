@@ -25,7 +25,7 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "OISAC",
-  "cif": 1234567,
+  "cif": 1111111,
   "expectedResult": "The savings account is opened successfully.",
   "linkedTCID": "FCB-9728"
  }

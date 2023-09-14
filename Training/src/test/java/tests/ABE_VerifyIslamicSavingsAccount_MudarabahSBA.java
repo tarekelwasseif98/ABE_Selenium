@@ -54,7 +54,7 @@ public class ABE_VerifyIslamicSavingsAccount_MudarabahSBA {
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Verify Islamic Savings Account DataProvider",dataProviderClass = ABE_VerifyIslamicSavingsAccount_MudarabahSBA.class)
+	@Test(dataProvider = "Verify Islamic Savings Account DataProvider", dataProviderClass = ABE_VerifyIslamicSavingsAccount_MudarabahSBA.class)
 	public void test(VerifyIslamicSavingsAccountData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
 		Allure.parameter("TCID: ", data.getTCID());
@@ -63,7 +63,7 @@ public class ABE_VerifyIslamicSavingsAccount_MudarabahSBA {
 		Allure.parameter("Menu: ", data.getMenu());
 		Allure.parameter("Account ID: ", data.getAccountid());
 		Allure.parameter("Expected Result: ", data.getExpectedResult());
-		Allure.parameter("Linked TCID: ", data.getLinkedTCID());
+		
 		VerifyIslamicSavingsAccountProcedures.islamicSavingsAccountByChecker(driver, data);
 	}
 
@@ -77,7 +77,6 @@ public class ABE_VerifyIslamicSavingsAccount_MudarabahSBA {
 		 if (result.getStatus() == ITestResult.FAILURE) {
 	            ScreenshotHelper.captureScreenshot(driver);
 	        }
-		 
 		driver.quit();
 	}
 }

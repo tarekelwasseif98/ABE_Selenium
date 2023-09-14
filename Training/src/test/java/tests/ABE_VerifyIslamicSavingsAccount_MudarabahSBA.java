@@ -20,7 +20,7 @@ import utils.CSVReaderHelper;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
-import utils.csvPaths;
+import utils.CSVPaths;
 
 @Test(groups = "verify",dependsOnGroups = "open")
 @Listeners({AllureTestNg.class})
@@ -33,7 +33,7 @@ public class ABE_VerifyIslamicSavingsAccount_MudarabahSBA {
 		VerifyIslamicSavingsAccountData data = (VerifyIslamicSavingsAccountData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FinacleURL);
-		testCaseId = CSVReaderHelper.getTestCaseId(csvPaths.VISAO_CSV);
+		testCaseId = CSVReaderHelper.getTestCaseId(CSVPaths.VISAO_CSV);
 
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
@@ -45,7 +45,7 @@ public class ABE_VerifyIslamicSavingsAccount_MudarabahSBA {
 	@DataProvider(name="Verify Islamic Savings Account DataProvider")
 	public Object[] dpMethod() throws Exception {
     	String jsonFilePath = "jsonFiles\\VerifyIslamicSavingsAccount.json";
-    	Workbook workbook = new Workbook(csvPaths.VISAO_CSV);
+    	Workbook workbook = new Workbook(CSVPaths.VISAO_CSV);
 		workbook.save(jsonFilePath);
         Class<VerifyIslamicSavingsAccountData> targetClass = VerifyIslamicSavingsAccountData.class;
         JsonReader<VerifyIslamicSavingsAccountData> jsonReader = new JsonReader<>(targetClass);

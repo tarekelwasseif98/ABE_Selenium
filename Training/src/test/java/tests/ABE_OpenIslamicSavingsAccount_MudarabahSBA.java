@@ -1,14 +1,18 @@
 package tests;
 
+import java.io.IOException;
 import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.aspose.cells.Workbook;
+import com.opencsv.exceptions.CsvException;
+
 import data.JsonReader;
 import data.OpenIslamicSavingsAccountData;
 import io.qameta.allure.Allure;
@@ -19,14 +23,21 @@ import procedures.OpenIslamicSavingsAccountProcedures;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
-import utils.csvPaths;
+import utils.CSVPaths;
 import utils.AssertionFactory;
 import utils.CSVReaderHelper;
+import utils.CSVUtils;
 import io.qameta.allure.testng.AllureTestNg;
 
 @Test( groups = "open")
 @Listeners({AllureTestNg.class})
 public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
+	
+	@BeforeClass
+	public void oneTimeSetUp() throws IOException, CsvException {
+		CSVUtils.clearColumnByIndex(CSVPaths.OISAC_CSV, 7);
+		CSVUtils.clearColumnByIndex(CSVPaths.VISAO_CSV, 5);
+	}
 
 	WebDriver driver = null;
 	private String testCaseId;
@@ -35,7 +46,7 @@ public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
 		OpenIslamicSavingsAccountData data = (OpenIslamicSavingsAccountData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FinacleURL);
-		testCaseId = CSVReaderHelper.getTestCaseId(csvPaths.OISAC_CSV);
+		testCaseId = CSVReaderHelper.getTestCaseId(CSVPaths.OISAC_CSV);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())
@@ -46,7 +57,7 @@ public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
 	@DataProvider(name="Open Islamic Savings Account DataProvider")
 	public Object[] dpMethod() throws Exception {
     	String jsonFilePath = "jsonFiles\\OpenIslamicSavingsAccount.json";
-    	Workbook workbook = new Workbook(csvPaths.OISAC_CSV);
+    	Workbook workbook = new Workbook(CSVPaths.OISAC_CSV);
 		workbook.save(jsonFilePath);
         Class<OpenIslamicSavingsAccountData> targetClass = OpenIslamicSavingsAccountData.class;
         JsonReader<OpenIslamicSavingsAccountData> jsonReader = new JsonReader<>(targetClass);

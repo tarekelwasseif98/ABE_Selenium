@@ -16,7 +16,7 @@
         <methods>
           <include name="beforeTest"/>
           <include name="after"/>
-          <include name="test" invocation-numbers="0"/>
+          <include name="test" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA -->
     </classes>

@@ -11,8 +11,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
-
 import io.qameta.allure.Step;
+import utils.CSVUtils;
 import utils.PageFunctionUtils;
 import utils.csvPaths;
 
@@ -30,6 +30,7 @@ public class OpenIslamicSavingsAccountPage {
 	private By taxCategoryMenu = By.id("_wtaxFlg_select");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By loginFrameIframeID = By.xpath("(//iframe[@name='loginFrame'])[1]");
+	public static String successMessage;
 	public static String acid;
 	
 	public OpenIslamicSavingsAccountPage(WebDriver driver) {
@@ -94,22 +95,41 @@ public class OpenIslamicSavingsAccountPage {
 		driver.findElement(submitButton);
 		driver.findElement(submitButton).click();
 		Thread.sleep(3500);
-		int columnIndex = 5;
+		successMessage = driver.findElement(By.xpath("(//p[@id='_resMsg_paraMsg'])[1]")).getText().substring(0, 43);
 		acid = driver.findElement(By.xpath("(//p[@id='_resMsg_paraMsg'])[1]")).getText().substring(53, 71);
-		CSVReader reader = new CSVReader(new FileReader(csvPaths.VISAO_CSV));
-		List<String[]> lines = reader.readAll();
-		reader.close();
-		String[] newRow = new String[lines.get(0).length];
-			newRow[columnIndex] = "'" + acid;
-			newRow[0] = "FCB-9727";
-			newRow[2] = "ABE30";
-			newRow[3] = "Infy@123";
-			newRow[4] = "VISAO";
-			lines.add(newRow);
-			CSVWriter writer = new CSVWriter(new FileWriter(csvPaths.VISAO_CSV));
-			writer.writeAll(lines,false);
-			writer.flush();
-			writer.close();
+		System.out.println("ACID : "+ acid);
+		
+		int columnIndex = 5;
+		int columnIndex2 = 7;
+		int oisacRowIndexToUpdate = CSVUtils.getNextEmptyCellIndex(csvPaths.OISAC_CSV, 7);
+		int visaoRowIndexToUpdate = CSVUtils.getNextEmptyCellIndex(csvPaths.VISAO_CSV, 5);
+		CSVReader oisacReader = new CSVReader(new FileReader(csvPaths.OISAC_CSV));
+		CSVReader visaoReader = new CSVReader(new FileReader(csvPaths.VISAO_CSV));
+		List<String[]> oisacLines = oisacReader.readAll();
+		List<String[]> visaoLines = visaoReader.readAll();
+		oisacReader.close();
+		visaoReader.close();
+		
+		if(oisacRowIndexToUpdate < oisacLines.size()) {
+		    String[] row = oisacLines.get(oisacRowIndexToUpdate);
+		    row[columnIndex2] = "'" + acid;
+		    oisacLines.set(oisacRowIndexToUpdate, row);
+		}
+		
+		if(visaoRowIndexToUpdate < visaoLines.size()) {
+		    String[] row = visaoLines.get(visaoRowIndexToUpdate);
+		    row[columnIndex] = "'" + acid;
+		    visaoLines.set(visaoRowIndexToUpdate, row);
+		}
+		
+		CSVWriter oisacWriter = new CSVWriter(new FileWriter(csvPaths.OISAC_CSV));
+		CSVWriter visaoWriter = new CSVWriter(new FileWriter(csvPaths.VISAO_CSV));
+		oisacWriter.writeAll(oisacLines,false);
+		visaoWriter.writeAll(visaoLines,false);
+		oisacWriter.flush();
+		visaoWriter.flush();
+		oisacWriter.close();
+		visaoWriter.close();
 		return this;
 	}
 }

@@ -14,10 +14,10 @@
     <classes>
       <class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA">
         <methods>
+          <include name="openIslamicSavingsAccount" invocation-numbers="1"/>
           <include name="oneTimeSetUp"/>
           <include name="beforeTest"/>
           <include name="after"/>
-          <include name="test" invocation-numbers="1"/>
         </methods>
       </class> <!-- tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA -->
     </classes>

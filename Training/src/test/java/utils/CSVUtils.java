@@ -15,26 +15,7 @@ import com.opencsv.exceptions.CsvException;
 import com.opencsv.exceptions.CsvValidationException;
 
 public class CSVUtils {
-	
-    public static void clearColumnByIndex(String filePath, int columnIndex) throws IOException, CsvException {
-        List<String[]> lines = new ArrayList<>();
-        try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
-            lines = reader.readAll();
-        }
-        
-        for (int i = 1; i < lines.size(); i++) {
-            String[] line = lines.get(i);
-            if (columnIndex < line.length) {
-                line[columnIndex] = "";
-            }
-        }
-
-        try (CSVWriter writer = new CSVWriter(new FileWriter(filePath))) {
-            writer.writeAll(lines);
-        }
-    }
-    
-    public static void clearColumnByName(String filePath, String columnName) throws IOException, CsvException {
+      public static void clearColumnByName(String filePath, String columnName) throws IOException, CsvException {
         List<String[]> lines = new ArrayList<>();
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             lines = reader.readAll();

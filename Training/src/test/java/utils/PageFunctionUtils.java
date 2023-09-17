@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PageFunctionUtils {
 	public static void clickOnElement(WebDriver driver, By by) {
-		WebDriverWait wait = new WebDriverWait(driver, Properties.MAX_TIME);
+		WebDriverWait wait = new WebDriverWait(driver, Properties.maxTime);
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 		driver.findElement(by).click();
 	}
@@ -21,13 +21,12 @@ public class PageFunctionUtils {
 				driver.findElement(by).click();
 				bool = false;
 			} catch (Exception e) {
-				if ( count > Properties.MAX_TIME) {
+				if ( count > Properties.maxTime) {
 					bool = false;
 				} else {
 					try {
 						Thread.sleep(1000);
 					} catch (InterruptedException e1) {
-						// TODO Auto-generated catch block
 						e1.printStackTrace();
 					}
 				}
@@ -37,29 +36,24 @@ public class PageFunctionUtils {
 	}
 	
 	public static void enterDataInWebElement(WebDriver driver,By by,String keysToSend) throws Exception {
-		WebDriverWait wait = new WebDriverWait(driver, Properties.MIN_TIME);
+		WebDriverWait wait = new WebDriverWait(driver, Properties.minTime);
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 		driver.findElement(by).sendKeys(keysToSend);
 	}
 	
 	public static void sync(WebDriver driver, By by) throws InterruptedException {
 		Thread.sleep(500);
-		WebDriverWait wait = new WebDriverWait(driver, Properties.MAX_TIME);
+		WebDriverWait wait = new WebDriverWait(driver, Properties.maxTime);
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 	}
 	
 	public static void sync2(WebDriver driver, By by) throws InterruptedException {
 			Thread.sleep(3000);
-			WebDriverWait wait = new WebDriverWait(driver, Properties.MAX_TIME);
+			WebDriverWait wait = new WebDriverWait(driver, Properties.maxTime);
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(by));
 		}
 	
-	public static void sync3(WebDriver driver, String by) {
-		WebDriverWait wait = new WebDriverWait(driver, Properties.MAX_TIME);
-		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(by));
-	}
-	
 	public static void sleep() throws InterruptedException {
-		Thread.sleep(Properties.Sleep_TIME);
+		Thread.sleep(Properties.sleepTime);
 		}
 }

@@ -1,32 +1,12 @@
 [
  {
-  "tcID": "FCB-9727",
+  "tcId": "FCB-9727",
   "summary": "Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker",
   "username": "QA46",
   "password": "Infy@123",
   "menu": "OISAC",
   "cif": 1111111,
   "expectedResult": "The savings account is opened successfully.",
-  "linkedTCID": "FCB-9728"
- },
- {
-  "tcID": "FCB-9727",
-  "summary": "Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker",
-  "username": "QA46",
-  "password": "Infy@123",
-  "menu": "OISAC",
-  "cif": 1234567,
-  "expectedResult": "The savings account is opened successfully.",
-  "linkedTCID": "FCB-9728"
- },
- {
-  "tcID": "FCB-9727",
-  "summary": "Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker",
-  "username": "QA46",
-  "password": "Infy@123",
-  "menu": "OISAC",
-  "cif": 1111111,
-  "expectedResult": "The savings account is opened successfully.",
-  "linkedTCID": "FCB-9728"
+  "linkedTcid": "FCB-9728"
  }
 ]

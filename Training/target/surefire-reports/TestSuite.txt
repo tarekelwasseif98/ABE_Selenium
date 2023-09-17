@@ -2,6 +2,7 @@
 Test set: TestSuite
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 76.51 s <<< FAILURE! -- in TestSuite
 tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA.openIslamicSavingsAccount[data.OpenIslamicSavingsAccountData@68bf24df](3) -- Time elapsed: 18.34 s <<< FAILURE!
 org.openqa.selenium.NoSuchFrameException: 
@@ -29,6 +30,9 @@ Driver info: driver.version: unknown
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 
+=======
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 81.10 s -- in TestSuite
+>>>>>>> 4e0876acef9350bd1b0fd245fb969fa33aaede16
 =======
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 81.10 s -- in TestSuite
 >>>>>>> 4e0876acef9350bd1b0fd245fb969fa33aaede16

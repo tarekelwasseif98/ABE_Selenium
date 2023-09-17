@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="76.512" tests="3" errors="0" skipped="0" failures="1">
+=======
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="81.095" tests="3" errors="0" skipped="0" failures="0">
+>>>>>>> 4e0876acef9350bd1b0fd245fb969fa33aaede16
 =======
 <testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="81.095" tests="3" errors="0" skipped="0" failures="0">
 >>>>>>> 4e0876acef9350bd1b0fd245fb969fa33aaede16
@@ -19,9 +23,15 @@
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="C:\Users\Pakinam.hussam\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230801-1951\jre\bin"/>
     <property name="sun.java.command" value="C:\Users\Pakinam.hussam\AppData\Local\Temp\surefire3910450803758443861\surefirebooter-20230917143912883_3.jar C:\Users\Pakinam.hussam\AppData\Local\Temp\surefire3910450803758443861 2023-09-17T14-39-12_780-jvmRun1 surefire-20230917143912883_1tmp surefire_0-20230917143912883_2tmp"/>
+=======
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Users\ammar.shaker\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230801-1951\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\ammar.shaker\AppData\Local\Temp\surefire8576154004196172995\surefirebooter-20230917143609361_3.jar C:\Users\ammar.shaker\AppData\Local\Temp\surefire8576154004196172995 2023-09-17T14-36-09_263-jvmRun1 surefire-20230917143609361_1tmp surefire_0-20230917143609361_2tmp"/>
+>>>>>>> 4e0876acef9350bd1b0fd245fb969fa33aaede16
 =======
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Users\ammar.shaker\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.8.v20230801-1951\jre\bin"/>
@@ -43,7 +53,11 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="surefire.real.class.path" value="C:\Users\Pakinam.hussam\AppData\Local\Temp\surefire3910450803758443861\surefirebooter-20230917143912883_3.jar"/>
+=======
+    <property name="surefire.real.class.path" value="C:\Users\ammar.shaker\AppData\Local\Temp\surefire8576154004196172995\surefirebooter-20230917143609361_3.jar"/>
+>>>>>>> 4e0876acef9350bd1b0fd245fb969fa33aaede16
 =======
     <property name="surefire.real.class.path" value="C:\Users\ammar.shaker\AppData\Local\Temp\surefire8576154004196172995\surefirebooter-20230917143609361_3.jar"/>
 >>>>>>> 4e0876acef9350bd1b0fd245fb969fa33aaede16
@@ -74,9 +88,15 @@
     <property name="java.class.version" value="61.0"/>
   </properties>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <testcase name="openIslamicSavingsAccount[data.OpenIslamicSavingsAccountData@7d5f74cd](1)" classname="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA" time="20.014">
     <system-out><![CDATA[ACID: 170001111111012451
 Success of test cases and its details are : tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA@64fe9da7
+=======
+  <testcase name="openIslamicSavingsAccount[data.OpenIslamicSavingsAccountData@4b0d0374](1)" classname="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA" time="19.594">
+    <system-out><![CDATA[ACID: 170001111111012420
+Success of test cases and its details are : tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA@2b10ace9
+>>>>>>> 4e0876acef9350bd1b0fd245fb969fa33aaede16
 =======
   <testcase name="openIslamicSavingsAccount[data.OpenIslamicSavingsAccountData@4b0d0374](1)" classname="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA" time="19.594">
     <system-out><![CDATA[ACID: 170001111111012420
@@ -91,6 +111,7 @@ SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
 log4j:WARN No appenders could be found for logger (org.testng.TestNG).
 log4j:WARN Please initialize the log4j system properly.
 log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+<<<<<<< HEAD
 <<<<<<< HEAD
 Sept 17, 2023 2:39:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
@@ -133,6 +154,25 @@ Driver info: driver.version: unknown
     <system-out><![CDATA[Failure of test cases and its details are : openIslamicSavingsAccount
 ]]></system-out>
     <system-err><![CDATA[Sept 17, 2023 2:40:07 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+=======
+Sep 17, 2023 2:36:14 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="openIslamicSavingsAccount[data.OpenIslamicSavingsAccountData@715c5d4e](2)" classname="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA" time="18.841">
+    <system-out><![CDATA[ACID: 170001111111012437
+Success of test cases and its details are : tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA@2b10ace9
+]]></system-out>
+    <system-err><![CDATA[Sep 17, 2023 2:36:40 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="openIslamicSavingsAccount[data.OpenIslamicSavingsAccountData@4084efd3](3)" classname="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA" time="21.131">
+    <system-out><![CDATA[ACID: 170001111111012444
+Success of test cases and its details are : tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA@2b10ace9
+]]></system-out>
+    <system-err><![CDATA[Sep 17, 2023 2:37:05 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+>>>>>>> 4e0876acef9350bd1b0fd245fb969fa33aaede16
 =======
 Sep 17, 2023 2:36:14 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C

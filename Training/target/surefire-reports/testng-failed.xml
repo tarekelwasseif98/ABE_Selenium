@@ -15,14 +15,21 @@
       <class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA">
         <methods>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <include name="openIslamicSavingsAccount" invocation-numbers="2"/>
+=======
+          <include name="openIslamicSavingsAccount" invocation-numbers="1"/>
+>>>>>>> 4e0876acef9350bd1b0fd245fb969fa33aaede16
 =======
           <include name="openIslamicSavingsAccount" invocation-numbers="1"/>
 >>>>>>> 4e0876acef9350bd1b0fd245fb969fa33aaede16
           <include name="oneTimeSetUp"/>
           <include name="after"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <include name="beforeTest"/>
+=======
+>>>>>>> 4e0876acef9350bd1b0fd245fb969fa33aaede16
 =======
 >>>>>>> 4e0876acef9350bd1b0fd245fb969fa33aaede16
         </methods>

@@ -1,4 +1,10 @@
 tcId,summary,username,password,menu,cif,expectedResult,reference,linkedTcid
+<<<<<<< HEAD
 FCB-001,Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker,ABE22,Infy@123,OISAC,1111111,The savings account is opened successfully.,'170001111111012451,FCB-002
 FCB-003,Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker,ABE22,Infy@123,OISAC,1111111,The savings account is opened successfully.,'170001111111012468,FCB-004
 FCB-005,Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker,ABE22,Infy@123,OISAC,1111111,The savings account is opened successfully.,,FCB-006
+=======
+FCB-001,Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker,QA46,Infy@123,OISAC,1111111,The savings account is opened successfully.,'170001111111012420,FCB-002
+FCB-003,Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker,QA46,Infy@123,OISAC,1111111,The savings account is opened successfully.,'170001111111012437,FCB-004
+FCB-005,Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker,QA46,Infy@123,OISAC,1111111,The savings account is opened successfully.,'170001111111012444,FCB-006
+>>>>>>> 4e0876acef9350bd1b0fd245fb969fa33aaede16

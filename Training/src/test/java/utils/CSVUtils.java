@@ -84,6 +84,56 @@ public class CSVUtils {
         }
 		return -1;
     }
+
+
+    
+    
+    
+    public static int getRowIndexByTestCaseID(String csvFile, String columnName, String testCaseID) throws IOException, CsvException {
+        try (CSVReader reader = new CSVReader(new FileReader(csvFile))) {
+            List<String[]> lines = reader.readAll();
+            String[] headers = lines.get(0);
+            int columnIndex = -1;
+            for (int i = 0; i < headers.length; i++) {
+                if (headers[i].equals(columnName)) {
+                    columnIndex = i;
+                    break;
+                }
+            }
+            if (columnIndex == -1) {
+                System.out.println("Column '" + columnName + "' not found.");
+                return -1;
+            }
+            for (int rowIndex = 1; rowIndex < lines.size(); rowIndex++) {
+                String[] row = lines.get(rowIndex);
+                if (row[columnIndex].equals(testCaseID)) {
+                    System.out.println("Row index found: " + rowIndex);
+                    return rowIndex;
+                }
+            }
+            System.out.println("No matching row found for test case ID: " + testCaseID);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     public static int getColumnIndexByColumnName(String csvFilePath, String columnName) throws IOException {
         FileReader fileReader = new FileReader(csvFilePath);

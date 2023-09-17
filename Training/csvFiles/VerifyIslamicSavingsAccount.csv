@@ -1,4 +1,4 @@
 tcId,summary,username,password,menu,accountId,expectedResult
-FCB-002,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,ABE30,Infy@123,VISAO,'170001111111012451,
-FCB-004,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,ABE30,Infy@123,VISAO,'170001111111012468,
+FCB-002,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,ABE30,Infy@123,VISAO,,
+FCB-004,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,ABE30,Infy@123,VISAO,,
 FCB-006,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,ABE30,Infy@123,VISAO,,

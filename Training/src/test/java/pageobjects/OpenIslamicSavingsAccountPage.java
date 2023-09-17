@@ -27,6 +27,8 @@ public class OpenIslamicSavingsAccountPage {
 	private By loginFrameIframeID = By.xpath("(//iframe[@name='loginFrame'])[1]");
 	public static String acid;
 	public static String  referenceColumnName = "reference";
+	public static String  referenceColumnNameVerify = "accountId";
+
 	
 	public OpenIslamicSavingsAccountPage(WebDriver driver) {
 		this.driver = driver;
@@ -100,6 +102,14 @@ public class OpenIslamicSavingsAccountPage {
 		int nextEmptyCellIndex = CSVUtils.getNextEmptyCellIndexByColumnName(CSVPaths.openIslamicSavingsAccountCsv, referenceColumnName);
 		int columnNameIndex = CSVUtils.getColumnIndexByColumnName(CSVPaths.openIslamicSavingsAccountCsv, referenceColumnName);
 		CSVUtils.insertValueInCsvCell(CSVPaths.openIslamicSavingsAccountCsv, nextEmptyCellIndex, columnNameIndex, acid);
+		return this;
+	}
+	
+	@Step("Save A/c. ID to Verify Csv")
+	public OpenIslamicSavingsAccountPage saveAccountIdToVerifyCsv() throws Exception {
+		int nextEmptyCellIndex = CSVUtils.getNextEmptyCellIndexByColumnName(CSVPaths.verifyIslamicSavingsAccountCsv, referenceColumnNameVerify);
+		int columnNameIndex = CSVUtils.getColumnIndexByColumnName(CSVPaths.verifyIslamicSavingsAccountCsv, referenceColumnNameVerify);
+		CSVUtils.insertValueInCsvCell(CSVPaths.verifyIslamicSavingsAccountCsv, nextEmptyCellIndex, columnNameIndex, acid);
 		return this;
 	}
 }

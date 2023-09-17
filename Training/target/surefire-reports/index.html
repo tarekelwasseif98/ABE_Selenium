@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA" class="method navigator-link" hash-for-method="openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData@68bf24df)">openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData@68bf24df)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,25 +117,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-<<<<<<< HEAD
-                        <a href="#" panel-name="suite-Suite" title="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA" class="method navigator-link" hash-for-method="test(data.OpenIslamicSavingsAccountData@8be14d9)">test(data.OpenIslamicSavingsAccountData@8be14d9)</a> <!-- method navigator-link -->
-=======
-                        <a href="#" panel-name="suite-Suite" title="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA" class="method navigator-link" hash-for-method="test(data.VerifyIslamicSavingsAccountData@63bcc6f5)">test(data.VerifyIslamicSavingsAccountData@63bcc6f5)</a> <!-- method navigator-link -->
->>>>>>> 14e52afa61a4905f2b94932e32f35455606af542
+                        <a href="#" panel-name="suite-Suite" title="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA" class="method navigator-link" hash-for-method="openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData@7d5f74cd)">openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData@7d5f74cd)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-<<<<<<< HEAD
-                        <a href="#" panel-name="suite-Suite" title="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA" class="method navigator-link" hash-for-method="test(data.OpenIslamicSavingsAccountData@7f8d7843)">test(data.OpenIslamicSavingsAccountData@7f8d7843)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA" class="method navigator-link" hash-for-method="test(data.OpenIslamicSavingsAccountData@37f490e9)">test(data.OpenIslamicSavingsAccountData@37f490e9)</a> <!-- method navigator-link -->
-=======
-                        <a href="#" panel-name="suite-Suite" title="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA" class="method navigator-link" hash-for-method="test(data.OpenIslamicSavingsAccountData@6115a243)">test(data.OpenIslamicSavingsAccountData@6115a243)</a> <!-- method navigator-link -->
->>>>>>> 14e52afa61a4905f2b94932e32f35455606af542
+                        <a href="#" panel-name="suite-Suite" title="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA" class="method navigator-link" hash-for-method="openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData@4aa30945)">openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData@4aa30945)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -136,60 +137,55 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData@68bf24df)">
+                  </a> <!-- openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData@68bf24df) -->
+                  <span class="method-name">openIslamicSavingsAccount</span>
+                  <span class="parameters">(data.OpenIslamicSavingsAccountData@68bf24df)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchFrameException: No frame element found by name or id Core_ABE
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;F1TEAM04&apos;, ip: &apos;10.10.23.215&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:885)
+	at pageobjects.OpenIslamicSavingsAccountPage.switchFormAreaFrame(OpenIslamicSavingsAccountPage.java:60)
+	at procedures.OpenIslamicSavingsAccountProcedures.islamicSavingsAccountByMaker(OpenIslamicSavingsAccountProcedures.java:11)
+	at tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA.openIslamicSavingsAccount(ABE_OpenIslamicSavingsAccount_MudarabahSBA.java:79)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 12 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA</span>
-<<<<<<< HEAD
-=======
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="test(data.OpenIslamicSavingsAccountData@6115a243)">
-                  </a> <!-- test(data.OpenIslamicSavingsAccountData@6115a243) -->
-                  <span class="method-name">test</span>
-                  <span class="parameters">(data.OpenIslamicSavingsAccountData@6115a243)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA</span>
->>>>>>> 14e52afa61a4905f2b94932e32f35455606af542
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-<<<<<<< HEAD
-                  <a name="test(data.OpenIslamicSavingsAccountData@8be14d9)">
-                  </a> <!-- test(data.OpenIslamicSavingsAccountData@8be14d9) -->
-                  <span class="method-name">test</span>
-                  <span class="parameters">(data.OpenIslamicSavingsAccountData@8be14d9)</span>
+                  <a name="openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData@7d5f74cd)">
+                  </a> <!-- openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData@7d5f74cd) -->
+                  <span class="method-name">openIslamicSavingsAccount</span>
+                  <span class="parameters">(data.OpenIslamicSavingsAccountData@7d5f74cd)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="test(data.OpenIslamicSavingsAccountData@7f8d7843)">
-                  </a> <!-- test(data.OpenIslamicSavingsAccountData@7f8d7843) -->
-                  <span class="method-name">test</span>
-                  <span class="parameters">(data.OpenIslamicSavingsAccountData@7f8d7843)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="test(data.OpenIslamicSavingsAccountData@37f490e9)">
-                  </a> <!-- test(data.OpenIslamicSavingsAccountData@37f490e9) -->
-                  <span class="method-name">test</span>
-                  <span class="parameters">(data.OpenIslamicSavingsAccountData@37f490e9)</span>
-=======
-                  <a name="test(data.VerifyIslamicSavingsAccountData@63bcc6f5)">
-                  </a> <!-- test(data.VerifyIslamicSavingsAccountData@63bcc6f5) -->
-                  <span class="method-name">test</span>
-                  <span class="parameters">(data.VerifyIslamicSavingsAccountData@63bcc6f5)</span>
->>>>>>> 14e52afa61a4905f2b94932e32f35455606af542
+                  <a name="openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData@4aa30945)">
+                  </a> <!-- openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData@4aa30945) -->
+                  <span class="method-name">openIslamicSavingsAccount</span>
+                  <span class="parameters">(data.OpenIslamicSavingsAccountData@4aa30945)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -243,7 +239,7 @@
               <span class="test-group-name">open</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">test</span>
+                <span class="method-in-group-name">openIslamicSavingsAccount</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -265,35 +261,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'test')
-<<<<<<< HEAD
+data.setCell(0, 1, 'openIslamicSavingsAccount')
 data.setCell(0, 2, 'tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA')
-data.setCell(0, 3, 22773);
+data.setCell(0, 3, 20030);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'test')
+data.setCell(1, 1, 'openIslamicSavingsAccount')
 data.setCell(1, 2, 'tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA')
-data.setCell(1, 3, 22572);
+data.setCell(1, 3, 18339);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'test')
+data.setCell(2, 1, 'openIslamicSavingsAccount')
 data.setCell(2, 2, 'tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA')
-data.setCell(2, 3, 22223);
-=======
-data.setCell(0, 2, 'tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA')
-data.setCell(0, 3, 19447);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'test')
-data.setCell(1, 2, 'tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA')
-data.setCell(1, 3, 19037);
->>>>>>> 14e52afa61a4905f2b94932e32f35455606af542
+data.setCell(2, 3, 17955);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-<<<<<<< HEAD
-              <span class="suite-total-time">Total running time: 1 minutes</span>
-=======
-              <span class="suite-total-time">Total running time: 38 seconds</span>
->>>>>>> 14e52afa61a4905f2b94932e32f35455606af542
+              <span class="suite-total-time">Total running time: 56 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -325,66 +308,42 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-<<<<<<< HEAD
-                <span class="method-name">beforeTest([data.OpenIslamicSavingsAccountData@37f490e9])</span>
-                <span class="method-start">759 ms</span>
+                <span class="method-name">beforeTest([data.OpenIslamicSavingsAccountData@7d5f74cd])</span>
+                <span class="method-start">792 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">test(data.OpenIslamicSavingsAccountData@37f490e9)</span>
-                <span class="method-start">15045 ms</span>
+                <span class="method-name">openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData@7d5f74cd)</span>
+                <span class="method-start">6260 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">after([TestResult name=test status=SUCCESS method=ABE_OpenIslamicSavingsAccount_MudarabahSBA.test(data.Ope...)</span>
-                <span class="method-start">37627 ms</span>
-=======
-                <span class="method-name">beforeTest([data.OpenIslamicSavingsAccountData@6115a243])</span>
-                <span class="method-start">846 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">test(data.OpenIslamicSavingsAccountData@6115a243)</span>
-                <span class="method-start">6821 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">after([TestResult name=test status=SUCCESS method=ABE_OpenIslamicSavingsAccount_MudarabahSBA.test(data.Ope...)</span>
-                <span class="method-start">25865 ms</span>
->>>>>>> 14e52afa61a4905f2b94932e32f35455606af542
+                <span class="method-name">after([TestResult name=openIslamicSavingsAccount status=SUCCESS method=ABE_OpenIslamicSavingsAccount_Mudar...)</span>
+                <span class="method-start">26299 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-<<<<<<< HEAD
-                <span class="method-name">beforeTest([data.OpenIslamicSavingsAccountData@8be14d9])</span>
-                <span class="method-start">37811 ms</span>
+                <span class="method-name">beforeTest([data.OpenIslamicSavingsAccountData@4aa30945])</span>
+                <span class="method-start">26509 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">test(data.OpenIslamicSavingsAccountData@8be14d9)</span>
-                <span class="method-start">43375 ms</span>
+                <span class="method-name">openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData@4aa30945)</span>
+                <span class="method-start">32063 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">after([TestResult name=test status=SUCCESS method=ABE_OpenIslamicSavingsAccount_MudarabahSBA.test(data.Ope...)</span>
-                <span class="method-start">65602 ms</span>
+                <span class="method-name">after([TestResult name=openIslamicSavingsAccount status=SUCCESS method=ABE_OpenIslamicSavingsAccount_Mudar...)</span>
+                <span class="method-start">50022 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">beforeTest([data.OpenIslamicSavingsAccountData@7f8d7843])</span>
-                <span class="method-start">65780 ms</span>
+                <span class="method-name">beforeTest([data.OpenIslamicSavingsAccountData@68bf24df])</span>
+                <span class="method-start">50184 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">test(data.OpenIslamicSavingsAccountData@7f8d7843)</span>
-                <span class="method-start">72401 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData@68bf24df)</span>
+                <span class="method-start">56155 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">after([TestResult name=test status=SUCCESS method=ABE_OpenIslamicSavingsAccount_MudarabahSBA.test(data.Ope...)</span>
-                <span class="method-start">95176 ms</span>
-=======
-                <span class="method-name">beforeTest([data.VerifyIslamicSavingsAccountData@63bcc6f5])</span>
-                <span class="method-start">26044 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">test(data.VerifyIslamicSavingsAccountData@63bcc6f5)</span>
-                <span class="method-start">40910 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">after([TestResult name=test status=SUCCESS method=ABE_VerifyIslamicSavingsAccount_MudarabahSBA.test(data.V...)</span>
-                <span class="method-start">60360 ms</span>
->>>>>>> 14e52afa61a4905f2b94932e32f35455606af542
+                <span class="method-name">after([TestResult name=openIslamicSavingsAccount status=FAILURE method=ABE_OpenIslamicSavingsAccount_Mudar...)</span>
+                <span class="method-start">74500 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

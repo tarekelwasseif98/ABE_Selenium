@@ -1,8 +1,30 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 97.41 s -- in TestSuite
-=======
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 63.92 s -- in TestSuite
->>>>>>> 14e52afa61a4905f2b94932e32f35455606af542
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 76.51 s <<< FAILURE! -- in TestSuite
+tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA.openIslamicSavingsAccount[data.OpenIslamicSavingsAccountData@68bf24df](3) -- Time elapsed: 18.34 s <<< FAILURE!
+org.openqa.selenium.NoSuchFrameException: 
+No frame element found by name or id Core_ABE
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'F1TEAM04', ip: '10.10.23.215', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:885)
+	at pageobjects.OpenIslamicSavingsAccountPage.switchFormAreaFrame(OpenIslamicSavingsAccountPage.java:60)
+	at procedures.OpenIslamicSavingsAccountProcedures.islamicSavingsAccountByMaker(OpenIslamicSavingsAccountProcedures.java:11)
+	at tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA.openIslamicSavingsAccount(ABE_OpenIslamicSavingsAccount_MudarabahSBA.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+

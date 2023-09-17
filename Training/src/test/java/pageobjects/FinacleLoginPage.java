@@ -29,7 +29,7 @@ public class FinacleLoginPage {
 		return this;
 	}
 	
-	@Step("Login with password: {0}")
+	@Step("Login with password : {0}")
 	public FinacleLoginPage sendKeysPasswordTextField(String keysToSend) throws Exception {
 		PageFunctionUtils.enterDataInWebElement(driver, passwordTextField, keysToSend);
 		return this;

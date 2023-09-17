@@ -8,6 +8,7 @@ import java.util.List;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import com.opencsv.exceptions.CsvException;
+import com.opencsv.exceptions.CsvValidationException;
 
 public class CSVUtils {
 	
@@ -70,5 +71,19 @@ public class CSVUtils {
             }
         }
         return -1;
+    }
+    
+    public static String getTestCaseId(String csvFilePath) throws CsvValidationException {
+        String testCaseId = "";
+        try (CSVReader reader = new CSVReader(new FileReader(csvFilePath))) {
+            String[] nextLine;
+            reader.readNext();
+            if ((nextLine = reader.readNext()) != null) {
+                testCaseId = nextLine[0];
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return testCaseId;
     }
 }

@@ -16,7 +16,7 @@ import io.qameta.allure.Attachment;
 import io.qameta.allure.testng.AllureTestNg;
 import pageobjects.FinacleLoginPage;
 import procedures.VerifyIslamicSavingsAccountProcedures;
-import utils.CSVReaderHelper;
+import utils.CSVUtils;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
@@ -32,8 +32,8 @@ public class ABE_VerifyIslamicSavingsAccount_MudarabahSBA {
 	public void beforeTest(Object [] testData) throws Exception {
 		VerifyIslamicSavingsAccountData data = (VerifyIslamicSavingsAccountData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
-		driver.get(Properties.FinacleURL);
-		testCaseId = CSVReaderHelper.getTestCaseId(CSVPaths.VISAO_CSV);
+		driver.get(Properties.finacleUrl);
+		testCaseId = CSVUtils.getTestCaseId(CSVPaths.verifyIslamicSavingsAccountCsv);
 
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
@@ -45,7 +45,7 @@ public class ABE_VerifyIslamicSavingsAccount_MudarabahSBA {
 	@DataProvider(name="Verify Islamic Savings Account DataProvider")
 	public Object[] dpMethod() throws Exception {
     	String jsonFilePath = "jsonFiles\\VerifyIslamicSavingsAccount.json";
-    	Workbook workbook = new Workbook(CSVPaths.VISAO_CSV);
+    	Workbook workbook = new Workbook(CSVPaths.verifyIslamicSavingsAccountCsv);
 		workbook.save(jsonFilePath);
         Class<VerifyIslamicSavingsAccountData> targetClass = VerifyIslamicSavingsAccountData.class;
         JsonReader<VerifyIslamicSavingsAccountData> jsonReader = new JsonReader<>(targetClass);

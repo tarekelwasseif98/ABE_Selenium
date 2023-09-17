@@ -15,7 +15,7 @@ import java.net.URL;
 			cap.setBrowserName("chrome");
 			cap.setPlatform(Platform.WINDOWS);
 			ChromeOptions options = new ChromeOptions();
-			WebDriver driver = new RemoteWebDriver(new URL(Properties.HUB_URL), options);
+			WebDriver driver = new RemoteWebDriver(new URL(Properties.hubUrl), options);
 			options.merge(cap);
 			options.addArguments("--proxy-server='direct://'");
 			options.addArguments("--proxy-bypass-list=*");

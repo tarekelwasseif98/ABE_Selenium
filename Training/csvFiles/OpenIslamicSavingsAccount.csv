@@ -1,0 +1,2 @@
+tcId,summary,username,password,menu,cif,expectedResult,reference,linkedTcid
+FCB-9727,Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker,QA46,Infy@123,OISAC,1111111,The savings account is opened successfully.,'170001111111011782,FCB-9728

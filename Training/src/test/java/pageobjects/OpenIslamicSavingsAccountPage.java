@@ -29,6 +29,11 @@ public class OpenIslamicSavingsAccountPage {
 	public static String  referenceColumnName = "reference";
 	public static String  referenceColumnNameVerify = "accountId";
 
+	public static String  referenceColumnNameVerifytarget = "tcId";
+	public static String  referenceColumnNameOpentarget = "linkedTcid";
+
+	public static String  LinkedId = "FCB-555";
+	
 	
 	public OpenIslamicSavingsAccountPage(WebDriver driver) {
 		this.driver = driver;
@@ -99,15 +104,16 @@ public class OpenIslamicSavingsAccountPage {
 	
 	@Step("Save A/c. ID")
 	public OpenIslamicSavingsAccountPage saveAccountId() throws Exception {
-		int nextEmptyCellIndex = CSVUtils.getNextEmptyCellIndexByColumnName(CSVPaths.openIslamicSavingsAccountCsv, referenceColumnName);
+		int nextEmptyCellIndex = CSVUtils.getRowIndexByTestCaseID(CSVPaths.openIslamicSavingsAccountCsv, referenceColumnNameOpentarget,LinkedId);
 		int columnNameIndex = CSVUtils.getColumnIndexByColumnName(CSVPaths.openIslamicSavingsAccountCsv, referenceColumnName);
 		CSVUtils.insertValueInCsvCell(CSVPaths.openIslamicSavingsAccountCsv, nextEmptyCellIndex, columnNameIndex, acid);
 		return this;
-	}
+	}													
 	
 	@Step("Save A/c. ID to Verify Csv")
 	public OpenIslamicSavingsAccountPage saveAccountIdToVerifyCsv() throws Exception {
-		int nextEmptyCellIndex = CSVUtils.getNextEmptyCellIndexByColumnName(CSVPaths.verifyIslamicSavingsAccountCsv, referenceColumnNameVerify);
+	//	int nextEmptyCellIndex = CSVUtils.getNextEmptyCellIndexByColumnName(CSVPaths.verifyIslamicSavingsAccountCsv, referenceColumnNameVerify);
+		int nextEmptyCellIndex = CSVUtils.getRowIndexByTestCaseID(CSVPaths.verifyIslamicSavingsAccountCsv, referenceColumnNameVerifytarget,LinkedId);
 		int columnNameIndex = CSVUtils.getColumnIndexByColumnName(CSVPaths.verifyIslamicSavingsAccountCsv, referenceColumnNameVerify);
 		CSVUtils.insertValueInCsvCell(CSVPaths.verifyIslamicSavingsAccountCsv, nextEmptyCellIndex, columnNameIndex, acid);
 		return this;

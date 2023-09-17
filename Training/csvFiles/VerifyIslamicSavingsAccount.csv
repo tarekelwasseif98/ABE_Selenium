@@ -1,2 +1,9 @@
+<<<<<<< HEAD
+"tcId","summary","username","password","menu","accountId","expectedResult"
+"FCB-002","Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker","ABE30","Infy@123","VISAO","",""
+"FCB-004","Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker","ABE30","Infy@123","VISAO","",""
+"FCB-006","Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker","ABE30","Infy@123","VISAO","",""
+=======
 tcId,summary,username,password,menu,accountId,expectedResult
 FCB-9728,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,ABE30,Infy@123,VISAO,'170001111111011805,
+>>>>>>> 14e52afa61a4905f2b94932e32f35455606af542

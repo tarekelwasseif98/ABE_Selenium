@@ -4,7 +4,11 @@
   "summary": "Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker",
   "username": "ABE30",
   "password": "Infy@123",
+<<<<<<< HEAD
+  "menu": "VISAO"
+=======
   "menu": "VISAO",
   "accountId": "'170001111111011805"
+>>>>>>> 14e52afa61a4905f2b94932e32f35455606af542
  }
 ]

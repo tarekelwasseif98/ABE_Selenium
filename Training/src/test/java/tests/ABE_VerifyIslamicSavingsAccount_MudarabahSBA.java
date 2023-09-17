@@ -44,18 +44,17 @@ public class ABE_VerifyIslamicSavingsAccount_MudarabahSBA {
 	
 	@DataProvider(name="Verify Islamic Savings Account DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	String jsonFilePath = "jsonFiles\\VerifyIslamicSavingsAccount.json";
     	Workbook workbook = new Workbook(CSVPaths.verifyIslamicSavingsAccountCsv);
-		workbook.save(jsonFilePath);
+		workbook.save(Properties.verifyIslamicSavingsAccountJson);
         Class<VerifyIslamicSavingsAccountData> targetClass = VerifyIslamicSavingsAccountData.class;
         JsonReader<VerifyIslamicSavingsAccountData> jsonReader = new JsonReader<>(targetClass);
-        List<VerifyIslamicSavingsAccountData> dataList = jsonReader.readJsonFile(jsonFilePath);
+        List<VerifyIslamicSavingsAccountData> dataList = jsonReader.readJsonFile(Properties.verifyIslamicSavingsAccountJson);
         dataList.toArray();
         return dataList.toArray();
 	}
 	
 	@Test(dataProvider = "Verify Islamic Savings Account DataProvider", dataProviderClass = ABE_VerifyIslamicSavingsAccount_MudarabahSBA.class)
-	public void test(VerifyIslamicSavingsAccountData data) throws Exception {
+	public void verifyIslamicSavingsAccountTest(VerifyIslamicSavingsAccountData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
 		Allure.parameter("TCID: ", data.getTCID());
 		Allure.parameter("Summary: ", data.getSummary());

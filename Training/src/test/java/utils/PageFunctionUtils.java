@@ -41,14 +41,14 @@ public class PageFunctionUtils {
 		driver.findElement(by).sendKeys(keysToSend);
 	}
 	
-	public static void sync(WebDriver driver, By by) throws InterruptedException {
-		Thread.sleep(500);
+	public static void waitOnElement(WebDriver driver, By by) throws InterruptedException {
+		//Thread.sleep(500);
 		WebDriverWait wait = new WebDriverWait(driver, Properties.maxTime);
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 	}
 	
-	public static void sync2(WebDriver driver, By by) throws InterruptedException {
-			Thread.sleep(3000);
+	public static void waitOnFrameAndSwitch(WebDriver driver, By by) throws InterruptedException {
+			//Thread.sleep(3000);
 			WebDriverWait wait = new WebDriverWait(driver, Properties.maxTime);
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(by));
 		}

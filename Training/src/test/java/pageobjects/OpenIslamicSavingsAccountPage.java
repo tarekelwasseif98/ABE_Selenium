@@ -35,8 +35,8 @@ public class OpenIslamicSavingsAccountPage {
 	@Step("Sending menu name")
 	public OpenIslamicSavingsAccountPage sendKeysSearchBarTextField(String menu) throws Exception {
 	     	driver.switchTo().parentFrame();
-	     	PageFunctionUtils.sync2(driver, loginFrameIframeID);
-			PageFunctionUtils.sync(driver, searchBarTextField);
+	     	PageFunctionUtils.waitOnFrameAndSwitch(driver, loginFrameIframeID);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 	        PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
 	        PageFunctionUtils.clickOnElement(driver, searchButton);
 	        WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -57,13 +57,13 @@ public class OpenIslamicSavingsAccountPage {
 	    driver.switchTo().frame(("loginFrame"));
 	    driver.switchTo().frame(("Core_ABE"));
 	    driver.switchTo().frame(("UX"));
-		PageFunctionUtils.sync2(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnFrameAndSwitch(driver, formAreaIframeID);
 		return this;	
 	}
 	
 	@Step("Sending Customer Details")
-	public OpenIslamicSavingsAccountPage addAccountDetails(String cifid) throws Exception {
-		PageFunctionUtils.sync(driver, cifIDTextField);
+	public OpenIslamicSavingsAccountPage sendKeysAccoundID(String cifid) throws Exception {
+		PageFunctionUtils.waitOnElement(driver, cifIDTextField);
 		driver.findElement(cifIDTextField);
 		driver.findElement(cifIDTextField).click();
 		driver.findElement(cifIDTextField).sendKeys(cifid);

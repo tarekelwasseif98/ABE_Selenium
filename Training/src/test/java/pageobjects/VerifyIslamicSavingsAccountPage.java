@@ -37,7 +37,7 @@ public class VerifyIslamicSavingsAccountPage {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 		driver.switchTo().frame((loginFrameIframeID));
-		PageFunctionUtils.sync(driver, searchBarTextField);
+		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
         PageFunctionUtils.clickOnElement(driver, searchButton);	       
         WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -59,15 +59,15 @@ public class VerifyIslamicSavingsAccountPage {
 	    driver.switchTo().frame(("loginFrame"));
 	    driver.switchTo().frame(("Core_ABE"));
 	    driver.switchTo().frame(("UX"));
-		PageFunctionUtils.sync(driver, but);
-		PageFunctionUtils.sync2(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnElement(driver, but);
+		PageFunctionUtils.waitOnFrameAndSwitch(driver, formAreaIframeID);
 		return this;	
 	}
 	
 	@Step("Sending A/c. ID & Press GO")
 	public VerifyIslamicSavingsAccountPage sendKeysAcidTextField(String ACID) throws Exception {
 		ACID = ACID.substring(1, 19);
-		PageFunctionUtils.sync(driver, acidTextField);
+		PageFunctionUtils.waitOnElement(driver, acidTextField);
 		driver.findElement(acidTextField).click();
 		driver.findElement(acidTextField).sendKeys(ACID);
 		driver.findElement(goButton).click();
@@ -75,7 +75,7 @@ public class VerifyIslamicSavingsAccountPage {
 	}
 	
 	@Step("Side tab navigation")
-	public VerifyIslamicSavingsAccountPage navigateSideMenu() throws Exception {
+	public VerifyIslamicSavingsAccountPage navigateSideMenuTabs() throws Exception {
 		driver.findElement(By.xpath(sideTab1)).click();
 		driver.findElement(By.xpath(sideTab2)).click();
 		driver.findElement(By.xpath(sideTab3)).click();

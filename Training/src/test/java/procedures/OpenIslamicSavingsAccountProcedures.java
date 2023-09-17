@@ -11,6 +11,7 @@ public class OpenIslamicSavingsAccountProcedures {
 									  .switchFormAreaFrame()
 									   .sendKeysAccoundID(data.getCif())
 									    .pressSubmitButton()
-										 .saveAccountId();
+										 .saveAccountId()
+										 .saveAccountIdToVerifyCsv();
 		}
 	}

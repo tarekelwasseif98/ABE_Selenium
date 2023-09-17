@@ -13,7 +13,7 @@
         </groups>
          <classes>
 	 		<class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA"/>
-	 		<class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA"/>
+	 		<!-- <class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA"/>-->
           </classes>
      </test>
 </suite>

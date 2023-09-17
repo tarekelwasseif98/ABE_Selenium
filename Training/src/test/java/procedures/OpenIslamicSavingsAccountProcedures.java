@@ -10,6 +10,7 @@ public class OpenIslamicSavingsAccountProcedures {
 		OpenIslamicSavingsAccountPage.sendKeysSearchBarTextField(data.getMenu())
 									  .switchFormAreaFrame()
 									   .addAccountDetails(data.getCif())
-									    .pressSubmitButton();
+									    .pressSubmitButton()
+										 .saveAccountId();
 		}
 	}

@@ -21,7 +21,7 @@ public class FinacleLoginPage {
 		this.driver = driver;
 	}
 	
-	@Step("Login with username: {0}")
+	@Step("Login with username : {0}")
 	public FinacleLoginPage sendKeysUserNameTextField(String keysToSend) throws Exception {
 
 		driver.switchTo().frame(driver.findElement(loginIframe));

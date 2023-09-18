@@ -1,14 +1,20 @@
 [
  {
-  "tcId": "FCB-9728",
+  "tcId": "FCB-004",
   "summary": "Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker",
-  "username": "ABE30",
+  "username": "QA47",
   "password": "Infy@123",
-<<<<<<< HEAD
-  "menu": "VISAO"
-=======
   "menu": "VISAO",
-  "accountId": "'170001111111011805"
->>>>>>> 14e52afa61a4905f2b94932e32f35455606af542
+  "accountId": "'170001111111013519",
+  "expectedResult": "The savings account is approved successfully."
+ },
+ {
+  "tcId": "FCB-002",
+  "summary": "Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VISAO",
+  "accountId": "'170001111111013502",
+  "expectedResult": "The savings account is approved successfully."
  }
 ]

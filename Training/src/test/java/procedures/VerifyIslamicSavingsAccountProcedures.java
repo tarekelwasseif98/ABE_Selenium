@@ -12,7 +12,7 @@ public class VerifyIslamicSavingsAccountProcedures {
 		VerifyIslamicSavingsAccountPage.sendKeysMenuName(data.getMenu())
 										.switchFormAreaFrame()
 										 .sendKeysAcidTextField(data.getAccountid())
-										  .navigateSideMenuTabs()
+										  .navigateSideMenuTab()
 										   .pressSubmitButton();
 		}
 	}

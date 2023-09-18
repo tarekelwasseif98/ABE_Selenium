@@ -1,7 +1,3 @@
 tcId,summary,username,password,menu,accountId,expectedResult
-FCB-006,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,ABE30,Infy@123,VISAO,,
-FCB-006,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,ABE30,Infy@123,VISAO,,
-FCB-006,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,ABE30,Infy@123,VISAO,,
-FCB-555,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,ABE30,Infy@123,VISAO,,
-FCB-666,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,ABE30,Infy@123,VISAO,,
-FCB-777,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,ABE30,Infy@123,VISAO,,
+FCB-004,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,QA47,Infy@123,VISAO,'170001111111013519,The savings account is approved successfully.
+FCB-002,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,QA47,Infy@123,VISAO,'170001111111013502,The savings account is approved successfully.

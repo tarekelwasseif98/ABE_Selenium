@@ -21,7 +21,7 @@ public class FinacleLoginPage {
 		this.driver = driver;
 	}
 	
-	@Step("Login with username : {0}")
+	@Step("Login with username: {0}")
 	public FinacleLoginPage sendKeysUserNameTextField(String keysToSend) throws Exception {
 
 		driver.switchTo().frame(driver.findElement(loginIframe));
@@ -29,13 +29,13 @@ public class FinacleLoginPage {
 		return this;
 	}
 	
-	@Step("Login with password : {0}")
+	@Step("Login with password: {0}")
 	public FinacleLoginPage sendKeysPasswordTextField(String keysToSend) throws Exception {
 		PageFunctionUtils.enterDataInWebElement(driver, passwordTextField, keysToSend);
 		return this;
 	}
 	
-	@Step("Press Login Button")
+	@Step("Press login button")
 	public FinacleLoginPage clickOnLoginButton(String keysToSend){
 		PageFunctionUtils.clickOnElement(driver, loginButton);
 		WebDriverWait wait = new WebDriverWait(driver, 10);

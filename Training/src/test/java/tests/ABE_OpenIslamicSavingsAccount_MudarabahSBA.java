@@ -34,6 +34,7 @@ public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
 	@BeforeClass
 	public void oneTimeSetUp() throws IOException, CsvException {
 		CSVUtils.clearColumnByName(CSVPaths.openIslamicSavingsAccountCsv, "reference");
+		CSVUtils.clearColumnByName(CSVPaths.verifyIslamicSavingsAccountCsv, "accountId");
 	}
 
 	WebDriver driver = null;

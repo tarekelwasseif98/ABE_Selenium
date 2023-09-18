@@ -12,12 +12,20 @@ public class OpenIslamicSavingsAccountData {
 	private String reference;
 	private String linkedTcid;
 	
-	public String getMenu() {
-		return menu;
+	public String getTCID() {
+		return tcId;
 	}
 
-	public void setMenu(String menu) {
-		this.menu = menu;
+	public void setTCID(String tCID) {
+		tcId = tCID;
+	}
+	
+	public String getSummary() {
+		return summary;
+	}
+
+	public void setSummary(String summary) {
+		this.summary = summary;
 	}
 	
 	public String getUsername() {
@@ -35,6 +43,14 @@ public class OpenIslamicSavingsAccountData {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	public String getMenu() {
+		return menu;
+	}
+
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
 
 	public String getCif() {
 		return cif;
@@ -42,22 +58,6 @@ public class OpenIslamicSavingsAccountData {
 
 	public void setCif(String cif) {
 		this.cif = cif;
-	}
-
-	public String getTCID() {
-		return tcId;
-	}
-
-	public void setTCID(String tCID) {
-		tcId = tCID;
-	}
-
-	public String getSummary() {
-		return summary;
-	}
-
-	public void setSummary(String summary) {
-		this.summary = summary;
 	}
 
 	public String getExpectedResult() {

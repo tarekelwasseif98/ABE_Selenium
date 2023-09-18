@@ -83,4 +83,11 @@ public class OpenIslamicSavingsAccountData {
 	public void setLinkedTCID(String linkedTCID) {
 		this.linkedTcid = linkedTCID;
 	}
+
+	@Override
+	public String toString() {
+		return "OpenIslamicSavingsAccountData [tcId=" + tcId + ", summary=" + summary + ", username=" + username
+				+ ", password=" + password + ", menu=" + menu + ", cif=" + cif + ", expectedResult=" + expectedResult
+				+ ", reference=" + reference + ", linkedTcid=" + linkedTcid + "]";
+	}
 }

@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
 import utils.CSVUtils;
 import utils.PageFunctionUtils;
-import utils.CSVPaths;
+import utils.Paths;
 
 public class OpenIslamicSavingsAccountPage {
 	private WebDriver driver;
@@ -102,14 +102,14 @@ public class OpenIslamicSavingsAccountPage {
 	
 	@Step("Save a/c. id")
 	public OpenIslamicSavingsAccountPage saveAccountId(String linkedId) throws Exception {
-		int rowByTcid1 = CSVUtils.getRowByTcid(CSVPaths.openIslamicSavingsAccountCsv, linkedTcidCsvColumnName, linkedId);
-		int columnByColumnName1 = CSVUtils.getColumnByColumnName(CSVPaths.openIslamicSavingsAccountCsv, referenceCsvColumnName);
-		int rowByTcid2 = CSVUtils.getRowByTcid(CSVPaths.verifyIslamicSavingsAccountCsv, tcIdCsvColumnName, linkedId);
-		int columnByColumnName2 = CSVUtils.getColumnByColumnName(CSVPaths.verifyIslamicSavingsAccountCsv, accountIdCsvColumnName);
+		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.OpenIslamicSavingsAccountCsv, linkedTcidCsvColumnName, linkedId);
+		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.OpenIslamicSavingsAccountCsv, referenceCsvColumnName);
+		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyIslamicSavingsAccountCsv, tcIdCsvColumnName, linkedId);
+		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyIslamicSavingsAccountCsv, accountIdCsvColumnName);
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(CSVPaths.openIslamicSavingsAccountCsv, rowByTcid1, columnByColumnName1, acid);
-			CSVUtils.insertValueInCsvCell(CSVPaths.verifyIslamicSavingsAccountCsv, rowByTcid2, columnByColumnName2, acid);
+			CSVUtils.insertValueInCsvCell(Paths.OpenIslamicSavingsAccountCsv, rowByTcid1, columnByColumnName1, acid);
+			CSVUtils.insertValueInCsvCell(Paths.VerifyIslamicSavingsAccountCsv, rowByTcid2, columnByColumnName2, acid);
 		}
 		return this;
-	}													
+	}												
 }

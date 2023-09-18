@@ -20,7 +20,7 @@ import utils.CSVUtils;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
-import utils.CSVPaths;
+import utils.Paths;
 
 @Test(groups = "verify",dependsOnGroups = "open")
 @Listeners({AllureTestNg.class})
@@ -32,8 +32,8 @@ public class ABE_VerifyIslamicSavingsAccount_MudarabahSBA {
 	public void beforeTest(Object [] testData) throws Exception {
 		VerifyIslamicSavingsAccountData data = (VerifyIslamicSavingsAccountData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
-		driver.get(Properties.finacleUrl);
-		testCaseId = CSVUtils.getTestCaseId(CSVPaths.verifyIslamicSavingsAccountCsv);
+		driver.get(Properties.FinacleUrl);
+		testCaseId = CSVUtils.getTestCaseId(Paths.VerifyIslamicSavingsAccountCsv);
 
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
@@ -44,11 +44,11 @@ public class ABE_VerifyIslamicSavingsAccount_MudarabahSBA {
 	
 	@DataProvider(name="Verify Islamic Savings Account DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(CSVPaths.verifyIslamicSavingsAccountCsv);
-		workbook.save(Properties.verifyIslamicSavingsAccountJson);
+    	Workbook workbook = new Workbook(Paths.VerifyIslamicSavingsAccountCsv);
+		workbook.save(Paths.VerifyIslamicSavingsAccountJson);
         Class<VerifyIslamicSavingsAccountData> targetClass = VerifyIslamicSavingsAccountData.class;
         JsonReader<VerifyIslamicSavingsAccountData> jsonReader = new JsonReader<>(targetClass);
-        List<VerifyIslamicSavingsAccountData> dataList = jsonReader.readJsonFile(Properties.verifyIslamicSavingsAccountJson);
+        List<VerifyIslamicSavingsAccountData> dataList = jsonReader.readJsonFile(Paths.VerifyIslamicSavingsAccountJson);
         dataList.toArray();
         return dataList.toArray();
 	}

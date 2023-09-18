@@ -22,7 +22,7 @@ import procedures.OpenIslamicSavingsAccountProcedures;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
-import utils.CSVPaths;
+import utils.Paths;
 import utils.AssertionFactory;
 import utils.CSVUtils;
 import io.qameta.allure.testng.AllureTestNg;
@@ -33,8 +33,8 @@ public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
 	
 	@BeforeClass
 	public void oneTimeSetUp() throws IOException, CsvException {
-		CSVUtils.clearColumnByName(CSVPaths.openIslamicSavingsAccountCsv, "reference");
-		CSVUtils.clearColumnByName(CSVPaths.verifyIslamicSavingsAccountCsv, "accountId");
+		CSVUtils.clearColumnByName(Paths.OpenIslamicSavingsAccountCsv, "reference");
+		CSVUtils.clearColumnByName(Paths.VerifyIslamicSavingsAccountCsv, "accountId");
 	}
 
 	WebDriver driver = null;
@@ -43,8 +43,8 @@ public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
 	public void beforeTest(Object [] testData) throws Exception {
 		OpenIslamicSavingsAccountData data = (OpenIslamicSavingsAccountData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
-		driver.get(Properties.finacleUrl);
-		testCaseId = CSVUtils.getTestCaseId(CSVPaths.openIslamicSavingsAccountCsv);
+		driver.get(Properties.FinacleUrl);
+		testCaseId = CSVUtils.getTestCaseId(Paths.OpenIslamicSavingsAccountCsv);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())
@@ -54,11 +54,11 @@ public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
 	
 	@DataProvider(name="Open Islamic Savings Account DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(CSVPaths.openIslamicSavingsAccountCsv);
-		workbook.save(Properties.openIslamicSavingsAccountJson);
+    	Workbook workbook = new Workbook(Paths.OpenIslamicSavingsAccountCsv);
+		workbook.save(Paths.OpenIslamicSavingsAccountJson);
         Class<OpenIslamicSavingsAccountData> targetClass = OpenIslamicSavingsAccountData.class;
         JsonReader<OpenIslamicSavingsAccountData> jsonReader = new JsonReader<>(targetClass);
-        List<OpenIslamicSavingsAccountData> dataList = jsonReader.readJsonFile(Properties.openIslamicSavingsAccountJson);
+        List<OpenIslamicSavingsAccountData> dataList = jsonReader.readJsonFile(Paths.OpenIslamicSavingsAccountJson);
         dataList.toArray();
         return dataList.toArray();
 	}
@@ -67,15 +67,7 @@ public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
 	@Step("{testCaseId}")
 	public void openIslamicSavingsAccount(OpenIslamicSavingsAccountData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
-		Allure.parameter("TCID: ", data.getTCID());
-		Allure.parameter("Summary: ", data.getSummary());
-		Allure.parameter("Username: ", data.getUsername());
-		Allure.parameter("Menu: ", data.getMenu());
-		Allure.parameter("CIFID: ", data.getCif());
-		Allure.parameter("Expected Result: ", data.getExpectedResult());
-		Allure.parameter("Reference: ", data.getReference());
-		Allure.parameter("Linked TCID: ", data.getLinkedTCID());
-		
+		Allure.parameter("Data: ", data.toString());		
         OpenIslamicSavingsAccountProcedures.islamicSavingsAccountByMaker(driver, data);
         AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}

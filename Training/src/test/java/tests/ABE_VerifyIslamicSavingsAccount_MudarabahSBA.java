@@ -72,10 +72,10 @@ public class ABE_VerifyIslamicSavingsAccount_MudarabahSBA {
 		Thread.sleep(1000);
 		if (result.getStatus() == ITestResult.SUCCESS) {
             ScreenshotHelper.captureScreenshot(driver);
-        }
+            }
 		 if (result.getStatus() == ITestResult.FAILURE) {
-	            ScreenshotHelper.captureScreenshot(driver);
-	        }
+			 ScreenshotHelper.captureScreenshot(driver);
+			 }
 		driver.quit();
 	}
 }

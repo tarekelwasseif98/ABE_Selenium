@@ -16,6 +16,7 @@ public class VerifyIslamicSavingsAccountPage {
 	private By acidTextField = By.xpath("(//input[@id='_tempAcid'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
+	private By acceptAlertButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
 	private String loginFrameIframeID = "loginFrame";
 	private By but = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']"); 
@@ -32,7 +33,7 @@ public class VerifyIslamicSavingsAccountPage {
 		this.driver = driver;
 	}
 	
-	@Step("Sending menu name")
+	@Step("Sending menu name: {0}")
 	public VerifyIslamicSavingsAccountPage sendKeysMenuName(String menu) throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
@@ -64,7 +65,7 @@ public class VerifyIslamicSavingsAccountPage {
 		return this;	
 	}
 	
-	@Step("Sending A/c. ID & Press GO")
+	@Step("Sending a/c. id: {0}")
 	public VerifyIslamicSavingsAccountPage sendKeysAcidTextField(String ACID) throws Exception {
 		ACID = ACID.substring(1, 19);
 		PageFunctionUtils.waitOnElement(driver, acidTextField);
@@ -75,7 +76,7 @@ public class VerifyIslamicSavingsAccountPage {
 	}
 	
 	@Step("Side tab navigation")
-	public VerifyIslamicSavingsAccountPage navigateSideMenuTabs() throws Exception {
+	public VerifyIslamicSavingsAccountPage navigateSideMenuTab() throws Exception {
 		driver.findElement(By.xpath(sideTab1)).click();
 		driver.findElement(By.xpath(sideTab2)).click();
 		driver.findElement(By.xpath(sideTab3)).click();
@@ -87,11 +88,11 @@ public class VerifyIslamicSavingsAccountPage {
 		return this;
 	}
 	
-	@Step("Press SUBMIT button")
+	@Step("Press submit button")
 	public VerifyIslamicSavingsAccountPage pressSubmitButton() throws Exception {
 		driver.findElement(submitButton).click();
 	    driver.switchTo().parentFrame();
-		driver.findElement(By.xpath("(//button[normalize-space()='Accept'])[1]")).click();
+		driver.findElement(acceptAlertButton).click();
 		return this;
 	}
 }

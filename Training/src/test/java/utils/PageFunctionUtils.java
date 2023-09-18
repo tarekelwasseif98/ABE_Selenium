@@ -42,13 +42,12 @@ public class PageFunctionUtils {
 	}
 	
 	public static void waitOnElement(WebDriver driver, By by) throws InterruptedException {
-		//Thread.sleep(500);
 		WebDriverWait wait = new WebDriverWait(driver, Properties.maxTime);
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 	}
 	
 	public static void waitOnFrameAndSwitch(WebDriver driver, By by) throws InterruptedException {
-			//Thread.sleep(3000);
+			Thread.sleep(3000);
 			WebDriverWait wait = new WebDriverWait(driver, Properties.maxTime);
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(by));
 		}

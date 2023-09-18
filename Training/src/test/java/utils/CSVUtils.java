@@ -20,7 +20,6 @@ public class CSVUtils {
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             lines = reader.readAll();
         }
-      
         int columnIndex = -1;
         String[] header = lines.get(0);
         for (int i = 0; i < header.length; i++) {
@@ -28,8 +27,7 @@ public class CSVUtils {
                 columnIndex = i;
                 break;
             }
-        }
-      
+        }     
         if (columnIndex != -1) {
             for (int i = 1; i < lines.size(); i++) {
                 String[] line = lines.get(i);
@@ -38,7 +36,6 @@ public class CSVUtils {
                 }
             }
         }
-      
         try (CSVWriter writer = new CSVWriter(new FileWriter(filePath))) {
             writer.writeAll(lines);
         }
@@ -58,38 +55,7 @@ public class CSVUtils {
         return testCaseId;
     }
     
-    public static int getNextEmptyCellIndexByColumnName(String csvFile, String columnName) throws IOException, CsvException {
-        try (CSVReader reader = new CSVReader(new FileReader(csvFile))) {
-            String[] headers = reader.readNext();
-            int rowIndex = 0;
-            int columnIndex = -1;
-            for (int i = 0; i < headers.length; i++) {
-                if (headers[i].equals(columnName)) {
-                    columnIndex = i;
-                    break;
-                }
-            }
-            if (columnIndex == -1) {
-                return columnIndex;
-            }
-            String[] nextLine;
-            while ((nextLine = reader.readNext()) != null) {
-                if (nextLine.length > columnIndex && nextLine[columnIndex].isEmpty()) {
-                	return rowIndex+1;
-                }
-                rowIndex++;
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-		return -1;
-    }
-
-
-    
-    
-    
-    public static int getRowIndexByTestCaseID(String csvFile, String columnName, String testCaseID) throws IOException, CsvException {
+    public static int getRowByTcid(String csvFile, String columnName, String testCaseID) throws IOException, CsvException {
         try (CSVReader reader = new CSVReader(new FileReader(csvFile))) {
             List<String[]> lines = reader.readAll();
             String[] headers = lines.get(0);
@@ -118,24 +84,7 @@ public class CSVUtils {
         return -1;
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    public static int getColumnIndexByColumnName(String csvFilePath, String columnName) throws IOException {
+    public static int getColumnByColumnName(String csvFilePath, String columnName) throws IOException {
         FileReader fileReader = new FileReader(csvFilePath);
         CSVParser csvParser = new CSVParser(fileReader, CSVFormat.DEFAULT.withHeader());
 
@@ -152,14 +101,14 @@ public class CSVUtils {
         return columnIndex;
     }
     
-    public static void insertValueInCsvCell(String csvFile, int nextEmptyCellIndex, int columnNameIndex, String acid) throws IOException, CsvException {
+    public static void insertValueInCsvCell(String csvFile, int rowToUse, int columnToUse, String acid) throws IOException, CsvException {
 		CSVReader reader = new CSVReader(new FileReader(csvFile));
 		List<String[]> lines = reader.readAll();
 		reader.close();
-		if(nextEmptyCellIndex < lines.size()) {
-		    String[] row = lines.get(nextEmptyCellIndex);
-		    row[columnNameIndex] = "'" + acid;
-		    lines.set(nextEmptyCellIndex, row);
+		if(rowToUse < lines.size()) {
+		    String[] row = lines.get(rowToUse);
+		    row[columnToUse] = "'" + acid;
+		    lines.set(rowToUse, row);
 		}
 		CSVWriter writer = new CSVWriter(new FileWriter(csvFile));
 		writer.writeAll(lines,false);

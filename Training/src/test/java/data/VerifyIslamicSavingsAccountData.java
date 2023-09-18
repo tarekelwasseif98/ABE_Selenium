@@ -10,12 +10,20 @@ public class VerifyIslamicSavingsAccountData {
 	private String accountId;
 	private String expectedResult;
 	
-	public String getMenu() {
-		return menu;
+	public String getTCID() {
+		return tcId;
 	}
 
-	public void setMenu(String menu) {
-		this.menu = menu;
+	public void setTCID(String tCID) {
+		tcId = tCID;
+	}
+
+	public String getSummary() {
+		return summary;
+	}
+
+	public void setSummary(String summary) {
+		this.summary = summary;
 	}
 	
 	public String getUsername() {
@@ -34,28 +42,20 @@ public class VerifyIslamicSavingsAccountData {
 		this.password = password;
 	}
 	
+	public String getMenu() {
+		return menu;
+	}
+
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
+	
 	public String getAccountid() {
 		return accountId;
 	}
 
 	public void setAccountid(String accountid) {
 		this.accountId = accountid;
-	}
-
-	public String getTCID() {
-		return tcId;
-	}
-
-	public void setTCID(String tCID) {
-		tcId = tCID;
-	}
-
-	public String getSummary() {
-		return summary;
-	}
-
-	public void setSummary(String summary) {
-		this.summary = summary;
 	}
 
 	public String getExpectedResult() {

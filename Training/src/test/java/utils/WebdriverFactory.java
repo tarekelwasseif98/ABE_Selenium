@@ -8,7 +8,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.URL;
 
-
 	public class WebdriverFactory {
 		public static WebDriver initiateWebDriver() throws MalformedURLException {
 			DesiredCapabilities cap=new DesiredCapabilities();

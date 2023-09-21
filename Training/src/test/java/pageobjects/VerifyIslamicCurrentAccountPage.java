@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
 import utils.PageFunctionUtils;
 
-public class VerifyIslamicSavingsAccountPage {
+public class VerifyIslamicCurrentAccountPage {
 
 	private WebDriver driver;
 	private By searchBarTextField = By.id("menuSelect");
@@ -16,25 +16,23 @@ public class VerifyIslamicSavingsAccountPage {
 	private By accountIdTextField = By.xpath("(//input[@id='_tempAcid'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private By acceptAlertButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
 	private String loginFrameIframeID = "loginFrame";
 	private By but = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']"); 
-	private String sideTab1 = "//a[@id='stepII_anchor']";
-	private String sideTab2 = "(//a[@id='stepII4_anchor'])[1]";  
-	private String sideTab3 = "(//a[@id='stepII10_anchor'])[1]";
-	private String sideTab4 = "(//a[@id='stepII5_anchor'])[1]";
-	private String sideTab5 = "(//a[@id='stepII7_anchor'])[1]";
-	private String sideTab6 = "(//a[@id='stepII3_anchor'])[1]";
-	private String sideTab7 = "(//a[@id='stepII1_anchor'])[1]";
-	private String sideTab8 = "(//a[@id='stepII19_anchor'])[1]";
+	private String additionalDetailsSideTab = "(//span[@id='stepII_textSpan'])[1]";
+	private String profitDetailsSideTab = "(//span[@id='stepII1_textSpan'])[1]";  
+	private String taxDetailsSideTab = "(//span[@id='stepII2_textSpan'])[1]";
+	private String schemeDetailsSideTab = "(//span[@id='stepII3_textSpan'])[1]";
+	private String relatedPartyDetailsSideTab = "(//span[@id='stepII5_textSpan'])[1]";
+	private String generalDetailsSideTab = "(//span[@id='stepII7_textSpan'])[1]";
+	private String misDetailsSideTab = "(//span[@id='stepII16_textSpan'])[1]";
 
-	public VerifyIslamicSavingsAccountPage(WebDriver driver) {
+	public VerifyIslamicCurrentAccountPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
 	@Step("Sending menu name: {0}")
-	public VerifyIslamicSavingsAccountPage sendKeysMenuName(String menu) throws Exception {
+	public VerifyIslamicCurrentAccountPage sendKeysMenuName(String menu) throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 		driver.switchTo().frame((loginFrameIframeID));
@@ -54,7 +52,7 @@ public class VerifyIslamicSavingsAccountPage {
 	}
 	
 	@Step("Frame switching")
-	public VerifyIslamicSavingsAccountPage switchFormAreaFrame() throws Exception {
+	public VerifyIslamicCurrentAccountPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 	    driver.switchTo().frame(("loginFrame"));
@@ -66,7 +64,7 @@ public class VerifyIslamicSavingsAccountPage {
 	}
 	
 	@Step("Sending a/c. id: {0}")
-	public VerifyIslamicSavingsAccountPage sendKeysAccountIdTextField(String accountId) throws Exception {
+	public VerifyIslamicCurrentAccountPage sendKeysAccountIdTextField(String accountId) throws Exception {
 		accountId = accountId.substring(1, 19);
 		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
 		driver.findElement(accountIdTextField).click();
@@ -76,23 +74,20 @@ public class VerifyIslamicSavingsAccountPage {
 	}
 	
 	@Step("Side tab navigation")
-	public VerifyIslamicSavingsAccountPage navigateSideMenuTab() throws Exception {
-		driver.findElement(By.xpath(sideTab1)).click();
-		driver.findElement(By.xpath(sideTab2)).click();
-		driver.findElement(By.xpath(sideTab3)).click();
-		driver.findElement(By.xpath(sideTab4)).click();
-		driver.findElement(By.xpath(sideTab5)).click();
-		driver.findElement(By.xpath(sideTab6)).click();
-		driver.findElement(By.xpath(sideTab7)).click();
-		driver.findElement(By.xpath(sideTab8)).click();
+	public VerifyIslamicCurrentAccountPage navigateSideMenuTab() throws Exception {
+		driver.findElement(By.xpath(additionalDetailsSideTab)).click();
+		driver.findElement(By.xpath(profitDetailsSideTab)).click();
+		driver.findElement(By.xpath(taxDetailsSideTab)).click();
+		driver.findElement(By.xpath(schemeDetailsSideTab)).click();
+		driver.findElement(By.xpath(relatedPartyDetailsSideTab)).click();
+		driver.findElement(By.xpath(generalDetailsSideTab)).click();
+		driver.findElement(By.xpath(misDetailsSideTab)).click();
 		return this;
 	}
 	
 	@Step("Press submit button")
-	public VerifyIslamicSavingsAccountPage pressSubmitButton() throws Exception {
+	public VerifyIslamicCurrentAccountPage pressSubmitButton() throws Exception {
 		driver.findElement(submitButton).click();
-	    driver.switchTo().parentFrame();
-		driver.findElement(acceptAlertButton).click();
 		return this;
 	}
 }

@@ -10,12 +10,13 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.aspose.cells.Workbook;
 import data.JsonReader;
-import data.VerifyIslamicSavingsAccountData;
+import data.VerifyIslamicCurrentAccountData;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.testng.AllureTestNg;
 import pageobjects.FinacleLoginPage;
-import procedures.VerifyIslamicSavingsAccountProcedures;
+import procedures.VerifyIslamicCurrentAccountProcedures;
+import utils.AssertionFactory;
 import utils.CSVUtils;
 import utils.Properties;
 import utils.ScreenshotHelper;
@@ -24,16 +25,16 @@ import utils.Paths;
 
 @Test(groups = "verify",dependsOnGroups = "open")
 @Listeners({AllureTestNg.class})
-public class ABE_VerifyIslamicSavingsAccount_MudarabahSBA {
+public class ABE_VerifyIslamicCurrentAccount_MudarabahCAA {
 
 	WebDriver driver = null;
 	private String testCaseId;
 	@BeforeMethod(description= "Initiating Browser")
 	public void beforeTest(Object [] testData) throws Exception {
-		VerifyIslamicSavingsAccountData data = (VerifyIslamicSavingsAccountData) testData[0];
+		VerifyIslamicCurrentAccountData data = (VerifyIslamicCurrentAccountData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FinacleUrl);
-		testCaseId = CSVUtils.getTestCaseId(Paths.VerifyIslamicSavingsAccountCsv);
+		testCaseId = CSVUtils.getTestCaseId(Paths.VerifyIslamicCurrentAccountCsv);
 
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
@@ -42,23 +43,23 @@ public class ABE_VerifyIslamicSavingsAccount_MudarabahSBA {
 		.clickOnLoginButton(data.getPassword());
 	}
 	
-	@DataProvider(name="Verify Islamic Savings Account DataProvider")
+	@DataProvider(name="Verify Islamic Current Account DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.VerifyIslamicSavingsAccountCsv);
-		workbook.save(Paths.VerifyIslamicSavingsAccountJson);
-        Class<VerifyIslamicSavingsAccountData> targetClass = VerifyIslamicSavingsAccountData.class;
-        JsonReader<VerifyIslamicSavingsAccountData> jsonReader = new JsonReader<>(targetClass);
-        List<VerifyIslamicSavingsAccountData> dataList = jsonReader.readJsonFile(Paths.VerifyIslamicSavingsAccountJson);
+    	Workbook workbook = new Workbook(Paths.VerifyIslamicCurrentAccountCsv);
+		workbook.save(Paths.VerifyIslamicCurrentAccountJson);
+        Class<VerifyIslamicCurrentAccountData> targetClass = VerifyIslamicCurrentAccountData.class;
+        JsonReader<VerifyIslamicCurrentAccountData> jsonReader = new JsonReader<>(targetClass);
+        List<VerifyIslamicCurrentAccountData> dataList = jsonReader.readJsonFile(Paths.VerifyIslamicCurrentAccountJson);
         dataList.toArray();
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Verify Islamic Savings Account DataProvider", dataProviderClass = ABE_VerifyIslamicSavingsAccount_MudarabahSBA.class)
-	public void verifyIslamicSavingsAccountTest(VerifyIslamicSavingsAccountData data) throws Exception {
+	@Test(dataProvider = "Verify Islamic Current Account DataProvider", dataProviderClass = ABE_VerifyIslamicCurrentAccount_MudarabahCAA.class)
+	public void verifyIslamicCurrentAccountTest(VerifyIslamicCurrentAccountData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
 		Allure.parameter("Data: ", data.toString());
-		
-		VerifyIslamicSavingsAccountProcedures.islamicSavingsAccountByChecker(driver, data);
+		VerifyIslamicCurrentAccountProcedures.islamicCurrentAccountByChecker(driver, data);
+		AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}
 
 	@Attachment(value = "Screenshot", type = "image/png")

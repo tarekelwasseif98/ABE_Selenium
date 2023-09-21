@@ -5,7 +5,7 @@
   "username": "QA47",
   "password": "Infy@123",
   "menu": "VISAO",
-  "accountId": "'170001111111013557",
+  "accountId": "'170001111111013762",
   "expectedResult": "The savings account is approved successfully."
  },
  {
@@ -14,7 +14,7 @@
   "username": "QA47",
   "password": "Infy@123",
   "menu": "VISAO",
-  "accountId": "'170001111111013540",
+  "accountId": "'170001111111013755",
   "expectedResult": "The savings account is approved successfully."
  }
 ]

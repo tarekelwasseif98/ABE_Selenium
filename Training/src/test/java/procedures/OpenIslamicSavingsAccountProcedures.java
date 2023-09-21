@@ -9,7 +9,7 @@ public class OpenIslamicSavingsAccountProcedures {
 		OpenIslamicSavingsAccountPage OpenIslamicSavingsAccountPage = new OpenIslamicSavingsAccountPage(driver);
 		OpenIslamicSavingsAccountPage.sendKeysSearchBarTextField(data.getMenu())
 									  .switchFormAreaFrame()
-									   .sendKeysAccoundID(data.getCif())
+									   .sendKeysAccoundId(data.getCif(), data.getSchemeCode(), data.getGeneralLedgerSubheadCode())
 									    .pressSubmitButton()
 										 .saveAccountId(data.getLinkedTCID());
 		}

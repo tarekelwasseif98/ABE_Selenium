@@ -11,7 +11,7 @@ import utils.CSVUtils;
 import utils.PageFunctionUtils;
 import utils.Paths;
 
-public class OpenIslamicSavingsAccountPage {
+public class OpenIslamicCurrentAccountPage {
 	private WebDriver driver;
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
@@ -22,23 +22,23 @@ public class OpenIslamicSavingsAccountPage {
 	private By solIdTextField = By.xpath("(//input[@id='_solId'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By continueButton = By.xpath("(//button[@id='_acctDetCon'])[1]");
-	private By taxDetailsMenu = By.xpath("(//a[@id='stepII10_anchor'])[1]");
+	private By taxDetailsMenu = By.xpath("//span[@id='stepII2_textSpan']");
 	private By taxCategoryMenu = By.id("_wtaxFlg_select");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By accountIdSuccessMessage = By.xpath("(//p[@id='_resMsg_paraMsg'])[1]");
 	private By loginFrameIframeID = By.xpath("(//iframe[@name='loginFrame'])[1]");
-	public static String acid;
+	public static String acId;
 	public static String  referenceCsvColumnName = "reference";
 	public static String  accountIdCsvColumnName = "accountId";
 	public static String  tcIdCsvColumnName = "tcId";
 	public static String  linkedTcidCsvColumnName = "linkedTcid";
 	
-	public OpenIslamicSavingsAccountPage(WebDriver driver) {
+	public OpenIslamicCurrentAccountPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
 	@Step("Sending menu name: {0}")
-	public OpenIslamicSavingsAccountPage sendKeysSearchBarTextField(String menu) throws Exception {
+	public OpenIslamicCurrentAccountPage sendKeysSearchBarTextField(String menu) throws Exception {
 	     	driver.switchTo().parentFrame();
 	     	PageFunctionUtils.waitOnFrameAndSwitch(driver, loginFrameIframeID);
 			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
@@ -56,7 +56,7 @@ public class OpenIslamicSavingsAccountPage {
 	}
 	
 	@Step("Frame switching")
-	public OpenIslamicSavingsAccountPage switchFormAreaFrame() throws Exception {
+	public OpenIslamicCurrentAccountPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 	    driver.switchTo().frame(("loginFrame"));
@@ -67,7 +67,7 @@ public class OpenIslamicSavingsAccountPage {
 	}
 	
 	@Step("Sending customer details: {0}")
-	public OpenIslamicSavingsAccountPage sendKeysAccoundId(String cifid, String schemeCode, String generalLedgerSubheadCode) throws Exception {
+	public OpenIslamicCurrentAccountPage sendKeysAccoundId(String cifid, String schemeCode, String generalLedgerSubheadCode) throws Exception {
 		PageFunctionUtils.waitOnElement(driver, cifIdTextField);
 		driver.findElement(cifIdTextField);
 		driver.findElement(cifIdTextField).click();
@@ -94,24 +94,24 @@ public class OpenIslamicSavingsAccountPage {
 	}
 	
 	@Step("Press submit button")
-	public OpenIslamicSavingsAccountPage pressSubmitButton() throws Exception {
+	public OpenIslamicCurrentAccountPage pressSubmitButton() throws Exception {
 		driver.findElement(submitButton);
 		driver.findElement(submitButton).click();
 		Thread.sleep(3500);
-		acid = driver.findElement(accountIdSuccessMessage).getText().substring(53, 71);
-		System.out.println("ACID: "+ acid);
+		acId = driver.findElement(accountIdSuccessMessage).getText().substring(53, 71);
+		System.out.println("Account ID: "+ acId);
 		return this;
 	}
 	
 	@Step("Save a/c. id")
-	public OpenIslamicSavingsAccountPage saveAccountId(String linkedId) throws Exception {
-		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.OpenIslamicSavingsAccountCsv, linkedTcidCsvColumnName, linkedId);
-		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.OpenIslamicSavingsAccountCsv, referenceCsvColumnName);
-		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyIslamicSavingsAccountCsv, tcIdCsvColumnName, linkedId);
-		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyIslamicSavingsAccountCsv, accountIdCsvColumnName);
+	public OpenIslamicCurrentAccountPage saveAccountId(String linkedId) throws Exception {
+		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.OpenIslamicCurrentAccountCsv, linkedTcidCsvColumnName, linkedId);
+		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.OpenIslamicCurrentAccountCsv, referenceCsvColumnName);
+		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyIslamicCurrentAccountCsv, tcIdCsvColumnName, linkedId);
+		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyIslamicCurrentAccountCsv, accountIdCsvColumnName);
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.OpenIslamicSavingsAccountCsv, rowByTcid1, columnByColumnName1, acid);
-			CSVUtils.insertValueInCsvCell(Paths.VerifyIslamicSavingsAccountCsv, rowByTcid2, columnByColumnName2, acid);
+			CSVUtils.insertValueInCsvCell(Paths.OpenIslamicCurrentAccountCsv, rowByTcid1, columnByColumnName1, acId);
+			CSVUtils.insertValueInCsvCell(Paths.VerifyIslamicCurrentAccountCsv, rowByTcid2, columnByColumnName2, acId);
 		}
 		return this;
 	}												

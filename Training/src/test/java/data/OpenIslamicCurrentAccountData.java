@@ -1,6 +1,6 @@
 package data;
 
-public class OpenIslamicSavingsAccountData {
+public class OpenIslamicCurrentAccountData {
 	
 	private String tcId;
 	private String summary;
@@ -104,8 +104,9 @@ public class OpenIslamicSavingsAccountData {
 
 	@Override
 	public String toString() {
-		return "OpenIslamicSavingsAccountData [tcId=" + tcId + ", summary=" + summary + ", username=" + username
-				+ ", password=" + password + ", menu=" + menu + ", cif=" + cif + ", expectedResult=" + expectedResult
-				+ ", reference=" + reference + ", linkedTcid=" + linkedTcid + "]";
+		return "OpenIslamicCurrentAccountData Testcase ID: " + tcId + ", Summary: " + summary + ", Username: " + username
+				+ ", Password: " + password + ", Menu: " + menu + ", CIF ID: " + cif + ", Scheme Code: " + schemeCode
+				+ ", General Ledger Subhead Code: " + generalLedgerSubheadCode + ", Expected Result: " + expectedResult
+				+ ", Linked Testcase ID: " + linkedTcid;
 	}
 }

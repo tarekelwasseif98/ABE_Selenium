@@ -7,13 +7,14 @@
     <test thread-count="1" parallel = "classes" name="Islamic Savings Account">
 		<groups>
             <run>
-                <include name="open"/>
-			    <include name="verify"/>
+                <include name="CreateACH"/>
+			    <!-- <include name="verify"/>-->
             </run>
         </groups>
          <classes>
-	 		<class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA"/>
-	 		<class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA"/>
+			<class name="tests.CreateAchOutward_Test"/>
+	 <!-- 	<class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA"/>
+	 		<class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA"/>-->
           </classes>
      </test>
 </suite>

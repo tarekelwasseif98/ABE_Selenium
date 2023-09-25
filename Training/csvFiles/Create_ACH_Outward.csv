@@ -1,0 +1,3 @@
+"tcId","summary","username","password","menu","PaysysID","Date","Amount","Line1 (RI)","CCY","BIC_BEN","Network_BEN","Branch_BEN","Bank_BEN","Name(BENF)","Account _BENF","Pos","Account (Remitter)","expectedResult","linkedTcid"
+"FCB-001","Automation_Cycle1_CreateACHOutward_ByMaker","QA49","Infy@123","MPOR","ACH","25/09/2023","2000","TEST","EGP","CIBEEGCXXXX","ACH","196","10","TEST","132456","","1.005E+17","The record is added successfully.","FCB-002"
+"FCB-003","Automation_Cycle1_CreateACHOutward_ByMaker","QA49","Infy@123","MPOR","ACH","25/09/2023","2000","TEST","EGP","CIBEEGCXXXX","ACH","196","11","TEST","132456","","1.005E+17","The record is added successfully.","FCB-004"

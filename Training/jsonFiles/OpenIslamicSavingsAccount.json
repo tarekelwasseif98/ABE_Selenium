@@ -2,7 +2,7 @@
  {
   "tcId": "FCB-001",
   "summary": "Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker",
-  "username": "QA46",
+  "username": "QA49",
   "password": "Infy@123",
   "menu": "OISAC",
   "cif": 1111111,
@@ -12,7 +12,7 @@
  {
   "tcId": "FCB-003",
   "summary": "Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker",
-  "username": "QA46",
+  "username": "QA49",
   "password": "Infy@123",
   "menu": "OISAC",
   "cif": 1111111,

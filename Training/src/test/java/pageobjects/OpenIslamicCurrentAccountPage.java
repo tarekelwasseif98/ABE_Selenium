@@ -13,9 +13,12 @@ import utils.Paths;
 
 public class OpenIslamicCurrentAccountPage {
 	private WebDriver driver;
+	private String loginFrameIframeId = "loginFrame";
+	private String coreAbeIframeId = "Core_ABE";
+	private String uxIframeId = "UX";
+	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']"); 
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
-	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']"); 
 	private By cifIdTextField = By.xpath("(//input[@id='_critCif'])[1]");
 	private By schemeCodeTextField = By.xpath("(//input[@id='_critSchmCode'])[1]");
 	private By generalLedgerSubheadCodeTextField = By.xpath("(//input[@id='_glSubHeadCde'])[1]");
@@ -26,7 +29,6 @@ public class OpenIslamicCurrentAccountPage {
 	private By taxCategoryMenu = By.id("_wtaxFlg_select");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By accountIdSuccessMessage = By.xpath("(//p[@id='_resMsg_paraMsg'])[1]");
-	private By loginFrameIframeID = By.xpath("(//iframe[@name='loginFrame'])[1]");
 	public static String acId;
 	public static String  referenceCsvColumnName = "reference";
 	public static String  accountIdCsvColumnName = "accountId";
@@ -39,31 +41,33 @@ public class OpenIslamicCurrentAccountPage {
 	
 	@Step("Sending menu name: {0}")
 	public OpenIslamicCurrentAccountPage sendKeysSearchBarTextField(String menu) throws Exception {
-	     	driver.switchTo().parentFrame();
-	     	PageFunctionUtils.waitOnFrameAndSwitch(driver, loginFrameIframeID);
-			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-	        PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		PageFunctionUtils.sleep();
+		driver.switchTo().parentFrame();
+		driver.switchTo().frame((loginFrameIframeId));
+		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        try {
+            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+            alert.accept();
+            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
 	        PageFunctionUtils.clickOnElement(driver, searchButton);
-	        WebDriverWait wait = new WebDriverWait(driver, 10);
-	        try {
-	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-	            alert.accept();
-	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-		        PageFunctionUtils.clickOnElement(driver, searchButton);
-	        } catch (Exception e) {
 	        }
-	        return this;        
+        catch (Exception e) {
+        }
+	return this;
 	}
 	
 	@Step("Frame switching")
 	public OpenIslamicCurrentAccountPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
-	    driver.switchTo().frame(("loginFrame"));
-	    driver.switchTo().frame(("Core_ABE"));
-	    driver.switchTo().frame(("UX"));
+	    driver.switchTo().frame((loginFrameIframeId));
+	    driver.switchTo().frame((coreAbeIframeId));
+	    driver.switchTo().frame((uxIframeId));
 		PageFunctionUtils.waitOnFrameAndSwitch(driver, formAreaIframeID);
-		return this;	
+		return this;		
 	}
 	
 	@Step("Sending customer details: {0}")

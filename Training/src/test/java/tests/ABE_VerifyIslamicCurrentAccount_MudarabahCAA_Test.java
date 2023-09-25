@@ -17,7 +17,6 @@ import io.qameta.allure.testng.AllureTestNg;
 import pageobjects.FinacleLoginPage;
 import procedures.VerifyIslamicCurrentAccountProcedures;
 import utils.AssertionFactory;
-import utils.CSVUtils;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
@@ -25,17 +24,14 @@ import utils.Paths;
 
 @Test(groups = "verify",dependsOnGroups = "open")
 @Listeners({AllureTestNg.class})
-public class ABE_VerifyIslamicCurrentAccount_MudarabahCAA {
+public class ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test {
 
 	WebDriver driver = null;
-	private String testCaseId;
 	@BeforeMethod(description= "Initiating Browser")
 	public void beforeTest(Object [] testData) throws Exception {
 		VerifyIslamicCurrentAccountData data = (VerifyIslamicCurrentAccountData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FinacleUrl);
-		testCaseId = CSVUtils.getTestCaseId(Paths.VerifyIslamicCurrentAccountCsv);
-
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())
@@ -54,9 +50,9 @@ public class ABE_VerifyIslamicCurrentAccount_MudarabahCAA {
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Verify Islamic Current Account DataProvider", dataProviderClass = ABE_VerifyIslamicCurrentAccount_MudarabahCAA.class)
+	@Test(dataProvider = "Verify Islamic Current Account DataProvider", dataProviderClass = ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test.class)
 	public void verifyIslamicCurrentAccountTest(VerifyIslamicCurrentAccountData data) throws Exception {
-		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
+		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());
 		VerifyIslamicCurrentAccountProcedures.islamicCurrentAccountByChecker(driver, data);
 		AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());

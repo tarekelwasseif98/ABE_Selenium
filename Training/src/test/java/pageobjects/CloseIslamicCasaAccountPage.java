@@ -8,19 +8,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
 import utils.PageFunctionUtils;
 
-public class VerifyIslamicCurrentAccountPage {
+public class CloseIslamicCasaAccountPage {
 
 	private WebDriver driver;
+	private By searchBarTextField = By.id("menuSelect");
+	private By searchButton = By.id("menuSearcherGo");
+	private By accountIdTextField = By.xpath("(//input[@id='_acctId'])[1]");
+	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");	
+	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
 	private String uxIframeId = "UX";
 	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']");
-	private By searchBarTextField = By.id("menuSelect");
-	private By searchButton = By.id("menuSearcherGo");
-	private By accountIdTextField = By.xpath("(//input[@id='_tempAcid'])[1]");
-	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
-	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private String loginFrameIframeID = "loginFrame";
 	private By but = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	private String additionalDetailsSideTab = "(//span[@id='stepII_textSpan'])[1]";
 	private String profitDetailsSideTab = "(//span[@id='stepII1_textSpan'])[1]";  
@@ -30,15 +29,15 @@ public class VerifyIslamicCurrentAccountPage {
 	private String generalDetailsSideTab = "(//span[@id='stepII7_textSpan'])[1]";
 	private String misDetailsSideTab = "(//span[@id='stepII16_textSpan'])[1]";
 
-	public VerifyIslamicCurrentAccountPage(WebDriver driver) {
+	public CloseIslamicCasaAccountPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
 	@Step("Sending menu name: {0}")
-	public VerifyIslamicCurrentAccountPage sendKeysSearchBarTextField(String menu) throws Exception {
+	public CloseIslamicCasaAccountPage sendKeysMenuName(String menu) throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
-		driver.switchTo().frame((loginFrameIframeID));
+		driver.switchTo().frame((loginFrameIframeId));
 		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
         PageFunctionUtils.clickOnElement(driver, searchButton);	       
@@ -55,7 +54,7 @@ public class VerifyIslamicCurrentAccountPage {
 	}
 	
 	@Step("Frame switching")
-	public VerifyIslamicCurrentAccountPage switchFormAreaFrame() throws Exception {
+	public CloseIslamicCasaAccountPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 	    driver.switchTo().frame((loginFrameIframeId));
@@ -63,11 +62,11 @@ public class VerifyIslamicCurrentAccountPage {
 	    driver.switchTo().frame((uxIframeId));
 		PageFunctionUtils.waitOnElement(driver, but);
 		PageFunctionUtils.waitOnFrameAndSwitch(driver, formAreaIframeID);
-		return this;	
+		return this;
 	}
 	
 	@Step("Sending a/c. id: {0}")
-	public VerifyIslamicCurrentAccountPage sendKeysAccountIdTextField(String accountId) throws Exception {
+	public CloseIslamicCasaAccountPage sendKeysAccountIdTextField(String accountId) throws Exception {
 		accountId = accountId.substring(1, 19);
 		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
 		driver.findElement(accountIdTextField).click();
@@ -77,7 +76,7 @@ public class VerifyIslamicCurrentAccountPage {
 	}
 	
 	@Step("Side tab navigation")
-	public VerifyIslamicCurrentAccountPage navigateSideMenuTab() throws Exception {
+	public CloseIslamicCasaAccountPage navigateSideMenuTab() throws Exception {
 		driver.findElement(By.xpath(additionalDetailsSideTab)).click();
 		driver.findElement(By.xpath(profitDetailsSideTab)).click();
 		driver.findElement(By.xpath(taxDetailsSideTab)).click();
@@ -89,7 +88,7 @@ public class VerifyIslamicCurrentAccountPage {
 	}
 	
 	@Step("Press submit button")
-	public VerifyIslamicCurrentAccountPage pressSubmitButton() throws Exception {
+	public CloseIslamicCasaAccountPage pressSubmitButton() throws Exception {
 		driver.findElement(submitButton).click();
 		return this;
 	}

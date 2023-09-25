@@ -4,17 +4,14 @@
 <listeners>
 	<listener class-name="listeners.Listeners"/>
 </listeners>
-    <test thread-count="1" parallel = "classes" name="Islamic Savings Account">
+    <test thread-count="1" parallel = "classes" name="Islamic Casa Account">
 		<groups>
             <run>
                 <include name="open"/>
 			    <include name="verify"/>
             </run>
         </groups>
-         <classes>
-	 		<!--<class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA"/>-->
-	 		<!--<class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA"/>-->
-	 		
+         <classes>	 		
 	 		<!--<class name="tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA"/>-->
 	 		<!--<class name="tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA"/>-->
 	 		

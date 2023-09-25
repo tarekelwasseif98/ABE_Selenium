@@ -1,3 +1,0 @@
-tcId,summary,username,password,menu,accountId,expectedResult
-FCB-004,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,QA47,Infy@123,VISAO,'170001111111013830,The savings account is approved successfully.
-FCB-002,Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker,QA47,Infy@123,VISAO,'170001111111013823,The savings account is approved successfully.

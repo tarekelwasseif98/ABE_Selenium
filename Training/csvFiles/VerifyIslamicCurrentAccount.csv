@@ -1,8 +1,3 @@
 tcId,summary,username,password,menu,accountId,expectedResult
-FCB-9836,IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Corporate_CACO_ByChecker_B1,QA47,Infy@123,VICAO,'161006251769010027,The current account is approved successfully.
-FCB-9838,IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Pension_CAP_ByChecker_B3,QA47,Infy@123,VICAO,,The current account is approved successfully.
-FCB-9839,IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Co-OprerativeOrganization_CACOOP_ByChecker_B4,QA47,Infy@123,VICAO,,The current account is approved successfully.
-FCB-9840,IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Inherit_CAINH_ByChecker_B5,QA47,Infy@123,VICAO,,The current account is approved successfully.
-FCB-9841,IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Individuals_CAIN_ByChecker_B6,QA47,Infy@123,VICAO,,The current account is approved successfully.
-FCB-9842,IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_AgriculturePersons_CAAP_ByChecker_B7,QA47,Infy@123,VICAO,,The current account is approved successfully.
-FCB-9843,IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_FacilityService_CALC_ByChecker_B8,QA47,Infy@123,VICAO,,The current account is approved successfully.
+FCB-9836,IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Corporate_CACO_ByChecker_B1,QA47,Infy@123,VICAO,'161006251769010137,The current account is approved successfully.
+FCB-9838,IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Pension_CAP_ByChecker_B3,QA47,Infy@123,VICAO,'160302347795010033,The current account is approved successfully.

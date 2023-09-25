@@ -1,3 +1,0 @@
-tcId,summary,username,password,menu,cif,schemeCode,generalLedgerSubheadCode,expectedResult,reference,linkedTcid
-FCB-001,Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker,QA46,Infy@123,OISAC,1111111,1700,22101,The savings account is opened successfully.,'170001111111013823,FCB-002
-FCB-003,Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker,QA46,Infy@123,OISAC,1111111,1700,22101,The savings account is opened successfully.,'170001111111013830,FCB-004

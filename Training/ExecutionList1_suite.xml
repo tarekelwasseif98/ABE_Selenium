@@ -12,9 +12,15 @@
             </run>
         </groups>
          <classes>
-	 		<class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA"/>
-	 		<class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA"/>
+	 		<!--<class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA"/>-->
+	 		<!--<class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA"/>-->
+	 		
+	 		<!--<class name="tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA"/>-->
+	 		<!--<class name="tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA"/>-->
+	 		
+	 		<class name="tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA"/>
+	 		<class name="tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA"/>
+	 		
           </classes>
      </test>
 </suite>
-

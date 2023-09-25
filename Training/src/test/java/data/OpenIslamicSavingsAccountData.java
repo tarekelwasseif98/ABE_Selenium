@@ -8,6 +8,8 @@ public class OpenIslamicSavingsAccountData {
 	private String password;
 	private String menu;
 	private String cif;
+	private String schemeCode;
+	private String generalLedgerSubheadCode;
 	private String expectedResult;
 	private String reference;
 	private String linkedTcid;
@@ -58,6 +60,22 @@ public class OpenIslamicSavingsAccountData {
 
 	public void setCif(String cif) {
 		this.cif = cif;
+	}
+	
+	public String getSchemeCode() {
+		return schemeCode;
+	}
+
+	public void setSchemeCode(String schemeCode) {
+		this.schemeCode = schemeCode;
+	}
+
+	public String getGeneralLedgerSubheadCode() {
+		return generalLedgerSubheadCode;
+	}
+
+	public void setGeneralLedgerSubheadCode(String generalLedgerSubheadCode) {
+		this.generalLedgerSubheadCode = generalLedgerSubheadCode;
 	}
 
 	public String getExpectedResult() {

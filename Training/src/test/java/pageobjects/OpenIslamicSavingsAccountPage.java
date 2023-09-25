@@ -2,7 +2,6 @@ package pageobjects;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -19,6 +18,7 @@ public class OpenIslamicSavingsAccountPage {
 	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']"); 
 	private By cifIdTextField = By.xpath("(//input[@id='_critCif'])[1]");
 	private By schemeCodeTextField = By.xpath("(//input[@id='_critSchmCode'])[1]");
+	private By generalLedgerSubheadCodeTextField = By.xpath("(//input[@id='_glSubHeadCde'])[1]");
 	private By solIdTextField = By.xpath("(//input[@id='_solId'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By continueButton = By.xpath("(//button[@id='_acctDetCon'])[1]");
@@ -50,7 +50,7 @@ public class OpenIslamicSavingsAccountPage {
 	            alert.accept();
 	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
 		        PageFunctionUtils.clickOnElement(driver, searchButton);
-	        } catch (NoAlertPresentException e) {
+	        } catch (Exception e) {
 	        }
 	        return this;        
 	}
@@ -67,14 +67,17 @@ public class OpenIslamicSavingsAccountPage {
 	}
 	
 	@Step("Sending customer details: {0}")
-	public OpenIslamicSavingsAccountPage sendKeysAccoundID(String cifid) throws Exception {
+	public OpenIslamicSavingsAccountPage sendKeysAccoundId(String cifid, String schemeCode, String generalLedgerSubheadCode) throws Exception {
 		PageFunctionUtils.waitOnElement(driver, cifIdTextField);
 		driver.findElement(cifIdTextField);
 		driver.findElement(cifIdTextField).click();
 		driver.findElement(cifIdTextField).sendKeys(cifid);
-		driver.findElement(cifIdTextField);
+		driver.findElement(schemeCodeTextField);
 		driver.findElement(schemeCodeTextField).click();
-		driver.findElement(schemeCodeTextField).sendKeys("1700");
+		driver.findElement(schemeCodeTextField).sendKeys(schemeCode);
+		driver.findElement(generalLedgerSubheadCodeTextField);
+		driver.findElement(generalLedgerSubheadCodeTextField).click();
+		driver.findElement(generalLedgerSubheadCodeTextField).sendKeys(generalLedgerSubheadCode);
 		driver.findElement(solIdTextField);
 		driver.findElement(solIdTextField).click();
 		driver.findElement(solIdTextField).clear();

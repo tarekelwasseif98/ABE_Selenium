@@ -13,7 +13,7 @@ public class VerifyIslamicSavingsAccountPage {
 	private WebDriver driver;
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
-	private By acidTextField = By.xpath("(//input[@id='_tempAcid'])[1]");
+	private By accountIdTextField = By.xpath("(//input[@id='_tempAcid'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By acceptAlertButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
@@ -66,11 +66,11 @@ public class VerifyIslamicSavingsAccountPage {
 	}
 	
 	@Step("Sending a/c. id: {0}")
-	public VerifyIslamicSavingsAccountPage sendKeysAcidTextField(String ACID) throws Exception {
-		ACID = ACID.substring(1, 19);
-		PageFunctionUtils.waitOnElement(driver, acidTextField);
-		driver.findElement(acidTextField).click();
-		driver.findElement(acidTextField).sendKeys(ACID);
+	public VerifyIslamicSavingsAccountPage sendKeysAccountIdTextField(String accountId) throws Exception {
+		accountId = accountId.substring(1, 19);
+		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
+		driver.findElement(accountIdTextField).click();
+		driver.findElement(accountIdTextField).sendKeys(accountId);
 		driver.findElement(goButton).click();
 		return this;
 	}

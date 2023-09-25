@@ -12,21 +12,21 @@
       </run>
     </groups>
     <classes>
-      <class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA">
+      <class name="tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA">
         <methods>
           <include name="after"/>
-          <include name="verifyIslamicSavingsAccountTest"/>
           <include name="beforeTest"/>
+          <include name="verifyIslamicCurrentAccountTest"/>
         </methods>
-      </class> <!-- tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA -->
-      <class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA">
+      </class> <!-- tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA -->
+      <class name="tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA">
         <methods>
-          <include name="openIslamicSavingsAccount" invocation-numbers="0 1"/>
           <include name="oneTimeSetUp"/>
+          <include name="openIslamicCurrentAccount" invocation-numbers="0"/>
           <include name="beforeTest"/>
           <include name="after"/>
         </methods>
-      </class> <!-- tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA -->
+      </class> <!-- tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA -->
     </classes>
   </test> <!-- Islamic Savings Account(failed) -->
 </suite> <!-- Failed suite [Suite] -->

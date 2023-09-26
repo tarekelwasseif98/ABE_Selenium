@@ -4,6 +4,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
 import utils.PageFunctionUtils;
@@ -11,30 +12,26 @@ import utils.PageFunctionUtils;
 public class CloseIslamicCasaAccountPage {
 
 	private WebDriver driver;
+	private String loginFrameIframeId = "loginFrame";
+	private String coreAbeIframeId = "Core_ABE";
+	private String uxIframeId = "UX";
+	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']"); 
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By accountIdTextField = By.xpath("(//input[@id='_acctId'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");	
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private String loginFrameIframeId = "loginFrame";
-	private String coreAbeIframeId = "Core_ABE";
-	private String uxIframeId = "UX";
-	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']");
 	private By but = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
-	private String additionalDetailsSideTab = "(//span[@id='stepII_textSpan'])[1]";
-	private String profitDetailsSideTab = "(//span[@id='stepII1_textSpan'])[1]";  
-	private String taxDetailsSideTab = "(//span[@id='stepII2_textSpan'])[1]";
-	private String schemeDetailsSideTab = "(//span[@id='stepII3_textSpan'])[1]";
-	private String relatedPartyDetailsSideTab = "(//span[@id='stepII5_textSpan'])[1]";
-	private String generalDetailsSideTab = "(//span[@id='stepII7_textSpan'])[1]";
-	private String misDetailsSideTab = "(//span[@id='stepII16_textSpan'])[1]";
+	private By transferBalanceRadioButton = By.xpath("(//input[@id='_trfrYes_radio'])[1]");
+	private By transactionTypeMenu = By.id("_tranType_select");
+	private By transferAccountIdTextField = By.xpath("(//input[@id='_trfrActId'])[1]");
 
 	public CloseIslamicCasaAccountPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
 	@Step("Sending menu name: {0}")
-	public CloseIslamicCasaAccountPage sendKeysMenuName(String menu) throws Exception {
+	public CloseIslamicCasaAccountPage sendKeysSearchBarTextField(String menu) throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 		driver.switchTo().frame((loginFrameIframeId));
@@ -67,23 +64,22 @@ public class CloseIslamicCasaAccountPage {
 	
 	@Step("Sending a/c. id: {0}")
 	public CloseIslamicCasaAccountPage sendKeysAccountIdTextField(String accountId) throws Exception {
-		accountId = accountId.substring(1, 19);
+		accountId = accountId.substring(1);
 		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
 		driver.findElement(accountIdTextField).click();
 		driver.findElement(accountIdTextField).sendKeys(accountId);
-		driver.findElement(goButton).click();
+		driver.findElement(goButton).click();		
 		return this;
 	}
 	
-	@Step("Side tab navigation")
-	public CloseIslamicCasaAccountPage navigateSideMenuTab() throws Exception {
-		driver.findElement(By.xpath(additionalDetailsSideTab)).click();
-		driver.findElement(By.xpath(profitDetailsSideTab)).click();
-		driver.findElement(By.xpath(taxDetailsSideTab)).click();
-		driver.findElement(By.xpath(schemeDetailsSideTab)).click();
-		driver.findElement(By.xpath(relatedPartyDetailsSideTab)).click();
-		driver.findElement(By.xpath(generalDetailsSideTab)).click();
-		driver.findElement(By.xpath(misDetailsSideTab)).click();
+	@Step("Sending trasfer a/c. id: {0}")
+	public CloseIslamicCasaAccountPage sendKeystransferAccountIdTextField(String transferAccountId) throws Exception {
+		transferAccountId = transferAccountId.substring(1);
+		driver.findElement(transferBalanceRadioButton).click();
+		Select dropdown = new Select(driver.findElement(transactionTypeMenu));
+		dropdown.selectByIndex(2);
+		driver.findElement(transferAccountIdTextField).click();
+		driver.findElement(transferAccountIdTextField).sendKeys(transferAccountId);
 		return this;
 	}
 	

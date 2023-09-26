@@ -7,7 +7,7 @@ import pageobjects.VerifyIslamicCurrentAccountPage;
 
 public class VerifyIslamicCurrentAccountProcedures {
 	
-	public static void islamicCurrentAccountByChecker(WebDriver driver, VerifyIslamicCurrentAccountData data) throws Exception {
+	public static void verifyIslamicCurrentAccountByChecker(WebDriver driver, VerifyIslamicCurrentAccountData data) throws Exception {
 		VerifyIslamicCurrentAccountPage VerifyIslamicCurrentAccountPage = new VerifyIslamicCurrentAccountPage(driver);
 		VerifyIslamicCurrentAccountPage.sendKeysSearchBarTextField(data.getMenu())
 										.switchFormAreaFrame()

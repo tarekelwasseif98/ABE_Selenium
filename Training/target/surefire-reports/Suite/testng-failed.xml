@@ -4,29 +4,22 @@
   <listeners>
     <listener class-name="listeners.Listeners"/>
   </listeners>
-  <test thread-count="5" parallel="classes" name="Islamic Savings Account(failed)" verbose="0">
+  <test thread-count="5" parallel="classes" name="Office Cash Account(failed)" verbose="0">
     <groups>
       <run>
-        <include name="open"/>
-        <include name="verify"/>
+        <include name="OpenOfficeAccount"/>
+        <include name="verifyOfficeAccount"/>
       </run>
     </groups>
     <classes>
-      <class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA">
+      <class name="tests.ABE_VerifyOfficeAccount_Test">
         <methods>
-          <include name="after"/>
-          <include name="verifyIslamicSavingsAccountTest"/>
+          <include name="ABE_VerifyOfficeAccount" invocation-numbers="0"/>
           <include name="beforeTest"/>
-        </methods>
-      </class> <!-- tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA -->
-      <class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA">
-        <methods>
-          <include name="openIslamicSavingsAccount" invocation-numbers="0 1"/>
           <include name="oneTimeSetUp"/>
-          <include name="beforeTest"/>
           <include name="after"/>
         </methods>
-      </class> <!-- tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA -->
+      </class> <!-- tests.ABE_VerifyOfficeAccount_Test -->
     </classes>
-  </test> <!-- Islamic Savings Account(failed) -->
+  </test> <!-- Office Cash Account(failed) -->
 </suite> <!-- Failed suite [Suite] -->

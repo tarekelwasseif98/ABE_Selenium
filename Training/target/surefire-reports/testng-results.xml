@@ -1,157 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-18T15:47:02 EEST" name="Suite" finished-at="2023-09-18T15:49:15 EEST" duration-ms="133459">
+  <suite started-at="2023-09-26T14:39:47 EEST" name="Suite" finished-at="2023-09-26T14:40:54 EEST" duration-ms="67529">
     <groups>
-      <group name="verify">
-        <method signature="ABE_VerifyIslamicSavingsAccount_MudarabahSBA.verifyIslamicSavingsAccountTest(data.VerifyIslamicSavingsAccountData)[pri:0, instance:tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA@65d57e4e]" name="verifyIslamicSavingsAccountTest" class="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA"/>
-      </group> <!-- verify -->
-      <group name="open">
-        <method signature="ABE_OpenIslamicSavingsAccount_MudarabahSBA.openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData)[pri:0, instance:tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA@29138d3a]" name="openIslamicSavingsAccount" class="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA"/>
-      </group> <!-- open -->
+      <group name="verifyOfficeAccount">
+        <method signature="ABE_VerifyOfficeAccount_Test.ABE_VerifyOfficeAccount(data.VerifyOfficeAccountData)[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe]" name="ABE_VerifyOfficeAccount" class="tests.ABE_VerifyOfficeAccount_Test"/>
+      </group> <!-- verifyOfficeAccount -->
+      <group name="OpenOfficeAccount">
+        <method signature="ABE_OpenOfficeAccount_Test.ABE_OpenOfficeAccount(data.OpenOfficeAccountData)[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16]" name="ABE_OpenOfficeAccount" class="tests.ABE_OpenOfficeAccount_Test"/>
+      </group> <!-- OpenOfficeAccount -->
     </groups>
-    <test started-at="2023-09-18T15:47:02 EEST" name="Islamic Savings Account" finished-at="2023-09-18T15:49:15 EEST" duration-ms="133459">
-      <class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA">
-        <test-method is-config="true" signature="oneTimeSetUp()[pri:0, instance:tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA@29138d3a]" started-at="2023-09-18T15:47:02 EEST" name="oneTimeSetUp" finished-at="2023-09-18T15:47:02 EEST" duration-ms="82" status="PASS">
+    <test started-at="2023-09-26T14:39:47 EEST" name="Office Cash Account" finished-at="2023-09-26T14:40:54 EEST" duration-ms="67529">
+      <class name="tests.ABE_OpenOfficeAccount_Test">
+        <test-method is-config="true" signature="oneTimeSetUp()[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16]" started-at="2023-09-26T14:39:47 EEST" name="oneTimeSetUp" finished-at="2023-09-26T14:39:47 EEST" duration-ms="103" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- oneTimeSetUp -->
-        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA@29138d3a]" started-at="2023-09-18T15:47:02 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-18T15:47:17 EEST" duration-ms="14159" status="PASS">
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16]" started-at="2023-09-26T14:39:48 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T14:39:53 EEST" duration-ms="5512" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@6573d2f7]]>
+                <![CDATA[[Ljava.lang.Object;@6a1d3225]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData)[pri:0, instance:tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA@29138d3a]" started-at="2023-09-18T15:47:17 EEST" name="openIslamicSavingsAccount" data-provider="Open Islamic Savings Account DataProvider" finished-at="2023-09-18T15:47:39 EEST" duration-ms="22392" status="PASS">
+        <test-method signature="ABE_OpenOfficeAccount(data.OpenOfficeAccountData)[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16]" started-at="2023-09-26T14:39:53 EEST" name="ABE_OpenOfficeAccount" data-provider="Open Office Account DataProvider" finished-at="2023-09-26T14:40:18 EEST" duration-ms="25224" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[OpenIslamicSavingsAccountData [tcId=FCB-001, summary=Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker, username=QA46, password=Infy@123, menu=OISAC, cif=1111111, expectedResult=The savings account is opened successfully., reference=null, linkedTcid=FCB-002]]]>
+                <![CDATA[OpenOfficeAccountData [tcId=FCB-298, summary=Finance_CashAccounts_Create_OfficeAccount_Teller_Cash_EGP_ByMaker, username=ABE36, password=Infy@123, menu=OOAT, SchemeCode=CASH, CCY=EGP, AccountHeadName=OFFICE AC, EODMaxBalance=999999, GeneralLedgerSubhead=10007, expectedResult=opened successfully, reference=null, linkedTcid=FCB-002]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openIslamicSavingsAccount -->
-        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA@29138d3a]" started-at="2023-09-18T15:47:39 EEST" name="after" finished-at="2023-09-18T15:47:39 EEST" duration-ms="163" status="PASS">
+        </test-method> <!-- ABE_OpenOfficeAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16]" started-at="2023-09-26T14:40:18 EEST" name="after" finished-at="2023-09-26T14:40:21 EEST" duration-ms="2216" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=openIslamicSavingsAccount status=SUCCESS method=ABE_OpenIslamicSavingsAccount_MudarabahSBA.openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData)[pri:0, instance:tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA@29138d3a] output={null}]]]>
+                <![CDATA[[TestResult name=ABE_OpenOfficeAccount status=SUCCESS method=ABE_OpenOfficeAccount_Test.ABE_OpenOfficeAccount(data.OpenOfficeAccountData)[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA@29138d3a]" started-at="2023-09-18T15:47:39 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-18T15:47:46 EEST" duration-ms="6521" status="PASS">
+      </class> <!-- tests.ABE_OpenOfficeAccount_Test -->
+      <class name="tests.ABE_VerifyOfficeAccount_Test">
+        <test-method is-config="true" signature="oneTimeSetUp()[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe]" started-at="2023-09-26T14:40:21 EEST" name="oneTimeSetUp" finished-at="2023-09-26T14:40:21 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneTimeSetUp -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe]" started-at="2023-09-26T14:40:21 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T14:40:26 EEST" duration-ms="4989" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@4052c8c2]]>
+                <![CDATA[[Ljava.lang.Object;@67e13bd0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData)[pri:0, instance:tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA@29138d3a]" started-at="2023-09-18T15:47:46 EEST" name="openIslamicSavingsAccount" data-provider="Open Islamic Savings Account DataProvider" finished-at="2023-09-18T15:48:08 EEST" duration-ms="22133" status="PASS">
+        <test-method signature="ABE_VerifyOfficeAccount(data.VerifyOfficeAccountData)[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe]" started-at="2023-09-26T14:40:26 EEST" name="ABE_VerifyOfficeAccount" data-provider="Verify Office Account DataProvider" depends-on-groups="OpenOfficeAccount" finished-at="2023-09-26T14:40:53 EEST" duration-ms="27450" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[OpenIslamicSavingsAccountData [tcId=FCB-003, summary=Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker, username=QA46, password=Infy@123, menu=OISAC, cif=1111111, expectedResult=The savings account is opened successfully., reference=null, linkedTcid=FCB-004]]]>
+                <![CDATA[VerifyOfficeAccountData [tcId=FCB-002, summary=Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker, username=abe46, password=Infy@123, menu=VOA, accountId='1401001100070054, expectedResult=verified successfully]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openIslamicSavingsAccount -->
-        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA@29138d3a]" started-at="2023-09-18T15:48:08 EEST" name="after" finished-at="2023-09-18T15:48:08 EEST" duration-ms="183" status="PASS">
+        </test-method> <!-- ABE_VerifyOfficeAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe]" started-at="2023-09-26T14:40:53 EEST" name="after" finished-at="2023-09-26T14:40:54 EEST" duration-ms="1155" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=openIslamicSavingsAccount status=SUCCESS method=ABE_OpenIslamicSavingsAccount_MudarabahSBA.openIslamicSavingsAccount(data.OpenIslamicSavingsAccountData)[pri:0, instance:tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA@29138d3a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- after -->
-      </class> <!-- tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA -->
-      <class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA">
-        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA@65d57e4e]" started-at="2023-09-18T15:48:08 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-18T15:48:14 EEST" duration-ms="6182" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@181b8c4b]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="verifyIslamicSavingsAccountTest(data.VerifyIslamicSavingsAccountData)[pri:0, instance:tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA@65d57e4e]" started-at="2023-09-18T15:48:14 EEST" name="verifyIslamicSavingsAccountTest" data-provider="Verify Islamic Savings Account DataProvider" depends-on-groups="open" finished-at="2023-09-18T15:48:44 EEST" duration-ms="29569" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[data.VerifyIslamicSavingsAccountData@69707651]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyIslamicSavingsAccountTest -->
-        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA@65d57e4e]" started-at="2023-09-18T15:48:44 EEST" name="after" finished-at="2023-09-18T15:48:45 EEST" duration-ms="1188" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyIslamicSavingsAccountTest status=SUCCESS method=ABE_VerifyIslamicSavingsAccount_MudarabahSBA.verifyIslamicSavingsAccountTest(data.VerifyIslamicSavingsAccountData)[pri:0, instance:tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA@65d57e4e] output={null}]]]>
+                <![CDATA[[TestResult name=ABE_VerifyOfficeAccount status=SUCCESS method=ABE_VerifyOfficeAccount_Test.ABE_VerifyOfficeAccount(data.VerifyOfficeAccountData)[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA@65d57e4e]" started-at="2023-09-18T15:48:45 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-18T15:48:51 EEST" duration-ms="6339" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@38eb0f4d]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="verifyIslamicSavingsAccountTest(data.VerifyIslamicSavingsAccountData)[pri:0, instance:tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA@65d57e4e]" started-at="2023-09-18T15:48:51 EEST" name="verifyIslamicSavingsAccountTest" data-provider="Verify Islamic Savings Account DataProvider" depends-on-groups="open" finished-at="2023-09-18T15:49:14 EEST" duration-ms="22427" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[data.VerifyIslamicSavingsAccountData@409adece]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyIslamicSavingsAccountTest -->
-        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA@65d57e4e]" started-at="2023-09-18T15:49:14 EEST" name="after" finished-at="2023-09-18T15:49:15 EEST" duration-ms="1196" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyIslamicSavingsAccountTest status=SUCCESS method=ABE_VerifyIslamicSavingsAccount_MudarabahSBA.verifyIslamicSavingsAccountTest(data.VerifyIslamicSavingsAccountData)[pri:0, instance:tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA@65d57e4e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- after -->
-      </class> <!-- tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA -->
-    </test> <!-- Islamic Savings Account -->
+      </class> <!-- tests.ABE_VerifyOfficeAccount_Test -->
+    </test> <!-- Office Cash Account -->
   </suite> <!-- Suite -->
 </testng-results>

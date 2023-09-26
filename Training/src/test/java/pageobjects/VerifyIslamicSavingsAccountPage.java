@@ -14,12 +14,15 @@ public class VerifyIslamicSavingsAccountPage {
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By acidTextField = By.xpath("(//input[@id='_tempAcid'])[1]");
-	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
+	private By GoButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By acceptAlertButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
-	private String loginFrameIframeID = "loginFrame";
+	private String loginFrameIframeId = "loginFrame";
+	private String loginFrameId = "loginFrame";
+	
 	private By but = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']"); 
+	
 	private String sideTab1 = "//a[@id='stepII_anchor']";
 	private String sideTab2 = "(//a[@id='stepII4_anchor'])[1]";  
 	private String sideTab3 = "(//a[@id='stepII10_anchor'])[1]";
@@ -37,7 +40,7 @@ public class VerifyIslamicSavingsAccountPage {
 	public VerifyIslamicSavingsAccountPage sendKeysMenuName(String menu) throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
-		driver.switchTo().frame((loginFrameIframeID));
+		driver.switchTo().frame((loginFrameIframeId));
 		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
         PageFunctionUtils.clickOnElement(driver, searchButton);	       
@@ -57,7 +60,7 @@ public class VerifyIslamicSavingsAccountPage {
 	public VerifyIslamicSavingsAccountPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
-	    driver.switchTo().frame(("loginFrame"));
+	    driver.switchTo().frame((loginFrameId));
 	    driver.switchTo().frame(("Core_ABE"));
 	    driver.switchTo().frame(("UX"));
 		PageFunctionUtils.waitOnElement(driver, but);
@@ -71,7 +74,7 @@ public class VerifyIslamicSavingsAccountPage {
 		PageFunctionUtils.waitOnElement(driver, acidTextField);
 		driver.findElement(acidTextField).click();
 		driver.findElement(acidTextField).sendKeys(ACID);
-		driver.findElement(goButton).click();
+		driver.findElement(GoButton).click();
 		return this;
 	}
 	

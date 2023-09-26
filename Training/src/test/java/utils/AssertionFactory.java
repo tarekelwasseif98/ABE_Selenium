@@ -7,4 +7,6 @@ public class AssertionFactory {
 	public static void checkExpectedResult(WebDriver driver, String expectedResult) {
 		AssertJUnit.assertTrue(driver.getPageSource().contains(expectedResult));
 	}
+	
+	
 }

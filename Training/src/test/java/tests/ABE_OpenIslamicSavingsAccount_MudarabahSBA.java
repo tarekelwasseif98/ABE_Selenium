@@ -66,7 +66,7 @@ public class ABE_OpenIslamicSavingsAccount_MudarabahSBA {
 	@Test(dataProvider = "Open Islamic Savings Account DataProvider", dataProviderClass = ABE_OpenIslamicSavingsAccount_MudarabahSBA.class)
 	@Step("{testCaseId}")
 	public void openIslamicSavingsAccount(OpenIslamicSavingsAccountData data) throws Exception {
-		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
+//		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
 		Allure.parameter("Data: ", data.toString());		
         OpenIslamicSavingsAccountProcedures.islamicSavingsAccountByMaker(driver, data);
         AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());

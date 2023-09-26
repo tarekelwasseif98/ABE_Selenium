@@ -94,7 +94,6 @@ public class OpenIslamicSavingsAccountPage {
 	public OpenIslamicSavingsAccountPage pressSubmitButton() throws Exception {
 		driver.findElement(submitButton);
 		driver.findElement(submitButton).click();
-		Thread.sleep(3500);
 		acid = driver.findElement(accountIdSuccessMessage).getText().substring(53, 71);
 		System.out.println("ACID: "+ acid);
 		return this;

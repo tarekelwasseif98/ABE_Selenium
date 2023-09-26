@@ -22,7 +22,7 @@ import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
 import utils.Paths;
 
-@Test(groups = "verify",dependsOnGroups = "open")
+//@Test(groups = "verify",dependsOnGroups = "open")
 @Listeners({AllureTestNg.class})
 public class ABE_VerifyIslamicSavingsAccount_MudarabahSBA {
 
@@ -55,7 +55,7 @@ public class ABE_VerifyIslamicSavingsAccount_MudarabahSBA {
 	
 	@Test(dataProvider = "Verify Islamic Savings Account DataProvider", dataProviderClass = ABE_VerifyIslamicSavingsAccount_MudarabahSBA.class)
 	public void verifyIslamicSavingsAccountTest(VerifyIslamicSavingsAccountData data) throws Exception {
-		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
+//		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
 		Allure.parameter("TCID: ", data.getTCID());
 		Allure.parameter("Summary: ", data.getSummary());
 		Allure.parameter("Username: ", data.getUsername());

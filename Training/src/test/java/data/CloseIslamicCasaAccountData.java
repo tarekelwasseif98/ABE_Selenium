@@ -7,6 +7,7 @@ public class CloseIslamicCasaAccountData {
 	private String password;
 	private String menu;
 	private String accountId;
+	private String transferAccountId;
 	private String expectedResult;
 	private String linkedTcid;
 	
@@ -65,6 +66,14 @@ public class CloseIslamicCasaAccountData {
 	public void setAccountId(String accountId) {
 		this.accountId = accountId;
 	}
+	
+	public String getTransferAccountId() {
+		return transferAccountId;
+	}
+
+	public void setTransferAccountId(String transferAccountId) {
+		this.transferAccountId = transferAccountId;
+	}
 
 	public String getLinkedTCID() {
 		return linkedTcid;
@@ -77,7 +86,7 @@ public class CloseIslamicCasaAccountData {
 	@Override
 	public String toString() {
 		return "CloseIslamicCasaAccountData Testcase ID: " + tcId + ", Summary: " + summary + ", Username: " + username
-				+ ", Password: " + password + ", Menu: " + menu + ", Account ID: " + accountId + ", Expected Result: "
+				+ ", Password: " + password + ", Menu: " + menu + ", Account ID: " + accountId + ", Transfer Account ID: " + transferAccountId + ", Expected Result: "
 				+ expectedResult + ", Linked Testcase ID: " + linkedTcid;
 	}
 }

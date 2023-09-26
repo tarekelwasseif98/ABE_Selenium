@@ -71,7 +71,7 @@ public class OpenIslamicCurrentAccountPage {
 	}
 	
 	@Step("Sending customer details: {0}")
-	public OpenIslamicCurrentAccountPage sendKeysAccoundId(String cifid, String schemeCode, String generalLedgerSubheadCode) throws Exception {
+	public OpenIslamicCurrentAccountPage sendKeysAccoundDetails(String cifid, String schemeCode, String generalLedgerSubheadCode) throws Exception {
 		PageFunctionUtils.waitOnElement(driver, cifIdTextField);
 		driver.findElement(cifIdTextField);
 		driver.findElement(cifIdTextField).click();

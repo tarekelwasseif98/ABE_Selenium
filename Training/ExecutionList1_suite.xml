@@ -5,19 +5,16 @@
 	<listener class-name="listeners.Listeners"/>
 </listeners>
     <test thread-count="1" parallel = "classes" name="Islamic Casa Account">
-		<groups>
+<!-- 		<groups>
             <run>
                 <include name="open"/>
 			    <include name="verify"/>
             </run>
-        </groups>
+        </groups>-->
          <classes>	 		
-	 		<!--<class name="tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA"/>-->
-	 		<!--<class name="tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA"/>-->
-	 		
-	 		<class name="tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA"/>
-	 		<class name="tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA"/>
-	 		
+	 		<!--<class name="tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test"/>-->
+	 		<!--<class name="tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test"/>-->
+	 		<class name="tests.ABE_CloseIslamicCasaAccount_MudarabahCasa_Test"/>
           </classes>
      </test>
 </suite>

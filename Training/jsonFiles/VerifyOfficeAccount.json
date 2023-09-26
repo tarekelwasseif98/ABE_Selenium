@@ -1,0 +1,11 @@
+[
+ {
+  "tcId": "FCB-002",
+  "summary": "Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker",
+  "username": "abe46",
+  "password": "Infy@123",
+  "menu": "VOA",
+  "accountId": "'1401001100070054",
+  "expectedResult": "verified successfully"
+ }
+]

@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\utils\PageFunctionUtils.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\procedures\OpenIslamicSavingsAccountProcedures.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\pageobjects\FinacleLoginPage.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\tests\ABE_VerifyOfficeAccount_Test.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\procedures\OpenOfficeAccountProcedures.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\data\OpenOfficeAccountData.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\data\JsonReader.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\tests\ABE_OpenOfficeAccount_Test.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\pageobjects\VerifyOfficeAccountPage.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\utils\WebdriverFactory.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\utils\CSVUtils.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\pageobjects\OpenIslamicSavingsAccountPage.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\tests\ABE_OpenIslamicSavingsAccount_MudarabahSBA.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\data\VerifyIslamicSavingsAccountData.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\data\VerifyOfficeAccountData.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\tests\ABE_VerifyIslamicSavingsAccount_MudarabahSBA.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\utils\Properties.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\procedures\VerifyOfficeAccountProcedures.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\utils\ScreenshotHelper.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\data\OpenIslamicSavingsAccountData.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\pageobjects\OpenOfficeAccountPage.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\procedures\VerifyIslamicSavingsAccountProcedures.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\pageobjects\VerifyIslamicSavingsAccountPage.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\listeners\Listeners.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\utils\Paths.java
+C:\Users\Pakinam.hussam\git\ABE_Selenium\Training\src\test\java\utils\AssertionFactory.java
+=======
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\VerifyIslamicCurrentAccountData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\CloseIslamicCasaAccountData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\VerifyCloseIslamicCasaAccountProcedures.java
@@ -24,3 +52,4 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\JsonReader.ja
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\listeners\Listeners.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\VerifyIslamicCurrentAccountPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\utils\Properties.java
+>>>>>>> 7ad11dce131ffb1cd9ee6fa65cdd527d50070791

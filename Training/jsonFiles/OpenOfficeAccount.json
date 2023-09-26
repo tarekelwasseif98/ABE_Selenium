@@ -1,0 +1,16 @@
+[
+ {
+  "tcId": "FCB-298",
+  "summary": "Finance_CashAccounts_Create_OfficeAccount_Teller_Cash_EGP_ByMaker",
+  "username": "ABE36",
+  "password": "Infy@123",
+  "menu": "OOAT",
+  "SchemeCode": "CASH",
+  "CCY": "EGP",
+  "AccountHeadName": "OFFICE AC",
+  "EODMaxBalance": 999999,
+  "GeneralLedgerSubhead": 10007,
+  "expectedResult": "opened successfully",
+  "linkedTcid": "FCB-002"
+ }
+]

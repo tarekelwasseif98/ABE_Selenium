@@ -1,0 +1,2 @@
+tcId,summary,username,password,menu,SchemeCode,CCY,AccountHeadName,EODMaxBalance,GeneralLedgerSubhead,expectedResult,reference,linkedTcid
+FCB-298,Finance_CashAccounts_Create_OfficeAccount_Teller_Cash_EGP_ByMaker,ABE36,Infy@123,OOAT,CASH,EGP,OFFICE AC,999999,10007,opened successfully,'1401001100070054,FCB-002

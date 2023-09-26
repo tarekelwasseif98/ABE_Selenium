@@ -1,0 +1,2 @@
+tcId,summary,username,password,menu,accountId,transferAccountId,expectedResult,linkedTcid
+FCB-9820,IslamicBanking_MudarabahSBA_Close_IslamicSavingsAccount_Transfer_ProfitOnIndicativeRate_SBMB_ByMaker_H1,QA46,Infy@123,CILA,'160614337501001,'160600129029019635,The request for account closure is created and sent for verification successfully.,FCB-9821

@@ -1,0 +1,9 @@
+tcId,summary,username,password,menu,cif,schemeCode,generalLedgerSubheadCode,expectedResult,reference,linkedTcid
+FCB-9827,IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Corporate_CACO_ByMaker_A1,QA46,Infy@123,OICAC,6251769,1610,21901,The current account is opened successfully.,'161006251769010164,FCB-9836
+FCB-9829,IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Pension_CAP_ByMaker_A3,QA46,Infy@123,OICAC,2347795,1603,21904,The current account is opened successfully.,'160302347795010057,FCB-9838
+FCB-9830,IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Co-OprerativeOrganization_CACOOP_ByMaker_A4,QA46,Infy@123,OICAC,1082544,1604,21902,The current account is opened successfully.,'160401082544010079,FCB-9839
+FCB-9831,IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Inherit_CAINH_ByMaker_A5,QA46,Infy@123,OICAC,1142495,1605,21905,The current account is opened successfully.,'160501142495010036,FCB-9840
+FCB-9832,IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Individuals_CAIN_ByMaker_A6,QA46,Infy@123,OICAC,1546100,1606,21903,The current account is opened successfully.,'160601546100010012,FCB-9841
+FCB-9833,IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_AgriculturePersons_CAAP_ByMaker_A7,QA46,Infy@123,OICAC,2374282,1607,21906,The current account is opened successfully.,'160702374282010120,FCB-9842
+FCB-9834,IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_FacilityService_CALC_ByMaker_A8,QA46,Infy@123,OICAC,1812188,1609,21908,The current account is opened successfully.,'160901812188010013,FCB-9843
+FCB-9835,IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Investment_CAINV_ByMaker_A9,QA46,Infy@123,OICAC,6218687,1608,21909,The current account is opened successfully.,'160806218687010053,FCB-9844

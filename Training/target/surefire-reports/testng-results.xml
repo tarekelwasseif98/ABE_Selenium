@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -18,6 +19,293 @@
           </reporter-output>
         </test-method> <!-- oneTimeSetUp -->
         <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16]" started-at="2023-09-26T14:39:48 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T14:39:53 EEST" duration-ms="5512" status="PASS">
+=======
+<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-26T13:04:09 EEST" name="Suite" finished-at="2023-09-26T13:15:19 EEST" duration-ms="669989">
+    <groups>
+      <group name="verify">
+        <method signature="ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test.verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" name="verifyIslamicCurrentAccountTest" class="tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test"/>
+      </group> <!-- verify -->
+      <group name="open">
+        <method signature="ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test.openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" name="openIslamicCurrentAccount" class="tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test"/>
+      </group> <!-- open -->
+    </groups>
+    <test started-at="2023-09-26T13:04:09 EEST" name="Islamic Casa Account" finished-at="2023-09-26T13:15:19 EEST" duration-ms="669989">
+      <class name="tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test">
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:09:46 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:10:04 EEST" duration-ms="17874" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@56dfab87]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:10:04 EEST" name="verifyIslamicCurrentAccountTest" data-provider="Verify Islamic Current Account DataProvider" depends-on-groups="open" finished-at="2023-09-26T13:10:34 EEST" duration-ms="29344" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VerifyIslamicCurrentAccountData Testcase ID: FCB-9836, Summary: IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Corporate_CACO_ByChecker_B1, Username: QA47, Password: Infy@123, Menu: VICAO, Account ID: '161006251769010164, Expected Result: The current account is approved successfully.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicCurrentAccountTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:10:34 EEST" name="after" finished-at="2023-09-26T13:10:35 EEST" duration-ms="1179" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicCurrentAccountTest status=SUCCESS method=ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test.verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:10:35 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:10:43 EEST" duration-ms="8280" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@715b886f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:10:43 EEST" name="verifyIslamicCurrentAccountTest" data-provider="Verify Islamic Current Account DataProvider" depends-on-groups="open" finished-at="2023-09-26T13:11:13 EEST" duration-ms="29691" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VerifyIslamicCurrentAccountData Testcase ID: FCB-9838, Summary: IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Pension_CAP_ByChecker_B3, Username: QA47, Password: Infy@123, Menu: VICAO, Account ID: '160302347795010057, Expected Result: The current account is approved successfully.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicCurrentAccountTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:11:13 EEST" name="after" finished-at="2023-09-26T13:11:14 EEST" duration-ms="1189" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicCurrentAccountTest status=SUCCESS method=ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test.verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:11:14 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:11:24 EEST" duration-ms="9823" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@7fb29ca9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:11:24 EEST" name="verifyIslamicCurrentAccountTest" data-provider="Verify Islamic Current Account DataProvider" depends-on-groups="open" finished-at="2023-09-26T13:11:53 EEST" duration-ms="29514" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VerifyIslamicCurrentAccountData Testcase ID: FCB-9839, Summary: IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Co-OprerativeOrganization_CACOOP_ByChecker_B4, Username: QA47, Password: Infy@123, Menu: VICAO, Account ID: '160401082544010079, Expected Result: The current account is approved successfully.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicCurrentAccountTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:11:53 EEST" name="after" finished-at="2023-09-26T13:11:54 EEST" duration-ms="1185" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicCurrentAccountTest status=SUCCESS method=ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test.verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:11:54 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:12:02 EEST" duration-ms="7665" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@1e253c9d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:12:02 EEST" name="verifyIslamicCurrentAccountTest" data-provider="Verify Islamic Current Account DataProvider" depends-on-groups="open" finished-at="2023-09-26T13:12:32 EEST" duration-ms="29567" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VerifyIslamicCurrentAccountData Testcase ID: FCB-9840, Summary: IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Inherit_CAINH_ByChecker_B5, Username: QA47, Password: Infy@123, Menu: VICAO, Account ID: '160501142495010036, Expected Result: The current account is approved successfully.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicCurrentAccountTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:12:32 EEST" name="after" finished-at="2023-09-26T13:12:33 EEST" duration-ms="1180" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicCurrentAccountTest status=SUCCESS method=ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test.verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:12:33 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:12:44 EEST" duration-ms="10734" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@350d3f4d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:12:44 EEST" name="verifyIslamicCurrentAccountTest" data-provider="Verify Islamic Current Account DataProvider" depends-on-groups="open" finished-at="2023-09-26T13:13:14 EEST" duration-ms="29952" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VerifyIslamicCurrentAccountData Testcase ID: FCB-9841, Summary: IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Individuals_CAIN_ByChecker_B6, Username: QA47, Password: Infy@123, Menu: VICAO, Account ID: '160601546100010012, Expected Result: The current account is approved successfully.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicCurrentAccountTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:13:14 EEST" name="after" finished-at="2023-09-26T13:13:15 EEST" duration-ms="1177" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicCurrentAccountTest status=SUCCESS method=ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test.verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:13:15 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:13:26 EEST" duration-ms="10992" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@18b8d173]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:13:26 EEST" name="verifyIslamicCurrentAccountTest" data-provider="Verify Islamic Current Account DataProvider" depends-on-groups="open" finished-at="2023-09-26T13:13:53 EEST" duration-ms="27127" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VerifyIslamicCurrentAccountData Testcase ID: FCB-9842, Summary: IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_AgriculturePersons_CAAP_ByChecker_B7, Username: QA47, Password: Infy@123, Menu: VICAO, Account ID: '160702374282010120, Expected Result: The current account is approved successfully.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicCurrentAccountTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:13:53 EEST" name="after" finished-at="2023-09-26T13:13:54 EEST" duration-ms="1183" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicCurrentAccountTest status=SUCCESS method=ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test.verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:13:54 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:14:01 EEST" duration-ms="7408" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@73844119]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:14:01 EEST" name="verifyIslamicCurrentAccountTest" data-provider="Verify Islamic Current Account DataProvider" depends-on-groups="open" finished-at="2023-09-26T13:14:31 EEST" duration-ms="29599" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VerifyIslamicCurrentAccountData Testcase ID: FCB-9843, Summary: IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_FacilityService_CALC_ByChecker_B8, Username: QA47, Password: Infy@123, Menu: VICAO, Account ID: '160901812188010013, Expected Result: The current account is approved successfully.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicCurrentAccountTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:14:31 EEST" name="after" finished-at="2023-09-26T13:14:32 EEST" duration-ms="1215" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicCurrentAccountTest status=SUCCESS method=ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test.verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:14:32 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:14:48 EEST" duration-ms="15927" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@44f24a20]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:14:48 EEST" name="verifyIslamicCurrentAccountTest" data-provider="Verify Islamic Current Account DataProvider" depends-on-groups="open" finished-at="2023-09-26T13:15:18 EEST" duration-ms="30033" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VerifyIslamicCurrentAccountData Testcase ID: FCB-9844, Summary: IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Investment_CAINV_ByChecker_B9, Username: QA47, Password: Infy@123, Menu: VICAO, Account ID: '160806218687010053, Expected Result: The current account is approved successfully.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicCurrentAccountTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e]" started-at="2023-09-26T13:15:18 EEST" name="after" finished-at="2023-09-26T13:15:19 EEST" duration-ms="1174" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicCurrentAccountTest status=SUCCESS method=ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test.verifyIslamicCurrentAccountTest(data.VerifyIslamicCurrentAccountData)[pri:0, instance:tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test@65d57e4e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test -->
+      <class name="tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test">
+        <test-method is-config="true" signature="oneTimeSetUp()[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:04:09 EEST" name="oneTimeSetUp" finished-at="2023-09-26T13:04:10 EEST" duration-ms="297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneTimeSetUp -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:04:10 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:04:17 EEST" duration-ms="6992" status="PASS">
+>>>>>>> 7ad11dce131ffb1cd9ee6fa65cdd527d50070791
           <params>
             <param index="0">
               <value>
@@ -28,28 +316,46 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
+<<<<<<< HEAD
         <test-method signature="ABE_OpenOfficeAccount(data.OpenOfficeAccountData)[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16]" started-at="2023-09-26T14:39:53 EEST" name="ABE_OpenOfficeAccount" data-provider="Open Office Account DataProvider" finished-at="2023-09-26T14:40:18 EEST" duration-ms="25224" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[OpenOfficeAccountData [tcId=FCB-298, summary=Finance_CashAccounts_Create_OfficeAccount_Teller_Cash_EGP_ByMaker, username=ABE36, password=Infy@123, menu=OOAT, SchemeCode=CASH, CCY=EGP, AccountHeadName=OFFICE AC, EODMaxBalance=999999, GeneralLedgerSubhead=10007, expectedResult=opened successfully, reference=null, linkedTcid=FCB-002]]]>
+=======
+        <test-method signature="openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:04:17 EEST" name="openIslamicCurrentAccount" data-provider="Open Islamic Current Account DataProvider" finished-at="2023-09-26T13:04:51 EEST" duration-ms="33164" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OpenIslamicCurrentAccountData Testcase ID: FCB-9827, Summary: IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Corporate_CACO_ByMaker_A1, Username: QA46, Password: Infy@123, Menu: OICAC, CIF ID: 6251769, Scheme Code: 1610, General Ledger Subhead Code: 21901, Expected Result: The current account is opened successfully., Linked Testcase ID: FCB-9836]]>
+>>>>>>> 7ad11dce131ffb1cd9ee6fa65cdd527d50070791
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- ABE_OpenOfficeAccount -->
         <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16]" started-at="2023-09-26T14:40:18 EEST" name="after" finished-at="2023-09-26T14:40:21 EEST" duration-ms="2216" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[[TestResult name=ABE_OpenOfficeAccount status=SUCCESS method=ABE_OpenOfficeAccount_Test.ABE_OpenOfficeAccount(data.OpenOfficeAccountData)[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16] output={null}]]]>
+=======
+        </test-method> <!-- openIslamicCurrentAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:04:51 EEST" name="after" finished-at="2023-09-26T13:04:51 EEST" duration-ms="182" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openIslamicCurrentAccount status=SUCCESS method=ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test.openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a] output={null}]]]>
+>>>>>>> 7ad11dce131ffb1cd9ee6fa65cdd527d50070791
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
+<<<<<<< HEAD
       </class> <!-- tests.ABE_OpenOfficeAccount_Test -->
       <class name="tests.ABE_VerifyOfficeAccount_Test">
         <test-method is-config="true" signature="oneTimeSetUp()[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe]" started-at="2023-09-26T14:40:21 EEST" name="oneTimeSetUp" finished-at="2023-09-26T14:40:21 EEST" duration-ms="0" status="PASS">
@@ -57,6 +363,9 @@
           </reporter-output>
         </test-method> <!-- oneTimeSetUp -->
         <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe]" started-at="2023-09-26T14:40:21 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T14:40:26 EEST" duration-ms="4989" status="PASS">
+=======
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:04:51 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:05:01 EEST" duration-ms="10369" status="PASS">
+>>>>>>> 7ad11dce131ffb1cd9ee6fa65cdd527d50070791
           <params>
             <param index="0">
               <value>
@@ -67,29 +376,249 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
+<<<<<<< HEAD
         <test-method signature="ABE_VerifyOfficeAccount(data.VerifyOfficeAccountData)[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe]" started-at="2023-09-26T14:40:26 EEST" name="ABE_VerifyOfficeAccount" data-provider="Verify Office Account DataProvider" depends-on-groups="OpenOfficeAccount" finished-at="2023-09-26T14:40:53 EEST" duration-ms="27450" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[VerifyOfficeAccountData [tcId=FCB-002, summary=Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker, username=abe46, password=Infy@123, menu=VOA, accountId='1401001100070054, expectedResult=verified successfully]]]>
+=======
+        <test-method signature="openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:05:01 EEST" name="openIslamicCurrentAccount" data-provider="Open Islamic Current Account DataProvider" finished-at="2023-09-26T13:05:34 EEST" duration-ms="32986" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OpenIslamicCurrentAccountData Testcase ID: FCB-9829, Summary: IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Pension_CAP_ByMaker_A3, Username: QA46, Password: Infy@123, Menu: OICAC, CIF ID: 2347795, Scheme Code: 1603, General Ledger Subhead Code: 21904, Expected Result: The current account is opened successfully., Linked Testcase ID: FCB-9838]]>
+>>>>>>> 7ad11dce131ffb1cd9ee6fa65cdd527d50070791
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- ABE_VerifyOfficeAccount -->
         <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe]" started-at="2023-09-26T14:40:53 EEST" name="after" finished-at="2023-09-26T14:40:54 EEST" duration-ms="1155" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[[TestResult name=ABE_VerifyOfficeAccount status=SUCCESS method=ABE_VerifyOfficeAccount_Test.ABE_VerifyOfficeAccount(data.VerifyOfficeAccountData)[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe] output={null}]]]>
+=======
+        </test-method> <!-- openIslamicCurrentAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:05:34 EEST" name="after" finished-at="2023-09-26T13:05:34 EEST" duration-ms="151" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openIslamicCurrentAccount status=SUCCESS method=ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test.openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a] output={null}]]]>
+>>>>>>> 7ad11dce131ffb1cd9ee6fa65cdd527d50070791
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
+<<<<<<< HEAD
       </class> <!-- tests.ABE_VerifyOfficeAccount_Test -->
     </test> <!-- Office Cash Account -->
+=======
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:05:34 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:05:42 EEST" duration-ms="7993" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@181b8c4b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:05:42 EEST" name="openIslamicCurrentAccount" data-provider="Open Islamic Current Account DataProvider" finished-at="2023-09-26T13:06:16 EEST" duration-ms="33343" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OpenIslamicCurrentAccountData Testcase ID: FCB-9830, Summary: IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Co-OprerativeOrganization_CACOOP_ByMaker_A4, Username: QA46, Password: Infy@123, Menu: OICAC, CIF ID: 1082544, Scheme Code: 1604, General Ledger Subhead Code: 21902, Expected Result: The current account is opened successfully., Linked Testcase ID: FCB-9839]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openIslamicCurrentAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:06:16 EEST" name="after" finished-at="2023-09-26T13:06:16 EEST" duration-ms="161" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openIslamicCurrentAccount status=SUCCESS method=ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test.openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:06:16 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:06:27 EEST" duration-ms="11566" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@38eb0f4d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:06:27 EEST" name="openIslamicCurrentAccount" data-provider="Open Islamic Current Account DataProvider" finished-at="2023-09-26T13:07:00 EEST" duration-ms="33118" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OpenIslamicCurrentAccountData Testcase ID: FCB-9831, Summary: IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Inherit_CAINH_ByMaker_A5, Username: QA46, Password: Infy@123, Menu: OICAC, CIF ID: 1142495, Scheme Code: 1605, General Ledger Subhead Code: 21905, Expected Result: The current account is opened successfully., Linked Testcase ID: FCB-9840]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openIslamicCurrentAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:07:00 EEST" name="after" finished-at="2023-09-26T13:07:01 EEST" duration-ms="180" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openIslamicCurrentAccount status=SUCCESS method=ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test.openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:07:01 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:07:09 EEST" duration-ms="8527" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@437486cd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:07:09 EEST" name="openIslamicCurrentAccount" data-provider="Open Islamic Current Account DataProvider" finished-at="2023-09-26T13:07:42 EEST" duration-ms="32866" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OpenIslamicCurrentAccountData Testcase ID: FCB-9832, Summary: IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Individuals_CAIN_ByMaker_A6, Username: QA46, Password: Infy@123, Menu: OICAC, CIF ID: 1546100, Scheme Code: 1606, General Ledger Subhead Code: 21903, Expected Result: The current account is opened successfully., Linked Testcase ID: FCB-9841]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openIslamicCurrentAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:07:42 EEST" name="after" finished-at="2023-09-26T13:07:42 EEST" duration-ms="214" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openIslamicCurrentAccount status=SUCCESS method=ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test.openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:07:42 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:07:51 EEST" duration-ms="8647" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@15b642b9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:07:51 EEST" name="openIslamicCurrentAccount" data-provider="Open Islamic Current Account DataProvider" finished-at="2023-09-26T13:08:25 EEST" duration-ms="33553" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OpenIslamicCurrentAccountData Testcase ID: FCB-9833, Summary: IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_AgriculturePersons_CAAP_ByMaker_A7, Username: QA46, Password: Infy@123, Menu: OICAC, CIF ID: 2374282, Scheme Code: 1607, General Ledger Subhead Code: 21906, Expected Result: The current account is opened successfully., Linked Testcase ID: FCB-9842]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openIslamicCurrentAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:08:25 EEST" name="after" finished-at="2023-09-26T13:08:25 EEST" duration-ms="163" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openIslamicCurrentAccount status=SUCCESS method=ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test.openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:08:25 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:08:37 EEST" duration-ms="12702" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@518bfd90]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:08:37 EEST" name="openIslamicCurrentAccount" data-provider="Open Islamic Current Account DataProvider" finished-at="2023-09-26T13:09:11 EEST" duration-ms="33718" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OpenIslamicCurrentAccountData Testcase ID: FCB-9834, Summary: IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_FacilityService_CALC_ByMaker_A8, Username: QA46, Password: Infy@123, Menu: OICAC, CIF ID: 1812188, Scheme Code: 1609, General Ledger Subhead Code: 21908, Expected Result: The current account is opened successfully., Linked Testcase ID: FCB-9843]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openIslamicCurrentAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:09:11 EEST" name="after" finished-at="2023-09-26T13:09:11 EEST" duration-ms="154" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openIslamicCurrentAccount status=SUCCESS method=ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test.openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:09:11 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T13:09:17 EEST" duration-ms="6180" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@317a118b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:09:17 EEST" name="openIslamicCurrentAccount" data-provider="Open Islamic Current Account DataProvider" finished-at="2023-09-26T13:09:46 EEST" duration-ms="28565" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[OpenIslamicCurrentAccountData Testcase ID: FCB-9835, Summary: IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Investment_CAINV_ByMaker_A9, Username: QA46, Password: Infy@123, Menu: OICAC, CIF ID: 6218687, Scheme Code: 1608, General Ledger Subhead Code: 21909, Expected Result: The current account is opened successfully., Linked Testcase ID: FCB-9844]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openIslamicCurrentAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a]" started-at="2023-09-26T13:09:46 EEST" name="after" finished-at="2023-09-26T13:09:46 EEST" duration-ms="190" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openIslamicCurrentAccount status=SUCCESS method=ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test.openIslamicCurrentAccount(data.OpenIslamicCurrentAccountData)[pri:0, instance:tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test@29138d3a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test -->
+    </test> <!-- Islamic Casa Account -->
+>>>>>>> 7ad11dce131ffb1cd9ee6fa65cdd527d50070791
   </suite> <!-- Suite -->
 </testng-results>

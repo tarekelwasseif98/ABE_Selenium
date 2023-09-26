@@ -4,6 +4,7 @@
   <listeners>
     <listener class-name="listeners.Listeners"/>
   </listeners>
+<<<<<<< HEAD
   <test thread-count="5" parallel="classes" name="Office Cash Account(failed)" verbose="0">
     <groups>
       <run>
@@ -22,4 +23,17 @@
       </class> <!-- tests.ABE_VerifyOfficeAccount_Test -->
     </classes>
   </test> <!-- Office Cash Account(failed) -->
+=======
+  <test thread-count="5" parallel="classes" name="Islamic Casa Account(failed)" verbose="0">
+    <classes>
+      <class name="tests.ABE_CloseIslamicCasaAccount_MudarabahCasa_Test">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="closeIslamicCasaAccountTest" invocation-numbers="0"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- tests.ABE_CloseIslamicCasaAccount_MudarabahCasa_Test -->
+    </classes>
+  </test> <!-- Islamic Casa Account(failed) -->
+>>>>>>> 7ad11dce131ffb1cd9ee6fa65cdd527d50070791
 </suite> <!-- Failed suite [Suite] -->

@@ -22,5 +22,77 @@
   "generalLedgerSubheadCode": 21904,
   "expectedResult": "The current account is opened successfully.",
   "linkedTcid": "FCB-9838"
+ },
+ {
+  "tcId": "FCB-9830",
+  "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Co-OprerativeOrganization_CACOOP_ByMaker_A4",
+  "username": "QA46",
+  "password": "Infy@123",
+  "menu": "OICAC",
+  "cif": 1082544,
+  "schemeCode": 1604,
+  "generalLedgerSubheadCode": 21902,
+  "expectedResult": "The current account is opened successfully.",
+  "linkedTcid": "FCB-9839"
+ },
+ {
+  "tcId": "FCB-9831",
+  "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Inherit_CAINH_ByMaker_A5",
+  "username": "QA46",
+  "password": "Infy@123",
+  "menu": "OICAC",
+  "cif": 1142495,
+  "schemeCode": 1605,
+  "generalLedgerSubheadCode": 21905,
+  "expectedResult": "The current account is opened successfully.",
+  "linkedTcid": "FCB-9840"
+ },
+ {
+  "tcId": "FCB-9832",
+  "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Individuals_CAIN_ByMaker_A6",
+  "username": "QA46",
+  "password": "Infy@123",
+  "menu": "OICAC",
+  "cif": 1546100,
+  "schemeCode": 1606,
+  "generalLedgerSubheadCode": 21903,
+  "expectedResult": "The current account is opened successfully.",
+  "linkedTcid": "FCB-9841"
+ },
+ {
+  "tcId": "FCB-9833",
+  "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_AgriculturePersons_CAAP_ByMaker_A7",
+  "username": "QA46",
+  "password": "Infy@123",
+  "menu": "OICAC",
+  "cif": 2374282,
+  "schemeCode": 1607,
+  "generalLedgerSubheadCode": 21906,
+  "expectedResult": "The current account is opened successfully.",
+  "linkedTcid": "FCB-9842"
+ },
+ {
+  "tcId": "FCB-9834",
+  "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_FacilityService_CALC_ByMaker_A8",
+  "username": "QA46",
+  "password": "Infy@123",
+  "menu": "OICAC",
+  "cif": 1812188,
+  "schemeCode": 1609,
+  "generalLedgerSubheadCode": 21908,
+  "expectedResult": "The current account is opened successfully.",
+  "linkedTcid": "FCB-9843"
+ },
+ {
+  "tcId": "FCB-9835",
+  "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Investment_CAINV_ByMaker_A9",
+  "username": "QA46",
+  "password": "Infy@123",
+  "menu": "OICAC",
+  "cif": 6218687,
+  "schemeCode": 1608,
+  "generalLedgerSubheadCode": 21909,
+  "expectedResult": "The current account is opened successfully.",
+  "linkedTcid": "FCB-9844"
  }
 ]

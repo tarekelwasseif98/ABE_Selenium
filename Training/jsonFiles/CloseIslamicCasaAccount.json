@@ -5,7 +5,7 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "CILA",
-  "accountId": "'160602901617015506",
+  "accountId": "'160614337501001",
   "transferAccountId": "'160600129029019635",
   "expectedResult": "The request for account closure is created and sent for verification successfully.",
   "linkedTcid": "FCB-9821"

@@ -12,6 +12,7 @@ public class CloseIslamicCasaAccountProcedures {
 									  .switchFormAreaFrame()
 									   .sendKeysAccountIdTextField(data.getAccountId())
 									    .sendKeystransferAccountIdTextField(data.getTransferAccountId())
-									     .pressSubmitButton();
+									     .pressSubmitButton()
+									      .saveAccountId(data.getLinkedTCID());
 	}
 }

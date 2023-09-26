@@ -16,7 +16,6 @@ import data.JsonReader;
 import data.OpenIslamicCurrentAccountData;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
-import io.qameta.allure.Step;
 import pageobjects.FinacleLoginPage;
 import procedures.OpenIslamicCurrentAccountProcedures;
 import utils.Properties;
@@ -62,7 +61,6 @@ public class ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test {
 	}
 	
 	@Test(dataProvider = "Open Islamic Current Account DataProvider", dataProviderClass = ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test.class)
-	@Step("{testCaseId}")
 	public void openIslamicCurrentAccount(OpenIslamicCurrentAccountData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());		

@@ -5,7 +5,7 @@
   "username": "QA47",
   "password": "Infy@123",
   "menu": "VICAO",
-  "accountId": "'161006251769010137",
+  "accountId": "'161006251769010164",
   "expectedResult": "The current account is approved successfully."
  },
  {
@@ -14,7 +14,61 @@
   "username": "QA47",
   "password": "Infy@123",
   "menu": "VICAO",
-  "accountId": "'160302347795010033",
+  "accountId": "'160302347795010057",
+  "expectedResult": "The current account is approved successfully."
+ },
+ {
+  "tcId": "FCB-9839",
+  "summary": "IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Co-OprerativeOrganization_CACOOP_ByChecker_B4",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VICAO",
+  "accountId": "'160401082544010079",
+  "expectedResult": "The current account is approved successfully."
+ },
+ {
+  "tcId": "FCB-9840",
+  "summary": "IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Inherit_CAINH_ByChecker_B5",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VICAO",
+  "accountId": "'160501142495010036",
+  "expectedResult": "The current account is approved successfully."
+ },
+ {
+  "tcId": "FCB-9841",
+  "summary": "IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Individuals_CAIN_ByChecker_B6",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VICAO",
+  "accountId": "'160601546100010012",
+  "expectedResult": "The current account is approved successfully."
+ },
+ {
+  "tcId": "FCB-9842",
+  "summary": "IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_AgriculturePersons_CAAP_ByChecker_B7",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VICAO",
+  "accountId": "'160702374282010120",
+  "expectedResult": "The current account is approved successfully."
+ },
+ {
+  "tcId": "FCB-9843",
+  "summary": "IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_FacilityService_CALC_ByChecker_B8",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VICAO",
+  "accountId": "'160901812188010013",
+  "expectedResult": "The current account is approved successfully."
+ },
+ {
+  "tcId": "FCB-9844",
+  "summary": "IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Investment_CAINV_ByChecker_B9",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VICAO",
+  "accountId": "'160806218687010053",
   "expectedResult": "The current account is approved successfully."
  }
 ]

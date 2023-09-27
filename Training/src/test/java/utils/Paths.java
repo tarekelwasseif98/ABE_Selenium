@@ -1,6 +1,11 @@
 package utils;
 
 public class Paths {
+
+	public static final String Create_ACH_OutwardCsv  = "csvFiles\\Create_ACH_Outward.csv";
+	public static final String Verify_ACH_Outwardcsv = "csvFiles\\Verify_ACH_Outward.csv";
+	public static final String Create_ACH_OutwardJson =  "jsonFiles\\" + Create_ACH_OutwardCsv.substring(9, Paths.Create_ACH_OutwardCsv.length()-4) + ".json";
+	public static final String Verify_ACH_OutwardJson = "jsonFiles\\" + Verify_ACH_Outwardcsv.substring(9, Paths.Verify_ACH_Outwardcsv.length()-4) + ".json";
 	
 	public static final String OpenIslamicCurrentAccountCsv  = "csvFiles\\OpenIslamicCurrentAccount.csv";
 	public static final String VerifyIslamicCurrentAccountCsv = "csvFiles\\VerifyIslamicCurrentAccount.csv";

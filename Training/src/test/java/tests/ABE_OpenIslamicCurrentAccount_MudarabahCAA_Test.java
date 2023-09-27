@@ -13,11 +13,11 @@ import org.testng.annotations.Test;
 import com.aspose.cells.Workbook;
 import com.opencsv.exceptions.CsvException;
 import data.JsonReader;
-import data.OpenIslamicCurrentAccountData;
+import data.ABE_OpenCurrentAccount_MudarabahCAA_Data;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import pageobjects.FinacleLoginPage;
-import procedures.OpenIslamicCurrentAccountProcedures;
+import procedures.ABE_OpenCurrentAccount_MudarabahCAA_Procedures;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
@@ -39,7 +39,7 @@ public class ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test {
 	WebDriver driver = null;
 	@BeforeMethod(description= "Initiating Browser")
 	public void beforeTest(Object [] testData) throws Exception {
-		OpenIslamicCurrentAccountData data = (OpenIslamicCurrentAccountData) testData[0];
+		ABE_OpenCurrentAccount_MudarabahCAA_Data data = (ABE_OpenCurrentAccount_MudarabahCAA_Data) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FinacleUrl);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
@@ -53,18 +53,18 @@ public class ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test {
 	public Object[] dpMethod() throws Exception {
     	Workbook workbook = new Workbook(Paths.OpenIslamicCurrentAccountCsv);
 		workbook.save(Paths.OpenIslamicCurrentAccountJson);
-        Class<OpenIslamicCurrentAccountData> targetClass = OpenIslamicCurrentAccountData.class;
-        JsonReader<OpenIslamicCurrentAccountData> jsonReader = new JsonReader<>(targetClass);
-        List<OpenIslamicCurrentAccountData> dataList = jsonReader.readJsonFile(Paths.OpenIslamicCurrentAccountJson);
+        Class<ABE_OpenCurrentAccount_MudarabahCAA_Data> targetClass = ABE_OpenCurrentAccount_MudarabahCAA_Data.class;
+        JsonReader<ABE_OpenCurrentAccount_MudarabahCAA_Data> jsonReader = new JsonReader<>(targetClass);
+        List<ABE_OpenCurrentAccount_MudarabahCAA_Data> dataList = jsonReader.readJsonFile(Paths.OpenIslamicCurrentAccountJson);
         dataList.toArray();
         return dataList.toArray();
 	}
 	
 	@Test(dataProvider = "Open Islamic Current Account DataProvider", dataProviderClass = ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test.class)
-	public void openIslamicCurrentAccount(OpenIslamicCurrentAccountData data) throws Exception {
+	public void openIslamicCurrentAccount(ABE_OpenCurrentAccount_MudarabahCAA_Data data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());		
-        OpenIslamicCurrentAccountProcedures.openIslamicCurrentAccountByMaker(driver, data);
+        ABE_OpenCurrentAccount_MudarabahCAA_Procedures.openIslamicCurrentAccountByMaker(driver, data);
         AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}
 

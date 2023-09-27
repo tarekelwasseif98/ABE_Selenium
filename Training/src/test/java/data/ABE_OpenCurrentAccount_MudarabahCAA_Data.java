@@ -1,6 +1,6 @@
 package data;
 
-public class OpenIslamicCurrentAccountData {
+public class ABE_OpenCurrentAccount_MudarabahCAA_Data {
 	
 	private String tcId;
 	private String summary;

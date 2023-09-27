@@ -6,6 +6,7 @@
   </listeners>
   <test thread-count="5" parallel="classes" name="Islamic Casa Account(failed)" verbose="0">
     <classes>
+<<<<<<< HEAD
       <class name="tests.CreateAchOutward_Test">
         <methods>
           <include name="after"/>
@@ -14,6 +15,16 @@
           <include name="beforeTest"/>
         </methods>
       </class> <!-- tests.CreateAchOutward_Test -->
+=======
+      <class name="tests.ABE_OpenTUA_TUA_Test">
+        <methods>
+          <include name="after"/>
+          <include name="beforeTest"/>
+          <include name="oneTimeSetUp"/>
+          <include name="openTUA" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- tests.ABE_OpenTUA_TUA_Test -->
+>>>>>>> adb565c4b7d9d41acdff3186b7af5c8e4a0c4aa6
     </classes>
   </test> <!-- Islamic Casa Account(failed) -->
 </suite> <!-- Failed suite [Suite] -->

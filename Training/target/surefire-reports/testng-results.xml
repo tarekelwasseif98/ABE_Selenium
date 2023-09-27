@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -19,35 +20,104 @@
             <param index="0">
               <value>
                 <![CDATA[[Ljava.lang.Object;@6cd64ee8]]>
+=======
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-27T13:50:06 EEST" name="Suite" finished-at="2023-09-27T13:50:45 EEST" duration-ms="39403">
+    <groups>
+      <group name="open">
+        <method signature="ABE_OpenTUA_TUA_Test.openTUA(data.ABE_OpenTUA_TUA_Data)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065]" name="openTUA" class="tests.ABE_OpenTUA_TUA_Test"/>
+      </group> <!-- open -->
+    </groups>
+    <test started-at="2023-09-27T13:50:06 EEST" name="Islamic Casa Account" finished-at="2023-09-27T13:50:45 EEST" duration-ms="39403">
+      <class name="tests.ABE_OpenTUA_TUA_Test">
+        <test-method is-config="true" signature="oneTimeSetUp()[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065]" started-at="2023-09-27T13:50:06 EEST" name="oneTimeSetUp" finished-at="2023-09-27T13:50:06 EEST" duration-ms="192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneTimeSetUp -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065]" started-at="2023-09-27T13:50:07 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-27T13:50:12 EEST" duration-ms="4967" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@352c44a8]]>
+>>>>>>> adb565c4b7d9d41acdff3186b7af5c8e4a0c4aa6
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
+<<<<<<< HEAD
         <test-method signature="CreateAchOutward(data.CreateAchOutwardData)[pri:0, instance:tests.CreateAchOutward_Test@73d3e555]" started-at="2023-09-27T13:49:21 EEST" name="CreateAchOutward" data-provider="Create ACH Outwrad DataProvider" finished-at="2023-09-27T13:49:53 EEST" duration-ms="31958" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[CreateAchOutwardData [tcId=FCB-001, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA49, password=Infy@123, menu=MPOR, paysys_ID=ACH, date=27092023, amount='20000, line1=TEST, CCY=EGP, bic_ben=CIBEEGCX039, network_ben=ACH, branch_ben=null, bank_ben=null, name_ben=TEST, account_ben=132456, account='100500003298010315, expectedResult=The record is added successfully., pos=null, linkedTcid=FCB-002]]]>
+=======
+        <test-method signature="openTUA(data.ABE_OpenTUA_TUA_Data)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065]" started-at="2023-09-27T13:50:12 EEST" name="openTUA" data-provider="Open TUA DataProvider" finished-at="2023-09-27T13:50:45 EEST" duration-ms="33262" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABE_OpenTUA_TUA_Data [tcId=FCB-9862, summary=IslamicBanking_MudarabahTUA_Open_IslamicTUAAccount_MTD2Y_ByMaker_A1, username=QA46, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1752, depositPeriodMonths=12, depositPeriodDays=0, initialDepositAmount=5000, profitCreditAccountId='1606624601301001, repaymentAccountId='1606624601301001, debitAccountId='1606624601301001, expectedResult=top up deposit account is created and sent for verification successfully, reference=null, linkedTcid=FCB-9863]]]>
+>>>>>>> adb565c4b7d9d41acdff3186b7af5c8e4a0c4aa6
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 
+at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:23)
+at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
+at utils.AssertionFactory.checkExpectedResult(AssertionFactory.java:8)
+at tests.ABE_OpenTUA_TUA_Test.openTUA(ABE_OpenTUA_TUA_Test.java:68)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- CreateAchOutward -->
         <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.CreateAchOutward_Test@73d3e555]" started-at="2023-09-27T13:49:53 EEST" name="after" finished-at="2023-09-27T13:50:00 EEST" duration-ms="6159" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[[TestResult name=CreateAchOutward status=SUCCESS method=CreateAchOutward_Test.CreateAchOutward(data.CreateAchOutwardData)[pri:0, instance:tests.CreateAchOutward_Test@73d3e555] output={null}]]]>
+=======
+        </test-method> <!-- openTUA -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065]" started-at="2023-09-27T13:50:45 EEST" name="after" finished-at="2023-09-27T13:50:45 EEST" duration-ms="160" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openTUA status=FAILURE method=ABE_OpenTUA_TUA_Test.openTUA(data.ABE_OpenTUA_TUA_Data)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065] output={null}]]]>
+>>>>>>> adb565c4b7d9d41acdff3186b7af5c8e4a0c4aa6
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
+<<<<<<< HEAD
       </class> <!-- tests.CreateAchOutward_Test -->
+=======
+      </class> <!-- tests.ABE_OpenTUA_TUA_Test -->
+>>>>>>> adb565c4b7d9d41acdff3186b7af5c8e4a0c4aa6
     </test> <!-- Islamic Casa Account -->
   </suite> <!-- Suite -->
 </testng-results>

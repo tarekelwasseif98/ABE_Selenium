@@ -58,5 +58,5 @@ public class VerifyACHOutwardData {
 	public String toString() {
 		return "VerifyACHOutwardData [tcId=" + tcId + ", summary=" + summary + ", username=" + username + ", password="
 				+ password + ", menu=" + menu + ", Pos=" + Pos + ", expectedResult=" + expectedResult + "]";
+		}
 }
-	}

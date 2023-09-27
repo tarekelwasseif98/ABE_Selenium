@@ -1,4 +1,31 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 45.56 s -- in TestSuite
+=======
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 41.16 s <<< FAILURE! -- in TestSuite
+tests.ABE_OpenTUA_TUA_Test.openTUA[ABE_OpenTUA_TUA_Data [tcId=FCB-9862, summary=IslamicBanking_MudarabahTUA_Open_IslamicTUAAccount_MTD2Y_ByMaker_A1, username=QA46, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1752, depositPeriodMonths=12, depositPeriodDays=0, initialDepositAmount=5000, profitCreditAccountId='1606624601301001, repaymentAccountId='1606624601301001, debitAccountId='1606624601301001, expectedResult=top up deposit account is created and sent for verification successfully, reference=null, linkedTcid=FCB-9863]](1) -- Time elapsed: 33.25 s <<< FAILURE!
+java.lang.AssertionError: 
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:23)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
+	at utils.AssertionFactory.checkExpectedResult(AssertionFactory.java:8)
+	at tests.ABE_OpenTUA_TUA_Test.openTUA(ABE_OpenTUA_TUA_Test.java:68)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+>>>>>>> adb565c4b7d9d41acdff3186b7af5c8e4a0c4aa6

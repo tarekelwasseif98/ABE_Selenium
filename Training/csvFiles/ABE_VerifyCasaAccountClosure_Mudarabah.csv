@@ -1,0 +1,2 @@
+tcId,summary,username,password,menu,accountId,expectedResult
+FCB-9821,IslamicBanking_MudarabahSBA_Verify_Close_IslamicSavingsAccount_Transfer_ProfitOnIndicativeRate_SBMB_ByChecker_H2,QA47,Infy@123,VILAC,'160614337501001,The account closure is verified successfully.

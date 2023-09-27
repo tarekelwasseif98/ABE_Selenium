@@ -1,3 +1,0 @@
-tcId,summary,username,password,menu,accountId,expectedResult
-FCB-9836,IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Corporate_CACO_ByChecker_B1,QA47,Infy@123,VICAO,'161006251769010137,The current account is approved successfully.
-FCB-9838,IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Pension_CAP_ByChecker_B3,QA47,Infy@123,VICAO,'160302347795010033,The current account is approved successfully.

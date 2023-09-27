@@ -1,3 +1,0 @@
-"tcId","summary","username","password","menu","cif","expectedResult","reference","linkedTcid"
-"FCB-001","Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker","QA49","Infy@123","OISAC","1111111","The savings account is opened successfully.","","FCB-002"
-"FCB-003","Automation_Cycle1_OpenIslamicSavingsAccount_ByMaker","QA49","Infy@123","OISAC","1111111","The savings account is opened successfully.","","FCB-004"

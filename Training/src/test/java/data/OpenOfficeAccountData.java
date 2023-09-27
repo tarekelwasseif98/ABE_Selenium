@@ -19,6 +19,7 @@ public class OpenOfficeAccountData {
 	public String getTcId() {
 		return tcId;
 	}
+	
 	public void setTcId(String tcId) {
 		this.tcId = tcId;
 	}
@@ -40,6 +41,7 @@ public class OpenOfficeAccountData {
 	public String getPassword() {
 		return password;
 	}
+	
 	public void setPassword(String password) {
 		this.password = password;
 	}
@@ -47,6 +49,7 @@ public class OpenOfficeAccountData {
 	public String getMenu() {
 		return menu;
 	}
+	
 	public void setMenu(String menu) {
 		this.menu = menu;
 	}
@@ -54,6 +57,7 @@ public class OpenOfficeAccountData {
 	public String getSchemeCode() {
 		return SchemeCode;
 	}
+	
 	public void setSchemeCode(String schemeCode) {
 		SchemeCode = schemeCode;
 	}
@@ -61,15 +65,15 @@ public class OpenOfficeAccountData {
 	public String getCCY() {
 		return CCY;
 	}
+	
 	public void setCCY(String cCY) {
 		CCY = cCY;
 	}
 	
-
-	
 	public String getEODMaxBalance() {
 		return EODMaxBalance;
 	}
+	
 	public void setEODMaxBalance(String eODMaxBalance) {
 		EODMaxBalance = eODMaxBalance;
 	}
@@ -77,6 +81,7 @@ public class OpenOfficeAccountData {
 	public String getGeneralLedgerSubhead() {
 		return GeneralLedgerSubhead;
 	}
+	
 	public void setGeneralLedgerSubhead(String generalLedgerSubhead) {
 		GeneralLedgerSubhead = generalLedgerSubhead;
 	}
@@ -84,6 +89,7 @@ public class OpenOfficeAccountData {
 	public String getExpectedResult() {
 		return expectedResult;
 	}
+	
 	public void setExpectedResult(String expectedResult) {
 		this.expectedResult = expectedResult;
 	}
@@ -91,6 +97,7 @@ public class OpenOfficeAccountData {
 	public String getReference() {
 		return reference;
 	}
+	
 	public void setReference(String reference) {
 		this.reference = reference;
 	}
@@ -98,15 +105,19 @@ public class OpenOfficeAccountData {
 	public String getLinkedTcid() {
 		return linkedTcid;
 	}
+	
 	public void setLinkedTcid(String linkedTcid) {
 		this.linkedTcid = linkedTcid;
 	}
+	
 	public String getAccountHeadName() {
 		return AccountHeadName;
 	}
+	
 	public void setAccountHeadName(String accountHeadName) {
 		AccountHeadName = accountHeadName;
 	}
+	
 	@Override
 	public String toString() {
 		return "OpenOfficeAccountData [tcId=" + tcId + ", summary=" + summary + ", username=" + username + ", password="
@@ -115,11 +126,4 @@ public class OpenOfficeAccountData {
 				+ GeneralLedgerSubhead + ", expectedResult=" + expectedResult + ", reference=" + reference
 				+ ", linkedTcid=" + linkedTcid + "]";
 	}
-	
-
-	
-	
-	
-	
-
 }

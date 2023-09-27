@@ -1,6 +1,6 @@
 package data;
 
-public class VerifyOfficeAccountData {
+public class ABE_Verify_OfficeAccount_Finance_Data {
 	
 	private String tcId;
 	private String summary;

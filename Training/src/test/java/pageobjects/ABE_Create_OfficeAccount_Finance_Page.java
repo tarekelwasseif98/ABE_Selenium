@@ -9,7 +9,7 @@ import utils.CSVUtils;
 import utils.PageFunctionUtils;
 import utils.Paths;
 
-public class OpenOfficeAccountPage {	
+public class ABE_Create_OfficeAccount_Finance_Page {	
 	private WebDriver driver;
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
@@ -28,12 +28,12 @@ public class OpenOfficeAccountPage {
 	public static String acid;
 	private By accountIdSuccessMessage = By.id("_acctIdSum_text");
 
-	public OpenOfficeAccountPage(WebDriver driver) {
+	public ABE_Create_OfficeAccount_Finance_Page(WebDriver driver) {
 		this.driver = driver;
 	}
 	
 	@Step("Sending menu name: {0}")
-	public OpenOfficeAccountPage sendKeysSearchBarTextField(String menu) throws Exception {
+	public ABE_Create_OfficeAccount_Finance_Page sendKeysSearchBarTextField(String menu) throws Exception {
 	     	driver.switchTo().parentFrame();
 	     	PageFunctionUtils.waitOnFrameAndSwitch(driver, loginFrameIframeID);
 			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
@@ -51,7 +51,7 @@ public class OpenOfficeAccountPage {
 	}
 	
 	@Step("Frame switching")
-	public OpenOfficeAccountPage switchFormAreaFrame() throws Exception {
+	public ABE_Create_OfficeAccount_Finance_Page switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 	    driver.switchTo().frame(("loginFrame"));
@@ -62,7 +62,7 @@ public class OpenOfficeAccountPage {
 	}
 	
 	@Step("Sending office account type: {0}")
-	public OpenOfficeAccountPage sendKeysAccoundType(String SchemeCode, String GeneralLedgerSubhead) throws Exception {
+	public ABE_Create_OfficeAccount_Finance_Page sendKeysAccoundType(String SchemeCode, String GeneralLedgerSubhead) throws Exception {
 		PageFunctionUtils.waitOnElement(driver, GlSubHeadCodeTextField);
 		driver.findElement(GlSubHeadCodeTextField);
 		driver.findElement(GlSubHeadCodeTextField).click();
@@ -78,7 +78,7 @@ public class OpenOfficeAccountPage {
 	}
 	
 	@Step("Sending office account details: {0}")
-	public OpenOfficeAccountPage sendKeysOfficeAccoundDetails(String AccountHeadName, String EODMaxBalance) throws Exception {
+	public ABE_Create_OfficeAccount_Finance_Page sendKeysOfficeAccoundDetails(String AccountHeadName, String EODMaxBalance) throws Exception {
 		PageFunctionUtils.waitOnElement(driver, AccountHeadNameTextField);
 		driver.findElement(AccountHeadNameTextField);
 		driver.findElement(AccountHeadNameTextField).click();
@@ -94,7 +94,7 @@ public class OpenOfficeAccountPage {
 	}
 	
 	@Step("Save a/c. id")
-	public OpenOfficeAccountPage saveAccountId(String linkedId) throws Exception {
+	public ABE_Create_OfficeAccount_Finance_Page saveAccountId(String linkedId) throws Exception {
 		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.OpenOfficeAccountCsv, linkedTcidCsvColumnName, linkedId);
 		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.OpenOfficeAccountCsv, referenceCsvColumnName);
 		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyOfficeAccountCsv, tcIdCsvColumnName, linkedId);

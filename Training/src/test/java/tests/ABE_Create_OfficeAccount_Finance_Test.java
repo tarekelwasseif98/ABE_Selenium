@@ -12,33 +12,34 @@ import org.testng.annotations.Test;
 import com.aspose.cells.Workbook;
 import com.opencsv.exceptions.CsvException;
 import data.JsonReader;
-import data.VerifyOfficeAccountData;
+import data.ABE_Create_OfficeAccount_Finance_Data;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
-import io.qameta.allure.Step;
-import io.qameta.allure.testng.AllureTestNg;
 import pageobjects.FinacleLoginPage;
-import procedures.VerifyOfficeAccountProcedures;
-import utils.AssertionFactory;
+import procedures.OpenOfficeAccountProcedures;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
 import utils.Paths;
+import utils.AssertionFactory;
+import utils.CSVUtils;
+import io.qameta.allure.testng.AllureTestNg;
 
-@Test(groups = "verifyOfficeAccount", dependsOnGroups = "OpenOfficeAccount")
+@Test( groups = "OpenOfficeAccount")
 @Listeners({AllureTestNg.class})
-public class ABE_VerifyOfficeAccount_Test {
-	 
+public class ABE_Create_OfficeAccount_Finance_Test {
+			 
 	@BeforeClass
 	public void oneTimeSetUp() throws IOException, CsvException {
-	//	CSVUtils.clearColumnByName(Paths.VerifyOfficeAccountCsv, "accountId");
-	//	CSVUtils.clearColumnByName(Paths.VerifyIslamicSavingsAccountCsv, "accountId");
-	}
+		CSVUtils.clearColumnByName(Paths.OpenOfficeAccountCsv, "reference");
+		CSVUtils.clearColumnByName(Paths.VerifyOfficeAccountCsv, "accountId");
 
+	}
+	
 	WebDriver driver = null;
 	@BeforeMethod(description= "Initiating Browser")
 	public void beforeTest(Object [] testData) throws Exception {
-		VerifyOfficeAccountData data = (VerifyOfficeAccountData) testData[0];
+		ABE_Create_OfficeAccount_Finance_Data data = (ABE_Create_OfficeAccount_Finance_Data) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FinacleUrl);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
@@ -47,38 +48,36 @@ public class ABE_VerifyOfficeAccount_Test {
 		.sendKeysPasswordTextField(data.getPassword())
 		.clickOnLoginButton(data.getPassword());
 	}
-	
-	@DataProvider(name="Verify Office Account DataProvider")
+
+	@DataProvider(name="Open Office Account DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.VerifyOfficeAccountCsv);
-		workbook.save(Paths.VerifyOfficeAccountJson);
-        Class<VerifyOfficeAccountData> targetClass = VerifyOfficeAccountData.class;
-        JsonReader<VerifyOfficeAccountData> jsonReader = new JsonReader<>(targetClass);
-        List<VerifyOfficeAccountData> dataList = jsonReader.readJsonFile(Paths.VerifyOfficeAccountJson);
+    	Workbook workbook = new Workbook(Paths.OpenOfficeAccountCsv);
+		workbook.save(Paths.OpenOfficeAccountJson);
+        Class<ABE_Create_OfficeAccount_Finance_Data> targetClass = ABE_Create_OfficeAccount_Finance_Data.class;
+        JsonReader<ABE_Create_OfficeAccount_Finance_Data> jsonReader = new JsonReader<>(targetClass);
+        List<ABE_Create_OfficeAccount_Finance_Data> dataList = jsonReader.readJsonFile(Paths.OpenOfficeAccountJson);
         dataList.toArray();
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Verify Office Account DataProvider", dataProviderClass = ABE_VerifyOfficeAccount_Test.class)
-	@Step("{testCaseId}")
-	public void ABE_VerifyOfficeAccount(VerifyOfficeAccountData data) throws Exception {
+	@Test(dataProvider = "Open Office Account DataProvider", dataProviderClass = ABE_Create_OfficeAccount_Finance_Test.class)
+	public void ABE_OpenOfficeAccount(ABE_Create_OfficeAccount_Finance_Data data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
 		Allure.parameter("Data: ", data.toString());		
-		VerifyOfficeAccountProcedures.OfficeAccountByChecker(driver, data);
+        OpenOfficeAccountProcedures.OfficeAccountByMaker(driver, data);
         AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}
-	
-	
+
 	@Attachment(value = "Screenshot", type = "image/png")
 	@AfterMethod
 	public void after(ITestResult result) throws InterruptedException {
-		Thread.sleep(1000);
 		if (result.getStatus() == ITestResult.SUCCESS) {
             ScreenshotHelper.captureScreenshot(driver);
-            }
+        }
 		 if (result.getStatus() == ITestResult.FAILURE) {
-			 ScreenshotHelper.captureScreenshot(driver);
-			 }
+	            ScreenshotHelper.captureScreenshot(driver);
+	        }
+		Thread.sleep(2000);
 		driver.quit();
 	}
 }

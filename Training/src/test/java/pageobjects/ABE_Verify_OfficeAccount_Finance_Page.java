@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
 import utils.PageFunctionUtils;
 
-public class VerifyOfficeAccountPage {
+public class ABE_Verify_OfficeAccount_Finance_Page {
 	
 	private WebDriver driver;
 	private By searchBarTextField = By.id("menuSelect");
@@ -18,12 +18,12 @@ public class VerifyOfficeAccountPage {
 	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']"); 
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 
-	public VerifyOfficeAccountPage(WebDriver driver) {
+	public ABE_Verify_OfficeAccount_Finance_Page(WebDriver driver) {
 		this.driver = driver;
 	}
 	
 	@Step("Sending menu name: {0}")
-	public VerifyOfficeAccountPage sendKeysSearchBarTextField(String menu) throws Exception {
+	public ABE_Verify_OfficeAccount_Finance_Page sendKeysSearchBarTextField(String menu) throws Exception {
 	     	driver.switchTo().parentFrame();
 	     	PageFunctionUtils.waitOnFrameAndSwitch(driver, loginFrameIframeID);
 			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
@@ -41,7 +41,7 @@ public class VerifyOfficeAccountPage {
 	}
 	
 	@Step("Frame switching")
-	public VerifyOfficeAccountPage switchFormAreaFrame() throws Exception {
+	public ABE_Verify_OfficeAccount_Finance_Page switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 	    driver.switchTo().frame(("loginFrame"));
@@ -52,7 +52,7 @@ public class VerifyOfficeAccountPage {
 	}
 
 	@Step("Sending a/c. id: {0}")
-	public VerifyOfficeAccountPage sendKeysAcidTextField(String ACID) throws Exception {
+	public ABE_Verify_OfficeAccount_Finance_Page sendKeysAcidTextField(String ACID) throws Exception {
 		ACID = ACID.substring(1);
 		PageFunctionUtils.waitOnElement(driver, acidTextField);
 		driver.findElement(acidTextField).click();
@@ -63,7 +63,7 @@ public class VerifyOfficeAccountPage {
 	}
 	
 	@Step("Press submit button")
-	public VerifyOfficeAccountPage pressSubmitButton() throws Exception {
+	public ABE_Verify_OfficeAccount_Finance_Page pressSubmitButton() throws Exception {
 		driver.findElement(submitButton).click();
 		return this;
 	}

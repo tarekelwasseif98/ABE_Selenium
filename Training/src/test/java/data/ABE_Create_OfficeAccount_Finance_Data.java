@@ -1,6 +1,6 @@
 package data;
 
-public class OpenOfficeAccountData {
+public class ABE_Create_OfficeAccount_Finance_Data {
 	
 	private String tcId;
 	private String summary;
@@ -27,6 +27,7 @@ public class OpenOfficeAccountData {
 	public String getSummary() {
 		return summary;
 	}
+	
 	public void setSummary(String summary) {
 		this.summary = summary;
 	}
@@ -34,6 +35,7 @@ public class OpenOfficeAccountData {
 	public String getUsername() {
 		return username;
 	}
+	
 	public void setUsername(String username) {
 		this.username = username;
 	}
@@ -73,6 +75,7 @@ public class OpenOfficeAccountData {
 	public String getAccountHeadName() {
 		return accountHeadName;
 	}
+	
 	public void setAccountHeadName(String accountHeadName) {
 		this.accountHeadName = accountHeadName;
 	}
@@ -80,6 +83,7 @@ public class OpenOfficeAccountData {
 	public String getEodMaxBalance() {
 		return eodMaxBalance;
 	}
+	
 	public void setEodMaxBalance(String eodMaxBalance) {
 		this.eodMaxBalance = eodMaxBalance;
 	}
@@ -115,7 +119,6 @@ public class OpenOfficeAccountData {
 	public void setLinkedTcid(String linkedTcid) {
 		this.linkedTcId = linkedTcid;
 	}
-	
 	
 	
 	@Override

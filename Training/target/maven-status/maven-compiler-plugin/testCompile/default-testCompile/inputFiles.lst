@@ -6,7 +6,6 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABE_VerifyCur
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\OpenOfficeAccountData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABE_OpenCurrentAccount_MudarabahCAA_Page.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABE_OpenTUA_TUA_Page.java
-C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABE_VerifyCurrentAccountOpening_MudarabahCAA__Test.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\utils\AssertionFactory.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABE_VerifyCurrentAccountOpening_MudarabahCAA_Procedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\utils\WebdriverFactory.java
@@ -19,6 +18,7 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\utils\PageFunction
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\utils\CSVUtils.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABE_VerifyCurrentAccountOpening_MudarabahCAA_Page.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\VerifyOfficeAccountProcedures.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABE_VerifyCurrentAccountOpening_MudarabahCAA_Test.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABE_OpenTUA_TUA_Procedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABE_VerifyTUAOpening_TUA_Data.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABE_VerifyCasaAccountClosure_Mudarabah_Test.java

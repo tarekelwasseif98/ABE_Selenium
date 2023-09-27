@@ -2,30 +2,30 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-27T13:50:06 EEST" name="Suite" finished-at="2023-09-27T13:50:45 EEST" duration-ms="39403">
+  <suite started-at="2023-09-27T13:57:31 EEST" name="Suite" finished-at="2023-09-27T13:58:11 EEST" duration-ms="40375">
     <groups>
       <group name="open">
-        <method signature="ABE_OpenTUA_TUA_Test.openTUA(data.ABE_OpenTUA_TUA_Data)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065]" name="openTUA" class="tests.ABE_OpenTUA_TUA_Test"/>
+        <method signature="ABE_OpenTUA_TUA_Test.openTUA(data.ABE_OpenTUA_TUA_Data)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@4743a322]" name="openTUA" class="tests.ABE_OpenTUA_TUA_Test"/>
       </group> <!-- open -->
     </groups>
-    <test started-at="2023-09-27T13:50:06 EEST" name="Islamic Casa Account" finished-at="2023-09-27T13:50:45 EEST" duration-ms="39403">
+    <test started-at="2023-09-27T13:57:31 EEST" name="Islamic Casa Account" finished-at="2023-09-27T13:58:11 EEST" duration-ms="40375">
       <class name="tests.ABE_OpenTUA_TUA_Test">
-        <test-method is-config="true" signature="oneTimeSetUp()[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065]" started-at="2023-09-27T13:50:06 EEST" name="oneTimeSetUp" finished-at="2023-09-27T13:50:06 EEST" duration-ms="192" status="PASS">
+        <test-method is-config="true" signature="oneTimeSetUp()[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@4743a322]" started-at="2023-09-27T13:57:31 EEST" name="oneTimeSetUp" finished-at="2023-09-27T13:57:31 EEST" duration-ms="82" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- oneTimeSetUp -->
-        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065]" started-at="2023-09-27T13:50:07 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-27T13:50:12 EEST" duration-ms="4967" status="PASS">
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@4743a322]" started-at="2023-09-27T13:57:32 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-27T13:57:37 EEST" duration-ms="5100" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@352c44a8]]>
+                <![CDATA[[Ljava.lang.Object;@4c6007fb]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="openTUA(data.ABE_OpenTUA_TUA_Data)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065]" started-at="2023-09-27T13:50:12 EEST" name="openTUA" data-provider="Open TUA DataProvider" finished-at="2023-09-27T13:50:45 EEST" duration-ms="33262" status="FAIL">
+        <test-method signature="openTUA(data.ABE_OpenTUA_TUA_Data)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@4743a322]" started-at="2023-09-27T13:57:37 EEST" name="openTUA" data-provider="Open TUA DataProvider" finished-at="2023-09-27T13:58:11 EEST" duration-ms="34217" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -62,11 +62,11 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openTUA -->
-        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065]" started-at="2023-09-27T13:50:45 EEST" name="after" finished-at="2023-09-27T13:50:45 EEST" duration-ms="160" status="PASS">
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@4743a322]" started-at="2023-09-27T13:58:11 EEST" name="after" finished-at="2023-09-27T13:58:11 EEST" duration-ms="166" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=openTUA status=FAILURE method=ABE_OpenTUA_TUA_Test.openTUA(data.ABE_OpenTUA_TUA_Data)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065] output={null}]]]>
+                <![CDATA[[TestResult name=openTUA status=FAILURE method=ABE_OpenTUA_TUA_Test.openTUA(data.ABE_OpenTUA_TUA_Data)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@4743a322] output={null}]]]>
               </value>
             </param>
           </params>

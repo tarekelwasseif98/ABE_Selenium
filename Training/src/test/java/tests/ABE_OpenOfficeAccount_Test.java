@@ -32,6 +32,8 @@ public class ABE_OpenOfficeAccount_Test {
 	@BeforeClass
 	public void oneTimeSetUp() throws IOException, CsvException {
 		CSVUtils.clearColumnByName(Paths.OpenOfficeAccountCsv, "reference");
+		CSVUtils.clearColumnByName(Paths.VerifyOfficeAccountCsv, "accountId");
+
 	}
 	
 	WebDriver driver = null;

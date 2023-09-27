@@ -11,8 +11,8 @@ public class OpenOfficeAccountProcedures {
 		OpenOfficeAccountPage.sendKeysSearchBarTextField(data.getMenu())
 									  .switchFormAreaFrame()
 									  .sendKeysAccoundType(data.getSchemeCode(), data.getGeneralLedgerSubhead())
-									  .sendKeysOfficeAccoundDetails(data.getAccountHeadName(), data.getEODMaxBalance())
-									  .saveAccountId(data.getLinkedTcid());
+									  .sendKeysOfficeAccoundDetails(data.getAccountHeadName(), data.getEodMaxBalance())
+									  .saveAccountId(data.getLinkedTcId());
 									
 		}
 

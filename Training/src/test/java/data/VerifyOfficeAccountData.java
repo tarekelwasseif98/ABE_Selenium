@@ -68,8 +68,8 @@ public class VerifyOfficeAccountData {
 	
 	@Override
 	public String toString() {
-		return "VerifyOfficeAccountData [tcId=" + tcId + ", summary=" + summary + ", username=" + username
-				+ ", password=" + password + ", menu=" + menu + ", accountId=" + accountId + ", expectedResult="
+		return "VerifyOfficeAccountData tcId: " + tcId + ", summary: " + summary + ", username: " + username
+				+ ", password: " + password + ", menu: " + menu + ", accountId: " + accountId + ", expectedResult: "
 				+ expectedResult + "]";
 	}
 }

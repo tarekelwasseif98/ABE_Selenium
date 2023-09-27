@@ -1,6 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 45.56 s -- in TestSuite
+=======
 Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 41.16 s <<< FAILURE! -- in TestSuite
 tests.ABE_OpenTUA_TUA_Test.openTUA[ABE_OpenTUA_TUA_Data [tcId=FCB-9862, summary=IslamicBanking_MudarabahTUA_Open_IslamicTUAAccount_MTD2Y_ByMaker_A1, username=QA46, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1752, depositPeriodMonths=12, depositPeriodDays=0, initialDepositAmount=5000, profitCreditAccountId='1606624601301001, repaymentAccountId='1606624601301001, debitAccountId='1606624601301001, expectedResult=top up deposit account is created and sent for verification successfully, reference=null, linkedTcid=FCB-9863]](1) -- Time elapsed: 33.25 s <<< FAILURE!
 java.lang.AssertionError: 
@@ -25,3 +28,4 @@ java.lang.AssertionError:
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 
+>>>>>>> adb565c4b7d9d41acdff3186b7af5c8e4a0c4aa6

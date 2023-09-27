@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\utils\ScreenshotHelper.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\utils\PageFunctionUtils.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\tests\ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\tests\ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\data\OpenIslamicCurrentAccountData.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\utils\WebdriverFactory.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\procedures\VerifyIslamicCurrentAccountProcedures.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\utils\CSVUtils.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\data\VerifyIslamicCurrentAccountData.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\pageobjects\VerifyIslamicCurrentAccountPage.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\pageobjects\CreateAchOutwardPage.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\procedures\CreateAchOutwardProcedures.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\utils\AssertionFactory.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\utils\Paths.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\utils\Properties.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\data\CreateAchOutwardData.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\data\VerifyCloseIslamicCasaAccountData.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\pageobjects\FinacleLoginPage.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\procedures\OpenIslamicCurrentAccountProcedures.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\pageobjects\CloseIslamicCasaAccountPage.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\data\CloseIslamicCasaAccountData.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\pageobjects\OpenIslamicCurrentAccountPage.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\data\JsonReader.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\tests\CreateAchOutward_Test.java
+C:\Users\ihab.safwat\git\ABE_Selenium\Training\src\test\java\listeners\Listeners.java
+=======
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABE_OpenOfficeAccount_Test.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABE_VerifyCasaAccountClosure_Mudarabah_Procedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABE_OpenCurrentAccount_MudarabahCAA_Procedures.java
@@ -37,3 +64,4 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABE_OpenTUA_
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\utils\Properties.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABE_CloseCasaAccount_Mudarabah_Test.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABE_OpenCurrentAccount_MudarabahCAA_Data.java
+>>>>>>> adb565c4b7d9d41acdff3186b7af5c8e4a0c4aa6

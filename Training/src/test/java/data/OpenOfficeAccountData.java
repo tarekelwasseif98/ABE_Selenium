@@ -8,13 +8,13 @@ public class OpenOfficeAccountData {
 	private String password;
 	private String menu;
 	private String SchemeCode;
-	private String CCY;
-	private String AccountHeadName;
-	private String EODMaxBalance;
-	private String GeneralLedgerSubhead;
+	private String ccy;
+	private String accountHeadName;
+	private String eodMaxBalance;
+	private String generalLedgerSubhead;
 	private String expectedResult;
 	private String reference;
-	private String linkedTcid;
+	private String linkedTcId;
 	
 	public String getTcId() {
 		return tcId;
@@ -58,29 +58,34 @@ public class OpenOfficeAccountData {
 		SchemeCode = schemeCode;
 	}
 	
-	public String getCCY() {
-		return CCY;
+	public String getCcy() {
+		return ccy;
 	}
-	public void setCCY(String cCY) {
-		CCY = cCY;
+	public void setCcy(String ccy) {
+		this.ccy = ccy;
 	}
 	
-
-	
-	public String getEODMaxBalance() {
-		return EODMaxBalance;
+	public String getAccountHeadName() {
+		return accountHeadName;
 	}
-	public void setEODMaxBalance(String eODMaxBalance) {
-		EODMaxBalance = eODMaxBalance;
+	public void setAccountHeadName(String accountHeadName) {
+		this.accountHeadName = accountHeadName;
+	}
+	
+	public String getEodMaxBalance() {
+		return eodMaxBalance;
+	}
+	public void setEodMaxBalance(String eodMaxBalance) {
+		this.eodMaxBalance = eodMaxBalance;
 	}
 	
 	public String getGeneralLedgerSubhead() {
-		return GeneralLedgerSubhead;
+		return generalLedgerSubhead;
 	}
 	public void setGeneralLedgerSubhead(String generalLedgerSubhead) {
-		GeneralLedgerSubhead = generalLedgerSubhead;
+		this.generalLedgerSubhead = generalLedgerSubhead;
 	}
-
+	
 	public String getExpectedResult() {
 		return expectedResult;
 	}
@@ -95,26 +100,21 @@ public class OpenOfficeAccountData {
 		this.reference = reference;
 	}
 	
-	public String getLinkedTcid() {
-		return linkedTcid;
+	public String getLinkedTcId() {
+		return linkedTcId;
 	}
-	public void setLinkedTcid(String linkedTcid) {
-		this.linkedTcid = linkedTcid;
-	}
-	public String getAccountHeadName() {
-		return AccountHeadName;
-	}
-	public void setAccountHeadName(String accountHeadName) {
-		AccountHeadName = accountHeadName;
+	public void setLinkedTcId(String linkedTcId) {
+		this.linkedTcId = linkedTcId;
 	}
 	@Override
 	public String toString() {
-		return "OpenOfficeAccountData [tcId=" + tcId + ", summary=" + summary + ", username=" + username + ", password="
-				+ password + ", menu=" + menu + ", SchemeCode=" + SchemeCode + ", CCY=" + CCY + ", AccountHeadName="
-				+ AccountHeadName + ", EODMaxBalance=" + EODMaxBalance + ", GeneralLedgerSubhead="
-				+ GeneralLedgerSubhead + ", expectedResult=" + expectedResult + ", reference=" + reference
-				+ ", linkedTcid=" + linkedTcid + "]";
+		return "OpenIslamicCurrentAccountData Testcase ID:" + tcId + ", summary: " + summary + ", username: " + username + ", password: "
+				+ password + ", menu: " + menu + ", SchemeCode: " + SchemeCode + ", ccy: " + ccy + ", accountHeadName: "
+				+ accountHeadName + ", eodMaxBalance: " + eodMaxBalance + ", generalLedgerSubhead: "
+				+ generalLedgerSubhead + ", expectedResult: " + expectedResult + ", reference: " + reference
+				+ ", linkedTcId: " + linkedTcId + "]";
 	}
+	
 	
 
 	

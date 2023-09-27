@@ -10,6 +10,7 @@ public class VerifyOfficeAccountData {
 	private String menu;
 	private String accountId;
 	private String expectedResult;
+	
 	public String getTcId() {
 		return tcId;
 	}
@@ -55,8 +56,8 @@ public class VerifyOfficeAccountData {
 	
 	@Override
 	public String toString() {
-		return "VerifyOfficeAccountData [tcId=" + tcId + ", summary=" + summary + ", username=" + username
-				+ ", password=" + password + ", menu=" + menu + ", accountId=" + accountId + ", expectedResult="
+		return "VerifyOfficeAccountData tcId: " + tcId + ", summary: " + summary + ", username: " + username
+				+ ", password: " + password + ", menu: " + menu + ", accountId: " + accountId + ", expectedResult: "
 				+ expectedResult + "]";
 	}
 	

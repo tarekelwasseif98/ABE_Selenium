@@ -1,48 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
 <suite name="Suite" >
-
 <listeners>
-
-       <listener class-name="listeners.Listeners"/>
-
+	<listener class-name="listeners.Listeners"/>
 </listeners>
-
-    <test thread-count="1" parallel = "classes" name="Office Cash Account">
-
-        <groups>
-
-            <run>
-
-                <include name="OpenOfficeAccount"/>
-                <include name="verifyOfficeAccount"/>
-
+    <test thread-count="2" parallel = "classes" name="Islamic Casa Account">
+ 		<groups>
+			 <run>
+				 <include name="open"/>
+				 <include name="verify"/>
+<!--	        <include name="close"/>
+			    <include name="verifyclose"/> -->
             </run>
-
         </groups>
-
-         <classes>
-
-                    <!--<class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA"/>-->
-
-                    <!--<class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA"/>-->
-
-                   
-
-                     <!--<class name="tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA"/>-->
-
-                    <!--<class name="tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA"/>-->
-
-                   
-
-       	     <class name="tests.ABE_OpenOfficeAccount_Test"/>
-             <class name="tests.ABE_VerifyOfficeAccount_Test"/>
-
-                   
-
+         <classes>	 		
+	 		<class name="tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test"/>
+	 		<class name="tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test"/>
+<!--	 	<class name="tests.ABE_CloseIslamicCasaAccount_MudarabahCasa_Test"/>
+	 		<class name="tests.ABE_VerifyCloseIslamicCasaAccount_MudarabahCasa_Test"/> -->
           </classes>
-
      </test>
 </suite>
-

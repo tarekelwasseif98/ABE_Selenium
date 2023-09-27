@@ -19,6 +19,7 @@ public class OpenOfficeAccountData {
 	public String getTcId() {
 		return tcId;
 	}
+	
 	public void setTcId(String tcId) {
 		this.tcId = tcId;
 	}
@@ -40,6 +41,7 @@ public class OpenOfficeAccountData {
 	public String getPassword() {
 		return password;
 	}
+	
 	public void setPassword(String password) {
 		this.password = password;
 	}
@@ -47,6 +49,7 @@ public class OpenOfficeAccountData {
 	public String getMenu() {
 		return menu;
 	}
+	
 	public void setMenu(String menu) {
 		this.menu = menu;
 	}
@@ -54,6 +57,7 @@ public class OpenOfficeAccountData {
 	public String getSchemeCode() {
 		return SchemeCode;
 	}
+	
 	public void setSchemeCode(String schemeCode) {
 		SchemeCode = schemeCode;
 	}
@@ -61,6 +65,7 @@ public class OpenOfficeAccountData {
 	public String getCcy() {
 		return ccy;
 	}
+
 	public void setCcy(String ccy) {
 		this.ccy = ccy;
 	}
@@ -82,6 +87,7 @@ public class OpenOfficeAccountData {
 	public String getGeneralLedgerSubhead() {
 		return generalLedgerSubhead;
 	}
+	
 	public void setGeneralLedgerSubhead(String generalLedgerSubhead) {
 		this.generalLedgerSubhead = generalLedgerSubhead;
 	}
@@ -89,6 +95,7 @@ public class OpenOfficeAccountData {
 	public String getExpectedResult() {
 		return expectedResult;
 	}
+	
 	public void setExpectedResult(String expectedResult) {
 		this.expectedResult = expectedResult;
 	}
@@ -96,6 +103,7 @@ public class OpenOfficeAccountData {
 	public String getReference() {
 		return reference;
 	}
+	
 	public void setReference(String reference) {
 		this.reference = reference;
 	}
@@ -103,9 +111,13 @@ public class OpenOfficeAccountData {
 	public String getLinkedTcId() {
 		return linkedTcId;
 	}
-	public void setLinkedTcId(String linkedTcId) {
-		this.linkedTcId = linkedTcId;
+	
+	public void setLinkedTcid(String linkedTcid) {
+		this.linkedTcId = linkedTcid;
 	}
+	
+	
+	
 	@Override
 	public String toString() {
 		return "OpenIslamicCurrentAccountData Testcase ID:" + tcId + ", summary: " + summary + ", username: " + username + ", password: "
@@ -114,11 +126,6 @@ public class OpenOfficeAccountData {
 				+ generalLedgerSubhead + ", expectedResult: " + expectedResult + ", reference: " + reference
 				+ ", linkedTcId: " + linkedTcId + "]";
 	}
-	
-	
-
-	
-	
 	
 	
 

@@ -15,7 +15,6 @@ import data.JsonReader;
 import data.OpenOfficeAccountData;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
-import io.qameta.allure.Step;
 import pageobjects.FinacleLoginPage;
 import procedures.OpenOfficeAccountProcedures;
 import utils.Properties;
@@ -34,23 +33,21 @@ public class ABE_OpenOfficeAccount_Test {
 	public void oneTimeSetUp() throws IOException, CsvException {
 		CSVUtils.clearColumnByName(Paths.OpenOfficeAccountCsv, "reference");
 		CSVUtils.clearColumnByName(Paths.VerifyOfficeAccountCsv, "accountId");
+
 	}
 	
 	WebDriver driver = null;
-	private String testCaseId;
 	@BeforeMethod(description= "Initiating Browser")
 	public void beforeTest(Object [] testData) throws Exception {
 		OpenOfficeAccountData data = (OpenOfficeAccountData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FinacleUrl);
-		testCaseId = CSVUtils.getTestCaseId(Paths.OpenOfficeAccountCsv);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())
 		.sendKeysPasswordTextField(data.getPassword())
 		.clickOnLoginButton(data.getPassword());
 	}
-	
 
 	@DataProvider(name="Open Office Account DataProvider")
 	public Object[] dpMethod() throws Exception {
@@ -64,9 +61,8 @@ public class ABE_OpenOfficeAccount_Test {
 	}
 	
 	@Test(dataProvider = "Open Office Account DataProvider", dataProviderClass = ABE_OpenOfficeAccount_Test.class)
-	@Step("{testCaseId}")
 	public void ABE_OpenOfficeAccount(OpenOfficeAccountData data) throws Exception {
-//		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
+		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
 		Allure.parameter("Data: ", data.toString());		
         OpenOfficeAccountProcedures.OfficeAccountByMaker(driver, data);
         AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
@@ -84,8 +80,4 @@ public class ABE_OpenOfficeAccount_Test {
 		Thread.sleep(2000);
 		driver.quit();
 	}
-	
-	
-	
-
 }

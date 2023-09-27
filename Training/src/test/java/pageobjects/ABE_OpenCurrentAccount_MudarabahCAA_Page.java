@@ -11,7 +11,7 @@ import utils.CSVUtils;
 import utils.PageFunctionUtils;
 import utils.Paths;
 
-public class OpenIslamicCurrentAccountPage {
+public class ABE_OpenCurrentAccount_MudarabahCAA_Page {
 	private WebDriver driver;
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
@@ -35,12 +35,12 @@ public class OpenIslamicCurrentAccountPage {
 	public static String  tcIdCsvColumnName = "tcId";
 	public static String  linkedTcidCsvColumnName = "linkedTcid";
 	
-	public OpenIslamicCurrentAccountPage(WebDriver driver) {
+	public ABE_OpenCurrentAccount_MudarabahCAA_Page(WebDriver driver) {
 		this.driver = driver;
 	}
 	
 	@Step("Sending menu name: {0}")
-	public OpenIslamicCurrentAccountPage sendKeysSearchBarTextField(String menu) throws Exception {
+	public ABE_OpenCurrentAccount_MudarabahCAA_Page sendKeysSearchBarTextField(String menu) throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 		driver.switchTo().frame((loginFrameIframeId));
@@ -60,7 +60,7 @@ public class OpenIslamicCurrentAccountPage {
 	}
 	
 	@Step("Frame switching")
-	public OpenIslamicCurrentAccountPage switchFormAreaFrame() throws Exception {
+	public ABE_OpenCurrentAccount_MudarabahCAA_Page switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 	    driver.switchTo().frame((loginFrameIframeId));
@@ -71,7 +71,7 @@ public class OpenIslamicCurrentAccountPage {
 	}
 	
 	@Step("Sending customer details: {0}")
-	public OpenIslamicCurrentAccountPage sendKeysAccoundDetails(String cifid, String schemeCode, String generalLedgerSubheadCode) throws Exception {
+	public ABE_OpenCurrentAccount_MudarabahCAA_Page sendKeysAccoundDetails(String cifid, String schemeCode, String generalLedgerSubheadCode) throws Exception {
 		PageFunctionUtils.waitOnElement(driver, cifIdTextField);
 		driver.findElement(cifIdTextField);
 		driver.findElement(cifIdTextField).click();
@@ -98,7 +98,7 @@ public class OpenIslamicCurrentAccountPage {
 	}
 	
 	@Step("Press submit button")
-	public OpenIslamicCurrentAccountPage pressSubmitButton() throws Exception {
+	public ABE_OpenCurrentAccount_MudarabahCAA_Page pressSubmitButton() throws Exception {
 		driver.findElement(submitButton);
 		driver.findElement(submitButton).click();
 		Thread.sleep(3500);
@@ -108,7 +108,7 @@ public class OpenIslamicCurrentAccountPage {
 	}
 	
 	@Step("Save a/c. id")
-	public OpenIslamicCurrentAccountPage saveAccountId(String linkedId) throws Exception {
+	public ABE_OpenCurrentAccount_MudarabahCAA_Page saveAccountId(String linkedId) throws Exception {
 		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.OpenIslamicCurrentAccountCsv, linkedTcidCsvColumnName, linkedId);
 		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.OpenIslamicCurrentAccountCsv, referenceCsvColumnName);
 		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyIslamicCurrentAccountCsv, tcIdCsvColumnName, linkedId);

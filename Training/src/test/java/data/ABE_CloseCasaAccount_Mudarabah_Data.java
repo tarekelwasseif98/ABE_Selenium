@@ -1,14 +1,15 @@
 package data;
 
-public class VerifyIslamicCurrentAccountData {
-	
+public class ABE_CloseCasaAccount_Mudarabah_Data {
 	private String tcId;
 	private String summary;
 	private String username;
 	private String password;
 	private String menu;
 	private String accountId;
+	private String transferAccountId;
 	private String expectedResult;
+	private String linkedTcid;
 	
 	public String getTCID() {
 		return tcId;
@@ -17,7 +18,7 @@ public class VerifyIslamicCurrentAccountData {
 	public void setTCID(String tCID) {
 		tcId = tCID;
 	}
-
+	
 	public String getSummary() {
 		return summary;
 	}
@@ -49,14 +50,6 @@ public class VerifyIslamicCurrentAccountData {
 	public void setMenu(String menu) {
 		this.menu = menu;
 	}
-	
-	public String getAccountid() {
-		return accountId;
-	}
-
-	public void setAccountid(String accountid) {
-		this.accountId = accountid;
-	}
 
 	public String getExpectedResult() {
 		return expectedResult;
@@ -66,10 +59,34 @@ public class VerifyIslamicCurrentAccountData {
 		this.expectedResult = expectedResult;
 	}
 
+	public String getAccountId() {
+		return accountId;
+	}
+
+	public void setAccountId(String accountId) {
+		this.accountId = accountId;
+	}
+	
+	public String getTransferAccountId() {
+		return transferAccountId;
+	}
+
+	public void setTransferAccountId(String transferAccountId) {
+		this.transferAccountId = transferAccountId;
+	}
+
+	public String getLinkedTCID() {
+		return linkedTcid;
+	}
+
+	public void setLinkedTCID(String linkedTCID) {
+		this.linkedTcid = linkedTCID;
+	}
+
 	@Override
 	public String toString() {
-		return "VerifyIslamicCurrentAccountData Testcase ID: " + tcId + ", Summary: " + summary + ", Username: " + username
-				+ ", Password: " + password + ", Menu: " + menu + ", Account ID: " + accountId + ", Expected Result: "
-				+ expectedResult;
+		return "CloseIslamicCasaAccountData [tcId=" + tcId + ", summary=" + summary + ", username=" + username
+				+ ", password=" + password + ", menu=" + menu + ", accountId=" + accountId + ", transferAccountId="
+				+ transferAccountId + ", expectedResult=" + expectedResult + ", linkedTcid=" + linkedTcid + "]";
 	}
 }

@@ -1,15 +1,13 @@
 package data;
 
-public class CloseIslamicCasaAccountData {
+public class ABE_VerifyCasaAccountClosure_Mudarabah_Data {
 	private String tcId;
 	private String summary;
 	private String username;
 	private String password;
 	private String menu;
 	private String accountId;
-	private String transferAccountId;
 	private String expectedResult;
-	private String linkedTcid;
 	
 	public String getTCID() {
 		return tcId;
@@ -51,14 +49,6 @@ public class CloseIslamicCasaAccountData {
 		this.menu = menu;
 	}
 
-	public String getExpectedResult() {
-		return expectedResult;
-	}
-
-	public void setExpectedResult(String expectedResult) {
-		this.expectedResult = expectedResult;
-	}
-
 	public String getAccountId() {
 		return accountId;
 	}
@@ -67,26 +57,18 @@ public class CloseIslamicCasaAccountData {
 		this.accountId = accountId;
 	}
 	
-	public String getTransferAccountId() {
-		return transferAccountId;
+	public String getExpectedResult() {
+		return expectedResult;
 	}
 
-	public void setTransferAccountId(String transferAccountId) {
-		this.transferAccountId = transferAccountId;
-	}
-
-	public String getLinkedTCID() {
-		return linkedTcid;
-	}
-
-	public void setLinkedTCID(String linkedTCID) {
-		this.linkedTcid = linkedTCID;
+	public void setExpectedResult(String expectedResult) {
+		this.expectedResult = expectedResult;
 	}
 
 	@Override
 	public String toString() {
-		return "CloseIslamicCasaAccountData Testcase ID: " + tcId + ", Summary: " + summary + ", Username: " + username
-				+ ", Password: " + password + ", Menu: " + menu + ", Account ID: " + accountId + ", Transfer Account ID: " + transferAccountId + ", Expected Result: "
-				+ expectedResult + ", Linked Testcase ID: " + linkedTcid;
+		return "VerifyCloseIslamicCasaAccountData [tcId=" + tcId + ", summary=" + summary + ", username=" + username
+				+ ", password=" + password + ", menu=" + menu + ", accountId=" + accountId + ", expectedResult="
+				+ expectedResult + "]";
 	}
 }

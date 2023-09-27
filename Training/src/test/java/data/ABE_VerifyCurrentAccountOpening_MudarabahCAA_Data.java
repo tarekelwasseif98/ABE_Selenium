@@ -1,6 +1,7 @@
 package data;
 
-public class VerifyCloseIslamicCasaAccountData {
+public class ABE_VerifyCurrentAccountOpening_MudarabahCAA_Data {
+	
 	private String tcId;
 	private String summary;
 	private String username;
@@ -16,7 +17,7 @@ public class VerifyCloseIslamicCasaAccountData {
 	public void setTCID(String tCID) {
 		tcId = tCID;
 	}
-	
+
 	public String getSummary() {
 		return summary;
 	}
@@ -48,15 +49,15 @@ public class VerifyCloseIslamicCasaAccountData {
 	public void setMenu(String menu) {
 		this.menu = menu;
 	}
-
-	public String getAccountId() {
+	
+	public String getAccountid() {
 		return accountId;
 	}
 
-	public void setAccountId(String accountId) {
-		this.accountId = accountId;
+	public void setAccountid(String accountid) {
+		this.accountId = accountid;
 	}
-	
+
 	public String getExpectedResult() {
 		return expectedResult;
 	}
@@ -67,8 +68,8 @@ public class VerifyCloseIslamicCasaAccountData {
 
 	@Override
 	public String toString() {
-		return "VerifyCloseIslamicCasaAccountData Testcase ID: " + tcId + ", Summary: " + summary + ", Username: " + username
-				+ ", Password: " + password + ", Menu: " + menu + ", Account ID: " + accountId + ", Expected Result: "
-				+ expectedResult;
+		return "VerifyIslamicCurrentAccountData [tcId=" + tcId + ", summary=" + summary + ", username=" + username
+				+ ", password=" + password + ", menu=" + menu + ", accountId=" + accountId + ", expectedResult="
+				+ expectedResult + "]";
 	}
 }

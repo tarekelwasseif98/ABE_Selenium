@@ -9,27 +9,27 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.aspose.cells.Workbook;
-import data.VerifyCloseIslamicCasaAccountData;
 import data.JsonReader;
+import data.ABE_VerifyCurrentAccountOpening_MudarabahCAA_Data;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.testng.AllureTestNg;
 import pageobjects.FinacleLoginPage;
-import procedures.VerifyCloseIslamicCasaAccountProcedures;
+import procedures.ABE_VerifyCurrentAccountOpening_MudarabahCAA_Procedures;
 import utils.AssertionFactory;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
 import utils.Paths;
 
-@Test(groups = "verifyclose",dependsOnGroups = "close")
+@Test(groups = "verify",dependsOnGroups = "open")
 @Listeners({AllureTestNg.class})
-public class ABE_VerifyCloseIslamicCasaAccount_MudarabahCasa_Test {
+public class ABE_VerifyCurrentAccountOpening_MudarabahCAA__Test {
 
 	WebDriver driver = null;
 	@BeforeMethod(description= "Initiating Browser")
 	public void beforeTest(Object [] testData) throws Exception {
-		VerifyCloseIslamicCasaAccountData data = (VerifyCloseIslamicCasaAccountData) testData[0];
+		ABE_VerifyCurrentAccountOpening_MudarabahCAA_Data data = (ABE_VerifyCurrentAccountOpening_MudarabahCAA_Data) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FinacleUrl);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
@@ -39,22 +39,22 @@ public class ABE_VerifyCloseIslamicCasaAccount_MudarabahCasa_Test {
 		.clickOnLoginButton(data.getPassword());
 	}
 	
-	@DataProvider(name="Verify Close Islamic Casa Account DataProvider")
+	@DataProvider(name="Verify Islamic Current Account DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.VerifyCloseIslamicCasaAccountCsv);
-		workbook.save(Paths.VerifyCloseIslamicCasaAccountJson);
-        Class<VerifyCloseIslamicCasaAccountData> targetClass = VerifyCloseIslamicCasaAccountData.class;
-        JsonReader<VerifyCloseIslamicCasaAccountData> jsonReader = new JsonReader<>(targetClass);
-        List<VerifyCloseIslamicCasaAccountData> dataList = jsonReader.readJsonFile(Paths.VerifyCloseIslamicCasaAccountJson);
+    	Workbook workbook = new Workbook(Paths.VerifyIslamicCurrentAccountCsv);
+		workbook.save(Paths.VerifyIslamicCurrentAccountJson);
+        Class<ABE_VerifyCurrentAccountOpening_MudarabahCAA_Data> targetClass = ABE_VerifyCurrentAccountOpening_MudarabahCAA_Data.class;
+        JsonReader<ABE_VerifyCurrentAccountOpening_MudarabahCAA_Data> jsonReader = new JsonReader<>(targetClass);
+        List<ABE_VerifyCurrentAccountOpening_MudarabahCAA_Data> dataList = jsonReader.readJsonFile(Paths.VerifyIslamicCurrentAccountJson);
         dataList.toArray();
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Verify Close Islamic Casa Account DataProvider", dataProviderClass = ABE_VerifyCloseIslamicCasaAccount_MudarabahCasa_Test.class)
-	public void closeIslamicCasaAccountTest(VerifyCloseIslamicCasaAccountData data) throws Exception {
+	@Test(dataProvider = "Verify Islamic Current Account DataProvider", dataProviderClass = ABE_VerifyCurrentAccountOpening_MudarabahCAA__Test.class)
+	public void verifyIslamicCurrentAccountTest(ABE_VerifyCurrentAccountOpening_MudarabahCAA_Data data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());
-		VerifyCloseIslamicCasaAccountProcedures.verifyCloseIslamicCasaAccountByChecker(driver, data);
+		ABE_VerifyCurrentAccountOpening_MudarabahCAA_Procedures.verifyIslamicCurrentAccountByChecker(driver, data);
 		AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}
 

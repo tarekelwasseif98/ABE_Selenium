@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
 import utils.PageFunctionUtils;
 
-public class VerifyIslamicCurrentAccountPage {
+public class ABE_VerifyCurrentAccountOpening_MudarabahCAA_Page {
 
 	private WebDriver driver;
 	private String loginFrameIframeId = "loginFrame";
@@ -30,12 +30,12 @@ public class VerifyIslamicCurrentAccountPage {
 	private String generalDetailsSideTab = "(//span[@id='stepII7_textSpan'])[1]";
 	private String misDetailsSideTab = "(//span[@id='stepII16_textSpan'])[1]";
 
-	public VerifyIslamicCurrentAccountPage(WebDriver driver) {
+	public ABE_VerifyCurrentAccountOpening_MudarabahCAA_Page(WebDriver driver) {
 		this.driver = driver;
 	}
 	
 	@Step("Sending menu name: {0}")
-	public VerifyIslamicCurrentAccountPage sendKeysSearchBarTextField(String menu) throws Exception {
+	public ABE_VerifyCurrentAccountOpening_MudarabahCAA_Page sendKeysSearchBarTextField(String menu) throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 		driver.switchTo().frame((loginFrameIframeID));
@@ -55,7 +55,7 @@ public class VerifyIslamicCurrentAccountPage {
 	}
 	
 	@Step("Frame switching")
-	public VerifyIslamicCurrentAccountPage switchFormAreaFrame() throws Exception {
+	public ABE_VerifyCurrentAccountOpening_MudarabahCAA_Page switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 	    driver.switchTo().frame((loginFrameIframeId));
@@ -67,7 +67,7 @@ public class VerifyIslamicCurrentAccountPage {
 	}
 	
 	@Step("Sending a/c. id: {0}")
-	public VerifyIslamicCurrentAccountPage sendKeysAccountIdTextField(String accountId) throws Exception {
+	public ABE_VerifyCurrentAccountOpening_MudarabahCAA_Page sendKeysAccountIdTextField(String accountId) throws Exception {
 		accountId = accountId.substring(1, 19);
 		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
 		driver.findElement(accountIdTextField).click();
@@ -77,7 +77,7 @@ public class VerifyIslamicCurrentAccountPage {
 	}
 	
 	@Step("Side tab navigation")
-	public VerifyIslamicCurrentAccountPage navigateSideMenuTab() throws Exception {
+	public ABE_VerifyCurrentAccountOpening_MudarabahCAA_Page navigateSideMenuTab() throws Exception {
 		driver.findElement(By.xpath(additionalDetailsSideTab)).click();
 		driver.findElement(By.xpath(profitDetailsSideTab)).click();
 		driver.findElement(By.xpath(taxDetailsSideTab)).click();
@@ -89,7 +89,7 @@ public class VerifyIslamicCurrentAccountPage {
 	}
 	
 	@Step("Press submit button")
-	public VerifyIslamicCurrentAccountPage pressSubmitButton() throws Exception {
+	public ABE_VerifyCurrentAccountOpening_MudarabahCAA_Page pressSubmitButton() throws Exception {
 		driver.findElement(submitButton).click();
 		return this;
 	}

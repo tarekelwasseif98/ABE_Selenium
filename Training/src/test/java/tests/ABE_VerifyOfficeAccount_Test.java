@@ -11,9 +11,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.aspose.cells.Workbook;
 import com.opencsv.exceptions.CsvException;
-
 import data.JsonReader;
-import data.OpenOfficeAccountData;
 import data.VerifyOfficeAccountData;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
@@ -22,7 +20,6 @@ import io.qameta.allure.testng.AllureTestNg;
 import pageobjects.FinacleLoginPage;
 import procedures.VerifyOfficeAccountProcedures;
 import utils.AssertionFactory;
-import utils.CSVUtils;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
@@ -32,20 +29,18 @@ import utils.Paths;
 @Listeners({AllureTestNg.class})
 public class ABE_VerifyOfficeAccount_Test {
 	 
-@BeforeClass
-public void oneTimeSetUp() throws IOException, CsvException {
-	//CSVUtils.clearColumnByName(Paths.VerifyOfficeAccountCsv, "accountId");
-//	CSVUtils.clearColumnByName(Paths.VerifyIslamicSavingsAccountCsv, "accountId");
-}
+	@BeforeClass
+	public void oneTimeSetUp() throws IOException, CsvException {
+	//	CSVUtils.clearColumnByName(Paths.VerifyOfficeAccountCsv, "accountId");
+	//	CSVUtils.clearColumnByName(Paths.VerifyIslamicSavingsAccountCsv, "accountId");
+	}
 
-WebDriver driver = null;
-private String testCaseId;
+	WebDriver driver = null;
 	@BeforeMethod(description= "Initiating Browser")
 	public void beforeTest(Object [] testData) throws Exception {
 		VerifyOfficeAccountData data = (VerifyOfficeAccountData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FinacleUrl);
-		testCaseId = CSVUtils.getTestCaseId(Paths.VerifyOfficeAccountCsv);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())
@@ -67,7 +62,7 @@ private String testCaseId;
 	@Test(dataProvider = "Verify Office Account DataProvider", dataProviderClass = ABE_VerifyOfficeAccount_Test.class)
 	@Step("{testCaseId}")
 	public void ABE_VerifyOfficeAccount(VerifyOfficeAccountData data) throws Exception {
-//		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
+		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
 		Allure.parameter("Data: ", data.toString());		
 		VerifyOfficeAccountProcedures.OfficeAccountByChecker(driver, data);
         AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
@@ -86,6 +81,4 @@ private String testCaseId;
 			 }
 		driver.quit();
 	}
-	
-
 }

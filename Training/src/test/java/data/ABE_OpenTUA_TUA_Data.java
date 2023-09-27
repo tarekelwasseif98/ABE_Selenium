@@ -8,8 +8,8 @@ public class ABE_OpenTUA_TUA_Data {
 	private String menu;
 	private String cif;
 	private String schemeCode;
-	private String generalLedgerSubheadCode;
-	private String depositPeriod;
+	private String depositPeriodMonths;
+	private String depositPeriodDays;
 	private String initialDepositAmount;
 	private String profitCreditAccountId;
 	private String repaymentAccountId;
@@ -74,21 +74,21 @@ public class ABE_OpenTUA_TUA_Data {
 		this.schemeCode = schemeCode;
 	}
 	
-	public String getGeneralLedgerSubheadCode() {
-		return generalLedgerSubheadCode;
+	public String getDepositPeriodMonths() {
+		return depositPeriodMonths;
 	}
-	
-	public void setGeneralLedgerSubheadCode(String generalLedgerSubheadCode) {
-		this.generalLedgerSubheadCode = generalLedgerSubheadCode;
+
+	public void setDepositPeriodMonths(String depositPeriodMonths) {
+		this.depositPeriodMonths = depositPeriodMonths;
 	}
-	
-	public String getDepositPeriod() {
-		return depositPeriod;
+
+	public String getDepositPeriodDays() {
+		return depositPeriodDays;
 	}
-	
-	public void setDepositPeriod(String depositPeriod) {
-		this.depositPeriod = depositPeriod;
-	}
+
+	public void setDepositPeriodDays(String depositPeriodDays) {
+		this.depositPeriodDays = depositPeriodDays;
+	}	
 	
 	public String getInitialDepositAmount() {
 		return initialDepositAmount;
@@ -149,11 +149,10 @@ public class ABE_OpenTUA_TUA_Data {
 	@Override
 	public String toString() {
 		return "ABE_OpenTUA_TUA_Data [tcId=" + tcId + ", summary=" + summary + ", username=" + username + ", password="
-				+ password + ", menu=" + menu + ", cif=" + cif + ", schemeCode=" + schemeCode
-				+ ", generalLedgerSubheadCode=" + generalLedgerSubheadCode + ", depositPeriod=" + depositPeriod
-				+ ", initialDepositAmount=" + initialDepositAmount + ", profitCreditAccountId=" + profitCreditAccountId
-				+ ", repaymentAccountId=" + repaymentAccountId + ", debitAccountId=" + debitAccountId
-				+ ", expectedResult=" + expectedResult + ", reference=" + reference + ", linkedTcid=" + linkedTcid
-				+ "]";
+				+ password + ", menu=" + menu + ", cif=" + cif + ", schemeCode=" + schemeCode + ", depositPeriodMonths="
+				+ depositPeriodMonths + ", depositPeriodDays=" + depositPeriodDays + ", initialDepositAmount="
+				+ initialDepositAmount + ", profitCreditAccountId=" + profitCreditAccountId + ", repaymentAccountId="
+				+ repaymentAccountId + ", debitAccountId=" + debitAccountId + ", expectedResult=" + expectedResult
+				+ ", reference=" + reference + ", linkedTcid=" + linkedTcid + "]";
 	}
 }

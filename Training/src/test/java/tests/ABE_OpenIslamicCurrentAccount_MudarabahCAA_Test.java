@@ -64,7 +64,7 @@ public class ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test {
 	public void openIslamicCurrentAccount(ABE_OpenCurrentAccount_MudarabahCAA_Data data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());		
-        ABE_OpenCurrentAccount_MudarabahCAA_Procedures.openIslamicCurrentAccountByMaker(driver, data);
+        ABE_OpenCurrentAccount_MudarabahCAA_Procedures.openCurrentAccountMudarabahCAA(driver, data);
         AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}
 

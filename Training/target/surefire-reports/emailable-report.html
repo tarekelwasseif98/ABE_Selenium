@@ -9,11 +9,16 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Office Cash Account</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">86,869</td><td>verifyOfficeAccount, OpenOfficeAccount</td><td></td></tr>
+<tr><td><a href="#t0">Islamic Casa Account</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">39,403</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Office Cash Account &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.ABE_OpenOfficeAccount_Test</td><td><a href="#m0">ABE_OpenOfficeAccount</a></td><td rowspan="1">1695732634392</td><td rowspan="1">25381</td></tr><tr class="passedodd"><td rowspan="1">tests.ABE_VerifyOfficeAccount_Test</td><td><a href="#m1">ABE_VerifyOfficeAccount</a></td><td rowspan="1">1695732676666</td><td rowspan="1">27440</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Islamic Casa Account &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.ABE_OpenTUA_TUA_Test</td><td><a href="#m0">openTUA</a></td><td rowspan="1">1695811812428</td><td rowspan="1">33262</td></tr></tbody>
 </table>
-<h2>Office Cash Account</h2><h3 id="m0">tests.ABE_OpenOfficeAccount_Test#ABE_OpenOfficeAccount</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>OpenOfficeAccountData [tcId=FCB-298, summary=Finance_CashAccounts_Create_OfficeAccount_Teller_Cash_EGP_ByMaker, username=ABE36, password=Infy@123, menu=OOAT, SchemeCode=CASH, CCY=EGP, AccountHeadName=OFFICE AC, EODMaxBalance=999999, GeneralLedgerSubhead=10007, expectedResult=opened successfully, reference=null, linkedTcid=FCB-002]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.ABE_VerifyOfficeAccount_Test#ABE_VerifyOfficeAccount</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>VerifyOfficeAccountData [tcId=FCB-002, summary=Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker, username=abe46, password=Infy@123, menu=VOA, accountId=&apos;1401001100070055, expectedResult=verified successfully]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Islamic Casa Account</h2><h3 id="m0">tests.ABE_OpenTUA_TUA_Test#openTUA</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>ABE_OpenTUA_TUA_Data [tcId=FCB-9862, summary=IslamicBanking_MudarabahTUA_Open_IslamicTUAAccount_MTD2Y_ByMaker_A1, username=QA46, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1752, depositPeriodMonths=12, depositPeriodDays=0, initialDepositAmount=5000, profitCreditAccountId=&apos;1606624601301001, repaymentAccountId=&apos;1606624601301001, debitAccountId=&apos;1606624601301001, expectedResult=top up deposit account is created and sent for verification successfully, reference=null, linkedTcid=FCB-9863]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: 
+	at utils.AssertionFactory.checkExpectedResult(AssertionFactory.java:8)
+	at tests.ABE_OpenTUA_TUA_Test.openTUA(ABE_OpenTUA_TUA_Test.java:68)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

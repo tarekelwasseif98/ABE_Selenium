@@ -16,5 +16,10 @@ public class Paths {
 	public static final String VerifyOfficeAccountCsv  = "csvFiles\\VerifyOfficeAccount.csv";
 	public static final String OpenOfficeAccountJson =  "jsonFiles\\" + OpenOfficeAccountCsv.substring(9, Paths.OpenOfficeAccountCsv.length()-4) + ".json";
 	public static final String VerifyOfficeAccountJson =  "jsonFiles\\" + VerifyOfficeAccountCsv.substring(9, Paths.VerifyOfficeAccountCsv.length()-4) + ".json";
+	
+	public static final String OpenTUACsv  = "csvFiles\\ABE_OpenTUA_TUA.csv";
+	public static final String VerifyTUAOpeningCsv  = "csvFiles\\ABE_VerifyTUAOpening_TUA.csv";
+	public static final String OpenTUAJson =  "jsonFiles\\" + OpenTUACsv.substring(9, Paths.OpenTUACsv.length()-4) + ".json";
+	public static final String VerifyTUAOpeningJson =  "jsonFiles\\" + VerifyTUAOpeningCsv.substring(9, Paths.VerifyTUAOpeningCsv.length()-4) + ".json";
 
 }

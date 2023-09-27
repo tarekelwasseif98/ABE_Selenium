@@ -7,15 +7,12 @@
     <test thread-count="2" parallel = "classes" name="Islamic Casa Account">
  		<groups>
 			 <run>
-				 <include name="open"/>
-				 <include name="verify"/>
 <!--	        <include name="close"/>
 			    <include name="verifyclose"/> -->
             </run>
         </groups>
          <classes>	 		
-	 		<class name="tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test"/>
-	 		<class name="tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test"/>
+	 		<class name="tests.ABE_OpenTUA_TUA_Test"/>
 <!--	 	<class name="tests.ABE_CloseIslamicCasaAccount_MudarabahCasa_Test"/>
 	 		<class name="tests.ABE_VerifyCloseIslamicCasaAccount_MudarabahCasa_Test"/> -->
           </classes>

@@ -1,0 +1,19 @@
+[
+ {
+  "tcId": "FCB-9862",
+  "summary": "IslamicBanking_MudarabahTUA_Open_IslamicTUAAccount_MTD2Y_ByMaker_A1",
+  "username": "QA46",
+  "password": "Infy@123",
+  "menu": "OITUDA",
+  "cif": 6246013,
+  "schemeCode": 1752,
+  "depositPeriodMonths": 12,
+  "depositPeriodDays": 0,
+  "initialDepositAmount": 5000,
+  "profitCreditAccountId": "'1606624601301001",
+  "repaymentAccountId": "'1606624601301001",
+  "debitAccountId": "'1606624601301001",
+  "expectedResult": "top up deposit account is created and sent for verification successfully",
+  "linkedTcid": "FCB-9863"
+ }
+]

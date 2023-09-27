@@ -1,95 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-26T15:50:18 EEST" name="Suite" finished-at="2023-09-26T15:51:45 EEST" duration-ms="86869">
+  <suite started-at="2023-09-27T13:50:06 EEST" name="Suite" finished-at="2023-09-27T13:50:45 EEST" duration-ms="39403">
     <groups>
-      <group name="verifyOfficeAccount">
-        <method signature="ABE_VerifyOfficeAccount_Test.ABE_VerifyOfficeAccount(data.VerifyOfficeAccountData)[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe]" name="ABE_VerifyOfficeAccount" class="tests.ABE_VerifyOfficeAccount_Test"/>
-      </group> <!-- verifyOfficeAccount -->
-      <group name="OpenOfficeAccount">
-        <method signature="ABE_OpenOfficeAccount_Test.ABE_OpenOfficeAccount(data.OpenOfficeAccountData)[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16]" name="ABE_OpenOfficeAccount" class="tests.ABE_OpenOfficeAccount_Test"/>
-      </group> <!-- OpenOfficeAccount -->
+      <group name="open">
+        <method signature="ABE_OpenTUA_TUA_Test.openTUA(data.ABE_OpenTUA_TUA_Data)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065]" name="openTUA" class="tests.ABE_OpenTUA_TUA_Test"/>
+      </group> <!-- open -->
     </groups>
-    <test started-at="2023-09-26T15:50:18 EEST" name="Office Cash Account" finished-at="2023-09-26T15:51:45 EEST" duration-ms="86869">
-      <class name="tests.ABE_OpenOfficeAccount_Test">
-        <test-method is-config="true" signature="oneTimeSetUp()[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16]" started-at="2023-09-26T15:50:18 EEST" name="oneTimeSetUp" finished-at="2023-09-26T15:50:18 EEST" duration-ms="120" status="PASS">
+    <test started-at="2023-09-27T13:50:06 EEST" name="Islamic Casa Account" finished-at="2023-09-27T13:50:45 EEST" duration-ms="39403">
+      <class name="tests.ABE_OpenTUA_TUA_Test">
+        <test-method is-config="true" signature="oneTimeSetUp()[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065]" started-at="2023-09-27T13:50:06 EEST" name="oneTimeSetUp" finished-at="2023-09-27T13:50:06 EEST" duration-ms="192" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- oneTimeSetUp -->
-        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16]" started-at="2023-09-26T15:50:19 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T15:50:34 EEST" duration-ms="15018" status="PASS">
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065]" started-at="2023-09-27T13:50:07 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-27T13:50:12 EEST" duration-ms="4967" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.Object;@1dc3502b]]>
+                <![CDATA[[Ljava.lang.Object;@352c44a8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="ABE_OpenOfficeAccount(data.OpenOfficeAccountData)[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16]" started-at="2023-09-26T15:50:34 EEST" name="ABE_OpenOfficeAccount" data-provider="Open Office Account DataProvider" finished-at="2023-09-26T15:50:59 EEST" duration-ms="25381" status="PASS">
+        <test-method signature="openTUA(data.ABE_OpenTUA_TUA_Data)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065]" started-at="2023-09-27T13:50:12 EEST" name="openTUA" data-provider="Open TUA DataProvider" finished-at="2023-09-27T13:50:45 EEST" duration-ms="33262" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[OpenOfficeAccountData [tcId=FCB-298, summary=Finance_CashAccounts_Create_OfficeAccount_Teller_Cash_EGP_ByMaker, username=ABE36, password=Infy@123, menu=OOAT, SchemeCode=CASH, CCY=EGP, AccountHeadName=OFFICE AC, EODMaxBalance=999999, GeneralLedgerSubhead=10007, expectedResult=opened successfully, reference=null, linkedTcid=FCB-002]]]>
+                <![CDATA[ABE_OpenTUA_TUA_Data [tcId=FCB-9862, summary=IslamicBanking_MudarabahTUA_Open_IslamicTUAAccount_MTD2Y_ByMaker_A1, username=QA46, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1752, depositPeriodMonths=12, depositPeriodDays=0, initialDepositAmount=5000, profitCreditAccountId='1606624601301001, repaymentAccountId='1606624601301001, debitAccountId='1606624601301001, expectedResult=top up deposit account is created and sent for verification successfully, reference=null, linkedTcid=FCB-9863]]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: 
+at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:23)
+at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
+at utils.AssertionFactory.checkExpectedResult(AssertionFactory.java:8)
+at tests.ABE_OpenTUA_TUA_Test.openTUA(ABE_OpenTUA_TUA_Test.java:68)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ABE_OpenOfficeAccount -->
-        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16]" started-at="2023-09-26T15:50:59 EEST" name="after" finished-at="2023-09-26T15:51:01 EEST" duration-ms="2213" status="PASS">
+        </test-method> <!-- openTUA -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065]" started-at="2023-09-27T13:50:45 EEST" name="after" finished-at="2023-09-27T13:50:45 EEST" duration-ms="160" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ABE_OpenOfficeAccount status=SUCCESS method=ABE_OpenOfficeAccount_Test.ABE_OpenOfficeAccount(data.OpenOfficeAccountData)[pri:0, instance:tests.ABE_OpenOfficeAccount_Test@75961f16] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- after -->
-      </class> <!-- tests.ABE_OpenOfficeAccount_Test -->
-      <class name="tests.ABE_VerifyOfficeAccount_Test">
-        <test-method is-config="true" signature="oneTimeSetUp()[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe]" started-at="2023-09-26T15:51:02 EEST" name="oneTimeSetUp" finished-at="2023-09-26T15:51:02 EEST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- oneTimeSetUp -->
-        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe]" started-at="2023-09-26T15:51:02 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-09-26T15:51:16 EEST" duration-ms="14654" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.Object;@6a1d3225]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="ABE_VerifyOfficeAccount(data.VerifyOfficeAccountData)[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe]" started-at="2023-09-26T15:51:16 EEST" name="ABE_VerifyOfficeAccount" data-provider="Verify Office Account DataProvider" depends-on-groups="OpenOfficeAccount" finished-at="2023-09-26T15:51:44 EEST" duration-ms="27440" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[VerifyOfficeAccountData [tcId=FCB-002, summary=Automation_Cycle1_VerifyIslamicSavingsAccount_ByChecker, username=abe46, password=Infy@123, menu=VOA, accountId='1401001100070055, expectedResult=verified successfully]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ABE_VerifyOfficeAccount -->
-        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe]" started-at="2023-09-26T15:51:44 EEST" name="after" finished-at="2023-09-26T15:51:45 EEST" duration-ms="1161" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ABE_VerifyOfficeAccount status=SUCCESS method=ABE_VerifyOfficeAccount_Test.ABE_VerifyOfficeAccount(data.VerifyOfficeAccountData)[pri:0, instance:tests.ABE_VerifyOfficeAccount_Test@44b194fe] output={null}]]]>
+                <![CDATA[[TestResult name=openTUA status=FAILURE method=ABE_OpenTUA_TUA_Test.openTUA(data.ABE_OpenTUA_TUA_Data)[pri:0, instance:tests.ABE_OpenTUA_TUA_Test@49206065] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-      </class> <!-- tests.ABE_VerifyOfficeAccount_Test -->
-    </test> <!-- Office Cash Account -->
+      </class> <!-- tests.ABE_OpenTUA_TUA_Test -->
+    </test> <!-- Islamic Casa Account -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -71,7 +71,7 @@ public class ABE_OpenCurrentAccount_MudarabahCAA_Page {
 	}
 	
 	@Step("Sending customer details: {0}")
-	public ABE_OpenCurrentAccount_MudarabahCAA_Page sendKeysAccoundDetails(String cifid, String schemeCode, String generalLedgerSubheadCode) throws Exception {
+	public ABE_OpenCurrentAccount_MudarabahCAA_Page sendKeysAccountDetails(String cifid, String schemeCode, String generalLedgerSubheadCode) throws Exception {
 		PageFunctionUtils.waitOnElement(driver, cifIdTextField);
 		driver.findElement(cifIdTextField);
 		driver.findElement(cifIdTextField).click();

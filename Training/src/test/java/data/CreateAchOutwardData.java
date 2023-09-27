@@ -8,19 +8,19 @@ public class CreateAchOutwardData {
 	private String password;
 	private String menu;
 	private String PaysysID;
-	private String date;
-	private String amount;
-	private String line1;
+	private String Date;
+	private String Amount;
+	private String Line1_RI;
 	private String CCY;
-	private String bic_ben;
-	private String network_ben;
-	private String branch_ben;
-	private String bank_ben;
-	private String name_ben;
-	private String account_ben;
-	private String account;
+	private String BIC_BEN;
+	private String Network_BEN;
+	private String Branch_BEN;
+	private String Bank_BEN;
+	private String Name_BEN;
+	private String Account_BEN;
+	private String Account;
 	private String expectedResult;
-	private String pos;
+	private String Pos;
 	private String linkedTcid;
 	public String getTcId() {
 		return tcId;
@@ -59,28 +59,28 @@ public class CreateAchOutwardData {
 		this.PaysysID = PaysysID;
 	}
 	public String getDate() {
-		return date;
+		return Date;
 	}
 	public void setDate(String date) {
-		this.date = date;
+		this.Date = date;
 	}
 	public String getAmount() {
-		return amount;
+		return Amount;
 	}
 	public void setAmount(String amount) {
-		this.amount = amount;
+		this.Amount = amount;
 	}
 	public String getLine1() {
-		return line1;
+		return Line1_RI;
 	}
-	public void setLine1(String line1) {
-		this.line1 = line1;
+	public void setLine1(String Line1_RI) {
+		this.Line1_RI = Line1_RI;
 	}
 	public String getBic_ben() {
-		return bic_ben;
+		return BIC_BEN;
 	}
 	public void setBic_ben(String bic_ben) {
-		this.bic_ben = bic_ben;
+		this.BIC_BEN = bic_ben;
 	}
 	public String getCCY() {
 		return CCY;
@@ -89,40 +89,40 @@ public class CreateAchOutwardData {
 		CCY = cCY;
 	}
 	public String getNetwork_ben() {
-		return network_ben;
+		return Network_BEN;
 	}
 	public void setNetwork_ben(String network_ben) {
-		this.network_ben = network_ben;
+		this.Network_BEN = network_ben;
 	}
 	public String getBank_ben() {
-		return bank_ben;
+		return Bank_BEN;
 	}
 	public void setBank_ben(String bank_ben) {
-		this.bank_ben = bank_ben;
+		this.Bank_BEN = bank_ben;
 	}
 	public String getBranch_ben() {
-		return branch_ben;
+		return Branch_BEN;
 	}
 	public void setBranch_ben(String branch_ben) {
-		this.branch_ben = branch_ben;
+		this.Branch_BEN = branch_ben;
 	}
 	public String getName_ben() {
-		return name_ben;
+		return Name_BEN;
 	}
 	public void setName_ben(String name_ben) {
-		this.name_ben = name_ben;
+		this.Name_BEN = name_ben;
 	}
 	public String getAccount_ben() {
-		return account_ben;
+		return Account_BEN;
 	}
 	public void setAccount_ben(String account_ben) {
-		this.account_ben = account_ben;
+		this.Account_BEN = account_ben;
 	}
 	public String getAccount() {
-		return account;
+		return Account;
 	}
 	public void setAccount(String account) {
-		this.account = account;
+		this.Account = account;
 	}
 	public String getExpectedResult() {
 		return expectedResult;
@@ -137,18 +137,18 @@ public class CreateAchOutwardData {
 		this.linkedTcid = linkedTcid;
 	}
 	public String getPos() {
-		return pos;
+		return Pos;
 	}
 	public void setPos(String pos) {
-		this.pos = pos;
+		this.Pos = pos;
 	}
 	@Override
 	public String toString() {
 		return "CreateAchOutwardData [tcId=" + tcId + ", summary=" + summary + ", username=" + username + ", password="
-				+ password + ", menu=" + menu + ", paysys_ID=" + PaysysID + ", date=" + date + ", amount=" + amount
-				+ ", line1=" + line1 + ", CCY=" + CCY + ", bic_ben=" + bic_ben + ", network_ben=" + network_ben
-				+ ", branch_ben=" + branch_ben + ", bank_ben=" + bank_ben + ", name_ben=" + name_ben + ", account_ben="
-				+ account_ben + ", account=" + account + ", expectedResult=" + expectedResult + ", pos=" + pos
+				+ password + ", menu=" + menu + ", paysys_ID=" + PaysysID + ", date=" + Date + ", amount=" + Amount
+				+ ", line1=" + Line1_RI + ", CCY=" + CCY + ", bic_ben=" + BIC_BEN + ", network_ben=" + Network_BEN
+				+ ", branch_ben=" + Branch_BEN + ", bank_ben=" + Bank_BEN + ", name_ben=" + Name_BEN + ", account_ben="
+				+ Account_BEN + ", account=" + Account + ", expectedResult=" + expectedResult + ", pos=" + Pos
 				+ ", linkedTcid=" + linkedTcid + "]";
 	}
 	

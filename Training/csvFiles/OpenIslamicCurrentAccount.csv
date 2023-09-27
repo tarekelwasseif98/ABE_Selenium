@@ -1,0 +1,3 @@
+tcId,summary,username,password,menu,cif,schemeCode,generalLedgerSubheadCode,expectedResult,reference,linkedTcid
+FCB-9827,IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Corporate_CACO_ByMaker_A1,QA46,Infy@123,OICAC,6251769,1610,21901,The current account is opened successfully.,'161006251769010137,FCB-9836
+FCB-9829,IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Pension_CAP_ByMaker_A3,QA46,Infy@123,OICAC,2347795,1603,21904,The current account is opened successfully.,'160302347795010033,FCB-9838

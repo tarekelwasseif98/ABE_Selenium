@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,26 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 2 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
-                    <div class="method-list-content failed suite-Suite">
+                    <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.CreateAchOutward_Test" class="method navigator-link" hash-for-method="CreateAchOutward(CreateAchOutwardData [tcId=FCB-003, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA4...)">CreateAchOutward(CreateAchOutwardData [tcId=FCB-003, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA4...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.CreateAchOutward_Test" class="method navigator-link" hash-for-method="CreateAchOutward(CreateAchOutwardData [tcId=FCB-001, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA4...)">CreateAchOutward(CreateAchOutwardData [tcId=FCB-001, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA4...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -123,84 +118,22 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">tests.CreateAchOutward_Test</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CreateAchOutward(CreateAchOutwardData [tcId=FCB-003, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA4...)">
-                  </a> <!-- CreateAchOutward(CreateAchOutwardData [tcId=FCB-003, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA4...) -->
-                  <span class="method-name">CreateAchOutward</span>
-                  <span class="parameters">(CreateAchOutwardData [tcId=FCB-003, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA49, password=Infy@123, menu=MPOR, paysys_ID=ACH, date=null, amount=null, line1=null, CCY=EGP, bic_ben=null, network_ben=null, branch_ben=null, bank_ben=null, name_ben=null, account_ben=null, account=null, expectedResult=The record is added successfully., pos=null, linkedTcid=FCB-004])</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression (//button[normalize-space()=&apos;Go&apos;])[1]] because of the following error:
-SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;(//button[normalize-space()=&apos;Go&apos;])[1]]&apos; is not a valid XPath expression.
-  (Session info: chrome=90.0.4430.72)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;F1TESTCORE13&apos;, ip: &apos;10.10.23.233&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.72, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\IHAB~1.SAF\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53202}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: cef8e103dc9c989491d43078846...}
-Session ID: cef8e103dc9c989491d43078846ee7c1
-*** Element info: {Using=xpath, value=(//button[normalize-space()=&apos;Go&apos;])[1]]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageobjects.CreateAchOutwardPage.pressSubmitButton(CreateAchOutwardPage.java:77)
-	at procedures.CreateAchOutwardProcedures.AchOutwardByMaker(CreateAchOutwardProcedures.java:14)
-	at tests.CreateAchOutward_Test.CreateAchOutward(CreateAchOutward_Test.java:72)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="CreateAchOutward(CreateAchOutwardData [tcId=FCB-001, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA4...)">
                   </a> <!-- CreateAchOutward(CreateAchOutwardData [tcId=FCB-001, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA4...) -->
                   <span class="method-name">CreateAchOutward</span>
-                  <span class="parameters">(CreateAchOutwardData [tcId=FCB-001, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA49, password=Infy@123, menu=MPOR, paysys_ID=ACH, date=null, amount=null, line1=null, CCY=EGP, bic_ben=null, network_ben=null, branch_ben=null, bank_ben=null, name_ben=null, account_ben=null, account=null, expectedResult=The record is added successfully., pos=null, linkedTcid=FCB-002])</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression (//button[normalize-space()=&apos;Go&apos;])[1]] because of the following error:
-SyntaxError: Failed to execute &apos;evaluate&apos; on &apos;Document&apos;: The string &apos;(//button[normalize-space()=&apos;Go&apos;])[1]]&apos; is not a valid XPath expression.
-  (Session info: chrome=90.0.4430.72)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;F1TESTCORE13&apos;, ip: &apos;10.10.23.233&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.72, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\IHAB~1.SAF\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:53156}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 3c1acffa88c8301a9111b70b49f...}
-Session ID: 3c1acffa88c8301a9111b70b49f3604b
-*** Element info: {Using=xpath, value=(//button[normalize-space()=&apos;Go&apos;])[1]]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageobjects.CreateAchOutwardPage.pressSubmitButton(CreateAchOutwardPage.java:77)
-	at procedures.CreateAchOutwardProcedures.AchOutwardByMaker(CreateAchOutwardProcedures.java:14)
-	at tests.CreateAchOutward_Test.CreateAchOutward(CreateAchOutward_Test.java:72)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames
-</div> <!-- stack-trace -->
+                  <span class="parameters">(CreateAchOutwardData [tcId=FCB-001, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA49, password=Infy@123, menu=MPOR, paysys_ID=ACH, date=27092023, amount='20000, line1=TEST, CCY=EGP, bic_ben=CIBEEGCX039, network_ben=ACH, branch_ben=null, bank_ben=null, name_ben=TEST, account_ben=132456, account='100500003298010315, expectedResult=The record is added successfully., pos=null, linkedTcid=FCB-002])</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
+          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -214,16 +147,11 @@ Session ID: 3c1acffa88c8301a9111b70b49f3604b
   &lt;listeners&gt;
     &lt;listener class-name=&quot;listeners.Listeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;1&quot; parallel=&quot;classes&quot; name=&quot;Islamic Savings Account&quot; verbose=&quot;0&quot;&gt;
-    &lt;groups&gt;
-      &lt;run&gt;
-        &lt;include name=&quot;CreateACH&quot;/&gt;
-      &lt;/run&gt;
-    &lt;/groups&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;classes&quot; name=&quot;Islamic Casa Account&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.CreateAchOutward_Test&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Islamic Savings Account --&gt;
+  &lt;/test&gt; &lt;!-- Islamic Casa Account --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -235,7 +163,7 @@ Session ID: 3c1acffa88c8301a9111b70b49f3604b
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Islamic Savings Account (1 class)</span>
+                <span class="test-name">Islamic Casa Account (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -269,20 +197,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'CreateAchOutward')
 data.setCell(0, 2, 'tests.CreateAchOutward_Test')
-data.setCell(0, 3, 23494);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'CreateAchOutward')
-data.setCell(1, 2, 'tests.CreateAchOutward_Test')
-data.setCell(1, 3, 23261);
+data.setCell(0, 3, 31958);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 46 seconds</span>
+              <span class="suite-total-time">Total running time: 31 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -315,31 +239,15 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest([CreateAchOutwardData [tcId=FCB-001, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA...)</span>
-                <span class="method-start">750 ms</span>
+                <span class="method-start">795 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">CreateAchOutward(CreateAchOutwardData [tcId=FCB-001, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA4...)</span>
-                <span class="method-start">5107 ms</span>
+                <span class="method-start">5450 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">after([TestResult name=CreateAchOutward status=FAILURE method=CreateAchOutward_Test.CreateAchOutward(data....)</span>
-                <span class="method-start">28612 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeTest([CreateAchOutwardData [tcId=FCB-003, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA...)</span>
-                <span class="method-start">34806 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">CreateAchOutward(CreateAchOutwardData [tcId=FCB-003, summary=Automation_Cycle1_CreateACHOutward_ByMaker, username=QA4...)</span>
-                <span class="method-start">39159 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">after([TestResult name=CreateAchOutward status=FAILURE method=CreateAchOutward_Test.CreateAchOutward(data....)</span>
-                <span class="method-start">62425 ms</span>
+                <span class="method-name">after([TestResult name=CreateAchOutward status=SUCCESS method=CreateAchOutward_Test.CreateAchOutward(data....)</span>
+                <span class="method-start">37420 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

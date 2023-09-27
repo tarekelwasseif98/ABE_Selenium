@@ -11,7 +11,9 @@ public class CreateAchOutwardProcedures {
 		CreateAchOutwardPage.sendKeysSearchBarTextField(data.getMenu())
 									  .switchFormAreaFrame()
 		                                .sendKeysPaymentType(data.getPaysysID())
-		                                .pressSubmitButton();
+		                                .pressSubmitButton()
+		                                .sendKeysAchOutwardPayment(data.getAccount(), data.getCCY(), data.getAmount(), data.getDate(), data.getLine1(), data.getAccount_ben(), data.getName_ben(),  data.getBic_ben(), data.getNetwork_ben(), data.getBank_ben(), data.getBranch_ben())
+		                                .savePO(data.getLinkedTcid());
 	}
 	
 }

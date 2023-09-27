@@ -4,18 +4,16 @@
 <listeners>
 	<listener class-name="listeners.Listeners"/>
 </listeners>
-    <test thread-count="1" parallel = "classes" name="Islamic Savings Account">
-		<groups>
+    <test thread-count="1" parallel = "classes" name="Islamic Casa Account">
+	<!--	<groups>
             <run>
                 <include name="CreateACH"/>
-			    <!-- <include name="verify"/>-->
             </run>
-        </groups>
+        </groups>-->
+
          <classes>
 			<class name="tests.CreateAchOutward_Test"/>
-	 <!-- 	<class name="tests.ABE_OpenIslamicSavingsAccount_MudarabahSBA"/>
-	 		<class name="tests.ABE_VerifyIslamicSavingsAccount_MudarabahSBA"/>-->
+			
           </classes>
      </test>
 </suite>
-

@@ -1,0 +1,74 @@
+[
+ {
+  "tcId": "FCB-9836",
+  "summary": "IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Corporate_CACO_ByChecker_B1",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VICAO",
+  "accountId": "'161006251769010207",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9838",
+  "summary": "IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Pension_CAP_ByChecker_B3",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VICAO",
+  "accountId": "'160302347795010095",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9839",
+  "summary": "IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Co-OprerativeOrganization_CACOOP_ByChecker_B4",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VICAO",
+  "accountId": "'160401082544010116",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9840",
+  "summary": "IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Inherit_CAINH_ByChecker_B5",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VICAO",
+  "accountId": "'160501142495010074",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9841",
+  "summary": "IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Individuals_CAIN_ByChecker_B6",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VICAO",
+  "accountId": "'160601546100010050",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9842",
+  "summary": "IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_AgriculturePersons_CAAP_ByChecker_B7",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VICAO",
+  "accountId": "'160702374282010166",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9843",
+  "summary": "IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_FacilityService_CALC_ByChecker_B8",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VICAO",
+  "accountId": "'160901812188010051",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9844",
+  "summary": "IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Investment_CAINV_ByChecker_B9",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VICAO",
+  "accountId": "'160806218687010091",
+  "expectedResult": "successfully"
+ }
+]

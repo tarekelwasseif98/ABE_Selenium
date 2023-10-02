@@ -41,6 +41,12 @@ public class PageFunctionUtils {
 		driver.findElement(by).sendKeys(keysToSend);
 	}
 	
+	public static void clearDataInWebElement(WebDriver driver,By by) throws Exception {
+		WebDriverWait wait = new WebDriverWait(driver, Properties.MinTime);
+		wait.until(ExpectedConditions.elementToBeClickable(by));
+		driver.findElement(by).clear();;
+	}
+	
 	public static void waitOnElement(WebDriver driver, By by) throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Properties.MaxTime);
 		wait.until(ExpectedConditions.elementToBeClickable(by));

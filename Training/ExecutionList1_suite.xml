@@ -6,22 +6,22 @@
 </listeners>
     <!--<test thread-count="1" parallel="classes" name="Islamic CASA Account Opening">
          <classes>
-			<class name="tests.ABE_OpenCurrentAccount_MudarabahCAA_Test"/>
-			<class name="tests.ABE_VerifyCurrentAccountOpening_MudarabahCAA_Test"/>	
+			<class name="tests.ABEOpenCurrentAccountMudarabahCAATest"/>
+			<class name="tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest"/>	
           </classes>
      </test>-->
      
      <!--<test thread-count="1" parallel="classes" name="Islamic Casa Account Closure">
         <classes>
-			<class name="tests.ABE_CloseCasaAccount_Mudarabah_Test"/>
-			<class name="tests.ABE_VerifyCasaAccountClosure_Mudarabah_Test"/>	
+			<class name="tests.ABECloseCasaAccountMudarabahTest"/>
+			<class name="tests.ABEVerifyCasaAccountClosureMudarabahTest"/>	
 		</classes>
      </test>-->
      
-     <test thread-count="1" parallel="classes" name="Islamic TUA Account Opening">
+     <test thread-count="1" parallel="classes" name="Islamic TUA Opening">
         <classes>
-			<class name="tests.ABE_OpenTUA_TUA_Test"/>
-			<class name="tests.ABE_VerifyTUAOpening_TUA_Test"/>
+			<class name="tests.ABEOpenTUATest"/>
+			<class name="tests.ABEVerifyTUAOpeningTest"/>
 		</classes>
      </test>
 </suite>

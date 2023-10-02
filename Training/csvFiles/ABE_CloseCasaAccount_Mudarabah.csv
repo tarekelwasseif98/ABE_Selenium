@@ -1,3 +1,0 @@
-tcId,summary,username,password,menu,accountId,transferAccountId,expectedResult,linkedTcid
-FCB-9820,IslamicBanking_MudarabahSBA_Close_IslamicSavingsAccount_Transfer_ProfitOnIndicativeRate_SBMB_ByMaker_H1,QA46,Infy@123,CILA,'170001111111014271,'160600024756010064,successfully,FCB-9821
-FCB-9859,IslamicBanking_MudarabahCAA_Close_IslamicCurrentAccount_Transfer_ProfitOnIndicativeRate_ByMaker_F1,QA46,Infy@123,CILA,'160601111111014290,'160600024756010064,successfully,FCB-9860

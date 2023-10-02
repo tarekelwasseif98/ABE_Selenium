@@ -22,7 +22,6 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	private By cifIdTextField = By.xpath("(//input[@id='_critCif'])[1]");
 	private By schemeCodeTextField = By.xpath("(//input[@id='_critSchmCode'])[1]");
 	private By generalLedgerSubheadCodeTextField = By.xpath("(//input[@id='_glSubHeadCde'])[1]");
-	private By solIdTextField = By.xpath("(//input[@id='_solId'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By continueButton = By.xpath("(//button[@id='_acctDetCon'])[1]");
 	private By taxDetailsMenu = By.xpath("//span[@id='stepII2_textSpan']");
@@ -63,9 +62,9 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	public ABEOpenCurrentAccountMudarabahCAAPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
-	    driver.switchTo().frame((loginFrameIframeId));
-	    driver.switchTo().frame((coreAbeIframeId));
-	    driver.switchTo().frame((uxIframeId));
+		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
+		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
 		return this;		
 	}
@@ -73,18 +72,15 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	@Step("Sending customer details: {0}")
 	public ABEOpenCurrentAccountMudarabahCAAPage sendKeysAccountDetails(String cifid, String schemeCode, String generalLedgerSubheadCode) throws Exception {
 		PageFunctionUtils.waitOnElement(driver, cifIdTextField);
-		driver.findElement(cifIdTextField).click();
-		driver.findElement(cifIdTextField).sendKeys(cifid);
-		driver.findElement(schemeCodeTextField).click();
-		driver.findElement(schemeCodeTextField).sendKeys(schemeCode);
-		driver.findElement(generalLedgerSubheadCodeTextField).click();
-		driver.findElement(generalLedgerSubheadCodeTextField).sendKeys(generalLedgerSubheadCode);
-		driver.findElement(solIdTextField).click();
-		driver.findElement(solIdTextField).clear();
-		driver.findElement(solIdTextField).sendKeys("2588");
-		driver.findElement(goButton).click();
-		driver.findElement(continueButton).click();
-		driver.findElement(taxDetailsMenu).click();
+		PageFunctionUtils.clickOnElement(driver, cifIdTextField);
+		PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifid);
+		PageFunctionUtils.clickOnElement(driver, schemeCodeTextField);
+		PageFunctionUtils.enterDataInWebElement(driver, schemeCodeTextField, schemeCode);
+		PageFunctionUtils.clickOnElement(driver, generalLedgerSubheadCodeTextField);
+		PageFunctionUtils.enterDataInWebElement(driver, generalLedgerSubheadCodeTextField, generalLedgerSubheadCode);
+		PageFunctionUtils.clickOnElement(driver, goButton);
+		PageFunctionUtils.clickOnElement(driver, continueButton);
+		PageFunctionUtils.clickOnElement(driver, taxDetailsMenu);
 		Select dropdown = new Select(driver.findElement(taxCategoryMenu));
 		dropdown.selectByIndex(2);
 		return this;
@@ -92,10 +88,9 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	
 	@Step("Press submit button")
 	public ABEOpenCurrentAccountMudarabahCAAPage pressSubmitButton() throws Exception {
-		driver.findElement(submitButton).click();
+		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
 		acId = driver.findElement(accountIdSuccessMessage).getText().substring(53, 71);
-		System.out.println("Account ID: "+ acId);
 		return this;
 	}
 	

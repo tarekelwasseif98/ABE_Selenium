@@ -153,6 +153,6 @@ public class ABE_OpenTUA_TUA_Data {
 				+ depositPeriodMonths + ", depositPeriodDays=" + depositPeriodDays + ", initialDepositAmount="
 				+ initialDepositAmount + ", profitCreditAccountId=" + profitCreditAccountId + ", repaymentAccountId="
 				+ repaymentAccountId + ", debitAccountId=" + debitAccountId + ", expectedResult=" + expectedResult
-				+ ", reference=" + reference + ", linkedTcid=" + linkedTcid + "]";
+				+ ", linkedTcid=" + linkedTcid + "]";
 	}
 }

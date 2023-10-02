@@ -23,7 +23,7 @@ public class ABE_CloseCasaAccount_Mudarabah_Page {
 	private By accountIdTextField = By.xpath("(//input[@id='_acctId'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");	
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private By but = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
+	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	private By transferBalanceRadioButton = By.xpath("(//input[@id='_trfrYes_radio'])[1]");
 	private By transactionTypeMenu = By.id("_tranType_select");
 	private By transferAccountIdTextField = By.xpath("(//input[@id='_trfrActId'])[1]");
@@ -63,8 +63,8 @@ public class ABE_CloseCasaAccount_Mudarabah_Page {
 	    driver.switchTo().frame((loginFrameIframeId));
 	    driver.switchTo().frame((coreAbeIframeId));
 	    driver.switchTo().frame((uxIframeId));
-		PageFunctionUtils.waitOnElement(driver, but);
-		PageFunctionUtils.waitOnFrameAndSwitch(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnElement(driver, backgroundMenuButton);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
 		return this;
 	}
 	

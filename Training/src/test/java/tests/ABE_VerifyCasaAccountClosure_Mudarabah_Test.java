@@ -22,7 +22,7 @@ import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
 import utils.Paths;
 
-@Test(groups = "verifyclose",dependsOnGroups = "close")
+@Test(groups = "ABE_VerifyCasaAccountClosure_Mudarabah_Test", dependsOnGroups = "ABE_CloseCasaAccount_Mudarabah_Test")
 @Listeners({AllureTestNg.class})
 public class ABE_VerifyCasaAccountClosure_Mudarabah_Test {
 

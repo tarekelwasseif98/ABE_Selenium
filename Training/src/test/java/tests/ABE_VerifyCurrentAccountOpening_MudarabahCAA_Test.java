@@ -22,7 +22,7 @@ import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
 import utils.Paths;
 
-@Test(groups = "verify",dependsOnGroups = "open")
+@Test(groups = "ABE_VerifyCurrentAccountOpening_MudarabahCAA_Test", dependsOnGroups = "ABE_OpenCurrentAccount_MudarabahCAA_Test")
 @Listeners({AllureTestNg.class})
 public class ABE_VerifyCurrentAccountOpening_MudarabahCAA_Test {
 
@@ -39,7 +39,7 @@ public class ABE_VerifyCurrentAccountOpening_MudarabahCAA_Test {
 		.clickOnLoginButton(data.getPassword());
 	}
 	
-	@DataProvider(name="Verify Islamic Current Account DataProvider")
+	@DataProvider(name="Verify Current Account Opening Mudarabah CAA DataProvider")
 	public Object[] dpMethod() throws Exception {
     	Workbook workbook = new Workbook(Paths.VerifyIslamicCurrentAccountCsv);
 		workbook.save(Paths.VerifyIslamicCurrentAccountJson);
@@ -50,7 +50,7 @@ public class ABE_VerifyCurrentAccountOpening_MudarabahCAA_Test {
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Verify Islamic Current Account DataProvider", dataProviderClass = ABE_VerifyCurrentAccountOpening_MudarabahCAA_Test.class)
+	@Test(dataProvider = "Verify Current Account Opening Mudarabah CAA DataProvider", dataProviderClass = ABE_VerifyCurrentAccountOpening_MudarabahCAA_Test.class)
 	public void verifyIslamicCurrentAccountTest(ABE_VerifyCurrentAccountOpening_MudarabahCAA_Data data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());

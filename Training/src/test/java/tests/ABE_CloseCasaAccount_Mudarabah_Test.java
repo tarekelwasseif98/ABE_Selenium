@@ -22,7 +22,7 @@ import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
 import utils.Paths;
 
-@Test(groups = "close")
+@Test(groups = "ABE_CloseCasaAccount_Mudarabah_Test")
 @Listeners({AllureTestNg.class})
 public class ABE_CloseCasaAccount_Mudarabah_Test {
 
@@ -39,7 +39,7 @@ public class ABE_CloseCasaAccount_Mudarabah_Test {
 		.clickOnLoginButton(data.getPassword());
 	}
 	
-	@DataProvider(name="Close Islamic Casa Account DataProvider")
+	@DataProvider(name="Close Casa Account Mudarabah DataProvider")
 	public Object[] dpMethod() throws Exception {
     	Workbook workbook = new Workbook(Paths.CloseIslamicCasaAccountCsv);
 		workbook.save(Paths.CloseIslamicCasaAccountJson);
@@ -50,12 +50,12 @@ public class ABE_CloseCasaAccount_Mudarabah_Test {
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Close Islamic Casa Account DataProvider", dataProviderClass = ABE_CloseCasaAccount_Mudarabah_Test.class)
+	@Test(dataProvider = "Close Casa Account Mudarabah DataProvider", dataProviderClass = ABE_CloseCasaAccount_Mudarabah_Test.class)
 	public void closeIslamicCasaAccountTest(ABE_CloseCasaAccount_Mudarabah_Data data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());
 		ABE_CloseCasaAccount_Mudarabah_Procedures.closeCasaAccountMudarabah(driver, data);
-		AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
+	    AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}
 
 	@Attachment(value = "Screenshot", type = "image/png")

@@ -16,6 +16,7 @@ import data.JsonReader;
 import data.CreateAchOutwardData;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
+import io.qameta.allure.Step;
 import pageobjects.FinacleLoginPage;
 import procedures.CreateAchOutwardProcedures;
 import utils.Properties;
@@ -64,9 +65,9 @@ public class CreateAchOutward_Test {
 	}
 	
 	@Test(dataProvider = "Create ACH Outwrad DataProvider", dataProviderClass = CreateAchOutward_Test.class)
-	//@Step("{testCaseId}")
+	@Step("{testCaseId}")
 	public void CreateAchOutward(CreateAchOutwardData data) throws Exception {
-	//	Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
+		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
 		Allure.parameter("Data: ", data.toString());		
 		CreateAchOutwardProcedures.AchOutwardByMaker(driver, data);
         AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());

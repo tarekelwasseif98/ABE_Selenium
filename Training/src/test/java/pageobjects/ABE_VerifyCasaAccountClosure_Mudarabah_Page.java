@@ -20,7 +20,8 @@ public class ABE_VerifyCasaAccountClosure_Mudarabah_Page {
 	private By accountIdTextField = By.xpath("(//input[@id='_acctId'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");	
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private By but = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
+	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
+	private By acceptButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
 
 
 	public ABE_VerifyCasaAccountClosure_Mudarabah_Page(WebDriver driver) {
@@ -54,8 +55,8 @@ public class ABE_VerifyCasaAccountClosure_Mudarabah_Page {
 	    driver.switchTo().frame((loginFrameIframeId));
 	    driver.switchTo().frame((coreAbeIframeId));
 	    driver.switchTo().frame((uxIframeId));
-		PageFunctionUtils.waitOnElement(driver, but);
-		PageFunctionUtils.waitOnFrameAndSwitch(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnElement(driver, backgroundMenuButton);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
 		return this;
 	}
 	
@@ -72,6 +73,16 @@ public class ABE_VerifyCasaAccountClosure_Mudarabah_Page {
 	@Step("Press submit button")
 	public ABE_VerifyCasaAccountClosure_Mudarabah_Page pressSubmitButton() throws Exception {
 		driver.findElement(submitButton).click();
+        try {
+        	driver.switchTo().parentFrame();
+        	driver.findElement(acceptButton).click();
+        	driver.switchTo().frame(driver.findElement(formAreaIframeID));
+        	PageFunctionUtils.sleep();
+	        }
+        catch (Exception e) {
+        	driver.switchTo().frame(driver.findElement(formAreaIframeID));
+        	PageFunctionUtils.sleep();
+        }
 		return this;
 	}
 }

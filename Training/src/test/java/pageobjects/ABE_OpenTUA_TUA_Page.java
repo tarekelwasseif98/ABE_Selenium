@@ -27,11 +27,15 @@ public class ABE_OpenTUA_TUA_Page {
 	private By profitCreditAccountIdTextField = By.xpath("(//input[@id='_intCrAcId'])[1]");
 	private By repaymentAccountIdTextField = By.xpath("(//input[@id='_repActId'])[1]");
 	private By debitAccountIdTextField = By.xpath("(//input[@id='_trnActId'])[1]");
-	private By continueButton = By.xpath("(//button[@id='_bdtlCtnBtn'])[1]");
+	private By peggingFrequencyTextField = By.xpath("(//input[@id='_pegFrenew$duration1'])[1]");
+	private By continueButton1 = By.xpath("(//button[@id='_bdtlCtnBtn'])[1]");
+	private By continueButton2 = By.xpath("(//button[@id='_gnDtlCtnBtn'])[1]");
+	private By continueButton3 = By.xpath("(//button[@id='_shmCont'])[1]");
 	private By renewalAndClosureDetailsTab = By.xpath("(//a[@id='stepVIII_anchor'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By warningAcceptButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
 	private By accountIdSuccessMessage = By.xpath("(//p[@id='_resMsg_paraMsg'])[1]");
+	private String peggingFrequencyValue = "1";
 	public static String acId;
 	public static String  referenceCsvColumnName = "reference";
 	public static String  accountIdCsvColumnName = "accountId";
@@ -69,7 +73,7 @@ public class ABE_OpenTUA_TUA_Page {
 	    driver.switchTo().frame((loginFrameIframeId));
 	    driver.switchTo().frame((coreAbeIframeId));
 	    driver.switchTo().frame((uxIframeId));
-		PageFunctionUtils.waitOnFrameAndSwitch(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
 		return this;		
 	}
 	
@@ -99,7 +103,14 @@ public class ABE_OpenTUA_TUA_Page {
 		driver.findElement(repaymentAccountIdTextField).sendKeys(repaymentAccountId.substring(1));
 		driver.findElement(debitAccountIdTextField).click();
 		driver.findElement(debitAccountIdTextField).sendKeys(debitAccountId.substring(1));
-		driver.findElement(continueButton).click();
+		driver.findElement(continueButton1).click();
+		driver.findElement(continueButton2).click();
+		driver.findElement(continueButton3).click();
+		try {
+			driver.findElement(peggingFrequencyTextField).sendKeys(peggingFrequencyValue);
+		}
+		catch(Exception e) {
+		}
 		driver.findElement(renewalAndClosureDetailsTab).click();
 		return this;
 	}
@@ -108,10 +119,18 @@ public class ABE_OpenTUA_TUA_Page {
 	public ABE_OpenTUA_TUA_Page pressSubmitButton() throws Exception {
 		driver.findElement(submitButton).click();
 		driver.switchTo().parentFrame();
-		driver.findElement(warningAcceptButton).click();
-		PageFunctionUtils.waitOnFrameAndSwitch(driver, formAreaIframeID);
+		Boolean isPresent = driver.findElements(warningAcceptButton).size() > 0;
+		if(isPresent) {
+			driver.findElement(warningAcceptButton).click();
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+		}
+		else {
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+			PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
+			acId = driver.findElement(accountIdSuccessMessage).getText().substring(87);
+		}
+		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
 		acId = driver.findElement(accountIdSuccessMessage).getText().substring(87);
-		System.out.println("Account ID: "+ acId);
 		return this;
 	}
 	
@@ -126,5 +145,5 @@ public class ABE_OpenTUA_TUA_Page {
 			CSVUtils.insertValueInCsvCell(Paths.VerifyTUAOpeningCsv, rowByTcid2, columnByColumnName2, acId);
 		}
 		return this;
-	}												
+	}										
 }

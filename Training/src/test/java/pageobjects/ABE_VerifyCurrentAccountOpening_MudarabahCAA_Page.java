@@ -21,7 +21,7 @@ public class ABE_VerifyCurrentAccountOpening_MudarabahCAA_Page {
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private String loginFrameIframeID = "loginFrame";
-	private By but = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
+	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	private String additionalDetailsSideTab = "(//span[@id='stepII_textSpan'])[1]";
 	private String profitDetailsSideTab = "(//span[@id='stepII1_textSpan'])[1]";  
 	private String taxDetailsSideTab = "(//span[@id='stepII2_textSpan'])[1]";
@@ -61,8 +61,8 @@ public class ABE_VerifyCurrentAccountOpening_MudarabahCAA_Page {
 	    driver.switchTo().frame((loginFrameIframeId));
 	    driver.switchTo().frame((coreAbeIframeId));
 	    driver.switchTo().frame((uxIframeId));
-		PageFunctionUtils.waitOnElement(driver, but);
-		PageFunctionUtils.waitOnFrameAndSwitch(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnElement(driver, backgroundMenuButton);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
 		return this;	
 	}
 	
@@ -91,6 +91,7 @@ public class ABE_VerifyCurrentAccountOpening_MudarabahCAA_Page {
 	@Step("Press submit button")
 	public ABE_VerifyCurrentAccountOpening_MudarabahCAA_Page pressSubmitButton() throws Exception {
 		driver.findElement(submitButton).click();
+		PageFunctionUtils.sleep();
 		return this;
 	}
 }

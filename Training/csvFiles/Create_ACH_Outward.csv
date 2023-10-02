@@ -1,2 +1,2 @@
-tcId,summary,username,password,menu,PaysysID,Date,Amount,Line1_RI,CCY,BIC_BEN,Network_BEN,Branch_BEN,Bank_BEN,Name_BEN,Account_BEN,Pos,Account,expectedResult,linkedTcid
-FCB-001,Automation_Cycle1_CreateACHOutward_ByMaker,QA49,Infy@123,MPOR,ACH,27092023,'20000,TEST,EGP,CIBEEGCX039,ACH,,,TEST,132456,'000000091035,'100500003298010315,The record is added successfully.,FCB-002
+"tcId","summary","username","password","menu","PaysysID","Date","Amount","Line1_RI","CCY","BIC_BEN","Network_BEN","Branch_BEN","Bank_BEN","Name_BEN","Account_BEN","Pos","Account","expectedResult","linkedTcid"
+"FCB-001","Automation_Cycle1_CreateACHOutward_ByMaker","QA49","Infy@123","MPOR","ACH","27092023","'20000","TEST","EGP","CIBEEGCX039","ACH","","","TEST","132456","","'100500003298010315","The record is added successfully.","FCB-002"

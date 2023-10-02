@@ -4,18 +4,24 @@
 <listeners>
 	<listener class-name="listeners.Listeners"/>
 </listeners>
-    <test thread-count="1" parallel = "classes" name="Islamic Casa Account">
-	<!--	<groups>
-            <run>
-                <include name="CreateACH"/>
-            </run>
-        </groups>-->
-
+    <!--<test thread-count="1" parallel="classes" name="Islamic CASA Account Opening">
          <classes>
-			<class name="tests.CreateAchOutward_Test"/>	
-	 		<class name="tests.ABE_OpenTUA_TUA_Test"/>
-<!--	 	<class name="tests.ABE_CloseIslamicCasaAccount_MudarabahCasa_Test"/>
-	 		<class name="tests.ABE_VerifyCloseIslamicCasaAccount_MudarabahCasa_Test"/> -->
+			<class name="tests.ABEOpenCurrentAccountMudarabahCAATest"/>
+			<class name="tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest"/>	
           </classes>
+     </test>-->
+     
+     <!--<test thread-count="1" parallel="classes" name="Islamic Casa Account Closure">
+        <classes>
+			<class name="tests.ABECloseCasaAccountMudarabahTest"/>
+			<class name="tests.ABEVerifyCasaAccountClosureMudarabahTest"/>	
+		</classes>
+     </test>-->
+     
+     <test thread-count="1" parallel="classes" name="Islamic TUA Opening">
+        <classes>
+			<class name="tests.ABEOpenTUATest"/>
+			<class name="tests.ABEVerifyTUAOpeningTest"/>
+		</classes>
      </test>
 </suite>

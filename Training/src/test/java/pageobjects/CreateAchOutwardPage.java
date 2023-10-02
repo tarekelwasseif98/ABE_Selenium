@@ -55,7 +55,7 @@ public class CreateAchOutwardPage {
 	@Step("Sending menu name: {0}")
 	public CreateAchOutwardPage sendKeysSearchBarTextField(String menu) throws Exception {
 	     	driver.switchTo().parentFrame();
-	     	PageFunctionUtils.waitOnFrameAndSwitch(driver, loginFrameIframeID);
+	     	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, loginFrameIframeID);
 			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 	        PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
 	        PageFunctionUtils.clickOnElement(driver, searchButton);
@@ -77,7 +77,7 @@ public class CreateAchOutwardPage {
 	    driver.switchTo().frame(("loginFrame"));
 	    driver.switchTo().frame(("Core_ABE"));
 	    driver.switchTo().frame(("UX"));
-		PageFunctionUtils.waitOnFrameAndSwitch(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
 		return this;	
 	}
 	

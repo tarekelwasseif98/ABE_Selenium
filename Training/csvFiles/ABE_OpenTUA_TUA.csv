@@ -1,2 +1,0 @@
-tcId,summary,username,password,menu,cif,schemeCode,depositPeriodMonths,depositPeriodDays,initialDepositAmount,profitCreditAccountId,repaymentAccountId,debitAccountId,expectedResult,reference,linkedTcid
-FCB-9862,IslamicBanking_MudarabahTUA_Open_IslamicTUAAccount_MTD2Y_ByMaker_A1,QA46,Infy@123,OITUDA,6246013,1752,12,0,5000,'1606624601301001,'1606624601301001,'1606624601301001,top up deposit account is created and sent for verification successfully,'17520624601301000095,FCB-9863

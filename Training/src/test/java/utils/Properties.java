@@ -1,7 +1,7 @@
 package utils;
 
 public class Properties {
-	public static final String HubUrl = "http://10.10.23.233:4444/wd/hub";
+	public static final String HubUrl = "http://10.10.23.242:4444/wd/hub";
 	public static final int MinTime = 15;
 	public static final int MaxTime = 45;
 	public static final int SleepTime = 6000;

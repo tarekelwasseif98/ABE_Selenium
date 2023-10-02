@@ -62,7 +62,7 @@ public class ABE_VerifyOfficeAccount_Test {
 	@Test(dataProvider = "Verify Office Account DataProvider", dataProviderClass = ABE_VerifyOfficeAccount_Test.class)
 	@Step("{testCaseId}")
 	public void ABE_VerifyOfficeAccount(VerifyOfficeAccountData data) throws Exception {
-		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
+		//Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
 		Allure.parameter("Data: ", data.toString());		
 		VerifyOfficeAccountProcedures.OfficeAccountByChecker(driver, data);
         AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());

@@ -1,1 +1,0 @@
-{"uuid":"163697e1-5348-4c86-a8fb-e1e50c57828e","name":"tests.ABE_OpenTUA_TUA_Test","children":["288fd1d1-c9b0-4806-bc2b-a0d0928c0bd3"],"befores":[{"name":"oneTimeSetUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1695808496550,"stop":1695808496628}],"afters":[],"start":1695808496493,"stop":1695808531394}

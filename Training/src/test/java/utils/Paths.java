@@ -7,13 +7,13 @@ public class Paths {
 	public static final String Create_ACH_OutwardJson =  "jsonFiles\\" + Create_ACH_OutwardCsv.substring(9, Paths.Create_ACH_OutwardCsv.length()-4) + ".json";
 	public static final String Verify_ACH_OutwardJson = "jsonFiles\\" + Verify_ACH_Outwardcsv.substring(9, Paths.Verify_ACH_Outwardcsv.length()-4) + ".json";
 	
-	public static final String OpenIslamicCurrentAccountCsv  = "csvFiles\\OpenIslamicCurrentAccount.csv";
-	public static final String VerifyIslamicCurrentAccountCsv = "csvFiles\\VerifyIslamicCurrentAccount.csv";
+	public static final String OpenIslamicCurrentAccountCsv  = "csvFiles\\ABEOpenCurrentAccountMudarabahCAA.csv";
+	public static final String VerifyIslamicCurrentAccountCsv = "csvFiles\\ABEVerifyCurrentAccountOpeningMudarabahCAA.csv";
 	public static final String OpenIslamicCurrentAccountJson =  "jsonFiles\\" + OpenIslamicCurrentAccountCsv.substring(9, Paths.OpenIslamicCurrentAccountCsv.length()-4) + ".json";
 	public static final String VerifyIslamicCurrentAccountJson = "jsonFiles\\" + VerifyIslamicCurrentAccountCsv.substring(9, Paths.VerifyIslamicCurrentAccountCsv.length()-4) + ".json";
 
-	public static final String CloseIslamicCasaAccountCsv  = "csvFiles\\CloseIslamicCasaAccount.csv";
-	public static final String VerifyCloseIslamicCasaAccountCsv = "csvFiles\\VerifyCloseIslamicCasaAccount.csv";
+	public static final String CloseIslamicCasaAccountCsv  = "csvFiles\\ABECloseCasaAccountMudarabah.csv";
+	public static final String VerifyCloseIslamicCasaAccountCsv = "csvFiles\\ABEVerifyCasaAccountClosureMudarabah.csv";
 	public static final String CloseIslamicCasaAccountJson =  "jsonFiles\\" + CloseIslamicCasaAccountCsv.substring(9, Paths.CloseIslamicCasaAccountCsv.length()-4) + ".json";
 	public static final String VerifyCloseIslamicCasaAccountJson = "jsonFiles\\" + VerifyCloseIslamicCasaAccountCsv.substring(9, Paths.VerifyCloseIslamicCasaAccountCsv.length()-4) + ".json";
 
@@ -22,8 +22,8 @@ public class Paths {
 	public static final String OpenOfficeAccountJson =  "jsonFiles\\" + OpenOfficeAccountCsv.substring(9, Paths.OpenOfficeAccountCsv.length()-4) + ".json";
 	public static final String VerifyOfficeAccountJson =  "jsonFiles\\" + VerifyOfficeAccountCsv.substring(9, Paths.VerifyOfficeAccountCsv.length()-4) + ".json";
 	
-	public static final String OpenTUACsv  = "csvFiles\\ABE_OpenTUA_TUA.csv";
-	public static final String VerifyTUAOpeningCsv  = "csvFiles\\ABE_VerifyTUAOpening_TUA.csv";
+	public static final String OpenTUACsv  = "csvFiles\\ABEOpenTUA.csv";
+	public static final String VerifyTUAOpeningCsv  = "csvFiles\\ABEVerifyTUAOpening.csv";
 	public static final String OpenTUAJson =  "jsonFiles\\" + OpenTUACsv.substring(9, Paths.OpenTUACsv.length()-4) + ".json";
 	public static final String VerifyTUAOpeningJson =  "jsonFiles\\" + VerifyTUAOpeningCsv.substring(9, Paths.VerifyTUAOpeningCsv.length()-4) + ".json";
 

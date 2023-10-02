@@ -41,16 +41,28 @@ public class PageFunctionUtils {
 		driver.findElement(by).sendKeys(keysToSend);
 	}
 	
+	public static void clearDataInWebElement(WebDriver driver,By by) throws Exception {
+		WebDriverWait wait = new WebDriverWait(driver, Properties.MinTime);
+		wait.until(ExpectedConditions.elementToBeClickable(by));
+		driver.findElement(by).clear();;
+	}
+	
 	public static void waitOnElement(WebDriver driver, By by) throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Properties.MaxTime);
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 	}
 	
-	public static void waitOnFrameAndSwitch(WebDriver driver, By by) throws InterruptedException {
+	public static void waitOnFrameAndSwitchXpath(WebDriver driver, By by) throws InterruptedException {
 			Thread.sleep(3000);
 			WebDriverWait wait = new WebDriverWait(driver, Properties.MaxTime);
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(by));
 		}
+	
+	public static void waitOnFrameAndSwitchId(WebDriver driver, String id) throws InterruptedException {
+		Thread.sleep(3000);
+		WebDriverWait wait = new WebDriverWait(driver, Properties.MaxTime);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(id));
+	}
 	
 	public static void sleep() throws InterruptedException {
 		Thread.sleep(Properties.SleepTime);

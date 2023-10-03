@@ -11,10 +11,10 @@ import utils.PageFunctionUtils;
 public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 
 	private WebDriver driver;
-	private String loginFrameIframeID = "loginFrame";
+	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
 	private String uxIframeId = "UX";
-	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']");
+	private By formAreaIframeId =By.xpath("//iframe[@name='formArea']");
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By accountIdTextField = By.xpath("(//input[@id='_tempAcid'])[1]");
@@ -37,7 +37,7 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage sendKeysSearchBarTextField(String menu) throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeID);
+		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
         PageFunctionUtils.clickOnElement(driver, searchButton);	       
@@ -57,11 +57,11 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeID);
+		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
 		PageFunctionUtils.waitOnElement(driver, backgroundMenuButton);
-		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		return this;	
 	}
 	

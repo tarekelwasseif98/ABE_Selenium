@@ -1,0 +1,101 @@
+[
+ {
+  "tcId": "FCB-9882",
+  "summary": "IslamicBanking_Verify_Preclosure_MudarabahTUA_MTD2Y_RepaymentAccount_ByChecker_F2",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VITUDAC",
+  "accountId": "'17520624601301001658",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9886",
+  "summary": "IslamicBanking_Verify_Closure_MudarabahTUA_MTD2Y_IndicativeRate_ByChecker_H2",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VITUDAC",
+  "accountId": "'17520624601301001696",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10178",
+  "summary": "IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD07_ByChecker_H2",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VITUDAC",
+  "accountId": "'17510624601301001703",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10180",
+  "summary": "IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD1M_ByChecker_I2",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VITUDAC",
+  "accountId": "'17530624601301001688",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10182",
+  "summary": "IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD3M_ByChecker_J2",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VITUDAC",
+  "accountId": "'17540624601301001717",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10184",
+  "summary": "IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD6M_ByChecker_K2",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VITUDAC",
+  "accountId": "'17550624601301001723",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10186",
+  "summary": "IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD9M_ByChecker_L2",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VITUDAC",
+  "accountId": "'17560624601301001739",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10188",
+  "summary": "IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD1Y_ByChecker_M2",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VITUDAC",
+  "accountId": "'17580624601301001744",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10190",
+  "summary": "IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD2Y_ByChecker_N2",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VITUDAC",
+  "accountId": "'17600624601301001756",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10192",
+  "summary": "IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD3Y_ByChecker_O2",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VITUDAC",
+  "accountId": "'17590624601301001767",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10196",
+  "summary": "IslamicBanking_WakalahTUA_Verfiy_Closure_WakalahTUA_OnMaturity_ByChecker_Q2",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VITUDAC",
+  "accountId": "'17550624601301001778",
+  "expectedResult": "successfully"
+ }
+]

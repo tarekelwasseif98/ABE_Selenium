@@ -13,14 +13,13 @@ public class ABEVerifyTUAOpeningPage {
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
 	private String uxIframeId = "UX";
-	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']");
+	private By formAreaIframeId =By.xpath("//iframe[@name='formArea']");
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By accountIdTextField = By.xpath("(//input[@id='_modacctid'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By warningAcceptButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
-	private String loginFrameIframeID = "loginFrame";
 	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	private By additionalDetailsSideTab = By.xpath("(//span[@id='stepIII_textSpan'])[1]");
 	private By generalDetailsSideTab = By.xpath("(//span[@id='stepIV_textSpan'])[1]");
@@ -42,7 +41,7 @@ public class ABEVerifyTUAOpeningPage {
 	public ABEVerifyTUAOpeningPage sendKeysSearchBarTextField(String menu) throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeID);
+		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
         PageFunctionUtils.clickOnElement(driver, searchButton);	       
@@ -66,7 +65,7 @@ public class ABEVerifyTUAOpeningPage {
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
 		PageFunctionUtils.waitOnElement(driver, backgroundMenuButton);
-		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		return this;	
 	}
 	
@@ -103,19 +102,19 @@ public class ABEVerifyTUAOpeningPage {
 		Boolean isPresent1 = driver.findElements(warningAcceptButton).size() > 0;
 		if(isPresent1) {
 			PageFunctionUtils.clickOnElement(driver, warningAcceptButton);
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 			driver.switchTo().parentFrame();
 			Boolean isPresent2 = driver.findElements(warningAcceptButton).size() > 0;
 			if(isPresent2) {
 				PageFunctionUtils.clickOnElement(driver, warningAcceptButton);
-				PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+				PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 			}
 			else {
-				PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+				PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 			}
 		}
 		else {
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		}
 		PageFunctionUtils.sleep();
 		return this;

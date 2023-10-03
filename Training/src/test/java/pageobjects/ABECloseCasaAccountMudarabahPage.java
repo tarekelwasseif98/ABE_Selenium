@@ -16,7 +16,7 @@ public class ABECloseCasaAccountMudarabahPage {
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
 	private String uxIframeId = "UX";
-	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']"); 
+	private By formAreaIframeId =By.xpath("//iframe[@name='formArea']"); 
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By accountIdTextField = By.xpath("(//input[@id='_acctId'])[1]");
@@ -63,7 +63,7 @@ public class ABECloseCasaAccountMudarabahPage {
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
 		PageFunctionUtils.waitOnElement(driver, backgroundMenuButton);
-		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		return this;
 	}
 	

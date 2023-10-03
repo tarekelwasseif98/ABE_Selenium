@@ -16,7 +16,7 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
 	private String uxIframeId = "UX";
-	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']"); 
+	private By formAreaIframeId =By.xpath("//iframe[@name='formArea']"); 
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By cifIdTextField = By.xpath("(//input[@id='_critCif'])[1]");
@@ -65,7 +65,7 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
-		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		return this;		
 	}
 	

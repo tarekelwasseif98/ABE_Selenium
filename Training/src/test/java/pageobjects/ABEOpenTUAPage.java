@@ -15,7 +15,7 @@ public class ABEOpenTUAPage {
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
 	private String uxIframeId = "UX";
-	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']"); 
+	private By formAreaIframeId =By.xpath("//iframe[@name='formArea']"); 
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By cifIdTextField = By.xpath("(//input[@id='_critcifId'])[1]");
@@ -73,7 +73,7 @@ public class ABEOpenTUAPage {
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
-		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		return this;		
 	}
 	
@@ -121,10 +121,10 @@ public class ABEOpenTUAPage {
 		Boolean isPresent = driver.findElements(warningAcceptButton).size() > 0;
 		if(isPresent) {
 			PageFunctionUtils.clickOnElement(driver, warningAcceptButton);
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		}
 		else {
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 			PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
 			acId = driver.findElement(accountIdSuccessMessage).getText().substring(87);
 		}

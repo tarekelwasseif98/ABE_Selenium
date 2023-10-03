@@ -18,10 +18,16 @@
 		</classes>
      </test>-->
      
-     <test thread-count="1" parallel="classes" name="Islamic TUA Opening">
+     <!--<test thread-count="1" parallel="classes" name="Islamic TUA Opening">
         <classes>
 			<class name="tests.ABEOpenTUATest"/>
 			<class name="tests.ABEVerifyTUAOpeningTest"/>
+		</classes>
+     </test>-->
+     <test thread-count="1" parallel="classes" name="Islamic TUA Closure">
+        <classes>
+			<class name="tests.ABECloseTUATest"/>
+			<class name="tests.ABEVerifyTUAClosureTest"/>
 		</classes>
      </test>
 </suite>

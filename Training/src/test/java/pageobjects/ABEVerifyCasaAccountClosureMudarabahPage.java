@@ -13,7 +13,7 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
 	private String uxIframeId = "UX";
-	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']"); 
+	private By formAreaIframeId =By.xpath("//iframe[@name='formArea']"); 
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By accountIdTextField = By.xpath("(//input[@id='_acctId'])[1]");
@@ -55,7 +55,7 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
 		PageFunctionUtils.waitOnElement(driver, backgroundMenuButton);
-		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		return this;
 	}
 	
@@ -75,11 +75,11 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
         try {
         	driver.switchTo().parentFrame();
         	PageFunctionUtils.clickOnElement(driver, acceptButton);
-        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
         	PageFunctionUtils.sleep();
 	        }
         catch (Exception e) {
-        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
         	PageFunctionUtils.sleep();
         }
 		return this;

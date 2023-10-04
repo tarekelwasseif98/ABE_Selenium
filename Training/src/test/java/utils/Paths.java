@@ -31,5 +31,10 @@ public class Paths {
 	public static final String VerifyTUAClosureCsv  = "csvFiles\\ABEVerifyTUAClosure.csv";
 	public static final String CloseTUAJson =  "jsonFiles\\" + CloseTUACsv.substring(9, Paths.CloseTUACsv.length()-4) + ".json";
 	public static final String VerifyTUAClosureJson =  "jsonFiles\\" + VerifyTUAClosureCsv.substring(9, Paths.VerifyTUAClosureCsv.length()-4) + ".json";
+	
+	public static final String OpenMurabahaAccountCsv  = "csvFiles\\ABEOpenMurabahaAccountMurabahaFinancing.csv";
+	public static final String VerifyMurabahaAccountOpeningCsv  = "csvFiles\\ABEVerifyMurabahaAccountOpeningMurabahaFinancing.csv";
+	public static final String OpenMurabahaAccountJson =  "jsonFiles\\" + OpenMurabahaAccountCsv.substring(9, Paths.OpenMurabahaAccountCsv.length()-4) + ".json";
+	public static final String VerifyMurabahaAccountOpeningJson =  "jsonFiles\\" + VerifyMurabahaAccountOpeningCsv.substring(9, Paths.VerifyMurabahaAccountOpeningCsv.length()-4) + ".json";
 
 }

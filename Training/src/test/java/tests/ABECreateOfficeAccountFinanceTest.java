@@ -59,11 +59,10 @@ public class ABECreateOfficeAccountFinanceTest {
         dataList.toArray();
         return dataList.toArray();
 	}
-	
+
 	@Test(dataProvider = "Open Office Account DataProvider", dataProviderClass = ABECreateOfficeAccountFinanceTest.class)
 	public void ABE_OpenOfficeAccount(ABECreateOfficeAccountFinanceData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
-		
 		Allure.parameter("Data: ", data.toString());		
         ABECreateOfficeAccountFinanceProcedures.OfficeAccountByMaker(driver, data);
        AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());

@@ -1,6 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 124.7 s -- in TestSuite
+=======
 Tests run: 30, Failures: 1, Errors: 0, Skipped: 29, Time elapsed: 7.210 s <<< FAILURE! -- in TestSuite
 tests.ABECreateOfficeAccountFinanceTest.beforeTest[[Ljava.lang.Object;@75316a2](0) -- Time elapsed: 6.831 s <<< FAILURE!
 java.lang.AssertionError: By.xpath: //*[@id="usertxt"]not found
@@ -30,3 +33,4 @@ java.lang.AssertionError: By.xpath: //*[@id="usertxt"]not found
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 
+>>>>>>> 89d444d1b0d38c8288892a550738ee1f527d2030

@@ -1,0 +1,13 @@
+[
+ {
+  "tcId": "FCB-003",
+  "summary": "Automation_Cycle1_AuthorizeACHOutward_ByChecker2",
+  "username": "QA49",
+  "password": "Infy@123",
+  "menu": "AOPO",
+  "Pos": "'000000093202",
+  "expectedResult": "Payment Order is successfully Approved.",
+  "paysysID": "ACH",
+  "linkedTcid": "FCB-002"
+ }
+]

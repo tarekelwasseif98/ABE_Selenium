@@ -71,7 +71,6 @@ public class PageFunctionUtils {
 	
 	public static void scrollUp(WebDriver driver) throws InterruptedException {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollBy(0, -document.body.scrollHeight);");		}
-	
-	
+		jse.executeScript("window.scrollBy(0, -document.body.scrollHeight);");
+		}
 }

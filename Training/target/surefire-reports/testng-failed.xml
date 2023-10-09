@@ -4,16 +4,16 @@
   <listeners>
     <listener class-name="listeners.Listeners"/>
   </listeners>
-  <test thread-count="5" parallel="classes" name="Casa savimgs Account(failed)" verbose="0">
+  <test thread-count="5" parallel="classes" name="Islamic Murabaha Account Opening(failed)" verbose="0">
     <classes>
-      <class name="tests.ABECreateOfficeAccountFinanceTest">
+      <class name="tests.ABEOpenMurabahaAccountMurabahaFinancingTest">
         <methods>
-          <include name="ABE_OpenOfficeAccount"/>
           <include name="oneTimeSetUp"/>
-          <include name="after"/>
           <include name="beforeTest"/>
+          <include name="after"/>
+          <include name="openMurabahaAccountMurabahaFinancingTest" invocation-numbers="0"/>
         </methods>
-      </class> <!-- tests.ABECreateOfficeAccountFinanceTest -->
+      </class> <!-- tests.ABEOpenMurabahaAccountMurabahaFinancingTest -->
     </classes>
-  </test> <!-- Casa savimgs Account(failed) -->
+  </test> <!-- Islamic Murabaha Account Opening(failed) -->
 </suite> <!-- Failed suite [Suite] -->

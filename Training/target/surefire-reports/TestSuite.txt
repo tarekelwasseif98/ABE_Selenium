@@ -1,25 +1,38 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 30, Failures: 1, Errors: 0, Skipped: 29, Time elapsed: 7.210 s <<< FAILURE! -- in TestSuite
-tests.ABECreateOfficeAccountFinanceTest.beforeTest[[Ljava.lang.Object;@75316a2](0) -- Time elapsed: 6.831 s <<< FAILURE!
-java.lang.AssertionError: By.xpath: //*[@id="usertxt"]not found
-	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
-	at utils.AssertionFactory.assertionFailWithMessage(AssertionFactory.java:12)
-	at utils.PageFunctionUtils.waitOnElement(PageFunctionUtils.java:73)
-	at utils.PageFunctionUtils.enterDataInWebElement(PageFunctionUtils.java:44)
-	at pageobjects.FinacleLoginPage.sendKeysUserNameTextField(FinacleLoginPage.java:28)
-	at tests.ABECreateOfficeAccountFinanceTest.beforeTest(ABECreateOfficeAccountFinanceTest.java:47)
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 71.79 s <<< FAILURE! -- in TestSuite
+tests.ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest[ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9938, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_CarsShortTerm_4010_ByMaker_B1, username=QA46, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4010, assetValue=100000, customerMargin=200000, financePeriodMonths=12, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=no, repaymentType=bullet, numberOfInstallments=1, installmentFrequency=quarterly, installmentStartDate='09-10-2023, date=4, calendar=gregorian calendar, onHoliday=skip, profitFrequency=twice a month, profitStartDate='09-10-2023, operativeAccountId='1606624601301001, expiryDate='09-10-2099, documentDate='09-10-2023, limitId=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9973]](1) -- Time elapsed: 43.97 s <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <iframe align="left" width="100%" height="100%" name="formArea" scrolling="no" marginheight="170px" frameborder="0" backgroundcolor="white" src="jsp/finUXDummy.jsp" onload="resizeIframe();" style="height: 820px;" cd_frame_id_="6a46e73d0ad0c6c13dafaa21c9cb864e">...</iframe> is not clickable at point (334, 177). Other element would receive the click: <div class="dijitDialogUnderlay _underlay" tabindex="-1" data-dojo-attach-point="node" id="finErrorPopup_underlay" style="width: 1583px; height: 668px;"></div>
+  (Session info: chrome=90.0.4430.72)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'F1TESTCORE2', ip: '10.10.23.242', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.72, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\AMMAR~1.SHA\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:54379}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true, webdriver.remote.sessionid: 67c563ea51b88737da946754668...}
+Session ID: 67c563ea51b88737da946754668a8edb
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at utils.PageFunctionUtils.clickOnElement(PageFunctionUtils.java:13)
+	at pageobjects.ABEOpenMurabahaAccountMurabahaFinancingPage.sendKeysFinanceDetails(ABEOpenMurabahaAccountMurabahaFinancingPage.java:138)
+	at procedures.ABEOpenMurabahaAccountMurabahaFinancingProcedures.openMurabahaAccountMurabahaFinancing(ABEOpenMurabahaAccountMurabahaFinancingProcedures.java:14)
+	at tests.ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest(ABEOpenMurabahaAccountMurabahaFinancingTest.java:66)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
 	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)

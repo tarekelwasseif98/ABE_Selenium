@@ -24,10 +24,16 @@
 			<class name="tests.ABEVerifyTUAOpeningTest"/>
 		</classes>
      </test>-->
-     <test thread-count="1" parallel="classes" name="Islamic TUA Closure">
+     <!--<test thread-count="1" parallel="classes" name="Islamic TUA Closure">
         <classes>
 			<class name="tests.ABECloseTUATest"/>
 			<class name="tests.ABEVerifyTUAClosureTest"/>
+		</classes>
+     </test>-->
+     <test thread-count="1" parallel="classes" name="Islamic Murabaha Account Opening">
+        <classes>
+			<class name="tests.ABEOpenMurabahaAccountMurabahaFinancingTest"/>
+			<!-- <class name="tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest"/>-->
 		</classes>
      </test>
 </suite>

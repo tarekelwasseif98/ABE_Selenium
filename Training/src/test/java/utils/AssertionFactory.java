@@ -8,5 +8,8 @@ public class AssertionFactory {
 		AssertJUnit.assertTrue(driver.getPageSource().contains(expectedResult));
 	}
 	
+	public static void assertionFailWithMessage(String message) {
+		AssertJUnit.fail(message);
+	}
 	
 }

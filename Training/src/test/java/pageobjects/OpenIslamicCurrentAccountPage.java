@@ -66,7 +66,7 @@ public class OpenIslamicCurrentAccountPage {
 	    driver.switchTo().frame((loginFrameIframeId));
 	    driver.switchTo().frame((coreAbeIframeId));
 	    driver.switchTo().frame((uxIframeId));
-		PageFunctionUtils.waitOnFrameAndSwitch(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
 		return this;		
 	}
 	

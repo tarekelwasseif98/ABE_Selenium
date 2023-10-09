@@ -64,7 +64,7 @@ public class CloseIslamicCasaAccountPage {
 	    driver.switchTo().frame((coreAbeIframeId));
 	    driver.switchTo().frame((uxIframeId));
 		PageFunctionUtils.waitOnElement(driver, but);
-		PageFunctionUtils.waitOnFrameAndSwitch(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
 		return this;
 	}
 	

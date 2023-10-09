@@ -52,7 +52,7 @@ public class ABE_VerifyCasaAccountClosure_Mudarabah_Test {
 	
 	@Test(dataProvider = "Verify Close Islamic Casa Account DataProvider", dataProviderClass = ABE_VerifyCasaAccountClosure_Mudarabah_Test.class)
 	public void closeIslamicCasaAccountTest(ABE_VerifyCasaAccountClosure_Mudarabah_Data data) throws Exception {
-		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
+//		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());
 		ABE_VerifyCasaAccountClosure_Mudarabah_Procedures.verifyCasaAccountClosureMudarabah(driver, data);
 		AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());

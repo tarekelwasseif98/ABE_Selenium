@@ -62,7 +62,7 @@ public class ABE_OpenOfficeAccount_Test {
 	
 	@Test(dataProvider = "Open Office Account DataProvider", dataProviderClass = ABE_OpenOfficeAccount_Test.class)
 	public void ABE_OpenOfficeAccount(OpenOfficeAccountData data) throws Exception {
-		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
+//		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
 		Allure.parameter("Data: ", data.toString());		
         OpenOfficeAccountProcedures.OfficeAccountByMaker(driver, data);
         AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());

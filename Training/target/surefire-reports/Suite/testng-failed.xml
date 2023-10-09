@@ -4,27 +4,22 @@
   <listeners>
     <listener class-name="listeners.Listeners"/>
   </listeners>
-  <test thread-count="5" parallel="classes" name="Islamic Casa Account(failed)" verbose="0">
+  <test thread-count="5" parallel="classes" name="Create ACH Outward(failed)" verbose="0">
+    <groups>
+      <run>
+        <include name="CreateACH"/>
+        <include name="VerifyACH"/>
+        <include name="AuthorizeACH"/>
+      </run>
+    </groups>
     <classes>
-<<<<<<< HEAD
-      <class name="tests.CreateAchOutward_Test">
-        <methods>
-          <include name="after"/>
-          <include name="CreateAchOutward" invocation-numbers="0"/>
-          <include name="oneTimeSetUp"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- tests.CreateAchOutward_Test -->
-=======
-      <class name="tests.ABE_OpenTUA_TUA_Test">
+      <class name="tests.ABE_Authorize_ACH_Outward_Test">
         <methods>
           <include name="after"/>
           <include name="beforeTest"/>
-          <include name="oneTimeSetUp"/>
-          <include name="openTUA" invocation-numbers="0"/>
+          <include name="authorizeACHOutward" invocation-numbers="0"/>
         </methods>
-      </class> <!-- tests.ABE_OpenTUA_TUA_Test -->
->>>>>>> adb565c4b7d9d41acdff3186b7af5c8e4a0c4aa6
+      </class> <!-- tests.ABE_Authorize_ACH_Outward_Test -->
     </classes>
-  </test> <!-- Islamic Casa Account(failed) -->
+  </test> <!-- Create ACH Outward(failed) -->
 </suite> <!-- Failed suite [Suite] -->

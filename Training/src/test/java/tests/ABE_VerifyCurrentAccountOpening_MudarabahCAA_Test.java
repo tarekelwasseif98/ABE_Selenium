@@ -52,7 +52,7 @@ public class ABE_VerifyCurrentAccountOpening_MudarabahCAA_Test {
 	
 	@Test(dataProvider = "Verify Islamic Current Account DataProvider", dataProviderClass = ABE_VerifyCurrentAccountOpening_MudarabahCAA_Test.class)
 	public void verifyIslamicCurrentAccountTest(ABE_VerifyCurrentAccountOpening_MudarabahCAA_Data data) throws Exception {
-		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
+//		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());
 		ABE_VerifyCurrentAccountOpening_MudarabahCAA_Procedures.verifyCurrentAccountOpeningMudarabahCAA(driver, data);
 		AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());

@@ -21,7 +21,7 @@ public class VerifyACHOutwardPage {
 	private String loginFrameIframeID = "loginFrame";
 	private By but = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	private By dropdownAction = By.xpath("(//select[@id='_cFinFuncCode$funcCombo_select'])[1]");
-	private By paymentOrderTextField = By.xpath("(//input[@id='_cPaysysID'])[1]");
+	private By paymentOrderTextField = By.xpath("//input[@id='_po_id']");
 	private By goButton = By.id("_go");
 	private By submitPayment = By.id("_submit");
 	
@@ -69,7 +69,7 @@ public class VerifyACHOutwardPage {
 		Select dropdown1 = new Select(driver.findElement(dropdownAction));
 		dropdown1.selectByIndex(3);
 		
-		driver.findElement(paymentOrderTextField).sendKeys(PaymentOrder);
+		driver.findElement(paymentOrderTextField).sendKeys(PaymentOrder.substring(1));
 		return this;
 		
 	}

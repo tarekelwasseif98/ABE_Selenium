@@ -166,9 +166,12 @@ public class CreateAchOutwardPage {
 		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.Create_ACH_OutwardCsv, PosCsvColumnName);
 		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.Verify_ACH_Outwardcsv, tcIdCsvColumnName, linkedId);
 		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.Verify_ACH_Outwardcsv, PosCsvColumnName);
-		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
+		int rowByTcid3 = CSVUtils.getRowByTcid(Paths.Authorize_ACH_Outwardcsv, linkedTcidCsvColumnName, linkedId);
+		int columnByColumnName3 = CSVUtils.getColumnByColumnName(Paths.Authorize_ACH_Outwardcsv, PosCsvColumnName);
+		if(rowByTcid1 != -1 && rowByTcid2 != -1 && rowByTcid3 != -1) {
 			CSVUtils.insertValueInCsvCell(Paths.Create_ACH_OutwardCsv, rowByTcid1, columnByColumnName1, POID);
 			CSVUtils.insertValueInCsvCell(Paths.Verify_ACH_Outwardcsv, rowByTcid2, columnByColumnName2, POID);
+			CSVUtils.insertValueInCsvCell(Paths.Authorize_ACH_Outwardcsv, rowByTcid3, columnByColumnName3, POID);
 		}
 		return this;
 	}	

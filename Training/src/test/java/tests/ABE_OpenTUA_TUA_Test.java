@@ -62,7 +62,7 @@ public class ABE_OpenTUA_TUA_Test {
 	
 	@Test(dataProvider = "Open TUA DataProvider", dataProviderClass = ABE_OpenTUA_TUA_Test.class)
 	public void openTUA(ABE_OpenTUA_TUA_Data data) throws Exception {
-		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
+//		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
 		Allure.parameter("Data: ", data.toString());		
         ABE_OpenTUA_TUA_Procedures.openTUA(driver, data);
         AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());

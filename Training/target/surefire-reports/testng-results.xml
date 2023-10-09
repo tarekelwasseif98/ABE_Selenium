@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="0" failed="0" skipped="10">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-09T12:38:53 EEST" name="Suite" finished-at="2023-10-09T12:38:58 EEST" duration-ms="5055">
+    <groups>
+      <group name="OpenOfficeAccount">
+        <method signature="ABECreateOfficeAccountFinanceTest.ABE_OpenOfficeAccount(data.ABECreateOfficeAccountFinanceData)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" name="ABE_OpenOfficeAccount" class="tests.ABECreateOfficeAccountFinanceTest"/>
+      </group> <!-- OpenOfficeAccount -->
+    </groups>
+    <test started-at="2023-10-09T12:38:53 EEST" name="Casa savimgs Account" finished-at="2023-10-09T12:38:58 EEST" duration-ms="5055">
+      <class name="tests.ABECreateOfficeAccountFinanceTest">
+        <test-method is-config="true" signature="oneTimeSetUp()[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:53 EEST" name="oneTimeSetUp" finished-at="2023-10-09T12:38:54 EEST" duration-ms="126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneTimeSetUp -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:54 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-09T12:38:58 EEST" duration-ms="3896" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@75316a2]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[By.xpath: //*[@id="usertxt"]not found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: By.xpath: //*[@id="usertxt"]not found
+at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+at utils.AssertionFactory.assertionFailWithMessage(AssertionFactory.java:12)
+at utils.PageFunctionUtils.waitOnElement(PageFunctionUtils.java:73)
+at utils.PageFunctionUtils.enterDataInWebElement(PageFunctionUtils.java:44)
+at pageobjects.FinacleLoginPage.sendKeysUserNameTextField(FinacleLoginPage.java:28)
+at tests.ABECreateOfficeAccountFinanceTest.beforeTest(ABECreateOfficeAccountFinanceTest.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="ABE_OpenOfficeAccount(data.ABECreateOfficeAccountFinanceData)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="ABE_OpenOfficeAccount" data-provider="Open Office Account DataProvider" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABE_Create_OfficeAccount_Finance_Data [tcId=FCB-458, summary=Finance_ContingentAccounts_Create_OfficeAccount_ContingentAsset_EGP_ByMaker, username=ABE38, password=Infy@123, menu=OOAT, SchemeCode=CASH, ccy=EGP, accountHeadName=income and expense, eodMaxBalance=999999, generalLedgerSubhead=10016, expectedResult=opened successfully, reference=null, linkedTcId=FCB-460]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[By.xpath: //*[@id="usertxt"]not found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: By.xpath: //*[@id="usertxt"]not found
+at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+at utils.AssertionFactory.assertionFailWithMessage(AssertionFactory.java:12)
+at utils.PageFunctionUtils.waitOnElement(PageFunctionUtils.java:73)
+at utils.PageFunctionUtils.enterDataInWebElement(PageFunctionUtils.java:44)
+at pageobjects.FinacleLoginPage.sendKeysUserNameTextField(FinacleLoginPage.java:28)
+at tests.ABECreateOfficeAccountFinanceTest.beforeTest(ABECreateOfficeAccountFinanceTest.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ABE_OpenOfficeAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="after" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="ABE_OpenOfficeAccount(data.ABECreateOfficeAccountFinanceData)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="ABE_OpenOfficeAccount" data-provider="Open Office Account DataProvider" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABE_Create_OfficeAccount_Finance_Data [tcId=FCB-459, summary=Finance_ContingentAccounts_Create_OfficeAccount_ContingentLiability_EGP_ByMaker, username=ABE38, password=Infy@123, menu=OOAT, SchemeCode=CASH, ccy=EGP, accountHeadName=income and expense, eodMaxBalance=999999, generalLedgerSubhead=10016, expectedResult=opened successfully, reference=null, linkedTcId=FCB-461]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[By.xpath: //*[@id="usertxt"]not found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: By.xpath: //*[@id="usertxt"]not found
+at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+at utils.AssertionFactory.assertionFailWithMessage(AssertionFactory.java:12)
+at utils.PageFunctionUtils.waitOnElement(PageFunctionUtils.java:73)
+at utils.PageFunctionUtils.enterDataInWebElement(PageFunctionUtils.java:44)
+at pageobjects.FinacleLoginPage.sendKeysUserNameTextField(FinacleLoginPage.java:28)
+at tests.ABECreateOfficeAccountFinanceTest.beforeTest(ABECreateOfficeAccountFinanceTest.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ABE_OpenOfficeAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="after" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="ABE_OpenOfficeAccount(data.ABECreateOfficeAccountFinanceData)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="ABE_OpenOfficeAccount" data-provider="Open Office Account DataProvider" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABE_Create_OfficeAccount_Finance_Data [tcId=FCB-528, summary=Finance_PointingAccounts_Create_OfficeAccount_EGP_ByMaker, username=ABE38, password=Infy@123, menu=OOAT, SchemeCode=CASH, ccy=EGP, accountHeadName=income and expense, eodMaxBalance=999999, generalLedgerSubhead=10016, expectedResult=opened successfully, reference=null, linkedTcId=FCB-529]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[By.xpath: //*[@id="usertxt"]not found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: By.xpath: //*[@id="usertxt"]not found
+at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+at utils.AssertionFactory.assertionFailWithMessage(AssertionFactory.java:12)
+at utils.PageFunctionUtils.waitOnElement(PageFunctionUtils.java:73)
+at utils.PageFunctionUtils.enterDataInWebElement(PageFunctionUtils.java:44)
+at pageobjects.FinacleLoginPage.sendKeysUserNameTextField(FinacleLoginPage.java:28)
+at tests.ABECreateOfficeAccountFinanceTest.beforeTest(ABECreateOfficeAccountFinanceTest.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ABE_OpenOfficeAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="after" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="ABE_OpenOfficeAccount(data.ABECreateOfficeAccountFinanceData)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="ABE_OpenOfficeAccount" data-provider="Open Office Account DataProvider" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABE_Create_OfficeAccount_Finance_Data [tcId=FCB-540, summary=Finance_PointingAccounts_Create_OfficeAccount_USD_ByMaker, username=ABE38, password=Infy@123, menu=OOAT, SchemeCode=CASH, ccy=EGP, accountHeadName=income and expense, eodMaxBalance=999999, generalLedgerSubhead=10016, expectedResult=opened successfully, reference=null, linkedTcId=FCB-541]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[By.xpath: //*[@id="usertxt"]not found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: By.xpath: //*[@id="usertxt"]not found
+at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+at utils.AssertionFactory.assertionFailWithMessage(AssertionFactory.java:12)
+at utils.PageFunctionUtils.waitOnElement(PageFunctionUtils.java:73)
+at utils.PageFunctionUtils.enterDataInWebElement(PageFunctionUtils.java:44)
+at pageobjects.FinacleLoginPage.sendKeysUserNameTextField(FinacleLoginPage.java:28)
+at tests.ABECreateOfficeAccountFinanceTest.beforeTest(ABECreateOfficeAccountFinanceTest.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ABE_OpenOfficeAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="after" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="ABE_OpenOfficeAccount(data.ABECreateOfficeAccountFinanceData)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="ABE_OpenOfficeAccount" data-provider="Open Office Account DataProvider" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABE_Create_OfficeAccount_Finance_Data [tcId=FCB-298, summary=Finance_CashAccounts_Create_OfficeAccount_Teller_Cash_EGP_ByMaker, username=ABE37, password=Infy@123, menu=OOAT, SchemeCode=CASH, ccy=EGP, accountHeadName=OfficeAccountTellerCashEGP, eodMaxBalance=999999, generalLedgerSubhead=10001, expectedResult=opened successfully, reference=null, linkedTcId=FCB-299]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[By.xpath: //*[@id="usertxt"]not found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: By.xpath: //*[@id="usertxt"]not found
+at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+at utils.AssertionFactory.assertionFailWithMessage(AssertionFactory.java:12)
+at utils.PageFunctionUtils.waitOnElement(PageFunctionUtils.java:73)
+at utils.PageFunctionUtils.enterDataInWebElement(PageFunctionUtils.java:44)
+at pageobjects.FinacleLoginPage.sendKeysUserNameTextField(FinacleLoginPage.java:28)
+at tests.ABECreateOfficeAccountFinanceTest.beforeTest(ABECreateOfficeAccountFinanceTest.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ABE_OpenOfficeAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="after" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="ABE_OpenOfficeAccount(data.ABECreateOfficeAccountFinanceData)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="ABE_OpenOfficeAccount" data-provider="Open Office Account DataProvider" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABE_Create_OfficeAccount_Finance_Data [tcId=FCB-301, summary=Finance_CashAccounts_Create_OfficeAccount_Vault_Cash_USD_ByMaker, username=ABE37, password=Infy@123, menu=OOAT, SchemeCode=CASH, ccy=USD, accountHeadName=OfficeAccountVaultCashUSD, eodMaxBalance=999999, generalLedgerSubhead=10004, expectedResult=opened successfully, reference=null, linkedTcId=FCB-302]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[By.xpath: //*[@id="usertxt"]not found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: By.xpath: //*[@id="usertxt"]not found
+at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+at utils.AssertionFactory.assertionFailWithMessage(AssertionFactory.java:12)
+at utils.PageFunctionUtils.waitOnElement(PageFunctionUtils.java:73)
+at utils.PageFunctionUtils.enterDataInWebElement(PageFunctionUtils.java:44)
+at pageobjects.FinacleLoginPage.sendKeysUserNameTextField(FinacleLoginPage.java:28)
+at tests.ABECreateOfficeAccountFinanceTest.beforeTest(ABECreateOfficeAccountFinanceTest.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ABE_OpenOfficeAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="after" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="ABE_OpenOfficeAccount(data.ABECreateOfficeAccountFinanceData)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="ABE_OpenOfficeAccount" data-provider="Open Office Account DataProvider" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABE_Create_OfficeAccount_Finance_Data [tcId=FCB-304, summary=Finance_CashAccounts_Create_OfficeAccount_Teller_Cash_GBP_ByMaker, username=ABE37, password=Infy@123, menu=OOAT, SchemeCode=CASH, ccy=GBP, accountHeadName=OfficeAccountTellerCashGBP, eodMaxBalance=999999, generalLedgerSubhead=10001, expectedResult=opened successfully, reference=null, linkedTcId=FCB-305]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[By.xpath: //*[@id="usertxt"]not found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: By.xpath: //*[@id="usertxt"]not found
+at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+at utils.AssertionFactory.assertionFailWithMessage(AssertionFactory.java:12)
+at utils.PageFunctionUtils.waitOnElement(PageFunctionUtils.java:73)
+at utils.PageFunctionUtils.enterDataInWebElement(PageFunctionUtils.java:44)
+at pageobjects.FinacleLoginPage.sendKeysUserNameTextField(FinacleLoginPage.java:28)
+at tests.ABECreateOfficeAccountFinanceTest.beforeTest(ABECreateOfficeAccountFinanceTest.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ABE_OpenOfficeAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="after" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="ABE_OpenOfficeAccount(data.ABECreateOfficeAccountFinanceData)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="ABE_OpenOfficeAccount" data-provider="Open Office Account DataProvider" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABE_Create_OfficeAccount_Finance_Data [tcId=FCB-307, summary=Finance_CashAccounts_Create_OfficeAccount_Teller_Cash_EUR_ByMaker, username=ABE37, password=Infy@123, menu=OOAT, SchemeCode=CASH, ccy=EUR, accountHeadName=OfficeAccountTellerCashEUR, eodMaxBalance=999999, generalLedgerSubhead=10001, expectedResult=opened successfully, reference=null, linkedTcId=FCB-308]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[By.xpath: //*[@id="usertxt"]not found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: By.xpath: //*[@id="usertxt"]not found
+at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+at utils.AssertionFactory.assertionFailWithMessage(AssertionFactory.java:12)
+at utils.PageFunctionUtils.waitOnElement(PageFunctionUtils.java:73)
+at utils.PageFunctionUtils.enterDataInWebElement(PageFunctionUtils.java:44)
+at pageobjects.FinacleLoginPage.sendKeysUserNameTextField(FinacleLoginPage.java:28)
+at tests.ABECreateOfficeAccountFinanceTest.beforeTest(ABECreateOfficeAccountFinanceTest.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ABE_OpenOfficeAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="after" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="ABE_OpenOfficeAccount(data.ABECreateOfficeAccountFinanceData)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="ABE_OpenOfficeAccount" data-provider="Open Office Account DataProvider" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABE_Create_OfficeAccount_Finance_Data [tcId=FCB-335, summary=Finance_P/L Zeroization_Create_OfficeAccount_IncomeExpenseAccount_ByMaker, username=ABE37, password=Infy@123, menu=OOAT, SchemeCode=CASH, ccy=EGP, accountHeadName=income and expense, eodMaxBalance=999999, generalLedgerSubhead=10001, expectedResult=opened successfully, reference=null, linkedTcId=FCB-336]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[By.xpath: //*[@id="usertxt"]not found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: By.xpath: //*[@id="usertxt"]not found
+at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+at utils.AssertionFactory.assertionFailWithMessage(AssertionFactory.java:12)
+at utils.PageFunctionUtils.waitOnElement(PageFunctionUtils.java:73)
+at utils.PageFunctionUtils.enterDataInWebElement(PageFunctionUtils.java:44)
+at pageobjects.FinacleLoginPage.sendKeysUserNameTextField(FinacleLoginPage.java:28)
+at tests.ABECreateOfficeAccountFinanceTest.beforeTest(ABECreateOfficeAccountFinanceTest.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ABE_OpenOfficeAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="after" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="ABE_OpenOfficeAccount(data.ABECreateOfficeAccountFinanceData)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="ABE_OpenOfficeAccount" data-provider="Open Office Account DataProvider" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABE_Create_OfficeAccount_Finance_Data [tcId=FCB-337, summary=Finance_P/L Zeroization_Create_OfficeAccount_RetainedEarningsAccount_ByMaker, username=ABE38, password=Infy@123, menu=OOAT, SchemeCode=CASH, ccy=EGP, accountHeadName=income and expense, eodMaxBalance=999999, generalLedgerSubhead=10001, expectedResult=opened successfully, reference=null, linkedTcId=FCB-338]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[By.xpath: //*[@id="usertxt"]not found]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: By.xpath: //*[@id="usertxt"]not found
+at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+at utils.AssertionFactory.assertionFailWithMessage(AssertionFactory.java:12)
+at utils.PageFunctionUtils.waitOnElement(PageFunctionUtils.java:73)
+at utils.PageFunctionUtils.enterDataInWebElement(PageFunctionUtils.java:44)
+at pageobjects.FinacleLoginPage.sendKeysUserNameTextField(FinacleLoginPage.java:28)
+at tests.ABECreateOfficeAccountFinanceTest.beforeTest(ABECreateOfficeAccountFinanceTest.java:47)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ABE_OpenOfficeAccount -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABECreateOfficeAccountFinanceTest@a565cbd]" started-at="2023-10-09T12:38:58 EEST" name="after" finished-at="2023-10-09T12:38:58 EEST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- tests.ABECreateOfficeAccountFinanceTest -->
+    </test> <!-- Casa savimgs Account -->
+  </suite> <!-- Suite -->
+</testng-results>

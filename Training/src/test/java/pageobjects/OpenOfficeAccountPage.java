@@ -67,13 +67,10 @@ public class OpenOfficeAccountPage {
 		driver.findElement(GlSubHeadCodeTextField);
 		driver.findElement(GlSubHeadCodeTextField).click();
 		driver.findElement(GlSubHeadCodeTextField).sendKeys(GeneralLedgerSubhead);
-		
 		driver.findElement(SchemeCodeTextField);
 		driver.findElement(SchemeCodeTextField).click();
 		driver.findElement(SchemeCodeTextField).sendKeys(SchemeCode);
 		driver.findElement(GoButton).click();
-		
-		
 		return this;
 	}
 	
@@ -89,32 +86,19 @@ public class OpenOfficeAccountPage {
 		driver.findElement(SubmitButton).click();
 		acid = driver.findElement(accountIdSuccessMessage).getText();
 		System.out.println("ACID: "+ acid);
-		
 		return this;
 	}
 	
 	@Step("Save a/c. id")
 	public OpenOfficeAccountPage saveAccountId(String linkedId) throws Exception {
-		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.OpenOfficeAccountCsv, linkedTcidCsvColumnName, linkedId);
-		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.OpenOfficeAccountCsv, referenceCsvColumnName);
-		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyOfficeAccountCsv, tcIdCsvColumnName, linkedId);
-		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyOfficeAccountCsv, accountIdCsvColumnName);
+		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABECreateOfficeAccountFinanceCsv, linkedTcidCsvColumnName, linkedId);
+		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.ABECreateOfficeAccountFinanceCsv, referenceCsvColumnName);
+		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEVerifyOfficeAccountFinanceCsv, tcIdCsvColumnName, linkedId);
+		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.ABEVerifyOfficeAccountFinanceCsv, accountIdCsvColumnName);
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.OpenOfficeAccountCsv, rowByTcid1, columnByColumnName1, acid);
-			CSVUtils.insertValueInCsvCell(Paths.VerifyOfficeAccountCsv, rowByTcid2, columnByColumnName2, acid);
+			CSVUtils.insertValueInCsvCell(Paths.ABECreateOfficeAccountFinanceCsv, rowByTcid1, columnByColumnName1, acid);
+			CSVUtils.insertValueInCsvCell(Paths.ABEVerifyOfficeAccountFinanceCsv, rowByTcid2, columnByColumnName2, acid);
 		}
 		return this;
-	}		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
+	}
 }

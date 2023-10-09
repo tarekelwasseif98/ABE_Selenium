@@ -1,0 +1,137 @@
+[
+ {
+  "tcId": "FCB-583",
+  "summary": "Liabilities_CASA_VerifyCreatingAccount_Retail_CAA_Checker",
+  "username": "ABE21",
+  "password": "Infy@123",
+  "menu": "VCAO",
+  "accountId": "'100901111111014736",
+  "expectedResult": "approved successfully"
+ },
+ {
+  "tcId": "FCB-5778",
+  "summary": "Liabilities_CASA_VerifyCreation_CurrentA\/C_CHL_1000_EGP_Checker",
+  "username": "ABE20",
+  "password": "Infy@123",
+  "menu": "VCAO",
+  "accountId": "'100001111111014742",
+  "expectedResult": "approved successfully"
+ },
+ {
+  "tcId": "FCB-5780",
+  "summary": "Liabilities_CASA_VerifyCreation_CurrentA\/C_CHF_EUR_Checker",
+  "username": "QA49",
+  "password": "Infy@123",
+  "menu": "VCAO",
+  "accountId": "'100601111111034751",
+  "expectedResult": "approved successfully"
+ },
+ {
+  "tcId": "FCB-5782",
+  "summary": "Liabilities_CASA_VerifyCreation_CurrentA\/C_CHF_USD_Checker",
+  "username": "ABE22",
+  "password": "Infy@123",
+  "menu": "VCAO",
+  "accountId": "'100601111111024769",
+  "expectedResult": "approved successfully"
+ },
+ {
+  "tcId": "FCB-5784",
+  "summary": "Liabilities_CASA_VerifyCreation_CurrentA\/C_CHF_1006_GBP_Checker",
+  "username": "abe25",
+  "password": "Infy@123",
+  "menu": "VCAO",
+  "accountId": "'100601111111044774",
+  "expectedResult": "approved successfully"
+ },
+ {
+  "tcId": "FCB-5786",
+  "summary": "Liabilities_CASA_VerifyCreation_CurrentA\/C_CSL_1007_EGP_Checker",
+  "username": "ABE24",
+  "password": "Infy@123",
+  "menu": "VCAO",
+  "accountId": "'100701998627010078",
+  "expectedResult": "approved successfully"
+ },
+ {
+  "tcId": "FCB-5788",
+  "summary": "Liabilities_CASA_VerifyCreation_CurrentA\/C_CSF_GBP_Checker",
+  "username": "ABE31",
+  "password": "Infy@123",
+  "menu": "VCAO",
+  "accountId": "'100801998627040081",
+  "expectedResult": "approved successfully"
+ },
+ {
+  "tcId": "FCB-5790",
+  "summary": "Liabilities_CASA_VerifyCreation_CurrentA\/C_CSF_EUR_Checker",
+  "username": "ABE32",
+  "password": "Infy@123",
+  "menu": "VCAO",
+  "accountId": "'100801998627030099",
+  "expectedResult": "approved successfully"
+ },
+ {
+  "tcId": "FCB-5792",
+  "summary": "Liabilities_CASA_VerifyCreation_CurrentA\/C_CSF_USD_Checker",
+  "username": "ABE33",
+  "password": "Infy@123",
+  "menu": "VCAO",
+  "accountId": "'100801998627020104",
+  "expectedResult": "approved successfully"
+ },
+ {
+  "tcId": "FCB-5794",
+  "summary": "Liabilities_CASA_VerifyCreation_CurrentA\/C_CLO_EGP_Checker",
+  "username": "ABE34",
+  "password": "Infy@123",
+  "menu": "VCAO",
+  "accountId": "'100101111111014789",
+  "expectedResult": "approved successfully"
+ },
+ {
+  "tcId": "FCB-5796",
+  "summary": "Liabilities_CASA_VerifyCreation_CurrentA\/C_FRM_EGP_Checker",
+  "username": "ABE26",
+  "password": "Infy@123",
+  "menu": "VCAO",
+  "accountId": "'100201111111014795",
+  "expectedResult": "approved successfully"
+ },
+ {
+  "tcId": "FCB-5798",
+  "summary": "Liabilities_CASA_VerifyCreation_CurrentA\/C_CLS_1003_EGP_Checker",
+  "username": "ABE27",
+  "password": "Infy@123",
+  "menu": "VCAO",
+  "accountId": "'100301111111014800",
+  "expectedResult": "approved successfully"
+ },
+ {
+  "tcId": "FCB-5800",
+  "summary": "Liabilities_CASA_VerifyCreation_CurrentA\/C_SAL_EGP_Checker",
+  "username": "ABE28",
+  "password": "Infy@123",
+  "menu": "VCAO",
+  "accountId": "'100401111111014816",
+  "expectedResult": "approved successfully"
+ },
+ {
+  "tcId": "FCB-5802",
+  "summary": "Liabilities_CASA_VerifyCreation_CurrentA\/C_CIU_EGP_Checker",
+  "username": "ABE29",
+  "password": "Infy@123",
+  "menu": "VCAO",
+  "accountId": "'100501111111014822",
+  "expectedResult": "approved successfully"
+ },
+ {
+  "tcId": "FCB-5804",
+  "summary": "Liabilities_CASA_VerifyCreation_CurrentA\/C_HVR_EGP_Checker",
+  "username": "ABE30",
+  "password": "Infy@123",
+  "menu": "VCAO",
+  "accountId": "'111101111111014839",
+  "expectedResult": "approved successfully"
+ }
+]

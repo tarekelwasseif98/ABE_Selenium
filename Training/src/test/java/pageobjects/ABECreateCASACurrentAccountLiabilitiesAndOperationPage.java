@@ -72,14 +72,14 @@ public class ABECreateCASACurrentAccountLiabilitiesAndOperationPage {
 	public ABECreateCASACurrentAccountLiabilitiesAndOperationPage sendKeysAccoundDetails(String cif, String schemeCode, String ccy) throws Exception {
 		
 		PageFunctionUtils.waitOnElement(driver, cifIdTextField);
-		PageFunctionUtils.clickAction(driver,cifIdTextField);
+		PageFunctionUtils.clickOnElement(driver,cifIdTextField);
 		PageFunctionUtils.enterDataInWebElement(driver,cifIdTextField,cif);
-		PageFunctionUtils.clickAction(driver,SchemeCodeTextField);
+		PageFunctionUtils.clickOnElement(driver,SchemeCodeTextField);
 		PageFunctionUtils.enterDataInWebElement(driver,SchemeCodeTextField,schemeCode);
-		PageFunctionUtils.clickAction(driver,ccyTextField);
+		PageFunctionUtils.clickOnElement(driver,ccyTextField);
 		driver.findElement(ccyTextField).clear();
 		PageFunctionUtils.enterDataInWebElement(driver,ccyTextField,ccy);	
-		PageFunctionUtils.clickAction(driver,goButton);
+		PageFunctionUtils.clickOnElement(driver,goButton);
 
 		return this;
 	}
@@ -87,7 +87,7 @@ public class ABECreateCASACurrentAccountLiabilitiesAndOperationPage {
 	@Step("Press submit button")
 	public ABECreateCASACurrentAccountLiabilitiesAndOperationPage pressSubmitButton() throws Exception {
 		
-		PageFunctionUtils.clickAction(driver,submitButton);
+		PageFunctionUtils.clickOnElement(driver,submitButton);
 		acId = driver.findElement(accountIdSuccessMessage).getText().substring(53, 71);
 		System.out.println("Account ID: "+ acId);
 		return this;

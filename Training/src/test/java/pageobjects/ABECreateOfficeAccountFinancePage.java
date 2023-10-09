@@ -72,14 +72,14 @@ public class ABECreateOfficeAccountFinancePage {
 	public ABECreateOfficeAccountFinancePage sendKeysAccoundType(String SchemeCode, String GeneralLedgerSubhead, String ccy ) throws Exception {
 		
 		PageFunctionUtils.waitOnElement(driver, GlSubHeadCodeTextField);
-		PageFunctionUtils.clickAction(driver,GlSubHeadCodeTextField);
+		PageFunctionUtils.clickOnElement(driver,GlSubHeadCodeTextField);
 		PageFunctionUtils.enterDataInWebElement(driver,GlSubHeadCodeTextField,GeneralLedgerSubhead);
-		PageFunctionUtils.clickAction(driver,SchemeCodeTextField);
+		PageFunctionUtils.clickOnElement(driver,SchemeCodeTextField);
 		PageFunctionUtils.enterDataInWebElement(driver,SchemeCodeTextField,SchemeCode);
-		PageFunctionUtils.clickAction(driver,ccyTextField);
+		PageFunctionUtils.clickOnElement(driver,ccyTextField);
 		driver.findElement(ccyTextField).clear();
 		PageFunctionUtils.enterDataInWebElement(driver,ccyTextField,ccy);
-		PageFunctionUtils.clickAction(driver,GoButton);
+		PageFunctionUtils.clickOnElement(driver,GoButton);
 
 		return this;
 	}
@@ -87,11 +87,11 @@ public class ABECreateOfficeAccountFinancePage {
 	@Step("Sending office account details: {0}")
 	public ABECreateOfficeAccountFinancePage sendKeysOfficeAccoundDetails(String AccountHeadName, String EODMaxBalance) throws Exception {
 
-		PageFunctionUtils.clickAction(driver,AccountHeadNameTextField);
+		PageFunctionUtils.clickOnElement(driver,AccountHeadNameTextField);
 		PageFunctionUtils.enterDataInWebElement(driver,AccountHeadNameTextField,AccountHeadName);
-		PageFunctionUtils.clickAction(driver,EODMaxBalanceTextField);
+		PageFunctionUtils.clickOnElement(driver,EODMaxBalanceTextField);
 		PageFunctionUtils.enterDataInWebElement(driver,EODMaxBalanceTextField,EODMaxBalance);
-		PageFunctionUtils.clickAction(driver,SubmitButton);
+		PageFunctionUtils.clickOnElement(driver,SubmitButton);
 		acId = driver.findElement(accountIdSuccessMessage).getText();
 		System.out.println("ACID: "+ acId);
 		

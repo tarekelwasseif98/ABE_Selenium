@@ -2,7 +2,6 @@ package tests;
 
 import java.io.IOException;
 import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -13,8 +12,6 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.aspose.cells.Workbook;
 import com.opencsv.exceptions.CsvException;
-import org.junit.Assert;
-import org.openqa.selenium.By;
 import data.ABECreateCASASavingsAccountLiabilitiesAndOperationData;
 import data.JsonReader;
 import io.qameta.allure.Allure;
@@ -28,7 +25,7 @@ import utils.Paths;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
-//
+
 @Test( groups = "OpenCasaSavingsAc")
 @Listeners({AllureTestNg.class})
 public class ABECreateCASASavingsAccountLiabilitiesAndOperationTest {

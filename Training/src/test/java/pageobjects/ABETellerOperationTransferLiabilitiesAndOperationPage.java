@@ -1,7 +1,6 @@
 package pageobjects;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -79,11 +78,11 @@ public class ABETellerOperationTransferLiabilitiesAndOperationPage {
 	@Step("Sending Transaction Type: {0}")
 	public ABETellerOperationTransferLiabilitiesAndOperationPage sendTransactionType() throws Exception {
 		
-		PageFunctionUtils.clickAction(driver,transactionTypeDropDown);
+		PageFunctionUtils.clickOnElement(driver,transactionTypeDropDown);
 		Select transactionTypeDropDownSelector = new Select(driver.findElement(transactionTypeDropDown));
 		transactionTypeDropDownSelector.selectByVisibleText(type);
-		PageFunctionUtils.clickAction(driver,GoButton);
-		PageFunctionUtils.clickAction(driver,addButton);
+		PageFunctionUtils.clickOnElement(driver,GoButton);
+		PageFunctionUtils.clickOnElement(driver,addButton);
 
 		return this;
 	}
@@ -93,16 +92,16 @@ public class ABETellerOperationTransferLiabilitiesAndOperationPage {
 	public ABETellerOperationTransferLiabilitiesAndOperationPage sendDebitorDetails(String accountIdDr, String ccyDr, String transactionAmount ) throws Exception {
 	
 		PageFunctionUtils.waitOnElement(driver, AccountIdTextField);
-		PageFunctionUtils.clickAction(driver,debitRadioButton);
-		PageFunctionUtils.clickAction(driver,AccountIdTextField);
+		PageFunctionUtils.clickOnElement(driver,debitRadioButton);
+		PageFunctionUtils.clickOnElement(driver,AccountIdTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, AccountIdTextField, accountIdDr.substring(1));
-		PageFunctionUtils.clickAction(driver,transactionAmmountTextField);
+		PageFunctionUtils.clickOnElement(driver,transactionAmmountTextField);
 		driver.findElement(transactionAmmountTextField).clear();
 
 		PageFunctionUtils.enterDataInWebElement(driver, transactionAmmountTextField, transactionAmount);		
-		PageFunctionUtils.clickAction(driver,transactionCTextField);
+		PageFunctionUtils.clickOnElement(driver,transactionCTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, transactionCTextField, ccyDr);
-		PageFunctionUtils.clickAction(driver,saveAndAddNewButton);
+		PageFunctionUtils.clickOnElement(driver,saveAndAddNewButton);
 
 
 		return this;
@@ -112,15 +111,15 @@ public class ABETellerOperationTransferLiabilitiesAndOperationPage {
 	public ABETellerOperationTransferLiabilitiesAndOperationPage sendCreditorDetails(String accountIdCr, String ccyCr, String transactionAmount ) throws Exception {
 	
 		PageFunctionUtils.waitOnElement(driver, AccountIdTextField);
-		PageFunctionUtils.clickAction(driver,creditRadioButton);
-		PageFunctionUtils.clickAction(driver,AccountIdTextField);
+		PageFunctionUtils.clickOnElement(driver,creditRadioButton);
+		PageFunctionUtils.clickOnElement(driver,AccountIdTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, AccountIdTextField, accountIdCr.substring(1));
-		PageFunctionUtils.clickAction(driver,transactionAmmountTextField);
+		PageFunctionUtils.clickOnElement(driver,transactionAmmountTextField);
 		driver.findElement(transactionAmmountTextField).clear();
 		PageFunctionUtils.enterDataInWebElement(driver, transactionAmmountTextField, transactionAmount);		
-		PageFunctionUtils.clickAction(driver,transactionCTextField);
+		PageFunctionUtils.clickOnElement(driver,transactionCTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, transactionCTextField, ccyCr);
-		PageFunctionUtils.clickAction(driver,saveAndPreview);
+		PageFunctionUtils.clickOnElement(driver,saveAndPreview);
 
 
 		return this;
@@ -130,9 +129,9 @@ public class ABETellerOperationTransferLiabilitiesAndOperationPage {
 	public ABETellerOperationTransferLiabilitiesAndOperationPage saveTransactionId(String linkedId) throws Exception {
 	
 		
-		PageFunctionUtils.clickAction(driver,submitButton);
+		PageFunctionUtils.clickOnElement(driver,submitButton);
 		driver.switchTo().parentFrame();
-		PageFunctionUtils.clickAction(driver,AcceptButton);
+		PageFunctionUtils.clickOnElement(driver,AcceptButton);
 		PageFunctionUtils.scrollUp(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
 		transactionId = driver.findElement(transactionIdMessage).getText();

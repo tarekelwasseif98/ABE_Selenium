@@ -11,5 +11,4 @@ public class AssertionFactory {
 	public static void assertionFailWithMessage(String message) {
 		AssertJUnit.fail(message);
 	}
-	
 }

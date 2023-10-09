@@ -5,9 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import data.ABECreateCASASavingsAccountLiabilitiesAndOperationData;
-import data.OpenIslamicCurrentAccountData;
 import io.qameta.allure.Step;
 import utils.AssertionFactory;
 import utils.CSVUtils;
@@ -15,7 +12,6 @@ import utils.PageFunctionUtils;
 import utils.Paths;
 
 public class ABECreateCASASavingsAccountLiabilitiesAndOperationPage {
-
 	private WebDriver driver;
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
@@ -28,10 +24,8 @@ public class ABECreateCASASavingsAccountLiabilitiesAndOperationPage {
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	public static String acId;
 	private By accountIdSuccessMessage = By.xpath("(//p[@id='_resMsg_paraMsg'])[1]");
-	private By errorMessage = By.id("errorItem_0.errorDesc");
 	public static String acid;
 	public static String error;
-
 	public static String  referenceCsvColumnName = "reference";
 	public static String  accountIdCsvColumnName = "accountId";
 	public static String  tcIdCsvColumnName = "tcId";
@@ -76,36 +70,23 @@ public class ABECreateCASASavingsAccountLiabilitiesAndOperationPage {
 		PageFunctionUtils.waitOnElement(driver, cifIdTextField);
 		driver.findElement(cifIdTextField).click();
 		driver.findElement(cifIdTextField).sendKeys(cif);
-		
 		driver.findElement(SchemeCodeTextField).click();
 		driver.findElement(SchemeCodeTextField).sendKeys(schemeCode);
-		
 		driver.findElement(ccyTextField).click();
 		driver.findElement(ccyTextField).clear();
-
 		driver.findElement(ccyTextField).sendKeys(ccy);
-		driver.findElement(goButton).click();
-     //   AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
-		
+		driver.findElement(goButton).click();		
 		try {
 			driver.switchTo().parentFrame();
 			boolean isErrorMessageDisplayed = driver.findElement(By.id("errorItem_0.errorDesc")).isDisplayed();
-			
 			if(isErrorMessageDisplayed==true) {
 				AssertionFactory.assertionFailWithMessage("Error message displayed while opening the account");	
-			}
-			else
-			{
+			} else {
 				PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
-
-			}
+				}
 		} catch (Exception e) {
 			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
-
-					}
-		
-
-		
+			}	
 		return this;
 	}
 	
@@ -130,12 +111,5 @@ public class ABECreateCASASavingsAccountLiabilitiesAndOperationPage {
 			CSVUtils.insertValueInCsvCell(Paths.ABEVerifyCASASavingsAccountCreationLiabilitiesAndOperationCsv, rowByTcid2, columnByColumnName2, acId);
 		}
 		return this;
-	}		
-	
-	
-	
-	
-	
-	
-	
+	}	
 }

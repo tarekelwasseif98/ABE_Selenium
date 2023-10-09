@@ -4,30 +4,36 @@
 <listeners>
 	<listener class-name="listeners.Listeners"/>
 </listeners>
-    <test thread-count="1" parallel = "classes" name="Casa savimgs Account">
- 	<!--	  	<groups>
-			 <run>
-				 <include name="open"/>
-				 <include name="verify"/>
-      <include name="close"/>
-			    <include name="verifyclose"/> 
-            </run>
-        </groups>-->
-         <classes>	 		
-	 	<!--	<class name="tests.ABE_OpenIslamicCurrentAccount_MudarabahCAA_Test"/>
-	 		<class name="tests.ABE_VerifyIslamicCurrentAccount_MudarabahCAA_Test"/>
-	 	<class name="tests.ABE_CloseIslamicCasaAccount_MudarabahCasa_Test"/> -->
-	 		 		<!--		<class name="tests.ABE_Create_CASA_CurrentAccount_LiabilitiesAndOperation_Test"/>
-	 		 		<class name="tests.ABE_Verify_CASA_CurrentAccountCreation_LiabilitiesAndOperation_Test"/>
-
-
-	 		<class name="tests.ABECreateOfficeAccountFinanceTest"/>
-	 		<class name="tests.ABEVerifyOfficeAccountFinanceTest"/>
-	 		<class name="tests.ABE_Verify_CASA_SavingsAccountCreation_LiabilitiesAndOperation_Test"/>
-	 		 -->
-			<class name="tests.ABECreateOfficeAccountFinanceTest"/>
-		 	
-
+    <!--<test thread-count="1" parallel="classes" name="Islamic CASA Account Opening">
+         <classes>
+			<class name="tests.ABEOpenCurrentAccountMudarabahCAATest"/>
+			<class name="tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest"/>	
           </classes>
+     </test>-->
+     
+     <!--<test thread-count="1" parallel="classes" name="Islamic Casa Account Closure">
+        <classes>
+			<class name="tests.ABECloseCasaAccountMudarabahTest"/>
+			<class name="tests.ABEVerifyCasaAccountClosureMudarabahTest"/>	
+		</classes>
+     </test>-->
+     
+     <!--<test thread-count="1" parallel="classes" name="Islamic TUA Opening">
+        <classes>
+			<class name="tests.ABEOpenTUATest"/>
+			<class name="tests.ABEVerifyTUAOpeningTest"/>
+		</classes>
+     </test>-->
+     <!--<test thread-count="1" parallel="classes" name="Islamic TUA Closure">
+        <classes>
+			<class name="tests.ABECloseTUATest"/>
+			<class name="tests.ABEVerifyTUAClosureTest"/>
+		</classes>
+     </test>-->
+     <test thread-count="1" parallel="classes" name="Islamic Murabaha Account Opening">
+        <classes>
+			<class name="tests.ABEOpenMurabahaAccountMurabahaFinancingTest"/>
+			<!-- <class name="tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest"/>-->
+		</classes>
      </test>
 </suite>

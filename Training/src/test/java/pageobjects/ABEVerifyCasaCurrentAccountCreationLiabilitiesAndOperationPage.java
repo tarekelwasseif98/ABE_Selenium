@@ -8,7 +8,6 @@ import io.qameta.allure.Step;
 import utils.PageFunctionUtils;
 
 public class ABEVerifyCasaCurrentAccountCreationLiabilitiesAndOperationPage {
-
 	private WebDriver driver;
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
@@ -20,9 +19,7 @@ public class ABEVerifyCasaCurrentAccountCreationLiabilitiesAndOperationPage {
 	private By acidTextField = By.id("_tempAcid");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By continueButton = By.xpath("(//button[@id='_acctDetCon'])[1]");
-
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-
 	public ABEVerifyCasaCurrentAccountCreationLiabilitiesAndOperationPage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -58,24 +55,19 @@ public class ABEVerifyCasaCurrentAccountCreationLiabilitiesAndOperationPage {
 	
 	@Step("Sending a/c. id: {0}")
 	public ABEVerifyCasaCurrentAccountCreationLiabilitiesAndOperationPage sendKeysAcidTextField(String ACID) throws Exception {
-		
 		ACID = ACID.substring(1);
 		PageFunctionUtils.waitOnElement(driver, acidTextField);
-		PageFunctionUtils.clickAction(driver,acidTextField);
+		PageFunctionUtils.clickOnElement(driver,acidTextField);
 		PageFunctionUtils.enterDataInWebElement(driver,acidTextField,ACID);
-		PageFunctionUtils.clickAction(driver,goButton);
-		PageFunctionUtils.clickAction(driver,continueButton);
-
-
+		PageFunctionUtils.clickOnElement(driver,goButton);
+		PageFunctionUtils.clickOnElement(driver,continueButton);
 		return this;
 	}
 	
 
 	@Step("Press submit button")
 	public ABEVerifyCasaCurrentAccountCreationLiabilitiesAndOperationPage pressSubmitButton() throws Exception {
-
-		PageFunctionUtils.clickAction(driver,submitButton);
-
+		PageFunctionUtils.clickOnElement(driver,submitButton);
 		return this;
 	}
 	

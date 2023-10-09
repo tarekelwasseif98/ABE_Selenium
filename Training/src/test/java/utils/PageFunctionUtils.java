@@ -48,11 +48,6 @@ public class PageFunctionUtils {
 		driver.findElement(by).clear();;
 	}
 	
-	public static void clickAction(WebDriver driver,By by) throws InterruptedException {
-		PageFunctionUtils.waitOnElement(driver, by);
-		driver.findElement(by).click();
-		}
-	
 	public static void waitOnElement(WebDriver driver, By by) throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver, Properties.MaxTime);
 		wait.until(ExpectedConditions.elementToBeClickable(by));

@@ -67,8 +67,6 @@ public class ABECreateOfficeAccountFinanceTest {
 		Allure.parameter("Data: ", data.toString());		
         ABECreateOfficeAccountFinanceProcedures.OfficeAccountByMaker(driver, data);
        AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
-    //   throw new Exception("exception made");
-
 	}
 
 	@Attachment(value = "Screenshot", type = "image/png")

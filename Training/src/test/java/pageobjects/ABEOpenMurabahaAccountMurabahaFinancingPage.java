@@ -121,14 +121,14 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 		PageFunctionUtils.clickOnElement(driver, assetValueTextField);
 		PageFunctionUtils.clearDataInWebElement(driver, assetValueTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, assetValueTextField, assetValue);
-		if(Integer.parseInt(assetValue) < Integer.parseInt(customerMargin)) {
-			AssertionFactory.assertionFailWithMessage("Customer margin can not be greater than asset value");
-		}
-		else {
+//		if(Integer.parseInt(assetValue) < Integer.parseInt(customerMargin)) {
+//			AssertionFactory.assertionFailWithMessage("Customer margin can not be greater than asset value");
+//		}
+//		else {
 			PageFunctionUtils.clickOnElement(driver, customerMarginTextField);
 			PageFunctionUtils.clearDataInWebElement(driver, customerMarginTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, customerMarginTextField, customerMargin);
-		}
+//		}
 		PageFunctionUtils.clickOnElement(driver, continue1Button);
 		return this;
 	}

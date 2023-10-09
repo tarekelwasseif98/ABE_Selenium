@@ -271,4 +271,19 @@ public class ABEOpenMurabahaAccountMurabahaFinancingData {
 	public void setLinkedTcid(String linkedTcid) {
 		this.linkedTcid = linkedTcid;
 	}
+
+	@Override
+	public String toString() {
+		return "ABEOpenMurabahaAccountMurabahaFinancingData [tcId=" + tcId + ", summary=" + summary + ", username="
+				+ username + ", password=" + password + ", menu=" + menu + ", cif=" + cif + ", schemeCode=" + schemeCode
+				+ ", assetValue=" + assetValue + ", customerMargin=" + customerMargin + ", financePeriodMonths="
+				+ financePeriodMonths + ", financePeriodDays=" + financePeriodDays + ", debitAccountId="
+				+ debitAccountId + ", equatedInstallment=" + equatedInstallment + ", repaymentType=" + repaymentType
+				+ ", numberOfInstallments=" + numberOfInstallments + ", installmentFrequency=" + installmentFrequency
+				+ ", installmentStartDate=" + installmentStartDate + ", date=" + date + ", calendar=" + calendar
+				+ ", onHoliday=" + onHoliday + ", profitFrequency=" + profitFrequency + ", profitStartDate="
+				+ profitStartDate + ", operativeAccountId=" + operativeAccountId + ", expiryDate=" + expiryDate
+				+ ", documentDate=" + documentDate + ", limitId=" + limitId + ", drawingPowerIndicator="
+				+ drawingPowerIndicator + ", expectedResult=" + expectedResult + ", linkedTcid=" + linkedTcid + "]";
+	}
 }

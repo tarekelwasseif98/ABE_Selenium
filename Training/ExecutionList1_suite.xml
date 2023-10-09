@@ -33,6 +33,7 @@
      <test thread-count="1" parallel="classes" name="Islamic Murabaha Account Opening">
         <classes>
 			<class name="tests.ABEOpenMurabahaAccountMurabahaFinancingTest"/>
+			<!-- <class name="tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest"/>-->
 		</classes>
      </test>
 </suite>

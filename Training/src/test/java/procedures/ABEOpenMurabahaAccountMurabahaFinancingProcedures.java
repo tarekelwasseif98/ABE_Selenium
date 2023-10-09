@@ -15,6 +15,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingProcedures {
 				    							     .sendKeysRepaymentParameterDetails(data.getEquatedInstallment(), data.getRepaymentType(), data.getNumberOfInstallments(), data.getInstallmentStartDate(), data.getInstallmentFrequency(), data.getProfitStartDate(), data.getProfitFrequency(), data.getDate(), data.getCalendar(), data.getOnHoliday())
 				    							      .sendKeysOperativeAccountIdTextField(data.getOperativeAccountId())
 				    							       .sendKeysAccountLimitDetails(data.getExpiryDate(), data.getDocumentDate(), data.getDrawingPowerIndicator())
-				    							        .pressSubmitButton();
+				    							        .pressSubmitButton()
+				    							         .saveAccountId(data.getLinkedTcid());
 		}
 	}

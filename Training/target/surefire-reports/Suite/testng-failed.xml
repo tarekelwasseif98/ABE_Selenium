@@ -4,6 +4,7 @@
   <listeners>
     <listener class-name="listeners.Listeners"/>
   </listeners>
+<<<<<<< HEAD
   <test thread-count="5" parallel="classes" name="Create ACH Outward(failed)" verbose="0">
     <groups>
       <run>
@@ -22,4 +23,18 @@
       </class> <!-- tests.ABE_Authorize_ACH_Outward_Test -->
     </classes>
   </test> <!-- Create ACH Outward(failed) -->
+=======
+  <test thread-count="5" parallel="classes" name="Casa savimgs Account(failed)" verbose="0">
+    <classes>
+      <class name="tests.ABECreateOfficeAccountFinanceTest">
+        <methods>
+          <include name="ABE_OpenOfficeAccount"/>
+          <include name="oneTimeSetUp"/>
+          <include name="after"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- tests.ABECreateOfficeAccountFinanceTest -->
+    </classes>
+  </test> <!-- Casa savimgs Account(failed) -->
+>>>>>>> 89d444d1b0d38c8288892a550738ee1f527d2030
 </suite> <!-- Failed suite [Suite] -->

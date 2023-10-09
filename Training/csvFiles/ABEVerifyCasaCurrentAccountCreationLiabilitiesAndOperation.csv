@@ -1,0 +1,16 @@
+tcId,summary,username,password,menu,accountId,expectedResult
+FCB-583,Liabilities_CASA_VerifyCreatingAccount_Retail_CAA_Checker,ABE21,Infy@123,VCAO,'100901111111014736,approved successfully
+FCB-5778,Liabilities_CASA_VerifyCreation_CurrentA/C_CHL_1000_EGP_Checker,ABE20,Infy@123,VCAO,'100001111111014742,approved successfully
+FCB-5780,Liabilities_CASA_VerifyCreation_CurrentA/C_CHF_EUR_Checker,QA49,Infy@123,VCAO,'100601111111034751,approved successfully
+FCB-5782,Liabilities_CASA_VerifyCreation_CurrentA/C_CHF_USD_Checker,ABE22,Infy@123,VCAO,'100601111111024769,approved successfully
+FCB-5784,Liabilities_CASA_VerifyCreation_CurrentA/C_CHF_1006_GBP_Checker,abe25,Infy@123,VCAO,'100601111111044774,approved successfully
+FCB-5786,Liabilities_CASA_VerifyCreation_CurrentA/C_CSL_1007_EGP_Checker,ABE24,Infy@123,VCAO,'100701998627010078,approved successfully
+FCB-5788,Liabilities_CASA_VerifyCreation_CurrentA/C_CSF_GBP_Checker,ABE31,Infy@123,VCAO,'100801998627040081,approved successfully
+FCB-5790,Liabilities_CASA_VerifyCreation_CurrentA/C_CSF_EUR_Checker,ABE32,Infy@123,VCAO,'100801998627030099,approved successfully
+FCB-5792,Liabilities_CASA_VerifyCreation_CurrentA/C_CSF_USD_Checker,ABE33,Infy@123,VCAO,'100801998627020104,approved successfully
+FCB-5794,Liabilities_CASA_VerifyCreation_CurrentA/C_CLO_EGP_Checker,ABE34,Infy@123,VCAO,'100101111111014789,approved successfully
+FCB-5796,Liabilities_CASA_VerifyCreation_CurrentA/C_FRM_EGP_Checker,ABE26,Infy@123,VCAO,'100201111111014795,approved successfully
+FCB-5798,Liabilities_CASA_VerifyCreation_CurrentA/C_CLS_1003_EGP_Checker,ABE27,Infy@123,VCAO,'100301111111014800,approved successfully
+FCB-5800,Liabilities_CASA_VerifyCreation_CurrentA/C_SAL_EGP_Checker,ABE28,Infy@123,VCAO,'100401111111014816,approved successfully
+FCB-5802,Liabilities_CASA_VerifyCreation_CurrentA/C_CIU_EGP_Checker,ABE29,Infy@123,VCAO,'100501111111014822,approved successfully
+FCB-5804,Liabilities_CASA_VerifyCreation_CurrentA/C_HVR_EGP_Checker,ABE30,Infy@123,VCAO,'111101111111014839,approved successfully

@@ -1,0 +1,32 @@
+[
+ {
+  "tcId": "FCB-9938",
+  "summary": "IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_CarsShortTerm_4010_ByMaker_B1",
+  "username": "QA46",
+  "password": "Infy@123",
+  "menu": "OIFAT",
+  "cif": 6246013,
+  "schemeCode": 4010,
+  "assetValue": 100000,
+  "customerMargin": 200000,
+  "financePeriodMonths": 12,
+  "financePeriodDays": 0,
+  "debitAccountId": "'1606624601301001",
+  "equatedInstallment": "no",
+  "repaymentType": "bullet",
+  "numberOfInstallments": 1,
+  "installmentFrequency": "quarterly",
+  "installmentStartDate": "'09-10-2023",
+  "date": 4,
+  "calendar": "gregorian calendar",
+  "onHoliday": "skip",
+  "profitFrequency": "twice a month",
+  "profitStartDate": "'09-10-2023",
+  "operativeAccountId": "'1606624601301001",
+  "expiryDate": "'09-10-2099",
+  "documentDate": "'09-10-2023",
+  "drawingPowerIndicator": "equal",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-9973"
+ }
+]

@@ -1,0 +1,14 @@
+tcId,summary,username,password,menu,cif,SchemeCode,ccy,expectedResult,reference,linkedTcid
+FCB-5747,Liabilities_CASA_Create_SavingA/C_SHL_EGP_Maker,ABE24,Infy@123,OSA,1111111,1106,EGP,opened successfully,'110601111111014875,FCB-5748
+FCB-5761,Liabilities_CASA_Create_SavingA/C_SSL_1105_EGP_Maker,ABE25,Infy@123,OSA,1998627,1105,EGP,opened successfully,'110501998627010116,FCB-5762
+FCB-5763,Liabilities_CASA_Create_SavingA/C_SSF_USD_Maker,ABE26,Infy@123,OSA,1998627,1103,USD,opened successfully,'110301998627020126,FCB-5764
+FCB-5765,Liabilities_CASA_Create_SavingA/C_SSF_EUR_Maker,ABE27,Infy@123,OSA,1998627,1103,EUR,opened successfully,'110301998627030134,FCB-5766
+FCB-5767,Liabilities_CASA_Create_SavingA/C_SSF_1103_GBP_Maker,ABE28,Infy@123,OSA,1998627,1103,GBP,opened successfully,'110301998627040142,FCB-5768
+FCB-5769,Liabilities_CASA_Create_SavingA/C_YSL_1110_EGP_Maker,ABE29,Infy@123,OSA,1298881,1110,EGP,opened successfully,'111001298881010054,FCB-5770
+FCB-5771,Liabilities_CASA_Create_SavingA/C_YSF_EUR_Maker,ABE30,Infy@123,OSA,1298881,1102,EUR,opened successfully,,FCB-5772
+FCB-5773,Liabilities_CASA_Create_SavingA/C_YSF_USD_Maker,ABE31,Infy@123,OSA,1298881,1102,USD,opened successfully,,FCB-5774
+FCB-5775,Liabilities_CASA_Create_SavingA/C_YSF_1102_GBP_Maker,ABE32,Infy@123,OSA,1298881,1102,GBP,opened successfully,,FCB-5776
+FCB-576,Liabilities_CASA_CreateAccount_Retail_SBA_Maker,ABE20,Infy@123,OSA,1298881,1100,EGP,opened successfully,,FCB-582
+FCB-5741,Liabilities_CASA_Create_SavingA/C_SHF_EUR_Maker,ABE21,Infy@123,OSA,1298881,1104,EUR,opened successfully,'110401298881030068,FCB-5742
+FCB-5743,Liabilities_CASA_Create_SavingA/C_SHF_USD_Maker,ABE22,Infy@123,OSA,1298881,1104,USD,opened successfully,'110401298881020076,FCB-5744
+FCB-5745,Liabilities_CASA_Create_SavingA/C_SHF_GBP_1104_Maker,QA49,Infy@123,OSA,1298881,1104,GBP,opened successfully,'110401298881040081,FCB-5746

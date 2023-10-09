@@ -1,0 +1,11 @@
+[
+ {
+  "tcId": "FCB-9973",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_CarsShortTerm_4010_ByChecker_C1",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'40100624601301311797",
+  "expectedResult": "successfully"
+ }
+]

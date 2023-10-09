@@ -17,6 +17,6 @@
 			<class name="tests.ABE_Create_ACH_Outward_Test"/>	
 			<class name="tests.ABE_Verify_ACH_Outward_Test"/>
 			<class name="tests.ABE_Authorize_ACH_Outward_Test"/>
-          </classes>
+		</classes>
      </test>
 </suite>

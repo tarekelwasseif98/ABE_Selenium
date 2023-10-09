@@ -2,9 +2,7 @@ package pageobjects;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -55,7 +53,7 @@ public class CreateAchOutwardPage {
 	@Step("Sending menu name: {0}")
 	public CreateAchOutwardPage sendKeysSearchBarTextField(String menu) throws Exception {
 	     	driver.switchTo().parentFrame();
-	     	PageFunctionUtils.waitOnFrameAndSwitch(driver, loginFrameIframeID);
+	     	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, loginFrameIframeID);
 			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 	        PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
 	        PageFunctionUtils.clickOnElement(driver, searchButton);
@@ -77,7 +75,7 @@ public class CreateAchOutwardPage {
 	    driver.switchTo().frame(("loginFrame"));
 	    driver.switchTo().frame(("Core_ABE"));
 	    driver.switchTo().frame(("UX"));
-		PageFunctionUtils.waitOnFrameAndSwitch(driver, formAreaIframeID);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
 		return this;	
 	}
 	

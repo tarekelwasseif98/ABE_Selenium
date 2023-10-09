@@ -58,8 +58,8 @@ public class VerifyACHOutwardPage {
 	    driver.switchTo().frame((coreAbeIframeId));
 	    driver.switchTo().frame((uxIframeId));
 		PageFunctionUtils.waitOnElement(driver, but);
-		PageFunctionUtils.waitOnFrameAndSwitch(driver, formAreaIframeID);
-		return this;	
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+		return this;
 	}
 	
 	@Step("Sending payment details: {0}")

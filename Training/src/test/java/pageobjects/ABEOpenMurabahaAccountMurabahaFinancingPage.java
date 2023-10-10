@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
+import utils.AssertionFactory;
 import utils.CSVUtils;
 import utils.PageFunctionUtils;
 import utils.Paths;
@@ -120,14 +121,14 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 		PageFunctionUtils.clickOnElement(driver, assetValueTextField);
 		PageFunctionUtils.clearDataInWebElement(driver, assetValueTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, assetValueTextField, assetValue);
-//		if(Integer.parseInt(assetValue) < Integer.parseInt(customerMargin)) {
-//			AssertionFactory.assertionFailWithMessage("Customer margin can not be greater than asset value");
-//		}
-//		else {
+		if(Integer.parseInt(assetValue) < Integer.parseInt(customerMargin)) {
+			AssertionFactory.assertionFailWithMessage("Customer margin can not be greater than asset value");
+		}
+		else {
 			PageFunctionUtils.clickOnElement(driver, customerMarginTextField);
 			PageFunctionUtils.clearDataInWebElement(driver, customerMarginTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, customerMarginTextField, customerMargin);
-//		}
+		}
 		PageFunctionUtils.clickOnElement(driver, continue1Button);
 		return this;
 	}
@@ -151,7 +152,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 	}
 	
 	@Step("Sending repayment parameter details: {0}")
-	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysRepaymentParameterDetails(String equatedInstallment, String repaymentType, String numberOfInstallments, String installmentStartDate, String installmentFrequency, String profitStartDate, String profitFrequency, String date, String calendar, String onHoliday) throws Exception {
+	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysRepaymentParameterDetails(String equatedInstallment, String numberOfInstallments, String installmentStartDate, String installmentFrequency, String profitStartDate, String profitFrequency, String date, String calendar, String onHoliday) throws Exception {
 		Select installmentFrequencyDropDownListSelector = new Select(driver.findElement(installmentFrequencyDropDownList));
 		Select dateEquatedDropDownListSelector = new Select(driver.findElement(dateEquatedDropDownList));
 		Select calendarEquatedDropDownListSelector = new Select(driver.findElement(calendarEquatedDropDownList));
@@ -264,6 +265,9 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 			PageFunctionUtils.clickOnElement(driver, profitStartDateTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, profitStartDateTextField, profitStartDate.substring(1));
 			Select profitFrequencyDropDownListSelector = new Select(driver.findElement(profitFrequencyDropDownList));
+			Select dateNonEquatedDropDownListSelector = new Select(driver.findElement(dateNonEquatedDropDownList));
+			Select calendarNonEquatedDropDownListSelector = new Select(driver.findElement(calendarNonEquatedDropDownList));
+			Select onHolidayNonEquatedDropDownListSelector = new Select(driver.findElement(onHolidayNonEquatedDropDownList));
 			if(profitFrequency.equalsIgnoreCase("daily") || profitFrequency.equalsIgnoreCase("weekly") || profitFrequency.equalsIgnoreCase("fortnightly")) {
 				if(profitFrequency.equalsIgnoreCase("daily")) {
 					profitFrequencyDropDownListSelector.selectByVisibleText("Daily");
@@ -276,25 +280,22 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 				}
 				
 				if(calendar.equalsIgnoreCase("gregorian calendar")) {
-					calendarEquatedDropDownListSelector.selectByVisibleText("Gregorian Calendar");
+					calendarNonEquatedDropDownListSelector.selectByVisibleText("Gregorian Calendar");
 				}
 				else if(calendar.equalsIgnoreCase("hijri calendar")) {
-					calendarEquatedDropDownListSelector.selectByVisibleText("Hijri Calendar");
+					calendarNonEquatedDropDownListSelector.selectByVisibleText("Hijri Calendar");
 				}
 				
 				if(onHoliday.equalsIgnoreCase("next day")) {
-					onHolidayEquatedDropDownListSelector.selectByVisibleText("Next Day");
+					onHolidayNonEquatedDropDownListSelector.selectByVisibleText("Next Day");
 				}
 				else if(onHoliday.equalsIgnoreCase("previous day")) {
-					onHolidayEquatedDropDownListSelector.selectByVisibleText("Previous Day");
+					onHolidayNonEquatedDropDownListSelector.selectByVisibleText("Previous Day");
 				}
 				else if(onHoliday.equalsIgnoreCase("skip")){
-					onHolidayEquatedDropDownListSelector.selectByVisibleText("Skip");
+					onHolidayNonEquatedDropDownListSelector.selectByVisibleText("Skip");
 				}
 			}
-			Select dateNonEquatedDropDownListSelector = new Select(driver.findElement(dateNonEquatedDropDownList));
-			Select calendarNonEquatedDropDownListSelector = new Select(driver.findElement(calendarNonEquatedDropDownList));
-			Select onHolidayNonEquatedDropDownListSelector = new Select(driver.findElement(onHolidayNonEquatedDropDownList));
 			if(profitFrequency.equalsIgnoreCase("monthly") || profitFrequency.equalsIgnoreCase("quarterly") || profitFrequency.equalsIgnoreCase("half yearly") || profitFrequency.equalsIgnoreCase("yearly") || profitFrequency.equalsIgnoreCase("twice a month")) {
 				if(profitFrequency.equalsIgnoreCase("monthly")) {
 					profitFrequencyDropDownListSelector.selectByVisibleText("Monthly");
@@ -351,13 +352,18 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 	}
 	
 	@Step("Sending account limit details: {0}")
-	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysAccountLimitDetails(String expiryDate, String documentDate, String drawingPowerIndicator) throws Exception {
+	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysAccountLimitDetails(String expiryDate, String documentDate, String limitIdPrefix, String limitIdSuffix, String drawingPowerIndicator) throws Exception {
 		PageFunctionUtils.clearDataInWebElement(driver, expiryDateTextField);
 		PageFunctionUtils.clickOnElement(driver, expiryDateTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, expiryDateTextField, expiryDate.substring(1));
 		PageFunctionUtils.clearDataInWebElement(driver, documentDateTextField);
 		PageFunctionUtils.clickOnElement(driver, documentDateTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, documentDateTextField, documentDate.substring(1));
+		try {
+			PageFunctionUtils.enterDataInWebElement(driver, limitIdPrefixTextField, limitIdPrefix.substring(1));
+			PageFunctionUtils.enterDataInWebElement(driver, limitIdSuffixTextField, limitIdSuffix.substring(1));
+		} catch(Exception e) {
+		}
 		Select drawingPowerIndicatorDropDownListSelector = new Select(driver.findElement(drawingPowerIndicatorDropDownList));
 		if(drawingPowerIndicator.equalsIgnoreCase("derived")) {
 			drawingPowerIndicatorDropDownListSelector.selectByVisibleText("Derived");

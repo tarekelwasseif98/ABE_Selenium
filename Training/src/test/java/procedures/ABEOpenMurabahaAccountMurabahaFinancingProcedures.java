@@ -12,9 +12,9 @@ public class ABEOpenMurabahaAccountMurabahaFinancingProcedures {
 				    							  .sendKeysAccountDetails(data.getCif(), data.getSchemeCode())
 				    							   .sendKeysBasicAssetDetails(data.getAssetValue(), data.getCustomerMargin())
 				    							    .sendKeysFinanceDetails(data.getFinancePeriodMonths(), data.getFinancePeriodDays(), data.getDebitAccountId())
-				    							     .sendKeysRepaymentParameterDetails(data.getEquatedInstallment(), data.getRepaymentType(), data.getNumberOfInstallments(), data.getInstallmentStartDate(), data.getInstallmentFrequency(), data.getProfitStartDate(), data.getProfitFrequency(), data.getDate(), data.getCalendar(), data.getOnHoliday())
+				    							     .sendKeysRepaymentParameterDetails(data.getEquatedInstallment(), data.getNumberOfInstallments(), data.getInstallmentStartDate(), data.getInstallmentFrequency(), data.getProfitStartDate(), data.getProfitFrequency(), data.getDate(), data.getCalendar(), data.getOnHoliday())
 				    							      .sendKeysOperativeAccountIdTextField(data.getOperativeAccountId())
-				    							       .sendKeysAccountLimitDetails(data.getExpiryDate(), data.getDocumentDate(), data.getDrawingPowerIndicator())
+				    							       .sendKeysAccountLimitDetails(data.getExpiryDate(), data.getDocumentDate(), data.getLimitIdPrefix(), data.getLimitIdSuffix(), data.getDrawingPowerIndicator())
 				    							        .pressSubmitButton()
 				    							         .saveAccountId(data.getLinkedTcid());
 		}

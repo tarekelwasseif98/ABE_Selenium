@@ -12,6 +12,7 @@ public class PageFunctionUtils {
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 		driver.findElement(by).click();
 	}
+	
 	@Deprecated
 	public static void clickOnElementWorkAround(WebDriver driver, By by) {
 		int count = 0;

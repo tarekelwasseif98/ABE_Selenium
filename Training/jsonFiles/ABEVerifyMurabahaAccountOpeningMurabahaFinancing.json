@@ -5,7 +5,88 @@
   "username": "QA47",
   "password": "Infy@123",
   "menu": "AIFAT",
-  "accountId": "'40100624601301311797",
+  "accountId": "'40100624601301312244",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9974",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_CarsMedium&LongTerm_4011_ByChecker_C2",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'40110624601301312250",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9975",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_MicroFinanceShortTerm_4012_ByChecker_C3",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'40120624601301312266",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9976",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_RetailProjectsShortTerm_4013_ByChecker_C4",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'40130624601301312272",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9977",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_RetailProjectsMedium&LongTerm_4014_ByChecker_C5",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'40140624601301312288",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9978",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_LivestockShortTerm_4015_ByChecker_C6",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'40150624601301312294",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9979",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_LivestockMedium&LongTerm_4016_ByChecker_C7",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'40160624601301312309",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9980",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_MicroFinanceCBEShortTerm_4017_ByChecker_C8",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'40170624601301312315",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9981",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_MicroFinanceCBEMedium&LongTerm_4018_ByChecker_C9",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'40180624601301312321",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9982",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_SMEs-S-CBE-ShortTerm_4000_ByChecker_C10",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'40000624601301312339",
   "expectedResult": "successfully"
  }
 ]

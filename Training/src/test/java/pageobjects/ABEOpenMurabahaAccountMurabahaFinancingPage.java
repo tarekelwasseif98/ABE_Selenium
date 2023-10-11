@@ -87,8 +87,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
             alert.accept();
             PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
 	        PageFunctionUtils.clickOnElement(driver, searchButton);
-	        }
-        catch (Exception e) {
+	        } catch (Exception e) {
         }
 	return this;
 	}

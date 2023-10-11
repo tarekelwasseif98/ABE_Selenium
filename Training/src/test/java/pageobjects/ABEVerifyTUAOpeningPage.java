@@ -40,7 +40,7 @@ public class ABEVerifyTUAOpeningPage {
 	@Step("Sending menu name: {0}")
 	public ABEVerifyTUAOpeningPage sendKeysSearchBarTextField(String menu) throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
@@ -60,7 +60,7 @@ public class ABEVerifyTUAOpeningPage {
 	@Step("Frame switching")
 	public ABEVerifyTUAOpeningPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
@@ -98,12 +98,12 @@ public class ABEVerifyTUAOpeningPage {
 	@Step("Press submit button")
 	public ABEVerifyTUAOpeningPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		Boolean isPresent1 = driver.findElements(warningAcceptButton).size() > 0;
 		if(isPresent1) {
 			PageFunctionUtils.clickOnElement(driver, warningAcceptButton);
 			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-			driver.switchTo().parentFrame();
+			PageFunctionUtils.switchToParentFrame(driver);
 			Boolean isPresent2 = driver.findElements(warningAcceptButton).size() > 0;
 			if(isPresent2) {
 				PageFunctionUtils.clickOnElement(driver, warningAcceptButton);

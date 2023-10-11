@@ -25,7 +25,7 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By continueButton = By.xpath("(//button[@id='_acctDetCon'])[1]");
 	private By taxDetailsMenu = By.xpath("//span[@id='stepII2_textSpan']");
-	private By taxCategoryMenu = By.id("_wtaxFlg_select");
+	private By taxCategoryDropDownList = By.id("_wtaxFlg_select");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By accountIdSuccessMessage = By.xpath("(//p[@id='_resMsg_paraMsg'])[1]");
 	public static String acId;
@@ -41,7 +41,7 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	@Step("Sending menu name: {0}")
 	public ABEOpenCurrentAccountMudarabahCAAPage sendKeysSearchBarTextField(String menu) throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
@@ -61,7 +61,7 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	@Step("Frame switching")
 	public ABEOpenCurrentAccountMudarabahCAAPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
@@ -81,8 +81,7 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		PageFunctionUtils.clickOnElement(driver, continueButton);
 		PageFunctionUtils.clickOnElement(driver, taxDetailsMenu);
-		Select dropdown = new Select(driver.findElement(taxCategoryMenu));
-		dropdown.selectByIndex(2);
+		PageFunctionUtils.selectDropDownListByIndex(driver, taxCategoryDropDownList, 2);
 		return this;
 	}
 	

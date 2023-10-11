@@ -44,7 +44,7 @@ public class ABEDisburseMurabahaAccountMurabahaFinancingPage {
 	@Step("Sending menu name: {0}")
 	public ABEDisburseMurabahaAccountMurabahaFinancingPage sendKeysSearchBarTextField(String menu) throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
@@ -64,7 +64,7 @@ public class ABEDisburseMurabahaAccountMurabahaFinancingPage {
 	@Step("Frame switching")
 	public ABEDisburseMurabahaAccountMurabahaFinancingPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
@@ -100,8 +100,7 @@ public class ABEDisburseMurabahaAccountMurabahaFinancingPage {
 	@Step("Sending disbursement mode details: {0}")
 	public ABEDisburseMurabahaAccountMurabahaFinancingPage sendKeysDisbursementModeDetails(String creditAccountId) throws Exception {
 		PageFunctionUtils.clickOnElement(driver, addButton);
-		Select dropdown = new Select(driver.findElement(modeOfDisbursementDropDownList));
-		dropdown.selectByIndex(1);
+		PageFunctionUtils.selectDropDownListByIndex(driver, modeOfDisbursementDropDownList, 1);
 		PageFunctionUtils.enterDataInWebElement(driver, creditAccountIdTextfield, creditAccountId.substring(1));
 		PageFunctionUtils.clickOnElement(driver, saveAndPreviewButton);
 		PageFunctionUtils.clickOnElement(driver, continue3Button);

@@ -4,7 +4,6 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
 import utils.CSVUtils;
@@ -58,7 +57,7 @@ public class ABECloseCasaAccountMudarabahPage {
 	@Step("Frame switching")
 	public ABECloseCasaAccountMudarabahPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
@@ -81,8 +80,7 @@ public class ABECloseCasaAccountMudarabahPage {
 	public ABECloseCasaAccountMudarabahPage sendKeysTransferAccountIdTextField(String transferAccountId) throws Exception {
 		transferAccountId = transferAccountId.substring(1);
 		PageFunctionUtils.clickOnElement(driver, transferBalanceRadioButton);
-		Select dropdown = new Select(driver.findElement(transactionTypeMenu));
-		dropdown.selectByIndex(2);
+		PageFunctionUtils.selectDropDownListByIndex(driver, transactionTypeMenu, 2);
 		PageFunctionUtils.clickOnElement(driver, transferAccountIdTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, transferAccountIdTextField, transferAccountId);
 		return this;

@@ -1,0 +1,11 @@
+tcId,summary,username,password,menu,murabahaAccountId,valueDate,creditAccountId,expectedResult,linkedTcid
+FCB-10020,IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_CarsShortTerm_4010_ByMaker_D1,QA46,Infy@123,PFAD,'40100624601301312503,'10-10-2023,'1606624601301001,successfully,FCB-10055
+FCB-10021,IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_CarsMedium&LongTerm_4011_ByMaker_D2,QA46,Infy@123,PFAD,'40110624601301312519,'10-10-2023,'1606624601301001,successfully,FCB-10056
+FCB-10022,IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_MicroFinanceShortTerm_4012_ByMaker_D3,QA46,Infy@123,PFAD,'40120624601301312525,'10-10-2023,'1606624601301001,successfully,FCB-10057
+FCB-10023,IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_RetailProjectsShortTerm_4013_ByMaker_D4,QA46,Infy@123,PFAD,'40130624601301312531,'10-10-2023,'1606624601301001,successfully,FCB-10058
+FCB-10024,IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_RetailProjectsMedium&LongTerm_4014_ByMaker_D5,QA46,Infy@123,PFAD,'40140624601301312547,'10-10-2023,'1606624601301001,successfully,FCB-10059
+FCB-10025,IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_LivestockShortTerm_4015_ByMaker_D6,QA46,Infy@123,PFAD,'40150624601301312553,'10-10-2023,'1606624601301001,successfully,FCB-10060
+FCB-10026,IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_LivestockMedium&LongTerm_4016_ByMaker_D7,QA46,Infy@123,PFAD,'40160624601301312569,'10-10-2023,'1606624601301001,successfully,FCB-10061
+FCB-10027,IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_MicroFinanceCBEShortTerm_4017_ByMaker_D8,QA46,Infy@123,PFAD,'40170624601301312575,'10-10-2023,'1606624601301001,successfully,FCB-10062
+FCB-10028,IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_MicroFinanceCBEMedium&LongTerm_4018_ByMaker_D9,QA46,Infy@123,PFAD,'40180624601301312581,'10-10-2023,'1606624601301001,successfully,FCB-10063
+FCB-10029,IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_SMEs-S-CBE-ShortTerm_4000_ByMaker_D10,QA46,Infy@123,PFAD,'40000624601301312599,'10-10-2023,'1606624601301001,successfully,FCB-10064

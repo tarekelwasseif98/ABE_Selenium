@@ -30,10 +30,18 @@
 			<class name="tests.ABEVerifyTUAClosureTest"/>
 		</classes>
      </test>-->
-     <test thread-count="1" parallel="classes" name="Islamic Murabaha Account Opening">
+     
+     <!--<test thread-count="1" parallel="classes" name="Islamic Murabaha Account Opening">
         <classes>
 			<class name="tests.ABEOpenMurabahaAccountMurabahaFinancingTest"/>
 			<class name="tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest"/>
 		</classes>
-     </test>
+	</test>-->
+		
+	<test thread-count="1" parallel="classes" name="Islamic Murabaha Account Disbursement">
+       	<classes>
+			 <class name="tests.ABEDisburseMurabahaAccountMurabahaFinancingTest"/>
+			 <class name="tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest"/>
+		</classes>
+    </test>
 </suite>

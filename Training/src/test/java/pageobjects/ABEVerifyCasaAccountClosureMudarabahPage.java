@@ -30,7 +30,7 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
 	@Step("Sending menu name: {0}")
 	public ABEVerifyCasaAccountClosureMudarabahPage sendKeysSearchBarTextField(String menu) throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
@@ -50,7 +50,7 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
 	@Step("Frame switching")
 	public ABEVerifyCasaAccountClosureMudarabahPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
@@ -73,7 +73,7 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
 	public ABEVerifyCasaAccountClosureMudarabahPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
         try {
-        	driver.switchTo().parentFrame();
+        	PageFunctionUtils.switchToParentFrame(driver);
         	PageFunctionUtils.clickOnElement(driver, acceptButton);
         	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
         	PageFunctionUtils.sleep();

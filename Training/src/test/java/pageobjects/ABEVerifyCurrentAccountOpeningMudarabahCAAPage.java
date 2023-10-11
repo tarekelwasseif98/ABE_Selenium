@@ -36,7 +36,7 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 	@Step("Sending menu name: {0}")
 	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage sendKeysSearchBarTextField(String menu) throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
@@ -56,7 +56,7 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 	@Step("Frame switching")
 	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);

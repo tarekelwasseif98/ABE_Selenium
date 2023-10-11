@@ -1,4 +1,5 @@
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\VerifyACHOutwardPage.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEVerifyMurabahaAccountPayoffMurabahaFinancingProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\utils\AssertionFactory.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEVerifyCasaCurrentAccountCreationLiabilitiesAndOperationPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEVerifyMurabahaAccountOpeningMurabahaFinancingData.java
@@ -10,7 +11,9 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEDisburseM
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABECloseTUAPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEVerifyTUAClosurePage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\VerifyAchOutwardProcedures.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEPayoffMurabahaAccountMurabahaFinancingTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABECreateOfficeAccountFinancePage.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEPayoffMurabahaAccountMurabahaFinancingPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\AuthorizeACHOutwardData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEOpenTUAProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEVerifyTUAOpeningProcedures.java
@@ -40,6 +43,7 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEVerifyCas
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\utils\CSVUtils.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEOpenCurrentAccountMudarabahCAAProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEOpenCurrentAccountMudarabahCAAPage.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEVerifyMurabahaAccountPayoffMurabahaFinancingPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEOpenMurabahaAccountMurabahaFinancingPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABECloseCasaAccountMudarabahPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest.java
@@ -53,6 +57,7 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABECloseCasa
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABECreateCASASavingsAccountLiabilitiesAndOperationTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABECloseTUATest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABECreateOfficeAccountFinanceData.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEPayoffMurabahaAccountMurabahaFinancingProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\VerifyACHOutwardData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEVerifyCurrentAccountOpeningMudarabahCAAPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEVerifyMurabahaAccountOpeningMurabahaFinancingProcedures.java
@@ -66,6 +71,7 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEVerifyOffi
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEVerifyTUAOpeningTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABETellerOperationTransferLiabilitiesAndOperationData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEVerifyCasaAccountClosureMudarabahProcedures.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEVerifyMurabahaAccountPayoffMurabahaFinancingTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEVerifyTUAOpeningData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABECreateCASASavingsAccountLiabilitiesAndOperationPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABECreateOfficeAccountFinanceTest.java
@@ -73,9 +79,9 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABETellerOpe
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEVerifyCasaAccountClosureMudarabahData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEVerifyTUAClosureProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\CreateAchOutwardData.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEVerifyMurabahaAccountPayoffMurabahaFinancingData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABECloseTUAProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEOpenMurabahaAccountMurabahaFinancingData.java
-C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\VerifyIslamicCurrentAccountPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEVerifyOfficeAccountFinanceProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEOpenMurabahaAccountMurabahaFinancingProcedures.java
@@ -88,6 +94,7 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEVer
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\utils\PageFunctionUtils.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEVerifyCasaAccountClosureMudarabahPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\CreateAchOutwardProcedures.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEPayoffMurabahaAccountMurabahaFinancingData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEVerifyCasaAccountClosureMudarabahTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEVerifyCasaCurrentAccountCreationLiabilitiesAndOperationData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEVerifyCasaCurrentAccountCreationLiabilitiesAndOperationProcedures.java

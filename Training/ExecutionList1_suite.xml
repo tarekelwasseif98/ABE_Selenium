@@ -38,10 +38,17 @@
 		</classes>
 	</test>-->
 		
-	<test thread-count="1" parallel="classes" name="Islamic Murabaha Account Disbursement">
+	<!--<test thread-count="1" parallel="classes" name="Islamic Murabaha Account Disbursement">
        	<classes>
 			 <class name="tests.ABEDisburseMurabahaAccountMurabahaFinancingTest"/>
 			 <class name="tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest"/>
+		</classes>
+    </test>-->
+    
+    	<test thread-count="1" parallel="classes" name="Islamic Murabaha Account payoff">
+       	<classes>
+			 <class name="tests.ABEPayoffMurabahaAccountMurabahaFinancingTest"/>
+			 <class name="tests.ABEVerifyMurabahaAccountPayoffMurabahaFinancingTest"/>
 		</classes>
     </test>
 </suite>

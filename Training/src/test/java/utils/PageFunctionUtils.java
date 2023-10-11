@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PageFunctionUtils {
@@ -66,6 +67,10 @@ public class PageFunctionUtils {
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(id));
 	}
 	
+	public static void switchToParentFrame(WebDriver driver) throws InterruptedException {
+		driver.switchTo().parentFrame();
+	}
+	
 	public static void sleep() throws InterruptedException {
 		Thread.sleep(Properties.SleepTime);
 		}
@@ -74,4 +79,14 @@ public class PageFunctionUtils {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0, -document.body.scrollHeight);");
 		}
+	
+	public static void selectDropDownListByIndex(WebDriver driver, By by, int index) {
+		Select dropdown = new Select(driver.findElement(by));
+		dropdown.selectByIndex(index);
+	}
+	
+	public static void selectDropDownListByVisibleText(WebDriver driver, By by, String name) {
+		Select dropdown = new Select(driver.findElement(by));
+		dropdown.selectByVisibleText(name);
+	}
 }

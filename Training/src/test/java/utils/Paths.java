@@ -54,6 +54,11 @@ public class Paths {
 	public static final String DisburseMurabahaAccountJson =  "jsonFiles\\" + DisburseMurabahaAccountCsv.substring(9, Paths.DisburseMurabahaAccountCsv.length()-4) + ".json";
 	public static final String VerifyMurabahaAccountDisbursementJson =  "jsonFiles\\" + VerifyMurabahaAccountDisbursementCsv.substring(9, Paths.VerifyMurabahaAccountDisbursementCsv.length()-4) + ".json";
 	
+	public static final String PayoffMurabahaAccountCsv  = "csvFiles\\ABEPayoffMurabahaAccountMurabahaFinancing.csv";
+	public static final String VerifyMurabahaAccountPayoffCsv  = "csvFiles\\ABEVerifyMurabahaAccountPayoffMurabahaFinancing.csv";
+	public static final String PayoffMurabahaAccountJson =  "jsonFiles\\" + PayoffMurabahaAccountCsv.substring(9, Paths.PayoffMurabahaAccountCsv.length()-4) + ".json";
+	public static final String VerifyMurabahaAccountPayoffJson =  "jsonFiles\\" + VerifyMurabahaAccountPayoffCsv.substring(9, Paths.VerifyMurabahaAccountPayoffCsv.length()-4) + ".json";
+	
 	public static final String ABETellerOperationTransferLiabilitiesAndOperationCsv  = "csvFiles\\ABETellerOperationTransferLiabilitiesAndOperation.csv";
 	public static final String ABETellerOperationTransferLiabilitiesAndOperationJson =  "jsonFiles\\" + ABETellerOperationTransferLiabilitiesAndOperationCsv.substring(9, Paths.ABETellerOperationTransferLiabilitiesAndOperationCsv.length()-4) + ".json";
 	

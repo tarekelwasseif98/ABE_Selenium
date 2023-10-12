@@ -10,7 +10,7 @@ public class ABECloseTUAProcedures {
 		ABECloseTUAPage closeTUAPage = new ABECloseTUAPage(driver);
 		closeTUAPage.sendKeysSearchBarTextField(data.getMenu())
 					 .switchFormAreaFrame()
-					  .sendKeysAccountIdTextField(data.getAccountId())
+					  .sendKeysAccountIdTextField(data.getAccountId(), data.getClosureValueDate())
 					   .sendKeysRepaymentAccountIdTextField(data.getRepaymentAccountId())
  		   			    .pressSubmitButton()
 						 .saveAccountId(data.getLinkedTcid());

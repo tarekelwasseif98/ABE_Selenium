@@ -10,7 +10,7 @@ public class ABEOpenTUAProcedures {
 		openTUAPage.sendKeysSearchBarTextField(data.getMenu())
 				    .switchFormAreaFrame()
 					 .sendKeysAccountDetails(data.getCif(), data.getSchemeCode())
-					  .sendKeysTUADetails(data.getDepositPeriodMonths(), data.getDepositPeriodDays(), data.getInitialDepositAmount(), data.getProfitCreditAccountId(), data.getRepaymentAccountId(), data.getDebitAccountId())
+					  .sendKeysTUADetails(data.getValueDate(), data.getDepositPeriodMonths(), data.getDepositPeriodDays(), data.getInitialDepositAmount(), data.getProfitCreditAccountId(), data.getRepaymentAccountId(), data.getDebitAccountId())
 					   .pressSubmitButton()
 				        .saveAccountId(data.getLinkedTcid());
 		}

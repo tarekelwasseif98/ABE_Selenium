@@ -15,25 +15,27 @@ public class ABEOpenTUAPage {
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
 	private String uxIframeId = "UX";
-	private By formAreaIframeId =By.xpath("//iframe[@name='formArea']"); 
+	private By formAreaIframeId = By.xpath("//iframe[@name='formArea']"); 
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By cifIdTextField = By.xpath("(//input[@id='_critcifId'])[1]");
 	private By schemeCodeTextField = By.xpath("(//input[@id='_schmCode'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
+	private By valueDateTextField = By.xpath("(//input[@id='_valueDate'])[1]");
 	private By depositPeriodMonthsTextField = By.xpath("(//input[@id='_depPeriod$duration1'])[1]");
 	private By depositPeriodDaysTextField = By.xpath("(//input[@id='_depPeriod$duration2'])[1]");
 	private By initialDepositAmountTextField = By.xpath("(//input[@id='_iniDepAmt$amt'])[1]");
 	private By profitCreditAccountIdTextField = By.xpath("(//input[@id='_intCrAcId'])[1]");
 	private By repaymentAccountIdTextField = By.xpath("(//input[@id='_repActId'])[1]");
 	private By debitAccountIdTextField = By.xpath("(//input[@id='_trnActId'])[1]");
+	private By accountOpeningDateTextField = By.xpath("(//input[@id='_gnDtAcOpDte'])[1]");
+	private By applicationDateTextField = By.xpath("(//input[@id='_applicnDte'])[1]");
 	private By peggingFrequencyTextField = By.xpath("(//input[@id='_pegFrenew$duration1'])[1]");
 	private By continueButton1 = By.xpath("(//button[@id='_bdtlCtnBtn'])[1]");
 	private By continueButton2 = By.xpath("(//button[@id='_gnDtlCtnBtn'])[1]");
 	private By continueButton3 = By.xpath("(//button[@id='_shmCont'])[1]");
 	private By renewalAndClosureDetailsTab = By.xpath("(//a[@id='stepVIII_anchor'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private By warningAcceptButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
 	private By accountIdSuccessMessage = By.xpath("(//p[@id='_resMsg_paraMsg'])[1]");
 	private String peggingFrequencyValue = "1";
 	public static String acId;
@@ -89,7 +91,10 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Sending tua details: {0}")
-	public ABEOpenTUAPage sendKeysTUADetails(String depositPeriodMonths, String depositPeriodDays, String initialDepositAmount, String profitCreditAccountId, String repaymentAccountId, String debitAccountId) throws Exception {
+	public ABEOpenTUAPage sendKeysTUADetails(String valueDate, String depositPeriodMonths, String depositPeriodDays, String initialDepositAmount, String profitCreditAccountId, String repaymentAccountId, String debitAccountId) throws Exception {
+		PageFunctionUtils.clearDataInWebElement(driver, valueDateTextField);
+		PageFunctionUtils.clickOnElement(driver, valueDateTextField);
+		PageFunctionUtils.enterDataInWebElement(driver, valueDateTextField, valueDate.substring(1));
 		PageFunctionUtils.clearDataInWebElement(driver, depositPeriodMonthsTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, depositPeriodMonthsTextField, depositPeriodMonths);
 		PageFunctionUtils.clearDataInWebElement(driver, depositPeriodDaysTextField);
@@ -103,6 +108,12 @@ public class ABEOpenTUAPage {
 		PageFunctionUtils.clickOnElement(driver, debitAccountIdTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, debitAccountIdTextField, debitAccountId.substring(1));
 		PageFunctionUtils.clickOnElement(driver, continueButton1);
+		PageFunctionUtils.clearDataInWebElement(driver, accountOpeningDateTextField);
+		PageFunctionUtils.clickOnElement(driver, accountOpeningDateTextField);
+		PageFunctionUtils.enterDataInWebElement(driver, accountOpeningDateTextField, valueDate.substring(1));
+		PageFunctionUtils.clearDataInWebElement(driver, applicationDateTextField);
+		PageFunctionUtils.clickOnElement(driver, applicationDateTextField);
+		PageFunctionUtils.enterDataInWebElement(driver, applicationDateTextField, valueDate.substring(1));
 		PageFunctionUtils.clickOnElement(driver, continueButton2);
 		PageFunctionUtils.clickOnElement(driver, continueButton3);
 		try {
@@ -117,17 +128,7 @@ public class ABEOpenTUAPage {
 	@Step("Press submit button")
 	public ABEOpenTUAPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
-		PageFunctionUtils.switchToParentFrame(driver);
-		Boolean isPresent = driver.findElements(warningAcceptButton).size() > 0;
-		if(isPresent) {
-			PageFunctionUtils.clickOnElement(driver, warningAcceptButton);
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-		}
-		else {
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-			PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
-			acId = driver.findElement(accountIdSuccessMessage).getText().substring(87);
-		}
+		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
 		acId = driver.findElement(accountIdSuccessMessage).getText().substring(87);
 		return this;

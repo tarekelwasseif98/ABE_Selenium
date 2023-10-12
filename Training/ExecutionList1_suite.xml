@@ -24,6 +24,7 @@
 			<class name="tests.ABEVerifyTUAOpeningTest"/>
 		</classes>
      </test>-->
+     
      <!--<test thread-count="1" parallel="classes" name="ABE Close TUA">
         <classes>
 			<class name="tests.ABECloseTUATest"/>
@@ -45,10 +46,10 @@
 		</classes>
     </test>-->
     
-    	<test thread-count="1" parallel="classes" name="ABE Payoff Murabaha Account Murabaha Financing">
+    	<!--<test thread-count="1" parallel="classes" name="ABE Payoff Murabaha Account Murabaha Financing">
        	<classes>
 			 <class name="tests.ABEPayoffMurabahaAccountMurabahaFinancingTest"/>
 			 <class name="tests.ABEVerifyMurabahaAccountPayoffMurabahaFinancingTest"/>
 		</classes>
-    </test>
+    </test>-->
 </suite>

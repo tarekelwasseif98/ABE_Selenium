@@ -61,7 +61,6 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 	private By continue9Button = By.xpath("(//button[@id='_btn_continueacctlmts'])[1]");
 	private By continue10Button = By.xpath("(//button[@id='_btn_continueDoc'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private By warningAcceptButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
 	private By accountIdSuccessMessage = By.xpath("(//div[@id='_resacctId_text'])[1]");
 	public static String acId;
 	public static String  referenceCsvColumnName = "reference";
@@ -384,21 +383,9 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 	@Step("Press submit button")
 	public ABEOpenMurabahaAccountMurabahaFinancingPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
-		PageFunctionUtils.switchToParentFrame(driver);
-		Boolean isPresent = driver.findElements(warningAcceptButton).size() > 0;
-		if(isPresent) {
-			PageFunctionUtils.clickOnElement(driver, warningAcceptButton);
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-		}
-		else {
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-			PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
-			acId = driver.findElement(accountIdSuccessMessage).getText().substring(0,20);
-			System.out.println(acId);
-		}
+		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
 		acId = driver.findElement(accountIdSuccessMessage).getText().substring(0,20);
-		System.out.println(acId);
 		return this;
 	}
 	

@@ -23,7 +23,6 @@ public class ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage {
 	private By continue2Button = By.xpath("(//button[@id='_adddet_continueBt'])[1]");
 	private By continue3Button = By.xpath("(//button[@id='_disbmoddet_continue'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private By warningAcceptButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
 	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 
 
@@ -84,14 +83,7 @@ public class ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage {
 	@Step("Press submit button")
 	public ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
-		PageFunctionUtils.switchToParentFrame(driver);
-		Boolean isPresent = driver.findElements(warningAcceptButton).size() > 0;
-		if(isPresent) {
-			PageFunctionUtils.clickOnElement(driver, warningAcceptButton);
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-		} else {
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-		}
+		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.sleep();
 		return this;
 	}

@@ -109,6 +109,7 @@ public class ABEDisburseMurabahaAccountMurabahaFinancingPage {
 	@Step("Press submit button")
 	public ABEDisburseMurabahaAccountMurabahaFinancingPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
+		PageFunctionUtils.acceptWarning(driver);
 		return this;
 	}
 	

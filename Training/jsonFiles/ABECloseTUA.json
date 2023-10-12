@@ -5,7 +5,8 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "CITUDA",
-  "accountId": "'17520624601301001788",
+  "accountId": "'17520624601301002143",
+  "closureValueDate": "'12-10-2023",
   "repaymentAccountId": "'1606624601301001",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-9882"
@@ -16,7 +17,8 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "CITUDA",
-  "accountId": "'17520624601301001894",
+  "accountId": "'17520624601301002259",
+  "closureValueDate": "'12-10-2023",
   "repaymentAccountId": "'1606624601301001",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-9886"
@@ -27,7 +29,8 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "CITUDA",
-  "accountId": "'17510624601301001819",
+  "accountId": "'17510624601301002175",
+  "closureValueDate": "'12-10-2023",
   "repaymentAccountId": "'1606624601301001",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-10178"
@@ -38,7 +41,8 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "CITUDA",
-  "accountId": "'17530624601301001824",
+  "accountId": "'17530624601301002180",
+  "closureValueDate": "'12-10-2023",
   "repaymentAccountId": "'1606624601301001",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-10180"
@@ -49,7 +53,8 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "CITUDA",
-  "accountId": "'17540624601301001830",
+  "accountId": "'17540624601301002196",
+  "closureValueDate": "'12-10-2023",
   "repaymentAccountId": "'1606624601301001",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-10182"
@@ -60,7 +65,8 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "CITUDA",
-  "accountId": "'17550624601301001846",
+  "accountId": "'17550624601301002201",
+  "closureValueDate": "'12-10-2023",
   "repaymentAccountId": "'1606624601301001",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-10184"
@@ -71,7 +77,8 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "CITUDA",
-  "accountId": "'17560624601301001852",
+  "accountId": "'17560624601301002217",
+  "closureValueDate": "'12-10-2023",
   "repaymentAccountId": "'1606624601301001",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-10186"
@@ -82,7 +89,8 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "CITUDA",
-  "accountId": "'17580624601301001867",
+  "accountId": "'17580624601301002222",
+  "closureValueDate": "'12-10-2023",
   "repaymentAccountId": "'1606624601301001",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-10188"
@@ -93,7 +101,8 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "CITUDA",
-  "accountId": "'17600624601301001879",
+  "accountId": "'17600624601301002234",
+  "closureValueDate": "'12-10-2023",
   "repaymentAccountId": "'1606624601301001",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-10190"
@@ -104,7 +113,8 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "CITUDA",
-  "accountId": "'17590624601301001880",
+  "accountId": "'17590624601301002245",
+  "closureValueDate": "'12-10-2023",
   "repaymentAccountId": "'1606624601301001",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-10192"
@@ -115,7 +125,8 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "CITUDA",
-  "accountId": "'17510624601301001901",
+  "accountId": "'17510624601301002267",
+  "closureValueDate": "'12-10-2023",
   "repaymentAccountId": "'1606624601301001",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-10196"

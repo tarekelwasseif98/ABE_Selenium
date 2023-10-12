@@ -20,7 +20,6 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");	
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
-	private By acceptButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
 
 
 	public ABEVerifyCasaAccountClosureMudarabahPage(WebDriver driver) {

@@ -21,6 +21,7 @@ public class ABECloseTUAPage {
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By accountIdTextField = By.xpath("(//input[@id='_acntId'])[1]");
+	private By closureValueDateTextField = By.xpath("(//input[@id='_clsValDate'])[1]");
 	private By repaymentAccountIdTextField = By.xpath("(//input[@id='_repayActId'])[1]");
 	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Close Islamic Top Up Deposit Account'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
@@ -70,11 +71,14 @@ public class ABECloseTUAPage {
 	}
 	
 	@Step("Sending a/c. id: {0}")
-	public ABECloseTUAPage sendKeysAccountIdTextField(String accountId) throws Exception {
+	public ABECloseTUAPage sendKeysAccountIdTextField(String accountId, String closureValueDate) throws Exception {
 		accountId = accountId.substring(1);
 		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
 		PageFunctionUtils.clickOnElement(driver, accountIdTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+		PageFunctionUtils.clearDataInWebElement(driver, closureValueDateTextField);
+		PageFunctionUtils.clickOnElement(driver, closureValueDateTextField);
+		PageFunctionUtils.enterDataInWebElement(driver, closureValueDateTextField, closureValueDate.substring(1));
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
@@ -95,9 +99,7 @@ public class ABECloseTUAPage {
 		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.sleep();
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
-		acId = driver.findElement(accountIdSuccessMessage).getText().substring(60);
-		System.out.println(acId);
-		
+		acId = driver.findElement(accountIdSuccessMessage).getText().substring(60);		
 		WebElement element = driver.findElement(menuNameTextBox);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView();", element);

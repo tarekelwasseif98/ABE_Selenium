@@ -1,3 +1,0 @@
-tcId,summary,username,password,menu,Pos,expectedResult,linkedTcid
-FCB-002,Automation_Cycle1_VerifyACHOutward_ByChecker,UBSADMIN,Infy@123,MPOR,'000000093202,"The record is verified successfully.
-",FCB-001

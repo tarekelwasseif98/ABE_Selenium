@@ -1,0 +1,20 @@
+[
+ {
+  "tcId": "FCB-9821",
+  "summary": "IslamicBanking_MudarabahSBA_Verify_Close_IslamicSavingsAccount_Transfer_ProfitOnIndicativeRate_SBMB_ByChecker_H2",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VILAC",
+  "accountId": "'170001546100010079",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9860",
+  "summary": "IslamicBanking_MudarabahCAA_Verify_Close_IslamicCurrentAccount_Transfer_ProfitOnIndicativeRate_ByChecker_F2",
+  "username": "QA47",
+  "password": "Infy@123",
+  "menu": "VILAC",
+  "accountId": "'160601546100010067",
+  "expectedResult": "successfully"
+ }
+]

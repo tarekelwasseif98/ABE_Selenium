@@ -1,0 +1,21 @@
+[
+ {
+  "tcId": "FCB-001",
+  "summary": "Automation_Cycle1_CreateACHOutward_ByMaker",
+  "username": "QA49",
+  "password": "Infy@123",
+  "menu": "MPOR",
+  "PaysysID": "ACH",
+  "Date": 27092023,
+  "Amount": "'20000",
+  "Line1_RI": "TEST",
+  "CCY": "EGP",
+  "BIC_BEN": "CIBEEGCX039",
+  "Network_BEN": "ACH",
+  "Name_BEN": "TEST",
+  "Account_BEN": 132456,
+  "Account": "'100500003298010315",
+  "expectedResult": "The record is added successfully.",
+  "linkedTcid": "FCB-002"
+ }
+]

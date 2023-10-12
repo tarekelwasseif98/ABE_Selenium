@@ -18,12 +18,12 @@
 		</classes>
      </test>-->
      
-     <!--<test thread-count="1" parallel="classes" name="ABE Open TUA">
+     <test thread-count="1" parallel="classes" name="ABE Open TUA">
         <classes>
 			<class name="tests.ABEOpenTUATest"/>
 			<class name="tests.ABEVerifyTUAOpeningTest"/>
 		</classes>
-     </test>-->
+     </test>
      
      <!--<test thread-count="1" parallel="classes" name="ABE Close TUA">
         <classes>

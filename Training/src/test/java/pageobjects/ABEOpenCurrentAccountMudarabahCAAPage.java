@@ -87,6 +87,7 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	@Step("Press submit button")
 	public ABEOpenCurrentAccountMudarabahCAAPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
+		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
 		acId = driver.findElement(accountIdSuccessMessage).getText().substring(53, 71);
 		return this;

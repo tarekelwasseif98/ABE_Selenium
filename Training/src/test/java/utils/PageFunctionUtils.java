@@ -89,4 +89,15 @@ public class PageFunctionUtils {
 		Select dropdown = new Select(driver.findElement(by));
 		dropdown.selectByVisibleText(name);
 	}
+	
+	public static void acceptWarning(WebDriver driver) throws InterruptedException {
+		PageFunctionUtils.switchToParentFrame(driver);
+		Boolean isPresent = driver.findElements(By.xpath("(//button[normalize-space()='Accept'])[1]")).size() > 0;
+		if(isPresent) {
+			PageFunctionUtils.clickOnElement(driver, By.xpath("(//button[normalize-space()='Accept'])[1]"));
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, By.xpath("//iframe[@name='formArea']"));
+		} else {
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, By.xpath("//iframe[@name='formArea']"));
+		}
+	}
 }

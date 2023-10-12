@@ -5,8 +5,8 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "POFA",
-  "accountId": "'40100212729701312769 ",
-  "payoffValueDate": "'11-10-2023",
+  "accountId": "'40160624601301312866",
+  "payoffValueDate": "'12-10-2023",
   "refundAccountId": "'160602127297010017",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-10118"
@@ -17,8 +17,8 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "POFA",
-  "accountId": "'40100212729701312721",
-  "payoffValueDate": "'11-10-2023",
+  "accountId": "'40170624601301312889",
+  "payoffValueDate": "'12-10-2023",
   "refundAccountId": "'160602127297010017",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-10119"
@@ -29,8 +29,8 @@
   "username": "QA46",
   "password": "Infy@123",
   "menu": "POFA",
-  "accountId": "'40100212729701312738",
-  "payoffValueDate": "'11-10-2023",
+  "accountId": "'40180624601301312901",
+  "payoffValueDate": "'12-10-2023",
   "refundAccountId": "'160602127297010017",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-10120"

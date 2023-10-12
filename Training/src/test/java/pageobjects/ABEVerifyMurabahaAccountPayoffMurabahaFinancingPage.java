@@ -96,6 +96,7 @@ public class ABEVerifyMurabahaAccountPayoffMurabahaFinancingPage {
         } catch (Exception e) {
         	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		}
+		PageFunctionUtils.acceptWarning(driver);
 		return this;
 	}
 }

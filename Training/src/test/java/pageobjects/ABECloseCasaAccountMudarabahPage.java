@@ -89,6 +89,7 @@ public class ABECloseCasaAccountMudarabahPage {
 	@Step("Press submit button")
 	public ABECloseCasaAccountMudarabahPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
+		PageFunctionUtils.acceptWarning(driver);
 		return this;
 	}
 	

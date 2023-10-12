@@ -90,6 +90,7 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 	@Step("Press submit button")
 	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
+		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.sleep();
 		return this;
 	}

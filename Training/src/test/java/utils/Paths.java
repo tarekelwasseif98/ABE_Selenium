@@ -24,8 +24,8 @@ public class Paths {
 	public static final String ABEVerifyCASASavingsAccountCreationLiabilitiesAndOperationCsv  = "csvFiles\\ABEVerifyCASASavingsAccountCreationLiabilitiesAndOperation.csv";
 	public static final String ABEVerifyCASASavingsAccountCreationLiabilitiesAndOperationJson = "jsonFiles\\" + ABEVerifyCASASavingsAccountCreationLiabilitiesAndOperationCsv.substring(9, Paths.ABEVerifyCASASavingsAccountCreationLiabilitiesAndOperationCsv.length()-4) + ".json";
 
-	public static final String CloseIslamicCasaAccountCsv  = "csvFiles\\CloseIslamicCasaAccount.csv";
-	public static final String VerifyCloseIslamicCasaAccountCsv = "csvFiles\\VerifyCloseIslamicCasaAccount.csv";
+	public static final String CloseIslamicCasaAccountCsv  = "csvFiles\\ABECloseCasaAccountMudarabah.csv";
+	public static final String VerifyCloseIslamicCasaAccountCsv = "csvFiles\\ABEVerifyCasaAccountClosureMudarabah.csv";
 	public static final String CloseIslamicCasaAccountJson =  "jsonFiles\\" + CloseIslamicCasaAccountCsv.substring(9, Paths.CloseIslamicCasaAccountCsv.length()-4) + ".json";
 	public static final String VerifyCloseIslamicCasaAccountJson = "jsonFiles\\" + VerifyCloseIslamicCasaAccountCsv.substring(9, Paths.VerifyCloseIslamicCasaAccountCsv.length()-4) + ".json";
 

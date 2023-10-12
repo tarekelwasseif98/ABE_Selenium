@@ -72,16 +72,8 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
 	@Step("Press submit button")
 	public ABEVerifyCasaAccountClosureMudarabahPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
-        try {
-        	PageFunctionUtils.switchToParentFrame(driver);
-        	PageFunctionUtils.clickOnElement(driver, acceptButton);
-        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-        	PageFunctionUtils.sleep();
-	        }
-        catch (Exception e) {
-        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-        	PageFunctionUtils.sleep();
-        }
+		PageFunctionUtils.acceptWarning(driver);
+        PageFunctionUtils.sleep();
 		return this;
 	}
 }

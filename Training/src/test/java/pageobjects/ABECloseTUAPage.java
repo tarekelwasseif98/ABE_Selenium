@@ -25,7 +25,6 @@ public class ABECloseTUAPage {
 	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Close Islamic Top Up Deposit Account'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private By warningAcceptButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
 	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	private By accountIdSuccessMessage = By.xpath("(//p[@id='_resMsg_paraMsg'])[1]");
 	public static String acId;
@@ -93,15 +92,7 @@ public class ABECloseTUAPage {
 	@Step("Press submit button")
 	public ABECloseTUAPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
-		PageFunctionUtils.switchToParentFrame(driver);
-		Boolean isPresent1 = driver.findElements(warningAcceptButton).size() > 0;
-		if(isPresent1) {
-			PageFunctionUtils.clickOnElement(driver, warningAcceptButton);
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
-		}
-		else {
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
-		}
+		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.sleep();
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
 		acId = driver.findElement(accountIdSuccessMessage).getText().substring(60);

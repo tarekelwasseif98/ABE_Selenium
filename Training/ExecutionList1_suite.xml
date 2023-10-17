@@ -32,7 +32,7 @@
 	 	</classes>
      </test>-->
      
-     <!--<test thread-count="1" parallel="classes" name="ABE Open Murabaha Account Murabaha Financing">
+     <!-- <test thread-count="1" parallel="classes" name="ABE Open Murabaha Account Murabaha Financing">
      	<classes>
 	 		<class name="tests.ABEOpenMurabahaAccountMurabahaFinancingTest"/>
 	 		<class name="tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest"/>

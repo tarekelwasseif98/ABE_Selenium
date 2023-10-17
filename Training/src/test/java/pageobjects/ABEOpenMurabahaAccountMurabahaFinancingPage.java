@@ -4,11 +4,11 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
 import utils.AssertionFactory;
 import utils.CSVUtils;
+import utils.FinacleFieldsUtils;
 import utils.PageFunctionUtils;
 import utils.Paths;
 
@@ -49,6 +49,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 	private By documentDateTextField = By.xpath("(//input[@id='_documentDate'])[1]");
 	private By limitIdPrefixTextField = By.xpath("(//input[@id='_limitId$prefix'])[1]");
 	private By limitIdSuffixTextField = By.xpath("(//input[@id='_limitId$suffix'])[1]");
+	private By closeButton = By.xpath("(//span[@id='modalCloseIcon'])[1]");
 	private By drawingPowerIndicatorDropDownList = By.xpath("(//select[@id='_drawingPowerInd_select'])[1]");
 	private By continue1Button = By.xpath("(//button[@id='_btn_continueBasic'])[1]");
 	private By continue2Button = By.xpath("(//button[@id='_btn_continueLoandet'])[1]");
@@ -120,7 +121,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 		PageFunctionUtils.clearDataInWebElement(driver, assetValueTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, assetValueTextField, assetValue);
 		if(Integer.parseInt(assetValue) < Integer.parseInt(customerMargin)) {
-			AssertionFactory.assertionFailWithMessage("Customer margin can not be greater than asset value");
+			AssertionFactory.assertionFail();
 		}
 		else {
 			PageFunctionUtils.clickOnElement(driver, customerMarginTextField);
@@ -151,13 +152,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 	
 	@Step("Sending repayment parameter details: {0}")
 	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysRepaymentParameterDetails(String equatedInstallment, String numberOfInstallments, String installmentStartDate, String installmentFrequency, String profitStartDate, String profitFrequency, String date, String calendar, String onHoliday) throws Exception {
-		Select installmentFrequencyDropDownListSelector = new Select(driver.findElement(installmentFrequencyDropDownList));
-		Select dateEquatedDropDownListSelector = new Select(driver.findElement(dateEquatedDropDownList));
-		Select calendarEquatedDropDownListSelector = new Select(driver.findElement(calendarEquatedDropDownList));
-		Select onHolidayEquatedDropDownListSelector = new Select(driver.findElement(onHolidayEquatedDropDownList));
-		Select repaymentTypeDropDownListSelector = new Select(driver.findElement(repaymentTypeDropDownList));
-		int [] dateValues = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31};
-		if(equatedInstallment.equalsIgnoreCase("yes")) {
+		if(equatedInstallment.equalsIgnoreCase(FinacleFieldsUtils.EquatedInstallmentYes)) {
 			PageFunctionUtils.waitOnElement(driver, equatedInstallmentYesRadioButton);
 			PageFunctionUtils.clickOnElement(driver, equatedInstallmentYesRadioButton);
 			PageFunctionUtils.clickOnElement(driver, numberOfInstallmentsTextField);
@@ -165,71 +160,71 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 			PageFunctionUtils.clearDataInWebElement(driver, installmentStartDateTextField);
 			PageFunctionUtils.clickOnElement(driver, installmentStartDateTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, installmentStartDateTextField, installmentStartDate.substring(1));
-			if(installmentFrequency.equalsIgnoreCase("daily") || installmentFrequency.equalsIgnoreCase("weekly") || installmentFrequency.equalsIgnoreCase("fortnightly")) {
-				if(installmentFrequency.equalsIgnoreCase("daily")) {
-					installmentFrequencyDropDownListSelector.selectByVisibleText("Daily");
+			if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyDaily) || installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyWeekly) || installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyFortnightly)) {
+				if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyDaily)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyDaily);
 				}
-				else if(installmentFrequency.equalsIgnoreCase("weekly")) {
-					installmentFrequencyDropDownListSelector.selectByVisibleText("Weekly");
+				else if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyWeekly)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyWeekly);
 				}
-				else if(installmentFrequency.equalsIgnoreCase("fortnightly")) {
-					installmentFrequencyDropDownListSelector.selectByVisibleText("Fortnightly");
-				}
-				
-				if(calendar.equalsIgnoreCase("gregorian calendar")) {
-					calendarEquatedDropDownListSelector.selectByVisibleText("Gregorian Calendar");
-				}
-				else if(calendar.equalsIgnoreCase("hijri calendar")) {
-					calendarEquatedDropDownListSelector.selectByVisibleText("Hijri Calendar");
+				else if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyFortnightly)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyFortnightly);
 				}
 				
-				if(onHoliday.equalsIgnoreCase("next day")) {
-					onHolidayEquatedDropDownListSelector.selectByVisibleText("Next Day");
+				if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarGregorianCalendar)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, calendarEquatedDropDownList, FinacleFieldsUtils.CalendarGregorianCalendar);
 				}
-				else if(onHoliday.equalsIgnoreCase("previous day")) {
-					onHolidayEquatedDropDownListSelector.selectByVisibleText("Previous Day");
+				else if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarHijriCalendar)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, calendarEquatedDropDownList, FinacleFieldsUtils.CalendarHijriCalendar);
 				}
-				else if(onHoliday.equalsIgnoreCase("skip")){
-					onHolidayEquatedDropDownListSelector.selectByVisibleText("Skip");
+				
+				if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayNextDay)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayEquatedDropDownList, FinacleFieldsUtils.OnHolidayNextDay);
+				}
+				else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayPreviousDay)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayEquatedDropDownList, FinacleFieldsUtils.OnHolidayPreviousDay);
+				}
+				else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidaySkip)){
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayEquatedDropDownList, FinacleFieldsUtils.OnHolidaySkip);
 				}
 			}
-			if(installmentFrequency.equalsIgnoreCase("monthly") || installmentFrequency.equalsIgnoreCase("quarterly") || installmentFrequency.equalsIgnoreCase("half yearly") || installmentFrequency.equalsIgnoreCase("yearly") || installmentFrequency.equalsIgnoreCase("twice a month")) {
-				if(installmentFrequency.equalsIgnoreCase("monthly")) {
-					installmentFrequencyDropDownListSelector.selectByVisibleText("Monthly");
+			if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyMonthly) || installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyQuarterly) || installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyHalfYearly) || installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyYearly) || installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyTwiceAMonth)) {
+				if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyMonthly)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyMonthly);
 				}
-				else if(installmentFrequency.equalsIgnoreCase("quarterly")) {
-					installmentFrequencyDropDownListSelector.selectByVisibleText("Quarterly");
+				else if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyQuarterly)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyQuarterly);
 				}
-				else if(installmentFrequency.equalsIgnoreCase("half yearly")) {
-					installmentFrequencyDropDownListSelector.selectByVisibleText("Half Yearly");
+				else if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyHalfYearly)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyHalfYearly);
 				}
-				else if(installmentFrequency.equalsIgnoreCase("yearly")) {
-					installmentFrequencyDropDownListSelector.selectByVisibleText("Yearly");
+				else if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyYearly)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyYearly);
 				}
-				else if(installmentFrequency.equalsIgnoreCase("twice a month")) {
-					installmentFrequencyDropDownListSelector.selectByVisibleText("Twice a Month");
+				else if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyTwiceAMonth)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyTwiceAMonth);
 				}
 				PageFunctionUtils.clickOnElement(driver, byDateEquatedRadioButton);
-				for(int i=0; i<dateValues.length; i++) {
-					if(Integer.parseInt(date) == dateValues[i]) {
-						dateEquatedDropDownListSelector.selectByVisibleText(date);
+				for(int i=0; i<FinacleFieldsUtils.DateValues.length; i++) {
+					if(Integer.parseInt(date) == FinacleFieldsUtils.DateValues[i]) {
+						PageFunctionUtils.selectDropDownListByVisibleText(driver, dateEquatedDropDownList, date);
 					}
 				}
-				if(calendar.equalsIgnoreCase("gregorian calendar")) {
-					calendarEquatedDropDownListSelector.selectByVisibleText("Gregorian Calendar");
+				if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarGregorianCalendar)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, calendarEquatedDropDownList, FinacleFieldsUtils.CalendarGregorianCalendar);
 				}
-				else if(calendar.equalsIgnoreCase("hijri calendar")) {
-					calendarEquatedDropDownListSelector.selectByVisibleText("Hijri Calendar");
+				else if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarHijriCalendar)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, calendarEquatedDropDownList, FinacleFieldsUtils.CalendarHijriCalendar);
 				}
 				
-				if(onHoliday.equalsIgnoreCase("next day")) {
-					onHolidayEquatedDropDownListSelector.selectByVisibleText("Next Day");
+				if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayNextDay)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayEquatedDropDownList, FinacleFieldsUtils.OnHolidayNextDay);
 				}
-				else if(onHoliday.equalsIgnoreCase("previous day")) {
-					onHolidayEquatedDropDownListSelector.selectByVisibleText("Previous Day");
+				else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayPreviousDay)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayEquatedDropDownList, FinacleFieldsUtils.OnHolidayPreviousDay);
 				}
-				else if(onHoliday.equalsIgnoreCase("skip")){
-					onHolidayEquatedDropDownListSelector.selectByVisibleText("Skip");
+				else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidaySkip)){
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayEquatedDropDownList, FinacleFieldsUtils.OnHolidaySkip);
 				}			
 				
 			}
@@ -238,99 +233,95 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 			PageFunctionUtils.clickOnElement(driver, equatedInstallmentNoRadioButton);
 			PageFunctionUtils.clickOnElement(driver, numberOfInstallmentsTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, numberOfInstallmentsTextField, numberOfInstallments);
-			repaymentTypeDropDownListSelector.selectByVisibleText("Bullet");
+			PageFunctionUtils.selectDropDownListByVisibleText(driver, repaymentTypeDropDownList, FinacleFieldsUtils.FrequencyBullet);
 			PageFunctionUtils.clearDataInWebElement(driver, installmentStartDateTextField);
 			PageFunctionUtils.clickOnElement(driver, installmentStartDateTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, installmentStartDateTextField, installmentStartDate.substring(1));
 			
-			if(calendar.equalsIgnoreCase("gregorian calendar")) {
-				calendarEquatedDropDownListSelector.selectByVisibleText("Gregorian Calendar");
+			if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarGregorianCalendar)) {
+				PageFunctionUtils.selectDropDownListByVisibleText(driver, calendarEquatedDropDownList, FinacleFieldsUtils.CalendarGregorianCalendar);
 			}
-			else if(calendar.equalsIgnoreCase("hijri calendar")) {
-				calendarEquatedDropDownListSelector.selectByVisibleText("Hijri Calendar");
+			else if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarHijriCalendar)) {
+				PageFunctionUtils.selectDropDownListByVisibleText(driver, calendarEquatedDropDownList, FinacleFieldsUtils.CalendarHijriCalendar);
 			}
 			
-			if(onHoliday.equalsIgnoreCase("next day")) {
-				onHolidayEquatedDropDownListSelector.selectByVisibleText("Next Day");
+			if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayNextDay)) {
+				PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayEquatedDropDownList, FinacleFieldsUtils.OnHolidayNextDay);
 			}
-			else if(onHoliday.equalsIgnoreCase("previous day")) {
-				onHolidayEquatedDropDownListSelector.selectByVisibleText("Previous Day");
+			else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayPreviousDay)) {
+				PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayEquatedDropDownList, FinacleFieldsUtils.OnHolidayPreviousDay);
 			}
-			else if(onHoliday.equalsIgnoreCase("skip")){
-				onHolidayEquatedDropDownListSelector.selectByVisibleText("Skip");
+			else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidaySkip)){
+				PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayEquatedDropDownList, FinacleFieldsUtils.OnHolidaySkip);
 			}
 			PageFunctionUtils.clearDataInWebElement(driver, profitStartDateTextField);
 			PageFunctionUtils.clickOnElement(driver, profitStartDateTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, profitStartDateTextField, profitStartDate.substring(1));
-			Select profitFrequencyDropDownListSelector = new Select(driver.findElement(profitFrequencyDropDownList));
-			Select dateNonEquatedDropDownListSelector = new Select(driver.findElement(dateNonEquatedDropDownList));
-			Select calendarNonEquatedDropDownListSelector = new Select(driver.findElement(calendarNonEquatedDropDownList));
-			Select onHolidayNonEquatedDropDownListSelector = new Select(driver.findElement(onHolidayNonEquatedDropDownList));
-			if(profitFrequency.equalsIgnoreCase("daily") || profitFrequency.equalsIgnoreCase("weekly") || profitFrequency.equalsIgnoreCase("fortnightly")) {
-				if(profitFrequency.equalsIgnoreCase("daily")) {
-					profitFrequencyDropDownListSelector.selectByVisibleText("Daily");
+			if(profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyDaily) || profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyWeekly) || profitFrequency.equalsIgnoreCase("fortnightly")) {
+				if(profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyDaily)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, profitFrequencyDropDownList, FinacleFieldsUtils.FrequencyDaily);
 				}
-				else if(profitFrequency.equalsIgnoreCase("weekly")) {
-					profitFrequencyDropDownListSelector.selectByVisibleText("Weekly");
+				else if(profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyWeekly)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, profitFrequencyDropDownList, FinacleFieldsUtils.FrequencyWeekly);
 				}
-				else if(profitFrequency.equalsIgnoreCase("fortnightly")) {
-					profitFrequencyDropDownListSelector.selectByVisibleText("Fortnightly");
+				else if(profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyFortnightly)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, profitFrequencyDropDownList, FinacleFieldsUtils.FrequencyFortnightly);
 				}
 				
-				if(calendar.equalsIgnoreCase("gregorian calendar")) {
-					calendarNonEquatedDropDownListSelector.selectByVisibleText("Gregorian Calendar");
+				if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarGregorianCalendar)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, calendarNonEquatedDropDownList, FinacleFieldsUtils.CalendarGregorianCalendar);
 				}
-				else if(calendar.equalsIgnoreCase("hijri calendar")) {
-					calendarNonEquatedDropDownListSelector.selectByVisibleText("Hijri Calendar");
+				else if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarHijriCalendar)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, calendarNonEquatedDropDownList, FinacleFieldsUtils.CalendarHijriCalendar);
 				}
 				
-				if(onHoliday.equalsIgnoreCase("next day")) {
-					onHolidayNonEquatedDropDownListSelector.selectByVisibleText("Next Day");
+				if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayNextDay)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayNonEquatedDropDownList, FinacleFieldsUtils.OnHolidayNextDay);
 				}
-				else if(onHoliday.equalsIgnoreCase("previous day")) {
-					onHolidayNonEquatedDropDownListSelector.selectByVisibleText("Previous Day");
+				else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayPreviousDay)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayNonEquatedDropDownList, FinacleFieldsUtils.OnHolidayPreviousDay);
 				}
-				else if(onHoliday.equalsIgnoreCase("skip")){
-					onHolidayNonEquatedDropDownListSelector.selectByVisibleText("Skip");
+				else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidaySkip)){
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayNonEquatedDropDownList, FinacleFieldsUtils.OnHolidaySkip);
 				}
 			}
-			if(profitFrequency.equalsIgnoreCase("monthly") || profitFrequency.equalsIgnoreCase("quarterly") || profitFrequency.equalsIgnoreCase("half yearly") || profitFrequency.equalsIgnoreCase("yearly") || profitFrequency.equalsIgnoreCase("twice a month")) {
-				if(profitFrequency.equalsIgnoreCase("monthly")) {
-					profitFrequencyDropDownListSelector.selectByVisibleText("Monthly");
+			if(profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyMonthly) || profitFrequency.equalsIgnoreCase("quarterly") || profitFrequency.equalsIgnoreCase("half yearly") || profitFrequency.equalsIgnoreCase("yearly") || profitFrequency.equalsIgnoreCase("twice a month")) {
+				if(profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyMonthly)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, profitFrequencyDropDownList, FinacleFieldsUtils.FrequencyMonthly);
 				}
-				else if(profitFrequency.equalsIgnoreCase("quarterly")) {
-					profitFrequencyDropDownListSelector.selectByVisibleText("Quarterly");
+				else if(profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyQuarterly)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, profitFrequencyDropDownList, FinacleFieldsUtils.FrequencyQuarterly);
 				}
-				else if(profitFrequency.equalsIgnoreCase("half yearly")) {
-					profitFrequencyDropDownListSelector.selectByVisibleText("Half Yearly");
+				else if(profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyHalfYearly)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, profitFrequencyDropDownList, FinacleFieldsUtils.FrequencyHalfYearly);
 				}
-				else if(profitFrequency.equalsIgnoreCase("yearly")) {
-					profitFrequencyDropDownListSelector.selectByVisibleText("Yearly");
+				else if(profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyYearly)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, profitFrequencyDropDownList, FinacleFieldsUtils.FrequencyYearly);
 				}
-				else if(profitFrequency.equalsIgnoreCase("twice a month")) {
-					profitFrequencyDropDownListSelector.selectByVisibleText("Twice a Month");
+				else if(profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyTwiceAMonth)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, profitFrequencyDropDownList, FinacleFieldsUtils.FrequencyTwiceAMonth);
 				}
 				PageFunctionUtils.clickOnElement(driver, byDateNonEquatedRadioButton);
-				for(int i=0; i<dateValues.length; i++) {
-					if(Integer.parseInt(date) == dateValues[i]) {
-						dateNonEquatedDropDownListSelector.selectByVisibleText(date);
+				for(int i=0; i<FinacleFieldsUtils.DateValues.length; i++) {
+					if(Integer.parseInt(date) == FinacleFieldsUtils.DateValues[i]) {
+						PageFunctionUtils.selectDropDownListByVisibleText(driver, dateNonEquatedDropDownList, date);
 					}
 				}
-				if(calendar.equalsIgnoreCase("gregorian calendar")) {
-					calendarNonEquatedDropDownListSelector.selectByVisibleText("Gregorian Calendar");
+				if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarGregorianCalendar)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, calendarNonEquatedDropDownList, FinacleFieldsUtils.CalendarGregorianCalendar);
 				}
-				else if(calendar.equalsIgnoreCase("hijri calendar")) {
-					calendarNonEquatedDropDownListSelector.selectByVisibleText("Hijri Calendar");
+				else if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarHijriCalendar)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, calendarNonEquatedDropDownList, FinacleFieldsUtils.CalendarHijriCalendar);
 				}
 				
-				if(onHoliday.equalsIgnoreCase("next day")) {
-					onHolidayNonEquatedDropDownListSelector.selectByVisibleText("Next Day");
+				if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayNextDay)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayNonEquatedDropDownList, FinacleFieldsUtils.OnHolidayNextDay);
 				}
-				else if(onHoliday.equalsIgnoreCase("previous day")) {
-					onHolidayNonEquatedDropDownListSelector.selectByVisibleText("Previous Day");
+				else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayPreviousDay)) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayNonEquatedDropDownList, FinacleFieldsUtils.OnHolidayPreviousDay);
 				}
-				else if(onHoliday.equalsIgnoreCase("skip")){
-					onHolidayNonEquatedDropDownListSelector.selectByVisibleText("Skip");
+				else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidaySkip)){
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayNonEquatedDropDownList, FinacleFieldsUtils.OnHolidaySkip);
 				}
 				
 			}
@@ -361,22 +352,28 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 			PageFunctionUtils.enterDataInWebElement(driver, limitIdPrefixTextField, limitIdPrefix.substring(1));
 			PageFunctionUtils.enterDataInWebElement(driver, limitIdSuffixTextField, limitIdSuffix.substring(1));
 		} catch(Exception e) {
+	}
+		if(drawingPowerIndicator.equalsIgnoreCase(FinacleFieldsUtils.DrawingPowerIndicatorDerived)) {
+			PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DrawingPowerIndicatorDerived);
 		}
-		Select drawingPowerIndicatorDropDownListSelector = new Select(driver.findElement(drawingPowerIndicatorDropDownList));
-		if(drawingPowerIndicator.equalsIgnoreCase("derived")) {
-			drawingPowerIndicatorDropDownListSelector.selectByVisibleText("Derived");
+		if(drawingPowerIndicator.equalsIgnoreCase(FinacleFieldsUtils.DrawingPowerIndicatorEqual)) {
+			PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DrawingPowerIndicatorEqual);
 		}
-		if(drawingPowerIndicator.equalsIgnoreCase("equal")) {
-			drawingPowerIndicatorDropDownListSelector.selectByVisibleText("Equal");
+		if(drawingPowerIndicator.equalsIgnoreCase(FinacleFieldsUtils.DrawingPowerIndicatorMaintained)) {
+			PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DrawingPowerIndicatorMaintained);
 		}
-		if(drawingPowerIndicator.equalsIgnoreCase("maintained")) {
-			drawingPowerIndicatorDropDownListSelector.selectByVisibleText("Maintained");
+		if(drawingPowerIndicator.equalsIgnoreCase(FinacleFieldsUtils.DrawingPowerIndicatorParent)) {
+			PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DrawingPowerIndicatorParent);
 		}
-		if(drawingPowerIndicator.equalsIgnoreCase("parent")) {
-			drawingPowerIndicatorDropDownListSelector.selectByVisibleText("Parent");
-		}
+		try {
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.clickOnElement(driver, closeButton);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+        } catch (Exception e) {
+        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+	}
 		PageFunctionUtils.clickOnElement(driver, continue9Button);
-		PageFunctionUtils.clickOnElement(driver, continue10Button);		
+		PageFunctionUtils.clickOnElement(driver, continue10Button);
 		return this;
 	}
 	

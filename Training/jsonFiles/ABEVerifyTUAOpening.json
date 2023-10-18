@@ -2,100 +2,100 @@
  {
   "tcId": "FCB-9863",
   "summary": "IslamicBanking_MudarabahTUA_Verify_IslamicTUAAccount_MTD2Y_ByChecker_A2",
-  "username": "QA49",
+  "username": "QA47",
   "password": "Infy@123",
   "menu": "VITUDAO",
-  "accountId": "'17520624601301002679",
+  "accountId": "'17520624601301003065",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-9865",
   "summary": "IslamicBanking_MudarabahTUA_Verify_IslamicTUAAccount_MTD3Y_ByChecker_B2",
-  "username": "QA49",
+  "username": "QA47",
   "password": "Infy@123",
   "menu": "VITUDAO",
-  "accountId": "'17500624601301002688",
+  "accountId": "'17500624601301003074",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-9867",
   "summary": "IslamicBanking_MudarabahTUA_Verify_IslamicTUAAccount_MTD5Y_ByChecker_C2",
-  "username": "QA49",
+  "username": "QA47",
   "password": "Infy@123",
   "menu": "VITUDAO",
-  "accountId": "'17570624601301002698",
+  "accountId": "'17570624601301003084",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10155",
   "summary": "IslamicBanking_WakalahTUA_Verify_WTD07_Account_ByChecker_D1",
-  "username": "QA49",
+  "username": "QA47",
   "password": "Infy@123",
   "menu": "VITUDAO",
-  "accountId": "'17510624601301002700",
+  "accountId": "'17510624601301003097",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10156",
   "summary": "IslamicBanking_WakalahTUA_Verify_WTD1M_Account_ByChecker_D2",
-  "username": "QA49",
+  "username": "QA47",
   "password": "Infy@123",
   "menu": "VITUDAO",
-  "accountId": "'17530624601301002715",
+  "accountId": "'17530624601301003101",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10157",
   "summary": "IslamicBanking_WakalahTUA_Verify_WTD3M_Account_ByChecker_D3",
-  "username": "QA49",
+  "username": "QA47",
   "password": "Infy@123",
   "menu": "VITUDAO",
-  "accountId": "'17540624601301002721",
+  "accountId": "'17540624601301003117",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10158",
   "summary": "IslamicBanking_WakalahTUA_Verify_WTD6M_Account_ByChecker_D4",
-  "username": "QA49",
+  "username": "QA47",
   "password": "Infy@123",
   "menu": "VITUDAO",
-  "accountId": "'17550624601301002737",
+  "accountId": "'17550624601301003123",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10159",
   "summary": "IslamicBanking_WakalahTUA_Verify_WTD9M_Account_ByChecker_D5",
-  "username": "QA49",
+  "username": "QA47",
   "password": "Infy@123",
   "menu": "VITUDAO",
-  "accountId": "'17560624601301002743",
+  "accountId": "'17560624601301003139",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10160",
   "summary": "IslamicBanking_WakalahTUA_Verify_WTD1Y_Account_ByChecker_D6",
-  "username": "QA49",
+  "username": "QA47",
   "password": "Infy@123",
   "menu": "VITUDAO",
-  "accountId": "'17580624601301002758",
+  "accountId": "'17580624601301003144",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10161",
   "summary": "IslamicBanking_WakalahTUA_Verify_WTD2Y_Account_ByChecker_D7",
-  "username": "QA49",
+  "username": "QA47",
   "password": "Infy@123",
   "menu": "VITUDAO",
-  "accountId": "'17600624601301002760",
+  "accountId": "'17600624601301003156",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10162",
   "summary": "IslamicBanking_WakalahTUA_Verify_WTD3Y_Account_ByChecker_D8",
-  "username": "QA49",
+  "username": "QA47",
   "password": "Infy@123",
   "menu": "VITUDAO",
-  "accountId": "'17590624601301002771",
+  "accountId": "'17590624601301003167",
   "expectedResult": "successfully"
  }
 ]

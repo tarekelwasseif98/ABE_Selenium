@@ -17,7 +17,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
 	private String uxIframeId = "UX";
-	private By formAreaIframeId =By.xpath("//iframe[@name='formArea']"); 
+	private By formAreaIframeId = By.xpath("//iframe[@name='formArea']"); 
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By cifIdTextField = By.xpath("(//input[@id='_cifid'])[1]");
@@ -285,7 +285,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 					PageFunctionUtils.selectDropDownListByVisibleText(driver, onHolidayNonEquatedDropDownList, FinacleFieldsUtils.OnHolidaySkip);
 				}
 			}
-			if(profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyMonthly) || profitFrequency.equalsIgnoreCase("quarterly") || profitFrequency.equalsIgnoreCase("half yearly") || profitFrequency.equalsIgnoreCase("yearly") || profitFrequency.equalsIgnoreCase("twice a month")) {
+			if(profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyMonthly) || profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyQuarterly) || profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyHalfYearly) || profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyYearly) || profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyTwiceAMonth)) {
 				if(profitFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyMonthly)) {
 					PageFunctionUtils.selectDropDownListByVisibleText(driver, profitFrequencyDropDownList, FinacleFieldsUtils.FrequencyMonthly);
 				}

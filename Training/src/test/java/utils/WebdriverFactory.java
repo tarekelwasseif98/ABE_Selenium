@@ -10,7 +10,7 @@ import java.net.URL;
 
 	public class WebdriverFactory {
 		public static WebDriver initiateWebDriver() throws MalformedURLException {
-			DesiredCapabilities cap=new DesiredCapabilities();
+			DesiredCapabilities cap = new DesiredCapabilities();
 			cap.setBrowserName("chrome");
 			cap.setPlatform(Platform.WINDOWS);
 			ChromeOptions options = new ChromeOptions();

@@ -16,7 +16,7 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
 	private String uxIframeId = "UX";
-	private By formAreaIframeId =By.xpath("//iframe[@name='formArea']"); 
+	private By formAreaIframeId = By.xpath("//iframe[@name='formArea']"); 
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By cifIdTextField = By.xpath("(//input[@id='_cifid'])[1]");

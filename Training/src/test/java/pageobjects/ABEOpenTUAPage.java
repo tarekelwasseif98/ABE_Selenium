@@ -33,9 +33,9 @@ public class ABEOpenTUAPage {
 	private By accountOpeningDateTextField = By.xpath("(//input[@id='_gnDtAcOpDte'])[1]");
 	private By applicationDateTextField = By.xpath("(//input[@id='_applicnDte'])[1]");
 	private By peggingFrequencyTextField = By.xpath("(//input[@id='_pegFrenew$duration1'])[1]");
-	private By continueButton1 = By.xpath("(//button[@id='_bdtlCtnBtn'])[1]");
-	private By continueButton2 = By.xpath("(//button[@id='_gnDtlCtnBtn'])[1]");
-	private By continueButton3 = By.xpath("(//button[@id='_shmCont'])[1]");
+	private By continue1Button = By.xpath("(//button[@id='_bdtlCtnBtn'])[1]");
+	private By continue2Button = By.xpath("(//button[@id='_gnDtlCtnBtn'])[1]");
+	private By continue3Button = By.xpath("(//button[@id='_shmCont'])[1]");
 	private By renewalAndClosureDetailsTab = By.xpath("(//a[@id='stepVIII_anchor'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Open Islamic Top Up Deposit Account'])[1]");
@@ -110,15 +110,15 @@ public class ABEOpenTUAPage {
 		PageFunctionUtils.enterDataInWebElement(driver, repaymentAccountIdTextField, repaymentAccountId.substring(1));
 		PageFunctionUtils.clickOnElement(driver, debitAccountIdTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, debitAccountIdTextField, debitAccountId.substring(1));
-		PageFunctionUtils.clickOnElement(driver, continueButton1);
+		PageFunctionUtils.clickOnElement(driver, continue1Button);
 		PageFunctionUtils.clearDataInWebElement(driver, accountOpeningDateTextField);
 		PageFunctionUtils.clickOnElement(driver, accountOpeningDateTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, accountOpeningDateTextField, valueDate.substring(1));
 		PageFunctionUtils.clearDataInWebElement(driver, applicationDateTextField);
 		PageFunctionUtils.clickOnElement(driver, applicationDateTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, applicationDateTextField, valueDate.substring(1));
-		PageFunctionUtils.clickOnElement(driver, continueButton2);
-		PageFunctionUtils.clickOnElement(driver, continueButton3);
+		PageFunctionUtils.clickOnElement(driver, continue2Button);
+		PageFunctionUtils.clickOnElement(driver, continue3Button);
 		try {
 			PageFunctionUtils.enterDataInWebElement(driver, peggingFrequencyTextField, peggingFrequencyValue);
 		}

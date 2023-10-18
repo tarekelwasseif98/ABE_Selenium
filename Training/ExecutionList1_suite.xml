@@ -18,7 +18,7 @@
 	 	</classes>
      </test>-->
      
-     <!--<test thread-count="1" parallel="classes" name="ABE Open TUA">
+     <!-- <test thread-count="1" parallel="classes" name="ABE Open TUA">
      	<classes>
 	 		<class name="tests.ABEOpenTUATest"/>
 	 		<class name="tests.ABEVerifyTUAOpeningTest"/>
@@ -59,4 +59,23 @@
 	 		<class name="tests.ABEVerifyCorporateLoanCorporateLoansTest"/>
 	 	</classes>
      </test>-->
+     
+     <test thread-count="5" parallel="classes" name="ABE Finacle Automation">
+     	<classes>
+	 		<class name="tests.ABEOpenCurrentAccountMudarabahCAATest"/>
+	 		<class name="tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest"/>
+	 		
+			<class name="tests.ABEOpenTUATest"/>
+	 		<class name="tests.ABEVerifyTUAOpeningTest"/>
+	 		
+	 		<class name="tests.ABEOpenMurabahaAccountMurabahaFinancingTest"/>
+	 		<class name="tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest"/>
+	 		
+	 		<class name="tests.ABEDisburseMurabahaAccountMurabahaFinancingTest"/>
+	 		<class name="tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest"/>
+	 		
+	 		<class name="tests.ABEOpenCorporateLoanCorporateLoansTest"/>
+	 		<class name="tests.ABEVerifyCorporateLoanCorporateLoansTest"/>
+     	</classes>
+     </test>
 </suite>

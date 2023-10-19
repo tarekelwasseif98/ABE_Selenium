@@ -53,20 +53,22 @@ public class ABEOpenTUAPage {
 	
 	@Step("Sending menu name: {0}")
 	public ABEOpenTUAPage sendKeysSearchBarTextField(String menu) throws Exception {
-		PageFunctionUtils.sleep();
-		PageFunctionUtils.switchToParentFrame(driver);
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
-		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-	        PageFunctionUtils.clickOnElement(driver, searchButton);
+		if(menu != null) {
+			PageFunctionUtils.sleep();
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+		        }
+	        catch (Exception e) {
 	        }
-        catch (Exception e) {
         }
 	return this;
 	}
@@ -82,48 +84,140 @@ public class ABEOpenTUAPage {
 		return this;		
 	}
 	
-	@Step("Sending customer details: {0}")
-	public ABEOpenTUAPage sendKeysAccountDetails(String cifid, String schemeCode) throws Exception {
-		PageFunctionUtils.waitOnElement(driver, cifIdTextField);
-		PageFunctionUtils.clickOnElement(driver, cifIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifid);
-		PageFunctionUtils.clickOnElement(driver, schemeCodeTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, schemeCodeTextField, schemeCode);
+	@Step("Sending cif id: {0}")
+	public ABEOpenTUAPage sendKeysCifIdTextField(String cifId) throws Exception {
+		if(cifId != null) {
+			PageFunctionUtils.waitOnElement(driver, cifIdTextField);
+			PageFunctionUtils.clickOnElement(driver, cifIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifId);
+		}
+		return this;
+	}
+	
+	@Step("Sending scheme code: {0}")
+	public ABEOpenTUAPage sendKeysSchemeCodeTextField(String schemeCode) throws Exception {
+		if(schemeCode != null) {
+			PageFunctionUtils.clickOnElement(driver, schemeCodeTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, schemeCodeTextField, schemeCode);
+		}
+		return this;
+	}
+	
+	@Step("Press go button")
+	public ABEOpenTUAPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
 	
-	@Step("Sending tua details: {0}")
-	public ABEOpenTUAPage sendKeysTUADetails(String valueDate, String depositPeriodMonths, String depositPeriodDays, String initialDepositAmount, String profitCreditAccountId, String repaymentAccountId, String debitAccountId) throws Exception {
-		PageFunctionUtils.clearDataInWebElement(driver, valueDateTextField);
-		PageFunctionUtils.clickOnElement(driver, valueDateTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, valueDateTextField, valueDate.substring(1));
-		PageFunctionUtils.clearDataInWebElement(driver, depositPeriodMonthsTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, depositPeriodMonthsTextField, depositPeriodMonths);
-		PageFunctionUtils.clearDataInWebElement(driver, depositPeriodDaysTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, depositPeriodDaysTextField, depositPeriodDays);
-		PageFunctionUtils.clearDataInWebElement(driver, initialDepositAmountTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, initialDepositAmountTextField, initialDepositAmount);
-		PageFunctionUtils.clickOnElement(driver, profitCreditAccountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, profitCreditAccountIdTextField, profitCreditAccountId.substring(1));
-		PageFunctionUtils.clickOnElement(driver, repaymentAccountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, repaymentAccountIdTextField, repaymentAccountId.substring(1));
-		PageFunctionUtils.clickOnElement(driver, debitAccountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, debitAccountIdTextField, debitAccountId.substring(1));
+	@Step("Sending value date: {0}")
+	public ABEOpenTUAPage sendKeysValueDateTextField(String valueDate) throws Exception {
+		if(valueDate != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, valueDateTextField);
+			PageFunctionUtils.clickOnElement(driver, valueDateTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, valueDateTextField, valueDate.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Sending deposit period months: {0}")
+	public ABEOpenTUAPage sendKeysDepositPeriodMonthsTextField(String depositPeriodMonths) throws Exception {
+		if(depositPeriodMonths != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, depositPeriodMonthsTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, depositPeriodMonthsTextField, depositPeriodMonths);
+		}
+		return this;
+	}
+	
+	@Step("Sending deposit period days: {0}")
+	public ABEOpenTUAPage sendKeysDepositPeriodDaysTextField(String depositPeriodDays) throws Exception {
+		if(depositPeriodDays != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, depositPeriodDaysTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, depositPeriodDaysTextField, depositPeriodDays);
+		}
+		return this;
+	}
+	
+	@Step("Sending initial deposit amount: {0}")
+	public ABEOpenTUAPage sendKeysInitialDepositAmountTextField(String initialDepositAmount) throws Exception {
+		if(initialDepositAmount != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, initialDepositAmountTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, initialDepositAmountTextField, initialDepositAmount);
+		}
+		return this;
+	}
+	
+	@Step("Sending profit credit account id: {0}")
+	public ABEOpenTUAPage sendKeysProfitCreditAccountIdTextField(String profitCreditAccountId) throws Exception {
+		if(profitCreditAccountId != null) {
+			PageFunctionUtils.clickOnElement(driver, profitCreditAccountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, profitCreditAccountIdTextField, profitCreditAccountId.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Sending repayment account id: {0}")
+	public ABEOpenTUAPage sendKeysRepaymentAccountIdTextField(String repaymentAccountId) throws Exception {
+		if(repaymentAccountId != null) {
+			PageFunctionUtils.clickOnElement(driver, repaymentAccountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, repaymentAccountIdTextField, repaymentAccountId.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Sending debit account id: {0}")
+	public ABEOpenTUAPage sendKeysDebitAccountIdTextField(String debitAccountId) throws Exception {
+		if(debitAccountId != null) {
+			PageFunctionUtils.clickOnElement(driver, debitAccountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, debitAccountIdTextField, debitAccountId.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenTUAPage pressContinue1Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue1Button);
-		PageFunctionUtils.clearDataInWebElement(driver, accountOpeningDateTextField);
-		PageFunctionUtils.clickOnElement(driver, accountOpeningDateTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, accountOpeningDateTextField, valueDate.substring(1));
-		PageFunctionUtils.clearDataInWebElement(driver, applicationDateTextField);
-		PageFunctionUtils.clickOnElement(driver, applicationDateTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, applicationDateTextField, valueDate.substring(1));
+		return this;
+	}
+	
+	@Step("Sending account opening date: {0}")
+	public ABEOpenTUAPage sendKeysAccountOpeningDateTextField(String accountOpeningDate) throws Exception {
+		if(accountOpeningDate != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, accountOpeningDateTextField);
+			PageFunctionUtils.clickOnElement(driver, accountOpeningDateTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, accountOpeningDateTextField, accountOpeningDate.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Sending application date: {0}")
+	public ABEOpenTUAPage sendKeysApplicationDateTextField(String applicationDate) throws Exception {
+		if(applicationDate != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, applicationDateTextField);
+			PageFunctionUtils.clickOnElement(driver, applicationDateTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, applicationDateTextField, applicationDate.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenTUAPage pressContinue2Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue2Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenTUAPage pressContinue3Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue3Button);
 		try {
 			PageFunctionUtils.enterDataInWebElement(driver, peggingFrequencyTextField, peggingFrequencyValue);
 		}
 		catch(Exception e) {
 		}
+		return this;
+	}
+	
+	@Step("Renewal and closure details tab navigation")
+	public ABEOpenTUAPage navigateRenewalAndClosureDetailsTabMenu() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, renewalAndClosureDetailsTab);
 		return this;
 	}
@@ -140,7 +234,7 @@ public class ABEOpenTUAPage {
 		return this;
 	}
 	
-	@Step("Save a/c. id")
+	@Step("Save account id")
 	public ABEOpenTUAPage saveAccountId(String linkedId) throws Exception {
 		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.OpenTUACsv, linkedTcidCsvColumnName, linkedId);
 		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.OpenTUACsv, referenceCsvColumnName);

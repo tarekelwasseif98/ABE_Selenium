@@ -12,7 +12,8 @@ public class ABEVerifyTUAOpeningProcedures {
 		verifyTUAOpeningTUAPage.sendKeysSearchBarTextField(data.getMenu())
 								.switchFormAreaFrame()
 								 .sendKeysAccountIdTextField(data.getAccountid())
-								  .navigateSideMenuTab()
-								   .pressSubmitButton();
+								  .pressGoButton()
+								   .navigateSideTabMenu()
+								    .pressSubmitButton();
 		}
 	}

@@ -32,20 +32,22 @@ public class ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage {
 	
 	@Step("Sending menu name: {0}")
 	public ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage sendKeysSearchBarTextField(String menu) throws Exception {
-		PageFunctionUtils.sleep();
-		PageFunctionUtils.switchToParentFrame(driver);
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
-		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-	        PageFunctionUtils.clickOnElement(driver, searchButton);
+		if(menu != null) {
+			PageFunctionUtils.sleep();
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+		        }
+	        catch (Exception e) {
 	        }
-        catch (Exception e) {
         }
 	return this;
 	}
@@ -62,20 +64,37 @@ public class ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage {
 		return this;	
 	}
 	
-	@Step("Sending a/c. id: {0}")
+	@Step("Sending account id: {0}")
 	public ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage sendKeysAccountIdTextField(String accountId) throws Exception {
-		accountId = accountId.substring(1);
-		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
-		PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(1));
+		if(accountId != null) {
+			accountId = accountId.substring(1);
+			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
+			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Press go button")
+	public ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
 	
-	@Step("Side tab navigation")
-	public ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage navigateSideMenuTab() throws Exception {
+	@Step("Press continue button")
+	public ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage pressContinue1Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue1Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage pressContinue2Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue2Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage pressContinue3Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue3Button);
 		return this;
 	}

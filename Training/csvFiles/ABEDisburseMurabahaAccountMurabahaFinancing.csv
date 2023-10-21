@@ -1,5 +1,5 @@
 tcId,summary,username,password,menu,murabahaAccountId,valueDate,creditAccountId,expectedResult,linkedTcid
-FCB-10020,IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_CarsShortTerm_4010_ByMaker_D1,ABE31,Infy@123,PFAD,'40100624601301314217,'10-10-2023,''160602127297010017,successfully,FCB-10055
+FCB-10020,IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_CarsShortTerm_4010_ByMaker_D1,ABE31,Infy@123,PFAD,'40100624601301314217,'10-10-2023,'160602127297010017,successfully,FCB-10055
 FCB-10021,IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_CarsMedium&LongTerm_4011_ByMaker_D2,ABE31,Infy@123,PFAD,'40110624601301314223,'10-10-2023,'160602127297010017,successfully,FCB-10056
 FCB-10022,IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_MicroFinanceShortTerm_4012_ByMaker_D3,ABE31,Infy@123,PFAD,'40120624601301314239,'10-10-2023,'160602127297010017,successfully,FCB-10057
 FCB-10023,IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_RetailProjectsShortTerm_4013_ByMaker_D4,ABE31,Infy@123,PFAD,'40130624601301314245,'10-10-2023,'160602127297010017,successfully,FCB-10058

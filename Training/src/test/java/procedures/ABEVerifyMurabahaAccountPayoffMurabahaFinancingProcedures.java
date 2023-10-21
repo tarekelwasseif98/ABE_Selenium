@@ -11,7 +11,9 @@ public class ABEVerifyMurabahaAccountPayoffMurabahaFinancingProcedures {
 		verifyMurabahaAccountPayoffMurabahaFinancingPage.sendKeysSearchBarTextField(data.getMenu())
 															   .switchFormAreaFrame()
 																.sendKeysAccountIdTextField(data.getAccountId())
-																 .navigateSideMenuTab()
-																  .pressSubmitButton();
+																 .pressGoButton()
+																  .pressContinue1Button()
+																   .pressContinue2Button()
+																    .pressSubmitButton();
 		}
 	}

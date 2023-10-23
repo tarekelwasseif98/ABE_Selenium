@@ -1,0 +1,15 @@
+# Created at 2023-10-15T17:18:50.141
+Expecting a stackmap frame at branch target 30
+Exception Details:
+  Location:
+    tests/ABECreateACHOutwardTest.after(Lorg/testng/ITestResult;)V @19: if_icmpne
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0000000: 2b4e b201 1d2a 2a2d b801 094d 2bb9 00ba
+    0000010: 0100 04a0 000b 2ab4 000e b800 c057 2bb9
+    0000020: 00ba 0100 05a0 000b 2ab4 000e b800 c057
+    0000030: b800 c62a b400 0eb9 00cb 0100 0001 3a04
+    0000040: b801 222c 1904 b601 26b1               
+
+

@@ -4,7 +4,6 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
 import utils.CSVUtils;
@@ -16,7 +15,7 @@ public class ABECloseCasaAccountMudarabahPage {
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
 	private String uxIframeId = "UX";
-	private By formAreaIframeId =By.xpath("//iframe[@name='formArea']"); 
+	private By formAreaIframeId = By.xpath("//iframe[@name='formArea']"); 
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By accountIdTextField = By.xpath("(//input[@id='_acctId'])[1]");
@@ -37,20 +36,22 @@ public class ABECloseCasaAccountMudarabahPage {
 	
 	@Step("Sending menu name: {0}")
 	public ABECloseCasaAccountMudarabahPage sendKeysSearchBarTextField(String menu) throws Exception {
-		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
-		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-	        PageFunctionUtils.clickOnElement(driver, searchButton);
+		if(menu != null) {
+			PageFunctionUtils.sleep();
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+		        }
+	        catch (Exception e) {
 	        }
-        catch (Exception e) {
         }
 	return this;
 	}
@@ -58,7 +59,7 @@ public class ABECloseCasaAccountMudarabahPage {
 	@Step("Frame switching")
 	public ABECloseCasaAccountMudarabahPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
@@ -67,34 +68,48 @@ public class ABECloseCasaAccountMudarabahPage {
 		return this;
 	}
 	
-	@Step("Sending a/c. id: {0}")
+	@Step("Sending account id: {0}")
 	public ABECloseCasaAccountMudarabahPage sendKeysAccountIdTextField(String accountId) throws Exception {
-		accountId = accountId.substring(1);
-		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
-		PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+		if(accountId != null) {
+			accountId = accountId.substring(1);
+			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
+			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+		}
+		return this;
+	}
+	
+	@Step("Press go button")
+	public ABECloseCasaAccountMudarabahPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
 	
-	@Step("Sending trasfer a/c. id: {0}")
-	public ABECloseCasaAccountMudarabahPage sendKeysTransferAccountIdTextField(String transferAccountId) throws Exception {
-		transferAccountId = transferAccountId.substring(1);
+	@Step("Select transaction type")
+	public ABECloseCasaAccountMudarabahPage selectTransactionType() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, transferBalanceRadioButton);
-		Select dropdown = new Select(driver.findElement(transactionTypeMenu));
-		dropdown.selectByIndex(2);
-		PageFunctionUtils.clickOnElement(driver, transferAccountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, transferAccountIdTextField, transferAccountId);
+		PageFunctionUtils.selectDropDownListByIndex(driver, transactionTypeMenu, 2);
+		return this;
+	}
+	
+	@Step("Sending transfer account id: {0}")
+	public ABECloseCasaAccountMudarabahPage sendKeysTransferAccountIdTextField(String transferAccountId) throws Exception {
+		if(transferAccountId != null) {
+			transferAccountId = transferAccountId.substring(1);
+			PageFunctionUtils.clickOnElement(driver, transferAccountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, transferAccountIdTextField, transferAccountId);
+		}
 		return this;
 	}
 	
 	@Step("Press submit button")
 	public ABECloseCasaAccountMudarabahPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
+		PageFunctionUtils.acceptWarning(driver);
 		return this;
 	}
 	
-	@Step("Save a/c. id")
+	@Step("Save account id")
 	public ABECloseCasaAccountMudarabahPage saveAccountId(String linkedId) throws Exception {
 		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.CloseIslamicCasaAccountCsv, linkedTcidCsvColumnName, linkedId);
 		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyCloseIslamicCasaAccountCsv, tcIdCsvColumnName, linkedId);

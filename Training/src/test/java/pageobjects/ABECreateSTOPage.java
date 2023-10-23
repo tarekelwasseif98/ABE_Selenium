@@ -32,6 +32,7 @@ public class ABECreateSTOPage {
 	private String mandateNO;
 	private By paymentOrderIDOutput = By.xpath("(//div[@id='_resultPOID_text'])[1]");
 	
+	
 	public ABECreateSTOPage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -90,12 +91,14 @@ public class ABECreateSTOPage {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 }
-}
  	
 	
 	@Step("Sending STO details: {0}")
 	public ABECreateSTOPage sendKeysSTO (String countryCodeREM	, String waiveRemark ,String waiveChargeRadio, String chargetype, String accRem, String ccy, String nameRem, String address1_Ben, String address2_Ben, String purcode, String address1_Rem, String address2_Rem ,String amount, String date, String line1, String accBen, String nameBen, String bicBen, String networkBen, String bankBen, String branchBen) throws Exception {
-		PageFunctionUtils.waitOnElement(driver, accountRemTextField);
+		//PageFunctionUtils.waitOnElement(driver, accountRemTextField);
+		return this;
+		}
+	}
 	
 //		//Enter Account Debtor
 //		String substringAcc = accRem.substring(1);

@@ -20,7 +20,6 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");	
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
-	private By acceptButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
 
 
 	public ABEVerifyCasaAccountClosureMudarabahPage(WebDriver driver) {
@@ -29,20 +28,22 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
 	
 	@Step("Sending menu name: {0}")
 	public ABEVerifyCasaAccountClosureMudarabahPage sendKeysSearchBarTextField(String menu) throws Exception {
-		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
-		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-	        PageFunctionUtils.clickOnElement(driver, searchButton);
+		if(menu != null) {
+			PageFunctionUtils.sleep();
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+		        }
+	        catch (Exception e) {
 	        }
-        catch (Exception e) {
         }
 	return this;
 	}
@@ -50,7 +51,7 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
 	@Step("Frame switching")
 	public ABEVerifyCasaAccountClosureMudarabahPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
@@ -59,12 +60,19 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
 		return this;
 	}
 	
-	@Step("Sending a/c. id: {0}")
+	@Step("Sending account id: {0}")
 	public ABEVerifyCasaAccountClosureMudarabahPage sendKeysAccountIdTextField(String accountId) throws Exception {
-		accountId = accountId.substring(1);
-		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
-		PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+		if(accountId != null) {
+			accountId = accountId.substring(1);
+			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
+			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+		}
+		return this;
+	}
+	
+	@Step("Press go button")
+	public ABEVerifyCasaAccountClosureMudarabahPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
@@ -72,16 +80,8 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
 	@Step("Press submit button")
 	public ABEVerifyCasaAccountClosureMudarabahPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
-        try {
-        	driver.switchTo().parentFrame();
-        	PageFunctionUtils.clickOnElement(driver, acceptButton);
-        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-        	PageFunctionUtils.sleep();
-	        }
-        catch (Exception e) {
-        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-        	PageFunctionUtils.sleep();
-        }
+		PageFunctionUtils.acceptWarning(driver);
+        PageFunctionUtils.sleep();
 		return this;
 	}
 }

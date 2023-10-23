@@ -7,6 +7,7 @@ public class ABECloseTUAData {
 	private String password;
 	private String menu;
 	private String accountId;
+	private String closureValueDate;
 	private String repaymentAccountId;
 	private String expectedResult;
 	private String linkedTcid;
@@ -59,6 +60,14 @@ public class ABECloseTUAData {
 		this.accountId = accountId;
 	}
 	
+	public String getClosureValueDate() {
+		return closureValueDate;
+	}
+
+	public void setClosureValueDate(String closureValueDate) {
+		this.closureValueDate = closureValueDate;
+	}
+	
 	public String getRepaymentAccountId() {
 		return repaymentAccountId;
 	}
@@ -86,7 +95,8 @@ public class ABECloseTUAData {
 	@Override
 	public String toString() {
 		return "ABECloseTUAData [tcId=" + tcId + ", summary=" + summary + ", username=" + username + ", password="
-				+ password + ", menu=" + menu + ", accountId=" + accountId + ", repaymentAccountId="
-				+ repaymentAccountId + ", expectedResult=" + expectedResult + ", linkedTcid=" + linkedTcid + "]";
+				+ password + ", menu=" + menu + ", accountId=" + accountId + ", closureValueDate=" + closureValueDate
+				+ ", repaymentAccountId=" + repaymentAccountId + ", expectedResult=" + expectedResult + ", linkedTcid="
+				+ linkedTcid + "]";
 	}
 }

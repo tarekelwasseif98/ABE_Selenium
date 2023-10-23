@@ -57,8 +57,8 @@ public class Paths {
 	public static final String ABEVerifyCASASavingsAccountCreationLiabilitiesAndOperationCsv  = "csvFiles\\ABEVerifyCASASavingsAccountCreationLiabilitiesAndOperation.csv";
 	public static final String ABEVerifyCASASavingsAccountCreationLiabilitiesAndOperationJson = "jsonFiles\\" + ABEVerifyCASASavingsAccountCreationLiabilitiesAndOperationCsv.substring(9, Paths.ABEVerifyCASASavingsAccountCreationLiabilitiesAndOperationCsv.length()-4) + ".json";
 
-	public static final String CloseIslamicCasaAccountCsv  = "csvFiles\\CloseIslamicCasaAccount.csv";
-	public static final String VerifyCloseIslamicCasaAccountCsv = "csvFiles\\VerifyCloseIslamicCasaAccount.csv";
+	public static final String CloseIslamicCasaAccountCsv  = "csvFiles\\ABECloseCasaAccountMudarabah.csv";
+	public static final String VerifyCloseIslamicCasaAccountCsv = "csvFiles\\ABEVerifyCasaAccountClosureMudarabah.csv";
 	public static final String CloseIslamicCasaAccountJson =  "jsonFiles\\" + CloseIslamicCasaAccountCsv.substring(9, Paths.CloseIslamicCasaAccountCsv.length()-4) + ".json";
 	public static final String VerifyCloseIslamicCasaAccountJson = "jsonFiles\\" + VerifyCloseIslamicCasaAccountCsv.substring(9, Paths.VerifyCloseIslamicCasaAccountCsv.length()-4) + ".json";
 
@@ -81,6 +81,21 @@ public class Paths {
 	public static final String VerifyMurabahaAccountOpeningCsv  = "csvFiles\\ABEVerifyMurabahaAccountOpeningMurabahaFinancing.csv";
 	public static final String OpenMurabahaAccountJson =  "jsonFiles\\" + OpenMurabahaAccountCsv.substring(9, Paths.OpenMurabahaAccountCsv.length()-4) + ".json";
 	public static final String VerifyMurabahaAccountOpeningJson =  "jsonFiles\\" + VerifyMurabahaAccountOpeningCsv.substring(9, Paths.VerifyMurabahaAccountOpeningCsv.length()-4) + ".json";
+	
+	public static final String DisburseMurabahaAccountCsv  = "csvFiles\\ABEDisburseMurabahaAccountMurabahaFinancing.csv";
+	public static final String VerifyMurabahaAccountDisbursementCsv  = "csvFiles\\ABEVerifyMurabahaAccountDisbursementMurabahaFinancing.csv";
+	public static final String DisburseMurabahaAccountJson =  "jsonFiles\\" + DisburseMurabahaAccountCsv.substring(9, Paths.DisburseMurabahaAccountCsv.length()-4) + ".json";
+	public static final String VerifyMurabahaAccountDisbursementJson =  "jsonFiles\\" + VerifyMurabahaAccountDisbursementCsv.substring(9, Paths.VerifyMurabahaAccountDisbursementCsv.length()-4) + ".json";
+	
+	public static final String PayoffMurabahaAccountCsv  = "csvFiles\\ABEPayoffMurabahaAccountMurabahaFinancing.csv";
+	public static final String VerifyMurabahaAccountPayoffCsv  = "csvFiles\\ABEVerifyMurabahaAccountPayoffMurabahaFinancing.csv";
+	public static final String PayoffMurabahaAccountJson =  "jsonFiles\\" + PayoffMurabahaAccountCsv.substring(9, Paths.PayoffMurabahaAccountCsv.length()-4) + ".json";
+	public static final String VerifyMurabahaAccountPayoffJson =  "jsonFiles\\" + VerifyMurabahaAccountPayoffCsv.substring(9, Paths.VerifyMurabahaAccountPayoffCsv.length()-4) + ".json";
+	
+	public static final String OpenCorporateLoanCsv  = "csvFiles\\ABEOpenCorporateLoanCorporateLoans.csv";
+	public static final String VerifyCorporateLoanCsv  = "csvFiles\\ABEVerifyCorporateLoanCorporateLoans.csv";
+	public static final String OpenCorporateLoanJson =  "jsonFiles\\" + OpenCorporateLoanCsv.substring(9, Paths.OpenCorporateLoanCsv.length()-4) + ".json";
+	public static final String VerifyCorporateLoanJson =  "jsonFiles\\" + VerifyCorporateLoanCsv.substring(9, Paths.VerifyCorporateLoanCsv.length()-4) + ".json";
 	
 	public static final String ABETellerOperationTransferLiabilitiesAndOperationCsv  = "csvFiles\\ABETellerOperationTransferLiabilitiesAndOperation.csv";
 	public static final String ABETellerOperationTransferLiabilitiesAndOperationJson =  "jsonFiles\\" + ABETellerOperationTransferLiabilitiesAndOperationCsv.substring(9, Paths.ABETellerOperationTransferLiabilitiesAndOperationCsv.length()-4) + ".json";

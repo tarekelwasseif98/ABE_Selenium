@@ -11,8 +11,10 @@ public class ABECloseCasaAccountMudarabahProcedures {
 		closeCasaAccountMudarabahPage.sendKeysSearchBarTextField(data.getMenu())
 									  .switchFormAreaFrame()
 									   .sendKeysAccountIdTextField(data.getAccountId())
-									    .sendKeysTransferAccountIdTextField(data.getTransferAccountId())
-									     .pressSubmitButton()
-									      .saveAccountId(data.getLinkedTCID());
+									    .pressGoButton()
+									     .selectTransactionType()
+									      .sendKeysTransferAccountIdTextField(data.getTransferAccountId())
+									       .pressSubmitButton()
+									        .saveAccountId(data.getLinkedTCID());
 	}
 }

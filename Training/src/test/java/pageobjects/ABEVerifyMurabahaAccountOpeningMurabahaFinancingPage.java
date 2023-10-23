@@ -38,7 +38,7 @@ public class ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage {
 	@Step("Sending menu name: {0}")
 	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage sendKeysSearchBarTextField(String menu) throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
@@ -58,7 +58,7 @@ public class ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage {
 	@Step("Frame switching")
 	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
@@ -95,6 +95,7 @@ public class ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage {
 	@Step("Press submit button")
 	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
+		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.sleep();
 		return this;
 	}

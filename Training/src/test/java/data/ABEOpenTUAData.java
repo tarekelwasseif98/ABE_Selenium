@@ -8,6 +8,7 @@ public class ABEOpenTUAData {
 	private String menu;
 	private String cif;
 	private String schemeCode;
+	private String valueDate;
 	private String depositPeriodMonths;
 	private String depositPeriodDays;
 	private String initialDepositAmount;
@@ -72,6 +73,14 @@ public class ABEOpenTUAData {
 	
 	public void setSchemeCode(String schemeCode) {
 		this.schemeCode = schemeCode;
+	}
+	
+	public String getValueDate() {
+		return valueDate;
+	}
+
+	public void setValueDate(String valueDate) {
+		this.valueDate = valueDate;
 	}
 	
 	public String getDepositPeriodMonths() {
@@ -149,10 +158,10 @@ public class ABEOpenTUAData {
 	@Override
 	public String toString() {
 		return "ABEOpenTUAData [tcId=" + tcId + ", summary=" + summary + ", username=" + username + ", password="
-				+ password + ", menu=" + menu + ", cif=" + cif + ", schemeCode=" + schemeCode + ", depositPeriodMonths="
-				+ depositPeriodMonths + ", depositPeriodDays=" + depositPeriodDays + ", initialDepositAmount="
-				+ initialDepositAmount + ", profitCreditAccountId=" + profitCreditAccountId + ", repaymentAccountId="
-				+ repaymentAccountId + ", debitAccountId=" + debitAccountId + ", expectedResult=" + expectedResult
-				+ ", linkedTcid=" + linkedTcid + "]";
+				+ password + ", menu=" + menu + ", cif=" + cif + ", schemeCode=" + schemeCode + ", valueDate="
+				+ valueDate + ", depositPeriodMonths=" + depositPeriodMonths + ", depositPeriodDays="
+				+ depositPeriodDays + ", initialDepositAmount=" + initialDepositAmount + ", profitCreditAccountId="
+				+ profitCreditAccountId + ", repaymentAccountId=" + repaymentAccountId + ", debitAccountId="
+				+ debitAccountId + ", expectedResult=" + expectedResult + ", linkedTcid=" + linkedTcid + "]";
 	}
 }

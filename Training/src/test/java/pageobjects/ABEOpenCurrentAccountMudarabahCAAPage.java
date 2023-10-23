@@ -4,7 +4,6 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
 import utils.CSVUtils;
@@ -25,7 +24,7 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By continueButton = By.xpath("(//button[@id='_acctDetCon'])[1]");
 	private By taxDetailsMenu = By.xpath("//span[@id='stepII2_textSpan']");
-	private By taxCategoryMenu = By.id("_wtaxFlg_select");
+	private By taxCategoryDropDownList = By.id("_wtaxFlg_select");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By accountIdSuccessMessage = By.xpath("(//p[@id='_resMsg_paraMsg'])[1]");
 	public static String acId;
@@ -40,20 +39,22 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	
 	@Step("Sending menu name: {0}")
 	public ABEOpenCurrentAccountMudarabahCAAPage sendKeysSearchBarTextField(String menu) throws Exception {
-		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
-		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-	        PageFunctionUtils.clickOnElement(driver, searchButton);
+		if(menu != null) {
+			PageFunctionUtils.sleep();
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+		        }
+	        catch (Exception e) {
 	        }
-        catch (Exception e) {
         }
 	return this;
 	}
@@ -61,7 +62,7 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	@Step("Frame switching")
 	public ABEOpenCurrentAccountMudarabahCAAPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
@@ -69,32 +70,63 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 		return this;		
 	}
 	
-	@Step("Sending customer details: {0}")
-	public ABEOpenCurrentAccountMudarabahCAAPage sendKeysAccountDetails(String cifid, String schemeCode, String generalLedgerSubheadCode) throws Exception {
-		PageFunctionUtils.waitOnElement(driver, cifIdTextField);
-		PageFunctionUtils.clickOnElement(driver, cifIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifid);
-		PageFunctionUtils.clickOnElement(driver, schemeCodeTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, schemeCodeTextField, schemeCode);
-		PageFunctionUtils.clickOnElement(driver, generalLedgerSubheadCodeTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, generalLedgerSubheadCodeTextField, generalLedgerSubheadCode);
+	@Step("Sending cif id: {0}")
+	public ABEOpenCurrentAccountMudarabahCAAPage sendKeysCifIdTextField(String cifId) throws Exception {
+		if(cifId != null) {
+			PageFunctionUtils.waitOnElement(driver, cifIdTextField);
+			PageFunctionUtils.clickOnElement(driver, cifIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifId);
+		}
+		return this;
+	}
+	
+	@Step("Sending scheme code: {0}")
+	public ABEOpenCurrentAccountMudarabahCAAPage sendKeysSchemeCodeTextField(String schemeCode) throws Exception {
+		if(schemeCode != null) {
+			PageFunctionUtils.clickOnElement(driver, schemeCodeTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, schemeCodeTextField, schemeCode);
+		}
+		return this;
+	}
+	
+	@Step("Sending general ledger subhead code: {0}")
+	public ABEOpenCurrentAccountMudarabahCAAPage sendKeysGeneralLedgerSubheadCodeTextField(String generalLedgerSubheadCode) throws Exception {
+		if(generalLedgerSubheadCode != null) {
+			PageFunctionUtils.clickOnElement(driver, generalLedgerSubheadCodeTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, generalLedgerSubheadCodeTextField, generalLedgerSubheadCode);
+		}
+		return this;
+	}
+	
+	@Step("Press go button")
+	public ABEOpenCurrentAccountMudarabahCAAPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenCurrentAccountMudarabahCAAPage pressContinueButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continueButton);
+		return this;
+	}
+	
+	@Step("Select tax category")
+	public ABEOpenCurrentAccountMudarabahCAAPage selectTaxCategory() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, taxDetailsMenu);
-		Select dropdown = new Select(driver.findElement(taxCategoryMenu));
-		dropdown.selectByIndex(2);
+		PageFunctionUtils.selectDropDownListByIndex(driver, taxCategoryDropDownList, 2);
 		return this;
 	}
 	
 	@Step("Press submit button")
 	public ABEOpenCurrentAccountMudarabahCAAPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
+		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
 		acId = driver.findElement(accountIdSuccessMessage).getText().substring(53, 71);
 		return this;
 	}
 	
-	@Step("Save a/c. id")
+	@Step("Save account id")
 	public ABEOpenCurrentAccountMudarabahCAAPage saveAccountId(String linkedId) throws Exception {
 		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.OpenIslamicCurrentAccountCsv, linkedTcidCsvColumnName, linkedId);
 		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.OpenIslamicCurrentAccountCsv, referenceCsvColumnName);

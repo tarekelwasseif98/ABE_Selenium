@@ -14,7 +14,7 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
 	private String uxIframeId = "UX";
-	private By formAreaIframeId =By.xpath("//iframe[@name='formArea']");
+	private By formAreaIframeId = By.xpath("//iframe[@name='formArea']");
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By accountIdTextField = By.xpath("(//input[@id='_tempAcid'])[1]");
@@ -35,20 +35,22 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 	
 	@Step("Sending menu name: {0}")
 	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage sendKeysSearchBarTextField(String menu) throws Exception {
-		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
-		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-	        PageFunctionUtils.clickOnElement(driver, searchButton);
+		if(menu != null) {
+			PageFunctionUtils.sleep();
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+		        }
+	        catch (Exception e) {
 	        }
-        catch (Exception e) {
         }
 	return this;
 	}
@@ -56,7 +58,7 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 	@Step("Frame switching")
 	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
@@ -65,18 +67,25 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 		return this;	
 	}
 	
-	@Step("Sending a/c. id: {0}")
+	@Step("Sending account id: {0}")
 	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage sendKeysAccountIdTextField(String accountId) throws Exception {
-		accountId = accountId.substring(1);
-		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
-		PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+		if(accountId != null) {
+			accountId = accountId.substring(1);
+			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
+			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+		}
+		return this;
+	}
+	
+	@Step("Press go button: {0}")
+	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
 	
 	@Step("Side tab navigation")
-	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage navigateSideMenuTab() throws Exception {
+	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage navigateSideTabMenu() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, additionalDetailsSideTab);
 		PageFunctionUtils.clickOnElement(driver, profitDetailsSideTab);
 		PageFunctionUtils.clickOnElement(driver, taxDetailsSideTab);
@@ -90,6 +99,7 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 	@Step("Press submit button")
 	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
+		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.sleep();
 		return this;
 	}

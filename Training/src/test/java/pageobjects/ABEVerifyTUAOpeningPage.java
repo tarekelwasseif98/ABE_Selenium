@@ -13,13 +13,12 @@ public class ABEVerifyTUAOpeningPage {
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
 	private String uxIframeId = "UX";
-	private By formAreaIframeId =By.xpath("//iframe[@name='formArea']");
+	private By formAreaIframeId = By.xpath("//iframe[@name='formArea']");
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By accountIdTextField = By.xpath("(//input[@id='_modacctid'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private By warningAcceptButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
 	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	private By additionalDetailsSideTab = By.xpath("(//span[@id='stepIII_textSpan'])[1]");
 	private By generalDetailsSideTab = By.xpath("(//span[@id='stepIV_textSpan'])[1]");
@@ -39,20 +38,22 @@ public class ABEVerifyTUAOpeningPage {
 	
 	@Step("Sending menu name: {0}")
 	public ABEVerifyTUAOpeningPage sendKeysSearchBarTextField(String menu) throws Exception {
-		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
-		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-	        PageFunctionUtils.clickOnElement(driver, searchButton);
+		if(menu != null) {
+			PageFunctionUtils.sleep();
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+		        }
+	        catch (Exception e) {
 	        }
-        catch (Exception e) {
         }
 	return this;
 	}
@@ -60,7 +61,7 @@ public class ABEVerifyTUAOpeningPage {
 	@Step("Frame switching")
 	public ABEVerifyTUAOpeningPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
@@ -69,18 +70,25 @@ public class ABEVerifyTUAOpeningPage {
 		return this;	
 	}
 	
-	@Step("Sending a/c. id: {0}")
+	@Step("Sending account id: {0}")
 	public ABEVerifyTUAOpeningPage sendKeysAccountIdTextField(String accountId) throws Exception {
-		accountId = accountId.substring(1);
-		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
-		PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+		if(accountId != null) {
+			accountId = accountId.substring(1);
+			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
+			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+		}
+		return this;
+	}
+	
+	@Step("Press go button")
+	public ABEVerifyTUAOpeningPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
 	
 	@Step("Side tab navigation")
-	public ABEVerifyTUAOpeningPage navigateSideMenuTab() throws Exception {
+	public ABEVerifyTUAOpeningPage navigateSideTabMenu() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, additionalDetailsSideTab);
 		PageFunctionUtils.clickOnElement(driver, generalDetailsSideTab);
 		PageFunctionUtils.clickOnElement(driver, schemeDetailsSideTab);
@@ -98,24 +106,8 @@ public class ABEVerifyTUAOpeningPage {
 	@Step("Press submit button")
 	public ABEVerifyTUAOpeningPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
-		driver.switchTo().parentFrame();
-		Boolean isPresent1 = driver.findElements(warningAcceptButton).size() > 0;
-		if(isPresent1) {
-			PageFunctionUtils.clickOnElement(driver, warningAcceptButton);
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-			driver.switchTo().parentFrame();
-			Boolean isPresent2 = driver.findElements(warningAcceptButton).size() > 0;
-			if(isPresent2) {
-				PageFunctionUtils.clickOnElement(driver, warningAcceptButton);
-				PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-			}
-			else {
-				PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-			}
-		}
-		else {
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-		}
+		PageFunctionUtils.acceptWarning(driver);
+		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.sleep();
 		return this;
 	}

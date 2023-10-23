@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PageFunctionUtils {
@@ -12,6 +13,7 @@ public class PageFunctionUtils {
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 		driver.findElement(by).click();
 	}
+	
 	@Deprecated
 	public static void clickOnElementWorkAround(WebDriver driver, By by) {
 		int count = 0;
@@ -65,14 +67,42 @@ public class PageFunctionUtils {
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(id));
 	}
 	
+	public static void switchToParentFrame(WebDriver driver) throws InterruptedException {
+		driver.switchTo().parentFrame();
+	}
+	
 	public static void sleep() throws InterruptedException {
 		Thread.sleep(Properties.SleepTime);
 		}
 	
 	public static void scrollUp(WebDriver driver) throws InterruptedException {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollBy(0, -document.body.scrollHeight);");		}
+		jse.executeScript("window.scrollBy(0, -document.body.scrollHeight);");
+		}
 	
+	public static void selectDropDownListByIndex(WebDriver driver, By by, int index) {
+		Select dropdown = new Select(driver.findElement(by));
+		dropdown.selectByIndex(index);
+	}
+
+	public static void selectDropDownListByVisibleText(WebDriver driver, By by, String name) {
+		Select dropdown = new Select(driver.findElement(by));
+		dropdown.selectByVisibleText(name);
+	}
 	
+	public static void selectDropDownListByValue(WebDriver driver, By by, String value) {
+		Select dropdown = new Select(driver.findElement(by));
+		dropdown.selectByValue(value);
+	}
 	
+	public static void acceptWarning(WebDriver driver) throws InterruptedException {
+		PageFunctionUtils.switchToParentFrame(driver);
+		Boolean isPresent = driver.findElements(By.xpath("(//button[normalize-space()='Accept'])[1]")).size() > 0;
+		if(isPresent) {
+			PageFunctionUtils.clickOnElement(driver, By.xpath("(//button[normalize-space()='Accept'])[1]"));
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, By.xpath("//iframe[@name='formArea']"));
+		} else {
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, By.xpath("//iframe[@name='formArea']"));
+		}
+	}
 }

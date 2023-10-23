@@ -11,8 +11,10 @@ public class ABECloseTUAProcedures {
 		closeTUAPage.sendKeysSearchBarTextField(data.getMenu())
 					 .switchFormAreaFrame()
 					  .sendKeysAccountIdTextField(data.getAccountId())
-					   .sendKeysRepaymentAccountIdTextField(data.getRepaymentAccountId())
- 		   			    .pressSubmitButton()
-						 .saveAccountId(data.getLinkedTcid());
+					   .sendKeysClosureValueDateTextField(data.getClosureValueDate())
+					    .pressGoButton()
+					     .sendKeysRepaymentAccountIdTextField(data.getRepaymentAccountId())
+ 		   			      .pressSubmitButton()
+						   .saveAccountId(data.getLinkedTcid());
 		}
 	}

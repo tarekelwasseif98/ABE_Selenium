@@ -17,15 +17,15 @@ public class ABECloseTUAPage {
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
 	private String uxIframeId = "UX";
-	private By formAreaIframeID =By.xpath("//iframe[@name='formArea']");
+	private By formAreaIframeID = By.xpath("//iframe[@name='formArea']");
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By accountIdTextField = By.xpath("(//input[@id='_acntId'])[1]");
+	private By closureValueDateTextField = By.xpath("(//input[@id='_clsValDate'])[1]");
 	private By repaymentAccountIdTextField = By.xpath("(//input[@id='_repayActId'])[1]");
 	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Close Islamic Top Up Deposit Account'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private By warningAcceptButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
 	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	private By accountIdSuccessMessage = By.xpath("(//p[@id='_resMsg_paraMsg'])[1]");
 	public static String acId;
@@ -40,20 +40,22 @@ public class ABECloseTUAPage {
 	
 	@Step("Sending menu name: {0}")
 	public ABECloseTUAPage sendKeysSearchBarTextField(String menu) throws Exception {
-		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
-		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-	        PageFunctionUtils.clickOnElement(driver, searchButton);
+		if(menu != null) {
+			PageFunctionUtils.sleep();
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+		        }
+	        catch (Exception e) {
 	        }
-        catch (Exception e) {
         }
 	return this;
 	}
@@ -61,7 +63,7 @@ public class ABECloseTUAPage {
 	@Step("Frame switching")
 	public ABECloseTUAPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
-		driver.switchTo().parentFrame();
+		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
@@ -70,50 +72,57 @@ public class ABECloseTUAPage {
 		return this;	
 	}
 	
-	@Step("Sending a/c. id: {0}")
+	@Step("Sending account id: {0}")
 	public ABECloseTUAPage sendKeysAccountIdTextField(String accountId) throws Exception {
-		accountId = accountId.substring(1);
-		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
-		PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+		if(accountId != null) {
+			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
+			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Sending closure value date: {0}")
+	public ABECloseTUAPage sendKeysClosureValueDateTextField(String closureValueDate) throws Exception {
+		if(closureValueDate != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, closureValueDateTextField);
+			PageFunctionUtils.clickOnElement(driver, closureValueDateTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, closureValueDateTextField, closureValueDate.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Press go button")
+	public ABECloseTUAPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
 	
-	@Step("Sending repayment a/c. id: {0}")
+	@Step("Sending repayment account id: {0}")
 	public ABECloseTUAPage sendKeysRepaymentAccountIdTextField(String repaymentAccountId) throws Exception {
-		repaymentAccountId = repaymentAccountId.substring(1);
-		PageFunctionUtils.waitOnElement(driver, repaymentAccountIdTextField);
-		PageFunctionUtils.clearDataInWebElement(driver, repaymentAccountIdTextField);
-		PageFunctionUtils.clickOnElement(driver, repaymentAccountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, repaymentAccountIdTextField, repaymentAccountId);
+		if(repaymentAccountId != null) {
+			PageFunctionUtils.waitOnElement(driver, repaymentAccountIdTextField);
+			PageFunctionUtils.clearDataInWebElement(driver, repaymentAccountIdTextField);
+			PageFunctionUtils.clickOnElement(driver, repaymentAccountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, repaymentAccountIdTextField, repaymentAccountId.substring(1));
+		}
 		return this;
 	}
 	
 	@Step("Press submit button")
 	public ABECloseTUAPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
-		driver.switchTo().parentFrame();
-		Boolean isPresent1 = driver.findElements(warningAcceptButton).size() > 0;
-		if(isPresent1) {
-			PageFunctionUtils.clickOnElement(driver, warningAcceptButton);
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
-		}
-		else {
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
-		}
+		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.sleep();
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
-		acId = driver.findElement(accountIdSuccessMessage).getText().substring(60);
-		System.out.println(acId);
-		
+		acId = driver.findElement(accountIdSuccessMessage).getText().substring(60);		
 		WebElement element = driver.findElement(menuNameTextBox);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView();", element);
 		return this;
 	}
 	
-	@Step("Save a/c. id")
+	@Step("Save account id")
 	public ABECloseTUAPage saveAccountId(String linkedId) throws Exception {
 		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.CloseTUACsv, linkedTcidCsvColumnName, linkedId);
 		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyTUAClosureCsv, tcIdCsvColumnName, linkedId);

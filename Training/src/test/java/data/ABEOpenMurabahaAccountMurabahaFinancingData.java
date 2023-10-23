@@ -14,7 +14,6 @@ public class ABEOpenMurabahaAccountMurabahaFinancingData {
 	private String financePeriodDays;
 	private String debitAccountId;
 	private String equatedInstallment;
-	private String repaymentType;
 	private String numberOfInstallments;
 	private String installmentFrequency;
 	private String installmentStartDate;
@@ -26,7 +25,8 @@ public class ABEOpenMurabahaAccountMurabahaFinancingData {
 	private String operativeAccountId;
 	private String expiryDate;
 	private String documentDate;
-	private String limitId;
+	private String limitIdPrefix;
+	private String limitIdSuffix;
 	private String drawingPowerIndicator;
 	private String expectedResult;
 	private String reference;
@@ -136,14 +136,6 @@ public class ABEOpenMurabahaAccountMurabahaFinancingData {
 		this.equatedInstallment = equatedInstallment;
 	}
 	
-	public String getRepaymentType() {
-		return repaymentType;
-	}
-
-	public void setRepaymentType(String repaymentType) {
-		this.repaymentType = repaymentType;
-	}
-	
 	public String getNumberOfInstallments() {
 		return numberOfInstallments;
 	}
@@ -232,12 +224,20 @@ public class ABEOpenMurabahaAccountMurabahaFinancingData {
 		this.documentDate = documentDate;
 	}
 	
-	public String getLimitId() {
-		return limitId;
+	public String getLimitIdPrefix() {
+		return limitIdPrefix;
 	}
-	
-	public void setLimitId(String limitId) {
-		this.limitId = limitId;
+
+	public void setLimitIdPrefix(String limitIdPrefix) {
+		this.limitIdPrefix = limitIdPrefix;
+	}
+
+	public String getLimitIdSuffix() {
+		return limitIdSuffix;
+	}
+
+	public void setLimitIdSuffix(String limitIdSuffix) {
+		this.limitIdSuffix = limitIdSuffix;
 	}
 	
 	public String getDrawingPowerIndicator() {
@@ -278,12 +278,13 @@ public class ABEOpenMurabahaAccountMurabahaFinancingData {
 				+ username + ", password=" + password + ", menu=" + menu + ", cif=" + cif + ", schemeCode=" + schemeCode
 				+ ", assetValue=" + assetValue + ", customerMargin=" + customerMargin + ", financePeriodMonths="
 				+ financePeriodMonths + ", financePeriodDays=" + financePeriodDays + ", debitAccountId="
-				+ debitAccountId + ", equatedInstallment=" + equatedInstallment + ", repaymentType=" + repaymentType
-				+ ", numberOfInstallments=" + numberOfInstallments + ", installmentFrequency=" + installmentFrequency
-				+ ", installmentStartDate=" + installmentStartDate + ", date=" + date + ", calendar=" + calendar
-				+ ", onHoliday=" + onHoliday + ", profitFrequency=" + profitFrequency + ", profitStartDate="
-				+ profitStartDate + ", operativeAccountId=" + operativeAccountId + ", expiryDate=" + expiryDate
-				+ ", documentDate=" + documentDate + ", limitId=" + limitId + ", drawingPowerIndicator="
-				+ drawingPowerIndicator + ", expectedResult=" + expectedResult + ", linkedTcid=" + linkedTcid + "]";
+				+ debitAccountId + ", equatedInstallment=" + equatedInstallment + ", numberOfInstallments="
+				+ numberOfInstallments + ", installmentFrequency=" + installmentFrequency + ", installmentStartDate="
+				+ installmentStartDate + ", date=" + date + ", calendar=" + calendar + ", onHoliday=" + onHoliday
+				+ ", profitFrequency=" + profitFrequency + ", profitStartDate=" + profitStartDate
+				+ ", operativeAccountId=" + operativeAccountId + ", expiryDate=" + expiryDate + ", documentDate="
+				+ documentDate + ", limitIdPrefix=" + limitIdPrefix + ", limitIdSuffix=" + limitIdSuffix
+				+ ", drawingPowerIndicator=" + drawingPowerIndicator + ", expectedResult=" + expectedResult
+				+ ", linkedTcid=" + linkedTcid + "]";
 	}
 }

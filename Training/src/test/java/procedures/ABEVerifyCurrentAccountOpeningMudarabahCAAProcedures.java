@@ -12,7 +12,8 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAProcedures {
 		verifyCurrentAccountOpeningMudarabahCAAPage.sendKeysSearchBarTextField(data.getMenu())
 													.switchFormAreaFrame()
 													 .sendKeysAccountIdTextField(data.getAccountid())
-													  .navigateSideMenuTab()
-													   .pressSubmitButton();
+													  .pressGoButton()
+													   .navigateSideTabMenu()
+													    .pressSubmitButton();
 		}
 	}

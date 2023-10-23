@@ -2,91 +2,91 @@
  {
   "tcId": "FCB-10055",
   "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_CarsShortTerm_ByChecker_E1",
-  "username": "QA47",
+  "username": "ABE32",
   "password": "Infy@123",
   "menu": "VFADR",
-  "accountId": "''40100624601301313388",
+  "accountId": "''40100624601301314217",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10056",
   "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_CarsMedium&LongTerm_ByChecker_E2",
-  "username": "QA47",
+  "username": "ABE32",
   "password": "Infy@123",
   "menu": "VFADR",
-  "accountId": "''40110624601301313394",
+  "accountId": "''40110624601301314223",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10057",
   "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_MicroFinanceShortTerm_4012_ByChecker_E3",
-  "username": "QA47",
+  "username": "ABE32",
   "password": "Infy@123",
   "menu": "VFADR",
-  "accountId": "''40120624601301313409",
+  "accountId": "''40120624601301314239",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10058",
   "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_RetailProjectsShortTerm_ByChecker_E4",
-  "username": "QA47",
+  "username": "ABE32",
   "password": "Infy@123",
   "menu": "VFADR",
-  "accountId": "''40130624601301313415",
+  "accountId": "''40130624601301314245",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10059",
   "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_RetailProjectsMedium&LongTerm_ByChecker_E5",
-  "username": "QA47",
+  "username": "ABE32",
   "password": "Infy@123",
   "menu": "VFADR",
-  "accountId": "''40140624601301313421",
+  "accountId": "''40140624601301314251",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10060",
   "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_LivestockShortTerm_ByChecker_E6",
-  "username": "QA47",
+  "username": "ABE32",
   "password": "Infy@123",
   "menu": "VFADR",
-  "accountId": "''40150624601301313437",
+  "accountId": "''40150624601301314267",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10061",
   "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_LivestockMedium&LongTerm_ByChecker_E7",
-  "username": "QA47",
+  "username": "ABE32",
   "password": "Infy@123",
   "menu": "VFADR",
-  "accountId": "''40160624601301313443",
+  "accountId": "''40160624601301314273",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10062",
   "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_MicroFinanceCBEShortTerm_ByChecker_E8",
-  "username": "QA47",
+  "username": "ABE32",
   "password": "Infy@123",
   "menu": "VFADR",
-  "accountId": "''40170624601301313459",
+  "accountId": "''40170624601301314289",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10063",
   "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_MicroFinanceCBEMedium&LongTerm_ByChecker_E9",
-  "username": "QA47",
+  "username": "ABE32",
   "password": "Infy@123",
   "menu": "VFADR",
-  "accountId": "''40180624601301313465",
+  "accountId": "''40180624601301314295",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10064",
   "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_SMEs-S-CBE-ShortTerm_ByChecker_E10",
-  "username": "QA47",
+  "username": "ABE32",
   "password": "Infy@123",
   "menu": "VFADR",
-  "accountId": "''40000624601301313473",
+  "accountId": "''40000624601301314302",
   "expectedResult": "successfully"
  }
 ]

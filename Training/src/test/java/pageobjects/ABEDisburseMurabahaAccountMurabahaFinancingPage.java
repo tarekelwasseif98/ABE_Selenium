@@ -42,20 +42,22 @@ public class ABEDisburseMurabahaAccountMurabahaFinancingPage {
 	
 	@Step("Sending menu name: {0}")
 	public ABEDisburseMurabahaAccountMurabahaFinancingPage sendKeysSearchBarTextField(String menu) throws Exception {
-		PageFunctionUtils.sleep();
-		PageFunctionUtils.switchToParentFrame(driver);
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
-		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-	        PageFunctionUtils.clickOnElement(driver, searchButton);
+		if(menu != null) {
+			PageFunctionUtils.sleep();
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+		        }
+	        catch (Exception e) {
 	        }
-        catch (Exception e) {
         }
 	return this;
 	}
@@ -71,19 +73,39 @@ public class ABEDisburseMurabahaAccountMurabahaFinancingPage {
 		return this;		
 	}
 	
-	@Step("Sending customer details: {0}")
-	public ABEDisburseMurabahaAccountMurabahaFinancingPage sendKeysMurabahaAccountId(String murabahaAccountId) throws Exception {
-		PageFunctionUtils.waitOnElement(driver, murabahaAccountIdTextField);
-		PageFunctionUtils.clickOnElement(driver, murabahaAccountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, murabahaAccountIdTextField, murabahaAccountId.substring(1));
+	@Step("Sending account id: {0}")
+	public ABEDisburseMurabahaAccountMurabahaFinancingPage sendKeysAccountIdTextField(String murabahaAccountId) throws Exception {	
+		if(murabahaAccountId != null) {
+			PageFunctionUtils.waitOnElement(driver, murabahaAccountIdTextField);
+			PageFunctionUtils.clickOnElement(driver, murabahaAccountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, murabahaAccountIdTextField, murabahaAccountId.substring(1));
+		}
+		return this;
+	}
+	
+	
+	@Step("Press go button")
+	public ABEDisburseMurabahaAccountMurabahaFinancingPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
 	
 	@Step("Sending value date: {0}")
 	public ABEDisburseMurabahaAccountMurabahaFinancingPage sendKeysValueDateTextField(String valueDate) throws Exception {
-		PageFunctionUtils.enterDataInWebElement(driver, valueDateTextField, valueDate.substring(1));
+		if(valueDate != null) {
+			PageFunctionUtils.enterDataInWebElement(driver, valueDateTextField, valueDate.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Select transaction type")
+	public ABEDisburseMurabahaAccountMurabahaFinancingPage selectTransactionType() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, transactionTypeRadioButton);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEDisburseMurabahaAccountMurabahaFinancingPage pressContinue1Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue1Button);
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		try {
@@ -92,16 +114,43 @@ public class ABEDisburseMurabahaAccountMurabahaFinancingPage {
             PageFunctionUtils.clickOnElement(driver, continue1Button);
         } catch (Exception e) {
 		}
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEDisburseMurabahaAccountMurabahaFinancingPage pressContinue2Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue2Button);
 		return this;
 	}
 	
-	@Step("Sending disbursement mode details: {0}")
-	public ABEDisburseMurabahaAccountMurabahaFinancingPage sendKeysDisbursementModeDetails(String creditAccountId) throws Exception {
+	@Step("Press add button")
+	public ABEDisburseMurabahaAccountMurabahaFinancingPage pressAddButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, addButton);
+		return this;
+	}
+	
+	@Step("Select mode of disbursement")
+	public ABEDisburseMurabahaAccountMurabahaFinancingPage selectModeOfDisbursement() throws Exception {
 		PageFunctionUtils.selectDropDownListByIndex(driver, modeOfDisbursementDropDownList, 1);
-		PageFunctionUtils.enterDataInWebElement(driver, creditAccountIdTextfield, creditAccountId.substring(1));
+		return this;
+	}
+	
+	@Step("Sending credit account id: {0}")
+	public ABEDisburseMurabahaAccountMurabahaFinancingPage sendKeysCreditAccountIdTextField(String creditAccountId) throws Exception {
+		if(creditAccountId != null) {
+			PageFunctionUtils.enterDataInWebElement(driver, creditAccountIdTextfield, creditAccountId.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Press save and preview button")
+	public ABEDisburseMurabahaAccountMurabahaFinancingPage pressSaveAndPreviewButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, saveAndPreviewButton);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEDisburseMurabahaAccountMurabahaFinancingPage pressContinue3Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue3Button);
 		return this;
 	}
@@ -113,7 +162,7 @@ public class ABEDisburseMurabahaAccountMurabahaFinancingPage {
 		return this;
 	}
 	
-	@Step("Save a/c. id")
+	@Step("Save account id")
 	public ABEDisburseMurabahaAccountMurabahaFinancingPage saveAccountId(String accountId, String linkedId) throws Exception {
 		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.DisburseMurabahaAccountCsv, linkedTcidCsvColumnName, linkedId);
 		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyMurabahaAccountDisbursementCsv, tcIdCsvColumnName, linkedId);

@@ -11,6 +11,7 @@ public class ABEVerifyCasaAccountClosureMudarabahProcedures {
 		verifyCasaAccountClosureMudarabahPage.sendKeysSearchBarTextField(data.getMenu())
 									  	      .switchFormAreaFrame()
 									           .sendKeysAccountIdTextField(data.getAccountId())
-									            .pressSubmitButton();
+									            .pressGoButton()
+									             .pressSubmitButton();
 	}
 }

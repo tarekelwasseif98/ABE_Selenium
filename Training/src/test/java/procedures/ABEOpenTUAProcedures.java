@@ -9,9 +9,23 @@ public class ABEOpenTUAProcedures {
 		ABEOpenTUAPage openTUAPage = new ABEOpenTUAPage(driver);
 		openTUAPage.sendKeysSearchBarTextField(data.getMenu())
 				    .switchFormAreaFrame()
-					 .sendKeysAccountDetails(data.getCif(), data.getSchemeCode())
-					  .sendKeysTUADetails(data.getValueDate(), data.getDepositPeriodMonths(), data.getDepositPeriodDays(), data.getInitialDepositAmount(), data.getProfitCreditAccountId(), data.getRepaymentAccountId(), data.getDebitAccountId())
-					   .pressSubmitButton()
-				        .saveAccountId(data.getLinkedTcid());
+					 .sendKeysCifIdTextField(data.getCif())
+					  .sendKeysSchemeCodeTextField(data.getSchemeCode())
+					   .pressGoButton()
+					    .sendKeysValueDateTextField(data.getValueDate())
+					     .sendKeysDepositPeriodMonthsTextField(data.getDepositPeriodMonths())
+					      .sendKeysDepositPeriodDaysTextField(data.getDepositPeriodDays())
+					       .sendKeysInitialDepositAmountTextField(data.getInitialDepositAmount())
+					        .sendKeysProfitCreditAccountIdTextField(data.getProfitCreditAccountId())
+					         .sendKeysRepaymentAccountIdTextField(data.getRepaymentAccountId())
+					          .sendKeysDebitAccountIdTextField(data.getDebitAccountId())
+					           .pressContinue1Button()
+					            .sendKeysAccountOpeningDateTextField(data.getValueDate())
+					             .sendKeysApplicationDateTextField(data.getValueDate())
+					              .pressContinue2Button()
+					               .pressContinue3Button()
+					                .navigateRenewalAndClosureDetailsTabMenu()
+					                 .pressSubmitButton()
+					                  .saveAccountId(data.getLinkedTcid());
 		}
 	}

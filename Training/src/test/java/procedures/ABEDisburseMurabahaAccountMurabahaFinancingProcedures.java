@@ -9,10 +9,18 @@ public class ABEDisburseMurabahaAccountMurabahaFinancingProcedures {
 		ABEDisburseMurabahaAccountMurabahaFinancingPage disburseMurabahaAccountMurabahaFinancingPage = new ABEDisburseMurabahaAccountMurabahaFinancingPage(driver);
 		disburseMurabahaAccountMurabahaFinancingPage.sendKeysSearchBarTextField(data.getMenu())
 				    							 	 .switchFormAreaFrame()
-				    							 	  .sendKeysMurabahaAccountId(data.getMurabahaAccountId())
-				    							 	   .sendKeysValueDateTextField(data.getValueDate())
-				    							 	   	.sendKeysDisbursementModeDetails(data.getCreditAccountId())
-				    							         .pressSubmitButton()
-				    							          .saveAccountId(data.getMurabahaAccountId(), data.getLinkedTcid());
+				    							 	  .sendKeysAccountIdTextField(data.getMurabahaAccountId())
+				    							 	   .pressGoButton()
+				    							 	    .sendKeysValueDateTextField(data.getValueDate())
+				    							 	     .selectTransactionType()
+				    							 	      .pressContinue1Button()
+				    							 	       .pressContinue2Button()
+				    							 	        .pressAddButton()
+				    							 	         .selectModeOfDisbursement()
+				    							 	          .sendKeysCreditAccountIdTextField(data.getCreditAccountId())
+				    							 	           .pressSaveAndPreviewButton()
+				    							 	            .pressContinue3Button()
+				    							 	             .pressSubmitButton()
+				    							 	              .saveAccountId(data.getMurabahaAccountId(), data.getLinkedTcid());
 		}
 	}

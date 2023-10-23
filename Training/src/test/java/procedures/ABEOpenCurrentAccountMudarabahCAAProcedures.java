@@ -9,8 +9,13 @@ public class ABEOpenCurrentAccountMudarabahCAAProcedures {
 		ABEOpenCurrentAccountMudarabahCAAPage openCurrentAccountMudarabahCAAPage = new ABEOpenCurrentAccountMudarabahCAAPage(driver);
 		openCurrentAccountMudarabahCAAPage.sendKeysSearchBarTextField(data.getMenu())
 									       .switchFormAreaFrame()
-									        .sendKeysAccountDetails(data.getCif(), data.getSchemeCode(), data.getGeneralLedgerSubheadCode())
-									         .pressSubmitButton()
-										      .saveAccountId(data.getLinkedTCID());
+									        .sendKeysCifIdTextField(data.getCif())
+									         .sendKeysSchemeCodeTextField(data.getSchemeCode())
+									          .sendKeysGeneralLedgerSubheadCodeTextField(data.getGeneralLedgerSubheadCode())
+									           .pressGoButton()
+									            .pressContinueButton()
+									             .selectTaxCategory()
+									              .pressSubmitButton()
+										           .saveAccountId(data.getLinkedTCID());
 		}
 	}

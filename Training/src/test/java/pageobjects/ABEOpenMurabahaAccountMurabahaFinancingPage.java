@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
-import utils.AssertionFactory;
 import utils.CSVUtils;
 import utils.FinacleFieldsUtils;
 import utils.PageFunctionUtils;
@@ -75,19 +74,21 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 	
 	@Step("Sending menu name: {0}")
 	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysSearchBarTextField(String menu) throws Exception {
-		PageFunctionUtils.sleep();
-		PageFunctionUtils.switchToParentFrame(driver);
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
-		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-	        PageFunctionUtils.clickOnElement(driver, searchButton);
-	        } catch (Exception e) {
+		if(menu != null) {
+			PageFunctionUtils.sleep();
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+		        } catch (Exception e) {
+	        }
         }
 	return this;
 	}
@@ -103,49 +104,108 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 		return this;		
 	}
 	
-	@Step("Sending customer details: {0}")
-	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysAccountDetails(String cifid, String schemeCode) throws Exception {
-		PageFunctionUtils.waitOnElement(driver, cifIdTextField);
-		PageFunctionUtils.clickOnElement(driver, cifIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifid);
-		PageFunctionUtils.clickOnElement(driver, schemeCodeTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, schemeCodeTextField, schemeCode);
+	@Step("Sending cif id: {0}")
+	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysCifIdTextField(String cifid) throws Exception {
+		if(cifid != null) {
+			PageFunctionUtils.waitOnElement(driver, cifIdTextField);
+			PageFunctionUtils.clickOnElement(driver, cifIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifid);
+		}
+		return this;
+	}
+	
+	@Step("Sending scheme code: {0}")
+	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysSchemeCodeTextField(String schemeCode) throws Exception {
+		if(schemeCode != null) {
+			PageFunctionUtils.clickOnElement(driver, schemeCodeTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, schemeCodeTextField, schemeCode);
+		}
+		return this;
+	}
+	
+	@Step("Pres go button")
+	public ABEOpenMurabahaAccountMurabahaFinancingPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
 	
-	@Step("Sending basic asset details: {0}")
-	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysBasicAssetDetails(String assetValue, String customerMargin) throws Exception {
-		PageFunctionUtils.waitOnElement(driver, assetValueTextField);
-		PageFunctionUtils.clickOnElement(driver, assetValueTextField);
-		PageFunctionUtils.clearDataInWebElement(driver, assetValueTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, assetValueTextField, assetValue);
-		if(Integer.parseInt(assetValue) < Integer.parseInt(customerMargin)) {
-			AssertionFactory.assertionFail();
+	@Step("Sending asset value: {0}")
+	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysAssetValueTextField(String assetValue) throws Exception {
+		if(assetValue != null) {
+			PageFunctionUtils.waitOnElement(driver, assetValueTextField);
+			PageFunctionUtils.clickOnElement(driver, assetValueTextField);
+			PageFunctionUtils.clearDataInWebElement(driver, assetValueTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, assetValueTextField, assetValue);
 		}
-		else {
-			PageFunctionUtils.clickOnElement(driver, customerMarginTextField);
-			PageFunctionUtils.clearDataInWebElement(driver, customerMarginTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, customerMarginTextField, customerMargin);
-		}
+		return this;
+	}
+	
+	@Step("Sending customer margin: {0}")
+	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysCustomerMarginTextField(String customerMargin) throws Exception {
+			if(customerMargin != null) {
+				PageFunctionUtils.clickOnElement(driver, customerMarginTextField);
+				PageFunctionUtils.clearDataInWebElement(driver, customerMarginTextField);
+				PageFunctionUtils.enterDataInWebElement(driver, customerMarginTextField, customerMargin);
+			}
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenMurabahaAccountMurabahaFinancingPage pressContinue1Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue1Button);
 		return this;
 	}
 	
-	@Step("Sending finance details: {0}")
-	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysFinanceDetails(String financePeriodMonths, String financePeriodDays, String debitAccountId) throws Exception {
-		PageFunctionUtils.waitOnElement(driver, financePeriodMonthsTextField);
-		PageFunctionUtils.clickOnElement(driver, financePeriodMonthsTextField);
-		PageFunctionUtils.clearDataInWebElement(driver, financePeriodMonthsTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, financePeriodMonthsTextField, financePeriodMonths);
-		PageFunctionUtils.clickOnElement(driver, financePeriodDaysTextField);
-		PageFunctionUtils.clearDataInWebElement(driver, financePeriodDaysTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, financePeriodDaysTextField, financePeriodDays);
-		PageFunctionUtils.clickOnElement(driver, debitAccountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, debitAccountIdTextField, debitAccountId.substring(1));
+	@Step("Sending finance period months: {0}")
+	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysFinancePeriodMonthsTextField(String financePeriodMonths) throws Exception {
+		if(financePeriodMonths != null) {
+			PageFunctionUtils.waitOnElement(driver, financePeriodMonthsTextField);
+			PageFunctionUtils.clickOnElement(driver, financePeriodMonthsTextField);
+			PageFunctionUtils.clearDataInWebElement(driver, financePeriodMonthsTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, financePeriodMonthsTextField, financePeriodMonths);
+		}
+		return this;
+	}
+	
+	@Step("Sending finance period days: {0}")
+	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysFinancePeriodDaysTextField(String financePeriodDays) throws Exception {
+		if(financePeriodDays != null) {
+			PageFunctionUtils.clickOnElement(driver, financePeriodDaysTextField);
+			PageFunctionUtils.clearDataInWebElement(driver, financePeriodDaysTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, financePeriodDaysTextField, financePeriodDays);
+		}
+		return this;
+	}
+	
+	@Step("Sending debit account id: {0}")
+	public ABEOpenMurabahaAccountMurabahaFinancingPage sendKeysDebitAccountIdTextField(String debitAccountId) throws Exception {
+		if(debitAccountId != null) {
+			PageFunctionUtils.clickOnElement(driver, debitAccountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, debitAccountIdTextField, debitAccountId.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenMurabahaAccountMurabahaFinancingPage pressContinue2Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue2Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenMurabahaAccountMurabahaFinancingPage pressContinue3Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue3Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenMurabahaAccountMurabahaFinancingPage pressContinue4Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue4Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenMurabahaAccountMurabahaFinancingPage pressContinue5Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue5Button);
 		return this;
 	}

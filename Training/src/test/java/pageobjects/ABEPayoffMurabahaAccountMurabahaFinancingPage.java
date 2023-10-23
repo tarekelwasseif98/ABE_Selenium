@@ -39,20 +39,22 @@ public class ABEPayoffMurabahaAccountMurabahaFinancingPage {
 	
 	@Step("Sending menu name: {0}")
 	public ABEPayoffMurabahaAccountMurabahaFinancingPage sendKeysSearchBarTextField(String menu) throws Exception {
-		PageFunctionUtils.sleep();
-		PageFunctionUtils.switchToParentFrame(driver);
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
-		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-	        PageFunctionUtils.clickOnElement(driver, searchButton);
+		if(menu != null) {
+			PageFunctionUtils.sleep();
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+		        }
+	        catch (Exception e) {
 	        }
-        catch (Exception e) {
         }
 	return this;
 	}
@@ -68,16 +70,42 @@ public class ABEPayoffMurabahaAccountMurabahaFinancingPage {
 		return this;		
 	}
 	
-	@Step("Sending payoff details: {0}")
-	public ABEPayoffMurabahaAccountMurabahaFinancingPage sendKeysPayoffDetails(String accountId, String payoffValueDate, String refundAccountId) throws Exception {
-		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
-		PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(1));
-		PageFunctionUtils.clearDataInWebElement(driver, payoffValueDateTextField);
-		PageFunctionUtils.clickOnElement(driver, payoffValueDateTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, payoffValueDateTextField, payoffValueDate.substring(1));
+	@Step("Sending account id: {0}")
+	public ABEPayoffMurabahaAccountMurabahaFinancingPage sendKeysAccountIdTextField(String accountId) throws Exception {
+		if(accountId != null) {
+			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
+			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Sending payoff value date: {0}")
+	public ABEPayoffMurabahaAccountMurabahaFinancingPage sendKeysPayoffValueDateTextField(String payoffValueDate) throws Exception {
+		if(payoffValueDate != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, payoffValueDateTextField);
+			PageFunctionUtils.clickOnElement(driver, payoffValueDateTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, payoffValueDateTextField, payoffValueDate.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Select transaction type")
+	public ABEPayoffMurabahaAccountMurabahaFinancingPage selectTransactionType() throws Exception {
 		PageFunctionUtils.selectDropDownListByIndex(driver, transactionTypeDropDownList, 2);
-		PageFunctionUtils.enterDataInWebElement(driver, refundAccountIdTextField, refundAccountId.substring(1));
+		return this;
+	}
+	
+	@Step("Sending refund account id: {0}")
+	public ABEPayoffMurabahaAccountMurabahaFinancingPage sendKeysRefundAccountIdTextField(String refundAccountId) throws Exception {
+		if(refundAccountId != null) {
+			PageFunctionUtils.enterDataInWebElement(driver, refundAccountIdTextField, refundAccountId.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Press go button")
+	public ABEPayoffMurabahaAccountMurabahaFinancingPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		try {
 			PageFunctionUtils.clickOnElement(driver, goButton);
@@ -86,8 +114,8 @@ public class ABEPayoffMurabahaAccountMurabahaFinancingPage {
 		return this;
 	}
 	
-	@Step("Side tab navigation")
-	public ABEPayoffMurabahaAccountMurabahaFinancingPage navigateSideMenuTab() throws Exception {
+	@Step("Press continue button")
+	public ABEPayoffMurabahaAccountMurabahaFinancingPage pressContinue1Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue1Button);
 		try {
 			PageFunctionUtils.switchToParentFrame(driver);
@@ -96,6 +124,11 @@ public class ABEPayoffMurabahaAccountMurabahaFinancingPage {
         } catch (Exception e) {
         	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		}
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEPayoffMurabahaAccountMurabahaFinancingPage pressContinue2Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue2Button);
 		return this;
 	}
@@ -108,7 +141,7 @@ public class ABEPayoffMurabahaAccountMurabahaFinancingPage {
 		return this;
 	}
 	
-	@Step("Save a/c. id")
+	@Step("Save account id")
 	public ABEPayoffMurabahaAccountMurabahaFinancingPage saveAccountId(String accountId, String linkedId) throws Exception {
 		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.PayoffMurabahaAccountCsv, linkedTcidCsvColumnName, linkedId);
 		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyMurabahaAccountPayoffCsv, tcIdCsvColumnName, linkedId);

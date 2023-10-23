@@ -10,9 +10,11 @@ public class ABECloseTUAProcedures {
 		ABECloseTUAPage closeTUAPage = new ABECloseTUAPage(driver);
 		closeTUAPage.sendKeysSearchBarTextField(data.getMenu())
 					 .switchFormAreaFrame()
-					  .sendKeysAccountIdTextField(data.getAccountId(), data.getClosureValueDate())
-					   .sendKeysRepaymentAccountIdTextField(data.getRepaymentAccountId())
- 		   			    .pressSubmitButton()
-						 .saveAccountId(data.getLinkedTcid());
+					  .sendKeysAccountIdTextField(data.getAccountId())
+					   .sendKeysClosureValueDateTextField(data.getClosureValueDate())
+					    .pressGoButton()
+					     .sendKeysRepaymentAccountIdTextField(data.getRepaymentAccountId())
+ 		   			      .pressSubmitButton()
+						   .saveAccountId(data.getLinkedTcid());
 		}
 	}

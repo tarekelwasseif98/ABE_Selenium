@@ -40,20 +40,22 @@ public class ABECloseTUAPage {
 	
 	@Step("Sending menu name: {0}")
 	public ABECloseTUAPage sendKeysSearchBarTextField(String menu) throws Exception {
-		PageFunctionUtils.sleep();
-		PageFunctionUtils.switchToParentFrame(driver);
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
-		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-	        PageFunctionUtils.clickOnElement(driver, searchButton);
+		if(menu != null) {
+			PageFunctionUtils.sleep();
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+		        }
+	        catch (Exception e) {
 	        }
-        catch (Exception e) {
         }
 	return this;
 	}
@@ -70,26 +72,40 @@ public class ABECloseTUAPage {
 		return this;	
 	}
 	
-	@Step("Sending a/c. id: {0}")
-	public ABECloseTUAPage sendKeysAccountIdTextField(String accountId, String closureValueDate) throws Exception {
-		accountId = accountId.substring(1);
-		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
-		PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
-		PageFunctionUtils.clearDataInWebElement(driver, closureValueDateTextField);
-		PageFunctionUtils.clickOnElement(driver, closureValueDateTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, closureValueDateTextField, closureValueDate.substring(1));
+	@Step("Sending account id: {0}")
+	public ABECloseTUAPage sendKeysAccountIdTextField(String accountId) throws Exception {
+		if(accountId != null) {
+			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
+			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Sending closure value date: {0}")
+	public ABECloseTUAPage sendKeysClosureValueDateTextField(String closureValueDate) throws Exception {
+		if(closureValueDate != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, closureValueDateTextField);
+			PageFunctionUtils.clickOnElement(driver, closureValueDateTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, closureValueDateTextField, closureValueDate.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Press go button")
+	public ABECloseTUAPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
 	
-	@Step("Sending repayment a/c. id: {0}")
+	@Step("Sending repayment account id: {0}")
 	public ABECloseTUAPage sendKeysRepaymentAccountIdTextField(String repaymentAccountId) throws Exception {
-		repaymentAccountId = repaymentAccountId.substring(1);
-		PageFunctionUtils.waitOnElement(driver, repaymentAccountIdTextField);
-		PageFunctionUtils.clearDataInWebElement(driver, repaymentAccountIdTextField);
-		PageFunctionUtils.clickOnElement(driver, repaymentAccountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, repaymentAccountIdTextField, repaymentAccountId);
+		if(repaymentAccountId != null) {
+			PageFunctionUtils.waitOnElement(driver, repaymentAccountIdTextField);
+			PageFunctionUtils.clearDataInWebElement(driver, repaymentAccountIdTextField);
+			PageFunctionUtils.clickOnElement(driver, repaymentAccountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, repaymentAccountIdTextField, repaymentAccountId.substring(1));
+		}
 		return this;
 	}
 	
@@ -106,7 +122,7 @@ public class ABECloseTUAPage {
 		return this;
 	}
 	
-	@Step("Save a/c. id")
+	@Step("Save account id")
 	public ABECloseTUAPage saveAccountId(String linkedId) throws Exception {
 		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.CloseTUACsv, linkedTcidCsvColumnName, linkedId);
 		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyTUAClosureCsv, tcIdCsvColumnName, linkedId);

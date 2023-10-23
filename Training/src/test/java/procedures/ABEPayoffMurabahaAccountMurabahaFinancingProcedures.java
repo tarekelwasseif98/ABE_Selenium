@@ -9,9 +9,14 @@ public class ABEPayoffMurabahaAccountMurabahaFinancingProcedures {
 		ABEPayoffMurabahaAccountMurabahaFinancingPage payoffMurabahaAccountMurabahaFinancingPage = new ABEPayoffMurabahaAccountMurabahaFinancingPage(driver);
 		payoffMurabahaAccountMurabahaFinancingPage.sendKeysSearchBarTextField(data.getMenu())
 				    							 	 .switchFormAreaFrame()
-				    							 	  .sendKeysPayoffDetails(data.getAccountId(), data.getPayoffValueDate(), data.getRefundAccountId())
-				    							 	   .navigateSideMenuTab()
-				    							 	    .pressSubmitButton()
-				    							 	     .saveAccountId(data.getAccountId(), data.getLinkedTcid());
+				    							 	  .sendKeysAccountIdTextField(data.getAccountId())
+				    							 	   .sendKeysPayoffValueDateTextField(data.getPayoffValueDate())
+				    							 	    .selectTransactionType()
+				    							 	     .sendKeysRefundAccountIdTextField(data.getRefundAccountId())
+				    							 	      .pressGoButton()
+				    							 	       .pressContinue1Button()
+				    							 	        .pressContinue2Button()
+				    							 	         .pressSubmitButton()
+				    							 	          .saveAccountId(data.getAccountId(), data.getLinkedTcid());
 		}
 	}

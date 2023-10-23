@@ -1,5 +1,1711 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="50" passed="50" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+  <suite started-at="2023-10-23T19:53:26 EEST" name="Suite" finished-at="2023-10-23T20:07:37 EEST" duration-ms="851370">
+    <groups>
+      <group name="ABEVerifyCorporateLoanCorporateLoansTest">
+        <method signature="ABEVerifyCorporateLoanCorporateLoansTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" name="verifyIslamicMurabahaAccountOpeningTest" class="tests.ABEVerifyCorporateLoanCorporateLoansTest"/>
+      </group> <!-- ABEVerifyCorporateLoanCorporateLoansTest -->
+      <group name="ABEOpenCorporateLoanCorporateLoansTest">
+        <method signature="ABEOpenCorporateLoanCorporateLoansTest.openCorporateLoanCorporateLoansTest(data.ABEOpenCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" name="openCorporateLoanCorporateLoansTest" class="tests.ABEOpenCorporateLoanCorporateLoansTest"/>
+      </group> <!-- ABEOpenCorporateLoanCorporateLoansTest -->
+    </groups>
+    <test started-at="2023-10-23T19:53:26 EEST" name="ABE Open Corporate Loan Corporate Loans" finished-at="2023-10-23T20:07:37 EEST" duration-ms="851370">
+      <class name="tests.ABEOpenCorporateLoanCorporateLoansTest">
+        <test-method is-config="true" signature="oneTimeSetUp()[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T19:53:26 EEST" name="oneTimeSetUp" finished-at="2023-10-23T19:53:26 EEST" duration-ms="31" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneTimeSetUp -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T19:53:26 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T19:53:43 EEST" duration-ms="17216" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@5c44c582]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openCorporateLoanCorporateLoansTest(data.ABEOpenCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T19:53:43 EEST" name="openCorporateLoanCorporateLoansTest" data-provider="Open Corporate Loan Corporate Loans DataProvider" finished-at="2023-10-23T19:55:35 EEST" duration-ms="111933" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEOpenCorporateLoanCorporateLoansData [tcId=FCB-12204, summary=Assets_CLA_Corporate_OpenLoan_Unsecured_Floating_CLSMK_EGP_ByMaker_BE1, username=PT15, password=Infy@123, menu=OCLA, cif=6218048, schemeCode=2292, accountOpeningDate='17-10-2023, loanAmount=10000, loanPeriodMonths=12, loanPeriodDays=0, equatedInstallment=yes, numberOfInstallments=12, installmentFrequency=monthly, installmentStartDate='17-11-2023, date=17, calendar=gregorian calendar, onHoliday=next day, interestFrequency=null, interestStartDate=null, operativeAccountId='100306218048010013, expiryDate='01-01-2099, documentDate='17-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-12205]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCorporateLoanCorporateLoansTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T19:55:35 EEST" name="after" finished-at="2023-10-23T19:55:35 EEST" duration-ms="168" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openCorporateLoanCorporateLoansTest status=SUCCESS method=ABEOpenCorporateLoanCorporateLoansTest.openCorporateLoanCorporateLoansTest(data.ABEOpenCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T19:55:35 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T19:55:40 EEST" duration-ms="4437" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@67d18ed7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openCorporateLoanCorporateLoansTest(data.ABEOpenCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T19:55:40 EEST" name="openCorporateLoanCorporateLoansTest" data-provider="Open Corporate Loan Corporate Loans DataProvider" finished-at="2023-10-23T19:57:32 EEST" duration-ms="112085" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEOpenCorporateLoanCorporateLoansData [tcId=FCB-12206, summary=Assets_CLA_Corporate_OpenLoan_Unsecured_Floating_CLSFT_EGP_ByMaker_BF1, username=PT15, password=Infy@123, menu=OCLA, cif=6218048, schemeCode=2293, accountOpeningDate='17-10-2023, loanAmount=50000, loanPeriodMonths=6, loanPeriodDays=0, equatedInstallment=no, numberOfInstallments=1, installmentFrequency=bullet, installmentStartDate='17-11-2025, date=17, calendar=gregorian calendar, onHoliday=next day, interestFrequency=monthly, interestStartDate='17-10-2023, operativeAccountId='100306218048010013, expiryDate='01-01-2099, documentDate='17-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-12207]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCorporateLoanCorporateLoansTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T19:57:32 EEST" name="after" finished-at="2023-10-23T19:57:32 EEST" duration-ms="164" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openCorporateLoanCorporateLoansTest status=SUCCESS method=ABEOpenCorporateLoanCorporateLoansTest.openCorporateLoanCorporateLoansTest(data.ABEOpenCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T19:57:32 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T19:57:39 EEST" duration-ms="6770" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@2c78d320]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openCorporateLoanCorporateLoansTest(data.ABEOpenCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T19:57:39 EEST" name="openCorporateLoanCorporateLoansTest" data-provider="Open Corporate Loan Corporate Loans DataProvider" finished-at="2023-10-23T19:58:37 EEST" duration-ms="58144" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEOpenCorporateLoanCorporateLoansData [tcId=FCB-12208, summary=Assets_CLA_Corporate_OpenLoan_Unsecured_Floating_LSMCB_EGP_ByMaker_BG1, username=PT15, password=Infy@123, menu=OCLA, cif=6218048, schemeCode=2294, accountOpeningDate='17-10-2023, loanAmount=100000, loanPeriodMonths=12, loanPeriodDays=0, equatedInstallment=yes, numberOfInstallments=12, installmentFrequency=monthly, installmentStartDate='17-11-2023, date=17, calendar=gregorian calendar, onHoliday=next day, interestFrequency=null, interestStartDate=null, operativeAccountId='100306218048010013, expiryDate='01-01-2099, documentDate='17-10-2023, limitIdPrefix='00000004485, limitIdSuffix='TFBLM, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-12209]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCorporateLoanCorporateLoansTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T19:58:37 EEST" name="after" finished-at="2023-10-23T19:58:37 EEST" duration-ms="190" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openCorporateLoanCorporateLoansTest status=SUCCESS method=ABEOpenCorporateLoanCorporateLoansTest.openCorporateLoanCorporateLoansTest(data.ABEOpenCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T19:58:37 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T19:58:43 EEST" duration-ms="5397" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@132e0cc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openCorporateLoanCorporateLoansTest(data.ABEOpenCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T19:58:43 EEST" name="openCorporateLoanCorporateLoansTest" data-provider="Open Corporate Loan Corporate Loans DataProvider" finished-at="2023-10-23T20:00:34 EEST" duration-ms="111204" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEOpenCorporateLoanCorporateLoansData [tcId=FCB-12210, summary=Assets_CLA_Corporate_OpenLoan_Unsecured_Floating_LSSCB_EGP_ByMaker_BH1, username=PT15, password=Infy@123, menu=OCLA, cif=6218048, schemeCode=2295, accountOpeningDate='17-10-2023, loanAmount=70000, loanPeriodMonths=12, loanPeriodDays=0, equatedInstallment=yes, numberOfInstallments=4, installmentFrequency=quarterly, installmentStartDate='17-11-2023, date=17, calendar=gregorian calendar, onHoliday=next day, interestFrequency=null, interestStartDate=null, operativeAccountId='100306218048010013, expiryDate='01-01-2099, documentDate='17-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-12211]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCorporateLoanCorporateLoansTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T20:00:34 EEST" name="after" finished-at="2023-10-23T20:00:34 EEST" duration-ms="196" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openCorporateLoanCorporateLoansTest status=SUCCESS method=ABEOpenCorporateLoanCorporateLoansTest.openCorporateLoanCorporateLoansTest(data.ABEOpenCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T20:00:34 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:00:40 EEST" duration-ms="5604" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@7b205dbd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openCorporateLoanCorporateLoansTest(data.ABEOpenCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T20:00:40 EEST" name="openCorporateLoanCorporateLoansTest" data-provider="Open Corporate Loan Corporate Loans DataProvider" finished-at="2023-10-23T20:02:31 EEST" duration-ms="111655" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEOpenCorporateLoanCorporateLoansData [tcId=FCB-12212, summary=Assets_CLA_Corporate_OpenLoan_Unsecured_Floating_CPOLN_EGP_ByMaker_BI1, username=PT15, password=Infy@123, menu=OCLA, cif=6218048, schemeCode=2296, accountOpeningDate='17-10-2023, loanAmount=200000, loanPeriodMonths=24, loanPeriodDays=0, equatedInstallment=yes, numberOfInstallments=24, installmentFrequency=monthly, installmentStartDate='17-11-2023, date=17, calendar=gregorian calendar, onHoliday=next day, interestFrequency=null, interestStartDate=null, operativeAccountId='100306218048010013, expiryDate='01-01-2099, documentDate='17-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-12213]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openCorporateLoanCorporateLoansTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8]" started-at="2023-10-23T20:02:31 EEST" name="after" finished-at="2023-10-23T20:02:32 EEST" duration-ms="207" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openCorporateLoanCorporateLoansTest status=SUCCESS method=ABEOpenCorporateLoanCorporateLoansTest.openCorporateLoanCorporateLoansTest(data.ABEOpenCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEOpenCorporateLoanCorporateLoansTest@5c669da8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- tests.ABEOpenCorporateLoanCorporateLoansTest -->
+      <class name="tests.ABEVerifyCorporateLoanCorporateLoansTest">
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" started-at="2023-10-23T20:02:32 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:02:47 EEST" duration-ms="15527" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@106cc338]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" started-at="2023-10-23T20:02:47 EEST" name="verifyIslamicMurabahaAccountOpeningTest" data-provider="Verify Corporate Loan Corporate Loans DataProvider" depends-on-groups="ABEOpenCorporateLoanCorporateLoansTest" finished-at="2023-10-23T20:03:39 EEST" duration-ms="51868" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyCorporateLoanCorporateLoansData [tcId=FCB-12205, summary=Assets_CLA_Corporate_Verify_Unsecured_Floating_CLSMK_EGP_ByChecker_BE2, username=PT16, password=Infy@123, menu=VCLA, accountId='22920621804801316533, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicMurabahaAccountOpeningTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" started-at="2023-10-23T20:03:39 EEST" name="after" finished-at="2023-10-23T20:03:40 EEST" duration-ms="1200" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicMurabahaAccountOpeningTest status=SUCCESS method=ABEVerifyCorporateLoanCorporateLoansTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" started-at="2023-10-23T20:03:40 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:03:45 EEST" duration-ms="5206" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@7a67e3c6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" started-at="2023-10-23T20:03:45 EEST" name="verifyIslamicMurabahaAccountOpeningTest" data-provider="Verify Corporate Loan Corporate Loans DataProvider" depends-on-groups="ABEOpenCorporateLoanCorporateLoansTest" finished-at="2023-10-23T20:04:37 EEST" duration-ms="51898" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyCorporateLoanCorporateLoansData [tcId=FCB-12207, summary=Assets_CLA_Corporate_Verify_Unsecured_Floating_CLSFT_EGP_ByChecker_BF2, username=PT16, password=Infy@123, menu=VCLA, accountId='22930621804801316556, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicMurabahaAccountOpeningTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" started-at="2023-10-23T20:04:37 EEST" name="after" finished-at="2023-10-23T20:04:38 EEST" duration-ms="1168" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicMurabahaAccountOpeningTest status=SUCCESS method=ABEVerifyCorporateLoanCorporateLoansTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" started-at="2023-10-23T20:04:38 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:04:44 EEST" duration-ms="5353" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@6cc558c6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" started-at="2023-10-23T20:04:44 EEST" name="verifyIslamicMurabahaAccountOpeningTest" data-provider="Verify Corporate Loan Corporate Loans DataProvider" depends-on-groups="ABEOpenCorporateLoanCorporateLoansTest" finished-at="2023-10-23T20:05:36 EEST" duration-ms="52424" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyCorporateLoanCorporateLoansData [tcId=FCB-12209, summary=Assets_CLA_Corporate_Verify_Unsecured_Floating_LSMCB_EGP_ByChecker_BG2, username=PT16, password=Infy@123, menu=VCLA, accountId='22940621804801316562, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicMurabahaAccountOpeningTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" started-at="2023-10-23T20:05:36 EEST" name="after" finished-at="2023-10-23T20:05:37 EEST" duration-ms="1192" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicMurabahaAccountOpeningTest status=SUCCESS method=ABEVerifyCorporateLoanCorporateLoansTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" started-at="2023-10-23T20:05:37 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:05:43 EEST" duration-ms="5427" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@15713d56]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" started-at="2023-10-23T20:05:43 EEST" name="verifyIslamicMurabahaAccountOpeningTest" data-provider="Verify Corporate Loan Corporate Loans DataProvider" depends-on-groups="ABEOpenCorporateLoanCorporateLoansTest" finished-at="2023-10-23T20:06:35 EEST" duration-ms="52198" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyCorporateLoanCorporateLoansData [tcId=FCB-12211, summary=Assets_CLA_Corporate_Verify_Unsecured_Floating_LSSCB_EGP_ByChecker_BH2, username=PT16, password=Infy@123, menu=VCLA, accountId='22950621804801316585, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicMurabahaAccountOpeningTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" started-at="2023-10-23T20:06:35 EEST" name="after" finished-at="2023-10-23T20:06:36 EEST" duration-ms="1182" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicMurabahaAccountOpeningTest status=SUCCESS method=ABEVerifyCorporateLoanCorporateLoansTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" started-at="2023-10-23T20:06:36 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:06:44 EEST" duration-ms="7299" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@63f259c3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" started-at="2023-10-23T20:06:44 EEST" name="verifyIslamicMurabahaAccountOpeningTest" data-provider="Verify Corporate Loan Corporate Loans DataProvider" depends-on-groups="ABEOpenCorporateLoanCorporateLoansTest" finished-at="2023-10-23T20:07:36 EEST" duration-ms="52252" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyCorporateLoanCorporateLoansData [tcId=FCB-12213, summary=Assets_CLA_Corporate_Verify_Unsecured_Floating_CPOLN_EGP_ByChecker_BI2, username=PT16, password=Infy@123, menu=VCLA, accountId='22960621804801316607, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicMurabahaAccountOpeningTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc]" started-at="2023-10-23T20:07:36 EEST" name="after" finished-at="2023-10-23T20:07:37 EEST" duration-ms="1197" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicMurabahaAccountOpeningTest status=SUCCESS method=ABEVerifyCorporateLoanCorporateLoansTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyCorporateLoanCorporateLoansData)[pri:0, instance:tests.ABEVerifyCorporateLoanCorporateLoansTest@1ae8bcbc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- tests.ABEVerifyCorporateLoanCorporateLoansTest -->
+    </test> <!-- ABE Open Corporate Loan Corporate Loans -->
+  </suite> <!-- Suite -->
+  <suite started-at="2023-10-23T19:53:26 EEST" name="Suite (0)" finished-at="2023-10-23T20:56:28 EEST" duration-ms="3782400">
+    <groups>
+      <group name="ABEOpenMurabahaAccountMurabahaFinancingTest">
+        <method signature="ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" name="openMurabahaAccountMurabahaFinancingTest" class="tests.ABEOpenMurabahaAccountMurabahaFinancingTest"/>
+      </group> <!-- ABEOpenMurabahaAccountMurabahaFinancingTest -->
+      <group name="ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest">
+        <method signature="ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" name="verifyIslamicMurabahaAccountOpeningTest" class="tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest"/>
+      </group> <!-- ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest -->
+      <group name="ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest">
+        <method signature="ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest.verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" name="verifyMurabahaAccountDisbursementMurabahaFinancingTest" class="tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest"/>
+      </group> <!-- ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest -->
+      <group name="ABEDisburseMurabahaAccountMurabahaFinancingTest">
+        <method signature="ABEDisburseMurabahaAccountMurabahaFinancingTest.disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" name="disburseMurabahaAccountMurabahaFinancingTest" class="tests.ABEDisburseMurabahaAccountMurabahaFinancingTest"/>
+      </group> <!-- ABEDisburseMurabahaAccountMurabahaFinancingTest -->
+    </groups>
+    <test started-at="2023-10-23T19:53:26 EEST" name="ABE Open Murabaha Account Murabaha Financing" finished-at="2023-10-23T20:35:49 EEST" duration-ms="2543819">
+      <class name="tests.ABEOpenMurabahaAccountMurabahaFinancingTest">
+        <test-method is-config="true" signature="oneTimeSetUp()[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T19:53:26 EEST" name="oneTimeSetUp" finished-at="2023-10-23T19:53:26 EEST" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneTimeSetUp -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T19:53:26 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T19:53:44 EEST" duration-ms="17563" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@26ceffa8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T19:53:44 EEST" name="openMurabahaAccountMurabahaFinancingTest" data-provider="Open Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T19:56:10 EEST" duration-ms="146064" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9938, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_CarsShortTerm_4010_ByMaker_B1, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4010, assetValue=10000, customerMargin=2000, financePeriodMonths=12, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=12, installmentFrequency=monthly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate=null, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix='1000, limitIdSuffix='CUSTL, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9973, disburseTcid=FCB-10020]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T19:56:10 EEST" name="after" finished-at="2023-10-23T19:56:10 EEST" duration-ms="203" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T19:56:10 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T19:56:15 EEST" duration-ms="5393" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@600b90df]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T19:56:15 EEST" name="openMurabahaAccountMurabahaFinancingTest" data-provider="Open Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T19:58:42 EEST" duration-ms="146950" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9939, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_CarsMedium&LongTerm_4011_ByMaker_B2, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4011, assetValue=50000, customerMargin=0, financePeriodMonths=24, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=no, numberOfInstallments=1, installmentFrequency=null, installmentStartDate='10-10-2024, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=monthly, profitStartDate='10-10-2024, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9974, disburseTcid=FCB-10021]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T19:58:42 EEST" name="after" finished-at="2023-10-23T19:58:42 EEST" duration-ms="190" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T19:58:42 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T19:58:49 EEST" duration-ms="6417" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@7c8c9a05]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T19:58:49 EEST" name="openMurabahaAccountMurabahaFinancingTest" data-provider="Open Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:01:15 EEST" duration-ms="145790" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9940, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_MicroFinanceShortTerm_4012_ByMaker_B3, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4012, assetValue=100000, customerMargin=0, financePeriodMonths=12, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=12, installmentFrequency=monthly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate=null, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9975, disburseTcid=FCB-10022]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:01:15 EEST" name="after" finished-at="2023-10-23T20:01:15 EEST" duration-ms="171" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:01:15 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:01:20 EEST" duration-ms="5513" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@d41f816]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:01:20 EEST" name="openMurabahaAccountMurabahaFinancingTest" data-provider="Open Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:03:46 EEST" duration-ms="146047" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9941, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_RetailProjectsShortTerm_4013_ByMaker_B4, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4013, assetValue=70000, customerMargin=30000, financePeriodMonths=12, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=4, installmentFrequency=quarterly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate=null, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9976, disburseTcid=FCB-10023]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:03:46 EEST" name="after" finished-at="2023-10-23T20:03:47 EEST" duration-ms="175" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:03:47 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:03:53 EEST" duration-ms="6215" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@5c2375a9]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:03:53 EEST" name="openMurabahaAccountMurabahaFinancingTest" data-provider="Open Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:06:18 EEST" duration-ms="145570" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9942, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_RetailProjectsMedium&LongTerm_4014_ByMaker_B5, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4014, assetValue=200000, customerMargin=50000, financePeriodMonths=24, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=24, installmentFrequency=monthly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate='10-10-2023, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9977, disburseTcid=FCB-10024]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:06:18 EEST" name="after" finished-at="2023-10-23T20:06:19 EEST" duration-ms="166" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:06:19 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:06:24 EEST" duration-ms="5234" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@60129b9a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:06:24 EEST" name="openMurabahaAccountMurabahaFinancingTest" data-provider="Open Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:08:56 EEST" duration-ms="151779" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9943, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_LivestockShortTerm_4015_ByMaker_B6, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4015, assetValue=90000, customerMargin=0, financePeriodMonths=12, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=2, installmentFrequency=half yearly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate='10-10-2023, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9978, disburseTcid=FCB-10025]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:08:56 EEST" name="after" finished-at="2023-10-23T20:08:56 EEST" duration-ms="189" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:08:56 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:09:10 EEST" duration-ms="14562" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@78d6692f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:09:10 EEST" name="openMurabahaAccountMurabahaFinancingTest" data-provider="Open Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:11:41 EEST" duration-ms="150749" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9944, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_LivestockMedium&LongTerm_4016_ByMaker_B7, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4016, assetValue=200000, customerMargin=0, financePeriodMonths=24, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=24, installmentFrequency=monthly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate='10-10-2023, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9979, disburseTcid=FCB-10026]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:11:41 EEST" name="after" finished-at="2023-10-23T20:11:41 EEST" duration-ms="167" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:11:41 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:11:47 EEST" duration-ms="5951" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@7a55af6b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:11:47 EEST" name="openMurabahaAccountMurabahaFinancingTest" data-provider="Open Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:14:19 EEST" duration-ms="151377" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9945, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_MicroFinanceCBEShortTerm_4017_ByMaker_B8, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4017, assetValue=100000, customerMargin=0, financePeriodMonths=12, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=48, installmentFrequency=weekly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate='10-10-2023, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9980, disburseTcid=FCB-10027]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:14:19 EEST" name="after" finished-at="2023-10-23T20:14:19 EEST" duration-ms="180" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:14:19 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:14:24 EEST" duration-ms="5474" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@3d9c13b5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:14:24 EEST" name="openMurabahaAccountMurabahaFinancingTest" data-provider="Open Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:16:56 EEST" duration-ms="151333" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9946, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_MicroFinanceCBEMedium&LongTerm_4018_ByMaker_B9, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4018, assetValue=80000, customerMargin=0, financePeriodMonths=24, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=no, numberOfInstallments=1, installmentFrequency=null, installmentStartDate='10-10-2025, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=weekly, profitStartDate='10-10-2025, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9981, disburseTcid=FCB-10028]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:16:56 EEST" name="after" finished-at="2023-10-23T20:16:56 EEST" duration-ms="197" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:16:56 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:17:01 EEST" duration-ms="5559" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@492691d7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:17:01 EEST" name="openMurabahaAccountMurabahaFinancingTest" data-provider="Open Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:19:32 EEST" duration-ms="150703" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9947, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_SMEs-S-CBE-ShortTerm_4000_ByMaker_B10, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4000, assetValue=150000, customerMargin=10000, financePeriodMonths=6, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=6, installmentFrequency=monthly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate='10-10-2023, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9982, disburseTcid=FCB-10029]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad]" started-at="2023-10-23T20:19:32 EEST" name="after" finished-at="2023-10-23T20:19:32 EEST" duration-ms="205" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest(data.ABEOpenMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- tests.ABEOpenMurabahaAccountMurabahaFinancingTest -->
+      <class name="tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest">
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:19:32 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:19:47 EEST" duration-ms="15217" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@27216cd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:19:47 EEST" name="verifyIslamicMurabahaAccountOpeningTest" data-provider="Verify Murabaha Account Opening Murabaha Financing DataProvider" depends-on-groups="ABEOpenMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:21:16 EEST" duration-ms="88461" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyTUAOpeningData [tcId=FCB-9973, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_CarsShortTerm_4010_ByChecker_C1, username=PT10, password=Infy@123, menu=AIFAT, accountId='40100624601301316549, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicMurabahaAccountOpeningTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:21:16 EEST" name="after" finished-at="2023-10-23T20:21:17 EEST" duration-ms="1198" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicMurabahaAccountOpeningTest status=SUCCESS method=ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:21:17 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:21:23 EEST" duration-ms="5678" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@558bdf1f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:21:23 EEST" name="verifyIslamicMurabahaAccountOpeningTest" data-provider="Verify Murabaha Account Opening Murabaha Financing DataProvider" depends-on-groups="ABEOpenMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:22:52 EEST" duration-ms="89621" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyTUAOpeningData [tcId=FCB-9974, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_CarsMedium&LongTerm_4011_ByChecker_C2, username=PT10, password=Infy@123, menu=AIFAT, accountId='40110624601301316579, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicMurabahaAccountOpeningTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:22:52 EEST" name="after" finished-at="2023-10-23T20:22:54 EEST" duration-ms="1234" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicMurabahaAccountOpeningTest status=SUCCESS method=ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:22:54 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:22:59 EEST" duration-ms="5569" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@8576fa0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:22:59 EEST" name="verifyIslamicMurabahaAccountOpeningTest" data-provider="Verify Murabaha Account Opening Murabaha Financing DataProvider" depends-on-groups="ABEOpenMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:24:29 EEST" duration-ms="89910" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyTUAOpeningData [tcId=FCB-9975, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_MicroFinanceShortTerm_4012_ByChecker_C3, username=PT10, password=Infy@123, menu=AIFAT, accountId='40120624601301316592, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicMurabahaAccountOpeningTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:24:29 EEST" name="after" finished-at="2023-10-23T20:24:30 EEST" duration-ms="1200" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicMurabahaAccountOpeningTest status=SUCCESS method=ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:24:30 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:24:37 EEST" duration-ms="6194" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@7582ff54]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:24:37 EEST" name="verifyIslamicMurabahaAccountOpeningTest" data-provider="Verify Murabaha Account Opening Murabaha Financing DataProvider" depends-on-groups="ABEOpenMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:26:07 EEST" duration-ms="90357" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyTUAOpeningData [tcId=FCB-9976, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_RetailProjectsShortTerm_4013_ByChecker_C4, username=PT10, password=Infy@123, menu=AIFAT, accountId='40130624601301316614, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicMurabahaAccountOpeningTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:26:07 EEST" name="after" finished-at="2023-10-23T20:26:08 EEST" duration-ms="1219" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicMurabahaAccountOpeningTest status=SUCCESS method=ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:26:08 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:26:13 EEST" duration-ms="5366" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@67545b57]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:26:13 EEST" name="verifyIslamicMurabahaAccountOpeningTest" data-provider="Verify Murabaha Account Opening Murabaha Financing DataProvider" depends-on-groups="ABEOpenMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:27:44 EEST" duration-ms="90165" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyTUAOpeningData [tcId=FCB-9977, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_RetailProjectsMedium&LongTerm_4014_ByChecker_C5, username=PT10, password=Infy@123, menu=AIFAT, accountId='40140624601301316620, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicMurabahaAccountOpeningTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:27:44 EEST" name="after" finished-at="2023-10-23T20:27:45 EEST" duration-ms="1212" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicMurabahaAccountOpeningTest status=SUCCESS method=ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:27:45 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:27:51 EEST" duration-ms="6335" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@6c2c1385]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:27:51 EEST" name="verifyIslamicMurabahaAccountOpeningTest" data-provider="Verify Murabaha Account Opening Murabaha Financing DataProvider" depends-on-groups="ABEOpenMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:29:21 EEST" duration-ms="90160" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyTUAOpeningData [tcId=FCB-9978, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_LivestockShortTerm_4015_ByChecker_C6, username=PT10, password=Infy@123, menu=AIFAT, accountId='40150624601301316636, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicMurabahaAccountOpeningTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:29:21 EEST" name="after" finished-at="2023-10-23T20:29:23 EEST" duration-ms="1191" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicMurabahaAccountOpeningTest status=SUCCESS method=ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:29:23 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:29:28 EEST" duration-ms="5650" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@5f354bcf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:29:28 EEST" name="verifyIslamicMurabahaAccountOpeningTest" data-provider="Verify Murabaha Account Opening Murabaha Financing DataProvider" depends-on-groups="ABEOpenMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:30:58 EEST" duration-ms="89859" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyTUAOpeningData [tcId=FCB-9979, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_LivestockMedium&LongTerm_4016_ByChecker_C7, username=PT10, password=Infy@123, menu=AIFAT, accountId='40160624601301316642, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicMurabahaAccountOpeningTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:30:58 EEST" name="after" finished-at="2023-10-23T20:30:59 EEST" duration-ms="1192" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicMurabahaAccountOpeningTest status=SUCCESS method=ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:30:59 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:31:05 EEST" duration-ms="5579" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@3daf7722]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:31:05 EEST" name="verifyIslamicMurabahaAccountOpeningTest" data-provider="Verify Murabaha Account Opening Murabaha Financing DataProvider" depends-on-groups="ABEOpenMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:32:35 EEST" duration-ms="89953" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyTUAOpeningData [tcId=FCB-9980, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_MicroFinanceCBEShortTerm_4017_ByChecker_C8, username=PT10, password=Infy@123, menu=AIFAT, accountId='40170624601301316658, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicMurabahaAccountOpeningTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:32:35 EEST" name="after" finished-at="2023-10-23T20:32:36 EEST" duration-ms="1194" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicMurabahaAccountOpeningTest status=SUCCESS method=ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:32:36 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:32:41 EEST" duration-ms="5427" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@78641d23]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:32:41 EEST" name="verifyIslamicMurabahaAccountOpeningTest" data-provider="Verify Murabaha Account Opening Murabaha Financing DataProvider" depends-on-groups="ABEOpenMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:34:11 EEST" duration-ms="89722" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyTUAOpeningData [tcId=FCB-9981, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_MicroFinanceCBEMedium&LongTerm_4018_ByChecker_C9, username=PT10, password=Infy@123, menu=AIFAT, accountId='40180624601301316664, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicMurabahaAccountOpeningTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:34:11 EEST" name="after" finished-at="2023-10-23T20:34:12 EEST" duration-ms="1199" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicMurabahaAccountOpeningTest status=SUCCESS method=ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:34:12 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:34:18 EEST" duration-ms="6012" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@74589991]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:34:18 EEST" name="verifyIslamicMurabahaAccountOpeningTest" data-provider="Verify Murabaha Account Opening Murabaha Financing DataProvider" depends-on-groups="ABEOpenMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:35:48 EEST" duration-ms="89924" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyTUAOpeningData [tcId=FCB-9982, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_SMEs-S-CBE-ShortTerm_4000_ByChecker_C10, username=PT10, password=Infy@123, menu=AIFAT, accountId='40000624601301316672, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIslamicMurabahaAccountOpeningTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f]" started-at="2023-10-23T20:35:48 EEST" name="after" finished-at="2023-10-23T20:35:49 EEST" duration-ms="1193" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyIslamicMurabahaAccountOpeningTest status=SUCCESS method=ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest(data.ABEVerifyMurabahaAccountOpeningMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest -->
+    </test> <!-- ABE Open Murabaha Account Murabaha Financing -->
+    <test started-at="2023-10-23T20:35:49 EEST" name="ABE Disburse Murabaha Account Murabaha Financing" finished-at="2023-10-23T20:56:28 EEST" duration-ms="1238575">
+      <class name="tests.ABEDisburseMurabahaAccountMurabahaFinancingTest">
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:35:49 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:36:05 EEST" duration-ms="15169" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@146dfe6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:36:05 EEST" name="disburseMurabahaAccountMurabahaFinancingTest" data-provider="Disburse Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:37:03 EEST" duration-ms="58389" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEDisburseMurabahaAccountMurabahaFinancingData [tcId=FCB-10020, summary=IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_CarsShortTerm_4010_ByMaker_D1, username=PT11, password=Infy@123, menu=PFAD, murabahaAccountId='40100624601301316549, valueDate='10-10-2023, creditAccountId='160602127297010017, expectedResult=successfully, linkedTcid=FCB-10055]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disburseMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:37:03 EEST" name="after" finished-at="2023-10-23T20:37:03 EEST" duration-ms="175" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=disburseMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEDisburseMurabahaAccountMurabahaFinancingTest.disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:37:03 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:37:09 EEST" duration-ms="5517" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@4716be8b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:37:09 EEST" name="disburseMurabahaAccountMurabahaFinancingTest" data-provider="Disburse Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:38:06 EEST" duration-ms="57724" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEDisburseMurabahaAccountMurabahaFinancingData [tcId=FCB-10021, summary=IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_CarsMedium&LongTerm_4011_ByMaker_D2, username=PT11, password=Infy@123, menu=PFAD, murabahaAccountId='40110624601301316579, valueDate='10-10-2023, creditAccountId='160602127297010017, expectedResult=successfully, linkedTcid=FCB-10056]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disburseMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:38:06 EEST" name="after" finished-at="2023-10-23T20:38:07 EEST" duration-ms="169" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=disburseMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEDisburseMurabahaAccountMurabahaFinancingTest.disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:38:07 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:38:13 EEST" duration-ms="6066" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@1fc32e4f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:38:13 EEST" name="disburseMurabahaAccountMurabahaFinancingTest" data-provider="Disburse Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:39:10 EEST" duration-ms="57361" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEDisburseMurabahaAccountMurabahaFinancingData [tcId=FCB-10022, summary=IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_MicroFinanceShortTerm_4012_ByMaker_D3, username=PT11, password=Infy@123, menu=PFAD, murabahaAccountId='40120624601301316592, valueDate='10-10-2023, creditAccountId='160602127297010017, expectedResult=successfully, linkedTcid=FCB-10057]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disburseMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:39:10 EEST" name="after" finished-at="2023-10-23T20:39:10 EEST" duration-ms="182" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=disburseMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEDisburseMurabahaAccountMurabahaFinancingTest.disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:39:10 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:39:16 EEST" duration-ms="6160" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@2f67b837]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:39:16 EEST" name="disburseMurabahaAccountMurabahaFinancingTest" data-provider="Disburse Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:40:14 EEST" duration-ms="57564" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEDisburseMurabahaAccountMurabahaFinancingData [tcId=FCB-10023, summary=IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_RetailProjectsShortTerm_4013_ByMaker_D4, username=PT11, password=Infy@123, menu=PFAD, murabahaAccountId='40130624601301316614, valueDate='10-10-2023, creditAccountId='160602127297010017, expectedResult=successfully, linkedTcid=FCB-10058]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disburseMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:40:14 EEST" name="after" finished-at="2023-10-23T20:40:14 EEST" duration-ms="222" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=disburseMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEDisburseMurabahaAccountMurabahaFinancingTest.disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:40:14 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:40:29 EEST" duration-ms="14859" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@1869fbd2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:40:29 EEST" name="disburseMurabahaAccountMurabahaFinancingTest" data-provider="Disburse Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:41:27 EEST" duration-ms="58016" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEDisburseMurabahaAccountMurabahaFinancingData [tcId=FCB-10024, summary=IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_RetailProjectsMedium&LongTerm_4014_ByMaker_D5, username=PT11, password=Infy@123, menu=PFAD, murabahaAccountId='40140624601301316620, valueDate='10-10-2023, creditAccountId='160602127297010017, expectedResult=successfully, linkedTcid=FCB-10059]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disburseMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:41:27 EEST" name="after" finished-at="2023-10-23T20:41:27 EEST" duration-ms="184" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=disburseMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEDisburseMurabahaAccountMurabahaFinancingTest.disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:41:27 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:41:33 EEST" duration-ms="5988" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@6af9fcb2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:41:33 EEST" name="disburseMurabahaAccountMurabahaFinancingTest" data-provider="Disburse Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:42:31 EEST" duration-ms="57863" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEDisburseMurabahaAccountMurabahaFinancingData [tcId=FCB-10025, summary=IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_LivestockShortTerm_4015_ByMaker_D6, username=PT11, password=Infy@123, menu=PFAD, murabahaAccountId='40150624601301316636, valueDate='10-10-2023, creditAccountId='160602127297010017, expectedResult=successfully, linkedTcid=FCB-10060]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disburseMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:42:31 EEST" name="after" finished-at="2023-10-23T20:42:31 EEST" duration-ms="166" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=disburseMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEDisburseMurabahaAccountMurabahaFinancingTest.disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:42:31 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:42:37 EEST" duration-ms="5794" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@6cce16f4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:42:37 EEST" name="disburseMurabahaAccountMurabahaFinancingTest" data-provider="Disburse Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:43:35 EEST" duration-ms="57728" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEDisburseMurabahaAccountMurabahaFinancingData [tcId=FCB-10026, summary=IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_LivestockMedium&LongTerm_4016_ByMaker_D7, username=PT11, password=Infy@123, menu=PFAD, murabahaAccountId='40160624601301316642, valueDate='10-10-2023, creditAccountId='160602127297010017, expectedResult=successfully, linkedTcid=FCB-10061]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disburseMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:43:35 EEST" name="after" finished-at="2023-10-23T20:43:35 EEST" duration-ms="193" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=disburseMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEDisburseMurabahaAccountMurabahaFinancingTest.disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:43:35 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:43:41 EEST" duration-ms="6256" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@7efaad5a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:43:41 EEST" name="disburseMurabahaAccountMurabahaFinancingTest" data-provider="Disburse Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:44:31 EEST" duration-ms="49335" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEDisburseMurabahaAccountMurabahaFinancingData [tcId=FCB-10027, summary=IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_MicroFinanceCBEShortTerm_4017_ByMaker_D8, username=PT11, password=Infy@123, menu=PFAD, murabahaAccountId='40170624601301316658, valueDate='10-10-2023, creditAccountId='160602127297010017, expectedResult=successfully, linkedTcid=FCB-10062]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disburseMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:44:31 EEST" name="after" finished-at="2023-10-23T20:44:31 EEST" duration-ms="194" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=disburseMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEDisburseMurabahaAccountMurabahaFinancingTest.disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:44:31 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:44:37 EEST" duration-ms="5819" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@291a7e3c]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:44:37 EEST" name="disburseMurabahaAccountMurabahaFinancingTest" data-provider="Disburse Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:45:34 EEST" duration-ms="57770" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEDisburseMurabahaAccountMurabahaFinancingData [tcId=FCB-10028, summary=IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_MicroFinanceCBEMedium&LongTerm_4018_ByMaker_D9, username=PT11, password=Infy@123, menu=PFAD, murabahaAccountId='40180624601301316664, valueDate='10-10-2023, creditAccountId='160602127297010017, expectedResult=successfully, linkedTcid=FCB-10063]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disburseMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:45:34 EEST" name="after" finished-at="2023-10-23T20:45:35 EEST" duration-ms="189" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=disburseMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEDisburseMurabahaAccountMurabahaFinancingTest.disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:45:35 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:45:40 EEST" duration-ms="5496" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@ca30bc1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:45:40 EEST" name="disburseMurabahaAccountMurabahaFinancingTest" data-provider="Disburse Murabaha Account Murabaha Financing DataProvider" finished-at="2023-10-23T20:46:38 EEST" duration-ms="58096" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEDisburseMurabahaAccountMurabahaFinancingData [tcId=FCB-10029, summary=IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_SMEs-S-CBE-ShortTerm_4000_ByMaker_D10, username=PT11, password=Infy@123, menu=PFAD, murabahaAccountId='40000624601301316672, valueDate='10-10-2023, creditAccountId='160602127297010017, expectedResult=successfully, linkedTcid=FCB-10064]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- disburseMurabahaAccountMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb]" started-at="2023-10-23T20:46:38 EEST" name="after" finished-at="2023-10-23T20:46:38 EEST" duration-ms="173" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=disburseMurabahaAccountMurabahaFinancingTest status=SUCCESS method=ABEDisburseMurabahaAccountMurabahaFinancingTest.disburseMurabahaAccountMurabahaFinancingTest(data.ABEDisburseMurabahaAccountMurabahaFinancingData)[pri:0, instance:tests.ABEDisburseMurabahaAccountMurabahaFinancingTest@573906eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- tests.ABEDisburseMurabahaAccountMurabahaFinancingTest -->
+      <class name="tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest">
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:46:38 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:46:54 EEST" duration-ms="15314" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@1046d517]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:46:54 EEST" name="verifyMurabahaAccountDisbursementMurabahaFinancingTest" data-provider="Verify Murabaha Account Disbursement Murabaha Financing DataProvider" depends-on-groups="ABEDisburseMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:47:46 EEST" duration-ms="52049" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData [tcId=FCB-10055, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_CarsShortTerm_ByChecker_E1, username=PT12, password=Infy@123, menu=VFADR, accountId=''40100624601301316549, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMurabahaAccountDisbursementMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:47:46 EEST" name="after" finished-at="2023-10-23T20:47:46 EEST" duration-ms="204" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyMurabahaAccountDisbursementMurabahaFinancingTest status=SUCCESS method=ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest.verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:47:46 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:47:52 EEST" duration-ms="5737" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@3b7d3a38]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:47:52 EEST" name="verifyMurabahaAccountDisbursementMurabahaFinancingTest" data-provider="Verify Murabaha Account Disbursement Murabaha Financing DataProvider" depends-on-groups="ABEDisburseMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:48:44 EEST" duration-ms="51881" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData [tcId=FCB-10056, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_CarsMedium&LongTerm_ByChecker_E2, username=PT12, password=Infy@123, menu=VFADR, accountId=''40110624601301316579, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMurabahaAccountDisbursementMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:48:44 EEST" name="after" finished-at="2023-10-23T20:48:44 EEST" duration-ms="195" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyMurabahaAccountDisbursementMurabahaFinancingTest status=SUCCESS method=ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest.verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:48:44 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:48:50 EEST" duration-ms="6417" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@416c58f5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:48:50 EEST" name="verifyMurabahaAccountDisbursementMurabahaFinancingTest" data-provider="Verify Murabaha Account Disbursement Murabaha Financing DataProvider" depends-on-groups="ABEDisburseMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:49:42 EEST" duration-ms="51475" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData [tcId=FCB-10057, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_MicroFinanceShortTerm_4012_ByChecker_E3, username=PT12, password=Infy@123, menu=VFADR, accountId=''40120624601301316592, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMurabahaAccountDisbursementMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:49:42 EEST" name="after" finished-at="2023-10-23T20:49:42 EEST" duration-ms="185" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyMurabahaAccountDisbursementMurabahaFinancingTest status=SUCCESS method=ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest.verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:49:42 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:49:48 EEST" duration-ms="5979" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@5505ae1a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:49:48 EEST" name="verifyMurabahaAccountDisbursementMurabahaFinancingTest" data-provider="Verify Murabaha Account Disbursement Murabaha Financing DataProvider" depends-on-groups="ABEDisburseMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:50:40 EEST" duration-ms="51712" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData [tcId=FCB-10058, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_RetailProjectsShortTerm_ByChecker_E4, username=PT12, password=Infy@123, menu=VFADR, accountId=''40130624601301316614, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMurabahaAccountDisbursementMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:50:40 EEST" name="after" finished-at="2023-10-23T20:50:40 EEST" duration-ms="180" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyMurabahaAccountDisbursementMurabahaFinancingTest status=SUCCESS method=ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest.verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:50:40 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:50:45 EEST" duration-ms="5583" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@73cd37c0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:50:45 EEST" name="verifyMurabahaAccountDisbursementMurabahaFinancingTest" data-provider="Verify Murabaha Account Disbursement Murabaha Financing DataProvider" depends-on-groups="ABEDisburseMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:51:37 EEST" duration-ms="52123" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData [tcId=FCB-10059, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_RetailProjectsMedium&LongTerm_ByChecker_E5, username=PT12, password=Infy@123, menu=VFADR, accountId=''40140624601301316620, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMurabahaAccountDisbursementMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:51:37 EEST" name="after" finished-at="2023-10-23T20:51:38 EEST" duration-ms="198" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyMurabahaAccountDisbursementMurabahaFinancingTest status=SUCCESS method=ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest.verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:51:38 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:51:43 EEST" duration-ms="5758" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@21337f7b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:51:43 EEST" name="verifyMurabahaAccountDisbursementMurabahaFinancingTest" data-provider="Verify Murabaha Account Disbursement Murabaha Financing DataProvider" depends-on-groups="ABEDisburseMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:52:36 EEST" duration-ms="52245" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData [tcId=FCB-10060, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_LivestockShortTerm_ByChecker_E6, username=PT12, password=Infy@123, menu=VFADR, accountId=''40150624601301316636, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMurabahaAccountDisbursementMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:52:36 EEST" name="after" finished-at="2023-10-23T20:52:36 EEST" duration-ms="180" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyMurabahaAccountDisbursementMurabahaFinancingTest status=SUCCESS method=ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest.verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:52:36 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:52:41 EEST" duration-ms="5383" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@2bb3058]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:52:41 EEST" name="verifyMurabahaAccountDisbursementMurabahaFinancingTest" data-provider="Verify Murabaha Account Disbursement Murabaha Financing DataProvider" depends-on-groups="ABEDisburseMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:53:33 EEST" duration-ms="52005" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData [tcId=FCB-10061, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_LivestockMedium&LongTerm_ByChecker_E7, username=PT12, password=Infy@123, menu=VFADR, accountId=''40160624601301316642, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMurabahaAccountDisbursementMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:53:33 EEST" name="after" finished-at="2023-10-23T20:53:33 EEST" duration-ms="179" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyMurabahaAccountDisbursementMurabahaFinancingTest status=SUCCESS method=ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest.verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:53:33 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:53:40 EEST" duration-ms="6248" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@7a362b6b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:53:40 EEST" name="verifyMurabahaAccountDisbursementMurabahaFinancingTest" data-provider="Verify Murabaha Account Disbursement Murabaha Financing DataProvider" depends-on-groups="ABEDisburseMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:54:32 EEST" duration-ms="52758" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData [tcId=FCB-10062, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_MicroFinanceCBEShortTerm_ByChecker_E8, username=PT12, password=Infy@123, menu=VFADR, accountId=''40170624601301316658, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMurabahaAccountDisbursementMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:54:32 EEST" name="after" finished-at="2023-10-23T20:54:33 EEST" duration-ms="170" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyMurabahaAccountDisbursementMurabahaFinancingTest status=SUCCESS method=ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest.verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:54:33 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:54:39 EEST" duration-ms="6050" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@60df60da]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:54:39 EEST" name="verifyMurabahaAccountDisbursementMurabahaFinancingTest" data-provider="Verify Murabaha Account Disbursement Murabaha Financing DataProvider" depends-on-groups="ABEDisburseMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:55:30 EEST" duration-ms="51603" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData [tcId=FCB-10063, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_MicroFinanceCBEMedium&LongTerm_ByChecker_E9, username=PT12, password=Infy@123, menu=VFADR, accountId=''40180624601301316664, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMurabahaAccountDisbursementMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:55:30 EEST" name="after" finished-at="2023-10-23T20:55:30 EEST" duration-ms="201" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyMurabahaAccountDisbursementMurabahaFinancingTest status=SUCCESS method=ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest.verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="beforeTest([Ljava.lang.Object;)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:55:30 EEST" name="beforeTest" description="Initiating Browser" finished-at="2023-10-23T20:55:36 EEST" duration-ms="5452" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@5a2d131d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method signature="verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:55:36 EEST" name="verifyMurabahaAccountDisbursementMurabahaFinancingTest" data-provider="Verify Murabaha Account Disbursement Murabaha Financing DataProvider" depends-on-groups="ABEDisburseMurabahaAccountMurabahaFinancingTest" finished-at="2023-10-23T20:56:28 EEST" duration-ms="52005" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData [tcId=FCB-10064, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccountDisbursment_SMEs-S-CBE-ShortTerm_ByChecker_E10, username=PT12, password=Infy@123, menu=VFADR, accountId=''40000624601301316672, expectedResult=successfully]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMurabahaAccountDisbursementMurabahaFinancingTest -->
+        <test-method is-config="true" signature="after(org.testng.ITestResult)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0]" started-at="2023-10-23T20:56:28 EEST" name="after" finished-at="2023-10-23T20:56:28 EEST" duration-ms="165" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyMurabahaAccountDisbursementMurabahaFinancingTest status=SUCCESS method=ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest.verifyMurabahaAccountDisbursementMurabahaFinancingTest(data.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingData)[pri:0, instance:tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest@479ceda0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest -->
+    </test> <!-- ABE Disburse Murabaha Account Murabaha Financing -->
+  </suite> <!-- Suite (0) -->
+  <suite started-at="2023-10-23T20:56:28 EEST" name="Batch1_CorporateLoans_MurabahaFinancing" finished-at="2023-10-23T20:56:28 EEST" duration-ms="0">
+    <groups>
+    </groups>
+  </suite> <!-- Batch1_CorporateLoans_MurabahaFinancing -->
 </testng-results>

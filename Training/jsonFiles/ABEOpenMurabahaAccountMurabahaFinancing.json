@@ -26,7 +26,8 @@
   "limitIdSuffix": "'CUSTL",
   "drawingPowerIndicator": "equal",
   "expectedResult": "successfully",
-  "linkedTcid": "FCB-9973"
+  "linkedTcid": "FCB-9973",
+  "disburseTcid": "FCB-10020"
  },
  {
   "tcId": "FCB-9939",
@@ -54,7 +55,8 @@
   "documentDate": "'10-10-2023",
   "drawingPowerIndicator": "equal",
   "expectedResult": "successfully",
-  "linkedTcid": "FCB-9974"
+  "linkedTcid": "FCB-9974",
+  "disburseTcid": "FCB-10021"
  },
  {
   "tcId": "FCB-9940",
@@ -81,7 +83,8 @@
   "documentDate": "'10-10-2023",
   "drawingPowerIndicator": "equal",
   "expectedResult": "successfully",
-  "linkedTcid": "FCB-9975"
+  "linkedTcid": "FCB-9975",
+  "disburseTcid": "FCB-10022"
  },
  {
   "tcId": "FCB-9941",
@@ -108,7 +111,8 @@
   "documentDate": "'10-10-2023",
   "drawingPowerIndicator": "equal",
   "expectedResult": "successfully",
-  "linkedTcid": "FCB-9976"
+  "linkedTcid": "FCB-9976",
+  "disburseTcid": "FCB-10023"
  },
  {
   "tcId": "FCB-9942",
@@ -136,7 +140,8 @@
   "documentDate": "'10-10-2023",
   "drawingPowerIndicator": "equal",
   "expectedResult": "successfully",
-  "linkedTcid": "FCB-9977"
+  "linkedTcid": "FCB-9977",
+  "disburseTcid": "FCB-10024"
  },
  {
   "tcId": "FCB-9943",
@@ -164,7 +169,8 @@
   "documentDate": "'10-10-2023",
   "drawingPowerIndicator": "equal",
   "expectedResult": "successfully",
-  "linkedTcid": "FCB-9978"
+  "linkedTcid": "FCB-9978",
+  "disburseTcid": "FCB-10025"
  },
  {
   "tcId": "FCB-9944",
@@ -192,7 +198,8 @@
   "documentDate": "'10-10-2023",
   "drawingPowerIndicator": "equal",
   "expectedResult": "successfully",
-  "linkedTcid": "FCB-9979"
+  "linkedTcid": "FCB-9979",
+  "disburseTcid": "FCB-10026"
  },
  {
   "tcId": "FCB-9945",
@@ -220,7 +227,8 @@
   "documentDate": "'10-10-2023",
   "drawingPowerIndicator": "equal",
   "expectedResult": "successfully",
-  "linkedTcid": "FCB-9980"
+  "linkedTcid": "FCB-9980",
+  "disburseTcid": "FCB-10027"
  },
  {
   "tcId": "FCB-9946",
@@ -248,7 +256,8 @@
   "documentDate": "'10-10-2023",
   "drawingPowerIndicator": "equal",
   "expectedResult": "successfully",
-  "linkedTcid": "FCB-9981"
+  "linkedTcid": "FCB-9981",
+  "disburseTcid": "FCB-10028"
  },
  {
   "tcId": "FCB-9947",
@@ -276,6 +285,7 @@
   "documentDate": "'10-10-2023",
   "drawingPowerIndicator": "equal",
   "expectedResult": "successfully",
-  "linkedTcid": "FCB-9982"
+  "linkedTcid": "FCB-9982",
+  "disburseTcid": "FCB-10029"
  }
 ]

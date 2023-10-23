@@ -26,6 +26,6 @@ public class ABEOpenMurabahaAccountMurabahaFinancingProcedures {
 				    							      .sendKeysOperativeAccountIdTextField(data.getOperativeAccountId())
 				    							       .sendKeysAccountLimitDetails(data.getExpiryDate(), data.getDocumentDate(), data.getLimitIdPrefix(), data.getLimitIdSuffix(), data.getDrawingPowerIndicator())
 				    							        .pressSubmitButton()
-				    							         .saveAccountId(data.getLinkedTcid());
+				    							         .saveAccountId(data.getLinkedTcid(), data.getDisburseTcid());
 		}
 	}

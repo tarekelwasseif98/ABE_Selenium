@@ -67,6 +67,8 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 	public static String  accountIdCsvColumnName = "accountId";
 	public static String  tcIdCsvColumnName = "tcId";
 	public static String  linkedTcidCsvColumnName = "linkedTcid";
+	public static String disburseTcidCsvColumnName = "disburseTcid";
+	public static String  murabahaAccountIdCsvColumnName = "murabahaAccountId";
 	
 	public ABEOpenMurabahaAccountMurabahaFinancingPage(WebDriver driver) {
 		this.driver = driver;
@@ -448,14 +450,22 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 	}
 	
 	@Step("Save account id")
-	public ABEOpenMurabahaAccountMurabahaFinancingPage saveAccountId(String linkedId) throws Exception {
+	public ABEOpenMurabahaAccountMurabahaFinancingPage saveAccountId(String linkedId, String disburseTcid) throws Exception {
 		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.OpenMurabahaAccountCsv, linkedTcidCsvColumnName, linkedId);
 		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.OpenMurabahaAccountCsv, referenceCsvColumnName);
 		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyMurabahaAccountOpeningCsv, tcIdCsvColumnName, linkedId);
 		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyMurabahaAccountOpeningCsv, accountIdCsvColumnName);
+		int rowByTcid3 = CSVUtils.getRowByTcid(Paths.OpenMurabahaAccountCsv, disburseTcidCsvColumnName, disburseTcid);		
+		int rowByTcid4 = CSVUtils.getRowByTcid(Paths.DisburseMurabahaAccountCsv, tcIdCsvColumnName, disburseTcid);
+		int columnByColumnName4 = CSVUtils.getColumnByColumnName(Paths.DisburseMurabahaAccountCsv, murabahaAccountIdCsvColumnName);
+		
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
 			CSVUtils.insertValueInCsvCell(Paths.OpenMurabahaAccountCsv, rowByTcid1, columnByColumnName1, acId);
 			CSVUtils.insertValueInCsvCell(Paths.VerifyMurabahaAccountOpeningCsv, rowByTcid2, columnByColumnName2, acId);
+		}
+		
+		if(rowByTcid3 != -1 && rowByTcid4 != -1) {
+			CSVUtils.insertValueInCsvCell(Paths.DisburseMurabahaAccountCsv, rowByTcid4, columnByColumnName4, acId);
 		}
 		return this;
 	}								

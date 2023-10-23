@@ -4,14 +4,14 @@
 <listeners>
 	<listener class-name="listeners.Listeners"/>
 </listeners>
-     <test thread-count="1" parallel="classes" name="ABE Open Current Account Mudarabah CAA">
+     <test name="ABE Open Current Account Mudarabah CAA">
      	<classes>
 	 		<class name="tests.ABEOpenCurrentAccountMudarabahCAATest"/>
 	 		<class name="tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest"/>
      	</classes>
      </test>
      
-     <test thread-count="1" parallel="classes" name="ABE Close Casa Account Mudarabah">
+     <test name="ABE Close Casa Account Mudarabah">
      	<classes>
 	 		<class name="tests.ABECloseCasaAccountMudarabahTest"/>
 	 		<class name="tests.ABEVerifyCasaAccountClosureMudarabahTest"/>	

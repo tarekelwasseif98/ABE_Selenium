@@ -60,7 +60,7 @@ public class ABEOpenTUAPage {
 			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
 	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        WebDriverWait wait = new WebDriverWait(driver, 45);
 	        try {
 	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 	            alert.accept();
@@ -112,6 +112,7 @@ public class ABEOpenTUAPage {
 	@Step("Sending value date: {0}")
 	public ABEOpenTUAPage sendKeysValueDateTextField(String valueDate) throws Exception {
 		if(valueDate != null) {
+			PageFunctionUtils.waitOnElement(driver, valueDateTextField);
 			PageFunctionUtils.clearDataInWebElement(driver, valueDateTextField);
 			PageFunctionUtils.clickOnElement(driver, valueDateTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, valueDateTextField, valueDate.substring(1));
@@ -182,6 +183,7 @@ public class ABEOpenTUAPage {
 	@Step("Sending account opening date: {0}")
 	public ABEOpenTUAPage sendKeysAccountOpeningDateTextField(String accountOpeningDate) throws Exception {
 		if(accountOpeningDate != null) {
+			PageFunctionUtils.waitOnElement(driver, accountOpeningDateTextField);
 			PageFunctionUtils.clearDataInWebElement(driver, accountOpeningDateTextField);
 			PageFunctionUtils.clickOnElement(driver, accountOpeningDateTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, accountOpeningDateTextField, accountOpeningDate.substring(1));
@@ -218,6 +220,7 @@ public class ABEOpenTUAPage {
 	
 	@Step("Renewal and closure details tab navigation")
 	public ABEOpenTUAPage navigateRenewalAndClosureDetailsTabMenu() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, renewalAndClosureDetailsTab);
 		PageFunctionUtils.clickOnElement(driver, renewalAndClosureDetailsTab);
 		return this;
 	}

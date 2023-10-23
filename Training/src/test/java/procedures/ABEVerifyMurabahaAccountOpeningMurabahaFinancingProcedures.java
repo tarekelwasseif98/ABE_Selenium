@@ -12,7 +12,17 @@ public class ABEVerifyMurabahaAccountOpeningMurabahaFinancingProcedures {
 		verifyMurabahaAccountOpeningMurabahaFinancingPage.sendKeysSearchBarTextField(data.getMenu())
 								.switchFormAreaFrame()
 								 .sendKeysAccountIdTextField(data.getAccountid())
-								  .navigateSideMenuTab()
-								   .pressSubmitButton();
+								  .pressGoButton()
+								   .pressContinue1Button()
+								    .pressContinue2Button()
+								     .pressContinue3Button()
+								      .pressContinue4Button()
+								       .pressContinue5Button()
+								        .pressContinue6Button()
+								         .pressContinue7Button()
+								          .pressContinue8Button()
+								           .pressContinue9Button()
+								            .pressContinue10Button()
+								             .pressSubmitButton();
 		}
 	}

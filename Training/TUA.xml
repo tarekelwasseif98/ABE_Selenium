@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" >
+<listeners>
+	<listener class-name="listeners.Listeners"/>
+</listeners>
+
+     <test name="ABE Open TUA">
+     	<classes>
+	 		<class name="tests.ABEOpenTUATest"/>
+	 		<class name="tests.ABEVerifyTUAOpeningTest"/>
+	 	</classes>
+     </test>
+     
+     <test name="ABE Close TUA">
+     	<classes>
+	 		<class name="tests.ABECloseTUATest"/>
+	 		<class name="tests.ABEVerifyTUAClosureTest"/>
+	 	</classes>
+     </test>
+</suite>

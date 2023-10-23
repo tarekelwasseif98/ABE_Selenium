@@ -144,7 +144,7 @@
 	    <version>3.1.2</version>
 	    <configuration>
 		    <suiteXmlFiles>
-		    	<suiteXmlFile>ExecutionList1_suite.xml</suiteXmlFile>
+		    	<suiteXmlFile>TUA.xml</suiteXmlFile>
 		    </suiteXmlFiles>
 		    <argLine>
 		    	-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"

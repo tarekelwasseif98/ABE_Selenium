@@ -19,7 +19,6 @@ public class ABEVerifyTUAOpeningPage {
 	private By accountIdTextField = By.xpath("(//input[@id='_modacctid'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	private By additionalDetailsSideTab = By.xpath("(//span[@id='stepIII_textSpan'])[1]");
 	private By generalDetailsSideTab = By.xpath("(//span[@id='stepIV_textSpan'])[1]");
 	private By schemeDetailsSideTab = By.xpath("(//span[@id='stepV_textSpan'])[1]");
@@ -45,7 +44,7 @@ public class ABEVerifyTUAOpeningPage {
 			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
 	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        WebDriverWait wait = new WebDriverWait(driver, 45);
 	        try {
 	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 	            alert.accept();
@@ -65,7 +64,6 @@ public class ABEVerifyTUAOpeningPage {
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
-		PageFunctionUtils.waitOnElement(driver, backgroundMenuButton);
 		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		return this;	
 	}

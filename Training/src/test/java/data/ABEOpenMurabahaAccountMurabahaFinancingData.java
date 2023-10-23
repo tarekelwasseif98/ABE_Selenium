@@ -31,7 +31,8 @@ public class ABEOpenMurabahaAccountMurabahaFinancingData {
 	private String expectedResult;
 	private String reference;
 	private String linkedTcid;
-	
+	private String disburseTcid;
+
 	public String getTcId() {
 		return tcId;
 	}
@@ -271,6 +272,14 @@ public class ABEOpenMurabahaAccountMurabahaFinancingData {
 	public void setLinkedTcid(String linkedTcid) {
 		this.linkedTcid = linkedTcid;
 	}
+	
+	public String getDisburseTcid() {
+		return disburseTcid;
+	}
+
+	public void setDisburseTcid(String disburseTcid) {
+		this.disburseTcid = disburseTcid;
+	}
 
 	@Override
 	public String toString() {
@@ -285,6 +294,6 @@ public class ABEOpenMurabahaAccountMurabahaFinancingData {
 				+ ", operativeAccountId=" + operativeAccountId + ", expiryDate=" + expiryDate + ", documentDate="
 				+ documentDate + ", limitIdPrefix=" + limitIdPrefix + ", limitIdSuffix=" + limitIdSuffix
 				+ ", drawingPowerIndicator=" + drawingPowerIndicator + ", expectedResult=" + expectedResult
-				+ ", linkedTcid=" + linkedTcid + "]";
+				+ ", linkedTcid=" + linkedTcid + ", disburseTcid=" + disburseTcid + "]";
 	}
 }

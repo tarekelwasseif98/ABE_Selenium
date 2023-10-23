@@ -12,7 +12,21 @@ public class ABEVerifyCorporateLoanCorporateLoansProcedures {
 		verifyCorporateLoanCorporateLoansPage.sendKeysSearchBarTextField(data.getMenu())
 								.switchFormAreaFrame()
 								 .sendKeysAccountIdTextField(data.getAccountid())
-								  .navigateSideMenuTab()
-								   .pressSubmitButton();
+								  .pressGoButton()
+								   .pressContinue1Button()
+								    .pressContinue2Button()
+								     .pressContinue3Button()
+								      .pressContinue4Button()
+								       .pressContinue5Button()
+								        .pressContinue6Button()
+								         .pressContinue7Button()
+								          .pressContinue8Button()
+								           .pressContinue9Button()
+								            .pressContinue10Button()
+								             .pressContinue11Button()
+								              .pressContinue12Button()
+								               .pressContinue13Button()
+								                .pressContinue14Button()
+								                 .pressSubmitButton();
 		}
 	}

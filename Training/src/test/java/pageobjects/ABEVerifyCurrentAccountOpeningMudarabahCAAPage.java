@@ -20,7 +20,6 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 	private By accountIdTextField = By.xpath("(//input[@id='_tempAcid'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	private By additionalDetailsSideTab = By.xpath("(//span[@id='stepII_textSpan'])[1]");
 	private By profitDetailsSideTab = By.xpath("(//span[@id='stepII1_textSpan'])[1]");  
 	private By taxDetailsSideTab = By.xpath("(//span[@id='stepII2_textSpan'])[1]");
@@ -42,7 +41,7 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
 	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        WebDriverWait wait = new WebDriverWait(driver, 45);
 	        try {
 	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 	            alert.accept();
@@ -62,7 +61,6 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
-		PageFunctionUtils.waitOnElement(driver, backgroundMenuButton);
 		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		return this;	
 	}
@@ -70,10 +68,9 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 	@Step("Sending account id: {0}")
 	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage sendKeysAccountIdTextField(String accountId) throws Exception {
 		if(accountId != null) {
-			accountId = accountId.substring(1);
 			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
 			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(1));
 		}
 		return this;
 	}

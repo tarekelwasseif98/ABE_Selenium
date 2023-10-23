@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" >
+<listeners>
+	<listener class-name="listeners.Listeners"/>
+</listeners>
+     
+     <test name="ABE Open Murabaha Account Murabaha Financing">
+     	<classes>
+	 		<class name="tests.ABEOpenMurabahaAccountMurabahaFinancingTest"/>
+	 		<class name="tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest"/>
+	 	</classes>
+	 </test>
+		
+	 <test name="ABE Disburse Murabaha Account Murabaha Financing">
+     	<classes>
+	 		<class name="tests.ABEDisburseMurabahaAccountMurabahaFinancingTest"/>
+	 		<class name="tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest"/>
+	 	</classes>
+     </test>
+    
+     <!-- <test name="ABE Payoff Murabaha Account Murabaha Financing">
+     	<classes>
+	 		<class name="tests.ABEPayoffMurabahaAccountMurabahaFinancingTest"/>
+	 		<class name="tests.ABEVerifyMurabahaAccountPayoffMurabahaFinancingTest"/>
+	 	</classes>
+     </test>-->
+</suite>

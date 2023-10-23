@@ -1,6 +1,0 @@
-java -jar selenium-server-standalone-3.141.59.jar -role hub
-java -jar selenium-server-standalone-3.141.59.jar -role node
-allure serve allure-results
-
-
-https://deu01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fqaautomation.expert%2F2022%2F12%2F02%2Fintegration-of-allure-report-with-jenkins%2F%23%3A~%3Atext%3DScroll%2520down%2520to%2520%2527Post%2520Build%2Cthe%2520Apply%2520and%2520Save%2520buttons.&data=05%7C01%7Ctarek.elwasseif%40qestit.com%7C66e07419098e43f0f43d08dbb450623d%7C52756543c6ca4a0192b3fde7fcf686fe%7C1%7C0%7C638302029557133818%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=YjS45Kat3ysjkXgCJTV6fDt0TTPk6q%2BMDcHvnj2mFfA%3D&reserved=0

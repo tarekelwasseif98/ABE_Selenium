@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Batch1_CorporateLoans_MurabahaFinancing" parallel="true" thread-count="2">
+	<suite-files>
+		<suite-file path="CorporateLoans.xml"></suite-file>
+		<suite-file path="MurabahaFinancing.xml"></suite-file>
+	</suite-files>
+<listeners>
+	<listener class-name="listeners.Listeners"/>
+</listeners>
+</suite>

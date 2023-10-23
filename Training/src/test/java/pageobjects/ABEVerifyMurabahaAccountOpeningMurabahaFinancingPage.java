@@ -19,7 +19,6 @@ public class ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage {
 	private By accountIdTextField = By.xpath("(//input[@id='_tempForacid'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	private By continue1Button = By.xpath("(//button[@id='_btn_continueBasic'])[1]");
 	private By continue2Button = By.xpath("(//button[@id='_btn_continueLoandet'])[1]");
 	private By continue3Button = By.xpath("(//button[@id='_btn_continueFee'])[1]");
@@ -37,20 +36,22 @@ public class ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage {
 	
 	@Step("Sending menu name: {0}")
 	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage sendKeysSearchBarTextField(String menu) throws Exception {
-		PageFunctionUtils.sleep();
-		PageFunctionUtils.switchToParentFrame(driver);
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
-		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-	        PageFunctionUtils.clickOnElement(driver, searchButton);
+		if(menu != null) {
+			PageFunctionUtils.sleep();
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+	        WebDriverWait wait = new WebDriverWait(driver, 45);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+		        }
+	        catch (Exception e) {
 	        }
-        catch (Exception e) {
         }
 	return this;
 	}
@@ -62,32 +63,82 @@ public class ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage {
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, coreAbeIframeId);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, uxIframeId);
-		PageFunctionUtils.waitOnElement(driver, backgroundMenuButton);
 		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		return this;	
 	}
 	
-	@Step("Sending a/c. id: {0}")
+	@Step("Sending account id: {0}")
 	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage sendKeysAccountIdTextField(String accountId) throws Exception {
-		accountId = accountId.substring(1);
-		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
-		PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+		if(accountId != null) {
+			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
+			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Press go button")
+	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
 	
-	@Step("Side tab navigation")
-	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage navigateSideMenuTab() throws Exception {
+	@Step("Press continue button")
+	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage pressContinue1Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue1Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage pressContinue2Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue2Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage pressContinue3Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue3Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage pressContinue4Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue4Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage pressContinue5Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue5Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage pressContinue6Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue6Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage pressContinue7Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue7Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage pressContinue8Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue8Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage pressContinue9Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue9Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage pressContinue10Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue10Button);
 		return this;
 	}

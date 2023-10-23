@@ -81,7 +81,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
 	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        WebDriverWait wait = new WebDriverWait(driver, 45);
 	        try {
 	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 	            alert.accept();
@@ -125,6 +125,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 	
 	@Step("Pres go button")
 	public ABEOpenMurabahaAccountMurabahaFinancingPage pressGoButton() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, goButton);
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
@@ -446,7 +447,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 		return this;
 	}
 	
-	@Step("Save a/c. id")
+	@Step("Save account id")
 	public ABEOpenMurabahaAccountMurabahaFinancingPage saveAccountId(String linkedId) throws Exception {
 		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.OpenMurabahaAccountCsv, linkedTcidCsvColumnName, linkedId);
 		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.OpenMurabahaAccountCsv, referenceCsvColumnName);

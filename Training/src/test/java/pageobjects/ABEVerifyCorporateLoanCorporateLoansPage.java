@@ -41,20 +41,22 @@ public class ABEVerifyCorporateLoanCorporateLoansPage {
 	
 	@Step("Sending menu name: {0}")
 	public ABEVerifyCorporateLoanCorporateLoansPage sendKeysSearchBarTextField(String menu) throws Exception {
-		PageFunctionUtils.sleep();
-		PageFunctionUtils.switchToParentFrame(driver);
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
-		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-	        PageFunctionUtils.clickOnElement(driver, searchButton);
+		if(menu != null) {
+			PageFunctionUtils.sleep();
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+		        }
+	        catch (Exception e) {
 	        }
-        catch (Exception e) {
         }
 	return this;
 	}
@@ -71,31 +73,102 @@ public class ABEVerifyCorporateLoanCorporateLoansPage {
 		return this;	
 	}
 	
-	@Step("Sending a/c. id: {0}")
+	@Step("Sending account id: {0}")
 	public ABEVerifyCorporateLoanCorporateLoansPage sendKeysAccountIdTextField(String accountId) throws Exception {
-		accountId = accountId.substring(1);
-		PageFunctionUtils.waitOnElement(driver, accountIdTextField);
-		PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+		if(accountId != null) {
+			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
+			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Press go button")
+	public ABEVerifyCorporateLoanCorporateLoansPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
 	
-	@Step("Side tab navigation")
-	public ABEVerifyCorporateLoanCorporateLoansPage navigateSideMenuTab() throws Exception {
+	@Step("Press continue button")
+	public ABEVerifyCorporateLoanCorporateLoansPage pressContinue1Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue1Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyCorporateLoanCorporateLoansPage pressContinue2Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue2Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyCorporateLoanCorporateLoansPage pressContinue3Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue3Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyCorporateLoanCorporateLoansPage pressContinue4Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue4Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyCorporateLoanCorporateLoansPage pressContinue5Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue5Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyCorporateLoanCorporateLoansPage pressContinue6Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue6Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyCorporateLoanCorporateLoansPage pressContinue7Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue7Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyCorporateLoanCorporateLoansPage pressContinue8Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue8Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyCorporateLoanCorporateLoansPage pressContinue9Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue9Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyCorporateLoanCorporateLoansPage pressContinue10Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue10Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyCorporateLoanCorporateLoansPage pressContinue11Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue11Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyCorporateLoanCorporateLoansPage pressContinue12Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue12Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyCorporateLoanCorporateLoansPage pressContinue13Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue13Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyCorporateLoanCorporateLoansPage pressContinue14Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue14Button);
 		return this;
 	}

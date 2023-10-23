@@ -1,6 +1,6 @@
 package data;
 
-public class AuthorizeACHOutwardData {
+public class ABEAuthorizeOutwardTransferPaymentData {
 
 	private String tcId;
 	private String summary;

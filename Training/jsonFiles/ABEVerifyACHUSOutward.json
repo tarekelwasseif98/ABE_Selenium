@@ -1,0 +1,12 @@
+[
+ {
+  "tcId": "FCB-02",
+  "summary": "Automation_Cycle1_VerifyACHUSOutward_ByChecker",
+  "username": "UBSADMIN",
+  "password": "Infy@123",
+  "menu": "MPOR",
+  "Pos": "'000000093424",
+  "expectedResult": "The record is verified successfully.\n",
+  "linkedTcid": "FCB-01"
+ }
+]

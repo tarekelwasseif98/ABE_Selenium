@@ -13,12 +13,12 @@ import org.testng.annotations.Test;
 import com.aspose.cells.Workbook;
 import com.opencsv.exceptions.CsvException;
 import data.JsonReader;
-import data.CreateAchOutwardData;
+import data.ABECreateOutwardTransferPaymentData;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import pageobjects.FinacleLoginPage;
-import procedures.CreateAchOutwardProcedures;
+import procedures.ABECreateOutwardTransferPaymentProcedures;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
@@ -28,24 +28,24 @@ import utils.CSVUtils;
 import utils.PageFunctionUtils;
 import io.qameta.allure.testng.AllureTestNg;
 
-@Test( groups = "CreateACH")
+@Test( groups = "CreateACHUS")
 @Listeners({AllureTestNg.class})
 
-public class ABE_Create_ACH_Outward_Test {
+public class ABECreateACHUSOutwardTest {
 
 	@BeforeClass
 	public void oneTimeSetUp() throws IOException, CsvException {
-		CSVUtils.clearColumnByName(Paths.Create_ACH_OutwardCsv, "Pos");
+		CSVUtils.clearColumnByName(Paths.ABECreateACHUSOutwardCsv, "Pos");
 	}
 
 	WebDriver driver = null;
 	private String testCaseId;
 	@BeforeMethod(description= "Initiating Browser")
 	public void beforeTest(Object [] testData) throws Exception {
-		CreateAchOutwardData data = (CreateAchOutwardData) testData[0];
+		ABECreateOutwardTransferPaymentData data = (ABECreateOutwardTransferPaymentData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FinacleUrl);
-		testCaseId = CSVUtils.getTestCaseId(Paths.Create_ACH_OutwardCsv);
+		testCaseId = CSVUtils.getTestCaseId(Paths.ABECreateACHUSOutwardCsv);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())
@@ -53,23 +53,23 @@ public class ABE_Create_ACH_Outward_Test {
 		.clickOnLoginButton(data.getPassword());
 	}
 	
-	@DataProvider(name="Create ACH Outwrad DataProvider")
+	@DataProvider(name="Create ACHUS Outwrad DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.Create_ACH_OutwardCsv);
-		workbook.save(Paths.Create_ACH_OutwardJson);
-        Class<CreateAchOutwardData> targetClass = CreateAchOutwardData.class;
-        JsonReader<CreateAchOutwardData> jsonReader = new JsonReader<>(targetClass);
-        List<CreateAchOutwardData> dataList = jsonReader.readJsonFile(Paths.Create_ACH_OutwardJson);
+    	Workbook workbook = new Workbook(Paths.ABECreateACHUSOutwardCsv);
+		workbook.save(Paths.ABECreateACHUSOutwardJson);
+        Class<ABECreateOutwardTransferPaymentData> targetClass = ABECreateOutwardTransferPaymentData.class;
+        JsonReader<ABECreateOutwardTransferPaymentData> jsonReader = new JsonReader<>(targetClass);
+        List<ABECreateOutwardTransferPaymentData> dataList = jsonReader.readJsonFile(Paths.ABECreateACHUSOutwardJson);
         dataList.toArray();
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Create ACH Outwrad DataProvider", dataProviderClass = ABE_Create_ACH_Outward_Test.class)
+	@Test(dataProvider = "Create ACHUS Outwrad DataProvider", dataProviderClass = ABECreateACHUSOutwardTest.class)
 	@Step("{testCaseId}")
-	public void CreateAchOutward(CreateAchOutwardData data) throws Exception {
+	public void CreateAchOutward(ABECreateOutwardTransferPaymentData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
 		Allure.parameter("Data: ", data.toString());		
-		CreateAchOutwardProcedures.AchOutwardByMaker(driver, data);
+		ABECreateOutwardTransferPaymentProcedures.AchOutwardByMaker(driver, data);
 //        AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}
 

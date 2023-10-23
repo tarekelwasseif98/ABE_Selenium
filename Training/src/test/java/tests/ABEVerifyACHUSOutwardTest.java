@@ -9,30 +9,27 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.aspose.cells.Workbook;
-
-import data.AuthorizeACHOutwardData;
 import data.JsonReader;
-
+import data.ABEVerifyOutwardTransferPaymentData;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.testng.AllureTestNg;
 import pageobjects.FinacleLoginPage;
-import procedures.AuthorizeAchOutwardProcedures;
-
+import procedures.ABEVerifyOutwardTransferPaymentProcedures;
 import utils.AssertionFactory;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
 import utils.Paths;
 
-@Test(groups = "AuthorizeACH",dependsOnGroups = "VerifyACH")
+@Test(groups = "VerifyACHUS",dependsOnGroups = "CreateACHUS")
 @Listeners({AllureTestNg.class})
-public class ABE_Authorize_ACH_Outward_Test {
+public class ABEVerifyACHUSOutwardTest {
 
 	WebDriver driver = null;
 	@BeforeMethod(description= "Initiating Browser")
 	public void beforeTest(Object [] testData) throws Exception {
-		AuthorizeACHOutwardData data = (AuthorizeACHOutwardData) testData[0];
+		ABEVerifyOutwardTransferPaymentData data = (ABEVerifyOutwardTransferPaymentData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FinacleUrl);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
@@ -42,23 +39,23 @@ public class ABE_Authorize_ACH_Outward_Test {
 		.clickOnLoginButton(data.getPassword());
 	}
 	
-	@DataProvider(name="Authorize ACH Outward DataProvider")
+	@DataProvider(name="Verify ACHUS Outward DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.Authorize_ACH_Outwardcsv);
-		workbook.save(Paths.Authorize_ACH_OutwardJson);
-        Class<AuthorizeACHOutwardData> targetClass = AuthorizeACHOutwardData.class;
-        JsonReader<AuthorizeACHOutwardData> jsonReader = new JsonReader<>(targetClass);
-        List<AuthorizeACHOutwardData> dataList = jsonReader.readJsonFile(Paths.Authorize_ACH_OutwardJson);
+    	Workbook workbook = new Workbook(Paths.ABEVerifyACHUSOutwardCsv);
+		workbook.save(Paths.ABEVerifyACHUSOutwardJson);
+        Class<ABEVerifyOutwardTransferPaymentData> targetClass = ABEVerifyOutwardTransferPaymentData.class;
+        JsonReader<ABEVerifyOutwardTransferPaymentData> jsonReader = new JsonReader<>(targetClass);
+        List<ABEVerifyOutwardTransferPaymentData> dataList = jsonReader.readJsonFile(Paths.ABEVerifyACHUSOutwardJson);
         dataList.toArray();
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Authorize ACH Outward DataProvider", dataProviderClass = ABE_Authorize_ACH_Outward_Test.class)
-	public void authorizeACHOutward(AuthorizeACHOutwardData data) throws Exception {
+	@Test(dataProvider = "Verify ACHUS Outward DataProvider", dataProviderClass = ABEVerifyACHUSOutwardTest.class)
+	public void verifyACHOutwardTest(ABEVerifyOutwardTransferPaymentData data) throws Exception {
 //		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
 		Allure.parameter("Data: ", data.toString());
-	    AuthorizeAchOutwardProcedures.AuthorizeAchOutwardBychecker(driver, data);
-	   // AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
+		ABEVerifyOutwardTransferPaymentProcedures.verifyAchOutwardBychecker(driver, data);
+		AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}
 
 	@Attachment(value = "Screenshot", type = "image/png")

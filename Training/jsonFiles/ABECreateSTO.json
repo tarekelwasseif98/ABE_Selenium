@@ -1,0 +1,30 @@
+[
+ {
+  "tcId": "FCB-1054",
+  "summary": "Automation_Cycle1_CreateStandingOrder_Fixed_Monthly_Swift_USD_ByMaker_E1_ByMaker",
+  "username": "QA49",
+  "password": "Infy@123",
+  "menu": "MMSO",
+  "Preferred_PaySys_ID": "SWIFT",
+  "Start_Date": 15102023,
+  "moduleID": "MANEXE",
+  "Amount_Fixed": "'120",
+  "Amount_Derived": "'300",
+  "Value_of_N": 12,
+  "No_Executed": 1,
+  "Day": "Sunday",
+  "Week": "First Week",
+  "Frequency": "Daily",
+  "Calendar": "Gregorian Calendar",
+  "Holiday": "Next Day",
+  "Maintenance_Charge_Event_ID": "SO_LCY_PAY",
+  "CCY": "USD",
+  "Branch_BEN": "'0013",
+  "Bank_BEN": "'0056",
+  "OtherPartyName": "TEST",
+  "AccountOtherParty": 132456,
+  "Account": "'10100227071002414",
+  "expectedResult": "The standing order is added successfully.",
+  "linkedTcid": "FCB-1055"
+ }
+]

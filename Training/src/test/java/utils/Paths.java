@@ -9,6 +9,39 @@ public class Paths {
 	public static final String Verify_ACH_OutwardJson = "jsonFiles\\" + Verify_ACH_Outwardcsv.substring(9, Paths.Verify_ACH_Outwardcsv.length()-4) + ".json";
 	public static final String Authorize_ACH_OutwardJson =  "jsonFiles\\" + Authorize_ACH_Outwardcsv.substring(9, Paths.Authorize_ACH_Outwardcsv.length()-4) + ".json";
 	
+	public static final String ABECreateACHUSOutwardCsv  = "csvFiles\\ABECreateACHUSOutward.csv";
+	public static final String ABEVerifyACHUSOutwardCsv = "csvFiles\\ABEVerifyACHUSOutward.csv";
+	public static final String ABEAuthorizeACHUSOutwardCsv = "csvFiles\\ABEAuthorizeACHUSOutward.csv";
+	public static final String ABECreateACHUSOutwardJson =  "jsonFiles\\" + ABECreateACHUSOutwardCsv.substring(9, Paths.ABECreateACHUSOutwardCsv.length()-4) + ".json";
+	public static final String ABEVerifyACHUSOutwardJson = "jsonFiles\\" + ABEVerifyACHUSOutwardCsv.substring(9, Paths.ABEVerifyACHUSOutwardCsv.length()-4) + ".json";
+	public static final String ABEAuthorizeACHUSOutwardJson =  "jsonFiles\\" + ABEAuthorizeACHUSOutwardCsv.substring(9, Paths.ABEAuthorizeACHUSOutwardCsv.length()-4) + ".json";
+	
+	public static final String ABECreateACHEROutwardCsv  = "csvFiles\\ABECreateACHEROutward.csv";
+	public static final String ABEVerifyACHEROutwardCsv = "csvFiles\\ABEVerifyACHEROutward.csv";
+	public static final String ABEAuthorizeACHEROutwardCsv = "csvFiles\\ABEAuthorizeACHEROutward.csv";
+	public static final String ABECreateACHEROutwardJson =  "jsonFiles\\" + ABECreateACHEROutwardCsv.substring(9, Paths.ABECreateACHEROutwardCsv.length()-4) + ".json";
+	public static final String ABEVerifyACHEROutwardJson = "jsonFiles\\" + ABEVerifyACHEROutwardCsv.substring(9, Paths.ABEVerifyACHEROutwardCsv.length()-4) + ".json";
+	public static final String ABEAuthorizeACHEROutwardJson =  "jsonFiles\\" + ABEAuthorizeACHEROutwardCsv.substring(9, Paths.ABEAuthorizeACHEROutwardCsv.length()-4) + ".json";
+	
+	public static final String ABECreateSWIFTOutwardCsv  = "csvFiles\\ABECreateSWIFTOutward.csv";
+	public static final String ABEVerifySWIFTOutwardCsv = "csvFiles\\ABEVerifySWIFTOutward.csv";
+	public static final String ABEAuthorizeSWIFTOutwardCsv = "csvFiles\\ABEAuthorizeSWIFTOutward.csv";
+	public static final String ABECreateSWIFTOutwardJson =  "jsonFiles\\" + ABECreateSWIFTOutwardCsv.substring(9, Paths.ABECreateSWIFTOutwardCsv.length()-4) + ".json";
+	public static final String ABEVerifySWIFTOutwardJson = "jsonFiles\\" + ABEVerifySWIFTOutwardCsv.substring(9, Paths.ABEVerifySWIFTOutwardCsv.length()-4) + ".json";
+	public static final String ABEAuthorizeSWIFTOutwardJson =  "jsonFiles\\" + ABEAuthorizeSWIFTOutwardCsv.substring(9, Paths.ABEAuthorizeSWIFTOutwardCsv.length()-4) + ".json";
+	
+	public static final String ABECreateESWIFTOutwardCsv  = "csvFiles\\ABECreateESWIFTOutward.csv";
+	public static final String ABEVerifyESWIFTOutwardCsv = "csvFiles\\ABEVerifyESWIFTOutward.csv";
+	public static final String ABEAuthorizeESWIFTOutwardCsv = "csvFiles\\ABEAuthorizeESWIFTOutward.csv";
+	public static final String ABECreateESWIFTOutwardJson =  "jsonFiles\\" + ABECreateESWIFTOutwardCsv.substring(9, Paths.ABECreateESWIFTOutwardCsv.length()-4) + ".json";
+	public static final String ABEVerifyESWIFTOutwardJson = "jsonFiles\\" + ABEVerifyESWIFTOutwardCsv.substring(9, Paths.ABEVerifyESWIFTOutwardCsv.length()-4) + ".json";
+	public static final String ABEAuthorizeESWIFTOutwardJson =  "jsonFiles\\" + ABEAuthorizeESWIFTOutwardCsv.substring(9, Paths.ABEAuthorizeESWIFTOutwardCsv.length()-4) + ".json";
+	
+	public static final String ABECreateSTOCsv  = "csvFiles\\ABECreateSTO.csv";
+	public static final String ABEVerifySTOCsv= "csvFiles\\ABEVerifySTO.csv";
+	public static final String ABECreateSTOJson =  "jsonFiles\\" + ABECreateSTOCsv.substring(9, Paths.ABECreateSTOCsv.length()-4) + ".json";
+	public static final String ABEVerifySTOJson = "jsonFiles\\" + ABEVerifySTOCsv.substring(9, Paths.ABEVerifySTOCsv.length()-4) + ".json";
+	
 	public static final String OpenIslamicCurrentAccountCsv  = "csvFiles\\ABEOpenCurrentAccountMudarabahCAA.csv";
 	public static final String VerifyIslamicCurrentAccountCsv = "csvFiles\\ABEVerifyCurrentAccountOpeningMudarabahCAA.csv";
 	public static final String OpenIslamicCurrentAccountJson =  "jsonFiles\\" + OpenIslamicCurrentAccountCsv.substring(9, Paths.OpenIslamicCurrentAccountCsv.length()-4) + ".json";

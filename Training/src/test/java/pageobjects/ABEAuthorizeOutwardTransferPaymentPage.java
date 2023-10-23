@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
 import utils.PageFunctionUtils;
 
-public class AuthorizeACHOutwardPage {
+public class ABEAuthorizeOutwardTransferPaymentPage {
 
 	private WebDriver driver;
 	private String loginFrameIframeId = "loginFrame";
@@ -19,18 +19,17 @@ public class AuthorizeACHOutwardPage {
 	private By searchButton = By.id("menuSearcherGo");
 	private String loginFrameIframeID = "loginFrame";
 	private By but = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
-	private By paysysID = By.xpath("//input[@id='_paysysId']");
+	private By paysysid = By.xpath("//input[@id='_paysysId']");
 	private By paymentOrderTextField = By.xpath("(//input[@id='_poID'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By approvePayment = By.id("_approveButton");
 	
-
-	public AuthorizeACHOutwardPage(WebDriver driver) {
+	public ABEAuthorizeOutwardTransferPaymentPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
 	@Step("Sending menu name: {0}")
-	public AuthorizeACHOutwardPage sendKeysSearchBarTextField(String menu) throws Exception {
+	public ABEAuthorizeOutwardTransferPaymentPage sendKeysSearchBarTextField(String menu) throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 		driver.switchTo().frame((loginFrameIframeID));
@@ -50,7 +49,7 @@ public class AuthorizeACHOutwardPage {
 	}
 	
 	@Step("Frame switching")
-	public AuthorizeACHOutwardPage switchFormAreaFrame() throws Exception {
+	public ABEAuthorizeOutwardTransferPaymentPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 	    driver.switchTo().frame((loginFrameIframeId));
@@ -62,27 +61,21 @@ public class AuthorizeACHOutwardPage {
 	}
 	
 	@Step("Sending payment details: {0}")
-	public AuthorizeACHOutwardPage sendKeysPaymentOrder(String PaySysID, String PaymentOrder) throws Exception {
-		PageFunctionUtils.waitOnElement(driver, paysysID);
-		
-		driver.findElement(paysysID).sendKeys(PaySysID);
-			
-		driver.findElement(paymentOrderTextField).sendKeys(PaymentOrder.substring(1));
-		return this;
-		
+	public ABEAuthorizeOutwardTransferPaymentPage sendKeysPaymentOrder(String paySysID, String paymentOrder) throws Exception {
+		PageFunctionUtils.waitOnElement(driver, paysysid);
+		PageFunctionUtils.enterDataInWebElement(driver, paysysid, paySysID);
+		PageFunctionUtils.enterDataInWebElement(driver, paymentOrderTextField, paymentOrder.substring(1));
+		return this;	
 	}
 	
 	@Step("Press Go button")
-	public AuthorizeACHOutwardPage pressGOButton() throws Exception {
-		driver.findElement(goButton).click();
-		Thread.sleep(3500);
+	public ABEAuthorizeOutwardTransferPaymentPage pressGOButton() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 }
-	
-	
 	@Step("Press Approve button")
-	public AuthorizeACHOutwardPage pressApproveButton() throws Exception {
-		driver.findElement(approvePayment).click();
+	public ABEAuthorizeOutwardTransferPaymentPage pressApproveButton() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, approvePayment);
 		return this;
 	}
 }

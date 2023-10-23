@@ -5,7 +5,7 @@
   "username": "QA49",
   "password": "Infy@123",
   "menu": "AOPO",
-  "Pos": "'000000093202",
+  "Pos": "'000000093450",
   "expectedResult": "Payment Order is successfully Approved.",
   "paysysID": "ACH",
   "linkedTcid": "FCB-002"

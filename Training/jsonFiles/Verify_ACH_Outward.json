@@ -5,8 +5,8 @@
   "username": "UBSADMIN",
   "password": "Infy@123",
   "menu": "MPOR",
-  "Pos": "'000000093202",
-  "expectedResult": "The record is verified successfully.\n",
+  "Pos": "'000000093459",
+  "expectedResult": "The record is verified successfully.",
   "linkedTcid": "FCB-001"
  }
 ]

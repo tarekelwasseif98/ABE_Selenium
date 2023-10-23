@@ -1,0 +1,2 @@
+tcId,summary,username,password,menu,Mandate_NO,expectedResult,linkedTcid
+FCB-1055,Automation_Cycle1_VerifySTO_ByChecker,UBSADMIN,Infy@123,MMSO,'000000093424,The standing order is verified successfully.,FCB-1054

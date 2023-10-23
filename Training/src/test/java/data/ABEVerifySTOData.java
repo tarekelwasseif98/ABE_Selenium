@@ -1,13 +1,13 @@
 package data;
 
-public class VerifyACHOutwardData {
+public class ABEVerifySTOData {
 	
 	private String tcId;
 	private String summary;
 	private String username;
 	private String password;
 	private String menu;
-	private String Pos;
+	private String Mandate_NO;
 	private String expectedResult;
 
 
@@ -41,22 +41,24 @@ public class VerifyACHOutwardData {
 	public void setMenu(String menu) {
 		this.menu = menu;
 	}
-	public String getPos() {
-		return Pos;
-	}
-	public void setPos(String pos) {
-		Pos = pos;
-	}
 	public String getExpectedResult() {
 		return expectedResult;
 	}
 	public void setExpectedResult(String expectedResult) {
 		this.expectedResult = expectedResult;
 	}
+	public String getMandate_NO() {
+		return Mandate_NO;
+	}
+	public void setMandate_NO(String mandate_NO) {
+		Mandate_NO = mandate_NO;
+	}
 	
 	@Override
 	public String toString() {
-		return "VerifyACHOutwardData [tcId=" + tcId + ", summary=" + summary + ", username=" + username + ", password="
-				+ password + ", menu=" + menu + ", Pos=" + Pos + ", expectedResult=" + expectedResult + "]";
-		}
+		return "ABEVerifySTOData [tcId=" + tcId + ", summary=" + summary + ", username=" + username + ", password="
+				+ password + ", menu=" + menu + ", Mandate_NO=" + Mandate_NO + ", expectedResult=" + expectedResult
+				+ "]";
+	}
+	
 }

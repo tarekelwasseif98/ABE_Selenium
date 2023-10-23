@@ -1,0 +1,27 @@
+[
+ {
+  "tcId": "FCB-01",
+  "summary": "Automation_Cycle1_CreateACHOutward_ByMaker",
+  "username": "QA49",
+  "password": "Infy@123",
+  "menu": "MPOR",
+  "PaysysID": "ACHUS",
+  "Date": 12102023,
+  "Name_REM": "Mourad Ahmed Nabawy",
+  "Address1_REM": "MAADi",
+  "Address2_REM": "Zahraa El Maadi",
+  "Amount": "'123",
+  "Purpose_Code": "CASH",
+  "Line1_RI": "TEST",
+  "CCY": "USD",
+  "BIC_BEN": "CIBEEGCX039",
+  "Network_BEN": "ACH",
+  "Address1_BEN": "MAADI",
+  "Address2_BEN": "Zahraa El Maadi",
+  "Name_BEN": "TEST",
+  "Account_BEN": "EG470004126000000455700000013",
+  "Account": "'100500003298010315",
+  "expectedResult": "The record is added successfully.",
+  "linkedTcid": "FCB-02"
+ }
+]

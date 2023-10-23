@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
 import utils.PageFunctionUtils;
 
-public class VerifyACHOutwardPage {
+public class ABEVerifyOutwardTransferPaymentPage {
 
 	private WebDriver driver;
 	private String loginFrameIframeId = "loginFrame";
@@ -22,16 +22,17 @@ public class VerifyACHOutwardPage {
 	private By but = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	private By dropdownAction = By.xpath("(//select[@id='_cFinFuncCode$funcCombo_select'])[1]");
 	private By paymentOrderTextField = By.xpath("//input[@id='_po_id']");
+	private By submitduplicateButton = By.id("Submit");
 	private By goButton = By.id("_go");
 	private By submitPayment = By.id("_submit");
 	
 
-	public VerifyACHOutwardPage(WebDriver driver) {
+	public ABEVerifyOutwardTransferPaymentPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
 	@Step("Sending menu name: {0}")
-	public VerifyACHOutwardPage sendKeysSearchBarTextField(String menu) throws Exception {
+	public ABEVerifyOutwardTransferPaymentPage sendKeysSearchBarTextField(String menu) throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 		driver.switchTo().frame((loginFrameIframeID));
@@ -51,7 +52,7 @@ public class VerifyACHOutwardPage {
 	}
 	
 	@Step("Frame switching")
-	public VerifyACHOutwardPage switchFormAreaFrame() throws Exception {
+	public ABEVerifyOutwardTransferPaymentPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		driver.switchTo().parentFrame();
 	    driver.switchTo().frame((loginFrameIframeId));
@@ -63,28 +64,37 @@ public class VerifyACHOutwardPage {
 	}
 	
 	@Step("Sending payment details: {0}")
-	public VerifyACHOutwardPage sendKeysPaymentOrder(String PaymentOrder) throws Exception {
+	public ABEVerifyOutwardTransferPaymentPage sendKeysPaymentOrder(String paymentOrder) throws Exception {
 		PageFunctionUtils.waitOnElement(driver, dropdownAction);
 		
 		Select dropdown1 = new Select(driver.findElement(dropdownAction));
 		dropdown1.selectByIndex(3);
 		
-		driver.findElement(paymentOrderTextField).sendKeys(PaymentOrder.substring(1));
+		PageFunctionUtils.enterDataInWebElement(driver, paymentOrderTextField, paymentOrder.substring(1));
 		return this;
 		
 	}
 	
 	@Step("Press Go button")
-	public VerifyACHOutwardPage pressGOButton() throws Exception {
-		driver.findElement(goButton).click();
-		Thread.sleep(3500);
+	public ABEVerifyOutwardTransferPaymentPage pressGOButton() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 }
 	
 	
 	@Step("Press submit button")
-	public VerifyACHOutwardPage pressSubmitButton() throws Exception {
-		driver.findElement(submitPayment).click();
+	public ABEVerifyOutwardTransferPaymentPage pressSubmitButton() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, submitPayment);
+		
+		try {
+			driver.switchTo().parentFrame();
+			PageFunctionUtils.clickOnElement(driver, submitduplicateButton);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+		} catch(Exception e) {
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeID);
+		}
 		return this;
+		
 	}
+	
 }

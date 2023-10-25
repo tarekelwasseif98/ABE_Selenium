@@ -41,7 +41,7 @@ public class ABETellerOperationTransferLiabilitiesAndOperationTest {
 	public void beforeTest(Object [] testData) throws Exception {
 		ABETellerOperationTransferLiabilitiesAndOperationData data = (ABETellerOperationTransferLiabilitiesAndOperationData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
-		driver.get(Properties.FinacleUrl);
+		driver.get(Properties.FINACLEURL);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())

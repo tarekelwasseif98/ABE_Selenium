@@ -17,8 +17,6 @@ public class ABEOpenCorporateLoanCorporateLoansData {
 	private String installmentFrequency;
 	private String installmentStartDate;
 	private String date;
-	private String calendar;
-	private String onHoliday;
 	private String interestFrequency;
 	private String interestStartDate;
 	private String operativeAccountId;
@@ -159,22 +157,6 @@ public class ABEOpenCorporateLoanCorporateLoansData {
 		this.date = date;
 	}
 	
-	public String getCalendar() {
-		return calendar;
-	}
-	
-	public void setCalendar(String calendar) {
-		this.calendar = calendar;
-	}
-	
-	public String getOnHoliday() {
-		return onHoliday;
-	}
-	
-	public void setOnHoliday(String onHoliday) {
-		this.onHoliday = onHoliday;
-	}
-	
 	public String getInterestFrequency() {
 		return interestFrequency;
 	}
@@ -262,7 +244,7 @@ public class ABEOpenCorporateLoanCorporateLoansData {
 	public void setLinkedTcid(String linkedTcid) {
 		this.linkedTcid = linkedTcid;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "ABEOpenCorporateLoanCorporateLoansData [tcId=" + tcId + ", summary=" + summary + ", username="
@@ -270,11 +252,10 @@ public class ABEOpenCorporateLoanCorporateLoansData {
 				+ ", accountOpeningDate=" + accountOpeningDate + ", loanAmount=" + loanAmount + ", loanPeriodMonths="
 				+ loanPeriodMonths + ", loanPeriodDays=" + loanPeriodDays + ", equatedInstallment=" + equatedInstallment
 				+ ", numberOfInstallments=" + numberOfInstallments + ", installmentFrequency=" + installmentFrequency
-				+ ", installmentStartDate=" + installmentStartDate + ", date=" + date + ", calendar=" + calendar
-				+ ", onHoliday=" + onHoliday + ", interestFrequency=" + interestFrequency + ", interestStartDate="
-				+ interestStartDate + ", operativeAccountId=" + operativeAccountId + ", expiryDate=" + expiryDate
-				+ ", documentDate=" + documentDate + ", limitIdPrefix=" + limitIdPrefix + ", limitIdSuffix="
-				+ limitIdSuffix + ", drawingPowerIndicator=" + drawingPowerIndicator + ", expectedResult="
-				+ expectedResult + ", linkedTcid=" + linkedTcid + "]";
+				+ ", installmentStartDate=" + installmentStartDate + ", date=" + date + ", interestFrequency="
+				+ interestFrequency + ", interestStartDate=" + interestStartDate + ", operativeAccountId="
+				+ operativeAccountId + ", expiryDate=" + expiryDate + ", documentDate=" + documentDate
+				+ ", limitIdPrefix=" + limitIdPrefix + ", limitIdSuffix=" + limitIdSuffix + ", drawingPowerIndicator="
+				+ drawingPowerIndicator + ", expectedResult=" + expectedResult + ", linkedTcid=" + linkedTcid + "]";
 	}
 }

@@ -41,7 +41,7 @@ public class ABEOpenTUAPage {
 	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Open Islamic Top Up Deposit Account'])[1]");
 	private By accountIdSuccessMessage = By.xpath("(//p[@id='_resMsg_paraMsg'])[1]");
 	private String peggingFrequencyValue = "1";
-	public static String acId;
+	public static String accountId;
 	public static String  referenceCsvColumnName = "reference";
 	public static String  accountIdCsvColumnName = "accountId";
 	public static String  tcIdCsvColumnName = "tcId";
@@ -230,7 +230,7 @@ public class ABEOpenTUAPage {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
-		acId = driver.findElement(accountIdSuccessMessage).getText().substring(87);
+		accountId = driver.findElement(accountIdSuccessMessage).getText().substring(87);
 		WebElement element = driver.findElement(menuNameTextBox);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView();", element);
@@ -244,8 +244,8 @@ public class ABEOpenTUAPage {
 		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyTUAOpeningCsv, tcIdCsvColumnName, linkedId);
 		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyTUAOpeningCsv, accountIdCsvColumnName);
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.OpenTUACsv, rowByTcid1, columnByColumnName1, acId);
-			CSVUtils.insertValueInCsvCell(Paths.VerifyTUAOpeningCsv, rowByTcid2, columnByColumnName2, acId);
+			CSVUtils.insertValueInCsvCell(Paths.OpenTUACsv, rowByTcid1, columnByColumnName1, accountId);
+			CSVUtils.insertValueInCsvCell(Paths.VerifyTUAOpeningCsv, rowByTcid2, columnByColumnName2, accountId);
 		}
 		return this;
 	}										

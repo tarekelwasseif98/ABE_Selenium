@@ -2,10 +2,10 @@
  {
   "tcId": "FCB-9820",
   "summary": "IslamicBanking_MudarabahSBA_Close_IslamicSavingsAccount_Transfer_ProfitOnIndicativeRate_SBMB_ByMaker_H1",
-  "username": "ABE23",
+  "username": "PT3",
   "password": "Infy@123",
   "menu": "CILA",
-  "accountId": "'170001142495010124",
+  "accountId": "'170001546100010356",
   "transferAccountId": "'160600024756010064",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-9821"
@@ -13,10 +13,10 @@
  {
   "tcId": "FCB-9859",
   "summary": "IslamicBanking_MudarabahCAA_Close_IslamicCurrentAccount_Transfer_ProfitOnIndicativeRate_ByMaker_F1",
-  "username": "ABE23",
+  "username": "PT3",
   "password": "Infy@123",
   "menu": "CILA",
-  "accountId": "'160602939260010012",
+  "accountId": "'160601546100010360",
   "transferAccountId": "'160600024756010064",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-9860"

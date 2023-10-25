@@ -31,7 +31,7 @@ public class ABE_Verify_ACH_Outward_Test {
 	public void beforeTest(Object [] testData) throws Exception {
 		VerifyACHOutwardData data = (VerifyACHOutwardData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
-		driver.get(Properties.FinacleUrl);
+		driver.get(Properties.FINACLEURL);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())

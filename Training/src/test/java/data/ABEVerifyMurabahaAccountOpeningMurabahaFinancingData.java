@@ -68,8 +68,8 @@ public class ABEVerifyMurabahaAccountOpeningMurabahaFinancingData {
 
 	@Override
 	public String toString() {
-		return "ABEVerifyTUAOpeningData [tcId=" + tcId + ", summary=" + summary + ", username=" + username
-				+ ", password=" + password + ", menu=" + menu + ", accountId=" + accountId + ", expectedResult="
-				+ expectedResult + "]";
+		return "ABEVerifyMurabahaAccountOpeningMurabahaFinancingData [tcId=" + tcId + ", summary=" + summary
+				+ ", username=" + username + ", password=" + password + ", menu=" + menu + ", accountId=" + accountId
+				+ ", expectedResult=" + expectedResult + "]";
 	}
 }

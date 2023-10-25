@@ -30,7 +30,7 @@ public class ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest {
 	public void beforeTest(Object [] testData) throws Exception {
 		ABEVerifyMurabahaAccountOpeningMurabahaFinancingData data = (ABEVerifyMurabahaAccountOpeningMurabahaFinancingData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
-		driver.get(Properties.FinacleUrl);
+		driver.get(Properties.FINACLEURL);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())

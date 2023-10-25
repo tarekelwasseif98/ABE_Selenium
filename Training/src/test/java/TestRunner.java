@@ -11,7 +11,7 @@ public class TestRunner {
         testng.run();
 	}
     public static void main(String[] args) {
-    	//executionListRunner("Batch1_CorporateLoans_MurabahaFinancing.xml", 2);
-    	executionListRunner("Batch1_MudarabahCASA_TUA", 2);
+    	executionListRunner("Batch1_CorporateLoans_MurabahaFinancing.xml", 2);
+    	//executionListRunner("Batch1_MudarabahCASA_TUA.xml", 2);
     }
 }

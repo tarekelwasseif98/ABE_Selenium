@@ -2,7 +2,7 @@
  {
   "tcId": "FCB-9827",
   "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Corporate_CACO_ByMaker_A1",
-  "username": "ABE21",
+  "username": "PT1",
   "password": "Infy@123",
   "menu": "OICAC",
   "cif": 6251769,
@@ -14,7 +14,7 @@
  {
   "tcId": "FCB-9829",
   "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Pension_CAP_ByMaker_A3",
-  "username": "ABE21",
+  "username": "PT1",
   "password": "Infy@123",
   "menu": "OICAC",
   "cif": 2347795,
@@ -26,7 +26,7 @@
  {
   "tcId": "FCB-9830",
   "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Co-OprerativeOrganization_CACOOP_ByMaker_A4",
-  "username": "ABE21",
+  "username": "PT1",
   "password": "Infy@123",
   "menu": "OICAC",
   "cif": 1082544,
@@ -38,7 +38,7 @@
  {
   "tcId": "FCB-9831",
   "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Inherit_CAINH_ByMaker_A5",
-  "username": "ABE21",
+  "username": "PT1",
   "password": "Infy@123",
   "menu": "OICAC",
   "cif": 1142495,
@@ -50,7 +50,7 @@
  {
   "tcId": "FCB-9832",
   "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Individuals_CAIN_ByMaker_A6",
-  "username": "ABE21",
+  "username": "PT1",
   "password": "Infy@123",
   "menu": "OICAC",
   "cif": 1546100,
@@ -62,7 +62,7 @@
  {
   "tcId": "FCB-9833",
   "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_AgriculturePersons_CAAP_ByMaker_A7",
-  "username": "ABE21",
+  "username": "PT1",
   "password": "Infy@123",
   "menu": "OICAC",
   "cif": 2374282,
@@ -74,7 +74,7 @@
  {
   "tcId": "FCB-9834",
   "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_FacilityService_CALC_ByMaker_A8",
-  "username": "ABE21",
+  "username": "PT1",
   "password": "Infy@123",
   "menu": "OICAC",
   "cif": 1812188,
@@ -86,7 +86,7 @@
  {
   "tcId": "FCB-9835",
   "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Investment_CAINV_ByMaker_A9",
-  "username": "ABE21",
+  "username": "PT1",
   "password": "Infy@123",
   "menu": "OICAC",
   "cif": 6218687,

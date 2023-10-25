@@ -19,10 +19,10 @@
 	 	</classes>
      </test>
     
-     <!-- <test name="ABE Payoff Murabaha Account Murabaha Financing">
+     <test name="ABE Payoff Murabaha Account Murabaha Financing">
      	<classes>
 	 		<class name="tests.ABEPayoffMurabahaAccountMurabahaFinancingTest"/>
 	 		<class name="tests.ABEVerifyMurabahaAccountPayoffMurabahaFinancingTest"/>
 	 	</classes>
-     </test>-->
+     </test>
 </suite>

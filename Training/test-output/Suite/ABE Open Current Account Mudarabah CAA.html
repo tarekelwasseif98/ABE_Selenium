@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>TestNG:  ABE Open Current Account Mudarabah CAA</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>ABE Open Current Account Mudarabah CAA</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>16/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Oct 24 13:29:59 EEST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>1464 seconds (1464791 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.ABEOpenCurrentAccountMudarabahCAATest.openIslamicCurrentAccount()'><b>openIslamicCurrentAccount</b><br>Test class: tests.ABEOpenCurrentAccountMudarabahCAATest<br>Parameters: ABEOpenCurrentAccountMudarabahCAAData [tcId=FCB-9835, summary=IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Investment_CAINV_ByMaker_A9, username=PT1, password=Infy@123, menu=OICAC, cif=6218687, schemeCode=1608, generalLedgerSubheadCode=21909, expectedResult=successfully, linkedTcid=FCB-9844]</td>
+<td></td>
+<td>79</td>
+<td>tests.ABEOpenCurrentAccountMudarabahCAATest@5c669da8</td></tr>
+<tr>
+<td title='tests.ABEOpenCurrentAccountMudarabahCAATest.openIslamicCurrentAccount()'><b>openIslamicCurrentAccount</b><br>Test class: tests.ABEOpenCurrentAccountMudarabahCAATest<br>Parameters: ABEOpenCurrentAccountMudarabahCAAData [tcId=FCB-9830, summary=IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Co-OprerativeOrganization_CACOOP_ByMaker_A4, username=PT1, password=Infy@123, menu=OICAC, cif=1082544, schemeCode=1604, generalLedgerSubheadCode=21902, expectedResult=successfully, linkedTcid=FCB-9839]</td>
+<td></td>
+<td>79</td>
+<td>tests.ABEOpenCurrentAccountMudarabahCAATest@5c669da8</td></tr>
+<tr>
+<td title='tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest.verifyIslamicCurrentAccountTest()'><b>verifyIslamicCurrentAccountTest</b><br>Test class: tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest<br>Parameters: ABEVerifyCurrentAccountOpeningMudarabahCAAData [tcId=FCB-9843, summary=IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_FacilityService_CALC_ByChecker_B8, username=PT2, password=Infy@123, menu=VICAO, accountId='160901812188010307, expectedResult=successfully]</td>
+<td></td>
+<td>86</td>
+<td>tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest@1ae8bcbc</td></tr>
+<tr>
+<td title='tests.ABEOpenCurrentAccountMudarabahCAATest.openIslamicCurrentAccount()'><b>openIslamicCurrentAccount</b><br>Test class: tests.ABEOpenCurrentAccountMudarabahCAATest<br>Parameters: ABEOpenCurrentAccountMudarabahCAAData [tcId=FCB-9833, summary=IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_AgriculturePersons_CAAP_ByMaker_A7, username=PT1, password=Infy@123, menu=OICAC, cif=2374282, schemeCode=1607, generalLedgerSubheadCode=21906, expectedResult=successfully, linkedTcid=FCB-9842]</td>
+<td></td>
+<td>79</td>
+<td>tests.ABEOpenCurrentAccountMudarabahCAATest@5c669da8</td></tr>
+<tr>
+<td title='tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest.verifyIslamicCurrentAccountTest()'><b>verifyIslamicCurrentAccountTest</b><br>Test class: tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest<br>Parameters: ABEVerifyCurrentAccountOpeningMudarabahCAAData [tcId=FCB-9836, summary=IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Corporate_CACO_ByChecker_B1, username=PT2, password=Infy@123, menu=VICAO, accountId='161006251769010508, expectedResult=successfully]</td>
+<td></td>
+<td>85</td>
+<td>tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest@1ae8bcbc</td></tr>
+<tr>
+<td title='tests.ABEOpenCurrentAccountMudarabahCAATest.openIslamicCurrentAccount()'><b>openIslamicCurrentAccount</b><br>Test class: tests.ABEOpenCurrentAccountMudarabahCAATest<br>Parameters: ABEOpenCurrentAccountMudarabahCAAData [tcId=FCB-9829, summary=IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Pension_CAP_ByMaker_A3, username=PT1, password=Infy@123, menu=OICAC, cif=2347795, schemeCode=1603, generalLedgerSubheadCode=21904, expectedResult=successfully, linkedTcid=FCB-9838]</td>
+<td></td>
+<td>80</td>
+<td>tests.ABEOpenCurrentAccountMudarabahCAATest@5c669da8</td></tr>
+<tr>
+<td title='tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest.verifyIslamicCurrentAccountTest()'><b>verifyIslamicCurrentAccountTest</b><br>Test class: tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest<br>Parameters: ABEVerifyCurrentAccountOpeningMudarabahCAAData [tcId=FCB-9839, summary=IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Co-OprerativeOrganization_CACOOP_ByChecker_B4, username=PT2, password=Infy@123, menu=VICAO, accountId='160401082544010383, expectedResult=successfully]</td>
+<td></td>
+<td>85</td>
+<td>tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest@1ae8bcbc</td></tr>
+<tr>
+<td title='tests.ABEOpenCurrentAccountMudarabahCAATest.openIslamicCurrentAccount()'><b>openIslamicCurrentAccount</b><br>Test class: tests.ABEOpenCurrentAccountMudarabahCAATest<br>Parameters: ABEOpenCurrentAccountMudarabahCAAData [tcId=FCB-9832, summary=IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Individuals_CAIN_ByMaker_A6, username=PT1, password=Infy@123, menu=OICAC, cif=1546100, schemeCode=1606, generalLedgerSubheadCode=21903, expectedResult=successfully, linkedTcid=FCB-9841]</td>
+<td></td>
+<td>79</td>
+<td>tests.ABEOpenCurrentAccountMudarabahCAATest@5c669da8</td></tr>
+<tr>
+<td title='tests.ABEOpenCurrentAccountMudarabahCAATest.openIslamicCurrentAccount()'><b>openIslamicCurrentAccount</b><br>Test class: tests.ABEOpenCurrentAccountMudarabahCAATest<br>Parameters: ABEOpenCurrentAccountMudarabahCAAData [tcId=FCB-9827, summary=IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Corporate_CACO_ByMaker_A1, username=PT1, password=Infy@123, menu=OICAC, cif=6251769, schemeCode=1610, generalLedgerSubheadCode=21901, expectedResult=successfully, linkedTcid=FCB-9836]</td>
+<td></td>
+<td>79</td>
+<td>tests.ABEOpenCurrentAccountMudarabahCAATest@5c669da8</td></tr>
+<tr>
+<td title='tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest.verifyIslamicCurrentAccountTest()'><b>verifyIslamicCurrentAccountTest</b><br>Test class: tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest<br>Parameters: ABEVerifyCurrentAccountOpeningMudarabahCAAData [tcId=FCB-9842, summary=IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_AgriculturePersons_CAAP_ByChecker_B7, username=PT2, password=Infy@123, menu=VICAO, accountId='160702374282010421, expectedResult=successfully]</td>
+<td></td>
+<td>85</td>
+<td>tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest@1ae8bcbc</td></tr>
+<tr>
+<td title='tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest.verifyIslamicCurrentAccountTest()'><b>verifyIslamicCurrentAccountTest</b><br>Test class: tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest<br>Parameters: ABEVerifyCurrentAccountOpeningMudarabahCAAData [tcId=FCB-9840, summary=IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Inherit_CAINH_ByChecker_B5, username=PT2, password=Infy@123, menu=VICAO, accountId='160501142495010360, expectedResult=successfully]</td>
+<td></td>
+<td>86</td>
+<td>tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest@1ae8bcbc</td></tr>
+<tr>
+<td title='tests.ABEOpenCurrentAccountMudarabahCAATest.openIslamicCurrentAccount()'><b>openIslamicCurrentAccount</b><br>Test class: tests.ABEOpenCurrentAccountMudarabahCAATest<br>Parameters: ABEOpenCurrentAccountMudarabahCAAData [tcId=FCB-9834, summary=IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_FacilityService_CALC_ByMaker_A8, username=PT1, password=Infy@123, menu=OICAC, cif=1812188, schemeCode=1609, generalLedgerSubheadCode=21908, expectedResult=successfully, linkedTcid=FCB-9843]</td>
+<td></td>
+<td>79</td>
+<td>tests.ABEOpenCurrentAccountMudarabahCAATest@5c669da8</td></tr>
+<tr>
+<td title='tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest.verifyIslamicCurrentAccountTest()'><b>verifyIslamicCurrentAccountTest</b><br>Test class: tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest<br>Parameters: ABEVerifyCurrentAccountOpeningMudarabahCAAData [tcId=FCB-9841, summary=IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Individuals_CAIN_ByChecker_B6, username=PT2, password=Infy@123, menu=VICAO, accountId='160601546100010379, expectedResult=successfully]</td>
+<td></td>
+<td>86</td>
+<td>tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest@1ae8bcbc</td></tr>
+<tr>
+<td title='tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest.verifyIslamicCurrentAccountTest()'><b>verifyIslamicCurrentAccountTest</b><br>Test class: tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest<br>Parameters: ABEVerifyCurrentAccountOpeningMudarabahCAAData [tcId=FCB-9838, summary=IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Pension_CAP_ByChecker_B3, username=PT2, password=Infy@123, menu=VICAO, accountId='160302347795010385, expectedResult=successfully]</td>
+<td></td>
+<td>85</td>
+<td>tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest@1ae8bcbc</td></tr>
+<tr>
+<td title='tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest.verifyIslamicCurrentAccountTest()'><b>verifyIslamicCurrentAccountTest</b><br>Test class: tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest<br>Parameters: ABEVerifyCurrentAccountOpeningMudarabahCAAData [tcId=FCB-9844, summary=IslamicBanking_MudarabahCAA_Verify_IslamicCurrentAccount_Investment_CAINV_ByChecker_B9, username=PT2, password=Infy@123, menu=VICAO, accountId='160806218687010327, expectedResult=successfully]</td>
+<td></td>
+<td>85</td>
+<td>tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest@1ae8bcbc</td></tr>
+<tr>
+<td title='tests.ABEOpenCurrentAccountMudarabahCAATest.openIslamicCurrentAccount()'><b>openIslamicCurrentAccount</b><br>Test class: tests.ABEOpenCurrentAccountMudarabahCAATest<br>Parameters: ABEOpenCurrentAccountMudarabahCAAData [tcId=FCB-9831, summary=IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Inherit_CAINH_ByMaker_A5, username=PT1, password=Infy@123, menu=OICAC, cif=1142495, schemeCode=1605, generalLedgerSubheadCode=21905, expectedResult=successfully, linkedTcid=FCB-9840]</td>
+<td></td>
+<td>79</td>
+<td>tests.ABEOpenCurrentAccountMudarabahCAATest@5c669da8</td></tr>
+</table><p>
+</body>
+</html>

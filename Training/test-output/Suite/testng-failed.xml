@@ -3,16 +3,24 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="listeners.Listeners"/>
+    <listener class-name="listeners.Listeners"/>
   </listeners>
-  <test thread-count="5" parallel="classes" name="PlayGroundTests Example 1(failed)">
+  <test thread-count="5" name="ABE Close Casa Account Mudarabah(failed)">
     <classes>
-      <class name="tests.Playground01Test">
+      <class name="tests.ABECloseCasaAccountMudarabahTest">
         <methods>
-          <include name="test"/>
-          <include name="after"/>
+          <include name="closeIslamicCasaAccountTest" invocation-numbers="0 1"/>
           <include name="beforeTest"/>
+          <include name="after"/>
         </methods>
-      </class> <!-- tests.Playground01Test -->
+      </class> <!-- tests.ABECloseCasaAccountMudarabahTest -->
+      <class name="tests.ABEVerifyCasaAccountClosureMudarabahTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="closeIslamicCasaAccountTest"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- tests.ABEVerifyCasaAccountClosureMudarabahTest -->
     </classes>
-  </test> <!-- PlayGroundTests Example 1(failed) -->
+  </test> <!-- ABE Close Casa Account Mudarabah(failed) -->
 </suite> <!-- Failed suite [Suite] -->

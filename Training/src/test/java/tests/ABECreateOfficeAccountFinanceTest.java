@@ -41,7 +41,7 @@ public class ABECreateOfficeAccountFinanceTest {
 	public void beforeTest(Object [] testData) throws Exception {
 		ABECreateOfficeAccountFinanceData data = (ABECreateOfficeAccountFinanceData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
-		driver.get(Properties.FinacleUrl);
+		driver.get(Properties.FINACLEURL);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())

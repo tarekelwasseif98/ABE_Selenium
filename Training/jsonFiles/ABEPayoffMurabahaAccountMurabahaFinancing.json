@@ -2,11 +2,11 @@
  {
   "tcId": "FCB-10115",
   "summary": "IslamicBanking_MurabahaFinancing_PayOff_MurabahaAccount_AfterMaturity_ByMaker_M1",
-  "username": "ABE33",
+  "username": "PT13",
   "password": "Infy@123",
   "menu": "POFA",
-  "accountId": "'40100624601301314354",
-  "payoffValueDate": "'22-10-2023",
+  "accountId": "'40100624601301317300",
+  "payoffValueDate": "'24-10-2023",
   "refundAccountId": "'160602127297010017",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-10118"
@@ -14,11 +14,11 @@
  {
   "tcId": "FCB-10116",
   "summary": "IslamicBanking_MurabahaFinancing_PayOff_MurabahaAccount_Maturity_ByMaker_M2",
-  "username": "ABE33",
+  "username": "PT13",
   "password": "Infy@123",
   "menu": "POFA",
-  "accountId": "'40100624601301314378",
-  "payoffValueDate": "'22-10-2023",
+  "accountId": "'40110624601301317330",
+  "payoffValueDate": "'24-10-2023",
   "refundAccountId": "'160602127297010017",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-10119"
@@ -26,11 +26,11 @@
  {
   "tcId": "FCB-10117",
   "summary": "IslamicBanking_MurabahaFinancing_PayOff_MurabahaAccount_BeforeMaturity_ByMaker_M3",
-  "username": "ABE33",
+  "username": "PT13",
   "password": "Infy@123",
   "menu": "POFA",
-  "accountId": "'40100624601301314361",
-  "payoffValueDate": "'22-10-2023",
+  "accountId": "'40130624601301317376",
+  "payoffValueDate": "'24-10-2023",
   "refundAccountId": "'160602127297010017",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-10120"

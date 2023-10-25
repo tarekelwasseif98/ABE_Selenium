@@ -2,28 +2,28 @@
  {
   "tcId": "FCB-10118",
   "summary": "IslamicBanking_MurabahaFinancing_Verify_PayOff_MurabahaAccount_AfterMaturity_ByChecker_N1",
-  "username": "ABE34",
+  "username": "PT14",
   "password": "Infy@123",
   "menu": "VFAP",
-  "accountId": "''40100624601301314354",
+  "accountId": "''40100624601301317300",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10119",
   "summary": "IslamicBanking_MurabahaFinancing_Verify_PayOff_MurabahaAccount_Maturity_ByChecker_N2",
-  "username": "ABE34",
+  "username": "PT14",
   "password": "Infy@123",
   "menu": "VFAP",
-  "accountId": "''40100624601301314378",
+  "accountId": "''40110624601301317330",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-10120",
   "summary": "IslamicBanking_MurabahaFinancing_Verify_PayOff_MurabahaAccount_BeforeMaturity_ByChecker_N3",
-  "username": "ABE34",
+  "username": "PT14",
   "password": "Infy@123",
   "menu": "VFAP",
-  "accountId": "''40100624601301314361",
+  "accountId": "''40130624601301317376",
   "expectedResult": "successfully"
  }
 ]

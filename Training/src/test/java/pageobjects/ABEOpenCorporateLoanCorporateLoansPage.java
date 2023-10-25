@@ -319,7 +319,7 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
 		return this;
 	}
 	
-	@Step("Select installment frequency date")
+	@Step("Select installment frequency date: {0}")
 	public ABEOpenCorporateLoanCorporateLoansPage selectInstallmentFrequencyDate(String date) throws Exception {
 		if(date != null) {
 			PageFunctionUtils.clickOnElement(driver, installmentFrequencyByDateRadioButton);
@@ -402,7 +402,7 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
 		return this;
 	}
 	
-	@Step("Select interest frequency date")
+	@Step("Select interest frequency date: {0}")
 	public ABEOpenCorporateLoanCorporateLoansPage selectInterestFrequencyDate(String date) throws Exception {
 		if(date != null) {
 			PageFunctionUtils.clickOnElement(driver, interestFrequencyByDateRadioButton);
@@ -496,7 +496,7 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
 		return this;
 	}
 	
-	@Step("Select drawing power indicator: {0}")
+	@Step("Select drawing power indicator")
 	public ABEOpenCorporateLoanCorporateLoansPage selectDrawingPowerIndicatorDerived() throws Exception {
 		PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DRAWINGPOWERINDICATORDERIVED);
 		try {
@@ -509,7 +509,7 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
 		return this;
 	}
 	
-	@Step("Select drawing power indicator: {0}")
+	@Step("Select drawing power indicator")
 	public ABEOpenCorporateLoanCorporateLoansPage selectDrawingPowerIndicatorEqual() throws Exception {
 		PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DRAWINGPOWERINDICATOREQUAL);
 		try {
@@ -522,7 +522,7 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
 		return this;
 	}
 	
-	@Step("Select drawing power indicator: {0}")
+	@Step("Select drawing power indicator")
 	public ABEOpenCorporateLoanCorporateLoansPage selectDrawingPowerIndicatorMaintained() throws Exception {
 		PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DRAWINGPOWERINDICATORMAINTAINED);
 		try {
@@ -535,7 +535,7 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
 		return this;
 	}
 	
-	@Step("Select drawing power indicator: {0}")
+	@Step("Select drawing power indicator")
 	public ABEOpenCorporateLoanCorporateLoansPage selectDrawingPowerIndicatorParent() throws Exception {
 		PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DRAWINGPOWERINDICATORPARENT);
 		try {

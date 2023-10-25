@@ -72,10 +72,14 @@ public class ABEOpenMurabahaAccountMurabahaFinancingTest {
 	public void after(ITestResult result) {
 		if (result.getStatus() == ITestResult.SUCCESS) {
             ScreenshotHelper.captureScreenshot(driver);
+            System.out.println("success");
         }
 		 if (result.getStatus() == ITestResult.FAILURE) {
 	            ScreenshotHelper.captureScreenshot(driver);
+	            System.out.println("fail");
+
 	        }
+		 
 		driver.quit();
 	}
 }

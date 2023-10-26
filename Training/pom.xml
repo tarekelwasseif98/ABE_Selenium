@@ -144,8 +144,8 @@
     <version>3.0.0-M4</version>
     <configuration>
         <suiteXmlFiles>
-            <suiteXmlFile>Batch1_CorporateLoans_MurabahaFinancing.xml</suiteXmlFile>
-            <!--<suiteXmlFile>Batch1_MudarabahCASA_TUA.xml</suiteXmlFile>-->
+            <!--<suiteXmlFile>Batch1_CorporateLoans_MurabahaFinancing.xml</suiteXmlFile>-->
+            <suiteXmlFile>Batch1_MudarabahCASA_TUA.xml</suiteXmlFile>
         </suiteXmlFiles>
         <properties>
             <property>

@@ -75,7 +75,7 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 		return this;
 	}
 	
-	@Step("Press go button: {0}")
+	@Step("Press go button")
 	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;

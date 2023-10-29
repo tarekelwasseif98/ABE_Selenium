@@ -1,2 +1,6 @@
-tcId,summary,username,password,menu,Mandate_NO,expectedResult,linkedTcid
-FCB-1055,Automation_Cycle1_VerifySTO_ByChecker,UBSADMIN,Infy@123,MMSO,'000000093424,The standing order is verified successfully.,FCB-1054
+tcId,summary,username,password,menu,mandate,expectedResult,linkedTcid
+FCB-1055,Automation_Cycle1_CreateStandingOrder_Fixed_Monthly_Swift_USD_E1_ByChecker,UBSADMIN,Infy@123,MMSO,'AE202,The standing order is verified successfully.,FCB-1054
+FCB-1051,Automation_Cycle1_CreateStandingOrder_Derived_Daily_ACH_EGP_C2_ByChecker,UBSADMIN,Infy@123,MMSO,'AE204,The standing order is verified successfully.,FCB-1050
+FCB-1057,Automation_Cycle1_CreateStandingOrder_Derived_Ndays_ACH_EGP_A2_ByChecker,UBSADMIN,Infy@123,MMSO,'AE206,The standing order is verified successfully.,FCB-1056
+FCB-1067,Automation_Cycle1_CreateStandingOrder_Derived_Weekly_ACH_EGP_B2_ByChecker,UBSADMIN,Infy@123,MMSO,'AE208,The standing order is verified successfully.,FCB-1066
+FCB-1053,Automation_Cycle1_CreateStandingOrder_Fixed_Monthly_LocalSwift_EUR_D1_ByChecker,UBSADMIN,Infy@123,MMSO,'AE210,The standing order is verified successfully.,FCB-1052

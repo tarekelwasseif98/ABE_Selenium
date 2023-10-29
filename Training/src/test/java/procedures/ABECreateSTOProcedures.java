@@ -3,6 +3,7 @@ package procedures;
 import org.openqa.selenium.WebDriver;
 import data.ABECreateSTOData;
 import pageobjects.ABECreateSTOPage;
+import utils.FinacleFieldsUtils;
 
 public class ABECreateSTOProcedures {
 
@@ -10,32 +11,33 @@ public class ABECreateSTOProcedures {
 		ABECreateSTOPage ABECreateSTOPage = new ABECreateSTOPage(driver);
 		ABECreateSTOPage.sendKeysSearchBarTextField(data.getMenu())
 									  .switchFormAreaFrame()
-		                                .sendKeysPaymentType(data.getModuleID());
-//		                                .pressSubmitButton()
-//		                                .sendKeysAchOutwardPayment(
-//		                                		data.getCountryCode_REM(),
-//		                                		data.getWaiveChargeRemark(),
-//		                                		data.getChargeWaiveOption(),
-//		                                		data.getCharge_type(), 
-//		                                		data.getAccount(),
-//		                                		data.getCCY(), 
-//		                                		data.getName_REM() , 
-//		                                		data.getAddress1_BEN(), 
-//		                                		data.getAddress2_BEN(),
-//		                                		data.getPurpose_Code() ,
-//		                                		data.getAddress1_REM(),
-//		                                		data.getAddress2_REM(),
-//		                                		data.getAmount(),
-//		                                		data.getDate(),
-//		                                		data.getLine1(), 
-//		                                		data.getAccount_ben(),
-//		                                		data.getName_ben(),  
-//		                                		data.getBic_ben(), 
-//		                                		data.getNetwork_ben(),
-//		                                		data.getBank_ben(), 
-//		                                		data.getBranch_ben())
-//		                                .saveACHPO(data.getPaysysID(), data.getLinkedTcid());
-		
+		                                .sendKeysPaymentType(data.getModuleID())
+		                                .pressGoButton()
+		                                .sendKeysSTO(data.getAccount(), 
+		                                		data.getCCY(),
+		                                		data.getPreferred_PaySys_ID(),
+		                                		data.getAccountOtherParty(),
+		                                		data.getOtherPartyName(),
+		                                		data.getBank_BEN(), 
+		                                		data.getBranch_BEN());
+		                                if(data.getAmtType().equalsIgnoreCase(FinacleFieldsUtils.AmountTypeFixed))
+		                                {ABECreateSTOPage.sendAmountTypeFixedSTO(
+		                                		data.getAmount_Fixed(),		                     
+		                                		data.getStart_Date(),
+		                                		data.getNo_Executed(),
+		                                		data.getFrequency(), 		                                				                                		
+		                                		data.getValue_of_N());
+		                                }
+		                                else if(data.getAmtType().equalsIgnoreCase(FinacleFieldsUtils.AmountTypeDerived))
+		                                {ABECreateSTOPage.sendAmountTypeDerivedSTO(
+		                                		data.getAmount_Derived(),
+		                                		data.getAmount_Multiples_Derived(),
+		                                		data.getStart_Date(),
+		                                		data.getNo_Executed(),
+		                                		data.getFrequency(), 
+		                                		data.getValue_of_N());
+		                                }
+		                                ABECreateSTOPage.submitSTO(data.getMaintenance_Charge_Event_ID());
+		                                ABECreateSTOPage.saveSTO(data.getLinkedTcid());
 	}
-	
 }

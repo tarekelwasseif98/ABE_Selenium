@@ -24,4 +24,9 @@ public class FinacleFieldsUtils {
 	public static final String DrawingPowerIndicatorEqual = "Equal";
 	public static final String DrawingPowerIndicatorMaintained = "Maintained";
 	public static final String DrawingPowerIndicatorParent = "Parent";
+	public static final String AmountTypeFixed = "Fixed";
+	public static final String AmountTypeDerived = "Derived";
+	public static final String FrequencyNdays = "Every 'N' Days";
+
+	
 }

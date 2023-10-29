@@ -7,7 +7,7 @@ public class ABEVerifySTOData {
 	private String username;
 	private String password;
 	private String menu;
-	private String Mandate_NO;
+	private String mandate;
 	private String expectedResult;
 
 
@@ -47,18 +47,16 @@ public class ABEVerifySTOData {
 	public void setExpectedResult(String expectedResult) {
 		this.expectedResult = expectedResult;
 	}
-	public String getMandate_NO() {
-		return Mandate_NO;
+	public String getMandate() {
+		return mandate;
 	}
-	public void setMandate_NO(String mandate_NO) {
-		Mandate_NO = mandate_NO;
+	public void setMandate(String mandate) {
+		this.mandate = mandate;
 	}
-	
 	@Override
 	public String toString() {
 		return "ABEVerifySTOData [tcId=" + tcId + ", summary=" + summary + ", username=" + username + ", password="
-				+ password + ", menu=" + menu + ", Mandate_NO=" + Mandate_NO + ", expectedResult=" + expectedResult
-				+ "]";
+				+ password + ", menu=" + menu + ", mandate=" + mandate + ", expectedResult=" + expectedResult + "]";
 	}
 	
 }

@@ -25,12 +25,12 @@
 	 	</classes>
      </test>-->
      
-     <test thread-count="1" parallel="classes" name="ABE Close TUA">
+    <!--  <test thread-count="1" parallel="classes" name="ABE Close TUA">
      	<classes>
 	 		<class name="tests.ABECloseTUATest"/>
 	 		<class name="tests.ABEVerifyTUAClosureTest"/>
 	 	</classes>
-     </test>
+     </test>-->
      
      <!--<test thread-count="1" parallel="classes" name="ABE Open Murabaha Account Murabaha Financing">
      	<classes>
@@ -59,4 +59,12 @@
 	 		<class name="tests.ABEVerifyCorporateLoanCorporateLoansTest"/>
 	 	</classes>
      </test>-->
+     
+    <test thread-count="1" parallel="classes" name="CreateSWIFT ">
+     	<classes>
+	 		<!--<class name="tests.ABECreateSTOTest"/> 
+	 		<classesname="tests.ABEVerifySTOTest"/>-->
+	 		<class name="tests.ABECreateSWIFTOutwardTest"/>
+	 	</classes>
+     </test>
 </suite>

@@ -208,9 +208,9 @@ public class ABECreateOutwardTransferPaymentPage {
 		
 
 //		Enter Country Code Creditor 
-//		PageFunctionUtils.waitOnElement(driver, countryCodeREMTextField);
-//		driver.findElement(countryCodeREMTextField).click();
-		//PageFunctionUtils.enterDataInWebElement(driver, countryCodeREMTextField, countryCodeREM);
+		PageFunctionUtils.waitOnElement(driver, countryCodeREMTextField);
+		driver.findElement(countryCodeREMTextField).click();
+		PageFunctionUtils.enterDataInWebElement(driver, countryCodeREMTextField, countryCodeREM);
 		 WebDriverWait wait = new WebDriverWait(driver, 10);
 	        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("_genCrbnkState")));
 	        element.click();

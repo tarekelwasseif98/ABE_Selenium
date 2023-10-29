@@ -70,7 +70,7 @@ public class ABECreateSTOTest {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + testCaseId));
 		Allure.parameter("Data: ", data.toString());		
 		ABECreateSTOProcedures.CreateSTOByMaker(driver, data);
-//        AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
+        //AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}
 
 	@Attachment(value = "Screenshot", type = "image/png")

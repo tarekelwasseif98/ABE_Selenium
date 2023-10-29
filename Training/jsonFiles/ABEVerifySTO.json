@@ -1,0 +1,52 @@
+[
+ {
+  "tcId": "FCB-1055",
+  "summary": "Automation_Cycle1_CreateStandingOrder_Fixed_Monthly_Swift_USD_E1_ByChecker",
+  "username": "UBSADMIN",
+  "password": "Infy@123",
+  "menu": "MMSO",
+  "mandate": "'AE202",
+  "expectedResult": "The standing order is verified successfully.",
+  "linkedTcid": "FCB-1054"
+ },
+ {
+  "tcId": "FCB-1051",
+  "summary": "Automation_Cycle1_CreateStandingOrder_Derived_Daily_ACH_EGP_C2_ByChecker",
+  "username": "UBSADMIN",
+  "password": "Infy@123",
+  "menu": "MMSO",
+  "mandate": "'AE204",
+  "expectedResult": "The standing order is verified successfully.",
+  "linkedTcid": "FCB-1050"
+ },
+ {
+  "tcId": "FCB-1057",
+  "summary": "Automation_Cycle1_CreateStandingOrder_Derived_Ndays_ACH_EGP_A2_ByChecker",
+  "username": "UBSADMIN",
+  "password": "Infy@123",
+  "menu": "MMSO",
+  "mandate": "'AE206",
+  "expectedResult": "The standing order is verified successfully.",
+  "linkedTcid": "FCB-1056"
+ },
+ {
+  "tcId": "FCB-1067",
+  "summary": "Automation_Cycle1_CreateStandingOrder_Derived_Weekly_ACH_EGP_B2_ByChecker",
+  "username": "UBSADMIN",
+  "password": "Infy@123",
+  "menu": "MMSO",
+  "mandate": "'AE208",
+  "expectedResult": "The standing order is verified successfully.",
+  "linkedTcid": "FCB-1066"
+ },
+ {
+  "tcId": "FCB-1053",
+  "summary": "Automation_Cycle1_CreateStandingOrder_Fixed_Monthly_LocalSwift_EUR_D1_ByChecker",
+  "username": "UBSADMIN",
+  "password": "Infy@123",
+  "menu": "MMSO",
+  "mandate": "'AE210",
+  "expectedResult": "The standing order is verified successfully.",
+  "linkedTcid": "FCB-1052"
+ }
+]

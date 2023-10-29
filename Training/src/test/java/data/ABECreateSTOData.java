@@ -12,22 +12,21 @@ public class ABECreateSTOData {
 	private String Start_Date;
 	private String End_Date;
 	private String moduleID;
+	private String Maintenance_Charge_Event_ID;
 	private String Amount_Fixed;
 	private String CCY;
 	private String No_Executed;
 	private String Amount_Derived;
+	private String Amount_Multiples_Derived;
+	private String AmtType;
 	private String Branch_BEN;
-	private String Day;
 	private String Bank_BEN;
 	private String Frequency;
-	private String Week;
-	private String Calendar;
-	private String Holiday;
 	private String OtherPartyName;
 	private String AccountOtherParty;
 	private String Account;
 	private String expectedResult;
-	private String Mandate_NO;
+	private String mandate;
 	private String linkedTcid;
 	public String getTcId() {
 		return tcId;
@@ -89,6 +88,12 @@ public class ABECreateSTOData {
 	public void setModuleID(String moduleID) {
 		this.moduleID = moduleID;
 	}
+	public String getMaintenance_Charge_Event_ID() {
+		return Maintenance_Charge_Event_ID;
+	}
+	public void setMaintenance_Charge_Event_ID(String maintenance_Charge_Event_ID) {
+		Maintenance_Charge_Event_ID = maintenance_Charge_Event_ID;
+	}
 	public String getAmount_Fixed() {
 		return Amount_Fixed;
 	}
@@ -113,17 +118,23 @@ public class ABECreateSTOData {
 	public void setAmount_Derived(String amount_Derived) {
 		Amount_Derived = amount_Derived;
 	}
+	public String getAmount_Multiples_Derived() {
+		return Amount_Multiples_Derived;
+	}
+	public void setAmount_Multiples_Derived(String amount_Multiples_Derived) {
+		Amount_Multiples_Derived = amount_Multiples_Derived;
+	}
+	public String getAmtType() {
+		return AmtType;
+	}
+	public void setAmtType(String amtType) {
+		AmtType = amtType;
+	}
 	public String getBranch_BEN() {
 		return Branch_BEN;
 	}
 	public void setBranch_BEN(String branch_BEN) {
 		Branch_BEN = branch_BEN;
-	}
-	public String getDay() {
-		return Day;
-	}
-	public void setDay(String day) {
-		Day = day;
 	}
 	public String getBank_BEN() {
 		return Bank_BEN;
@@ -136,24 +147,6 @@ public class ABECreateSTOData {
 	}
 	public void setFrequency(String frequency) {
 		Frequency = frequency;
-	}
-	public String getWeek() {
-		return Week;
-	}
-	public void setWeek(String week) {
-		Week = week;
-	}
-	public String getCalendar() {
-		return Calendar;
-	}
-	public void setCalendar(String calendar) {
-		Calendar = calendar;
-	}
-	public String getHoliday() {
-		return Holiday;
-	}
-	public void setHoliday(String holiday) {
-		Holiday = holiday;
 	}
 	public String getOtherPartyName() {
 		return OtherPartyName;
@@ -179,11 +172,11 @@ public class ABECreateSTOData {
 	public void setExpectedResult(String expectedResult) {
 		this.expectedResult = expectedResult;
 	}
-	public String getMandate_NO() {
-		return Mandate_NO;
+	public String getMandate() {
+		return mandate;
 	}
-	public void setMandate_NO(String mandate_NO) {
-		Mandate_NO = mandate_NO;
+	public void setMandate(String mandate) {
+		this.mandate = mandate;
 	}
 	public String getLinkedTcid() {
 		return linkedTcid;
@@ -196,14 +189,14 @@ public class ABECreateSTOData {
 		return "ABECreateSTOData [tcId=" + tcId + ", summary=" + summary + ", username=" + username + ", password="
 				+ password + ", Value_of_N=" + Value_of_N + ", Preferred_PaySys_ID=" + Preferred_PaySys_ID + ", menu="
 				+ menu + ", Start_Date=" + Start_Date + ", End_Date=" + End_Date + ", moduleID=" + moduleID
-				+ ", Amount_Fixed=" + Amount_Fixed + ", CCY=" + CCY + ", No_Executed=" + No_Executed
-				+ ", Amount_Derived=" + Amount_Derived + ", Branch_BEN=" + Branch_BEN + ", Day=" + Day + ", Bank_BEN="
-				+ Bank_BEN + ", Frequency=" + Frequency + ", Week=" + Week + ", Calendar=" + Calendar + ", Holiday="
-				+ Holiday + ", OtherPartyName=" + OtherPartyName + ", AccountOtherParty=" + AccountOtherParty
-				+ ", Account=" + Account + ", expectedResult=" + expectedResult + ", Mandate_NO=" + Mandate_NO
-				+ ", linkedTcid=" + linkedTcid + "]";
+				+ ", Maintenance_Charge_Event_ID=" + Maintenance_Charge_Event_ID + ", Amount_Fixed=" + Amount_Fixed
+				+ ", CCY=" + CCY + ", No_Executed=" + No_Executed + ", Amount_Derived=" + Amount_Derived
+				+ ", Amount_Multiples_Derived=" + Amount_Multiples_Derived + ", AmtType=" + AmtType + ", Branch_BEN="
+				+ Branch_BEN + ", Bank_BEN=" + Bank_BEN + ", Frequency=" + Frequency + ", OtherPartyName="
+				+ OtherPartyName + ", AccountOtherParty=" + AccountOtherParty + ", Account=" + Account
+				+ ", expectedResult=" + expectedResult + ", mandate=" + mandate + ", linkedTcid=" + linkedTcid + "]";
 	}
-
+	
 }
 	
 	

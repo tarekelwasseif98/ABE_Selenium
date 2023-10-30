@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Export Bills">
 <listeners>
 	<listener class-name="listeners.Listeners"/>
     <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
@@ -9,10 +9,12 @@
 	<groups>
 		<run>
 			<include name="ABELodgeExportBillsTradeFinanceTest"/>
+			<include name="ABEVerifyLodgeExportBillsTradeFinanceTest"/>
         </run>
     </groups>
     <classes>
 		<class name="tests.ABELodgeExportBillsTradeFinanceTest"/>
+		<class name="tests.ABEVerifyLodgeExportBillsTradeFinanceTest"/>
     </classes>
 </test>
 </suite>

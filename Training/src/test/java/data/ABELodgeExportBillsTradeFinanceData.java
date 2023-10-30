@@ -7,7 +7,6 @@ public class ABELodgeExportBillsTradeFinanceData {
 	private String password;
 	private String menu;
 	private String billType;
-	private String billId;
 	private String billCcy;
 	private String cifId;
 	private String underDocumentaryCredit;
@@ -93,14 +92,6 @@ public class ABELodgeExportBillsTradeFinanceData {
 	
 	public void setBillType(String billType) {
 		this.billType = billType;
-	}
-	
-	public String getBillId() {
-		return billId;
-	}
-	
-	public void setBillId(String billId) {
-		this.billId = billId;
 	}
 	
 	public String getBillCcy() {
@@ -410,13 +401,13 @@ public class ABELodgeExportBillsTradeFinanceData {
 	@Override
 	public String toString() {
 		return "ABELodgeExportBillsTradeFinanceData [tcId=" + tcId + ", summary=" + summary + ", username=" + username
-				+ ", password=" + password + ", menu=" + menu + ", billType=" + billType + ", billId=" + billId
-				+ ", billCcy=" + billCcy + ", cifId=" + cifId + ", underDocumentaryCredit=" + underDocumentaryCredit
-				+ ", documentaryCreditNo=" + documentaryCreditNo + ", operativeAccountId=" + operativeAccountId
-				+ ", drawerSwiftAddressDetails=" + drawerSwiftAddressDetails + ", billAmount=" + billAmount
-				+ ", billCountry=" + billCountry + ", lodgeDate=" + lodgeDate + ", draweeName=" + draweeName
-				+ ", draweeAddress=" + draweeAddress + ", draweeSwiftAddressDetails=" + draweeSwiftAddressDetails
-				+ ", draweeBankAddressType=" + draweeBankAddressType + ", draweeBankIdentifier=" + draweeBankIdentifier
+				+ ", password=" + password + ", menu=" + menu + ", billType=" + billType + ", billCcy=" + billCcy
+				+ ", cifId=" + cifId + ", underDocumentaryCredit=" + underDocumentaryCredit + ", documentaryCreditNo="
+				+ documentaryCreditNo + ", operativeAccountId=" + operativeAccountId + ", drawerSwiftAddressDetails="
+				+ drawerSwiftAddressDetails + ", billAmount=" + billAmount + ", billCountry=" + billCountry
+				+ ", lodgeDate=" + lodgeDate + ", draweeName=" + draweeName + ", draweeAddress=" + draweeAddress
+				+ ", draweeSwiftAddressDetails=" + draweeSwiftAddressDetails + ", draweeBankAddressType="
+				+ draweeBankAddressType + ", draweeBankIdentifier=" + draweeBankIdentifier
 				+ ", draweeBankSwiftAddressDetails=" + draweeBankSwiftAddressDetails + ", draweeBankName="
 				+ draweeBankName + ", draweeBankAddress=" + draweeBankAddress + ", beneficiaryBankAddressType="
 				+ beneficiaryBankAddressType + ", beneficiaryBankIdentifier=" + beneficiaryBankIdentifier

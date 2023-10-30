@@ -5,7 +5,7 @@
 	<listener class-name="listeners.Listeners"/>
     <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
 </listeners>
-<test thread-count="1" name="ABE Open Corporate Loan Corporate Loans">
+<test thread-count="1" name="Corporate Loans">
 	<groups>
 		<run>
 			<include name="ABEOpenCorporateLoanCorporateLoansTest"/>

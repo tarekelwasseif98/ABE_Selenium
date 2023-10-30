@@ -1,44 +1,34 @@
 package tests;
 
-import java.io.IOException;
 import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.aspose.cells.Workbook;
-import com.opencsv.exceptions.CsvException;
 import data.JsonReader;
-import data.ABELodgeExportBillsTradeFinanceData;
+import data.ABEVerifyLodgeExportBillsTradeFinanceData;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import pageobjects.FinacleLoginPage;
-import procedures.ABELodgeExportBillsTradeFinanceProcedures;
+import procedures.ABEVerifyLodgeExportBillsTradeFinanceProcedures;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
 import utils.Paths;
 import utils.AssertionFactory;
-import utils.CSVUtils;
 import io.qameta.allure.testng.AllureTestNg;
 
-@Test(groups = "ABELodgeExportBillsTradeFinanceTest")
+@Test(groups = "ABEVerifyLodgeExportBillsTradeFinanceTest", dependsOnGroups = "ABELodgeExportBillsTradeFinanceTest")
 @Listeners({AllureTestNg.class})
-public class ABELodgeExportBillsTradeFinanceTest {
-	@BeforeClass
-	public void oneTimeSetUp() throws IOException, CsvException {
-		CSVUtils.clearColumnByName(Paths.LodgeExportBillsCsv, "reference");
-		CSVUtils.clearColumnByName(Paths.VerifyLodgeExportBillsCsv, "billId");
-	}
-
+public class ABEVerifyLodgeExportBillsTradeFinanceTest {
 	WebDriver driver = null;
 	@BeforeMethod(description= "Initiating Browser")
 	public void beforeTest(Object [] testData) throws Exception {
-		ABELodgeExportBillsTradeFinanceData data = (ABELodgeExportBillsTradeFinanceData) testData[0];
+		ABEVerifyLodgeExportBillsTradeFinanceData data = (ABEVerifyLodgeExportBillsTradeFinanceData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FINACLEURL);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
@@ -48,22 +38,22 @@ public class ABELodgeExportBillsTradeFinanceTest {
 		.clickOnLoginButton(data.getPassword());
 	}
 	
-	@DataProvider(name="Lodge Export Bills Trade Finance DataProvider")
+	@DataProvider(name="Verify Lodge Export Bills Trade Finance DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.LodgeExportBillsCsv);
-		workbook.save(Paths.LodgeExportBillsJson);
-        Class<ABELodgeExportBillsTradeFinanceData> targetClass = ABELodgeExportBillsTradeFinanceData.class;
-        JsonReader<ABELodgeExportBillsTradeFinanceData> jsonReader = new JsonReader<>(targetClass);
-        List<ABELodgeExportBillsTradeFinanceData> dataList = jsonReader.readJsonFile(Paths.LodgeExportBillsJson);
+    	Workbook workbook = new Workbook(Paths.VerifyLodgeExportBillsCsv);
+		workbook.save(Paths.VerifyLodgeExportBillsJson);
+        Class<ABEVerifyLodgeExportBillsTradeFinanceData> targetClass = ABEVerifyLodgeExportBillsTradeFinanceData.class;
+        JsonReader<ABEVerifyLodgeExportBillsTradeFinanceData> jsonReader = new JsonReader<>(targetClass);
+        List<ABEVerifyLodgeExportBillsTradeFinanceData> dataList = jsonReader.readJsonFile(Paths.VerifyLodgeExportBillsJson);
         dataList.toArray();
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Lodge Export Bills Trade Finance DataProvider", dataProviderClass = ABELodgeExportBillsTradeFinanceTest.class)
-	public void lodgeExportBillsTradeFinanceTest(ABELodgeExportBillsTradeFinanceData data) throws Exception {
+	@Test(dataProvider = "Verify Lodge Export Bills Trade Finance DataProvider", dataProviderClass = ABEVerifyLodgeExportBillsTradeFinanceTest.class)
+	public void lodgeExportBillsTradeFinanceTest(ABEVerifyLodgeExportBillsTradeFinanceData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
 		Allure.parameter("Data: ", data.toString());
-        ABELodgeExportBillsTradeFinanceProcedures.lodgeExportBillsTradeFinance(driver, data);
+        ABEVerifyLodgeExportBillsTradeFinanceProcedures.verifyLodgeExportBillsTradeFinance(driver, data);
         AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}
 

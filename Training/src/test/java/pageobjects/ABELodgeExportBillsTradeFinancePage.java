@@ -21,7 +21,6 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By searchButton = By.id("menuSearcherGo");
 	
 	private By billTypeTextField = By.xpath("(//input[@id='_billType'])[1]");
-	private By billIdTextField = By.xpath("(//input[@id='_billId'])[1]");
 	private By billCcyTextField = By.xpath("(//input[@id='_billCcy'])[1]");
 	private By cifIdTextField = By.xpath("(//input[@id='_cifId'])[1]");
 	private By underDocumentaryCreditYesRadioButton = By.xpath("(//input[@id='_undyes1_radio'])[1]");
@@ -49,7 +48,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	// Drawee Bank Details
 	private By draweeBankDetailsButton = By.xpath("(//h2[normalize-space()='Drawee Bank Details'])[1]");
 	private By draweeBankAddressTypeDropDownList = By.xpath("(//select[@id='_meobparty_addrTypeDBdtl_select'])[1]");
-	private By draweeBankIdentifierTextField = By.xpath("//input[@id='_meobparty_bicDBdtl'])[1]");
+	private By draweeBankIdentifierTextField = By.xpath("(//input[@id='_meobparty_bicDBdtl'])[1]");
 	private By draweeBankSwiftAddressDetailsYesRadioButton = By.xpath("(//input[@id='_meobparty_editAdde1_radio'])[1]");
 	private By draweeBankNameTextField = By.xpath("(//input[@id='_meobparty_nameDBdtl1'])[1]");
 	private By draweeBankAddressLine1TextField = By.xpath("(//input[@id='_meobparty_addr1DBdtl1'])[1]");
@@ -161,15 +160,6 @@ public class ABELodgeExportBillsTradeFinancePage {
 		return this;
 	}
 	
-	@Step("Sending bill id: {0}")
-	public ABELodgeExportBillsTradeFinancePage sendKeysBillIdTextField(String billId) throws Exception {
-		if(billId != null) {
-			PageFunctionUtils.clickOnElement(driver, billIdTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, billIdTextField, billId);
-		}
-		return this;
-	}
-	
 	@Step("Sending bill ccy: {0}")
 	public ABELodgeExportBillsTradeFinancePage sendKeysBillCcyTextField(String billCcy) throws Exception {
 		if(billCcy != null) {
@@ -241,6 +231,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	public ABELodgeExportBillsTradeFinancePage sendKeysBillAmountTextField(String billAmount) throws Exception {
 		if(billAmount != null) {
 			PageFunctionUtils.clickOnElement(driver, billAmountTextField);
+			PageFunctionUtils.clearDataInWebElement(driver, billAmountTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, billAmountTextField, billAmount);
 		}
 		return this;
@@ -326,7 +317,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	public ABELodgeExportBillsTradeFinancePage sendKeysDraweeBankIdentifierTextField(String draweeBankIdentifier) throws Exception {
 		if(draweeBankIdentifier != null) {
 			PageFunctionUtils.clickOnElement(driver, draweeBankIdentifierTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, draweeBankIdentifierTextField, draweeBankIdentifier);
+			PageFunctionUtils.enterDataInWebElement(driver, draweeBankIdentifierTextField, draweeBankIdentifier.substring(1));
 		}
 		return this;
 	}
@@ -388,7 +379,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	public ABELodgeExportBillsTradeFinancePage sendKeysBeneficiaryBankIdentifierTextField(String beneficiaryBankIdentifier) throws Exception {
 		if(beneficiaryBankIdentifier != null) {
 			PageFunctionUtils.clickOnElement(driver, beneficiaryBankIdentifierTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, beneficiaryBankIdentifierTextField, beneficiaryBankIdentifier);
+			PageFunctionUtils.enterDataInWebElement(driver, beneficiaryBankIdentifierTextField, beneficiaryBankIdentifier.substring(1));
 		}
 		return this;
 	}
@@ -450,7 +441,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	public ABELodgeExportBillsTradeFinancePage sendKeysCorrespondentBankIdentifierTextField(String correspondentBankIdentifier) throws Exception {
 		if(correspondentBankIdentifier != null) {
 			PageFunctionUtils.clickOnElement(driver, correspondentBankIdentifierTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, correspondentBankIdentifierTextField, correspondentBankIdentifier);
+			PageFunctionUtils.enterDataInWebElement(driver, correspondentBankIdentifierTextField, correspondentBankIdentifier.substring(1));
 		}
 		return this;
 	}

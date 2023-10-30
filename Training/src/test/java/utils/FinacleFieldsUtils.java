@@ -24,4 +24,8 @@ public class FinacleFieldsUtils {
 	public static final String DRAWINGPOWERINDICATOREQUAL = "Equal";
 	public static final String DRAWINGPOWERINDICATORMAINTAINED = "Maintained";
 	public static final String DRAWINGPOWERINDICATORPARENT = "Parent";
+	public static final String ADDRESSTYPEBANKIDENTIFIER = "Bank Identifier";
+	public static final String ADDRESSTYPENAMEANDADDRESS = "Name and Address";
+	public static final String SWIFTADDRESSDETAILSYES = "yes";
+	public static final String SWIFTADDRESSDETAILSNO = "no";
 }

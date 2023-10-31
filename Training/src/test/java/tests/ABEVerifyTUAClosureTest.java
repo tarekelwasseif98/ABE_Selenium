@@ -38,7 +38,7 @@ public class ABEVerifyTUAClosureTest {
 		.clickOnLoginButton(data.getPassword());
 	}
 	
-	@DataProvider(name="Open TUA DataProvider")
+	@DataProvider(name="Verify TUA Closure DataProvider")
 	public Object[] dpMethod() throws Exception {
     	Workbook workbook = new Workbook(Paths.VerifyTUAClosureCsv);
 		workbook.save(Paths.VerifyTUAClosureJson);
@@ -49,8 +49,8 @@ public class ABEVerifyTUAClosureTest {
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Open TUA DataProvider", dataProviderClass = ABEVerifyTUAClosureTest.class)
-	public void closeIslamicTUATest(ABEVerifyTUAClosureData data) throws Exception {
+	@Test(dataProvider = "Verify TUA Closure DataProvider", dataProviderClass = ABEVerifyTUAClosureTest.class)
+	public void verifyTUAClosureTest(ABEVerifyTUAClosureData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());		
         ABEVerifyTUAClosureProcedures.verifyTUAClosure(driver, data);

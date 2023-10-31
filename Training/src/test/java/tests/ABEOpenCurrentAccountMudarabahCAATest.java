@@ -60,7 +60,7 @@ public class ABEOpenCurrentAccountMudarabahCAATest {
 	}
 	
 	@Test(dataProvider = "Open Current Account Mudarabah CAA DataProvider", dataProviderClass = ABEOpenCurrentAccountMudarabahCAATest.class)
-	public void openIslamicCurrentAccount(ABEOpenCurrentAccountMudarabahCAAData data) throws Exception {
+	public void openCurrentAccountMudarabahCAATest(ABEOpenCurrentAccountMudarabahCAAData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());		
         ABEOpenCurrentAccountMudarabahCAAProcedures.openCurrentAccountMudarabahCAA(driver, data);

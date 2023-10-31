@@ -50,7 +50,7 @@ public class ABEVerifyCorporateLoanCorporateLoansTest {
 	}
 	
 	@Test(dataProvider = "Verify Corporate Loan Corporate Loans DataProvider", dataProviderClass = ABEVerifyCorporateLoanCorporateLoansTest.class)
-	public void verifyIslamicMurabahaAccountOpeningTest(ABEVerifyCorporateLoanCorporateLoansData data) throws Exception {
+	public void verifyCorporateLoanCorporateLoansTest(ABEVerifyCorporateLoanCorporateLoansData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());
 		ABEVerifyCorporateLoanCorporateLoansProcedures.verifyCorporateLoanCorporateLoans(driver, data);

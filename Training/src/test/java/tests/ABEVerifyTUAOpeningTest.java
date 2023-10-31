@@ -51,10 +51,10 @@ public class ABEVerifyTUAOpeningTest {
 	}
 	
 	@Test(dataProvider = "Verify TUA Account Opening TUA DataProvider", dataProviderClass = ABEVerifyTUAOpeningTest.class)
-	public void verifyIslamicTUATest(ABEVerifyTUAOpeningData data) throws Exception {
+	public void verifyTUAOpeningTest(ABEVerifyTUAOpeningData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());
-		ABEVerifyTUAOpeningProcedures.verifyTUAOpeningTUA(driver, data);
+		ABEVerifyTUAOpeningProcedures.verifyTUAOpening(driver, data);
 		AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}
 

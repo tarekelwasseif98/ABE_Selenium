@@ -50,7 +50,7 @@ public class ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest {
 	}
 	
 	@Test(dataProvider = "Verify Murabaha Account Opening Murabaha Financing DataProvider", dataProviderClass = ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.class)
-	public void verifyIslamicMurabahaAccountOpeningTest(ABEVerifyMurabahaAccountOpeningMurabahaFinancingData data) throws Exception {
+	public void verifyMurabahaAccountOpeningMurabahaFinancingTest(ABEVerifyMurabahaAccountOpeningMurabahaFinancingData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());
 		ABEVerifyMurabahaAccountOpeningMurabahaFinancingProcedures.verifyMurabahaAccountOpeningMurabahaFinancing(driver, data);

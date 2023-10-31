@@ -50,7 +50,7 @@ public class ABEVerifyLodgeExportBillsTradeFinanceTest {
 	}
 	
 	@Test(dataProvider = "Verify Lodge Export Bills Trade Finance DataProvider", dataProviderClass = ABEVerifyLodgeExportBillsTradeFinanceTest.class)
-	public void lodgeExportBillsTradeFinanceTest(ABEVerifyLodgeExportBillsTradeFinanceData data) throws Exception {
+	public void verifyLodgeExportBillsTradeFinanceTest(ABEVerifyLodgeExportBillsTradeFinanceData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
 		Allure.parameter("Data: ", data.toString());
         ABEVerifyLodgeExportBillsTradeFinanceProcedures.verifyLodgeExportBillsTradeFinance(driver, data);

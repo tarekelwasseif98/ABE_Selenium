@@ -50,7 +50,7 @@ public class ABECloseCasaAccountMudarabahTest {
 	}
 	
 	@Test(dataProvider = "Close Casa Account Mudarabah DataProvider", dataProviderClass = ABECloseCasaAccountMudarabahTest.class)
-	public void closeIslamicCasaAccountTest(ABECloseCasaAccountMudarabahData data) throws Exception {
+	public void closeCasaAccountMudarabahTest(ABECloseCasaAccountMudarabahData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());
 		ABECloseCasaAccountMudarabahProcedures.closeCasaAccountMudarabah(driver, data);

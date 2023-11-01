@@ -69,6 +69,11 @@ public class Paths {
 	public static final String LodgeExportBillsJson =  "jsonFiles\\" + LodgeExportBillsCsv.substring(9, Paths.LodgeExportBillsCsv.length()-4) + ".json";
 	public static final String VerifyLodgeExportBillsJson =  "jsonFiles\\" + VerifyLodgeExportBillsCsv.substring(9, Paths.VerifyLodgeExportBillsCsv.length()-4) + ".json";
 	
+	public static final String AcceptExportBillsCsv  = "csvFiles\\ABEAcceptExportBillsTradeFinance.csv";
+	public static final String VerifyAcceptExportBillsCsv  = "csvFiles\\ABEVerifyAcceptExportBillsTradeFinance.csv";
+	public static final String AcceptExportBillsJson =  "jsonFiles\\" + AcceptExportBillsCsv.substring(9, Paths.AcceptExportBillsCsv.length()-4) + ".json";
+	public static final String VerifyAcceptExportBillsJson =  "jsonFiles\\" + VerifyAcceptExportBillsCsv.substring(9, Paths.VerifyAcceptExportBillsCsv.length()-4) + ".json";
+	
 	public static final String ABETellerOperationTransferLiabilitiesAndOperationCsv  = "csvFiles\\ABETellerOperationTransferLiabilitiesAndOperation.csv";
 	public static final String ABETellerOperationTransferLiabilitiesAndOperationJson =  "jsonFiles\\" + ABETellerOperationTransferLiabilitiesAndOperationCsv.substring(9, Paths.ABETellerOperationTransferLiabilitiesAndOperationCsv.length()-4) + ".json";
 	

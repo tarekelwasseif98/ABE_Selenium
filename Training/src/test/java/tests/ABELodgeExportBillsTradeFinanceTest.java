@@ -33,6 +33,8 @@ public class ABELodgeExportBillsTradeFinanceTest {
 	public void oneTimeSetUp() throws IOException, CsvException {
 		CSVUtils.clearColumnByName(Paths.LodgeExportBillsCsv, "reference");
 		CSVUtils.clearColumnByName(Paths.VerifyLodgeExportBillsCsv, "billId");
+		CSVUtils.clearColumnByName(Paths.AcceptExportBillsCsv, "billId");
+		CSVUtils.clearColumnByName(Paths.VerifyAcceptExportBillsCsv, "billId");
 	}
 
 	WebDriver driver = null;

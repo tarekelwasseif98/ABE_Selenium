@@ -19,7 +19,6 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By formAreaIframeId =By.xpath("//iframe[@name='formArea']"); 
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
-	
 	private By billTypeTextField = By.xpath("(//input[@id='_billType'])[1]");
 	private By billCcyTextField = By.xpath("(//input[@id='_billCcy'])[1]");
 	private By cifIdTextField = By.xpath("(//input[@id='_cifId'])[1]");
@@ -27,25 +26,17 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By underDocumentaryCreditNoRadioButton = By.xpath("(//input[@id='_undno1_radio'])[1]");
 	private By documentaryCreditNoTextField = By.xpath("(//input[@id='_dcNo'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
-	
-	// Drawer or Exporter Details
 	private By operativeAccountIdTextField = By.xpath("(//input[@id='_meobgen_oppAccId'])[1]");
 	private By drawerSwiftAddressDetailsYesRadioButton = By.xpath("(//input[@id='_meobgen_finyes1_radio'])[1]");
 	private By drawerSwiftAddressDetailsNoRadioButton = By.xpath("(//input[@id='_meobgen_finno1_radio'])[1]");
-	
-	// Bill Amount Details
 	private By billAmountTextField = By.xpath("(//input[@id='_meobgen_boeAmt$amt'])[1]");
 	private By billCountryTextField = By.xpath("(//input[@id='_meobgen_billCountry'])[1]");
 	private By lodgeDateTextField = By.xpath("(//input[@id='_meobgen_lodgeDate'])[1]");
 	private By continue1Button = By.xpath("(//button[@id='_meobgen_meobgen_FinButton1'])[1]");
-	
-	// Drawee or Importer Details
 	private By draweeNameTextField = By.xpath("(//input[@id='_meobparty_nameDIdtl'])[1]");
 	private By draweeAddressLine1TextField = By.xpath("(//input[@id='_meobparty_addr1DIdtl'])[1]");
 	private By draweeSwiftAddressDetailsYesRadioButton = By.xpath("(//input[@id='_meobparty_meobparty_FinRadioButton12_radio'])[1]");
 	private By draweeSwiftAddressDetailsNoRadioButton = By.xpath("(//input[@id='_meobparty_party_FinRadio21_radio'])[1]");
-	
-	// Drawee Bank Details
 	private By draweeBankDetailsButton = By.xpath("(//h2[normalize-space()='Drawee Bank Details'])[1]");
 	private By draweeBankAddressTypeDropDownList = By.xpath("(//select[@id='_meobparty_addrTypeDBdtl_select'])[1]");
 	private By draweeBankIdentifierTextField = By.xpath("(//input[@id='_meobparty_bicDBdtl'])[1]");
@@ -53,8 +44,6 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By draweeBankNameTextField = By.xpath("(//input[@id='_meobparty_nameDBdtl1'])[1]");
 	private By draweeBankAddressLine1TextField = By.xpath("(//input[@id='_meobparty_addr1DBdtl1'])[1]");
 	private By draweeBankSwiftAddressDetailsNoRadioButton = By.xpath("(//input[@id='_meobparty_meobparty_FinRadioButton21_radio'])[1]");
-	
-	// Beneficiary Bank Details
 	private By beneficiaryBankDetailsButton = By.xpath("(//h2[normalize-space()='Beneficiary Bank Details'])[1]");
 	private By beneficiaryBankAddressTypeDropDownList = By.xpath("(//select[@id='_meobparty_addrTypeBBdtl_select'])[1]");
 	private By beneficiaryBankIdentifierTextField = By.xpath("(//input[@id='_meobparty_bicBBdtl'])[1]");
@@ -62,8 +51,6 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By beneficiaryBankNameTextField = By.xpath("(//input[@id='_meobparty_nameBBdtl1'])[1]");
 	private By beneficiaryBankAddressLine1TextField = By.xpath("(//input[@id='_meobparty_addr1BBdtl1'])[1]");
 	private By beneficiaryBankSwiftAddressDetailsNoRadioButton = By.xpath("(//input[@id='_meobparty_meobparty_FinRadioButton22_radio'])[1]");
-	
-	// Correspondent Bank Details
 	private By correspondentBankDetailsButton = By.xpath("(//h2[normalize-space()='Correspondent Bank Details'])[1]");
 	private By correspondentBankAddressTypeDropDownList = By.xpath("(//select[@id='_meobparty_addrTypeCOBdtl_select'])[1]");
 	private By correspondentBankIdentifierTextField = By.xpath("(//input[@id='_meobparty_bicCOBdtl'])[1]");
@@ -72,8 +59,10 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By correspondentBankAddressLine1TextField = By.xpath("(//input[@id='_meobparty_addr1COBdtl1'])[1]");
 	private By correspondentBankSwiftAddressDetailsNoRadioButton = By.xpath("(//input[@id='_meobparty_meobparty_FinRadioButton24_radio'])[1]");
 	private By continue2Button = By.xpath("(//button[@id='_meobparty_meobparty_FinButton1'])[1]");
-	
-	//Tenor Details
+	private By tenorDetailsAddButton = By.xpath("(//span[@id='_tenordatagrid_AddRecBtn_label'])[1]");
+	private By mixedBillAmountTextField = By.xpath("(//input[@id='_tenorBillAmt$amt'])[1]");
+	private By billTenorDropDownList = By.xpath("(//select[@id='_billTenor_select'])[1]");
+	private By tenorDetailsSaveAndPreviewButton = By.xpath("(//button[@id='_tenordetails_addViewSummary'])[1]");
 	private By tenorDetailsEditButton = By.xpath("(//span[@class='editcontent'])[1]");
 	private By tenorMonthsTextField = By.xpath("(//input[@id='_tenorMonthDays$duration1'])[1]");
 	private By tenorDaysTextField = By.xpath("(//input[@id='_tenorMonthDays$duration2'])[1]");
@@ -81,8 +70,6 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By onboardDateTextField = By.xpath("(//input[@id='_shpmntDate'])[1]");
 	private By tenorDetailsUpdateButton = By.xpath("(//button[@id='_tenordetails_updateSummary'])[1]");
 	private By continue3Button = By.xpath("(//button[@id='_meobtenor_continue'])[1]");
-	
-	//Bill details
 	private By invoiceAmountTextField = By.xpath("(//input[@id='_meobbill_invoiceAmt$amt'])[1]");
 	private By invoiceNumberTextField = By.xpath("(//input[@id='_meobbill_invoiceNo'])[1]");
 	private By invoiceDateTextField = By.xpath("(//input[@id='_meobbill_invoiceDate'])[1]");
@@ -90,6 +77,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By continue5Button = By.xpath("(//button[@id='_meobassign_FinButton1'])[1]");
 	private By continue6Button = By.xpath("(//button[@id='_margin_margin_Continue'])[1]");
 	private By continue7Button = By.xpath("(//button[@id='_meoblimit_meoblimit_FinButton1'])[1]");
+	private By closeButton = By.xpath("(//span[@id='modalCloseIcon'])[1]");
 	private By continue8Button = By.xpath("(//button[@id='_meobhca_homeccyadv_FinButton1'])[1]");
 	private By continue9Button = By.xpath("(//button[@id='_meobpur_meobpur_FinButton1'])[1]");
 	private By continue10Button = By.xpath("(//button[@id='_meobpreship_meobpreship_continue'])[1]");
@@ -106,12 +94,14 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By continue20Button = By.xpath("(//button[@id='_messagedetails_msgdet_Continue'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By billIdSuccessMessage = By.xpath("(//p[@id='_result_FinMessage1_paraMsg'])[1]");
-	
 	public static String billId;
 	public static String  referenceCsvColumnName = "reference";
 	public static String  billIdCsvColumnName = "billId";
 	public static String  tcIdCsvColumnName = "tcId";
 	public static String  linkedTcidCsvColumnName = "linkedTcid";
+	public static String  acceptLinkedTcidCsvColumnName = "acceptLinkedTcid";
+	public static String  purchaseLinkedTcidCsvColumnName = "purchaseLinkedTcid";
+	public static String  realizeLinkedTcidCsvColumnName = "realizeLinkedTcid";
 	
 	public ABELodgeExportBillsTradeFinancePage(WebDriver driver) {
 		this.driver = driver;
@@ -492,6 +482,35 @@ public class ABELodgeExportBillsTradeFinancePage {
 		return this;
 	}
 	
+	@Step("Press tenor details add button")
+	public ABELodgeExportBillsTradeFinancePage pressTenorDetailsAddButton() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, tenorDetailsAddButton);
+		PageFunctionUtils.clickOnElement(driver, tenorDetailsAddButton);
+		return this;
+	}
+	
+	@Step("Sending mixed bill amount: {0}")
+	public ABELodgeExportBillsTradeFinancePage sendKeysMixedBillAmountTextField(String mixedBillAmount) throws Exception {
+		if(mixedBillAmount != null) {
+			PageFunctionUtils.waitOnElement(driver, mixedBillAmountTextField);
+			PageFunctionUtils.clickOnElement(driver, mixedBillAmountTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, mixedBillAmountTextField, mixedBillAmount);
+		}
+		return this;
+	}
+	
+	@Step("Select bill tenor")
+	public ABELodgeExportBillsTradeFinancePage selectBillTenorSight() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, billTenorDropDownList, FinacleFieldsUtils.BILLTENORSIGHT);
+		return this;
+	}
+	
+	@Step("Select bill tenor")
+	public ABELodgeExportBillsTradeFinancePage selectBillTenorUsance() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, billTenorDropDownList, FinacleFieldsUtils.BILLTENORUSANCE);
+		return this;
+	}
+	
 	@Step("Sending tenor months: {0}")
 	public ABELodgeExportBillsTradeFinancePage sendKeysTenorMonthsTextField(String tenorMonths) throws Exception {
 		if(tenorMonths != null) {
@@ -536,6 +555,13 @@ public class ABELodgeExportBillsTradeFinancePage {
 	public ABELodgeExportBillsTradeFinancePage pressTenorDetailsUpdateButton() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, tenorDetailsUpdateButton);
 		PageFunctionUtils.clickOnElement(driver, tenorDetailsUpdateButton);
+		return this;
+	}
+	
+	@Step("Press tenor details save and preview button")
+	public ABELodgeExportBillsTradeFinancePage pressTenorDetailsSaveAndPreviewButton() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, tenorDetailsSaveAndPreviewButton);
+		PageFunctionUtils.clickOnElement(driver, tenorDetailsSaveAndPreviewButton);
 		return this;
 	}
 	
@@ -601,6 +627,13 @@ public class ABELodgeExportBillsTradeFinancePage {
 	public ABELodgeExportBillsTradeFinancePage pressContinue7Button() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, continue7Button);
 		PageFunctionUtils.clickOnElement(driver, continue7Button);
+		try {
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.clickOnElement(driver, closeButton);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+        } catch (Exception e) {
+        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+		}
 		return this;
 	}
 	
@@ -608,6 +641,13 @@ public class ABELodgeExportBillsTradeFinancePage {
 	public ABELodgeExportBillsTradeFinancePage pressContinue8Button() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, continue8Button);
 		PageFunctionUtils.clickOnElement(driver, continue8Button);
+		try {
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.clickOnElement(driver, closeButton);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+        } catch (Exception e) {
+        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+		}
 		return this;
 	}
 	
@@ -622,6 +662,13 @@ public class ABELodgeExportBillsTradeFinancePage {
 	public ABELodgeExportBillsTradeFinancePage pressContinue10Button() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, continue10Button);
 		PageFunctionUtils.clickOnElement(driver, continue10Button);
+		try {
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.clickOnElement(driver, closeButton);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+        } catch (Exception e) {
+        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+		}
 		return this;
 	}
 	
@@ -715,14 +762,25 @@ public class ABELodgeExportBillsTradeFinancePage {
 	}
 	
 	@Step("Save bill id")
-	public ABELodgeExportBillsTradeFinancePage saveBillId(String linkedId) throws Exception {
-		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.LodgeExportBillsCsv, linkedTcidCsvColumnName, linkedId);
-		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.LodgeExportBillsCsv, referenceCsvColumnName);
-		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyLodgeExportBillsCsv, tcIdCsvColumnName, linkedId);
-		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyLodgeExportBillsCsv, billIdCsvColumnName);
-		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.LodgeExportBillsCsv, rowByTcid1, columnByColumnName1, billId);
-			CSVUtils.insertValueInCsvCell(Paths.VerifyLodgeExportBillsCsv, rowByTcid2, columnByColumnName2, billId);
+	public ABELodgeExportBillsTradeFinancePage saveBillId(String linkedId, String acceptLinkedTcid) throws Exception {
+		if(linkedId != null) {
+			int rowByTcid1 = CSVUtils.getRowByTcid(Paths.LodgeExportBillsCsv, linkedTcidCsvColumnName, linkedId);
+			int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyLodgeExportBillsCsv, tcIdCsvColumnName, linkedId);
+			int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.LodgeExportBillsCsv, referenceCsvColumnName);
+			int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyLodgeExportBillsCsv, billIdCsvColumnName);		
+			if(rowByTcid1 != -1 && rowByTcid2 != -1) {
+				CSVUtils.insertValueInCsvCell(Paths.LodgeExportBillsCsv, rowByTcid1, columnByColumnName1, billId);
+				CSVUtils.insertValueInCsvCell(Paths.VerifyLodgeExportBillsCsv, rowByTcid2, columnByColumnName2, billId);
+			}
+		}
+		if(acceptLinkedTcid != null) {
+			int rowByTcid3 = CSVUtils.getRowByTcid(Paths.LodgeExportBillsCsv, acceptLinkedTcidCsvColumnName, acceptLinkedTcid);
+			int rowByTcid4 = CSVUtils.getRowByTcid(Paths.AcceptExportBillsCsv, tcIdCsvColumnName, acceptLinkedTcid);
+			int columnByColumnName3 = CSVUtils.getColumnByColumnName(Paths.AcceptExportBillsCsv, billIdCsvColumnName);
+			
+			if(rowByTcid3 != -1 && rowByTcid4 != -1) {
+				CSVUtils.insertValueInCsvCell(Paths.AcceptExportBillsCsv, rowByTcid4, columnByColumnName3, billId);
+			}
 		}
 		return this;
 	}

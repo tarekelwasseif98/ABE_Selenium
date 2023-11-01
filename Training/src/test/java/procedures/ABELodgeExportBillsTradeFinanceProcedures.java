@@ -88,36 +88,81 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 		else if(data.getCorrespondentBankSwiftAddressDetails().equalsIgnoreCase(FinacleFieldsUtils.SWIFTADDRESSDETAILSNO)) {
 			lodgeExportBillsTradeFinancePage.pressCorrespondentBankSwiftAddressDetailsNoButton();
 			}
-		lodgeExportBillsTradeFinancePage.pressContinue2Button()
-										 .pressTenorDetailsEditButton()
-										  .sendKeysTenorMonthsTextField(data.getTenorMonths())
-										   .sendKeysTenorDaysTextField(data.getTenorDays())
-										    .sendKeysBillDateTextField(data.getBillDate())
-										     .sendKeysOnboardDateTextField(data.getOnboardDate())
-										      .pressTenorDetailsUpdateButton()
-										       .pressContinue3Button()
-										        .sendKeysInvoiceAmountTextField(data.getInvoiceAmount())
-										         .sendKeysInvoiceNumberTextField(data.getInvoiceNumber())
-										          .sendKeysInvoiceDateTextField(data.getInvoiceDate())
-										           .pressContinue4Button()
-										            .pressContinue5Button()
-										             .pressContinue6Button()
-										              .pressContinue7Button()
-										               .pressContinue8Button()
-										                .pressContinue9Button()
-										                 .pressContinue10Button()
-										                  .pressContinue11Button()
-										                   .sendKeysPaySysIdTextField(data.getPaySysId())
-										                    .pressContinue12Button()
-										                     .pressContinue13Button()
-										                      .pressContinue14Button()
-										                       .pressContinue15Button()
-										                        .pressContinue16Button()
-										                         .pressContinue17Button()
-										                          .pressContinue18Button()
-										                           .pressContinue19Button()
-										                            .pressContinue20Button()
-										                             .pressSubmitButton()
-										                              .saveBillId(data.getLinkedTcid());
+		lodgeExportBillsTradeFinancePage.pressContinue2Button();
+		if(data.getType().equalsIgnoreCase(FinacleFieldsUtils.BILLTYPESIGHT)) {
+			lodgeExportBillsTradeFinancePage.pressTenorDetailsEditButton()
+											 .sendKeysBillDateTextField(data.getSightBillDate())
+											  .sendKeysOnboardDateTextField(data.getSightOnboardDate())
+											   .pressTenorDetailsUpdateButton();
+			}
+		else if(data.getType().equalsIgnoreCase(FinacleFieldsUtils.BILLTYPEUSANCE)) {
+			lodgeExportBillsTradeFinancePage.pressTenorDetailsEditButton()
+											 .sendKeysTenorMonthsTextField(data.getUsanceTenorMonths())
+											  .sendKeysTenorDaysTextField(data.getUsanceTenorDays())
+											   .sendKeysBillDateTextField(data.getUsanceBillDate())
+											    .sendKeysOnboardDateTextField(data.getUsanceOnboardDate());
+			}
+		else if(data.getType().equalsIgnoreCase(FinacleFieldsUtils.BILLTYPEMIXEDTENOR)) {
+			if(data.getMixedBillTenor1().equalsIgnoreCase(FinacleFieldsUtils.BILLTENORSIGHT)) {
+				lodgeExportBillsTradeFinancePage.pressTenorDetailsAddButton()
+												 .sendKeysMixedBillAmountTextField(data.getMixedBillAmount1())
+												  .selectBillTenorSight()
+												   .sendKeysBillDateTextField(data.getMixedBillDate1())
+												    .sendKeysOnboardDateTextField(data.getMixedOnboardDate1())
+												     .pressTenorDetailsSaveAndPreviewButton();
+				}
+			else if(data.getMixedBillTenor1().equalsIgnoreCase(FinacleFieldsUtils.BILLTENORUSANCE)) {
+				lodgeExportBillsTradeFinancePage.pressTenorDetailsAddButton()
+												 .sendKeysMixedBillAmountTextField(data.getMixedBillAmount1())
+												  .selectBillTenorUsance()
+												   .sendKeysTenorMonthsTextField(data.getMixedBillTenorMonths1())
+												    .sendKeysTenorDaysTextField(data.getMixedBillTenorDays1())
+												     .sendKeysBillDateTextField(data.getMixedBillDate1())
+												      .sendKeysOnboardDateTextField(data.getMixedOnboardDate1())
+												       .pressTenorDetailsSaveAndPreviewButton();
+				}
+		if(data.getMixedBillTenor2().equalsIgnoreCase(FinacleFieldsUtils.BILLTENORSIGHT)) {
+			lodgeExportBillsTradeFinancePage.pressTenorDetailsAddButton()
+											 .sendKeysMixedBillAmountTextField(data.getMixedBillAmount2())
+											  .selectBillTenorSight()
+											   .sendKeysBillDateTextField(data.getMixedBillDate2())
+											    .sendKeysOnboardDateTextField(data.getMixedOnboardDate2())
+											     .pressTenorDetailsSaveAndPreviewButton();
+			}
+		else if(data.getMixedBillTenor2().equalsIgnoreCase(FinacleFieldsUtils.BILLTENORUSANCE)) {
+				lodgeExportBillsTradeFinancePage.pressTenorDetailsAddButton()
+												 .sendKeysMixedBillAmountTextField(data.getMixedBillAmount2())
+												  .selectBillTenorUsance()
+												   .sendKeysTenorMonthsTextField(data.getMixedBillTenorMonths2())
+												    .sendKeysTenorDaysTextField(data.getMixedBillTenorDays2())
+												     .sendKeysBillDateTextField(data.getMixedBillDate2())
+												      .sendKeysOnboardDateTextField(data.getMixedOnboardDate2())
+												       .pressTenorDetailsSaveAndPreviewButton();
+				}
+		}
+		lodgeExportBillsTradeFinancePage.pressContinue3Button()
+										 .sendKeysInvoiceAmountTextField(data.getInvoiceAmount())
+										  .sendKeysInvoiceNumberTextField(data.getInvoiceNumber())
+										   .sendKeysInvoiceDateTextField(data.getInvoiceDate())
+										    .pressContinue4Button()
+										     .pressContinue5Button()
+										      .pressContinue6Button()
+										       .pressContinue7Button()
+										        .pressContinue8Button()
+										         .pressContinue9Button()
+										          .pressContinue10Button()
+										           .pressContinue11Button()
+										            .sendKeysPaySysIdTextField(data.getPaySysId())
+										             .pressContinue12Button()
+										              .pressContinue13Button()
+										               .pressContinue14Button()
+										                .pressContinue15Button()
+										                 .pressContinue16Button()
+										                  .pressContinue17Button()
+										                   .pressContinue18Button()
+										                    .pressContinue19Button()
+										                     .pressContinue20Button()
+										                      .pressSubmitButton()
+										                       .saveBillId(data.getLinkedTcid(), data.getAcceptLinkedTcid());
 		}
 	}

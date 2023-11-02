@@ -46,7 +46,7 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
 	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        WebDriverWait wait = new WebDriverWait(driver, 45);
 	        try {
 	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 	            alert.accept();
@@ -106,6 +106,7 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	
 	@Step("Press continue button")
 	public ABEOpenCurrentAccountMudarabahCAAPage pressContinueButton() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, continueButton);
 		PageFunctionUtils.clickOnElement(driver, continueButton);
 		return this;
 	}

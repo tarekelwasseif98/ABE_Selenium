@@ -8,6 +8,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingData {
 	private String menu;
 	private String cif;
 	private String schemeCode;
+	private String accountOpeningDate;
 	private String assetValue;
 	private String customerMargin;
 	private String financePeriodMonths;
@@ -18,8 +19,6 @@ public class ABEOpenMurabahaAccountMurabahaFinancingData {
 	private String installmentFrequency;
 	private String installmentStartDate;
 	private String date;
-	private String calendar;
-	private String onHoliday;
 	private String profitFrequency;
 	private String profitStartDate;
 	private String operativeAccountId;
@@ -31,7 +30,8 @@ public class ABEOpenMurabahaAccountMurabahaFinancingData {
 	private String expectedResult;
 	private String reference;
 	private String linkedTcid;
-	
+	private String disburseTcid;
+
 	public String getTcId() {
 		return tcId;
 	}
@@ -86,6 +86,14 @@ public class ABEOpenMurabahaAccountMurabahaFinancingData {
 	
 	public void setSchemeCode(String schemeCode) {
 		this.schemeCode = schemeCode;
+	}
+	
+	public String getAccountOpeningDate() {
+		return accountOpeningDate;
+	}
+
+	public void setAccountOpeningDate(String accountOpeningDate) {
+		this.accountOpeningDate = accountOpeningDate;
 	}
 	
 	public String getAssetValue() {
@@ -166,22 +174,6 @@ public class ABEOpenMurabahaAccountMurabahaFinancingData {
 	
 	public void setDate(String date) {
 		this.date = date;
-	}
-	
-	public String getCalendar() {
-		return calendar;
-	}
-	
-	public void setCalendar(String calendar) {
-		this.calendar = calendar;
-	}
-	
-	public String getOnHoliday() {
-		return onHoliday;
-	}
-	
-	public void setOnHoliday(String onHoliday) {
-		this.onHoliday = onHoliday;
 	}
 	
 	public String getProfitFrequency() {
@@ -271,20 +263,28 @@ public class ABEOpenMurabahaAccountMurabahaFinancingData {
 	public void setLinkedTcid(String linkedTcid) {
 		this.linkedTcid = linkedTcid;
 	}
+	
+	public String getDisburseTcid() {
+		return disburseTcid;
+	}
+
+	public void setDisburseTcid(String disburseTcid) {
+		this.disburseTcid = disburseTcid;
+	}
 
 	@Override
 	public String toString() {
 		return "ABEOpenMurabahaAccountMurabahaFinancingData [tcId=" + tcId + ", summary=" + summary + ", username="
 				+ username + ", password=" + password + ", menu=" + menu + ", cif=" + cif + ", schemeCode=" + schemeCode
-				+ ", assetValue=" + assetValue + ", customerMargin=" + customerMargin + ", financePeriodMonths="
-				+ financePeriodMonths + ", financePeriodDays=" + financePeriodDays + ", debitAccountId="
-				+ debitAccountId + ", equatedInstallment=" + equatedInstallment + ", numberOfInstallments="
-				+ numberOfInstallments + ", installmentFrequency=" + installmentFrequency + ", installmentStartDate="
-				+ installmentStartDate + ", date=" + date + ", calendar=" + calendar + ", onHoliday=" + onHoliday
+				+ ", accountOpeningDate=" + accountOpeningDate + ", assetValue=" + assetValue + ", customerMargin="
+				+ customerMargin + ", financePeriodMonths=" + financePeriodMonths + ", financePeriodDays="
+				+ financePeriodDays + ", debitAccountId=" + debitAccountId + ", equatedInstallment="
+				+ equatedInstallment + ", numberOfInstallments=" + numberOfInstallments + ", installmentFrequency="
+				+ installmentFrequency + ", installmentStartDate=" + installmentStartDate + ", date=" + date
 				+ ", profitFrequency=" + profitFrequency + ", profitStartDate=" + profitStartDate
 				+ ", operativeAccountId=" + operativeAccountId + ", expiryDate=" + expiryDate + ", documentDate="
 				+ documentDate + ", limitIdPrefix=" + limitIdPrefix + ", limitIdSuffix=" + limitIdSuffix
 				+ ", drawingPowerIndicator=" + drawingPowerIndicator + ", expectedResult=" + expectedResult
-				+ ", linkedTcid=" + linkedTcid + "]";
+				+ ", linkedTcid=" + linkedTcid + ", disburseTcid=" + disburseTcid + "]";
 	}
 }

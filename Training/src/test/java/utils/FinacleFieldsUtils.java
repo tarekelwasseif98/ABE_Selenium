@@ -27,4 +27,17 @@ public class FinacleFieldsUtils {
 	public static final String AMOUNTTYPEFIXED = "Fixed";
 	public static final String AMOUNTTYPEDERIVED = "Derived";
 	public static final String FREQUENCYNDAYS = "Every 'N' Days";
+	public static final String UNDERDOCUMENTARYCREDITYES = "Yes";
+	public static final String UNDERDOCUMENTARYCREDITNO = "No";
+	public static final String ADDRESSTYPEBANKIDENTIFIER = "Bank Identifier";
+	public static final String ADDRESSTYPENAMEANDADDRESS = "Name and Address";
+	public static final String SWIFTADDRESSDETAILSYES = "yes";
+	public static final String SWIFTADDRESSDETAILSNO = "no";
+	public static final String BILLTENORSIGHT = "Sight";
+	public static final String BILLTENORUSANCE = "Usance";
+	public static final String BILLTYPESIGHT = "Sight";
+	public static final String BILLTYPEUSANCE = "Usance";
+	public static final String BILLTYPEMIXEDTENOR = "Mixed Tenor";
+	public static final String ATTRIBUTETITLE = "title";
+	public static final String ATTRIBUTEVALUE = "value";
 }

@@ -44,7 +44,7 @@ public class ABECreateSTOTest {
 	public void beforeTest(Object [] testData) throws Exception {
 		ABECreateSTOData data = (ABECreateSTOData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
-		driver.get(Properties.FinacleUrl);
+		driver.get(Properties.FINACLEURL);
 		testCaseId = CSVUtils.getTestCaseId(Paths.ABECreateSTOCsv);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage

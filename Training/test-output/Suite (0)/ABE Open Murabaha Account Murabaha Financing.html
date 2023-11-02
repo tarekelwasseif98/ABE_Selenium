@@ -1,0 +1,227 @@
+<html>
+<head>
+<title>TestNG:  ABE Open Murabaha Account Murabaha Financing</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>ABE Open Murabaha Account Murabaha Financing</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>19/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Oct 24 21:47:00 EEST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>2542 seconds (2542266 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest()'><b>verifyIslamicMurabahaAccountOpeningTest</b><br>Test class: tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest<br>Parameters: ABEVerifyMurabahaAccountOpeningMurabahaFinancingData [tcId=FCB-9977, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_RetailProjectsMedium&LongTerm_4014_ByChecker_C5, username=PT10, password=Infy@123, menu=AIFAT, accountId='40140624601301318051, expectedResult=successfully]</td>
+<td><div><pre>java.lang.AssertionError: 
+	at utils.AssertionFactory.checkExpectedResult(AssertionFactory.java:8)
+	at tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest(ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1968993496", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1968993496'><pre>java.lang.AssertionError: 
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:23)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
+	at utils.AssertionFactory.checkExpectedResult(AssertionFactory.java:8)
+	at tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest(ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>91</td>
+<td>tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest()'><b>verifyIslamicMurabahaAccountOpeningTest</b><br>Test class: tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest<br>Parameters: ABEVerifyMurabahaAccountOpeningMurabahaFinancingData [tcId=FCB-9975, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_MicroFinanceShortTerm_4012_ByChecker_C3, username=PT10, password=Infy@123, menu=AIFAT, accountId='40120624601301318022, expectedResult=successfully]</td>
+<td></td>
+<td>90</td>
+<td>tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f</td></tr>
+<tr>
+<td title='tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest()'><b>verifyIslamicMurabahaAccountOpeningTest</b><br>Test class: tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest<br>Parameters: ABEVerifyMurabahaAccountOpeningMurabahaFinancingData [tcId=FCB-9976, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_RetailProjectsShortTerm_4013_ByChecker_C4, username=PT10, password=Infy@123, menu=AIFAT, accountId='40130624601301318045, expectedResult=successfully]</td>
+<td></td>
+<td>90</td>
+<td>tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f</td></tr>
+<tr>
+<td title='tests.ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest()'><b>openMurabahaAccountMurabahaFinancingTest</b><br>Test class: tests.ABEOpenMurabahaAccountMurabahaFinancingTest<br>Parameters: ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9942, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_RetailProjectsMedium&LongTerm_4014_ByMaker_B5, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4014, assetValue=200000, customerMargin=50000, financePeriodMonths=24, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=24, installmentFrequency=monthly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate='10-10-2023, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9977, disburseTcid=FCB-10024]</td>
+<td></td>
+<td>146</td>
+<td>tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad</td></tr>
+<tr>
+<td title='tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest()'><b>verifyIslamicMurabahaAccountOpeningTest</b><br>Test class: tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest<br>Parameters: ABEVerifyMurabahaAccountOpeningMurabahaFinancingData [tcId=FCB-9978, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_LivestockShortTerm_4015_ByChecker_C6, username=PT10, password=Infy@123, menu=AIFAT, accountId='40150624601301318067, expectedResult=successfully]</td>
+<td></td>
+<td>89</td>
+<td>tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f</td></tr>
+<tr>
+<td title='tests.ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest()'><b>openMurabahaAccountMurabahaFinancingTest</b><br>Test class: tests.ABEOpenMurabahaAccountMurabahaFinancingTest<br>Parameters: ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9944, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_LivestockMedium&LongTerm_4016_ByMaker_B7, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4016, assetValue=200000, customerMargin=0, financePeriodMonths=24, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=24, installmentFrequency=monthly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate='10-10-2023, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9979, disburseTcid=FCB-10026]</td>
+<td></td>
+<td>150</td>
+<td>tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad</td></tr>
+<tr>
+<td title='tests.ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest()'><b>openMurabahaAccountMurabahaFinancingTest</b><br>Test class: tests.ABEOpenMurabahaAccountMurabahaFinancingTest<br>Parameters: ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9941, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_RetailProjectsShortTerm_4013_ByMaker_B4, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4013, assetValue=70000, customerMargin=30000, financePeriodMonths=12, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=4, installmentFrequency=quarterly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate=null, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9976, disburseTcid=FCB-10023]</td>
+<td></td>
+<td>147</td>
+<td>tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad</td></tr>
+<tr>
+<td title='tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest()'><b>verifyIslamicMurabahaAccountOpeningTest</b><br>Test class: tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest<br>Parameters: ABEVerifyMurabahaAccountOpeningMurabahaFinancingData [tcId=FCB-9979, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_LivestockMedium&LongTerm_4016_ByChecker_C7, username=PT10, password=Infy@123, menu=AIFAT, accountId='40160624601301318073, expectedResult=successfully]</td>
+<td></td>
+<td>90</td>
+<td>tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f</td></tr>
+<tr>
+<td title='tests.ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest()'><b>openMurabahaAccountMurabahaFinancingTest</b><br>Test class: tests.ABEOpenMurabahaAccountMurabahaFinancingTest<br>Parameters: ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9947, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_SMEs-S-CBE-ShortTerm_4000_ByMaker_B10, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4000, assetValue=150000, customerMargin=10000, financePeriodMonths=6, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=6, installmentFrequency=monthly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate='10-10-2023, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9982, disburseTcid=FCB-10029]</td>
+<td></td>
+<td>151</td>
+<td>tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad</td></tr>
+<tr>
+<td title='tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest()'><b>verifyIslamicMurabahaAccountOpeningTest</b><br>Test class: tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest<br>Parameters: ABEVerifyMurabahaAccountOpeningMurabahaFinancingData [tcId=FCB-9974, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_CarsMedium&LongTerm_4011_ByChecker_C2, username=PT10, password=Infy@123, menu=AIFAT, accountId='40110624601301318009, expectedResult=successfully]</td>
+<td></td>
+<td>89</td>
+<td>tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f</td></tr>
+<tr>
+<td title='tests.ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest()'><b>openMurabahaAccountMurabahaFinancingTest</b><br>Test class: tests.ABEOpenMurabahaAccountMurabahaFinancingTest<br>Parameters: ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9943, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_LivestockShortTerm_4015_ByMaker_B6, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4015, assetValue=90000, customerMargin=0, financePeriodMonths=12, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=2, installmentFrequency=half yearly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate='10-10-2023, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9978, disburseTcid=FCB-10025]</td>
+<td></td>
+<td>150</td>
+<td>tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad</td></tr>
+<tr>
+<td title='tests.ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest()'><b>openMurabahaAccountMurabahaFinancingTest</b><br>Test class: tests.ABEOpenMurabahaAccountMurabahaFinancingTest<br>Parameters: ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9946, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_MicroFinanceCBEMedium&LongTerm_4018_ByMaker_B9, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4018, assetValue=80000, customerMargin=0, financePeriodMonths=24, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=no, numberOfInstallments=1, installmentFrequency=null, installmentStartDate='10-10-2025, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=weekly, profitStartDate='10-10-2025, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9981, disburseTcid=FCB-10028]</td>
+<td></td>
+<td>151</td>
+<td>tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad</td></tr>
+<tr>
+<td title='tests.ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest()'><b>openMurabahaAccountMurabahaFinancingTest</b><br>Test class: tests.ABEOpenMurabahaAccountMurabahaFinancingTest<br>Parameters: ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9938, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_CarsShortTerm_4010_ByMaker_B1, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4010, assetValue=10000, customerMargin=2000, financePeriodMonths=12, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=12, installmentFrequency=monthly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate=null, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix='1000, limitIdSuffix='CUSTL, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9973, disburseTcid=FCB-10020]</td>
+<td></td>
+<td>146</td>
+<td>tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad</td></tr>
+<tr>
+<td title='tests.ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest()'><b>openMurabahaAccountMurabahaFinancingTest</b><br>Test class: tests.ABEOpenMurabahaAccountMurabahaFinancingTest<br>Parameters: ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9945, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_MicroFinanceCBEShortTerm_4017_ByMaker_B8, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4017, assetValue=100000, customerMargin=0, financePeriodMonths=12, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=48, installmentFrequency=weekly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate='10-10-2023, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9980, disburseTcid=FCB-10027]</td>
+<td></td>
+<td>150</td>
+<td>tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad</td></tr>
+<tr>
+<td title='tests.ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest()'><b>openMurabahaAccountMurabahaFinancingTest</b><br>Test class: tests.ABEOpenMurabahaAccountMurabahaFinancingTest<br>Parameters: ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9940, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_MicroFinanceShortTerm_4012_ByMaker_B3, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4012, assetValue=100000, customerMargin=0, financePeriodMonths=12, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=yes, numberOfInstallments=12, installmentFrequency=monthly, installmentStartDate='10-11-2023, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=null, profitStartDate=null, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9975, disburseTcid=FCB-10022]</td>
+<td></td>
+<td>146</td>
+<td>tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad</td></tr>
+<tr>
+<td title='tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest()'><b>verifyIslamicMurabahaAccountOpeningTest</b><br>Test class: tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest<br>Parameters: ABEVerifyMurabahaAccountOpeningMurabahaFinancingData [tcId=FCB-9981, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_MicroFinanceCBEMedium&LongTerm_4018_ByChecker_C9, username=PT10, password=Infy@123, menu=AIFAT, accountId='40180624601301318095, expectedResult=successfully]</td>
+<td></td>
+<td>89</td>
+<td>tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f</td></tr>
+<tr>
+<td title='tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest()'><b>verifyIslamicMurabahaAccountOpeningTest</b><br>Test class: tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest<br>Parameters: ABEVerifyMurabahaAccountOpeningMurabahaFinancingData [tcId=FCB-9973, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_CarsShortTerm_4010_ByChecker_C1, username=PT10, password=Infy@123, menu=AIFAT, accountId='40100624601301317973, expectedResult=successfully]</td>
+<td></td>
+<td>88</td>
+<td>tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f</td></tr>
+<tr>
+<td title='tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest()'><b>verifyIslamicMurabahaAccountOpeningTest</b><br>Test class: tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest<br>Parameters: ABEVerifyMurabahaAccountOpeningMurabahaFinancingData [tcId=FCB-9982, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_SMEs-S-CBE-ShortTerm_4000_ByChecker_C10, username=PT10, password=Infy@123, menu=AIFAT, accountId='40000624601301318102, expectedResult=successfully]</td>
+<td></td>
+<td>89</td>
+<td>tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f</td></tr>
+<tr>
+<td title='tests.ABEOpenMurabahaAccountMurabahaFinancingTest.openMurabahaAccountMurabahaFinancingTest()'><b>openMurabahaAccountMurabahaFinancingTest</b><br>Test class: tests.ABEOpenMurabahaAccountMurabahaFinancingTest<br>Parameters: ABEOpenMurabahaAccountMurabahaFinancingData [tcId=FCB-9939, summary=IslamicBanking_MurabahaFinancing_Open_MurabahaAccount_CarsMedium&LongTerm_4011_ByMaker_B2, username=PT9, password=Infy@123, menu=OIFAT, cif=6246013, schemeCode=4011, assetValue=50000, customerMargin=0, financePeriodMonths=24, financePeriodDays=0, debitAccountId='1606624601301001, equatedInstallment=no, numberOfInstallments=1, installmentFrequency=null, installmentStartDate='10-10-2024, date=10, calendar=gregorian calendar, onHoliday=next day, profitFrequency=monthly, profitStartDate='10-10-2024, operativeAccountId='1606624601301001, expiryDate=01/01/2099, documentDate='10-10-2023, limitIdPrefix=null, limitIdSuffix=null, drawingPowerIndicator=equal, expectedResult=successfully, linkedTcid=FCB-9974, disburseTcid=FCB-10021]</td>
+<td></td>
+<td>146</td>
+<td>tests.ABEOpenMurabahaAccountMurabahaFinancingTest@332729ad</td></tr>
+<tr>
+<td title='tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.verifyIslamicMurabahaAccountOpeningTest()'><b>verifyIslamicMurabahaAccountOpeningTest</b><br>Test class: tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest<br>Parameters: ABEVerifyMurabahaAccountOpeningMurabahaFinancingData [tcId=FCB-9980, summary=IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_MicroFinanceCBEShortTerm_4017_ByChecker_C8, username=PT10, password=Infy@123, menu=AIFAT, accountId='40170624601301318089, expectedResult=successfully]</td>
+<td></td>
+<td>89</td>
+<td>tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest@4f6f416f</td></tr>
+</table><p>
+</body>
+</html>

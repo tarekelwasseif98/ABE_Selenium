@@ -30,7 +30,7 @@ public class ABEVerifyCasaAccountClosureMudarabahTest {
 	public void beforeTest(Object [] testData) throws Exception {
 		ABEVerifyCasaAccountClosureMudarabahData data = (ABEVerifyCasaAccountClosureMudarabahData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
-		driver.get(Properties.FinacleUrl);
+		driver.get(Properties.FINACLEURL);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())
@@ -38,7 +38,7 @@ public class ABEVerifyCasaAccountClosureMudarabahTest {
 		.clickOnLoginButton(data.getPassword());
 	}
 	
-	@DataProvider(name="Verify Close Islamic Casa Account DataProvider")
+	@DataProvider(name="Verify Casa Account Closure Mudarabah DataProvider")
 	public Object[] dpMethod() throws Exception {
     	Workbook workbook = new Workbook(Paths.VerifyCloseIslamicCasaAccountCsv);
 		workbook.save(Paths.VerifyCloseIslamicCasaAccountJson);
@@ -49,8 +49,8 @@ public class ABEVerifyCasaAccountClosureMudarabahTest {
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Verify Close Islamic Casa Account DataProvider", dataProviderClass = ABEVerifyCasaAccountClosureMudarabahTest.class)
-	public void closeIslamicCasaAccountTest(ABEVerifyCasaAccountClosureMudarabahData data) throws Exception {
+	@Test(dataProvider = "Verify Casa Account Closure Mudarabah DataProvider", dataProviderClass = ABEVerifyCasaAccountClosureMudarabahTest.class)
+	public void verifyCasaAccountClosureMudarabahTest(ABEVerifyCasaAccountClosureMudarabahData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());
 		ABEVerifyCasaAccountClosureMudarabahProcedures.verifyCasaAccountClosureMudarabah(driver, data);

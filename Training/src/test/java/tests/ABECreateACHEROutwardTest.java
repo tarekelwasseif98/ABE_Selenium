@@ -44,7 +44,7 @@ public class ABECreateACHEROutwardTest {
 	public void beforeTest(Object [] testData) throws Exception {
 		ABECreateOutwardTransferPaymentData data = (ABECreateOutwardTransferPaymentData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
-		driver.get(Properties.FinacleUrl);
+		driver.get(Properties.FINACLEURL);
 		testCaseId = CSVUtils.getTestCaseId(Paths.ABECreateACHEROutwardCsv);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage

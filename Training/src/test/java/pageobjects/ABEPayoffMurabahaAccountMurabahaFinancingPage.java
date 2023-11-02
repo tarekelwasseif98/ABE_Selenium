@@ -129,6 +129,7 @@ public class ABEPayoffMurabahaAccountMurabahaFinancingPage {
 	
 	@Step("Press continue button")
 	public ABEPayoffMurabahaAccountMurabahaFinancingPage pressContinue2Button() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, continue2Button);
 		PageFunctionUtils.clickOnElement(driver, continue2Button);
 		return this;
 	}

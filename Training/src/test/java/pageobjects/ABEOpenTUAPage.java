@@ -41,7 +41,7 @@ public class ABEOpenTUAPage {
 	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Open Islamic Top Up Deposit Account'])[1]");
 	private By accountIdSuccessMessage = By.xpath("(//p[@id='_resMsg_paraMsg'])[1]");
 	private String peggingFrequencyValue = "1";
-	public static String acId;
+	public static String accountId;
 	public static String  referenceCsvColumnName = "reference";
 	public static String  accountIdCsvColumnName = "accountId";
 	public static String  tcIdCsvColumnName = "tcId";
@@ -60,7 +60,7 @@ public class ABEOpenTUAPage {
 			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
 	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        WebDriverWait wait = new WebDriverWait(driver, 45);
 	        try {
 	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 	            alert.accept();
@@ -112,6 +112,7 @@ public class ABEOpenTUAPage {
 	@Step("Sending value date: {0}")
 	public ABEOpenTUAPage sendKeysValueDateTextField(String valueDate) throws Exception {
 		if(valueDate != null) {
+			PageFunctionUtils.waitOnElement(driver, valueDateTextField);
 			PageFunctionUtils.clearDataInWebElement(driver, valueDateTextField);
 			PageFunctionUtils.clickOnElement(driver, valueDateTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, valueDateTextField, valueDate.substring(1));
@@ -182,6 +183,7 @@ public class ABEOpenTUAPage {
 	@Step("Sending account opening date: {0}")
 	public ABEOpenTUAPage sendKeysAccountOpeningDateTextField(String accountOpeningDate) throws Exception {
 		if(accountOpeningDate != null) {
+			PageFunctionUtils.waitOnElement(driver, accountOpeningDateTextField);
 			PageFunctionUtils.clearDataInWebElement(driver, accountOpeningDateTextField);
 			PageFunctionUtils.clickOnElement(driver, accountOpeningDateTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, accountOpeningDateTextField, accountOpeningDate.substring(1));
@@ -218,6 +220,7 @@ public class ABEOpenTUAPage {
 	
 	@Step("Renewal and closure details tab navigation")
 	public ABEOpenTUAPage navigateRenewalAndClosureDetailsTabMenu() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, renewalAndClosureDetailsTab);
 		PageFunctionUtils.clickOnElement(driver, renewalAndClosureDetailsTab);
 		return this;
 	}
@@ -227,7 +230,7 @@ public class ABEOpenTUAPage {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
-		acId = driver.findElement(accountIdSuccessMessage).getText().substring(87);
+		accountId = driver.findElement(accountIdSuccessMessage).getText().substring(87);
 		WebElement element = driver.findElement(menuNameTextBox);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView();", element);
@@ -241,8 +244,8 @@ public class ABEOpenTUAPage {
 		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyTUAOpeningCsv, tcIdCsvColumnName, linkedId);
 		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyTUAOpeningCsv, accountIdCsvColumnName);
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.OpenTUACsv, rowByTcid1, columnByColumnName1, acId);
-			CSVUtils.insertValueInCsvCell(Paths.VerifyTUAOpeningCsv, rowByTcid2, columnByColumnName2, acId);
+			CSVUtils.insertValueInCsvCell(Paths.OpenTUACsv, rowByTcid1, columnByColumnName1, accountId);
+			CSVUtils.insertValueInCsvCell(Paths.VerifyTUAOpeningCsv, rowByTcid2, columnByColumnName2, accountId);
 		}
 		return this;
 	}										

@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PageFunctionUtils {
 	public static void clickOnElement(WebDriver driver, By by) {
-		WebDriverWait wait = new WebDriverWait(driver, Properties.MaxTime);
+		WebDriverWait wait = new WebDriverWait(driver, Properties.MAXTIME);
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 		driver.findElement(by).click();
 	}
@@ -24,7 +24,7 @@ public class PageFunctionUtils {
 				driver.findElement(by).click();
 				bool = false;
 			} catch (Exception e) {
-				if ( count > Properties.MaxTime) {
+				if ( count > Properties.MAXTIME) {
 					bool = false;
 				} else {
 					try {
@@ -39,31 +39,31 @@ public class PageFunctionUtils {
 	}
 	
 	public static void enterDataInWebElement(WebDriver driver,By by,String keysToSend) throws Exception {
-		WebDriverWait wait = new WebDriverWait(driver, Properties.MinTime);
+		WebDriverWait wait = new WebDriverWait(driver, Properties.MINTIME);
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 		driver.findElement(by).sendKeys(keysToSend);
 	}
 	
 	public static void clearDataInWebElement(WebDriver driver,By by) throws Exception {
-		WebDriverWait wait = new WebDriverWait(driver, Properties.MinTime);
+		WebDriverWait wait = new WebDriverWait(driver, Properties.MINTIME);
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 		driver.findElement(by).clear();;
 	}
 	
 	public static void waitOnElement(WebDriver driver, By by) throws InterruptedException {
-		WebDriverWait wait = new WebDriverWait(driver, Properties.MaxTime);
+		WebDriverWait wait = new WebDriverWait(driver, Properties.MAXTIME);
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 	}
 	
 	public static void waitOnFrameAndSwitchXpath(WebDriver driver, By by) throws InterruptedException {
 			Thread.sleep(3000);
-			WebDriverWait wait = new WebDriverWait(driver, Properties.MaxTime);
+			WebDriverWait wait = new WebDriverWait(driver, Properties.MAXTIME);
 			wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(by));
 		}
 	
 	public static void waitOnFrameAndSwitchId(WebDriver driver, String id) throws InterruptedException {
 		Thread.sleep(3000);
-		WebDriverWait wait = new WebDriverWait(driver, Properties.MaxTime);
+		WebDriverWait wait = new WebDriverWait(driver, Properties.MAXTIME);
 		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(id));
 	}
 	
@@ -72,7 +72,7 @@ public class PageFunctionUtils {
 	}
 	
 	public static void sleep() throws InterruptedException {
-		Thread.sleep(Properties.SleepTime);
+		Thread.sleep(Properties.SLEEPTIME);
 		}
 	
 	public static void scrollUp(WebDriver driver) throws InterruptedException {

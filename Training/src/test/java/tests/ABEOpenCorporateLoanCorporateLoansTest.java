@@ -40,7 +40,7 @@ public class ABEOpenCorporateLoanCorporateLoansTest {
 	public void beforeTest(Object [] testData) throws Exception {
 		ABEOpenCorporateLoanCorporateLoansData data = (ABEOpenCorporateLoanCorporateLoansData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
-		driver.get(Properties.FinacleUrl);
+		driver.get(Properties.FINACLEURL);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())

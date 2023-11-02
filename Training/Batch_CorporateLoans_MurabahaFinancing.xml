@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Batch_CorporateLoans_MurabahaFinancing">
+	<listeners>
+		<listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+		<listener class-name="listeners.Listeners"/>
+	</listeners>
+	<suite-files>
+ 		<suite-file path="CorporateLoans.xml"></suite-file>
+ 		<suite-file path="MurabahaFinancing.xml"></suite-file>
+	</suite-files>
+</suite>

@@ -1,0 +1,2 @@
+tcId,summary,username,password,menu,billId,expectedResult
+FCB-6808,TradeFinance_Export_Bills_Under_Collection_Verify_Realize_Usance_Local_EGP_ByChecker_C8,PT19,Infy@123,VEOB,,successfully

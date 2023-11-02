@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+	<listener class-name="listeners.Listeners"/>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+</listeners>
+<test thread-count="1" name="Mudarabah CASA">
+	<groups>
+		<run>
+			<include name="ABEOpenCurrentAccountMudarabahCAATest"/>
+            <include name="ABEVerifyCurrentAccountOpeningMudarabahCAATest"/>
+            <include name="ABECloseCasaAccountMudarabahTest"/>
+            <include name="ABEVerifyCasaAccountClosureMudarabahTest"/>
+        </run>
+    </groups>
+    <classes>
+		<class name="tests.ABEOpenCurrentAccountMudarabahCAATest"/>
+	 	<class name="tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest"/>
+	 	<class name="tests.ABECloseCasaAccountMudarabahTest"/>
+	 	<class name="tests.ABEVerifyCasaAccountClosureMudarabahTest"/>
+    </classes>
+</test>
+</suite>

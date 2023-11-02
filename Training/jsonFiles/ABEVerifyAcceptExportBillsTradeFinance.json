@@ -1,11 +1,12 @@
 [
  {
-  "tcId": "FCB-6806",
-  "summary": "TradeFinance_Export_Bills_Under_Collection_Verify_Acceptance_Usance_Local_EGP_ByChecker_C4",
+  "tcId": "FCB-7233",
+  "summary": "TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Acceptance_Mixed Tenor_Foreign_USD_ByChecker_J4",
   "username": "PT19",
   "password": "Infy@123",
   "menu": "VEOB",
-  "billId": "'1401EDC23000123",
+  "billId": "'1401EDC23000199",
+  "mixedBillId2": "'1401EDC23000201",
   "expectedResult": "successfully"
  }
 ]

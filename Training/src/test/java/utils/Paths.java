@@ -74,6 +74,16 @@ public class Paths {
 	public static final String AcceptExportBillsJson =  "jsonFiles\\" + AcceptExportBillsCsv.substring(9, Paths.AcceptExportBillsCsv.length()-4) + ".json";
 	public static final String VerifyAcceptExportBillsJson =  "jsonFiles\\" + VerifyAcceptExportBillsCsv.substring(9, Paths.VerifyAcceptExportBillsCsv.length()-4) + ".json";
 	
+	public static final String PurchaseExportBillsCsv  = "csvFiles\\ABEPurchaseExportBillsTradeFinance.csv";
+	public static final String VerifyPurchaseExportBillsCsv  = "csvFiles\\ABEVerifyPurchaseExportBillsTradeFinance.csv";
+	public static final String PurchaseExportBillsJson =  "jsonFiles\\" + PurchaseExportBillsCsv.substring(9, Paths.PurchaseExportBillsCsv.length()-4) + ".json";
+	public static final String VerifyPurchaseExportBillsJson =  "jsonFiles\\" + VerifyPurchaseExportBillsCsv.substring(9, Paths.VerifyPurchaseExportBillsCsv.length()-4) + ".json";
+	
+	public static final String RealizeExportBillsCsv  = "csvFiles\\ABERealizeExportBillsTradeFinance.csv";
+	public static final String VerifyRealizeExportBillsCsv  = "csvFiles\\ABEVerifyRealizeExportBillsTradeFinance.csv";
+	public static final String RealizeExportBillsJson =  "jsonFiles\\" + RealizeExportBillsCsv.substring(9, Paths.RealizeExportBillsCsv.length()-4) + ".json";
+	public static final String VerifyRealizeExportBillsJson =  "jsonFiles\\" + VerifyRealizeExportBillsCsv.substring(9, Paths.VerifyRealizeExportBillsCsv.length()-4) + ".json";
+	
 	public static final String ABETellerOperationTransferLiabilitiesAndOperationCsv  = "csvFiles\\ABETellerOperationTransferLiabilitiesAndOperation.csv";
 	public static final String ABETellerOperationTransferLiabilitiesAndOperationJson =  "jsonFiles\\" + ABETellerOperationTransferLiabilitiesAndOperationCsv.substring(9, Paths.ABETellerOperationTransferLiabilitiesAndOperationCsv.length()-4) + ".json";
 	

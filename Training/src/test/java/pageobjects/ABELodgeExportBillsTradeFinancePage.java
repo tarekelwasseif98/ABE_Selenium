@@ -100,8 +100,11 @@ public class ABELodgeExportBillsTradeFinancePage {
 	public static String  tcIdCsvColumnName = "tcId";
 	public static String  linkedTcidCsvColumnName = "linkedTcid";
 	public static String  acceptLinkedTcidCsvColumnName = "acceptLinkedTcid";
+	public static String  verifyAcceptLinkedTcidCsvColumnName = "verifyAcceptLinkedTcid";
 	public static String  purchaseLinkedTcidCsvColumnName = "purchaseLinkedTcid";
+	public static String  verifyPurchaseLinkedTcidCsvColumnName = "verifyPurchaseLinkedTcid";
 	public static String  realizeLinkedTcidCsvColumnName = "realizeLinkedTcid";
+	public static String  verifyRealizeLinkedTcidCsvColumnName = "verifyRealizeLinkedTcid";
 	
 	public ABELodgeExportBillsTradeFinancePage(WebDriver driver) {
 		this.driver = driver;
@@ -762,7 +765,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	}
 	
 	@Step("Save bill id")
-	public ABELodgeExportBillsTradeFinancePage saveBillId(String linkedId, String acceptLinkedTcid) throws Exception {
+	public ABELodgeExportBillsTradeFinancePage saveBillId(String linkedId, String acceptLinkedTcid, String verifyAcceptLinkedTcid, String purchaseLinkedTcid, String verifyPurchaseLinkedTcid, String realizeLinkedTcid, String verifyRealizeLinkedTcid) throws Exception {
 		if(linkedId != null) {
 			int rowByTcid1 = CSVUtils.getRowByTcid(Paths.LodgeExportBillsCsv, linkedTcidCsvColumnName, linkedId);
 			int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyLodgeExportBillsCsv, tcIdCsvColumnName, linkedId);
@@ -773,13 +776,55 @@ public class ABELodgeExportBillsTradeFinancePage {
 				CSVUtils.insertValueInCsvCell(Paths.VerifyLodgeExportBillsCsv, rowByTcid2, columnByColumnName2, billId);
 			}
 		}
+		
 		if(acceptLinkedTcid != null) {
 			int rowByTcid3 = CSVUtils.getRowByTcid(Paths.LodgeExportBillsCsv, acceptLinkedTcidCsvColumnName, acceptLinkedTcid);
 			int rowByTcid4 = CSVUtils.getRowByTcid(Paths.AcceptExportBillsCsv, tcIdCsvColumnName, acceptLinkedTcid);
 			int columnByColumnName3 = CSVUtils.getColumnByColumnName(Paths.AcceptExportBillsCsv, billIdCsvColumnName);
-			
 			if(rowByTcid3 != -1 && rowByTcid4 != -1) {
 				CSVUtils.insertValueInCsvCell(Paths.AcceptExportBillsCsv, rowByTcid4, columnByColumnName3, billId);
+			}
+			if(verifyAcceptLinkedTcid != null) {
+				int rowByTcid5 = CSVUtils.getRowByTcid(Paths.LodgeExportBillsCsv, verifyAcceptLinkedTcidCsvColumnName, verifyAcceptLinkedTcid);
+				int rowByTcid6 = CSVUtils.getRowByTcid(Paths.VerifyAcceptExportBillsCsv, tcIdCsvColumnName, verifyAcceptLinkedTcid);
+				int columnByColumnName5 = CSVUtils.getColumnByColumnName(Paths.VerifyAcceptExportBillsCsv, billIdCsvColumnName);
+				if(rowByTcid5 != -1 && rowByTcid6 != -1) {
+					CSVUtils.insertValueInCsvCell(Paths.VerifyAcceptExportBillsCsv, rowByTcid6, columnByColumnName5, billId);
+				}
+			}
+		}
+		
+		if(purchaseLinkedTcid != null) {
+			int rowByTcid3 = CSVUtils.getRowByTcid(Paths.LodgeExportBillsCsv, purchaseLinkedTcidCsvColumnName, purchaseLinkedTcid);
+			int rowByTcid4 = CSVUtils.getRowByTcid(Paths.PurchaseExportBillsCsv, tcIdCsvColumnName, purchaseLinkedTcid);
+			int columnByColumnName3 = CSVUtils.getColumnByColumnName(Paths.PurchaseExportBillsCsv, billIdCsvColumnName);
+			if(rowByTcid3 != -1 && rowByTcid4 != -1) {
+				CSVUtils.insertValueInCsvCell(Paths.PurchaseExportBillsCsv, rowByTcid4, columnByColumnName3, billId);
+			}
+			if(verifyPurchaseLinkedTcid != null) {
+				int rowByTcid5 = CSVUtils.getRowByTcid(Paths.LodgeExportBillsCsv, verifyPurchaseLinkedTcidCsvColumnName, verifyPurchaseLinkedTcid);
+				int rowByTcid6 = CSVUtils.getRowByTcid(Paths.VerifyPurchaseExportBillsCsv, tcIdCsvColumnName, verifyPurchaseLinkedTcid);
+				int columnByColumnName5 = CSVUtils.getColumnByColumnName(Paths.VerifyPurchaseExportBillsCsv, billIdCsvColumnName);
+				if(rowByTcid5 != -1 && rowByTcid6 != -1) {
+					CSVUtils.insertValueInCsvCell(Paths.VerifyPurchaseExportBillsCsv, rowByTcid6, columnByColumnName5, billId);
+				}
+			}
+		}
+		
+		if(realizeLinkedTcid != null) {
+			int rowByTcid3 = CSVUtils.getRowByTcid(Paths.LodgeExportBillsCsv, realizeLinkedTcidCsvColumnName, realizeLinkedTcid);
+			int rowByTcid4 = CSVUtils.getRowByTcid(Paths.RealizeExportBillsCsv, tcIdCsvColumnName, realizeLinkedTcid);
+			int columnByColumnName3 = CSVUtils.getColumnByColumnName(Paths.RealizeExportBillsCsv, billIdCsvColumnName);
+			if(rowByTcid3 != -1 && rowByTcid4 != -1) {
+				CSVUtils.insertValueInCsvCell(Paths.RealizeExportBillsCsv, rowByTcid4, columnByColumnName3, billId);
+			}
+			if(verifyRealizeLinkedTcid != null) {
+				int rowByTcid5 = CSVUtils.getRowByTcid(Paths.LodgeExportBillsCsv, verifyRealizeLinkedTcidCsvColumnName, verifyRealizeLinkedTcid);
+				int rowByTcid6 = CSVUtils.getRowByTcid(Paths.VerifyRealizeExportBillsCsv, tcIdCsvColumnName, verifyRealizeLinkedTcid);
+				int columnByColumnName5 = CSVUtils.getColumnByColumnName(Paths.VerifyRealizeExportBillsCsv, billIdCsvColumnName);
+				if(rowByTcid5 != -1 && rowByTcid6 != -1) {
+					CSVUtils.insertValueInCsvCell(Paths.VerifyRealizeExportBillsCsv, rowByTcid6, columnByColumnName5, billId);
+				}
 			}
 		}
 		return this;

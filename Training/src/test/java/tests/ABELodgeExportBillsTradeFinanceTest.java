@@ -34,7 +34,23 @@ public class ABELodgeExportBillsTradeFinanceTest {
 		CSVUtils.clearColumnByName(Paths.LodgeExportBillsCsv, "reference");
 		CSVUtils.clearColumnByName(Paths.VerifyLodgeExportBillsCsv, "billId");
 		CSVUtils.clearColumnByName(Paths.AcceptExportBillsCsv, "billId");
+		CSVUtils.clearColumnByName(Paths.AcceptExportBillsCsv, "mixedBillId1");
+		CSVUtils.clearColumnByName(Paths.AcceptExportBillsCsv, "mixedBillId2");
 		CSVUtils.clearColumnByName(Paths.VerifyAcceptExportBillsCsv, "billId");
+		CSVUtils.clearColumnByName(Paths.VerifyAcceptExportBillsCsv, "mixedBillId1");
+		CSVUtils.clearColumnByName(Paths.VerifyAcceptExportBillsCsv, "mixedBillId2");
+		CSVUtils.clearColumnByName(Paths.PurchaseExportBillsCsv, "billId");
+		CSVUtils.clearColumnByName(Paths.PurchaseExportBillsCsv, "mixedBillId1");
+		CSVUtils.clearColumnByName(Paths.PurchaseExportBillsCsv, "mixedBillId2");
+		CSVUtils.clearColumnByName(Paths.VerifyPurchaseExportBillsCsv, "billId");
+		CSVUtils.clearColumnByName(Paths.VerifyPurchaseExportBillsCsv, "mixedBillId1");
+		CSVUtils.clearColumnByName(Paths.VerifyPurchaseExportBillsCsv, "mixedBillId2");
+		CSVUtils.clearColumnByName(Paths.RealizeExportBillsCsv, "billId");
+		CSVUtils.clearColumnByName(Paths.RealizeExportBillsCsv, "mixedBillId1");
+		CSVUtils.clearColumnByName(Paths.RealizeExportBillsCsv, "mixedBillId2");
+		CSVUtils.clearColumnByName(Paths.VerifyRealizeExportBillsCsv, "billId");
+		CSVUtils.clearColumnByName(Paths.VerifyRealizeExportBillsCsv, "mixedBillId1");
+		CSVUtils.clearColumnByName(Paths.VerifyRealizeExportBillsCsv, "mixedBillId2");
 	}
 
 	WebDriver driver = null;

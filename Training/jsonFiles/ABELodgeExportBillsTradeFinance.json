@@ -1,7 +1,7 @@
 [
  {
-  "tcId": "FCB-6803",
-  "summary": "TradeFinance_Export_Bills_Under_Collection_Lodge_Usance_Local_EGP_ByMaker_C1",
+  "tcId": "FCB-7230",
+  "summary": "TradeFinance_Export_Bills_Under_Documentary_Credit_Lodge_Mixed Tenor_Foreign_USD_ByMaker_J1",
   "username": "PT18",
   "password": "Infy@123",
   "menu": "LEOB",
@@ -48,9 +48,12 @@
   "invoiceDate": "'29-10-2023",
   "paySysId": "swift",
   "expectedResult": "successfully",
-  "linkedTcid": "FCB-6804",
-  "acceptLinkedTcid": "FCB-6805",
-  "purchaseLinkedTcid": "FCB-6809",
-  "realizeLinkedTcid": "FCB-6807"
+  "linkedTcid": "FCB-7231",
+  "acceptLinkedTcid": "FCB-7232",
+  "verifyAcceptLinkedTcid": "FCB-7233",
+  "purchaseLinkedTcid": "FCB-7238",
+  "verifyPurchaseLinkedTcid": "FCB-7239",
+  "realizeLinkedTcid": "FCB-7236",
+  "verifyRealizeLinkedTcid": "FCB-7237"
  }
 ]

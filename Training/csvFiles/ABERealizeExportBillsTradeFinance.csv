@@ -1,2 +1,2 @@
-tcId,summary,username,password,menu,billId,acceptanceDate,expectedResult,linkedTcid
-FCB-6807,TradeFinance_Export_Bills_Under_Collection_Realize_Lodge_Usance_Local_EGP_ByMaker_C7,PT18,Infy@123,AEOB,,,successfully,FCB-6808
+tcId,summary,username,password,menu,billId,mixedBillId1,mixedBillId2,acceptanceDate,expectedResult,linkedTcid
+FCB-7236,TradeFinance_Export_Bills_Under_Documentary_Credit_Realize_Lodge_Mixed Tenor_Foreign_USD_ByMaker_J9,PT18,Infy@123,AEOB,'1401EDC23000199,'1401EDC23000200,'1401EDC23000201,,successfully,FCB-7237

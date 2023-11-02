@@ -1,2 +1,2 @@
-"tcId","summary","username","password","menu","billId","expectedResult"
-"FCB-6806","TradeFinance_Export_Bills_Under_Collection_Verify_Acceptance_Usance_Local_EGP_ByChecker_C4","PT19","Infy@123","VEOB","","successfully"
+tcId,summary,username,password,menu,billId,mixedBillId1,mixedBillId2,expectedResult
+FCB-7233,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Acceptance_Mixed Tenor_Foreign_USD_ByChecker_J4,PT19,Infy@123,VEOB,'1401EDC23000199,,'1401EDC23000201,successfully

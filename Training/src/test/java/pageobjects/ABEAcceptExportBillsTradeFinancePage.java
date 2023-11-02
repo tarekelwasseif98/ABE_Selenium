@@ -6,9 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
-import utils.CSVUtils;
 import utils.PageFunctionUtils;
-import utils.Paths;
 
 public class ABEAcceptExportBillsTradeFinancePage {
 	private WebDriver driver;
@@ -19,11 +17,13 @@ public class ABEAcceptExportBillsTradeFinancePage {
 	private By searchBarTextField = By.id("menuSelect");
 	private By searchButton = By.id("menuSearcherGo");
 	private By billIdTextField = By.xpath("(//input[@id='_billIdOthers'])[1]");
+	private By tenorBillIdTextField = By.xpath("(//input[@id='_tenorBillId'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By generalDetailsSideTab = By.xpath("(//span[@id='fbmgeneral_textSpan'])[1]");
 	private By continue1Button = By.xpath("(//button[@id='_meobgen_meobgen_FinButton1'])[1]");
 	private By continue2Button = By.xpath("(//button[@id='_meobparty_meobparty_FinButton1'])[1]");
-	private By tenorDetailsEditButton = By.xpath("(//span[@class='editcontent'])[1]");
+	private By tenorDetailsEditButton1 = By.xpath("(//span[@class='editcontent'])[1]");
+	private By tenorDetailsEditButton2 = By.xpath("(//span[@class='editcontent'])[2]");
 	private By acceptanceDateTextField = By.xpath("(//input[@id='_acceptDate'])[1]");
 	private By tenorDetailsUpdateButton = By.xpath("(//button[@id='_tenordetails_updateSummary'])[1]");
 	private By continue3Button = By.xpath("(//button[@id='_meobtenor_continue'])[1]");
@@ -42,7 +42,6 @@ public class ABEAcceptExportBillsTradeFinancePage {
 	private By closeButton = By.xpath("(//span[@id='modalCloseIcon'])[1]");
 	private By continue16Button = By.xpath("(//button[@id='_messagedetails_msgdet_Continue'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private By billIdSuccessMessage = By.xpath("(//p[@id='_result_FinMessage1_paraMsg'])[1]");
 	public static String billId;
 	public static String  billIdCsvColumnName = "billId";
 	public static String  tcIdCsvColumnName = "tcId";
@@ -95,6 +94,16 @@ public class ABEAcceptExportBillsTradeFinancePage {
 		return this;
 	}
 	
+	@Step("Sending tenor bill id: {0}")
+	public ABEAcceptExportBillsTradeFinancePage sendKeysTenorBillIdTextField(String tenorBillId) throws Exception {
+		if(tenorBillId != null) {
+			PageFunctionUtils.waitOnElement(driver, tenorBillIdTextField);
+			PageFunctionUtils.clickOnElement(driver, tenorBillIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, tenorBillIdTextField, tenorBillId.substring(1));
+		}
+		return this;
+	}
+	
 	@Step("Press go button")
 	public ABEAcceptExportBillsTradeFinancePage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
@@ -123,9 +132,16 @@ public class ABEAcceptExportBillsTradeFinancePage {
 	}
 	
 	@Step("Press tenor details edit button")
-	public ABEAcceptExportBillsTradeFinancePage pressTenorDetailsEditButton() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, tenorDetailsEditButton);
-		PageFunctionUtils.clickOnElement(driver, tenorDetailsEditButton);
+	public ABEAcceptExportBillsTradeFinancePage pressTenorDetailsEditButton1() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, tenorDetailsEditButton1);
+		PageFunctionUtils.clickOnElement(driver, tenorDetailsEditButton1);
+		return this;
+	}
+	
+	@Step("Press tenor details edit button")
+	public ABEAcceptExportBillsTradeFinancePage pressTenorDetailsEditButton2() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, tenorDetailsEditButton2);
+		PageFunctionUtils.clickOnElement(driver, tenorDetailsEditButton2);
 		return this;
 	}
 	
@@ -255,21 +271,6 @@ public class ABEAcceptExportBillsTradeFinancePage {
 	public ABEAcceptExportBillsTradeFinancePage pressSubmitButton() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, submitButton);
 		PageFunctionUtils.clickOnElement(driver, submitButton);
-		PageFunctionUtils.waitOnElement(driver, billIdSuccessMessage);
-		billId = driver.findElement(billIdSuccessMessage).getText().substring(47);
-		return this;
-	}
-	
-	@Step("Save bill id")
-	public ABEAcceptExportBillsTradeFinancePage saveBillId(String linkedId) throws Exception {
-		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.AcceptExportBillsCsv, linkedTcidCsvColumnName, linkedId);
-		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.AcceptExportBillsCsv, billIdCsvColumnName);
-		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyAcceptExportBillsCsv, tcIdCsvColumnName, linkedId);
-		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyAcceptExportBillsCsv, billIdCsvColumnName);
-		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.AcceptExportBillsCsv, rowByTcid1, columnByColumnName1, billId);
-			CSVUtils.insertValueInCsvCell(Paths.VerifyAcceptExportBillsCsv, rowByTcid2, columnByColumnName2, billId);
-		}
 		return this;
 	}
 }

@@ -8,7 +8,13 @@ public class ABEVerifyLodgeExportBillsTradeFinanceData {
 	private String menu;
 	private String billId;
 	private String expectedResult;
-	
+	private String acceptLinkedTcid;
+	private String verifyAcceptLinkedTcid;
+	private String purchaseLinkedTcid;
+	private String verifyPurchaseLinkedTcid;
+	private String realizeLinkedTcid;
+	private String verifyRealizeLinkedTcid;
+
 	public String getTcId() {
 		return tcId;
 	}
@@ -64,11 +70,62 @@ public class ABEVerifyLodgeExportBillsTradeFinanceData {
 	public void setExpectedResult(String expectedResult) {
 		this.expectedResult = expectedResult;
 	}
+	
+	public String getAcceptLinkedTcid() {
+		return acceptLinkedTcid;
+	}
+
+	public void setAcceptLinkedTcid(String acceptLinkedTcid) {
+		this.acceptLinkedTcid = acceptLinkedTcid;
+	}
+	
+	public String getVerifyAcceptLinkedTcid() {
+		return verifyAcceptLinkedTcid;
+	}
+
+	public void setVerifyAcceptLinkedTcid(String verifyAcceptLinkedTcid) {
+		this.verifyAcceptLinkedTcid = verifyAcceptLinkedTcid;
+	}
+
+	public String getPurchaseLinkedTcid() {
+		return purchaseLinkedTcid;
+	}
+
+	public void setPurchaseLinkedTcid(String purchaseLinkedTcid) {
+		this.purchaseLinkedTcid = purchaseLinkedTcid;
+	}
+	
+	public String getVerifyPurchaseLinkedTcid() {
+		return verifyPurchaseLinkedTcid;
+	}
+
+	public void setVerifyPurchaseLinkedTcid(String verifyPurchaseLinkedTcid) {
+		this.verifyPurchaseLinkedTcid = verifyPurchaseLinkedTcid;
+	}
+
+	public String getRealizeLinkedTcid() {
+		return realizeLinkedTcid;
+	}
+
+	public void setRealizeLinkedTcid(String realizeLinkedTcid) {
+		this.realizeLinkedTcid = realizeLinkedTcid;
+	}
+	
+	public String getVerifyRealizeLinkedTcid() {
+		return verifyRealizeLinkedTcid;
+	}
+
+	public void setVerifyRealizeLinkedTcid(String verifyRealizeLinkedTcid) {
+		this.verifyRealizeLinkedTcid = verifyRealizeLinkedTcid;
+	}
 
 	@Override
 	public String toString() {
 		return "ABEVerifyLodgeExportBillsTradeFinanceData [tcId=" + tcId + ", summary=" + summary + ", username="
 				+ username + ", password=" + password + ", menu=" + menu + ", billId=" + billId + ", expectedResult="
-				+ expectedResult + "]";
+				+ expectedResult + ", acceptLinkedTcid=" + acceptLinkedTcid + ", verifyAcceptLinkedTcid="
+				+ verifyAcceptLinkedTcid + ", purchaseLinkedTcid=" + purchaseLinkedTcid + ", verifyPurchaseLinkedTcid="
+				+ verifyPurchaseLinkedTcid + ", realizeLinkedTcid=" + realizeLinkedTcid + ", verifyRealizeLinkedTcid="
+				+ verifyRealizeLinkedTcid + "]";
 	}
 }

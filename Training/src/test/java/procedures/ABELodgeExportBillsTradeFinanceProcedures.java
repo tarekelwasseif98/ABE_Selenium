@@ -163,6 +163,6 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 										                    .pressContinue19Button()
 										                     .pressContinue20Button()
 										                      .pressSubmitButton()
-										                       .saveBillId(data.getLinkedTcid(), data.getAcceptLinkedTcid());
+										                       .saveBillId(data.getLinkedTcid(), data.getAcceptLinkedTcid(), data.getVerifyAcceptLinkedTcid(), data.getPurchaseLinkedTcid(), data.getVerifyPurchaseLinkedTcid(), data.getRealizeLinkedTcid(), data.getVerifyRealizeLinkedTcid());
 		}
 	}

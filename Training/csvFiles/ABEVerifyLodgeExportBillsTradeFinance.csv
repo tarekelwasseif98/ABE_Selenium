@@ -1,2 +1,2 @@
-tcId,summary,username,password,menu,billId,expectedResult
-FCB-6804,TradeFinance_Export_Bills_Under_Collection_Verify_Usance_Local_EGP_ByChecker_C2,PT19,Infy@123,VEOB,'1401EDC23000157,successfully
+tcId,summary,username,password,menu,billId,expectedResult,acceptLinkedTcid,verifyAcceptLinkedTcid,purchaseLinkedTcid,verifyPurchaseLinkedTcid,realizeLinkedTcid,verifyRealizeLinkedTcid
+FCB-7231,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Mixed Tenor_Foreign_USD_ByChecker_J2,PT19,Infy@123,VEOB,'1401EDC23000199,successfully,FCB-7232,FCB-7233,FCB-7238,FCB-7239,FCB-7236,FCB-7237

@@ -61,8 +61,11 @@ public class ABELodgeExportBillsTradeFinanceData {
 	private String reference;
 	private String linkedTcid;
 	private String acceptLinkedTcid;
+	private String verifyAcceptLinkedTcid;
 	private String purchaseLinkedTcid;
+	private String verifyPurchaseLinkedTcid;
 	private String realizeLinkedTcid;
+	private String verifyRealizeLinkedTcid;
 	
 	public String getTcId() {
 		return tcId;
@@ -544,12 +547,28 @@ public class ABELodgeExportBillsTradeFinanceData {
 		this.acceptLinkedTcid = acceptLinkedTcid;
 	}
 	
+	public String getVerifyAcceptLinkedTcid() {
+		return verifyAcceptLinkedTcid;
+	}
+
+	public void setVerifyAcceptLinkedTcid(String verifyAcceptLinkedTcid) {
+		this.verifyAcceptLinkedTcid = verifyAcceptLinkedTcid;
+	}
+	
 	public String getPurchaseLinkedTcid() {
 		return purchaseLinkedTcid;
 	}
 	
 	public void setPurchaseLinkedTcid(String purchaseLinkedTcid) {
 		this.purchaseLinkedTcid = purchaseLinkedTcid;
+	}
+	
+	public String getVerifyPurchaseLinkedTcid() {
+		return verifyPurchaseLinkedTcid;
+	}
+
+	public void setVerifyPurchaseLinkedTcid(String verifyPurchaseLinkedTcid) {
+		this.verifyPurchaseLinkedTcid = verifyPurchaseLinkedTcid;
 	}
 	
 	public String getRealizeLinkedTcid() {
@@ -560,6 +579,14 @@ public class ABELodgeExportBillsTradeFinanceData {
 		this.realizeLinkedTcid = realizeLinkedTcid;
 	}
 	
+	public String getVerifyRealizeLinkedTcid() {
+		return verifyRealizeLinkedTcid;
+	}
+
+	public void setVerifyRealizeLinkedTcid(String verifyRealizeLinkedTcid) {
+		this.verifyRealizeLinkedTcid = verifyRealizeLinkedTcid;
+	}
+
 	@Override
 	public String toString() {
 		return "ABELodgeExportBillsTradeFinanceData [tcId=" + tcId + ", summary=" + summary + ", username=" + username
@@ -589,7 +616,8 @@ public class ABELodgeExportBillsTradeFinanceData {
 				+ ", mixedBillDate2=" + mixedBillDate2 + ", mixedOnboardDate2=" + mixedOnboardDate2 + ", invoiceAmount="
 				+ invoiceAmount + ", invoiceNumber=" + invoiceNumber + ", invoiceDate=" + invoiceDate + ", paySysId="
 				+ paySysId + ", expectedResult=" + expectedResult + ", linkedTcid=" + linkedTcid + ", acceptLinkedTcid="
-				+ acceptLinkedTcid + ", purchaseLinkedTcid=" + purchaseLinkedTcid + ", realizeLinkedTcid="
-				+ realizeLinkedTcid + "]";
+				+ acceptLinkedTcid + ", verifyAcceptLinkedTcid=" + verifyAcceptLinkedTcid + ", purchaseLinkedTcid="
+				+ purchaseLinkedTcid + ", verifyPurchaseLinkedTcid=" + verifyPurchaseLinkedTcid + ", realizeLinkedTcid="
+				+ realizeLinkedTcid + ", verifyRealizeLinkedTcid=" + verifyRealizeLinkedTcid + "]";
 	}
 }

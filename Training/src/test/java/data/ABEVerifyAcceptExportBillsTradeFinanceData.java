@@ -7,6 +7,8 @@ public class ABEVerifyAcceptExportBillsTradeFinanceData {
 	private String password;
 	private String menu;
 	private String billId;
+	private String mixedBillId1;
+	private String mixedBillId2;
 	private String expectedResult;
 	
 	public String getTcId() {
@@ -57,6 +59,22 @@ public class ABEVerifyAcceptExportBillsTradeFinanceData {
 		this.billId = billId;
 	}
 	
+	public String getMixedBillId1() {
+		return mixedBillId1;
+	}
+
+	public void setMixedBillId1(String mixedBillId1) {
+		this.mixedBillId1 = mixedBillId1;
+	}
+
+	public String getMixedBillId2() {
+		return mixedBillId2;
+	}
+
+	public void setMixedBillId2(String mixedBillId2) {
+		this.mixedBillId2 = mixedBillId2;
+	}
+	
 	public String getExpectedResult() {
 		return expectedResult;
 	}
@@ -68,7 +86,7 @@ public class ABEVerifyAcceptExportBillsTradeFinanceData {
 	@Override
 	public String toString() {
 		return "ABEVerifyAcceptExportBillsTradeFinanceData [tcId=" + tcId + ", summary=" + summary + ", username="
-				+ username + ", password=" + password + ", menu=" + menu + ", billId=" + billId + ", expectedResult="
-				+ expectedResult + "]";
+				+ username + ", password=" + password + ", menu=" + menu + ", billId=" + billId + ", mixedBillId1="
+				+ mixedBillId1 + ", mixedBillId2=" + mixedBillId2 + ", expectedResult=" + expectedResult + "]";
 	}
 }

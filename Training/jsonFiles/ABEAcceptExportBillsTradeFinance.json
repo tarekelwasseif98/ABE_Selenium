@@ -1,13 +1,14 @@
 [
  {
-  "tcId": "FCB-6805",
-  "summary": "TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Usance_Local_EGP_ByMaker_C3",
+  "tcId": "FCB-7232",
+  "summary": "TradeFinance_Export_Bills_Under_Documentary_Credit_Accept_Lodge_Mixed Tenor_Foreign_USD_ByMaker_J3",
   "username": "PT18",
   "password": "Infy@123",
   "menu": "AEOB",
-  "billId": "'1401EDC23000123",
+  "billId": "'1401EDC23000199",
+  "mixedBillId2": "'1401EDC23000201",
   "acceptanceDate": "'29-10-2023",
   "expectedResult": "successfully",
-  "linkedTcid": "FCB-6806"
+  "linkedTcid": "FCB-7233"
  }
 ]

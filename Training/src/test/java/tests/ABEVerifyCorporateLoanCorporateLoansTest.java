@@ -30,7 +30,7 @@ public class ABEVerifyCorporateLoanCorporateLoansTest {
 	public void beforeTest(Object [] testData) throws Exception {
 		ABEVerifyCorporateLoanCorporateLoansData data = (ABEVerifyCorporateLoanCorporateLoansData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
-		driver.get(Properties.FinacleUrl);
+		driver.get(Properties.FINACLEURL);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())
@@ -50,7 +50,7 @@ public class ABEVerifyCorporateLoanCorporateLoansTest {
 	}
 	
 	@Test(dataProvider = "Verify Corporate Loan Corporate Loans DataProvider", dataProviderClass = ABEVerifyCorporateLoanCorporateLoansTest.class)
-	public void verifyIslamicMurabahaAccountOpeningTest(ABEVerifyCorporateLoanCorporateLoansData data) throws Exception {
+	public void verifyCorporateLoanCorporateLoansTest(ABEVerifyCorporateLoanCorporateLoansData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());
 		ABEVerifyCorporateLoanCorporateLoansProcedures.verifyCorporateLoanCorporateLoans(driver, data);

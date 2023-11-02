@@ -79,19 +79,21 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
 	
 	@Step("Sending menu name: {0}")
 	public ABEOpenCorporateLoanCorporateLoansPage sendKeysSearchBarTextField(String menu) throws Exception {
-		PageFunctionUtils.sleep();
-		PageFunctionUtils.switchToParentFrame(driver);
-		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
-		PageFunctionUtils.waitOnElement(driver, searchBarTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-        PageFunctionUtils.clickOnElement(driver, searchButton);	       
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        try {
-            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-            alert.accept();
-            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
-	        PageFunctionUtils.clickOnElement(driver, searchButton);
-	        } catch (Exception e) {
+		if(menu != null) {
+			PageFunctionUtils.sleep();
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
+			PageFunctionUtils.waitOnElement(driver, searchBarTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+	        PageFunctionUtils.clickOnElement(driver, searchButton);	       
+	        WebDriverWait wait = new WebDriverWait(driver, 10);
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+	            PageFunctionUtils.enterDataInWebElement(driver, searchBarTextField, menu);
+		        PageFunctionUtils.clickOnElement(driver, searchButton);
+		        } catch (Exception e) {
+	        }
         }
 	return this;
 	}
@@ -107,241 +109,396 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
 		return this;		
 	}
 	
-	@Step("Sending customer details: {0}")
-	public ABEOpenCorporateLoanCorporateLoansPage sendKeysAccountDetails(String cifid, String schemeCode, String accountOpeningDate) throws Exception {
-		PageFunctionUtils.waitOnElement(driver, cifIdTextField);
-		PageFunctionUtils.clickOnElement(driver, cifIdTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifid);
-		PageFunctionUtils.clickOnElement(driver, schemeCodeTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, schemeCodeTextField, schemeCode);
+	@Step("Sending cif id: {0}")
+	public ABEOpenCorporateLoanCorporateLoansPage sendKeysCifIdTextField(String cifId) throws Exception {
+		if(cifId != null) {
+			PageFunctionUtils.waitOnElement(driver, cifIdTextField);
+			PageFunctionUtils.clickOnElement(driver, cifIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifId);
+		}
+		return this;
+	}
+	
+	@Step("Sending scheme code: {0}")
+	public ABEOpenCorporateLoanCorporateLoansPage sendKeysSchemeCodeTextField(String schemeCode) throws Exception {
+		if(schemeCode != null) {
+			PageFunctionUtils.clickOnElement(driver, schemeCodeTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, schemeCodeTextField, schemeCode);
+		}
+		return this;
+	}
+	
+	@Step("Press go button")
+	public ABEOpenCorporateLoanCorporateLoansPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
-		PageFunctionUtils.clearDataInWebElement(driver, accountOpeningDateTextField);
-		PageFunctionUtils.clickOnElement(driver, accountOpeningDateTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, accountOpeningDateTextField, accountOpeningDate.substring(1));
-		PageFunctionUtils.selectDropDownListByVisibleText(driver, accountStatementDropDownList, FinacleFieldsUtils.AccountStatementNone);
+		return this;
+	}
+	
+	@Step("Sending account opening date: {0}")
+	public ABEOpenCorporateLoanCorporateLoansPage sendKeysAccountOpeningDateTextField(String accountOpeningDate) throws Exception {
+		if(accountOpeningDate != null) {
+			PageFunctionUtils.waitOnElement(driver, accountOpeningDateTextField);
+			PageFunctionUtils.clearDataInWebElement(driver, accountOpeningDateTextField);
+			PageFunctionUtils.clickOnElement(driver, accountOpeningDateTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, accountOpeningDateTextField, accountOpeningDate.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Select account statement")
+	public ABEOpenCorporateLoanCorporateLoansPage selectAccountStatement() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, accountStatementDropDownList, FinacleFieldsUtils.ACCOUNTSTATEMENTNONE);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenCorporateLoanCorporateLoansPage pressContinue1Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue1Button);
 		return this;
 	}
 	
-	@Step("Sending loan details: {0}")
-	public ABEOpenCorporateLoanCorporateLoansPage sendKeysLoanDetails(String loanAmount, String loanPeriodMonths, String loanPeriodDays) throws Exception {
-		PageFunctionUtils.waitOnElement(driver, loanAmountTextField);
-		PageFunctionUtils.clickOnElement(driver, loanAmountTextField);
-		PageFunctionUtils.clearDataInWebElement(driver, loanAmountTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, loanAmountTextField, loanAmount);
-		PageFunctionUtils.clickOnElement(driver, loanPeriodMonthsTextField);
-		PageFunctionUtils.clearDataInWebElement(driver, loanPeriodMonthsTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, loanPeriodMonthsTextField, loanPeriodMonths);
-		PageFunctionUtils.clickOnElement(driver, loanPeriodDaysTextField);
-		PageFunctionUtils.clearDataInWebElement(driver, loanPeriodDaysTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, loanPeriodDaysTextField, loanPeriodDays);
+	@Step("Sending loan amount: {0}")
+	public ABEOpenCorporateLoanCorporateLoansPage sendKeysLoanAmountTextField(String loanAmount) throws Exception {
+		if(loanAmount != null) {
+			PageFunctionUtils.waitOnElement(driver, loanAmountTextField);
+			PageFunctionUtils.clickOnElement(driver, loanAmountTextField);
+			PageFunctionUtils.clearDataInWebElement(driver, loanAmountTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, loanAmountTextField, loanAmount);
+		}
+		return this;
+	}
+	
+	@Step("Sending loan period months: {0}")
+	public ABEOpenCorporateLoanCorporateLoansPage sendKeysLoanPeriodMonthsTextField(String loanPeriodMonths) throws Exception {
+		if(loanPeriodMonths != null) {
+			PageFunctionUtils.clickOnElement(driver, loanPeriodMonthsTextField);
+			PageFunctionUtils.clearDataInWebElement(driver, loanPeriodMonthsTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, loanPeriodMonthsTextField, loanPeriodMonths);
+		}
+		return this;
+	}
+	
+	@Step("Sending loan period days: {0}")
+	public ABEOpenCorporateLoanCorporateLoansPage sendKeysLoanPeriodDaysTextField(String loanPeriodDays) throws Exception {
+		if(loanPeriodDays != null) {
+			PageFunctionUtils.clickOnElement(driver, loanPeriodDaysTextField);
+			PageFunctionUtils.clearDataInWebElement(driver, loanPeriodDaysTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, loanPeriodDaysTextField, loanPeriodDays);
+		}
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenCorporateLoanCorporateLoansPage pressContinue2Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue2Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenCorporateLoanCorporateLoansPage pressContinue3Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue3Button);
+		return this;
+	}
+	
+	@Step("Select interest compounding frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInterestCompoundingFrequency() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, interestParameterDetailsMenu);
 		PageFunctionUtils.waitOnElement(driver, interestCompoundingFrequencyDropDownList);
-		PageFunctionUtils.selectDropDownListByVisibleText(driver, interestCompoundingFrequencyDropDownList, FinacleFieldsUtils.InterestCompoundingFrequencyNoCompounding);
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, interestCompoundingFrequencyDropDownList, FinacleFieldsUtils.INTERESTCOMPOUNDINGFREQUENCYNOCOMPOUNDING);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenCorporateLoanCorporateLoansPage pressContinue4Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue4Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenCorporateLoanCorporateLoansPage pressContinue5Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue5Button);
 		return this;
 	}
 	
-	@Step("Sending repayment parameters details: {0}")
-	public ABEOpenCorporateLoanCorporateLoansPage sendKeysRepaymentParametersDetails(String numberOfInstallments, String installmentStartDate, String installmentFrequency, String date, String calendar, String onHoliday, String equatedInstallment, String interestStartDate, String interestFrequency) throws Exception {
-		PageFunctionUtils.clickOnElement(driver, numberOfInstallmentsTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, numberOfInstallmentsTextField, numberOfInstallments);
-		PageFunctionUtils.clearDataInWebElement(driver, installmentStartDateTextField);
-		PageFunctionUtils.clickOnElement(driver, installmentStartDateTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, installmentStartDateTextField, installmentStartDate.substring(1));
-		
-		if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyDaily) || installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyWeekly) || installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyFortnightly) || installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyBullet)) {
-			if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyDaily)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyDaily);
-			}
-			else if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyWeekly)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyWeekly);
-			}
-			else if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyFortnightly)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyFortnightly);
-			}
-			else if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyBullet)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyBullet);
-			}
-			
-			if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarGregorianCalendar)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyCalendarDropDownList, FinacleFieldsUtils.CalendarGregorianCalendar);
-			}
-			else if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarHijriCalendar)){
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyCalendarDropDownList, FinacleFieldsUtils.CalendarHijriCalendar);
-			}
-			
-			if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayNextDay)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyOnHolidayDropDownList, FinacleFieldsUtils.OnHolidayNextDay);
-			}
-			else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayPreviousDay)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyOnHolidayDropDownList, FinacleFieldsUtils.OnHolidayPreviousDay);
-			}
-			else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidaySkip)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyOnHolidayDropDownList, FinacleFieldsUtils.OnHolidaySkip);
-			}
+	@Step("Select equated installment")
+	public ABEOpenCorporateLoanCorporateLoansPage selectEquatedInstallmentYes() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, equatedInstallmentYesRadioButton);
+		return this;
+	}
+	
+	@Step("Select equated installment")
+	public ABEOpenCorporateLoanCorporateLoansPage selectEquatedInstallmentNo() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, equatedInstallmentNoRadioButton);
+		return this;
+	}
+	
+	@Step("Sending number of installments: {0}")
+	public ABEOpenCorporateLoanCorporateLoansPage sendKeysNumberOfInstallmentsTextField(String numberOfInstallments) throws Exception {
+		if(numberOfInstallments != null) {
+			PageFunctionUtils.waitOnElement(driver, numberOfInstallmentsTextField);
+			PageFunctionUtils.clickOnElement(driver, numberOfInstallmentsTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, numberOfInstallmentsTextField, numberOfInstallments);
 		}
-		else if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyMonthly) || installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyQuarterly) || installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyHalfYearly) || installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyYearly) || installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyTwiceAMonth)){
-			if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyMonthly)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyMonthly);
-			}
-			else if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyQuarterly)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyQuarterly);
-			}
-			else if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyHalfYearly)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyHalfYearly);
-			}
-			else if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyYearly)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyYearly);
-			}
-			else if(installmentFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyTwiceAMonth)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FrequencyTwiceAMonth);
-			}
-			
+		return this;
+	}
+	
+	@Step("Sending installment start date: {0}")
+	public ABEOpenCorporateLoanCorporateLoansPage sendKeysInstallmentStartDateTextField(String installmentStartDate) throws Exception {
+		if(installmentStartDate != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, installmentStartDateTextField);
+			PageFunctionUtils.clickOnElement(driver, installmentStartDateTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, installmentStartDateTextField, installmentStartDate.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Select installment frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInstallmentFrequencyDaily() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYDAILY);
+		return this;
+	}
+	
+	@Step("Select installment frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInstallmentFrequencyWeekly() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYWEEKLY);
+		return this;
+	}
+	
+	@Step("Select installment frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInstallmentFrequencyFortnightly() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYFORTNIGHTLY);
+		return this;
+	}
+	
+	@Step("Select installment frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInstallmentFrequencyBullet() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYBULLET);
+		return this;
+	}
+	
+	
+	@Step("Select installment frequency calendar")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInstallmentFrequencyCalendar() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyCalendarDropDownList, FinacleFieldsUtils.CALENDARGREGORIANCALENDAR);
+		return this;
+	}
+	
+	@Step("Select installment frequency on holiday")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInstallmentFrequencyOnHoliday() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyOnHolidayDropDownList, FinacleFieldsUtils.ONHOLIDAYNEXTDAY);
+		return this;
+	}
+	
+	@Step("Select installment frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInstallmentFrequencyMonthly() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYMONTHLY);
+		return this;
+	}
+	
+	@Step("Select installment frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInstallmentFrequencyQuarterly() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYQUARTERLY);
+		return this;
+	}
+	
+	@Step("Select installment frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInstallmentFrequencyHalfYearly() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYHALFYEARLY);
+		return this;
+	}
+	
+	@Step("Select installment frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInstallmentFrequencyYearly() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYYEARLY);
+		return this;
+	}
+	
+	@Step("Select installment frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInstallmentFrequencyTwiceAMonth() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYTWICEAMONTH);
+		return this;
+	}
+	
+	@Step("Select installment frequency date: {0}")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInstallmentFrequencyDate(String date) throws Exception {
+		if(date != null) {
 			PageFunctionUtils.clickOnElement(driver, installmentFrequencyByDateRadioButton);
-			for(int i=0; i<FinacleFieldsUtils.DateValues.length; i++) {
-				if(Integer.parseInt(date) == FinacleFieldsUtils.DateValues[i]) {
+			for(int i=0; i<FinacleFieldsUtils.DATEVALUES.length; i++) {
+				if(Integer.parseInt(date) == FinacleFieldsUtils.DATEVALUES[i]) {
 					PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyDateDropDownList, date);
 				}
 			}
-			if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarGregorianCalendar)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyCalendarDropDownList, FinacleFieldsUtils.CalendarGregorianCalendar);
-			}
-			else if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarHijriCalendar)){
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyCalendarDropDownList, FinacleFieldsUtils.CalendarHijriCalendar);
-			}
-			
-			if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayNextDay)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyOnHolidayDropDownList, FinacleFieldsUtils.OnHolidayNextDay);
-			}
-			else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayPreviousDay)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyOnHolidayDropDownList, FinacleFieldsUtils.OnHolidayPreviousDay);
-			}
-			else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidaySkip)) {
-				PageFunctionUtils.selectDropDownListByVisibleText(driver, installmentFrequencyOnHolidayDropDownList, FinacleFieldsUtils.OnHolidaySkip);
-			}
 		}
-		
-		if(equatedInstallment.equalsIgnoreCase(FinacleFieldsUtils.EquatedInstallmentNo)) {
-			PageFunctionUtils.clickOnElement(driver, equatedInstallmentNoRadioButton);
+		return this;
+	}
+	
+	@Step("Sending interest start date: {0}")
+	public ABEOpenCorporateLoanCorporateLoansPage sendKeysInterestStartDateTextField(String interestStartDate) throws Exception {
+		if(interestStartDate != null) {
 			PageFunctionUtils.clearDataInWebElement(driver, interestStartDateTextField);
 			PageFunctionUtils.clickOnElement(driver, interestStartDateTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, interestStartDateTextField, installmentStartDate.substring(1));
-			
-			if(interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyDaily) || interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyWeekly) || interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyFortnightly)) {
-				if(interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyDaily)){
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FrequencyDaily);
-				}
-				else if(interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyWeekly)) {
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FrequencyWeekly);
-				}
-				else if(interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyFortnightly)) {
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FrequencyFortnightly);
-				}
-				if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarGregorianCalendar)) {
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyCalendarDropDownList, FinacleFieldsUtils.CalendarGregorianCalendar);
-				}
-				else if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarHijriCalendar)){
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyCalendarDropDownList, FinacleFieldsUtils.CalendarHijriCalendar);
-				}
-				
-				if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayNextDay)) {
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyOnHolidayDropDownList, FinacleFieldsUtils.OnHolidayNextDay);
-				}
-				else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayPreviousDay)) {
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyOnHolidayDropDownList, FinacleFieldsUtils.OnHolidayPreviousDay);
-				}
-				else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidaySkip)) {
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyOnHolidayDropDownList, FinacleFieldsUtils.OnHolidaySkip);
-				}
-			}
-			else if(interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyMonthly) || interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyQuarterly) || interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyHalfYearly) || interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyYearly) || interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyTwiceAMonth)) {
-				if(interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyMonthly)) {
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FrequencyMonthly);
-				}
-				else if(interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyQuarterly)) {
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FrequencyQuarterly);
-				}
-				else if(interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyHalfYearly)) {
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FrequencyHalfYearly);
-				}
-				else if(interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyYearly)) {
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FrequencyYearly);
-				}
-				else if(interestFrequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyTwiceAMonth)) {
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FrequencyTwiceAMonth);
-				}
-				PageFunctionUtils.clickOnElement(driver, interestFrequencyByDateRadioButton);
-				for(int i=0; i<FinacleFieldsUtils.DateValues.length; i++) {
-					if(Integer.parseInt(date) == FinacleFieldsUtils.DateValues[i]) {
-						PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDateDropDownList, date);
-					}
-				}
-				if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarGregorianCalendar)) {
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyCalendarDropDownList, FinacleFieldsUtils.CalendarGregorianCalendar);
-				}
-				else if(calendar.equalsIgnoreCase(FinacleFieldsUtils.CalendarHijriCalendar)){
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyCalendarDropDownList, FinacleFieldsUtils.CalendarHijriCalendar);
-				}
-				
-				if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayNextDay)) {
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyOnHolidayDropDownList, FinacleFieldsUtils.OnHolidayNextDay);
-				}
-				else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidayPreviousDay)) {
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyOnHolidayDropDownList, FinacleFieldsUtils.OnHolidayPreviousDay);
-				}
-				else if(onHoliday.equalsIgnoreCase(FinacleFieldsUtils.OnHolidaySkip)) {
-					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyOnHolidayDropDownList, FinacleFieldsUtils.OnHolidaySkip);
+			PageFunctionUtils.enterDataInWebElement(driver, interestStartDateTextField, interestStartDate.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Select interest frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInterestFrequencyDaily() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYDAILY);
+		return this;
+	}
+	
+	@Step("Select interest frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInterestFrequencyWeekly() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYWEEKLY);
+		return this;
+	}
+	
+	@Step("Select interest frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInterestFrequencyFortnightly() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYFORTNIGHTLY);
+		return this;
+	}
+	
+	@Step("Select interest frequency calendar")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInterestFrequencyCalendar() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyCalendarDropDownList, FinacleFieldsUtils.CALENDARGREGORIANCALENDAR);
+		return this;
+	}
+	
+	@Step("Select interest frequency on holiday")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInterestFrequencyOnHoliday() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyOnHolidayDropDownList, FinacleFieldsUtils.ONHOLIDAYNEXTDAY);
+		return this;
+	}
+	
+	@Step("Select interest frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInterestFrequencyMonthly() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYMONTHLY);
+		return this;
+	}
+	
+	@Step("Select interest frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInterestFrequencyQuarterly() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYQUARTERLY);
+		return this;
+	}
+	
+	@Step("Select interest frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInterestFrequencyHalfYearly() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYHALFYEARLY);
+		return this;
+	}
+	
+	@Step("Select interest frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInterestFrequencyYearly() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYYEARLY);
+		return this;
+	}
+	
+	@Step("Select interest frequency")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInterestFrequencyTwiceAMonth() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDropDownList, FinacleFieldsUtils.FREQUENCYTWICEAMONTH);
+		return this;
+	}
+	
+	@Step("Select interest frequency date: {0}")
+	public ABEOpenCorporateLoanCorporateLoansPage selectInterestFrequencyDate(String date) throws Exception {
+		if(date != null) {
+			PageFunctionUtils.clickOnElement(driver, interestFrequencyByDateRadioButton);
+			for(int i=0; i<FinacleFieldsUtils.DATEVALUES.length; i++) {
+				if(Integer.parseInt(date) == FinacleFieldsUtils.DATEVALUES[i]) {
+					PageFunctionUtils.selectDropDownListByVisibleText(driver, interestFrequencyDateDropDownList, date);
 				}
 			}
 		}
-		else if(equatedInstallment.equalsIgnoreCase(FinacleFieldsUtils.EquatedInstallmentYes)) {
-			PageFunctionUtils.clickOnElement(driver, equatedInstallmentYesRadioButton);
-		}
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenCorporateLoanCorporateLoansPage pressContinue6Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue6Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenCorporateLoanCorporateLoansPage pressContinue7Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue7Button);
 		return this;
 	}
 	
 	@Step("Sending operative account id: {0}")
 	public ABEOpenCorporateLoanCorporateLoansPage sendKeysOperativeAccountIdTextField(String operativeAccountId) throws Exception {
-		PageFunctionUtils.enterDataInWebElement(driver, operativeAccountIdTextField, operativeAccountId.substring(1));
+		if(operativeAccountId != null) {
+			PageFunctionUtils.waitOnElement(driver, operativeAccountIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, operativeAccountIdTextField, operativeAccountId.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenCorporateLoanCorporateLoansPage pressContinue8Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue8Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenCorporateLoanCorporateLoansPage pressContinue9Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue9Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenCorporateLoanCorporateLoansPage pressContinue10Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue10Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenCorporateLoanCorporateLoansPage pressContinue11Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue11Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenCorporateLoanCorporateLoansPage pressContinue12Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue12Button);
 		return this;
 	}
 	
-	@Step("Sending account limit details: {0}")
-	public ABEOpenCorporateLoanCorporateLoansPage sendKeysAccountLimitDetails(String expiryDate, String documentDate, String limitIdPrefix, String limitIdSuffix, String drawingPowerIndicator) throws Exception {
-		PageFunctionUtils.clearDataInWebElement(driver, expiryDateTextField);
-		PageFunctionUtils.clickOnElement(driver, expiryDateTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, expiryDateTextField, expiryDate.substring(1));
-		PageFunctionUtils.clearDataInWebElement(driver, documentDateTextField);
-		PageFunctionUtils.clickOnElement(driver, documentDateTextField);
-		PageFunctionUtils.enterDataInWebElement(driver, documentDateTextField, documentDate.substring(1));
-		try {
+	@Step("Sending expiry date: {0}")
+	public ABEOpenCorporateLoanCorporateLoansPage sendKeysExpiryDateTextField(String expiryDate) throws Exception {
+		if(expiryDate != null) {
+			PageFunctionUtils.waitOnElement(driver, expiryDateTextField);
+			PageFunctionUtils.clearDataInWebElement(driver, expiryDateTextField);
+			PageFunctionUtils.clickOnElement(driver, expiryDateTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, expiryDateTextField, expiryDate.substring(1));
+		}	
+		return this;
+	}
+	
+	@Step("Sending document date: {0}")
+	public ABEOpenCorporateLoanCorporateLoansPage sendKeysDocumentDateTextField(String documentDate) throws Exception {
+		if(documentDate != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, documentDateTextField);
+			PageFunctionUtils.clickOnElement(driver, documentDateTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, documentDateTextField, documentDate.substring(1));
+		}	
+		return this;
+	}
+	
+	@Step("Sending limit id: {0}")
+	public ABEOpenCorporateLoanCorporateLoansPage sendKeysLimitIdTextField(String limitIdPrefix, String limitIdSuffix) throws Exception {
+		if(limitIdPrefix != null && limitIdSuffix != null) {
 			PageFunctionUtils.enterDataInWebElement(driver, limitIdPrefixTextField, limitIdPrefix.substring(1));
 			PageFunctionUtils.enterDataInWebElement(driver, limitIdSuffixTextField, limitIdSuffix.substring(1));
-		} catch(Exception e) {
+		}
+		return this;
 	}
-		if(drawingPowerIndicator.equalsIgnoreCase(FinacleFieldsUtils.DrawingPowerIndicatorDerived)) {
-			PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DrawingPowerIndicatorDerived);
-		}
-		if(drawingPowerIndicator.equalsIgnoreCase(FinacleFieldsUtils.DrawingPowerIndicatorEqual)) {
-			PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DrawingPowerIndicatorEqual);
-		}
-		if(drawingPowerIndicator.equalsIgnoreCase(FinacleFieldsUtils.DrawingPowerIndicatorMaintained)) {
-			PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DrawingPowerIndicatorMaintained);
-		}
-		if(drawingPowerIndicator.equalsIgnoreCase(FinacleFieldsUtils.DrawingPowerIndicatorParent)) {
-			PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DrawingPowerIndicatorParent);
-		}
+	
+	@Step("Select drawing power indicator")
+	public ABEOpenCorporateLoanCorporateLoansPage selectDrawingPowerIndicatorDerived() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DRAWINGPOWERINDICATORDERIVED);
 		try {
 			PageFunctionUtils.switchToParentFrame(driver);
 			PageFunctionUtils.clickOnElement(driver, closeButton);
@@ -349,8 +506,57 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
         } catch (Exception e) {
         	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 	}
-		PageFunctionUtils.clickOnElement(driver, continue13Button);
-		PageFunctionUtils.clickOnElement(driver, continue14Button);		
+		return this;
+	}
+	
+	@Step("Select drawing power indicator")
+	public ABEOpenCorporateLoanCorporateLoansPage selectDrawingPowerIndicatorEqual() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DRAWINGPOWERINDICATOREQUAL);
+		try {
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.clickOnElement(driver, closeButton);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+        } catch (Exception e) {
+        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+	}
+		return this;
+	}
+	
+	@Step("Select drawing power indicator")
+	public ABEOpenCorporateLoanCorporateLoansPage selectDrawingPowerIndicatorMaintained() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DRAWINGPOWERINDICATORMAINTAINED);
+		try {
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.clickOnElement(driver, closeButton);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+        } catch (Exception e) {
+        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+	}
+		return this;
+	}
+	
+	@Step("Select drawing power indicator")
+	public ABEOpenCorporateLoanCorporateLoansPage selectDrawingPowerIndicatorParent() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, drawingPowerIndicatorDropDownList, FinacleFieldsUtils.DRAWINGPOWERINDICATORPARENT);
+		try {
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.clickOnElement(driver, closeButton);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+        } catch (Exception e) {
+        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+	}
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenCorporateLoanCorporateLoansPage pressContinue13Button() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, continue13Button);	
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEOpenCorporateLoanCorporateLoansPage pressContinue14Button() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, continue14Button);	
 		return this;
 	}
 	
@@ -363,7 +569,7 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
 		return this;
 	}
 	
-	@Step("Save a/c. id")
+	@Step("Save account id")
 	public ABEOpenCorporateLoanCorporateLoansPage saveAccountId(String linkedId) throws Exception {
 		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.OpenCorporateLoanCsv, linkedTcidCsvColumnName, linkedId);
 		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.OpenCorporateLoanCsv, referenceCsvColumnName);

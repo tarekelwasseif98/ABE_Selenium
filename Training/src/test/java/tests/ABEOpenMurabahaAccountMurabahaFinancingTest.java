@@ -40,7 +40,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingTest {
 	public void beforeTest(Object [] testData) throws Exception {
 		ABEOpenMurabahaAccountMurabahaFinancingData data = (ABEOpenMurabahaAccountMurabahaFinancingData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
-		driver.get(Properties.FinacleUrl);
+		driver.get(Properties.FINACLEURL);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())
@@ -72,10 +72,14 @@ public class ABEOpenMurabahaAccountMurabahaFinancingTest {
 	public void after(ITestResult result) {
 		if (result.getStatus() == ITestResult.SUCCESS) {
             ScreenshotHelper.captureScreenshot(driver);
+            System.out.println("success");
         }
 		 if (result.getStatus() == ITestResult.FAILURE) {
 	            ScreenshotHelper.captureScreenshot(driver);
+	            System.out.println("fail");
+
 	        }
+		 
 		driver.quit();
 	}
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Export Bills">
+<listeners>
+	<listener class-name="listeners.Listeners"/>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+</listeners>
+<test thread-count="1" name="Export Bills">
+	<groups>
+		<run>
+			<include name="ABELodgeExportBillsTradeFinanceTest"/>
+			<include name="ABEVerifyLodgeExportBillsTradeFinanceTest"/>
+			<!--<include name="ABEAcceptExportBillsTradeFinanceTest"/>
+			<include name="ABEVerifyAcceptExportBillsTradeFinanceTest"/>-->
+        </run>
+    </groups>
+    <classes>
+		<class name="tests.ABELodgeExportBillsTradeFinanceTest"/>
+		<class name="tests.ABEVerifyLodgeExportBillsTradeFinanceTest"/>
+		<!--<class name="tests.ABEAcceptExportBillsTradeFinanceTest"/>
+		<class name="tests.ABEVerifyAcceptExportBillsTradeFinanceTest"/>-->
+    </classes>
+</test>
+</suite>

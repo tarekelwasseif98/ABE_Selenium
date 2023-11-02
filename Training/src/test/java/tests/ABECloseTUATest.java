@@ -30,7 +30,7 @@ public class ABECloseTUATest {
 	public void beforeTest(Object [] testData) throws Exception {
 		ABECloseTUAData data = (ABECloseTUAData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
-		driver.get(Properties.FinacleUrl);
+		driver.get(Properties.FINACLEURL);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())
@@ -38,7 +38,7 @@ public class ABECloseTUATest {
 		.clickOnLoginButton(data.getPassword());
 	}
 	
-	@DataProvider(name="Open TUA DataProvider")
+	@DataProvider(name="Close TUA DataProvider")
 	public Object[] dpMethod() throws Exception {
     	Workbook workbook = new Workbook(Paths.CloseTUACsv);
 		workbook.save(Paths.CloseTUAJson);
@@ -49,8 +49,8 @@ public class ABECloseTUATest {
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Open TUA DataProvider", dataProviderClass = ABECloseTUATest.class)
-	public void closeIslamicTUATest(ABECloseTUAData data) throws Exception {
+	@Test(dataProvider = "Close TUA DataProvider", dataProviderClass = ABECloseTUATest.class)
+	public void closeTUATest(ABECloseTUAData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
 		Allure.parameter("Data: ", data.toString());		
         ABECloseTUAProcedures.closeTUA(driver, data);

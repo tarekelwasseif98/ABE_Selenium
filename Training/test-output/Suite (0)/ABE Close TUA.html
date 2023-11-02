@@ -1,0 +1,351 @@
+<html>
+<head>
+<title>TestNG:  ABE Close TUA</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>ABE Close TUA</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>18/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Oct 24 14:05:48 EEST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>1281 seconds (1281043 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.ABEVerifyTUAClosureTest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAClosureTest<br>Parameters: ABEVerifyTUAClosureData [tcId=FCB-10178, summary=IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD07_ByChecker_H2, username=PT8, password=Infy@123, menu=VITUDAC, accountId='17510624601301006159, expectedResult=successfully]</td>
+<td><div><pre>java.lang.AssertionError: 
+	at utils.AssertionFactory.checkExpectedResult(AssertionFactory.java:8)
+	at tests.ABEVerifyTUAClosureTest.closeIslamicTUATest(ABEVerifyTUAClosureTest.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1667159944", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1667159944'><pre>java.lang.AssertionError: 
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:23)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
+	at utils.AssertionFactory.checkExpectedResult(AssertionFactory.java:8)
+	at tests.ABEVerifyTUAClosureTest.closeIslamicTUATest(ABEVerifyTUAClosureTest.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>49</td>
+<td>tests.ABEVerifyTUAClosureTest@7c214cc0</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAClosureTest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAClosureTest<br>Parameters: ABEVerifyTUAClosureData [tcId=FCB-10182, summary=IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD3M_ByChecker_J2, username=PT8, password=Infy@123, menu=VITUDAC, accountId='17540624601301006170, expectedResult=successfully]</td>
+<td><div><pre>java.lang.AssertionError: 
+	at utils.AssertionFactory.checkExpectedResult(AssertionFactory.java:8)
+	at tests.ABEVerifyTUAClosureTest.closeIslamicTUATest(ABEVerifyTUAClosureTest.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1169586081", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1169586081'><pre>java.lang.AssertionError: 
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:23)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
+	at utils.AssertionFactory.checkExpectedResult(AssertionFactory.java:8)
+	at tests.ABEVerifyTUAClosureTest.closeIslamicTUATest(ABEVerifyTUAClosureTest.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>49</td>
+<td>tests.ABEVerifyTUAClosureTest@7c214cc0</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAClosureTest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAClosureTest<br>Parameters: ABEVerifyTUAClosureData [tcId=FCB-10184, summary=IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD6M_ByChecker_K2, username=PT8, password=Infy@123, menu=VITUDAC, accountId='17550624601301006186, expectedResult=successfully]</td>
+<td><div><pre>java.lang.AssertionError: 
+	at utils.AssertionFactory.checkExpectedResult(AssertionFactory.java:8)
+	at tests.ABEVerifyTUAClosureTest.closeIslamicTUATest(ABEVerifyTUAClosureTest.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace946521424", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace946521424'><pre>java.lang.AssertionError: 
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:23)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
+	at utils.AssertionFactory.checkExpectedResult(AssertionFactory.java:8)
+	at tests.ABEVerifyTUAClosureTest.closeIslamicTUATest(ABEVerifyTUAClosureTest.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>50</td>
+<td>tests.ABEVerifyTUAClosureTest@7c214cc0</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAClosureTest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAClosureTest<br>Parameters: ABEVerifyTUAClosureData [tcId=FCB-10186, summary=IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD9M_ByChecker_L2, username=PT8, password=Infy@123, menu=VITUDAC, accountId='17560624601301006192, expectedResult=successfully]</td>
+<td><div><pre>java.lang.AssertionError: 
+	at utils.AssertionFactory.checkExpectedResult(AssertionFactory.java:8)
+	at tests.ABEVerifyTUAClosureTest.closeIslamicTUATest(ABEVerifyTUAClosureTest.java:57)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace132253352", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace132253352'><pre>java.lang.AssertionError: 
+	at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:23)
+	at org.testng.AssertJUnit.assertTrue(AssertJUnit.java:33)
+	at utils.AssertionFactory.checkExpectedResult(AssertionFactory.java:8)
+	at tests.ABEVerifyTUAClosureTest.closeIslamicTUATest(ABEVerifyTUAClosureTest.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>50</td>
+<td>tests.ABEVerifyTUAClosureTest@7c214cc0</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.ABEVerifyTUAClosureTest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAClosureTest<br>Parameters: ABEVerifyTUAClosureData [tcId=FCB-9882, summary=IslamicBanking_Verify_Preclosure_MudarabahTUA_MTD2Y_RepaymentAccount_ByChecker_F2, username=PT8, password=Infy@123, menu=VITUDAC, accountId='17520624601301006127, expectedResult=successfully]</td>
+<td></td>
+<td>50</td>
+<td>tests.ABEVerifyTUAClosureTest@7c214cc0</td></tr>
+<tr>
+<td title='tests.ABECloseTUATest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABECloseTUATest<br>Parameters: ABECloseTUAData [tcId=FCB-10191, summary=IslamicBanking_WakalahTUA_Preclose_WakalahTUA_WTD3Y_ByMaker_O1, username=PT7, password=Infy@123, menu=CITUDA, accountId='17590624601301006229, closureValueDate='24-10-2023, repaymentAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10192]</td>
+<td></td>
+<td>52</td>
+<td>tests.ABECloseTUATest@59e32960</td></tr>
+<tr>
+<td title='tests.ABECloseTUATest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABECloseTUATest<br>Parameters: ABECloseTUAData [tcId=FCB-10185, summary=IslamicBanking_WakalahTUA_Preclose_WakalahTUA_WTD9M_ByMaker_L1, username=PT7, password=Infy@123, menu=CITUDA, accountId='17560624601301006192, closureValueDate='24-10-2023, repaymentAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10186]</td>
+<td></td>
+<td>51</td>
+<td>tests.ABECloseTUATest@59e32960</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAClosureTest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAClosureTest<br>Parameters: ABEVerifyTUAClosureData [tcId=FCB-10188, summary=IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD1Y_ByChecker_M2, username=PT8, password=Infy@123, menu=VITUDAC, accountId='17580624601301006206, expectedResult=successfully]</td>
+<td></td>
+<td>50</td>
+<td>tests.ABEVerifyTUAClosureTest@7c214cc0</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAClosureTest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAClosureTest<br>Parameters: ABEVerifyTUAClosureData [tcId=FCB-9886, summary=IslamicBanking_Verify_Closure_MudarabahTUA_MTD2Y_IndicativeRate_ByChecker_H2, username=PT8, password=Infy@123, menu=VITUDAC, accountId='17500624601301006136, expectedResult=successfully]</td>
+<td></td>
+<td>50</td>
+<td>tests.ABEVerifyTUAClosureTest@7c214cc0</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAClosureTest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAClosureTest<br>Parameters: ABEVerifyTUAClosureData [tcId=FCB-10192, summary=IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD3Y_ByChecker_O2, username=PT8, password=Infy@123, menu=VITUDAC, accountId='17590624601301006229, expectedResult=successfully]</td>
+<td></td>
+<td>50</td>
+<td>tests.ABEVerifyTUAClosureTest@7c214cc0</td></tr>
+<tr>
+<td title='tests.ABECloseTUATest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABECloseTUATest<br>Parameters: ABECloseTUAData [tcId=FCB-10179, summary=IslamicBanking_WakalahTUA_Preclose_WakalahTUA_WTD1M_ByMaker_I1, username=PT7, password=Infy@123, menu=CITUDA, accountId='17530624601301006164, closureValueDate='24-10-2023, repaymentAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10180]</td>
+<td></td>
+<td>52</td>
+<td>tests.ABECloseTUATest@59e32960</td></tr>
+<tr>
+<td title='tests.ABECloseTUATest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABECloseTUATest<br>Parameters: ABECloseTUAData [tcId=FCB-10181, summary=IslamicBanking_WakalahTUA_Preclose_WakalahTUA_WTD3M_ByMaker_J1, username=PT7, password=Infy@123, menu=CITUDA, accountId='17540624601301006170, closureValueDate='24-10-2023, repaymentAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10182]</td>
+<td></td>
+<td>52</td>
+<td>tests.ABECloseTUATest@59e32960</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAClosureTest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAClosureTest<br>Parameters: ABEVerifyTUAClosureData [tcId=FCB-10196, summary=IslamicBanking_WakalahTUA_Verfiy_Closure_WakalahTUA_OnMaturity_ByChecker_Q2, username=PT8, password=Infy@123, menu=VITUDAC, accountId='17570624601301006146, expectedResult=successfully]</td>
+<td></td>
+<td>50</td>
+<td>tests.ABEVerifyTUAClosureTest@7c214cc0</td></tr>
+<tr>
+<td title='tests.ABECloseTUATest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABECloseTUATest<br>Parameters: ABECloseTUAData [tcId=FCB-10183, summary=IslamicBanking_WakalahTUA_Preclose_WakalahTUA_WTD6M_ByMaker_K1, username=PT7, password=Infy@123, menu=CITUDA, accountId='17550624601301006186, closureValueDate='24-10-2023, repaymentAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10184]</td>
+<td></td>
+<td>52</td>
+<td>tests.ABECloseTUATest@59e32960</td></tr>
+<tr>
+<td title='tests.ABECloseTUATest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABECloseTUATest<br>Parameters: ABECloseTUAData [tcId=FCB-10195, summary=IslamicBanking_WakalahTUA_Close_WakalahTUA_OnMaturity_ByMaker_Q1, username=PT7, password=Infy@123, menu=CITUDA, accountId='17570624601301006146, closureValueDate='24-10-2023, repaymentAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10196]</td>
+<td></td>
+<td>52</td>
+<td>tests.ABECloseTUATest@59e32960</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAClosureTest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAClosureTest<br>Parameters: ABEVerifyTUAClosureData [tcId=FCB-10180, summary=IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD1M_ByChecker_I2, username=PT8, password=Infy@123, menu=VITUDAC, accountId='17530624601301006164, expectedResult=successfully]</td>
+<td></td>
+<td>50</td>
+<td>tests.ABEVerifyTUAClosureTest@7c214cc0</td></tr>
+<tr>
+<td title='tests.ABECloseTUATest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABECloseTUATest<br>Parameters: ABECloseTUAData [tcId=FCB-10189, summary=IslamicBanking_WakalahTUA_Preclose_WakalahTUA_WTD2Y_ByMaker_N1, username=PT7, password=Infy@123, menu=CITUDA, accountId='17600624601301006218, closureValueDate='24-10-2023, repaymentAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10190]</td>
+<td></td>
+<td>52</td>
+<td>tests.ABECloseTUATest@59e32960</td></tr>
+<tr>
+<td title='tests.ABECloseTUATest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABECloseTUATest<br>Parameters: ABECloseTUAData [tcId=FCB-9881, summary=IslamicBanking_Preclose_MudarabahTUA_MTD2Y_RepaymentAccount_ByMaker_F1, username=PT7, password=Infy@123, menu=CITUDA, accountId='17520624601301006127, closureValueDate='24-10-2023, repaymentAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-9882]</td>
+<td></td>
+<td>52</td>
+<td>tests.ABECloseTUATest@59e32960</td></tr>
+<tr>
+<td title='tests.ABECloseTUATest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABECloseTUATest<br>Parameters: ABECloseTUAData [tcId=FCB-10177, summary=IslamicBanking_WakalahTUA_Preclose_WakalahTUA_WTD07_ByMaker_H1, username=PT7, password=Infy@123, menu=CITUDA, accountId='17510624601301006159, closureValueDate='24-10-2023, repaymentAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10178]</td>
+<td></td>
+<td>52</td>
+<td>tests.ABECloseTUATest@59e32960</td></tr>
+<tr>
+<td title='tests.ABECloseTUATest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABECloseTUATest<br>Parameters: ABECloseTUAData [tcId=FCB-9885, summary=IslamicBanking_Close_MudarabahTUA_MTD2Y_IndicativeRate_ByMaker_H1, username=PT7, password=Infy@123, menu=CITUDA, accountId='17500624601301006136, closureValueDate='24-10-2023, repaymentAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-9886]</td>
+<td></td>
+<td>52</td>
+<td>tests.ABECloseTUATest@59e32960</td></tr>
+<tr>
+<td title='tests.ABECloseTUATest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABECloseTUATest<br>Parameters: ABECloseTUAData [tcId=FCB-10187, summary=IslamicBanking_WakalahTUA_Preclose_WakalahTUA_WTD1Y_ByMaker_M1, username=PT7, password=Infy@123, menu=CITUDA, accountId='17580624601301006206, closureValueDate='24-10-2023, repaymentAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10188]</td>
+<td></td>
+<td>52</td>
+<td>tests.ABECloseTUATest@59e32960</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAClosureTest.closeIslamicTUATest()'><b>closeIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAClosureTest<br>Parameters: ABEVerifyTUAClosureData [tcId=FCB-10190, summary=IslamicBanking_WakalahTUA_Verify_Preclosure_WakalahTUA_WTD2Y_ByChecker_N2, username=PT8, password=Infy@123, menu=VITUDAC, accountId='17600624601301006218, expectedResult=successfully]</td>
+<td></td>
+<td>50</td>
+<td>tests.ABEVerifyTUAClosureTest@7c214cc0</td></tr>
+</table><p>
+</body>
+</html>

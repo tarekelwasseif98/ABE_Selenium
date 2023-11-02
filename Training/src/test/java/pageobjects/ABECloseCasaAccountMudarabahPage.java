@@ -25,7 +25,8 @@ public class ABECloseCasaAccountMudarabahPage {
 	private By transferBalanceRadioButton = By.xpath("(//input[@id='_trfrYes_radio'])[1]");
 	private By transactionTypeMenu = By.id("_tranType_select");
 	private By transferAccountIdTextField = By.xpath("(//input[@id='_trfrActId'])[1]");
-	public static By acId = By.xpath("(//div[@id='_resActId1_text'])[1]");
+	public static By accountIdSuccessMessage = By.xpath("(//p[@id='_clsResMsg_paraMsg'])[1]");
+	private static String accountId;
 	public static String  accountIdCsvColumnName = "accountId";
 	public static String  tcIdCsvColumnName = "tcId";
 	public static String  linkedTcidCsvColumnName = "linkedTcid";
@@ -95,9 +96,8 @@ public class ABECloseCasaAccountMudarabahPage {
 	@Step("Sending transfer account id: {0}")
 	public ABECloseCasaAccountMudarabahPage sendKeysTransferAccountIdTextField(String transferAccountId) throws Exception {
 		if(transferAccountId != null) {
-			transferAccountId = transferAccountId.substring(1);
 			PageFunctionUtils.clickOnElement(driver, transferAccountIdTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, transferAccountIdTextField, transferAccountId);
+			PageFunctionUtils.enterDataInWebElement(driver, transferAccountIdTextField, transferAccountId.substring(1));
 		}
 		return this;
 	}
@@ -106,6 +106,7 @@ public class ABECloseCasaAccountMudarabahPage {
 	public ABECloseCasaAccountMudarabahPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
+		accountId = driver.findElement(accountIdSuccessMessage).getText().substring(92);
 		return this;
 	}
 	
@@ -115,7 +116,7 @@ public class ABECloseCasaAccountMudarabahPage {
 		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyCloseIslamicCasaAccountCsv, tcIdCsvColumnName, linkedId);
 		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyCloseIslamicCasaAccountCsv, accountIdCsvColumnName);
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.VerifyCloseIslamicCasaAccountCsv, rowByTcid2, columnByColumnName2, driver.findElement(acId).getText().substring(1));
+			CSVUtils.insertValueInCsvCell(Paths.VerifyCloseIslamicCasaAccountCsv, rowByTcid2, columnByColumnName2, accountId);
 		}
 		return this;
 	}

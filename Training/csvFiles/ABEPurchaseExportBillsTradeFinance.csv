@@ -1,0 +1,2 @@
+tcId,summary,username,password,menu,billId,acceptanceDate,expectedResult,linkedTcid
+FCB-6809,TradeFinance_Export_Bills_Under_Collection_Purchase_Lodge_Usance_Local_EGP_ByMaker_C5,PT18,Infy@123,AEOB,,,successfully,FCB-6810

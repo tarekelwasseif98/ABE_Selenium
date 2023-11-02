@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" >
+<suite name="Suite">
 <listeners>
 	<listener class-name="listeners.Listeners"/>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
 </listeners>
-     
-     <test name="ABE Open Murabaha Account Murabaha Financing">
-     	<classes>
-	 		<class name="tests.ABEOpenMurabahaAccountMurabahaFinancingTest"/>
-	 		<class name="tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest"/>
-	 	</classes>
-	 </test>
-		
-	 <test name="ABE Disburse Murabaha Account Murabaha Financing">
-     	<classes>
-	 		<class name="tests.ABEDisburseMurabahaAccountMurabahaFinancingTest"/>
-	 		<class name="tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest"/>
-	 	</classes>
-     </test>
-    
-     <!-- <test name="ABE Payoff Murabaha Account Murabaha Financing">
-     	<classes>
-	 		<class name="tests.ABEPayoffMurabahaAccountMurabahaFinancingTest"/>
-	 		<class name="tests.ABEVerifyMurabahaAccountPayoffMurabahaFinancingTest"/>
-	 	</classes>
-     </test>-->
+<test thread-count="1" name="Murabaha Financing">
+	<groups>
+		<run>
+			<include name="ABEOpenMurabahaAccountMurabahaFinancingTest"/>
+            <include name="ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest"/>
+            <include name="ABEDisburseMurabahaAccountMurabahaFinancingTest"/>
+            <include name="ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest"/>
+            <include name="ABEPayoffMurabahaAccountMurabahaFinancingTest"/>
+            <include name="ABEVerifyMurabahaAccountPayoffMurabahaFinancingTest"/>
+        </run>
+    </groups>
+    <classes>
+		<class name="tests.ABEOpenMurabahaAccountMurabahaFinancingTest"/>
+	 	<class name="tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest"/>
+	 	<class name="tests.ABEDisburseMurabahaAccountMurabahaFinancingTest"/>
+	 	<class name="tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest"/>
+	 	<class name="tests.ABEPayoffMurabahaAccountMurabahaFinancingTest"/>
+	 	<class name="tests.ABEVerifyMurabahaAccountPayoffMurabahaFinancingTest"/>
+    </classes>
+</test>
 </suite>

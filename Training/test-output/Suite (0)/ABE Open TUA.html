@@ -1,0 +1,190 @@
+<html>
+<head>
+<title>TestNG:  ABE Open TUA</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>ABE Open TUA</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>22/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Oct 24 13:29:59 EEST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>2149 seconds (2149489 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.ABEOpenTUATest.openIslamicTUATest()'><b>openIslamicTUATest</b><br>Test class: tests.ABEOpenTUATest<br>Parameters: ABEOpenTUAData [tcId=FCB-10153, summary=IslamicBanking_WakalahTUA_Open_WTD2Y_Account_ByMaker_C7, username=PT5, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1760, valueDate='01-10-2023, depositPeriodMonths=24, depositPeriodDays=0, initialDepositAmount=5000, profitCreditAccountId='1606624601301001, repaymentAccountId='1606624601301001, debitAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10161]</td>
+<td></td>
+<td>84</td>
+<td>tests.ABEOpenTUATest@573906eb</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAOpeningTest.verifyIslamicTUATest()'><b>verifyIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAOpeningTest<br>Parameters: ABEVerifyTUAOpeningData [tcId=FCB-10158, summary=IslamicBanking_WakalahTUA_Verify_WTD6M_Account_ByChecker_D4, username=PT17, password=Infy@123, menu=VITUDAO, accountId='17550624601301006292, expectedResult=successfully]</td>
+<td></td>
+<td>91</td>
+<td>tests.ABEVerifyTUAOpeningTest@479ceda0</td></tr>
+<tr>
+<td title='tests.ABEOpenTUATest.openIslamicTUATest()'><b>openIslamicTUATest</b><br>Test class: tests.ABEOpenTUATest<br>Parameters: ABEOpenTUAData [tcId=FCB-10147, summary=IslamicBanking_WakalahTUA_Open_WTD07_Account_ByMaker_C1, username=PT5, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1751, valueDate='01-10-2023, depositPeriodMonths=0, depositPeriodDays=7, initialDepositAmount=5000, profitCreditAccountId='1606624601301001, repaymentAccountId='1606624601301001, debitAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10155]</td>
+<td></td>
+<td>83</td>
+<td>tests.ABEOpenTUATest@573906eb</td></tr>
+<tr>
+<td title='tests.ABEOpenTUATest.openIslamicTUATest()'><b>openIslamicTUATest</b><br>Test class: tests.ABEOpenTUATest<br>Parameters: ABEOpenTUAData [tcId=FCB-10154, summary=IslamicBanking_WakalahTUA_Open_WTD3Y_Account_ByMaker_C8, username=PT5, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1759, valueDate='01-10-2023, depositPeriodMonths=36, depositPeriodDays=0, initialDepositAmount=5000, profitCreditAccountId='1606624601301001, repaymentAccountId='1606624601301001, debitAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10162]</td>
+<td></td>
+<td>84</td>
+<td>tests.ABEOpenTUATest@573906eb</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAOpeningTest.verifyIslamicTUATest()'><b>verifyIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAOpeningTest<br>Parameters: ABEVerifyTUAOpeningData [tcId=FCB-9863, summary=IslamicBanking_MudarabahTUA_Verify_IslamicTUAAccount_MTD2Y_ByChecker_A2, username=PT17, password=Infy@123, menu=VITUDAO, accountId='17520624601301006233, expectedResult=successfully]</td>
+<td></td>
+<td>89</td>
+<td>tests.ABEVerifyTUAOpeningTest@479ceda0</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAOpeningTest.verifyIslamicTUATest()'><b>verifyIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAOpeningTest<br>Parameters: ABEVerifyTUAOpeningData [tcId=FCB-10162, summary=IslamicBanking_WakalahTUA_Verify_WTD3Y_Account_ByChecker_D8, username=PT17, password=Infy@123, menu=VITUDAO, accountId='17590624601301006335, expectedResult=successfully]</td>
+<td></td>
+<td>91</td>
+<td>tests.ABEVerifyTUAOpeningTest@479ceda0</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAOpeningTest.verifyIslamicTUATest()'><b>verifyIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAOpeningTest<br>Parameters: ABEVerifyTUAOpeningData [tcId=FCB-9867, summary=IslamicBanking_MudarabahTUA_Verify_IslamicTUAAccount_MTD5Y_ByChecker_C2, username=PT17, password=Infy@123, menu=VITUDAO, accountId='17570624601301006252, expectedResult=successfully]</td>
+<td></td>
+<td>89</td>
+<td>tests.ABEVerifyTUAOpeningTest@479ceda0</td></tr>
+<tr>
+<td title='tests.ABEOpenTUATest.openIslamicTUATest()'><b>openIslamicTUATest</b><br>Test class: tests.ABEOpenTUATest<br>Parameters: ABEOpenTUAData [tcId=FCB-9866, summary=IslamicBanking_MudarabahTUA_Open_IslamicTUAAccount_MTD5Y_ByMaker_C1, username=PT5, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1757, valueDate='01-10-2023, depositPeriodMonths=50, depositPeriodDays=0, initialDepositAmount=5000, profitCreditAccountId='1606624601301001, repaymentAccountId='1606624601301001, debitAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-9867]</td>
+<td></td>
+<td>99</td>
+<td>tests.ABEOpenTUATest@573906eb</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAOpeningTest.verifyIslamicTUATest()'><b>verifyIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAOpeningTest<br>Parameters: ABEVerifyTUAOpeningData [tcId=FCB-10156, summary=IslamicBanking_WakalahTUA_Verify_WTD1M_Account_ByChecker_D2, username=PT17, password=Infy@123, menu=VITUDAO, accountId='17530624601301006270, expectedResult=successfully]</td>
+<td></td>
+<td>89</td>
+<td>tests.ABEVerifyTUAOpeningTest@479ceda0</td></tr>
+<tr>
+<td title='tests.ABEOpenTUATest.openIslamicTUATest()'><b>openIslamicTUATest</b><br>Test class: tests.ABEOpenTUATest<br>Parameters: ABEOpenTUAData [tcId=FCB-9862, summary=IslamicBanking_MudarabahTUA_Open_IslamicTUAAccount_MTD2Y_ByMaker_A1, username=PT5, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1752, valueDate='01-10-2023, depositPeriodMonths=24, depositPeriodDays=0, initialDepositAmount=5000, profitCreditAccountId='1606624601301001, repaymentAccountId='1606624601301001, debitAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-9863]</td>
+<td></td>
+<td>99</td>
+<td>tests.ABEOpenTUATest@573906eb</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAOpeningTest.verifyIslamicTUATest()'><b>verifyIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAOpeningTest<br>Parameters: ABEVerifyTUAOpeningData [tcId=FCB-10155, summary=IslamicBanking_WakalahTUA_Verify_WTD07_Account_ByChecker_D1, username=PT17, password=Infy@123, menu=VITUDAO, accountId='17510624601301006265, expectedResult=successfully]</td>
+<td></td>
+<td>89</td>
+<td>tests.ABEVerifyTUAOpeningTest@479ceda0</td></tr>
+<tr>
+<td title='tests.ABEOpenTUATest.openIslamicTUATest()'><b>openIslamicTUATest</b><br>Test class: tests.ABEOpenTUATest<br>Parameters: ABEOpenTUAData [tcId=FCB-10150, summary=IslamicBanking_WakalahTUA_Open_WTD6M_Account_ByMaker_C4, username=PT5, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1755, valueDate='01-10-2023, depositPeriodMonths=6, depositPeriodDays=0, initialDepositAmount=5000, profitCreditAccountId='1606624601301001, repaymentAccountId='1606624601301001, debitAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10158]</td>
+<td></td>
+<td>84</td>
+<td>tests.ABEOpenTUATest@573906eb</td></tr>
+<tr>
+<td title='tests.ABEOpenTUATest.openIslamicTUATest()'><b>openIslamicTUATest</b><br>Test class: tests.ABEOpenTUATest<br>Parameters: ABEOpenTUAData [tcId=FCB-10151, summary=IslamicBanking_WakalahTUA_Open_WTD9M_Account_ByMaker_C5, username=PT5, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1756, valueDate='01-10-2023, depositPeriodMonths=9, depositPeriodDays=0, initialDepositAmount=5000, profitCreditAccountId='1606624601301001, repaymentAccountId='1606624601301001, debitAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10159]</td>
+<td></td>
+<td>83</td>
+<td>tests.ABEOpenTUATest@573906eb</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAOpeningTest.verifyIslamicTUATest()'><b>verifyIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAOpeningTest<br>Parameters: ABEVerifyTUAOpeningData [tcId=FCB-10161, summary=IslamicBanking_WakalahTUA_Verify_WTD2Y_Account_ByChecker_D7, username=PT17, password=Infy@123, menu=VITUDAO, accountId='17600624601301006324, expectedResult=successfully]</td>
+<td></td>
+<td>91</td>
+<td>tests.ABEVerifyTUAOpeningTest@479ceda0</td></tr>
+<tr>
+<td title='tests.ABEOpenTUATest.openIslamicTUATest()'><b>openIslamicTUATest</b><br>Test class: tests.ABEOpenTUATest<br>Parameters: ABEOpenTUAData [tcId=FCB-9864, summary=IslamicBanking_MudarabahTUA_Open_IslamicTUAAccount_MTD3Y_ByMaker_B1, username=PT5, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1750, valueDate='01-10-2023, depositPeriodMonths=36, depositPeriodDays=0, initialDepositAmount=5000, profitCreditAccountId='1606624601301001, repaymentAccountId='1606624601301001, debitAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-9865]</td>
+<td></td>
+<td>99</td>
+<td>tests.ABEOpenTUATest@573906eb</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAOpeningTest.verifyIslamicTUATest()'><b>verifyIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAOpeningTest<br>Parameters: ABEVerifyTUAOpeningData [tcId=FCB-10157, summary=IslamicBanking_WakalahTUA_Verify_WTD3M_Account_ByChecker_D3, username=PT17, password=Infy@123, menu=VITUDAO, accountId='17540624601301006286, expectedResult=successfully]</td>
+<td></td>
+<td>90</td>
+<td>tests.ABEVerifyTUAOpeningTest@479ceda0</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAOpeningTest.verifyIslamicTUATest()'><b>verifyIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAOpeningTest<br>Parameters: ABEVerifyTUAOpeningData [tcId=FCB-9865, summary=IslamicBanking_MudarabahTUA_Verify_IslamicTUAAccount_MTD3Y_ByChecker_B2, username=PT17, password=Infy@123, menu=VITUDAO, accountId='17500624601301006242, expectedResult=successfully]</td>
+<td></td>
+<td>90</td>
+<td>tests.ABEVerifyTUAOpeningTest@479ceda0</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAOpeningTest.verifyIslamicTUATest()'><b>verifyIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAOpeningTest<br>Parameters: ABEVerifyTUAOpeningData [tcId=FCB-10160, summary=IslamicBanking_WakalahTUA_Verify_WTD1Y_Account_ByChecker_D6, username=PT17, password=Infy@123, menu=VITUDAO, accountId='17580624601301006312, expectedResult=successfully]</td>
+<td></td>
+<td>91</td>
+<td>tests.ABEVerifyTUAOpeningTest@479ceda0</td></tr>
+<tr>
+<td title='tests.ABEOpenTUATest.openIslamicTUATest()'><b>openIslamicTUATest</b><br>Test class: tests.ABEOpenTUATest<br>Parameters: ABEOpenTUAData [tcId=FCB-10152, summary=IslamicBanking_WakalahTUA_Open_WTD1Y_Account_ByMaker_C6, username=PT5, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1758, valueDate='01-10-2023, depositPeriodMonths=12, depositPeriodDays=0, initialDepositAmount=5000, profitCreditAccountId='1606624601301001, repaymentAccountId='1606624601301001, debitAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10160]</td>
+<td></td>
+<td>84</td>
+<td>tests.ABEOpenTUATest@573906eb</td></tr>
+<tr>
+<td title='tests.ABEOpenTUATest.openIslamicTUATest()'><b>openIslamicTUATest</b><br>Test class: tests.ABEOpenTUATest<br>Parameters: ABEOpenTUAData [tcId=FCB-10148, summary=IslamicBanking_WakalahTUA_Open_WTD1M_Account_ByMaker_C2, username=PT5, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1753, valueDate='01-10-2023, depositPeriodMonths=1, depositPeriodDays=0, initialDepositAmount=5000, profitCreditAccountId='1606624601301001, repaymentAccountId='1606624601301001, debitAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10156]</td>
+<td></td>
+<td>83</td>
+<td>tests.ABEOpenTUATest@573906eb</td></tr>
+<tr>
+<td title='tests.ABEVerifyTUAOpeningTest.verifyIslamicTUATest()'><b>verifyIslamicTUATest</b><br>Test class: tests.ABEVerifyTUAOpeningTest<br>Parameters: ABEVerifyTUAOpeningData [tcId=FCB-10159, summary=IslamicBanking_WakalahTUA_Verify_WTD9M_Account_ByChecker_D5, username=PT17, password=Infy@123, menu=VITUDAO, accountId='17560624601301006307, expectedResult=successfully]</td>
+<td></td>
+<td>91</td>
+<td>tests.ABEVerifyTUAOpeningTest@479ceda0</td></tr>
+<tr>
+<td title='tests.ABEOpenTUATest.openIslamicTUATest()'><b>openIslamicTUATest</b><br>Test class: tests.ABEOpenTUATest<br>Parameters: ABEOpenTUAData [tcId=FCB-10149, summary=IslamicBanking_WakalahTUA_Open_WTD3M_Account_ByMaker_C3, username=PT5, password=Infy@123, menu=OITUDA, cif=6246013, schemeCode=1754, valueDate='01-10-2023, depositPeriodMonths=3, depositPeriodDays=0, initialDepositAmount=5000, profitCreditAccountId='1606624601301001, repaymentAccountId='1606624601301001, debitAccountId='1606624601301001, expectedResult=successfully, linkedTcid=FCB-10157]</td>
+<td></td>
+<td>83</td>
+<td>tests.ABEOpenTUATest@573906eb</td></tr>
+</table><p>
+</body>
+</html>

@@ -30,7 +30,7 @@ public class ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest {
 	public void beforeTest(Object [] testData) throws Exception {
 		ABEVerifyMurabahaAccountOpeningMurabahaFinancingData data = (ABEVerifyMurabahaAccountOpeningMurabahaFinancingData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
-		driver.get(Properties.FinacleUrl);
+		driver.get(Properties.FINACLEURL);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
 		FinacleLoginPage
 		.sendKeysUserNameTextField(data.getUsername())
@@ -50,7 +50,7 @@ public class ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest {
 	}
 	
 	@Test(dataProvider = "Verify Murabaha Account Opening Murabaha Financing DataProvider", dataProviderClass = ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.class)
-	public void verifyIslamicMurabahaAccountOpeningTest(ABEVerifyMurabahaAccountOpeningMurabahaFinancingData data) throws Exception {
+	public void verifyMurabahaAccountOpeningMurabahaFinancingTest(ABEVerifyMurabahaAccountOpeningMurabahaFinancingData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
 		Allure.parameter("Data: ", data.toString());
 		ABEVerifyMurabahaAccountOpeningMurabahaFinancingProcedures.verifyMurabahaAccountOpeningMurabahaFinancing(driver, data);

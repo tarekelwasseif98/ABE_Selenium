@@ -1,0 +1,13 @@
+[
+ {
+  "tcId": "FCB-6805",
+  "summary": "TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Usance_Local_EGP_ByMaker_C3",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "AEOB",
+  "billId": "'1401EDC23000123",
+  "acceptanceDate": "'29-10-2023",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-6806"
+ }
+]

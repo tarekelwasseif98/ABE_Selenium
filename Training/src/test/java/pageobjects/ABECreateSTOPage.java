@@ -149,24 +149,24 @@ public class ABECreateSTOPage {
 		PageFunctionUtils.enterDataInWebElement(driver, startDateFixedAmtType, startDate.substring(1));
 		PageFunctionUtils.enterDataInWebElement(driver, noOfExecuteFixedAmtType, noOfExe);
 		// Frequency Monthly
-		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyMonthly)) {
+		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FREQUENCYMONTHLY)) {
 			PageFunctionUtils.selectDropDownListByIndex(driver, frequencyDropDownList, 4);
 			PageFunctionUtils.selectDropDownListByIndex(driver, weekFrequnecyDropDownList, 1);
 			PageFunctionUtils.selectDropDownListByIndex(driver, dayFrequnecyDropDownList, 1);
 			PageFunctionUtils.selectDropDownListByIndex(driver, calenderDropDownList, 1);
 			PageFunctionUtils.selectDropDownListByIndex(driver, onHolidayDropDownList, 1);
 		} else // Frequency Daily
-		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyDaily)) {
+		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FREQUENCYDAILY)) {
 			PageFunctionUtils.selectDropDownListByIndex(driver, frequencyDropDownList, 1);
 			PageFunctionUtils.selectDropDownListByIndex(driver, calenderDropDownList, 1);
 			PageFunctionUtils.selectDropDownListByIndex(driver, onHolidayDropDownList, 2);
 		} else // Frequency Weekly
-		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyWeekly)) {
+		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FREQUENCYWEEKLY)) {
 			PageFunctionUtils.selectDropDownListByIndex(driver, frequencyDropDownList, 2);
 			PageFunctionUtils.selectDropDownListByIndex(driver, calenderDropDownList, 1);
 			PageFunctionUtils.selectDropDownListByIndex(driver, onHolidayDropDownList, 2);
 		} else // Frequency N Days
-		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyNdays)) {
+		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FREQUENCYNDAYS)) {
 			PageFunctionUtils.selectDropDownListByIndex(driver, frequencyDropDownList, 8);
 			PageFunctionUtils.enterDataInWebElement(driver, valueOfNdaysTextField, valueNday);
 			PageFunctionUtils.selectDropDownListByIndex(driver, calenderDropDownList, 1);
@@ -190,24 +190,24 @@ public class ABECreateSTOPage {
 		PageFunctionUtils.enterDataInWebElement(driver, noOfExecuteFixedAmtType, noOfExe);
 
 		// Frequency Monthly
-		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyMonthly)) {
+		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FREQUENCYMONTHLY)) {
 			PageFunctionUtils.selectDropDownListByIndex(driver, frequencyDropDownList, 4);
 			PageFunctionUtils.selectDropDownListByIndex(driver, weekFrequnecyDropDownList, 1);
 			PageFunctionUtils.selectDropDownListByIndex(driver, dayFrequnecyDropDownList, 1);
 			PageFunctionUtils.selectDropDownListByIndex(driver, calenderDropDownList, 1);
 			PageFunctionUtils.selectDropDownListByIndex(driver, onHolidayDropDownList, 1);
 		} else // Frequency Daily
-		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyDaily)) {
+		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FREQUENCYDAILY)) {
 			PageFunctionUtils.selectDropDownListByIndex(driver, frequencyDropDownList, 1);
 			PageFunctionUtils.selectDropDownListByIndex(driver, calenderDropDownList, 1);
 			PageFunctionUtils.selectDropDownListByIndex(driver, onHolidayDropDownList, 2);
 		} else // Frequency Weekly
-		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyWeekly)) {
+		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FREQUENCYWEEKLY)) {
 			PageFunctionUtils.selectDropDownListByIndex(driver, frequencyDropDownList, 2);
 			PageFunctionUtils.selectDropDownListByIndex(driver, calenderDropDownList, 1);
 			PageFunctionUtils.selectDropDownListByIndex(driver, onHolidayDropDownList, 2);
 		} else // Frequency N Days
-		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FrequencyNdays)) {
+		if (frequency.equalsIgnoreCase(FinacleFieldsUtils.FREQUENCYNDAYS)) {
 			PageFunctionUtils.selectDropDownListByIndex(driver, frequencyDropDownList, 8);
 			PageFunctionUtils.enterDataInWebElement(driver, valueOfNdaysTextField, valueNday);
 			PageFunctionUtils.selectDropDownListByIndex(driver, calenderDropDownList, 1);

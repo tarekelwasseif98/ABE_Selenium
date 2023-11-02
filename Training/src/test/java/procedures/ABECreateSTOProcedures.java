@@ -20,7 +20,7 @@ public class ABECreateSTOProcedures {
 		                                		data.getOtherPartyName(),
 		                                		data.getBank_BEN(), 
 		                                		data.getBranch_BEN());
-		                                if(data.getAmtType().equalsIgnoreCase(FinacleFieldsUtils.AmountTypeFixed))
+		                                if(data.getAmtType().equalsIgnoreCase(FinacleFieldsUtils.AMOUNTTYPEFIXED))
 		                                {ABECreateSTOPage.sendAmountTypeFixedSTO(
 		                                		data.getAmount_Fixed(),		                     
 		                                		data.getStart_Date(),
@@ -28,7 +28,7 @@ public class ABECreateSTOProcedures {
 		                                		data.getFrequency(), 		                                				                                		
 		                                		data.getValue_of_N());
 		                                }
-		                                else if(data.getAmtType().equalsIgnoreCase(FinacleFieldsUtils.AmountTypeDerived))
+		                                else if(data.getAmtType().equalsIgnoreCase(FinacleFieldsUtils.AMOUNTTYPEDERIVED))
 		                                {ABECreateSTOPage.sendAmountTypeDerivedSTO(
 		                                		data.getAmount_Derived(),
 		                                		data.getAmount_Multiples_Derived(),

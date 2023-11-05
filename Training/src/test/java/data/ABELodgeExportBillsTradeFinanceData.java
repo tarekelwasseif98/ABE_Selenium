@@ -56,6 +56,7 @@ public class ABELodgeExportBillsTradeFinanceData {
 	private String invoiceAmount;
 	private String invoiceNumber;
 	private String invoiceDate;
+	private String notionalConversionRate;
 	private String paySysId;
 	private String expectedResult;
 	private String reference;
@@ -507,6 +508,14 @@ public class ABELodgeExportBillsTradeFinanceData {
 		this.invoiceDate = invoiceDate;
 	}
 	
+	public String getNotionalConversionRate() {
+		return notionalConversionRate;
+	}
+
+	public void setNotionalConversionRate(String notionalConversionRate) {
+		this.notionalConversionRate = notionalConversionRate;
+	}
+	
 	public String getPaySysId() {
 		return paySysId;
 	}
@@ -614,10 +623,11 @@ public class ABELodgeExportBillsTradeFinanceData {
 				+ ", mixedBillAmount2=" + mixedBillAmount2 + ", mixedBillTenor2=" + mixedBillTenor2
 				+ ", mixedBillTenorMonths2=" + mixedBillTenorMonths2 + ", mixedBillTenorDays2=" + mixedBillTenorDays2
 				+ ", mixedBillDate2=" + mixedBillDate2 + ", mixedOnboardDate2=" + mixedOnboardDate2 + ", invoiceAmount="
-				+ invoiceAmount + ", invoiceNumber=" + invoiceNumber + ", invoiceDate=" + invoiceDate + ", paySysId="
-				+ paySysId + ", expectedResult=" + expectedResult + ", linkedTcid=" + linkedTcid + ", acceptLinkedTcid="
-				+ acceptLinkedTcid + ", verifyAcceptLinkedTcid=" + verifyAcceptLinkedTcid + ", purchaseLinkedTcid="
-				+ purchaseLinkedTcid + ", verifyPurchaseLinkedTcid=" + verifyPurchaseLinkedTcid + ", realizeLinkedTcid="
-				+ realizeLinkedTcid + ", verifyRealizeLinkedTcid=" + verifyRealizeLinkedTcid + "]";
+				+ invoiceAmount + ", invoiceNumber=" + invoiceNumber + ", invoiceDate=" + invoiceDate
+				+ ", notionalConversionRate=" + notionalConversionRate + ", paySysId=" + paySysId + ", expectedResult="
+				+ expectedResult + ", linkedTcid=" + linkedTcid + ", acceptLinkedTcid=" + acceptLinkedTcid
+				+ ", verifyAcceptLinkedTcid=" + verifyAcceptLinkedTcid + ", purchaseLinkedTcid=" + purchaseLinkedTcid
+				+ ", verifyPurchaseLinkedTcid=" + verifyPurchaseLinkedTcid + ", realizeLinkedTcid=" + realizeLinkedTcid
+				+ ", verifyRealizeLinkedTcid=" + verifyRealizeLinkedTcid + "]";
 	}
 }

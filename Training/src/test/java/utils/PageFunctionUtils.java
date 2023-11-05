@@ -3,6 +3,7 @@ package utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -78,6 +79,12 @@ public class PageFunctionUtils {
 	public static void scrollUp(WebDriver driver) throws InterruptedException {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0, -document.body.scrollHeight);");
+		}
+	
+	public static void scrollUpToElement(WebDriver driver, By by) throws InterruptedException {
+		WebElement element = driver.findElement(by);
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView();", element);
 		}
 	
 	public static void selectDropDownListByIndex(WebDriver driver, By by, int index) {

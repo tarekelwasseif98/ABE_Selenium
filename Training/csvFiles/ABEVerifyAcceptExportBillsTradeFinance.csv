@@ -1,2 +1,2 @@
 tcId,summary,username,password,menu,billId,mixedBillId1,mixedBillId2,expectedResult
-FCB-7233,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Acceptance_Mixed Tenor_Foreign_USD_ByChecker_J4,PT19,Infy@123,VEOB,'1401EDC23000199,,'1401EDC23000201,successfully
+FCB-6834,TradeFinance_Export_Bills_Under_Collection_Verify_Acceptance_Mixed Tenor_Foreign_USD_ByChecker_F4,PT19,Infy@123,VEOB,'1401EDC23000219,'1401EDC23000220,'1401EDC23000221,successfully

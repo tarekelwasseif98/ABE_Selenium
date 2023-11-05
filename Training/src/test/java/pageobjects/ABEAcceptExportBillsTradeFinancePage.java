@@ -42,6 +42,7 @@ public class ABEAcceptExportBillsTradeFinancePage {
 	private By closeButton = By.xpath("(//span[@id='modalCloseIcon'])[1]");
 	private By continue16Button = By.xpath("(//button[@id='_messagedetails_msgdet_Continue'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
+	private By repeatTaskButton = By.xpath("(//button[normalize-space()='Repeat Task'])[1]");
 	public static String billId;
 	public static String  billIdCsvColumnName = "billId";
 	public static String  tcIdCsvColumnName = "tcId";
@@ -271,6 +272,13 @@ public class ABEAcceptExportBillsTradeFinancePage {
 	public ABEAcceptExportBillsTradeFinancePage pressSubmitButton() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, submitButton);
 		PageFunctionUtils.clickOnElement(driver, submitButton);
+		return this;
+	}
+	
+	@Step("Press repeat task button")
+	public ABEAcceptExportBillsTradeFinancePage pressRepeatTaskButton() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, repeatTaskButton);
+		PageFunctionUtils.clickOnElement(driver, repeatTaskButton);
 		return this;
 	}
 }

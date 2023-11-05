@@ -73,6 +73,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By invoiceAmountTextField = By.xpath("(//input[@id='_meobbill_invoiceAmt$amt'])[1]");
 	private By invoiceNumberTextField = By.xpath("(//input[@id='_meobbill_invoiceNo'])[1]");
 	private By invoiceDateTextField = By.xpath("(//input[@id='_meobbill_invoiceDate'])[1]");
+	private By notionalConversionRateTextField = By.xpath("(//input[@id='_meobbill_notConvRateCode$rateCode'])[1]");
 	private By continue4Button = By.xpath("(//button[@id='_meobbill_meobbill_FinButton1'])[1]");
 	private By continue5Button = By.xpath("(//button[@id='_meobassign_FinButton1'])[1]");
 	private By continue6Button = By.xpath("(//button[@id='_margin_margin_Continue'])[1]");
@@ -94,6 +95,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By continue20Button = By.xpath("(//button[@id='_messagedetails_msgdet_Continue'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By billIdSuccessMessage = By.xpath("(//p[@id='_result_FinMessage1_paraMsg'])[1]");
+	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Lodge Export and Outward Bill'])[1]");
 	public static String billId;
 	public static String  referenceCsvColumnName = "reference";
 	public static String  billIdCsvColumnName = "billId";
@@ -605,6 +607,16 @@ public class ABELodgeExportBillsTradeFinancePage {
 		return this;
 	}
 	
+	@Step("Sending notional conversion rate: {0}")
+	public ABELodgeExportBillsTradeFinancePage sendKeysNotionalConversionRateTextField(String notionalConversionRate) throws Exception {
+		if(notionalConversionRate != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, notionalConversionRateTextField);
+			PageFunctionUtils.clickOnElement(driver, notionalConversionRateTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, notionalConversionRateTextField, notionalConversionRate.substring(1));
+		}
+		return this;
+	}
+	
 	@Step("Press continue button")
 	public ABELodgeExportBillsTradeFinancePage pressContinue4Button() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, continue4Button);
@@ -759,8 +771,10 @@ public class ABELodgeExportBillsTradeFinancePage {
 	public ABELodgeExportBillsTradeFinancePage pressSubmitButton() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, submitButton);
 		PageFunctionUtils.clickOnElement(driver, submitButton);
+		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.waitOnElement(driver, billIdSuccessMessage);
 		billId = driver.findElement(billIdSuccessMessage).getText().substring(45);
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		return this;
 	}
 	

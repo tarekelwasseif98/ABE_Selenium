@@ -35,6 +35,12 @@ public class FinacleFieldsUtils {
 	public static final String BILLTYPESIGHT = "Sight";
 	public static final String BILLTYPEUSANCE = "Usance";
 	public static final String BILLTYPEMIXEDTENOR = "Mixed Tenor";
+	public static final String DOCUMENTSTATUSCLEAN = "Clean";
+	public static final String DOCUMENTSTATUSDISCREPANT = "Discrepant";
+	public static final String DOCUMENTSTATUSDISCREPANTANDACCEPTED = "Discrepant and Accepted";
+	public static final String DOCUMENTSTATUSRETURNED = "Returned";
+	public static final String DUEDATEINDICATORSIGHT = "Sight";
+	public static final String DUEDATEINDICATORACCEPTANCEDATE = "Acceptance Date";
 	public static final String ATTRIBUTETITLE = "title";
 	public static final String ATTRIBUTEVALUE = "value";
 }

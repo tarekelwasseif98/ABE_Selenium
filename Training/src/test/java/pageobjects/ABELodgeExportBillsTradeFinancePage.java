@@ -51,6 +51,13 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By beneficiaryBankNameTextField = By.xpath("(//input[@id='_meobparty_nameBBdtl1'])[1]");
 	private By beneficiaryBankAddressLine1TextField = By.xpath("(//input[@id='_meobparty_addr1BBdtl1'])[1]");
 	private By beneficiaryBankSwiftAddressDetailsNoRadioButton = By.xpath("(//input[@id='_meobparty_meobparty_FinRadioButton22_radio'])[1]");
+	private By collectingBankDetailsButton = By.xpath("(//h2[normalize-space()='Collecting Bank Details'])[1]");
+	private By collectingBankAddressTypeDropDownList = By.xpath("(//select[@id='_meobparty_addrTypeCBdtl_select'])[1]");
+	private By collectingBankIdentifierTextField = By.xpath("(//input[@id='_meobparty_bicCBdtl'])[1]");
+	private By collectingBankSwiftAddressDetailsYesRadioButton = By.xpath("(//input[@id='_meobparty_meobparty_FinRadioButton14_radio'])[1]");
+	private By collectingBankNameTextField = By.xpath("(//input[@id='_meobparty_nameCBdtl1'])[1]");
+	private By collectingBankAddressLine1TextField = By.xpath("(//input[@id='_meobparty_addr1CBdtl1'])[1]");
+	private By collectingBankSwiftAddressDetailsNoRadioButton = By.xpath("(//input[@id='_meobparty_meobparty_FinRadioButton23_radio'])[1]");
 	private By correspondentBankDetailsButton = By.xpath("(//h2[normalize-space()='Correspondent Bank Details'])[1]");
 	private By correspondentBankAddressTypeDropDownList = By.xpath("(//select[@id='_meobparty_addrTypeCOBdtl_select'])[1]");
 	private By correspondentBankIdentifierTextField = By.xpath("(//input[@id='_meobparty_bicCOBdtl'])[1]");
@@ -62,6 +69,14 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By tenorDetailsAddButton = By.xpath("(//span[@id='_tenordatagrid_AddRecBtn_label'])[1]");
 	private By mixedBillAmountTextField = By.xpath("(//input[@id='_tenorBillAmt$amt'])[1]");
 	private By billTenorDropDownList = By.xpath("(//select[@id='_billTenor_select'])[1]");
+	private By tenorDetailsButton = By.xpath("(//a[@id='_dccrUtAmtExp$linkBtn_anchor'])[1]");
+	private By dueDateIndicator1TextField = By.xpath("(//select[@id='_dcrutDueDateInd1_select'])[1]");
+	public static String dueDateIndicator1;
+	private By utilizedAmount1TextField = By.xpath("(//input[@id='_dcrutAmt1$amt'])[1]");
+	private By dueDateIndicator2TextField = By.xpath("(//select[@id='_dcrutDueDateInd2_select'])[1]");
+	public static String dueDateIndicator2;
+	private By utilizedAmount2TextField = By.xpath("(//input[@id='_dcrutAmt2$amt'])[1]");
+	private By acceptTenorDetailsButton = By.xpath("(//button[normalize-space()='Accept'])[1]");
 	private By tenorDetailsSaveAndPreviewButton = By.xpath("(//button[@id='_tenordetails_addViewSummary'])[1]");
 	private By tenorDetailsEditButton = By.xpath("(//span[@class='editcontent'])[1]");
 	private By tenorMonthsTextField = By.xpath("(//input[@id='_tenorMonthDays$duration1'])[1]");
@@ -73,6 +88,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By invoiceAmountTextField = By.xpath("(//input[@id='_meobbill_invoiceAmt$amt'])[1]");
 	private By invoiceNumberTextField = By.xpath("(//input[@id='_meobbill_invoiceNo'])[1]");
 	private By invoiceDateTextField = By.xpath("(//input[@id='_meobbill_invoiceDate'])[1]");
+	private By documentStatusDropDownList = By.xpath("(//select[@id='_meobbill_docStatus_select'])[1]");
 	private By notionalConversionRateTextField = By.xpath("(//input[@id='_meobbill_notConvRateCode$rateCode'])[1]");
 	private By continue4Button = By.xpath("(//button[@id='_meobbill_meobbill_FinButton1'])[1]");
 	private By continue5Button = By.xpath("(//button[@id='_meobassign_FinButton1'])[1]");
@@ -168,7 +184,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	public ABELodgeExportBillsTradeFinancePage sendKeysCifIdTextField(String cifId) throws Exception {
 		if(cifId != null) {
 			PageFunctionUtils.clickOnElement(driver, cifIdTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifId);
+			PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifId.substring(1));
 		}
 		return this;
 	}
@@ -197,6 +213,11 @@ public class ABELodgeExportBillsTradeFinancePage {
 	@Step("Press go button")
 	public ABELodgeExportBillsTradeFinancePage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
+		try {
+			PageFunctionUtils.clickOnElement(driver, goButton);
+		} catch(Exception e) {
+			
+		}
 		return this;
 	}
 	
@@ -204,6 +225,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	public ABELodgeExportBillsTradeFinancePage sendKeysOperativeAccountIdTextField(String operativeAccountId) throws Exception {
 		if(operativeAccountId != null) {
 			PageFunctionUtils.waitOnElement(driver, operativeAccountIdTextField);
+			PageFunctionUtils.clearDataInWebElement(driver, operativeAccountIdTextField);
 			PageFunctionUtils.clickOnElement(driver, operativeAccountIdTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, operativeAccountIdTextField, operativeAccountId.substring(1));
 		}
@@ -261,6 +283,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	public ABELodgeExportBillsTradeFinancePage sendKeysDraweeNameTextField(String draweeName) throws Exception {
 		if(draweeName != null) {
 			PageFunctionUtils.waitOnElement(driver, draweeNameTextField);
+			PageFunctionUtils.clearDataInWebElement(driver, draweeNameTextField);
 			PageFunctionUtils.clickOnElement(driver, draweeNameTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, draweeNameTextField, draweeName);
 		}
@@ -270,6 +293,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	@Step("Sending drawee address line: {0}")
 	public ABELodgeExportBillsTradeFinancePage sendKeysDraweeAddressLine1TextField(String draweeAddressLine1) throws Exception {
 		if(draweeAddressLine1 != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, draweeAddressLine1TextField);
 			PageFunctionUtils.clickOnElement(driver, draweeAddressLine1TextField);
 			PageFunctionUtils.enterDataInWebElement(driver, draweeAddressLine1TextField, draweeAddressLine1);
 		}
@@ -311,6 +335,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	@Step("Sending drawee bank identifier: {0}")
 	public ABELodgeExportBillsTradeFinancePage sendKeysDraweeBankIdentifierTextField(String draweeBankIdentifier) throws Exception {
 		if(draweeBankIdentifier != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, draweeBankIdentifierTextField);
 			PageFunctionUtils.clickOnElement(driver, draweeBankIdentifierTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, draweeBankIdentifierTextField, draweeBankIdentifier.substring(1));
 		}
@@ -373,6 +398,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	@Step("Sending beneficiary bank identifier: {0}")
 	public ABELodgeExportBillsTradeFinancePage sendKeysBeneficiaryBankIdentifierTextField(String beneficiaryBankIdentifier) throws Exception {
 		if(beneficiaryBankIdentifier != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, beneficiaryBankIdentifierTextField);
 			PageFunctionUtils.clickOnElement(driver, beneficiaryBankIdentifierTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, beneficiaryBankIdentifierTextField, beneficiaryBankIdentifier.substring(1));
 		}
@@ -412,6 +438,69 @@ public class ABELodgeExportBillsTradeFinancePage {
 		return this;
 	}
 	
+	@Step("Press collecting bank details button")
+	public ABELodgeExportBillsTradeFinancePage pressCollectingBankDetailsButton() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, collectingBankDetailsButton);
+		return this;
+	}
+	
+	@Step("Select collecting bank address type")
+	public ABELodgeExportBillsTradeFinancePage selectCollectingBankAddressTypeBankIdentifier() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, collectingBankAddressTypeDropDownList);
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, collectingBankAddressTypeDropDownList, FinacleFieldsUtils.ADDRESSTYPEBANKIDENTIFIER);
+		return this;
+	}
+	
+	@Step("Select collecting bank address type")
+	public ABELodgeExportBillsTradeFinancePage selectCollectingBankAddressTypeNameAndAddress() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, collectingBankAddressTypeDropDownList);
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, collectingBankAddressTypeDropDownList, FinacleFieldsUtils.ADDRESSTYPENAMEANDADDRESS);
+		return this;
+	}
+	
+	@Step("Sending collecting bank identifier: {0}")
+	public ABELodgeExportBillsTradeFinancePage sendKeysCollectingBankIdentifierTextField(String collectingBankIdentifier) throws Exception {
+		if(collectingBankIdentifier != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, collectingBankIdentifierTextField);
+			PageFunctionUtils.clickOnElement(driver, collectingBankIdentifierTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, collectingBankIdentifierTextField, collectingBankIdentifier.substring(1));
+		}
+		return this;
+	}
+	
+	@Step("Sending collecting bank name: {0}")
+	public ABELodgeExportBillsTradeFinancePage sendKeysCollectingBankNameTextField(String collectingBankName) throws Exception {
+		if(collectingBankName != null) {
+			PageFunctionUtils.waitOnElement(driver, collectingBankNameTextField);
+			PageFunctionUtils.clearDataInWebElement(driver, collectingBankNameTextField);
+			PageFunctionUtils.clickOnElement(driver, collectingBankNameTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, collectingBankNameTextField, collectingBankName);
+		}
+		return this;
+	}
+	
+	@Step("Sending collecting bank address line: {0}")
+	public ABELodgeExportBillsTradeFinancePage sendKeysCollectingBankAddressLine1TextField(String collectingBankAddressLine1) throws Exception {
+		if(collectingBankAddressLine1 != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, collectingBankAddressLine1TextField);
+			PageFunctionUtils.clickOnElement(driver, collectingBankAddressLine1TextField);
+			PageFunctionUtils.enterDataInWebElement(driver, collectingBankAddressLine1TextField, collectingBankAddressLine1);
+		}
+		return this;
+	}
+	
+	@Step("Press collecting bank swift address details button")
+	public ABELodgeExportBillsTradeFinancePage pressCollectingBankSwiftAddressDetailsYesButton() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, collectingBankSwiftAddressDetailsYesRadioButton);
+		return this;
+	}
+	
+	@Step("Press collecting bank swift address details button")
+	public ABELodgeExportBillsTradeFinancePage pressCollectingBankSwiftAddressDetailsNoButton() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, collectingBankSwiftAddressDetailsNoRadioButton);
+		return this;
+	}
+	
 	@Step("Press correspondent bank details button")
 	public ABELodgeExportBillsTradeFinancePage pressCorrespondentBankDetailsButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, correspondentBankDetailsButton);
@@ -435,6 +524,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	@Step("Sending correspondent bank identifier: {0}")
 	public ABELodgeExportBillsTradeFinancePage sendKeysCorrespondentBankIdentifierTextField(String correspondentBankIdentifier) throws Exception {
 		if(correspondentBankIdentifier != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, correspondentBankIdentifierTextField);
 			PageFunctionUtils.clickOnElement(driver, correspondentBankIdentifierTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, correspondentBankIdentifierTextField, correspondentBankIdentifier.substring(1));
 		}
@@ -513,6 +603,69 @@ public class ABELodgeExportBillsTradeFinancePage {
 	@Step("Select bill tenor")
 	public ABELodgeExportBillsTradeFinancePage selectBillTenorUsance() throws Exception {
 		PageFunctionUtils.selectDropDownListByVisibleText(driver, billTenorDropDownList, FinacleFieldsUtils.BILLTENORUSANCE);
+		return this;
+	}
+	
+	@Step("Press tenor details button")
+	public ABELodgeExportBillsTradeFinancePage pressTenorDetailsButton() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, tenorDetailsButton);
+		PageFunctionUtils.clickOnElement(driver, tenorDetailsButton);
+		try {
+			PageFunctionUtils.clickOnElement(driver, tenorDetailsButton);
+		} catch(Exception e) {
+			
+		}
+		return this;
+	}
+	
+	@Step("Get due date indicator")
+	public String getTextdueDateIndicator1TextField() throws InterruptedException {
+		PageFunctionUtils.switchToParentFrame(driver);
+		dueDateIndicator1 = PageFunctionUtils.getDropDownListSelectedValue(driver, dueDateIndicator1TextField);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+		return dueDateIndicator1;
+	}
+	
+	@Step("Get due date indicator")
+	public String getTextdueDateIndicator2TextField() throws InterruptedException {
+		PageFunctionUtils.switchToParentFrame(driver);
+		dueDateIndicator2 = PageFunctionUtils.getDropDownListSelectedValue(driver, dueDateIndicator2TextField);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+		return dueDateIndicator2;
+	}
+	
+	@Step("Sending utilized amount: {0}")
+	public ABELodgeExportBillsTradeFinancePage sendKeysUtilizedAmount1TextField(String utilizedAmount) throws Exception {
+		if(utilizedAmount != null) {
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnElement(driver, utilizedAmount1TextField);
+			PageFunctionUtils.clearDataInWebElement(driver, utilizedAmount1TextField);
+			PageFunctionUtils.clickOnElement(driver, utilizedAmount1TextField);
+			PageFunctionUtils.enterDataInWebElement(driver, utilizedAmount1TextField, utilizedAmount);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+		}
+		return this;
+	}
+	
+	@Step("Sending utilized amount: {0}")
+	public ABELodgeExportBillsTradeFinancePage sendKeysUtilizedAmount2TextField(String utilizedAmount) throws Exception {
+		if(utilizedAmount != null) {
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnElement(driver, utilizedAmount2TextField);
+			PageFunctionUtils.clearDataInWebElement(driver, utilizedAmount2TextField);
+			PageFunctionUtils.clickOnElement(driver, utilizedAmount2TextField);
+			PageFunctionUtils.enterDataInWebElement(driver, utilizedAmount2TextField, utilizedAmount);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+		}
+		return this;
+	}
+	
+	@Step("Press accept tenor details button")
+	public ABELodgeExportBillsTradeFinancePage pressAcceptTenorDetailsButton() throws Exception {
+		PageFunctionUtils.switchToParentFrame(driver);
+		PageFunctionUtils.waitOnElement(driver, acceptTenorDetailsButton);
+		PageFunctionUtils.clickOnElement(driver, acceptTenorDetailsButton);
+		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		return this;
 	}
 	
@@ -604,6 +757,30 @@ public class ABELodgeExportBillsTradeFinancePage {
 			PageFunctionUtils.clickOnElement(driver, invoiceDateTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, invoiceDateTextField, invoiceDate.substring(1));
 		}
+		return this;
+	}
+	
+	@Step("Select document status")
+	public ABELodgeExportBillsTradeFinancePage selectDocumentStatusClean() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, documentStatusDropDownList, FinacleFieldsUtils.DOCUMENTSTATUSCLEAN);
+		return this;
+	}
+	
+	@Step("Select document status")
+	public ABELodgeExportBillsTradeFinancePage selectDocumentStatusDiscrepant() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, documentStatusDropDownList, FinacleFieldsUtils.DOCUMENTSTATUSDISCREPANT);
+		return this;
+	}
+	
+	@Step("Select document status")
+	public ABELodgeExportBillsTradeFinancePage selectDocumentStatusDiscrepantAndAccepted() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, documentStatusDropDownList, FinacleFieldsUtils.DOCUMENTSTATUSDISCREPANTANDACCEPTED);
+		return this;
+	}
+	
+	@Step("Select document status")
+	public ABELodgeExportBillsTradeFinancePage selectDocumentStatusReturned() throws Exception {
+		PageFunctionUtils.selectDropDownListByVisibleText(driver, documentStatusDropDownList, FinacleFieldsUtils.DOCUMENTSTATUSRETURNED);
 		return this;
 	}
 	
@@ -708,6 +885,13 @@ public class ABELodgeExportBillsTradeFinancePage {
 	public ABELodgeExportBillsTradeFinancePage pressContinue12Button() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, continue12Button);
 		PageFunctionUtils.clickOnElement(driver, continue12Button);
+		try {
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.clickOnElement(driver, closeButton);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+        } catch (Exception e) {
+        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+		}
 		return this;
 	}
 	

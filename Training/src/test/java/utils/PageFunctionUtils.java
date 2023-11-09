@@ -102,6 +102,13 @@ public class PageFunctionUtils {
 		dropdown.selectByValue(value);
 	}
 	
+	public static String getDropDownListSelectedValue(WebDriver driver, By by) {
+		Select select = new Select(driver.findElement(by));
+		WebElement option = select.getFirstSelectedOption();
+		String selectedValue = option.getText();
+		return selectedValue;
+	}
+	
 	public static void acceptWarning(WebDriver driver) throws InterruptedException {
 		PageFunctionUtils.switchToParentFrame(driver);
 		Boolean isPresent = driver.findElements(By.xpath("(//button[normalize-space()='Accept'])[1]")).size() > 0;

@@ -1,15 +1,82 @@
 [
  {
-  "tcId": "FCB-6833",
-  "summary": "TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Mixed Tenor_Foreign_USD_ByMaker_F3",
-  "username": "PT18",
+  "tcId": "FCB-6853",
+  "summary": "TradeFinance_Export_Bills_Under_Collection_Accept_Mixed Tenor_Local_EGP_ByMaker_H3",
+  "username": "PT19",
   "password": "Infy@123",
   "menu": "AEOB",
-  "billId": "'1401EDC23000219",
-  "mixedBillId1": "'1401EDC23000220",
-  "mixedBillId2": "'1401EDC23000221",
-  "acceptanceDate": "'05-11-2023",
+  "acceptanceDate": "'07-11-2023",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-6854"
+ },
+ {
+  "tcId": "FCB-6805",
+  "summary": "TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Usance_Local_EGP_ByMaker_C3",
+  "username": "PT19",
+  "password": "Infy@123",
+  "menu": "AEOB",
+  "acceptanceDate": "'07-11-2023",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-6806"
+ },
+ {
+  "tcId": "FCB-6813",
+  "summary": "TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Usance_Foreign_USD_ByMaker_D7",
+  "username": "PT19",
+  "password": "Infy@123",
+  "menu": "AEOB",
+  "acceptanceDate": "'07-11-2023",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-6814"
+ },
+ {
+  "tcId": "FCB-6825",
+  "summary": "TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Usance_Foreign_EUR_ByMaker_E3",
+  "username": "PT19",
+  "password": "Infy@123",
+  "menu": "AEOB",
+  "acceptanceDate": "'07-11-2023",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-6826"
+ },
+ {
+  "tcId": "FCB-6833",
+  "summary": "TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Mixed Tenor_Foreign_USD_ByMaker_F3",
+  "username": "PT19",
+  "password": "Infy@123",
+  "menu": "AEOB",
+  "acceptanceDate": "'07-11-2023",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-6834"
+ },
+ {
+  "tcId": "FCB-7178",
+  "summary": "TradeFinance_Export_Bills_Under_Documentary_Credit_Accept_Lodge_Usance_Local_EGP_ByMaker_A3",
+  "username": "PT19",
+  "password": "Infy@123",
+  "menu": "AEOB",
+  "acceptanceDate": "'07-11-2023",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-7179"
+ },
+ {
+  "tcId": "FCB-7210",
+  "summary": "TradeFinance_Export_Bills_Under_Documentary_Credit_Accept_Lodge_Usance_Foreign_USD_ByMaker_F3",
+  "username": "PT19",
+  "password": "Infy@123",
+  "menu": "AEOB",
+  "acceptanceDate": "'07-11-2023",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-7211"
+ },
+ {
+  "tcId": "FCB-7232",
+  "summary": "TradeFinance_Export_Bills_Under_Documentary_Credit_Accept_Lodge_Mixed Tenor_Foreign_USD_ByMaker_J3",
+  "username": "PT19",
+  "password": "Infy@123",
+  "menu": "AEOB",
+  "acceptanceDate": "'07-11-2023",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-7233"
  }
 ]

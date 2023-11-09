@@ -1,2 +1,7 @@
 "tcId","summary","username","password","menu","billId","mixedBillId1","mixedBillId2","expectedResult"
-"FCB-7239","TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Purchase_Mixed Tenor_Foreign_USD_ByChecker_J8","PT19","Infy@123","VEOB","","","","successfully"
+"FCB-6810","TradeFinance_Export_Bills_Under_Collection_Verify_Purchase_Usance_Local_EGP_ByChecker_C6","PT20","Infy@123","VEOB","","","","successfully"
+"FCB-6830","TradeFinance_Export_Bills_Under_Collection_Verify_Purchase_Usance_Foreign_EUR_ByChecker_E6","PT20","Infy@123","VEOB","","","","successfully"
+"FCB-6840","TradeFinance_Export_Bills_Under_Collection_Verify_Purchase_Mixed Tenor_Foreign_USD_ByChecker_F6","PT20","Infy@123","VEOB","","","","successfully"
+"FCB-7183","TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Purchase_Usance_Local_EGP_ByChecker_A6","PT20","Infy@123","VEOB","","","","successfully"
+"FCB-7217","TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Purchase_Usance_Foreign_USD_ByChecker_F8","PT20","Infy@123","VEOB","","","","successfully"
+"FCB-7239","TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Purchase_Mixed Tenor_Foreign_USD_ByChecker_J8","PT20","Infy@123","VEOB","","","","successfully"

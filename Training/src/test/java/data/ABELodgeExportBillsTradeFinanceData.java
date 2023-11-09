@@ -30,6 +30,11 @@ public class ABELodgeExportBillsTradeFinanceData {
 	private String beneficiaryBankSwiftAddressDetails;
 	private String beneficiaryBankName;
 	private String beneficiaryBankAddress;
+	private String collectingBankAddressType;
+	private String collectingBankIdentifier;
+	private String collectingBankSwiftAddressDetails;
+	private String collectingBankName;
+	private String collectingBankAddress;
 	private String correspondentBankAddressType;
 	private String correspondentBankIdentifier;
 	private String correspondentBankSwiftAddressDetails;
@@ -56,6 +61,7 @@ public class ABELodgeExportBillsTradeFinanceData {
 	private String invoiceAmount;
 	private String invoiceNumber;
 	private String invoiceDate;
+	private String documentStatus;
 	private String notionalConversionRate;
 	private String paySysId;
 	private String expectedResult;
@@ -300,6 +306,46 @@ public class ABELodgeExportBillsTradeFinanceData {
 		this.beneficiaryBankAddress = beneficiaryBankAddress;
 	}
 	
+	public String getCollectingBankAddressType() {
+		return collectingBankAddressType;
+	}
+
+	public void setCollectingBankAddressType(String collectingBankAddressType) {
+		this.collectingBankAddressType = collectingBankAddressType;
+	}
+
+	public String getCollectingBankIdentifier() {
+		return collectingBankIdentifier;
+	}
+
+	public void setCollectingBankIdentifier(String collectingBankIdentifier) {
+		this.collectingBankIdentifier = collectingBankIdentifier;
+	}
+
+	public String getCollectingBankSwiftAddressDetails() {
+		return collectingBankSwiftAddressDetails;
+	}
+
+	public void setCollectingBankSwiftAddressDetails(String collectingBankSwiftAddressDetails) {
+		this.collectingBankSwiftAddressDetails = collectingBankSwiftAddressDetails;
+	}
+
+	public String getCollectingBankName() {
+		return collectingBankName;
+	}
+
+	public void setCollectingBankName(String collectingBankName) {
+		this.collectingBankName = collectingBankName;
+	}
+
+	public String getCollectingBankAddress() {
+		return collectingBankAddress;
+	}
+
+	public void setCollectingBankAddress(String collectingBankAddress) {
+		this.collectingBankAddress = collectingBankAddress;
+	}
+	
 	public String getCorrespondentBankAddressType() {
 		return correspondentBankAddressType;
 	}
@@ -508,6 +554,14 @@ public class ABELodgeExportBillsTradeFinanceData {
 		this.invoiceDate = invoiceDate;
 	}
 	
+	public String getDocumentStatus() {
+		return documentStatus;
+	}
+
+	public void setDocumentStatus(String documentStatus) {
+		this.documentStatus = documentStatus;
+	}
+	
 	public String getNotionalConversionRate() {
 		return notionalConversionRate;
 	}
@@ -611,6 +665,9 @@ public class ABELodgeExportBillsTradeFinanceData {
 				+ beneficiaryBankAddressType + ", beneficiaryBankIdentifier=" + beneficiaryBankIdentifier
 				+ ", beneficiaryBankSwiftAddressDetails=" + beneficiaryBankSwiftAddressDetails
 				+ ", beneficiaryBankName=" + beneficiaryBankName + ", beneficiaryBankAddress=" + beneficiaryBankAddress
+				+ ", collectingBankAddressType=" + collectingBankAddressType + ", collectingBankIdentifier="
+				+ collectingBankIdentifier + ", collectingBankSwiftAddressDetails=" + collectingBankSwiftAddressDetails
+				+ ", collectingBankName=" + collectingBankName + ", collectingBankAddress=" + collectingBankAddress
 				+ ", correspondentBankAddressType=" + correspondentBankAddressType + ", correspondentBankIdentifier="
 				+ correspondentBankIdentifier + ", correspondentBankSwiftAddressDetails="
 				+ correspondentBankSwiftAddressDetails + ", correspondentBankName=" + correspondentBankName
@@ -624,10 +681,11 @@ public class ABELodgeExportBillsTradeFinanceData {
 				+ ", mixedBillTenorMonths2=" + mixedBillTenorMonths2 + ", mixedBillTenorDays2=" + mixedBillTenorDays2
 				+ ", mixedBillDate2=" + mixedBillDate2 + ", mixedOnboardDate2=" + mixedOnboardDate2 + ", invoiceAmount="
 				+ invoiceAmount + ", invoiceNumber=" + invoiceNumber + ", invoiceDate=" + invoiceDate
-				+ ", notionalConversionRate=" + notionalConversionRate + ", paySysId=" + paySysId + ", expectedResult="
-				+ expectedResult + ", linkedTcid=" + linkedTcid + ", acceptLinkedTcid=" + acceptLinkedTcid
-				+ ", verifyAcceptLinkedTcid=" + verifyAcceptLinkedTcid + ", purchaseLinkedTcid=" + purchaseLinkedTcid
-				+ ", verifyPurchaseLinkedTcid=" + verifyPurchaseLinkedTcid + ", realizeLinkedTcid=" + realizeLinkedTcid
-				+ ", verifyRealizeLinkedTcid=" + verifyRealizeLinkedTcid + "]";
+				+ ", documentStatus=" + documentStatus + ", notionalConversionRate=" + notionalConversionRate
+				+ ", paySysId=" + paySysId + ", expectedResult=" + expectedResult + ", linkedTcid=" + linkedTcid
+				+ ", acceptLinkedTcid=" + acceptLinkedTcid + ", verifyAcceptLinkedTcid=" + verifyAcceptLinkedTcid
+				+ ", purchaseLinkedTcid=" + purchaseLinkedTcid + ", verifyPurchaseLinkedTcid="
+				+ verifyPurchaseLinkedTcid + ", realizeLinkedTcid=" + realizeLinkedTcid + ", verifyRealizeLinkedTcid="
+				+ verifyRealizeLinkedTcid + "]";
 	}
 }

@@ -109,6 +109,11 @@ public class PageFunctionUtils {
 		return selectedValue;
 	}
 	
+	public static boolean elementIsDisplayed(WebDriver driver, By by) {
+		boolean isDisplayed = driver.findElement(by).isDisplayed();
+		return isDisplayed;
+	}
+	
 	public static void acceptWarning(WebDriver driver) throws InterruptedException {
 		PageFunctionUtils.switchToParentFrame(driver);
 		Boolean isPresent = driver.findElements(By.xpath("(//button[normalize-space()='Accept'])[1]")).size() > 0;

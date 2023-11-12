@@ -70,6 +70,30 @@ public class ABEAcceptExportBillsTradeFinancePage {
 		        }
 	        catch (Exception e) {
 	        }
+	        /////
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+		        }
+	        catch (Exception e) {
+	        }
+	        PageFunctionUtils.sleep();
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+		        }
+	        catch (Exception e) {
+	        }
+	        driver.findElement(By.xpath("(//input[@id='usertxt'])[1]")).sendKeys("ABE45");
+	        try {
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+	            alert.accept();
+		        }
+	        catch (Exception e) {
+	        }
+	        driver.findElement(By.xpath("(//input[@id='passtxt'])[1]")).sendKeys("Infy@123");
+	        driver.findElement(By.xpath("(//input[@id='Submit'])[1]")).click();
+	        /////
         }
 	return this;
 	}

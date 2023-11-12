@@ -23,7 +23,6 @@ public class FinacleLoginPage {
 	
 	@Step("Login with username: {0}")
 	public FinacleLoginPage sendKeysUserNameTextField(String keysToSend) throws Exception {
-
 		driver.switchTo().frame(driver.findElement(loginIframe));
 		PageFunctionUtils.enterDataInWebElement(driver, usernameTextField, keysToSend);
 		return this;
@@ -45,6 +44,7 @@ public class FinacleLoginPage {
 	    		PageFunctionUtils.enterDataInWebElement(driver, passwordTextField, keysToSend);
 	    		PageFunctionUtils.clickOnElement(driver, loginButton);
 	        } catch (Exception e) {
+	        	
 	        }
 		return this;
 	}

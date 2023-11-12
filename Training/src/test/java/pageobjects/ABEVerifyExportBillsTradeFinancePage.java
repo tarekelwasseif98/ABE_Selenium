@@ -21,6 +21,7 @@ public class ABEVerifyExportBillsTradeFinancePage {
 	private By billIdTextField = By.xpath("(//input[@id='_billIdOthers'])[1]");
 	private By tenorBillIdTextField = By.xpath("(//input[@id='_tenorBillId'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
+	private By generalDetailsSideTabMenu = By.xpath("(//span[@id='fbmgeneral_textSpan'])[1]");
 	private By continue1Button = By.xpath("(//button[@id='_meobgen_meobgen_FinButton1'])[1]");
 	private By continue2Button = By.xpath("(//button[@id='_meobparty_meobparty_FinButton1'])[1]");
 	private By continue3Button = By.xpath("(//button[@id='_meobtenor_continue'])[1]");
@@ -44,6 +45,7 @@ public class ABEVerifyExportBillsTradeFinancePage {
 	private By continue16Button = By.xpath("(//button[@id='_messagedetails_msgdet_Continue'])[1]");
 	private By continue17Button = By.xpath("(//button[@id='_meobpur_meobpur_FinButton1'])[1]");
 	private By continue18Button = By.xpath("(//button[@id='_meobhistory_his_Continue'])[1]");
+	private By continue19Button = By.xpath("(//button[@id='_meobpreship_meobpreship_continue'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Verify Export and Outward Bill'])[1]");
 	private By repeatTaskButton = By.xpath("(//button[normalize-space()='Repeat Task'])[1]");
@@ -89,30 +91,6 @@ public class ABEVerifyExportBillsTradeFinancePage {
 		        }
 	        catch (Exception e) {
 	        }
-	        /////
-	        try {
-	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-	            alert.accept();
-		        }
-	        catch (Exception e) {
-	        }
-	        PageFunctionUtils.sleep();
-	        try {
-	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-	            alert.accept();
-		        }
-	        catch (Exception e) {
-	        }
-	        driver.findElement(By.xpath("(//input[@id='usertxt'])[1]")).sendKeys("ABE45");
-	        try {
-	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-	            alert.accept();
-		        }
-	        catch (Exception e) {
-	        }
-	        driver.findElement(By.xpath("(//input[@id='passtxt'])[1]")).sendKeys("Infy@123");
-	        driver.findElement(By.xpath("(//input[@id='Submit'])[1]")).click();
-	        /////
         }
 	return this;
 	}
@@ -153,6 +131,13 @@ public class ABEVerifyExportBillsTradeFinancePage {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
+	
+	@Step("Side tab navigation")
+	public ABEVerifyExportBillsTradeFinancePage navigateGeneralDetailsSideTabMenu() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, generalDetailsSideTabMenu);
+		return this;
+	}
+
 	
 	@Step("Press continue button")
 	public ABEVerifyExportBillsTradeFinancePage pressContinue1Button() throws Exception {
@@ -327,6 +312,13 @@ public class ABEVerifyExportBillsTradeFinancePage {
 		return this;
 	}
 	
+	@Step("Press continue button")
+	public ABEVerifyExportBillsTradeFinancePage pressContinue19Button() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, continue19Button);
+		PageFunctionUtils.clickOnElement(driver, continue19Button);
+		return this;
+	}
+	
 	@Step("Press submit button")
 	public ABEVerifyExportBillsTradeFinancePage pressSubmitButton() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, submitButton);
@@ -346,41 +338,41 @@ public class ABEVerifyExportBillsTradeFinancePage {
 	@Step("Save bill id")
 	public ABEVerifyExportBillsTradeFinancePage saveBillId(String acceptLinkedTcid, String verifyAcceptLinkedTcid, String purchaseLinkedTcid, String verifyPurchaseLinkedTcid, String realizeLinkedTcid, String verifyRealizeLinkedTcid) throws Exception {
 			if(acceptLinkedTcid != null) {
-				int rowByTcid1 = CSVUtils.getRowByTcid(Paths.VerifyLodgeExportBillsCsv, acceptLinkedTcidCsvColumnName, acceptLinkedTcid);
-				int rowByTcid2 = CSVUtils.getRowByTcid(Paths.AcceptExportBillsCsv, tcIdCsvColumnName, acceptLinkedTcid);
-				int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.AcceptExportBillsCsv, mixedBillId1CsvColumnName);
-				int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.AcceptExportBillsCsv, mixedBillId2CsvColumnName);
+				int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABEVERIFYLODGEEXPORTBILLSTRADEFINANCECSV, acceptLinkedTcidCsvColumnName, acceptLinkedTcid);
+				int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEACCEPTEXPORTBILLSTRADEFINANCECSV, tcIdCsvColumnName, acceptLinkedTcid);
+				int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.ABEACCEPTEXPORTBILLSTRADEFINANCECSV, mixedBillId1CsvColumnName);
+				int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.ABEACCEPTEXPORTBILLSTRADEFINANCECSV, mixedBillId2CsvColumnName);
 				if(rowByTcid1 != -1 && rowByTcid2 != -1) {
 					if(mixedBillTenor2IsDisplayedAccept) {
 						if((mixedBillTenor1.equalsIgnoreCase(FinacleFieldsUtils.BILLTENORUSANCE)) && (mixedBillTenor2.equalsIgnoreCase(FinacleFieldsUtils.BILLTENORUSANCE))) {
-							CSVUtils.insertValueInCsvCell(Paths.AcceptExportBillsCsv, rowByTcid2, columnByColumnName1, mixedBillAccountId1);
-							CSVUtils.insertValueInCsvCell(Paths.AcceptExportBillsCsv, rowByTcid2, columnByColumnName2, mixedBillAccountId2);
+							CSVUtils.insertValueInCsvCell(Paths.ABEACCEPTEXPORTBILLSTRADEFINANCECSV, rowByTcid2, columnByColumnName1, mixedBillAccountId1);
+							CSVUtils.insertValueInCsvCell(Paths.ABEACCEPTEXPORTBILLSTRADEFINANCECSV, rowByTcid2, columnByColumnName2, mixedBillAccountId2);
 						}
 						else if((mixedBillTenor1.equalsIgnoreCase(FinacleFieldsUtils.BILLTENORUSANCE)) && (mixedBillTenor2.equalsIgnoreCase(FinacleFieldsUtils.BILLTENORSIGHT))) {
-							CSVUtils.insertValueInCsvCell(Paths.AcceptExportBillsCsv, rowByTcid2, columnByColumnName1, mixedBillAccountId1);
+							CSVUtils.insertValueInCsvCell(Paths.ABEACCEPTEXPORTBILLSTRADEFINANCECSV, rowByTcid2, columnByColumnName1, mixedBillAccountId1);
 						}
 						else if((mixedBillTenor1.equalsIgnoreCase(FinacleFieldsUtils.BILLTENORSIGHT)) && (mixedBillTenor2.equalsIgnoreCase(FinacleFieldsUtils.BILLTENORUSANCE))) {
-							CSVUtils.insertValueInCsvCell(Paths.AcceptExportBillsCsv, rowByTcid2, columnByColumnName2, mixedBillAccountId2);
+							CSVUtils.insertValueInCsvCell(Paths.ABEACCEPTEXPORTBILLSTRADEFINANCECSV, rowByTcid2, columnByColumnName2, mixedBillAccountId2);
 						}
 						mixedBillTenor2IsDisplayedAccept = false;
 					}
 				}
 				if(verifyAcceptLinkedTcid != null) {
-					int rowByTcid3 = CSVUtils.getRowByTcid(Paths.VerifyLodgeExportBillsCsv, verifyAcceptLinkedTcidCsvColumnName, verifyAcceptLinkedTcid);
-					int rowByTcid4 = CSVUtils.getRowByTcid(Paths.VerifyAcceptExportBillsCsv, tcIdCsvColumnName, verifyAcceptLinkedTcid);
-					int columnByColumnName3 = CSVUtils.getColumnByColumnName(Paths.VerifyAcceptExportBillsCsv, mixedBillId1CsvColumnName);
-					int columnByColumnName4 = CSVUtils.getColumnByColumnName(Paths.VerifyAcceptExportBillsCsv, mixedBillId2CsvColumnName);
+					int rowByTcid3 = CSVUtils.getRowByTcid(Paths.ABEVERIFYLODGEEXPORTBILLSTRADEFINANCECSV, verifyAcceptLinkedTcidCsvColumnName, verifyAcceptLinkedTcid);
+					int rowByTcid4 = CSVUtils.getRowByTcid(Paths.ABEVERIFYACCEPTEXPORTBILLSTRADEFINANCECSV, tcIdCsvColumnName, verifyAcceptLinkedTcid);
+					int columnByColumnName3 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYACCEPTEXPORTBILLSTRADEFINANCECSV, mixedBillId1CsvColumnName);
+					int columnByColumnName4 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYACCEPTEXPORTBILLSTRADEFINANCECSV, mixedBillId2CsvColumnName);
 					if(rowByTcid3 != -1 && rowByTcid4 != -1) {
 						if(mixedBillTenor2IsDisplayedVerifyAccept) {
 							if((mixedBillTenor1.equalsIgnoreCase(FinacleFieldsUtils.BILLTENORUSANCE)) && (mixedBillTenor2.equalsIgnoreCase(FinacleFieldsUtils.BILLTENORUSANCE))) {
-								CSVUtils.insertValueInCsvCell(Paths.VerifyAcceptExportBillsCsv, rowByTcid4, columnByColumnName3, mixedBillAccountId1);
-								CSVUtils.insertValueInCsvCell(Paths.VerifyAcceptExportBillsCsv, rowByTcid4, columnByColumnName4, mixedBillAccountId2);
+								CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYACCEPTEXPORTBILLSTRADEFINANCECSV, rowByTcid4, columnByColumnName3, mixedBillAccountId1);
+								CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYACCEPTEXPORTBILLSTRADEFINANCECSV, rowByTcid4, columnByColumnName4, mixedBillAccountId2);
 								}
 							else if(((mixedBillTenor1 != null) && (mixedBillTenor1.equalsIgnoreCase(FinacleFieldsUtils.BILLTENORUSANCE))) && ((mixedBillTenor2 != null) && (mixedBillTenor2.equalsIgnoreCase(FinacleFieldsUtils.BILLTENORSIGHT)))) {
-								CSVUtils.insertValueInCsvCell(Paths.VerifyAcceptExportBillsCsv, rowByTcid4, columnByColumnName3, mixedBillAccountId1);
+								CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYACCEPTEXPORTBILLSTRADEFINANCECSV, rowByTcid4, columnByColumnName3, mixedBillAccountId1);
 								}
 							else if(((mixedBillTenor1 != null) && (mixedBillTenor1.equalsIgnoreCase(FinacleFieldsUtils.BILLTENORSIGHT))) && ((mixedBillTenor2 != null) && (mixedBillTenor2.equalsIgnoreCase(FinacleFieldsUtils.BILLTENORUSANCE)))) {
-								CSVUtils.insertValueInCsvCell(Paths.VerifyAcceptExportBillsCsv, rowByTcid4, columnByColumnName4, mixedBillAccountId2);
+								CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYACCEPTEXPORTBILLSTRADEFINANCECSV, rowByTcid4, columnByColumnName4, mixedBillAccountId2);
 								}
 							mixedBillTenor2IsDisplayedVerifyAccept = false;
 							}
@@ -388,52 +380,52 @@ public class ABEVerifyExportBillsTradeFinancePage {
 					}
 				}
 			if(purchaseLinkedTcid != null) {
-				int rowByTcid1 = CSVUtils.getRowByTcid(Paths.VerifyLodgeExportBillsCsv, purchaseLinkedTcidCsvColumnName, purchaseLinkedTcid);
-				int rowByTcid2 = CSVUtils.getRowByTcid(Paths.PurchaseExportBillsCsv, tcIdCsvColumnName, purchaseLinkedTcid);
-				int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.PurchaseExportBillsCsv, mixedBillId1CsvColumnName);
-				int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.PurchaseExportBillsCsv, mixedBillId2CsvColumnName);
+				int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABEVERIFYLODGEEXPORTBILLSTRADEFINANCECSV, purchaseLinkedTcidCsvColumnName, purchaseLinkedTcid);
+				int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEPURCHASEEXPORTBILLSTRADEFINANCECSV, tcIdCsvColumnName, purchaseLinkedTcid);
+				int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.ABEPURCHASEEXPORTBILLSTRADEFINANCECSV, mixedBillId1CsvColumnName);
+				int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.ABEPURCHASEEXPORTBILLSTRADEFINANCECSV, mixedBillId2CsvColumnName);
 				if(rowByTcid1 != -1 && rowByTcid2 != -1) {
 					if(mixedBillTenor2IsDisplayedPurchase) {
-						CSVUtils.insertValueInCsvCell(Paths.PurchaseExportBillsCsv, rowByTcid2, columnByColumnName1, mixedBillAccountId1);
-						CSVUtils.insertValueInCsvCell(Paths.PurchaseExportBillsCsv, rowByTcid2, columnByColumnName2, mixedBillAccountId2);
+						CSVUtils.insertValueInCsvCell(Paths.ABEPURCHASEEXPORTBILLSTRADEFINANCECSV, rowByTcid2, columnByColumnName1, mixedBillAccountId1);
+						CSVUtils.insertValueInCsvCell(Paths.ABEPURCHASEEXPORTBILLSTRADEFINANCECSV, rowByTcid2, columnByColumnName2, mixedBillAccountId2);
 						}
 					mixedBillTenor2IsDisplayedPurchase = false;
 					}
 				if(verifyPurchaseLinkedTcid != null) {
-					int rowByTcid3 = CSVUtils.getRowByTcid(Paths.VerifyLodgeExportBillsCsv, verifyPurchaseLinkedTcidCsvColumnName, verifyPurchaseLinkedTcid);
-					int rowByTcid4 = CSVUtils.getRowByTcid(Paths.VerifyPurchaseExportBillsCsv, tcIdCsvColumnName, verifyPurchaseLinkedTcid);
-					int columnByColumnName3 = CSVUtils.getColumnByColumnName(Paths.VerifyPurchaseExportBillsCsv, mixedBillId1CsvColumnName);
-					int columnByColumnName4 = CSVUtils.getColumnByColumnName(Paths.VerifyPurchaseExportBillsCsv, mixedBillId2CsvColumnName);
+					int rowByTcid3 = CSVUtils.getRowByTcid(Paths.ABEVERIFYLODGEEXPORTBILLSTRADEFINANCECSV, verifyPurchaseLinkedTcidCsvColumnName, verifyPurchaseLinkedTcid);
+					int rowByTcid4 = CSVUtils.getRowByTcid(Paths.ABEVERIFYPURCHASEEXPORTBILLSTRADEFINANCECSV, tcIdCsvColumnName, verifyPurchaseLinkedTcid);
+					int columnByColumnName3 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYPURCHASEEXPORTBILLSTRADEFINANCECSV, mixedBillId1CsvColumnName);
+					int columnByColumnName4 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYPURCHASEEXPORTBILLSTRADEFINANCECSV, mixedBillId2CsvColumnName);
 					if(rowByTcid3 != -1 && rowByTcid4 != -1) {
 						if(mixedBillTenor2IsDisplayedVerifyPurchase) {
-							CSVUtils.insertValueInCsvCell(Paths.VerifyPurchaseExportBillsCsv, rowByTcid4, columnByColumnName3, mixedBillAccountId1);
-							CSVUtils.insertValueInCsvCell(Paths.VerifyPurchaseExportBillsCsv, rowByTcid4, columnByColumnName4, mixedBillAccountId2);
+							CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYPURCHASEEXPORTBILLSTRADEFINANCECSV, rowByTcid4, columnByColumnName3, mixedBillAccountId1);
+							CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYPURCHASEEXPORTBILLSTRADEFINANCECSV, rowByTcid4, columnByColumnName4, mixedBillAccountId2);
 							}
 						mixedBillTenor2IsDisplayedVerifyPurchase = false;
 						}
 					}
 				}
 			if(realizeLinkedTcid != null) {
-				int rowByTcid1 = CSVUtils.getRowByTcid(Paths.VerifyLodgeExportBillsCsv, realizeLinkedTcidCsvColumnName, realizeLinkedTcid);
-				int rowByTcid2 = CSVUtils.getRowByTcid(Paths.RealizeExportBillsCsv, tcIdCsvColumnName, realizeLinkedTcid);
-				int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.RealizeExportBillsCsv, mixedBillId1CsvColumnName);
-				int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.RealizeExportBillsCsv, mixedBillId2CsvColumnName);
+				int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABEVERIFYLODGEEXPORTBILLSTRADEFINANCECSV, realizeLinkedTcidCsvColumnName, realizeLinkedTcid);
+				int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEREALIZEEXPORTBILLSTRADEFINANCECSV, tcIdCsvColumnName, realizeLinkedTcid);
+				int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.ABEREALIZEEXPORTBILLSTRADEFINANCECSV, mixedBillId1CsvColumnName);
+				int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.ABEREALIZEEXPORTBILLSTRADEFINANCECSV, mixedBillId2CsvColumnName);
 				if(rowByTcid1 != -1 && rowByTcid2 != -1) {
 					if(mixedBillTenor2IsDisplayedRealize) {
-						CSVUtils.insertValueInCsvCell(Paths.RealizeExportBillsCsv, rowByTcid2, columnByColumnName1, mixedBillAccountId1);
-						CSVUtils.insertValueInCsvCell(Paths.RealizeExportBillsCsv, rowByTcid2, columnByColumnName2, mixedBillAccountId2);
+						CSVUtils.insertValueInCsvCell(Paths.ABEREALIZEEXPORTBILLSTRADEFINANCECSV, rowByTcid2, columnByColumnName1, mixedBillAccountId1);
+						CSVUtils.insertValueInCsvCell(Paths.ABEREALIZEEXPORTBILLSTRADEFINANCECSV, rowByTcid2, columnByColumnName2, mixedBillAccountId2);
 						}
 					mixedBillTenor2IsDisplayedRealize = false;
 					}
 				if(verifyRealizeLinkedTcid != null) {
-					int rowByTcid3 = CSVUtils.getRowByTcid(Paths.VerifyLodgeExportBillsCsv, verifyRealizeLinkedTcidCsvColumnName, verifyRealizeLinkedTcid);
-					int rowByTcid4 = CSVUtils.getRowByTcid(Paths.VerifyRealizeExportBillsCsv, tcIdCsvColumnName, verifyRealizeLinkedTcid);
-					int columnByColumnName3 = CSVUtils.getColumnByColumnName(Paths.VerifyRealizeExportBillsCsv, mixedBillId1CsvColumnName);
-					int columnByColumnName4 = CSVUtils.getColumnByColumnName(Paths.VerifyRealizeExportBillsCsv, mixedBillId2CsvColumnName);
+					int rowByTcid3 = CSVUtils.getRowByTcid(Paths.ABEVERIFYLODGEEXPORTBILLSTRADEFINANCECSV, verifyRealizeLinkedTcidCsvColumnName, verifyRealizeLinkedTcid);
+					int rowByTcid4 = CSVUtils.getRowByTcid(Paths.ABEVERIFYREALIZEEXPORTBILLSTRADEFINANCECSV, tcIdCsvColumnName, verifyRealizeLinkedTcid);
+					int columnByColumnName3 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYREALIZEEXPORTBILLSTRADEFINANCECSV, mixedBillId1CsvColumnName);
+					int columnByColumnName4 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYREALIZEEXPORTBILLSTRADEFINANCECSV, mixedBillId2CsvColumnName);
 					if(rowByTcid3 != -1 && rowByTcid4 != -1) {
 						if(mixedBillTenor2IsDisplayedVerifyRealize) {
-							CSVUtils.insertValueInCsvCell(Paths.VerifyRealizeExportBillsCsv, rowByTcid4, columnByColumnName3, mixedBillAccountId1);
-							CSVUtils.insertValueInCsvCell(Paths.VerifyRealizeExportBillsCsv, rowByTcid4, columnByColumnName4, mixedBillAccountId2);
+							CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYREALIZEEXPORTBILLSTRADEFINANCECSV, rowByTcid4, columnByColumnName3, mixedBillAccountId1);
+							CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYREALIZEEXPORTBILLSTRADEFINANCECSV, rowByTcid4, columnByColumnName4, mixedBillAccountId2);
 							}
 						mixedBillTenor2IsDisplayedVerifyRealize = false;
 						}

@@ -31,8 +31,8 @@ import io.qameta.allure.testng.AllureTestNg;
 public class ABEOpenTUATest {
 	@BeforeClass
 	public void oneTimeSetUp() throws IOException, CsvException {
-		CSVUtils.clearColumnByName(Paths.OpenTUACsv, "reference");
-		CSVUtils.clearColumnByName(Paths.VerifyTUAOpeningCsv, "accountId");
+		CSVUtils.clearColumnByName(Paths.ABEOPENTUACSV, "reference");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYTUAOPENINGCSV, "accountId");
 	}
 
 	WebDriver driver = null;
@@ -50,11 +50,11 @@ public class ABEOpenTUATest {
 	
 	@DataProvider(name="Open TUA DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.OpenTUACsv);
-		workbook.save(Paths.OpenTUAJson);
+    	Workbook workbook = new Workbook(Paths.ABEOPENTUACSV);
+		workbook.save(Paths.ABEOPENTUAJSON);
         Class<ABEOpenTUAData> targetClass = ABEOpenTUAData.class;
         JsonReader<ABEOpenTUAData> jsonReader = new JsonReader<>(targetClass);
-        List<ABEOpenTUAData> dataList = jsonReader.readJsonFile(Paths.OpenTUAJson);
+        List<ABEOpenTUAData> dataList = jsonReader.readJsonFile(Paths.ABEOPENTUAJSON);
         dataList.toArray();
         return dataList.toArray();
 	}

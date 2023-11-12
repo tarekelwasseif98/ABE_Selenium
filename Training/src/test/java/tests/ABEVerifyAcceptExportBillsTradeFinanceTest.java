@@ -40,11 +40,11 @@ public class ABEVerifyAcceptExportBillsTradeFinanceTest {
 	
 	@DataProvider(name="Verify Accept Export Bills Trade Finance DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.VerifyAcceptExportBillsCsv);
-		workbook.save(Paths.VerifyAcceptExportBillsJson);
+    	Workbook workbook = new Workbook(Paths.ABEVERIFYACCEPTEXPORTBILLSTRADEFINANCECSV);
+		workbook.save(Paths.ABEVERIFYACCEPTEXPORTBILLSTRADEFINANCEJSON);
         Class<ABEVerifyAcceptExportBillsTradeFinanceData> targetClass = ABEVerifyAcceptExportBillsTradeFinanceData.class;
         JsonReader<ABEVerifyAcceptExportBillsTradeFinanceData> jsonReader = new JsonReader<>(targetClass);
-        List<ABEVerifyAcceptExportBillsTradeFinanceData> dataList = jsonReader.readJsonFile(Paths.VerifyAcceptExportBillsJson);
+        List<ABEVerifyAcceptExportBillsTradeFinanceData> dataList = jsonReader.readJsonFile(Paths.ABEVERIFYACCEPTEXPORTBILLSTRADEFINANCEJSON);
         dataList.toArray();
         return dataList.toArray();
 	}

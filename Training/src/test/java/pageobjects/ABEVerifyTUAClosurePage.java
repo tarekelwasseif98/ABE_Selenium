@@ -2,9 +2,7 @@ package pageobjects;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
@@ -82,10 +80,7 @@ public class ABEVerifyTUAClosurePage {
 	public ABEVerifyTUAClosurePage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
-		WebElement element = driver.findElement(menuNameTextBox);
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView();", element);
-		PageFunctionUtils.sleep();
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		return this;
 	}
 }

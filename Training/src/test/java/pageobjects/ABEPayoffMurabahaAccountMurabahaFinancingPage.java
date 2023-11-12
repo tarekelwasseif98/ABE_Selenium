@@ -27,6 +27,7 @@ public class ABEPayoffMurabahaAccountMurabahaFinancingPage {
 	private By closeButton = By.xpath("(//span[@id='modalCloseIcon'])[1]");
 	private By continue2Button = By.xpath("(//button[@id='_cont'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
+	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Pay Off Finance Account'])[1]");
 	public static String acId;
 	public static String  murabahaAccountId = "murabahaAccountId";
 	public static String  accountIdCsvColumnName = "accountId";
@@ -139,16 +140,17 @@ public class ABEPayoffMurabahaAccountMurabahaFinancingPage {
 	public ABEPayoffMurabahaAccountMurabahaFinancingPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		return this;
 	}
 	
 	@Step("Save account id")
 	public ABEPayoffMurabahaAccountMurabahaFinancingPage saveAccountId(String accountId, String linkedId) throws Exception {
-		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.PayoffMurabahaAccountCsv, linkedTcidCsvColumnName, linkedId);
-		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyMurabahaAccountPayoffCsv, tcIdCsvColumnName, linkedId);
-		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyMurabahaAccountPayoffCsv, accountIdCsvColumnName);
+		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABEPAYOFFMURABAHAACCOUNTMURABAHAFINANCINGCSV, linkedTcidCsvColumnName, linkedId);
+		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEVERIFYMURABAHAACCOUNTPAYOFFMURABAHAFINANCINGCSV, tcIdCsvColumnName, linkedId);
+		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYMURABAHAACCOUNTPAYOFFMURABAHAFINANCINGCSV, accountIdCsvColumnName);
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.VerifyMurabahaAccountPayoffCsv, rowByTcid2, columnByColumnName2, accountId);
+			CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYMURABAHAACCOUNTPAYOFFMURABAHAFINANCINGCSV, rowByTcid2, columnByColumnName2, accountId);
 		}
 		return this;
 	}												

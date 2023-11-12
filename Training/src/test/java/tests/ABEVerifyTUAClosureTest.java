@@ -40,11 +40,11 @@ public class ABEVerifyTUAClosureTest {
 	
 	@DataProvider(name="Verify TUA Closure DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.VerifyTUAClosureCsv);
-		workbook.save(Paths.VerifyTUAClosureJson);
+    	Workbook workbook = new Workbook(Paths.ABEVERIFYTUACLOSURECSV);
+		workbook.save(Paths.ABEVERIFYTUACLOSUREJSON);
         Class<ABEVerifyTUAClosureData> targetClass = ABEVerifyTUAClosureData.class;
         JsonReader<ABEVerifyTUAClosureData> jsonReader = new JsonReader<>(targetClass);
-        List<ABEVerifyTUAClosureData> dataList = jsonReader.readJsonFile(Paths.VerifyTUAClosureJson);
+        List<ABEVerifyTUAClosureData> dataList = jsonReader.readJsonFile(Paths.ABEVERIFYTUACLOSUREJSON);
         dataList.toArray();
         return dataList.toArray();
 	}

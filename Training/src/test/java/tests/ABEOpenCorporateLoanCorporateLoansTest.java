@@ -31,8 +31,8 @@ import io.qameta.allure.testng.AllureTestNg;
 public class ABEOpenCorporateLoanCorporateLoansTest {
 	@BeforeClass
 	public void oneTimeSetUp() throws IOException, CsvException {
-		CSVUtils.clearColumnByName(Paths.OpenCorporateLoanCsv, "reference");
-		CSVUtils.clearColumnByName(Paths.VerifyCorporateLoanCsv, "accountId");
+		CSVUtils.clearColumnByName(Paths.ABEOPENCORPORATELOANCORPORATELOANSCSV, "reference");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYCORPORATELOANCORPORATELOANSCSV, "accountId");
 	}
 
 	WebDriver driver = null;
@@ -50,11 +50,11 @@ public class ABEOpenCorporateLoanCorporateLoansTest {
 	
 	@DataProvider(name="Open Corporate Loan Corporate Loans DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.OpenCorporateLoanCsv);
-		workbook.save(Paths.OpenCorporateLoanJson);
+    	Workbook workbook = new Workbook(Paths.ABEOPENCORPORATELOANCORPORATELOANSCSV);
+		workbook.save(Paths.ABEOPENCORPORATELOANCORPORATELOANSJSON);
         Class<ABEOpenCorporateLoanCorporateLoansData> targetClass = ABEOpenCorporateLoanCorporateLoansData.class;
         JsonReader<ABEOpenCorporateLoanCorporateLoansData> jsonReader = new JsonReader<>(targetClass);
-        List<ABEOpenCorporateLoanCorporateLoansData> dataList = jsonReader.readJsonFile(Paths.OpenCorporateLoanJson);
+        List<ABEOpenCorporateLoanCorporateLoansData> dataList = jsonReader.readJsonFile(Paths.ABEOPENCORPORATELOANCORPORATELOANSJSON);
         dataList.toArray();
         return dataList.toArray();
 	}

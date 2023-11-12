@@ -31,26 +31,26 @@ import io.qameta.allure.testng.AllureTestNg;
 public class ABELodgeExportBillsTradeFinanceTest {
 	@BeforeClass
 	public void oneTimeSetUp() throws IOException, CsvException {
-		CSVUtils.clearColumnByName(Paths.LodgeExportBillsCsv, "reference");
-		CSVUtils.clearColumnByName(Paths.VerifyLodgeExportBillsCsv, "billId");
-		CSVUtils.clearColumnByName(Paths.AcceptExportBillsCsv, "billId");
-		CSVUtils.clearColumnByName(Paths.AcceptExportBillsCsv, "mixedBillId1");
-		CSVUtils.clearColumnByName(Paths.AcceptExportBillsCsv, "mixedBillId2");
-		CSVUtils.clearColumnByName(Paths.VerifyAcceptExportBillsCsv, "billId");
-		CSVUtils.clearColumnByName(Paths.VerifyAcceptExportBillsCsv, "mixedBillId1");
-		CSVUtils.clearColumnByName(Paths.VerifyAcceptExportBillsCsv, "mixedBillId2");
-		CSVUtils.clearColumnByName(Paths.PurchaseExportBillsCsv, "billId");
-		CSVUtils.clearColumnByName(Paths.PurchaseExportBillsCsv, "mixedBillId1");
-		CSVUtils.clearColumnByName(Paths.PurchaseExportBillsCsv, "mixedBillId2");
-		CSVUtils.clearColumnByName(Paths.VerifyPurchaseExportBillsCsv, "billId");
-		CSVUtils.clearColumnByName(Paths.VerifyPurchaseExportBillsCsv, "mixedBillId1");
-		CSVUtils.clearColumnByName(Paths.VerifyPurchaseExportBillsCsv, "mixedBillId2");
-		CSVUtils.clearColumnByName(Paths.RealizeExportBillsCsv, "billId");
-		CSVUtils.clearColumnByName(Paths.RealizeExportBillsCsv, "mixedBillId1");
-		CSVUtils.clearColumnByName(Paths.RealizeExportBillsCsv, "mixedBillId2");
-		CSVUtils.clearColumnByName(Paths.VerifyRealizeExportBillsCsv, "billId");
-		CSVUtils.clearColumnByName(Paths.VerifyRealizeExportBillsCsv, "mixedBillId1");
-		CSVUtils.clearColumnByName(Paths.VerifyRealizeExportBillsCsv, "mixedBillId2");
+		CSVUtils.clearColumnByName(Paths.ABELODGEEXPORTBILLSTRADEFINANCECSV, "reference");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYLODGEEXPORTBILLSTRADEFINANCECSV, "billId");
+		CSVUtils.clearColumnByName(Paths.ABEACCEPTEXPORTBILLSTRADEFINANCECSV, "billId");
+		CSVUtils.clearColumnByName(Paths.ABEACCEPTEXPORTBILLSTRADEFINANCECSV, "mixedBillId1");
+		CSVUtils.clearColumnByName(Paths.ABEACCEPTEXPORTBILLSTRADEFINANCECSV, "mixedBillId2");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYACCEPTEXPORTBILLSTRADEFINANCECSV, "billId");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYACCEPTEXPORTBILLSTRADEFINANCECSV, "mixedBillId1");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYACCEPTEXPORTBILLSTRADEFINANCECSV, "mixedBillId2");
+		CSVUtils.clearColumnByName(Paths.ABEPURCHASEEXPORTBILLSTRADEFINANCECSV, "billId");
+		CSVUtils.clearColumnByName(Paths.ABEPURCHASEEXPORTBILLSTRADEFINANCECSV, "mixedBillId1");
+		CSVUtils.clearColumnByName(Paths.ABEPURCHASEEXPORTBILLSTRADEFINANCECSV, "mixedBillId2");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYPURCHASEEXPORTBILLSTRADEFINANCECSV, "billId");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYPURCHASEEXPORTBILLSTRADEFINANCECSV, "mixedBillId1");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYPURCHASEEXPORTBILLSTRADEFINANCECSV, "mixedBillId2");
+		CSVUtils.clearColumnByName(Paths.ABEREALIZEEXPORTBILLSTRADEFINANCECSV, "billId");
+		CSVUtils.clearColumnByName(Paths.ABEREALIZEEXPORTBILLSTRADEFINANCECSV, "mixedBillId1");
+		CSVUtils.clearColumnByName(Paths.ABEREALIZEEXPORTBILLSTRADEFINANCECSV, "mixedBillId2");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYREALIZEEXPORTBILLSTRADEFINANCECSV, "billId");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYREALIZEEXPORTBILLSTRADEFINANCECSV, "mixedBillId1");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYREALIZEEXPORTBILLSTRADEFINANCECSV, "mixedBillId2");
 	}
 
 	WebDriver driver = null;
@@ -68,11 +68,11 @@ public class ABELodgeExportBillsTradeFinanceTest {
 	
 	@DataProvider(name="Lodge Export Bills Trade Finance DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.LodgeExportBillsCsv);
-		workbook.save(Paths.LodgeExportBillsJson);
+    	Workbook workbook = new Workbook(Paths.ABELODGEEXPORTBILLSTRADEFINANCECSV);
+		workbook.save(Paths.ABELODGEEXPORTBILLSTRADEFINANCEJSON);
         Class<ABELodgeExportBillsTradeFinanceData> targetClass = ABELodgeExportBillsTradeFinanceData.class;
         JsonReader<ABELodgeExportBillsTradeFinanceData> jsonReader = new JsonReader<>(targetClass);
-        List<ABELodgeExportBillsTradeFinanceData> dataList = jsonReader.readJsonFile(Paths.LodgeExportBillsJson);
+        List<ABELodgeExportBillsTradeFinanceData> dataList = jsonReader.readJsonFile(Paths.ABELODGEEXPORTBILLSTRADEFINANCEJSON);
         dataList.toArray();
         return dataList.toArray();
 	}

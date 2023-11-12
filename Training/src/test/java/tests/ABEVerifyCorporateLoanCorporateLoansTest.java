@@ -40,11 +40,11 @@ public class ABEVerifyCorporateLoanCorporateLoansTest {
 	
 	@DataProvider(name="Verify Corporate Loan Corporate Loans DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.VerifyCorporateLoanCsv);
-		workbook.save(Paths.VerifyCorporateLoanJson);
+    	Workbook workbook = new Workbook(Paths.ABEVERIFYCORPORATELOANCORPORATELOANSCSV);
+		workbook.save(Paths.ABEVERIFYCORPORATELOANCORPORATELOANSJSON);
         Class<ABEVerifyCorporateLoanCorporateLoansData> targetClass = ABEVerifyCorporateLoanCorporateLoansData.class;
         JsonReader<ABEVerifyCorporateLoanCorporateLoansData> jsonReader = new JsonReader<>(targetClass);
-        List<ABEVerifyCorporateLoanCorporateLoansData> dataList = jsonReader.readJsonFile(Paths.VerifyCorporateLoanJson);
+        List<ABEVerifyCorporateLoanCorporateLoansData> dataList = jsonReader.readJsonFile(Paths.ABEVERIFYCORPORATELOANCORPORATELOANSJSON);
         dataList.toArray();
         return dataList.toArray();
 	}

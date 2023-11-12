@@ -27,6 +27,7 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 	private By relatedPartyDetailsSideTab = By.xpath("(//span[@id='stepII5_textSpan'])[1]");
 	private By generalDetailsSideTab = By.xpath("(//span[@id='stepII7_textSpan'])[1]");
 	private By misDetailsSideTab = By.xpath("(//span[@id='stepII16_textSpan'])[1]");
+	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Verify Islamic Current Account Opening'])[1]");
 
 	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage(WebDriver driver) {
 		this.driver = driver;
@@ -97,7 +98,7 @@ public class ABEVerifyCurrentAccountOpeningMudarabahCAAPage {
 	public ABEVerifyCurrentAccountOpeningMudarabahCAAPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
-		PageFunctionUtils.sleep();
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		return this;
 	}
 }

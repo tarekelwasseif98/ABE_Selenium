@@ -26,6 +26,7 @@ public class ABECloseCasaAccountMudarabahPage {
 	private By transactionTypeMenu = By.id("_tranType_select");
 	private By transferAccountIdTextField = By.xpath("(//input[@id='_trfrActId'])[1]");
 	public static By accountIdSuccessMessage = By.xpath("(//p[@id='_clsResMsg_paraMsg'])[1]");
+	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Close Islamic Liability Account'])[1]");
 	private static String accountId;
 	public static String  accountIdCsvColumnName = "accountId";
 	public static String  tcIdCsvColumnName = "tcId";
@@ -72,10 +73,9 @@ public class ABECloseCasaAccountMudarabahPage {
 	@Step("Sending account id: {0}")
 	public ABECloseCasaAccountMudarabahPage sendKeysAccountIdTextField(String accountId) throws Exception {
 		if(accountId != null) {
-			accountId = accountId.substring(1);
 			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
 			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(1));
 		}
 		return this;
 	}
@@ -106,17 +106,18 @@ public class ABECloseCasaAccountMudarabahPage {
 	public ABECloseCasaAccountMudarabahPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		accountId = driver.findElement(accountIdSuccessMessage).getText().substring(92);
 		return this;
 	}
 	
 	@Step("Save account id")
 	public ABECloseCasaAccountMudarabahPage saveAccountId(String linkedId) throws Exception {
-		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.CloseIslamicCasaAccountCsv, linkedTcidCsvColumnName, linkedId);
-		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyCloseIslamicCasaAccountCsv, tcIdCsvColumnName, linkedId);
-		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyCloseIslamicCasaAccountCsv, accountIdCsvColumnName);
+		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABECLOSECASAACCOUNTMUDARABAHCSV, linkedTcidCsvColumnName, linkedId);
+		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEVERIFYCASAACCOUNTCLOSUREMUDARABAHCSV, tcIdCsvColumnName, linkedId);
+		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYCASAACCOUNTCLOSUREMUDARABAHCSV, accountIdCsvColumnName);
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.VerifyCloseIslamicCasaAccountCsv, rowByTcid2, columnByColumnName2, accountId);
+			CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYCASAACCOUNTCLOSUREMUDARABAHCSV, rowByTcid2, columnByColumnName2, accountId);
 		}
 		return this;
 	}

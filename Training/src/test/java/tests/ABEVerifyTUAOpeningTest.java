@@ -41,11 +41,11 @@ public class ABEVerifyTUAOpeningTest {
 	
 	@DataProvider(name="Verify TUA Account Opening TUA DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.VerifyTUAOpeningCsv);
-		workbook.save(Paths.VerifyTUAOpeningJson);
+    	Workbook workbook = new Workbook(Paths.ABEVERIFYTUAOPENINGCSV);
+		workbook.save(Paths.ABEVERIFYTUAOPENINGJSON);
         Class<ABEVerifyTUAOpeningData> targetClass = ABEVerifyTUAOpeningData.class;
         JsonReader<ABEVerifyTUAOpeningData> jsonReader = new JsonReader<>(targetClass);
-        List<ABEVerifyTUAOpeningData> dataList = jsonReader.readJsonFile(Paths.VerifyTUAOpeningJson);
+        List<ABEVerifyTUAOpeningData> dataList = jsonReader.readJsonFile(Paths.ABEVERIFYTUAOPENINGJSON);
         dataList.toArray();
         return dataList.toArray();
 	}

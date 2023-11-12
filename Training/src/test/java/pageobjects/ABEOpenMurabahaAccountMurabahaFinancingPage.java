@@ -62,6 +62,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 	private By continue9Button = By.xpath("(//button[@id='_btn_continueacctlmts'])[1]");
 	private By continue10Button = By.xpath("(//button[@id='_btn_continueDoc'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
+	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Open Islamic Financing Account'])[1]");
 	private By accountIdSuccessMessage = By.xpath("(//div[@id='_resacctId_text'])[1]");
 	public static String acId;
 	public static String  referenceCsvColumnName = "reference";
@@ -112,7 +113,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 		if(cifId != null) {
 			PageFunctionUtils.waitOnElement(driver, cifIdTextField);
 			PageFunctionUtils.clickOnElement(driver, cifIdTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifId);
+			PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifId.substring(1));
 		}
 		return this;
 	}
@@ -547,6 +548,7 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 	public ABEOpenMurabahaAccountMurabahaFinancingPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
 		acId = driver.findElement(accountIdSuccessMessage).getText().substring(0,20);
 		return this;
@@ -554,21 +556,21 @@ public class ABEOpenMurabahaAccountMurabahaFinancingPage {
 	
 	@Step("Save account id")
 	public ABEOpenMurabahaAccountMurabahaFinancingPage saveAccountId(String linkedId, String disburseTcid) throws Exception {
-		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.OpenMurabahaAccountCsv, linkedTcidCsvColumnName, linkedId);
-		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.OpenMurabahaAccountCsv, referenceCsvColumnName);
-		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyMurabahaAccountOpeningCsv, tcIdCsvColumnName, linkedId);
-		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyMurabahaAccountOpeningCsv, accountIdCsvColumnName);
-		int rowByTcid3 = CSVUtils.getRowByTcid(Paths.OpenMurabahaAccountCsv, disburseTcidCsvColumnName, disburseTcid);		
-		int rowByTcid4 = CSVUtils.getRowByTcid(Paths.DisburseMurabahaAccountCsv, tcIdCsvColumnName, disburseTcid);
-		int columnByColumnName4 = CSVUtils.getColumnByColumnName(Paths.DisburseMurabahaAccountCsv, murabahaAccountIdCsvColumnName);
+		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABEOPENMURABAHAACCOUNTMURABAHAFINANCINGCSV, linkedTcidCsvColumnName, linkedId);
+		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.ABEOPENMURABAHAACCOUNTMURABAHAFINANCINGCSV, referenceCsvColumnName);
+		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEVERIFYMURABAHAACCOUNTOPENINGMURABAHAFINANCINGCSV, tcIdCsvColumnName, linkedId);
+		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYMURABAHAACCOUNTOPENINGMURABAHAFINANCINGCSV, accountIdCsvColumnName);
+		int rowByTcid3 = CSVUtils.getRowByTcid(Paths.ABEOPENMURABAHAACCOUNTMURABAHAFINANCINGCSV, disburseTcidCsvColumnName, disburseTcid);		
+		int rowByTcid4 = CSVUtils.getRowByTcid(Paths.ABEDISBURSEMURABAHAACCOUNTMURABAHAFINANCINGCSV, tcIdCsvColumnName, disburseTcid);
+		int columnByColumnName4 = CSVUtils.getColumnByColumnName(Paths.ABEDISBURSEMURABAHAACCOUNTMURABAHAFINANCINGCSV, murabahaAccountIdCsvColumnName);
 		
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.OpenMurabahaAccountCsv, rowByTcid1, columnByColumnName1, acId);
-			CSVUtils.insertValueInCsvCell(Paths.VerifyMurabahaAccountOpeningCsv, rowByTcid2, columnByColumnName2, acId);
+			CSVUtils.insertValueInCsvCell(Paths.ABEOPENMURABAHAACCOUNTMURABAHAFINANCINGCSV, rowByTcid1, columnByColumnName1, acId);
+			CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYMURABAHAACCOUNTOPENINGMURABAHAFINANCINGCSV, rowByTcid2, columnByColumnName2, acId);
 		}
 		
 		if(rowByTcid3 != -1 && rowByTcid4 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.DisburseMurabahaAccountCsv, rowByTcid4, columnByColumnName4, acId);
+			CSVUtils.insertValueInCsvCell(Paths.ABEDISBURSEMURABAHAACCOUNTMURABAHAFINANCINGCSV, rowByTcid4, columnByColumnName4, acId);
 		}
 		return this;
 	}								

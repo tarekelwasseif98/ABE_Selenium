@@ -31,8 +31,8 @@ import io.qameta.allure.testng.AllureTestNg;
 public class ABEOpenCurrentAccountMudarabahCAATest {
 	@BeforeClass
 	public void oneTimeSetUp() throws IOException, CsvException {
-		CSVUtils.clearColumnByName(Paths.OpenIslamicCurrentAccountCsv, "reference");
-		CSVUtils.clearColumnByName(Paths.VerifyIslamicCurrentAccountCsv, "accountId");
+		CSVUtils.clearColumnByName(Paths.ABEOPENCURRENTACCOUNTMUDARABAHCAACSV, "reference");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYCURRENTACCOUNTOPENINGCSV, "accountId");
 	}
 
 	WebDriver driver = null;
@@ -50,11 +50,11 @@ public class ABEOpenCurrentAccountMudarabahCAATest {
 	
 	@DataProvider(name="Open Current Account Mudarabah CAA DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.OpenIslamicCurrentAccountCsv);
-		workbook.save(Paths.OpenIslamicCurrentAccountJson);
+    	Workbook workbook = new Workbook(Paths.ABEOPENCURRENTACCOUNTMUDARABAHCAACSV);
+		workbook.save(Paths.ABEOPENCURRENTACCOUNTMUDARABAHJSON);
         Class<ABEOpenCurrentAccountMudarabahCAAData> targetClass = ABEOpenCurrentAccountMudarabahCAAData.class;
         JsonReader<ABEOpenCurrentAccountMudarabahCAAData> jsonReader = new JsonReader<>(targetClass);
-        List<ABEOpenCurrentAccountMudarabahCAAData> dataList = jsonReader.readJsonFile(Paths.OpenIslamicCurrentAccountJson);
+        List<ABEOpenCurrentAccountMudarabahCAAData> dataList = jsonReader.readJsonFile(Paths.ABEOPENCURRENTACCOUNTMUDARABAHJSON);
         dataList.toArray();
         return dataList.toArray();
 	}

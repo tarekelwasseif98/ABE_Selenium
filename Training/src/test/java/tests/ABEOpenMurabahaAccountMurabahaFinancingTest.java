@@ -31,8 +31,8 @@ import io.qameta.allure.testng.AllureTestNg;
 public class ABEOpenMurabahaAccountMurabahaFinancingTest {
 	@BeforeClass
 	public void oneTimeSetUp() throws IOException, CsvException {
-		CSVUtils.clearColumnByName(Paths.OpenMurabahaAccountCsv, "reference");
-		CSVUtils.clearColumnByName(Paths.VerifyMurabahaAccountOpeningCsv, "accountId");
+		CSVUtils.clearColumnByName(Paths.ABEOPENMURABAHAACCOUNTMURABAHAFINANCINGCSV, "reference");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYMURABAHAACCOUNTOPENINGMURABAHAFINANCINGCSV, "accountId");
 	}
 
 	WebDriver driver = null;
@@ -50,11 +50,11 @@ public class ABEOpenMurabahaAccountMurabahaFinancingTest {
 	
 	@DataProvider(name="Open Murabaha Account Murabaha Financing DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.OpenMurabahaAccountCsv);
-		workbook.save(Paths.OpenMurabahaAccountJson);
+    	Workbook workbook = new Workbook(Paths.ABEOPENMURABAHAACCOUNTMURABAHAFINANCINGCSV);
+		workbook.save(Paths.ABEOPENMURABAHAACCOUNTMURABAHAFINANCINGJSON);
         Class<ABEOpenMurabahaAccountMurabahaFinancingData> targetClass = ABEOpenMurabahaAccountMurabahaFinancingData.class;
         JsonReader<ABEOpenMurabahaAccountMurabahaFinancingData> jsonReader = new JsonReader<>(targetClass);
-        List<ABEOpenMurabahaAccountMurabahaFinancingData> dataList = jsonReader.readJsonFile(Paths.OpenMurabahaAccountJson);
+        List<ABEOpenMurabahaAccountMurabahaFinancingData> dataList = jsonReader.readJsonFile(Paths.ABEOPENMURABAHAACCOUNTMURABAHAFINANCINGJSON);
         dataList.toArray();
         return dataList.toArray();
 	}

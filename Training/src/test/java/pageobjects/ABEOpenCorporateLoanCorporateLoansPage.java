@@ -51,6 +51,7 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
 	private By continue13Button = By.xpath("(//button[@id='_btn_continueacctlmts'])[1]");
 	private By continue14Button = By.xpath("(//button[@id='_btn_continueIntNot'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
+	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Open Commercial Lending Account'])[1]");
 	private By equatedInstallmentYesRadioButton = By.xpath("(//input[@id='_eiSchmFlg_Y_radio'])[1]");
 	private By equatedInstallmentNoRadioButton = By.xpath("(//input[@id='_eiSchmFlg_N_radio'])[1]");
 	private By numberOfInstallmentsTextField = By.xpath("(//input[@id='_noOfInstlmnts'])[1]");
@@ -114,7 +115,7 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
 		if(cifId != null) {
 			PageFunctionUtils.waitOnElement(driver, cifIdTextField);
 			PageFunctionUtils.clickOnElement(driver, cifIdTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifId);
+			PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifId.substring(1));
 		}
 		return this;
 	}
@@ -564,6 +565,7 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
 	public ABEOpenCorporateLoanCorporateLoansPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
 		acId = driver.findElement(accountIdSuccessMessage).getText().substring(0,20);
 		return this;
@@ -571,13 +573,13 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
 	
 	@Step("Save account id")
 	public ABEOpenCorporateLoanCorporateLoansPage saveAccountId(String linkedId) throws Exception {
-		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.OpenCorporateLoanCsv, linkedTcidCsvColumnName, linkedId);
-		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.OpenCorporateLoanCsv, referenceCsvColumnName);
-		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyCorporateLoanCsv, tcIdCsvColumnName, linkedId);
-		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyCorporateLoanCsv, accountIdCsvColumnName);
+		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABEOPENCORPORATELOANCORPORATELOANSCSV, linkedTcidCsvColumnName, linkedId);
+		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.ABEOPENCORPORATELOANCORPORATELOANSCSV, referenceCsvColumnName);
+		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEVERIFYCORPORATELOANCORPORATELOANSCSV, tcIdCsvColumnName, linkedId);
+		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYCORPORATELOANCORPORATELOANSCSV, accountIdCsvColumnName);
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.OpenCorporateLoanCsv, rowByTcid1, columnByColumnName1, acId);
-			CSVUtils.insertValueInCsvCell(Paths.VerifyCorporateLoanCsv, rowByTcid2, columnByColumnName2, acId);
+			CSVUtils.insertValueInCsvCell(Paths.ABEOPENCORPORATELOANCORPORATELOANSCSV, rowByTcid1, columnByColumnName1, acId);
+			CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYCORPORATELOANCORPORATELOANSCSV, rowByTcid2, columnByColumnName2, acId);
 		}
 		return this;
 	}								

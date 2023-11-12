@@ -40,11 +40,11 @@ public class ABEVerifyCasaAccountClosureMudarabahTest {
 	
 	@DataProvider(name="Verify Casa Account Closure Mudarabah DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.VerifyCloseIslamicCasaAccountCsv);
-		workbook.save(Paths.VerifyCloseIslamicCasaAccountJson);
+    	Workbook workbook = new Workbook(Paths.ABEVERIFYCASAACCOUNTCLOSUREMUDARABAHCSV);
+		workbook.save(Paths.ABEVERIFYCASAACCOUNTCLOSUREJSON);
         Class<ABEVerifyCasaAccountClosureMudarabahData> targetClass = ABEVerifyCasaAccountClosureMudarabahData.class;
         JsonReader<ABEVerifyCasaAccountClosureMudarabahData> jsonReader = new JsonReader<>(targetClass);
-        List<ABEVerifyCasaAccountClosureMudarabahData> dataList = jsonReader.readJsonFile(Paths.VerifyCloseIslamicCasaAccountJson);
+        List<ABEVerifyCasaAccountClosureMudarabahData> dataList = jsonReader.readJsonFile(Paths.ABEVERIFYCASAACCOUNTCLOSUREJSON);
         dataList.toArray();
         return dataList.toArray();
 	}

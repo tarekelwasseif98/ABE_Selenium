@@ -42,6 +42,7 @@ public class ABEAcceptExportBillsTradeFinancePage {
 	private By closeButton = By.xpath("(//span[@id='modalCloseIcon'])[1]");
 	private By continue16Button = By.xpath("(//button[@id='_messagedetails_msgdet_Continue'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
+	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Accept Export and Outward Bill'])[1]");
 	private By repeatTaskButton = By.xpath("(//button[normalize-space()='Repeat Task'])[1]");
 	public static String billId;
 	public static String  billIdCsvColumnName = "billId";
@@ -70,30 +71,6 @@ public class ABEAcceptExportBillsTradeFinancePage {
 		        }
 	        catch (Exception e) {
 	        }
-	        /////
-	        try {
-	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-	            alert.accept();
-		        }
-	        catch (Exception e) {
-	        }
-	        PageFunctionUtils.sleep();
-	        try {
-	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-	            alert.accept();
-		        }
-	        catch (Exception e) {
-	        }
-	        driver.findElement(By.xpath("(//input[@id='usertxt'])[1]")).sendKeys("ABE45");
-	        try {
-	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-	            alert.accept();
-		        }
-	        catch (Exception e) {
-	        }
-	        driver.findElement(By.xpath("(//input[@id='passtxt'])[1]")).sendKeys("Infy@123");
-	        driver.findElement(By.xpath("(//input[@id='Submit'])[1]")).click();
-	        /////
         }
 	return this;
 	}
@@ -296,6 +273,8 @@ public class ABEAcceptExportBillsTradeFinancePage {
 	public ABEAcceptExportBillsTradeFinancePage pressSubmitButton() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, submitButton);
 		PageFunctionUtils.clickOnElement(driver, submitButton);
+		PageFunctionUtils.acceptWarning(driver);
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		return this;
 	}
 	

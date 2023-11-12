@@ -8,17 +8,21 @@
 <test thread-count="1" name="Export Bills">
 	<groups>
 		<run>
-			<include name="ABELodgeExportBillsTradeFinanceTest"/>
+			<!-- <include name="ABELodgeExportBillsTradeFinanceTest"/>
 			<include name="ABEVerifyLodgeExportBillsTradeFinanceTest"/>
 			<include name="ABEAcceptExportBillsTradeFinanceTest"/>
-			<include name="ABEVerifyAcceptExportBillsTradeFinanceTest"/>
+			<include name="ABEVerifyAcceptExportBillsTradeFinanceTest"/>-->
+			<include name="ABEPurchaseExportBillsTradeFinanceTest"/>
+			<include name="ABEVerifyPurchaseExportBillsTradeFinanceTest"/>
         </run>
     </groups>
     <classes>
-		<class name="tests.ABELodgeExportBillsTradeFinanceTest"/>
+		<!-- <class name="tests.ABELodgeExportBillsTradeFinanceTest"/>
 		<class name="tests.ABEVerifyLodgeExportBillsTradeFinanceTest"/>
 		<class name="tests.ABEAcceptExportBillsTradeFinanceTest"/>
-		<class name="tests.ABEVerifyAcceptExportBillsTradeFinanceTest"/>
+		<class name="tests.ABEVerifyAcceptExportBillsTradeFinanceTest"/>-->
+		<class name="tests.ABEPurchaseExportBillsTradeFinanceTest"/>
+		<class name="tests.ABEVerifyPurchaseExportBillsTradeFinanceTest"/>
     </classes>
 </test>
 </suite>

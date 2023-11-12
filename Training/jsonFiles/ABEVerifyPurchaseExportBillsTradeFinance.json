@@ -1,0 +1,11 @@
+[
+ {
+  "tcId": "FCB-6810",
+  "summary": "TradeFinance_Export_Bills_Under_Collection_Verify_Purchase_Usance_Local_EGP_ByChecker_C6",
+  "username": "PT20",
+  "password": "Infy@123",
+  "menu": "VEOB",
+  "billId": "'1401EDC23000005",
+  "expectedResult": "successfully"
+ }
+]

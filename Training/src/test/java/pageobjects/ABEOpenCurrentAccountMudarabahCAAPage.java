@@ -27,6 +27,7 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	private By taxCategoryDropDownList = By.id("_wtaxFlg_select");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By accountIdSuccessMessage = By.xpath("(//p[@id='_resMsg_paraMsg'])[1]");
+	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Open Islamic Current Account'])[1]");
 	public static String acId;
 	public static String  referenceCsvColumnName = "reference";
 	public static String  accountIdCsvColumnName = "accountId";
@@ -75,7 +76,7 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 		if(cifId != null) {
 			PageFunctionUtils.waitOnElement(driver, cifIdTextField);
 			PageFunctionUtils.clickOnElement(driver, cifIdTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifId);
+			PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifId.substring(1));
 		}
 		return this;
 	}
@@ -122,6 +123,7 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	public ABEOpenCurrentAccountMudarabahCAAPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
 		acId = driver.findElement(accountIdSuccessMessage).getText().substring(53, 71);
 		return this;
@@ -129,13 +131,13 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 	
 	@Step("Save account id")
 	public ABEOpenCurrentAccountMudarabahCAAPage saveAccountId(String linkedId) throws Exception {
-		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.OpenIslamicCurrentAccountCsv, linkedTcidCsvColumnName, linkedId);
-		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.OpenIslamicCurrentAccountCsv, referenceCsvColumnName);
-		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyIslamicCurrentAccountCsv, tcIdCsvColumnName, linkedId);
-		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyIslamicCurrentAccountCsv, accountIdCsvColumnName);
+		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABEOPENCURRENTACCOUNTMUDARABAHCAACSV, linkedTcidCsvColumnName, linkedId);
+		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.ABEOPENCURRENTACCOUNTMUDARABAHCAACSV, referenceCsvColumnName);
+		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEVERIFYCURRENTACCOUNTOPENINGCSV, tcIdCsvColumnName, linkedId);
+		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYCURRENTACCOUNTOPENINGCSV, accountIdCsvColumnName);
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.OpenIslamicCurrentAccountCsv, rowByTcid1, columnByColumnName1, acId);
-			CSVUtils.insertValueInCsvCell(Paths.VerifyIslamicCurrentAccountCsv, rowByTcid2, columnByColumnName2, acId);
+			CSVUtils.insertValueInCsvCell(Paths.ABEOPENCURRENTACCOUNTMUDARABAHCAACSV, rowByTcid1, columnByColumnName1, acId);
+			CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYCURRENTACCOUNTOPENINGCSV, rowByTcid2, columnByColumnName2, acId);
 		}
 		return this;
 	}												

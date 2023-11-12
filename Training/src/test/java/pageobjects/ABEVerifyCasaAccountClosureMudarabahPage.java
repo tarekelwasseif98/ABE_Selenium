@@ -19,6 +19,7 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
 	private By accountIdTextField = By.xpath("(//input[@id='_acctId'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");	
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
+	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Verify Islamic Liability Account Closure'])[1]");
 	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 
 
@@ -63,10 +64,9 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
 	@Step("Sending account id: {0}")
 	public ABEVerifyCasaAccountClosureMudarabahPage sendKeysAccountIdTextField(String accountId) throws Exception {
 		if(accountId != null) {
-			accountId = accountId.substring(1);
 			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
 			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(1));
 		}
 		return this;
 	}
@@ -81,7 +81,7 @@ public class ABEVerifyCasaAccountClosureMudarabahPage {
 	public ABEVerifyCasaAccountClosureMudarabahPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
-        PageFunctionUtils.sleep();
+        PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		return this;
 	}
 }

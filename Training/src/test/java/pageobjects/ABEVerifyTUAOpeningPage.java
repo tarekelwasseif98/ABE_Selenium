@@ -30,6 +30,7 @@ public class ABEVerifyTUAOpeningPage {
 	private By documentDetailsSideTab = By.xpath("(//span[@id='stepXII_textSpan'])[1]");
 	private By misCodeDetailsSideTab = By.xpath("(//span[@id='stepXIII_textSpan'])[1]");
 	private By otherDetailsSideTab = By.xpath("(//span[@id='stepXIV_textSpan'])[1]");
+	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Verify Islamic Top Up Deposit Account Opening'])[1]");
 
 	public ABEVerifyTUAOpeningPage(WebDriver driver) {
 		this.driver = driver;
@@ -71,10 +72,9 @@ public class ABEVerifyTUAOpeningPage {
 	@Step("Sending account id: {0}")
 	public ABEVerifyTUAOpeningPage sendKeysAccountIdTextField(String accountId) throws Exception {
 		if(accountId != null) {
-			accountId = accountId.substring(1);
 			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
 			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId);
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(1));
 		}
 		return this;
 	}
@@ -106,7 +106,7 @@ public class ABEVerifyTUAOpeningPage {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.acceptWarning(driver);
-		PageFunctionUtils.sleep();
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		return this;
 	}
 }

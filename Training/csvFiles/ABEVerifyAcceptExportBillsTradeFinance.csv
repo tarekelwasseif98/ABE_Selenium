@@ -1,9 +1,9 @@
-tcId,summary,username,password,menu,billId,mixedBillId1,mixedBillId2,expectedResult
-FCB-6854,TradeFinance_Export_Bills_Under_Collection_Verify_Accept_Mixed Tenor_Local_EGP_ByChecker_H4,PT20,Infy@123,VEOB,'1401EDC23000249,'1401EDC23000250,,successfully
-FCB-6806,TradeFinance_Export_Bills_Under_Collection_Verify_Acceptance_Usance_Local_EGP_ByChecker_C4,PT20,Infy@123,VEOB,'1401EDC23000252,,,successfully
-FCB-6814,TradeFinance_Export_Bills_Under_Collection_Verify_Acceptance_Usance_Foreign_USD_ByChecker_D8,PT20,Infy@123,VEOB,'1401EDC23000253,,,successfully
-FCB-6826,TradeFinance_Export_Bills_Under_Collection_Verify_Acceptance_Usance_Foreign_EUR_ByChecker_E4,PT20,Infy@123,VEOB,'1401EDC23000254,,,successfully
-FCB-6834,TradeFinance_Export_Bills_Under_Collection_Verify_Acceptance_Mixed Tenor_Foreign_USD_ByChecker_F4,PT20,Infy@123,VEOB,'1401EDC23000255,'1401EDC23000256,'1401EDC23000257,successfully
-FCB-7179,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Acceptance_Usance_Local_EGP_ByChecker_A4,PT20,Infy@123,VEOB,'1401EDC23000258,,,successfully
-FCB-7211,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Acceptance_Usance_Foreign_USD_ByChecker_F4,PT20,Infy@123,VEOB,'1401EDC23000259,,,successfully
-FCB-7233,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Acceptance_Mixed Tenor_Foreign_USD_ByChecker_J4,PT20,Infy@123,VEOB,'1401EDC23000262,'1401EDC23000263,,successfully
+"tcId","summary","username","password","menu","billId","mixedBillId1","mixedBillId2","expectedResult"
+"FCB-6854","TradeFinance_Export_Bills_Under_Collection_Verify_Accept_Mixed Tenor_Local_EGP_ByChecker_H4","PT20","Infy@123","VEOB","","","","successfully"
+"FCB-6806","TradeFinance_Export_Bills_Under_Collection_Verify_Acceptance_Usance_Local_EGP_ByChecker_C4","PT20","Infy@123","VEOB","","","","successfully"
+"FCB-6814","TradeFinance_Export_Bills_Under_Collection_Verify_Acceptance_Usance_Foreign_USD_ByChecker_D8","PT20","Infy@123","VEOB","","","","successfully"
+"FCB-6826","TradeFinance_Export_Bills_Under_Collection_Verify_Acceptance_Usance_Foreign_EUR_ByChecker_E4","PT20","Infy@123","VEOB","","","","successfully"
+"FCB-6834","TradeFinance_Export_Bills_Under_Collection_Verify_Acceptance_Mixed Tenor_Foreign_USD_ByChecker_F4","PT20","Infy@123","VEOB","","","","successfully"
+"FCB-7179","TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Acceptance_Usance_Local_EGP_ByChecker_A4","PT20","Infy@123","VEOB","","","","successfully"
+"FCB-7211","TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Acceptance_Usance_Foreign_USD_ByChecker_F4","PT20","Infy@123","VEOB","","","","successfully"
+"FCB-7233","TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Acceptance_Mixed Tenor_Foreign_USD_ByChecker_J4","PT20","Infy@123","VEOB","","","","successfully"

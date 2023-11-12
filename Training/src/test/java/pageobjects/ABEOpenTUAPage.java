@@ -2,9 +2,7 @@ package pageobjects;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
@@ -89,7 +87,7 @@ public class ABEOpenTUAPage {
 		if(cifId != null) {
 			PageFunctionUtils.waitOnElement(driver, cifIdTextField);
 			PageFunctionUtils.clickOnElement(driver, cifIdTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifId);
+			PageFunctionUtils.enterDataInWebElement(driver, cifIdTextField, cifId.substring(1));
 		}
 		return this;
 	}
@@ -231,21 +229,19 @@ public class ABEOpenTUAPage {
 		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
 		accountId = driver.findElement(accountIdSuccessMessage).getText().substring(87);
-		WebElement element = driver.findElement(menuNameTextBox);
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView();", element);
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		return this;
 	}
 	
 	@Step("Save account id")
 	public ABEOpenTUAPage saveAccountId(String linkedId) throws Exception {
-		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.OpenTUACsv, linkedTcidCsvColumnName, linkedId);
-		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.OpenTUACsv, referenceCsvColumnName);
-		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyTUAOpeningCsv, tcIdCsvColumnName, linkedId);
-		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyTUAOpeningCsv, accountIdCsvColumnName);
+		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABEOPENTUACSV, linkedTcidCsvColumnName, linkedId);
+		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.ABEOPENTUACSV, referenceCsvColumnName);
+		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEVERIFYTUAOPENINGCSV, tcIdCsvColumnName, linkedId);
+		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYTUAOPENINGCSV, accountIdCsvColumnName);
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.OpenTUACsv, rowByTcid1, columnByColumnName1, accountId);
-			CSVUtils.insertValueInCsvCell(Paths.VerifyTUAOpeningCsv, rowByTcid2, columnByColumnName2, accountId);
+			CSVUtils.insertValueInCsvCell(Paths.ABEOPENTUACSV, rowByTcid1, columnByColumnName1, accountId);
+			CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYTUAOPENINGCSV, rowByTcid2, columnByColumnName2, accountId);
 		}
 		return this;
 	}										

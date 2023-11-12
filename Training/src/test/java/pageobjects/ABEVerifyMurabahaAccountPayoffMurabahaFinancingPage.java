@@ -23,6 +23,7 @@ public class ABEVerifyMurabahaAccountPayoffMurabahaFinancingPage {
 	private By closeButton = By.xpath("(//span[@id='modalCloseIcon'])[1]");
 	private By continue2Button = By.xpath("(//button[@id='_cont'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
+	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Verify Finance Account Payoff'])[1]");
 	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 
 
@@ -69,7 +70,7 @@ public class ABEVerifyMurabahaAccountPayoffMurabahaFinancingPage {
 		if(accountId != null) {
 			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
 			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(2));
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(1));
 		}
 		return this;
 	}
@@ -114,6 +115,7 @@ public class ABEVerifyMurabahaAccountPayoffMurabahaFinancingPage {
         	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		}
 		PageFunctionUtils.acceptWarning(driver);
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		return this;
 	}
 }

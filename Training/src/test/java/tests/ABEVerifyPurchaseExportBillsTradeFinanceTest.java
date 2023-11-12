@@ -10,7 +10,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.aspose.cells.Workbook;
 import data.JsonReader;
-import data.ABEVerifyLodgeExportBillsTradeFinanceData;
+import data.ABEVerifyPurchaseExportBillsTradeFinanceData;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import pageobjects.FinacleLoginPage;
@@ -21,14 +21,13 @@ import utils.WebdriverFactory;
 import utils.Paths;
 import utils.AssertionFactory;
 import io.qameta.allure.testng.AllureTestNg;
-
-@Test(groups = "ABEVerifyLodgeExportBillsTradeFinanceTest", dependsOnGroups = "ABELodgeExportBillsTradeFinanceTest")
+@Test(groups = "ABEVerifyPurchaseExportBillsTradeFinanceTest", dependsOnGroups = "ABEPurchaseExportBillsTradeFinanceTest")
 @Listeners({AllureTestNg.class})
-public class ABEVerifyLodgeExportBillsTradeFinanceTest {
+public class ABEVerifyPurchaseExportBillsTradeFinanceTest {
 	WebDriver driver = null;
 	@BeforeMethod(description= "Initiating Browser")
 	public void beforeTest(Object [] testData) throws Exception {
-		ABEVerifyLodgeExportBillsTradeFinanceData data = (ABEVerifyLodgeExportBillsTradeFinanceData) testData[0];
+		ABEVerifyPurchaseExportBillsTradeFinanceData data = (ABEVerifyPurchaseExportBillsTradeFinanceData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FINACLEURL);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
@@ -38,22 +37,22 @@ public class ABEVerifyLodgeExportBillsTradeFinanceTest {
 		.clickOnLoginButton(data.getPassword());
 	}
 	
-	@DataProvider(name="Verify Lodge Export Bills Trade Finance DataProvider")
+	@DataProvider(name="Verify Purchase Export Bills Trade Finance DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.ABEVERIFYLODGEEXPORTBILLSTRADEFINANCECSV);
-		workbook.save(Paths.ABEVERIFYLODGEEXPORTBILLSTRADEFINANCEJSON);
-        Class<ABEVerifyLodgeExportBillsTradeFinanceData> targetClass = ABEVerifyLodgeExportBillsTradeFinanceData.class;
-        JsonReader<ABEVerifyLodgeExportBillsTradeFinanceData> jsonReader = new JsonReader<>(targetClass);
-        List<ABEVerifyLodgeExportBillsTradeFinanceData> dataList = jsonReader.readJsonFile(Paths.ABEVERIFYLODGEEXPORTBILLSTRADEFINANCEJSON);
+    	Workbook workbook = new Workbook(Paths.ABEVERIFYPURCHASEEXPORTBILLSTRADEFINANCECSV);
+		workbook.save(Paths.ABEVERIFYPURCHASEEXPORTBILLSTRADEFINANCEJSON);
+        Class<ABEVerifyPurchaseExportBillsTradeFinanceData> targetClass = ABEVerifyPurchaseExportBillsTradeFinanceData.class;
+        JsonReader<ABEVerifyPurchaseExportBillsTradeFinanceData> jsonReader = new JsonReader<>(targetClass);
+        List<ABEVerifyPurchaseExportBillsTradeFinanceData> dataList = jsonReader.readJsonFile(Paths.ABEVERIFYPURCHASEEXPORTBILLSTRADEFINANCEJSON);
         dataList.toArray();
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Verify Lodge Export Bills Trade Finance DataProvider", dataProviderClass = ABEVerifyLodgeExportBillsTradeFinanceTest.class)
-	public void verifyLodgeExportBillsTradeFinanceTest(ABEVerifyLodgeExportBillsTradeFinanceData data) throws Exception {
+	@Test(dataProvider = "Verify Purchase Export Bills Trade Finance DataProvider", dataProviderClass = ABEVerifyPurchaseExportBillsTradeFinanceTest.class)
+	public void verifyPurchaseExportBillsTradeFinanceTest(ABEVerifyPurchaseExportBillsTradeFinanceData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
 		Allure.parameter("Data: ", data.toString());
-        ABEVerifyExportBillsTradeFinanceProcedures.verifyLodgeExportBillsTradeFinance(driver, data);
+        ABEVerifyExportBillsTradeFinanceProcedures.verifyPurchaseExportBillsTradeFinance(driver, data);
         AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}
 

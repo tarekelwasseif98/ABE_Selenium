@@ -55,6 +55,7 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEAcceptExp
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABECreateCASASavingsAccountLiabilitiesAndOperationData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEVerifyTUAClosureTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABECloseCasaAccountMudarabahProcedures.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEVerifyPurchaseExportBillsTradeFinanceTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEVerifyLodgeExportBillsTradeFinanceData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABETellerOperationTransferLiabilitiesAndOperationPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEVerifyExportBillsTradeFinanceProcedures.java
@@ -74,6 +75,7 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEOpenCurren
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEDisburseMurabahaAccountMurabahaFinancingPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEOpenTUAPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEOpenMurabahaAccountMurabahaFinancingTest.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEPurchaseExportBillsTradeFinanceTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEVerifyOfficeAccountFinanceTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEVerifyCorporateLoanCorporateLoansProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEVerifyOfficeAccountFinanceData.java
@@ -85,6 +87,7 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEVerifyTUAO
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEOpenCorporateLoanCorporateLoansData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABECreateCASASavingsAccountLiabilitiesAndOperationPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABELodgeExportBillsTradeFinancePage.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEPurchaseExportBillsTradeFinanceProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABECreateOfficeAccountFinanceTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABETellerOperationTransferLiabilitiesAndOperationTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEVerifyCasaAccountClosureMudarabahData.java
@@ -96,10 +99,12 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEOpenMuraba
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEAcceptExportBillsTradeFinancePage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEVerifyOfficeAccountFinanceProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEVerifyPurchaseExportBillsTradeFinanceData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEOpenMurabahaAccountMurabahaFinancingProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEVerifyCurrentAccountOpeningMudarabahCAATest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\utils\WebdriverFactory.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEPurchaseExportBillsTradeFinanceData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABECreateCASASavingsAccountLiabilitiesAndOperationProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEVerifyLodgeExportBillsTradeFinanceTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEVerifyOfficeAccountFinancePage.java

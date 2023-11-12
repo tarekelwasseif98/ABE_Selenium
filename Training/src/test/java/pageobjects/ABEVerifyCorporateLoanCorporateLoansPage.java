@@ -34,7 +34,8 @@ public class ABEVerifyCorporateLoanCorporateLoansPage {
 	private By continue13Button = By.xpath("(//button[@id='_btn_continueacctlmts'])[1]");
 	private By continue14Button = By.xpath("(//button[@id='_btn_continueIntNot'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-
+	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Verify Commercial Lending Account'])[1]");
+	
 	public ABEVerifyCorporateLoanCorporateLoansPage(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -177,7 +178,7 @@ public class ABEVerifyCorporateLoanCorporateLoansPage {
 	public ABEVerifyCorporateLoanCorporateLoansPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
-		PageFunctionUtils.sleep();
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		return this;
 	}
 }

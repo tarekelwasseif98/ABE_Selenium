@@ -23,6 +23,7 @@ public class ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage {
 	private By continue2Button = By.xpath("(//button[@id='_adddet_continueBt'])[1]");
 	private By continue3Button = By.xpath("(//button[@id='_disbmoddet_continue'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
+	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Verify Finance Account Disbursement or Reversal'])[1]");
 	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 
 
@@ -67,7 +68,6 @@ public class ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage {
 	@Step("Sending account id: {0}")
 	public ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage sendKeysAccountIdTextField(String accountId) throws Exception {
 		if(accountId != null) {
-			accountId = accountId.substring(1);
 			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
 			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(1));
@@ -103,7 +103,7 @@ public class ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage {
 	public ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
-		PageFunctionUtils.sleep();
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		return this;
 	}
 }

@@ -19,6 +19,7 @@ public class ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage {
 	private By accountIdTextField = By.xpath("(//input[@id='_tempForacid'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
+	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Authorize Islamic Finance Account'])[1]");
 	private By continue1Button = By.xpath("(//button[@id='_btn_continueBasic'])[1]");
 	private By continue2Button = By.xpath("(//button[@id='_btn_continueLoandet'])[1]");
 	private By continue3Button = By.xpath("(//button[@id='_btn_continueFee'])[1]");
@@ -147,7 +148,7 @@ public class ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage {
 	public ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
-		PageFunctionUtils.sleep();
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		return this;
 	}
 }

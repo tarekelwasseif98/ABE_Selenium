@@ -2,9 +2,7 @@ package pageobjects;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
@@ -116,19 +114,17 @@ public class ABECloseTUAPage {
 		PageFunctionUtils.sleep();
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
 		acId = driver.findElement(accountIdSuccessMessage).getText().substring(60);		
-		WebElement element = driver.findElement(menuNameTextBox);
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView();", element);
+		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		return this;
 	}
 	
 	@Step("Save account id")
 	public ABECloseTUAPage saveAccountId(String linkedId) throws Exception {
-		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.CloseTUACsv, linkedTcidCsvColumnName, linkedId);
-		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.VerifyTUAClosureCsv, tcIdCsvColumnName, linkedId);
-		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.VerifyTUAClosureCsv, accountIdCsvColumnName);
+		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABECLOSETUACSV, linkedTcidCsvColumnName, linkedId);
+		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEVERIFYTUACLOSURECSV, tcIdCsvColumnName, linkedId);
+		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYTUACLOSURECSV, accountIdCsvColumnName);
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.VerifyTUAClosureCsv, rowByTcid2, columnByColumnName2, acId);
+			CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYTUACLOSURECSV, rowByTcid2, columnByColumnName2, acId);
 		}
 		return this;
 	}	

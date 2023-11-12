@@ -1,0 +1,17 @@
+[
+ {
+  "tcId": "FCB-6809",
+  "summary": "TradeFinance_Export_Bills_Under_Collection_Purchase_Lodge_Usance_Local_EGP_ByMaker_C5",
+  "username": "PT19",
+  "password": "Infy@123",
+  "menu": "PEOBL",
+  "billId": "'1401EDC23000005",
+  "limitIdPrefix": "'06617304X",
+  "limitIdSuffix": "'NFBLM",
+  "billPurchaseAccountId": "'1401001194960001",
+  "billPurchaseAmount": 1,
+  "valueDate": "'12-11-2023",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-6810"
+ }
+]

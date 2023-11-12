@@ -40,11 +40,11 @@ public class ABEPayoffMurabahaAccountMurabahaFinancingTest {
 	
 	@DataProvider(name="Payoff Murabaha Account Murabaha Financing DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.PayoffMurabahaAccountCsv);
-		workbook.save(Paths.PayoffMurabahaAccountJson);
+    	Workbook workbook = new Workbook(Paths.ABEPAYOFFMURABAHAACCOUNTMURABAHAFINANCINGCSV);
+		workbook.save(Paths.ABEPAYOFFMURABAHAACCOUNTMURABAHAFINANCINGJSON);
         Class<ABEPayoffMurabahaAccountMurabahaFinancingData> targetClass = ABEPayoffMurabahaAccountMurabahaFinancingData.class;
         JsonReader<ABEPayoffMurabahaAccountMurabahaFinancingData> jsonReader = new JsonReader<>(targetClass);
-        List<ABEPayoffMurabahaAccountMurabahaFinancingData> dataList = jsonReader.readJsonFile(Paths.PayoffMurabahaAccountJson);
+        List<ABEPayoffMurabahaAccountMurabahaFinancingData> dataList = jsonReader.readJsonFile(Paths.ABEPAYOFFMURABAHAACCOUNTMURABAHAFINANCINGJSON);
         dataList.toArray();
         return dataList.toArray();
 	}

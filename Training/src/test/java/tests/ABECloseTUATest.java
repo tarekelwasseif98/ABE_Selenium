@@ -40,11 +40,11 @@ public class ABECloseTUATest {
 	
 	@DataProvider(name="Close TUA DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.CloseTUACsv);
-		workbook.save(Paths.CloseTUAJson);
+    	Workbook workbook = new Workbook(Paths.ABECLOSETUACSV);
+		workbook.save(Paths.ABECLOSETUAJSON);
         Class<ABECloseTUAData> targetClass = ABECloseTUAData.class;
         JsonReader<ABECloseTUAData> jsonReader = new JsonReader<>(targetClass);
-        List<ABECloseTUAData> dataList = jsonReader.readJsonFile(Paths.CloseTUAJson);
+        List<ABECloseTUAData> dataList = jsonReader.readJsonFile(Paths.ABECLOSETUAJSON);
         dataList.toArray();
         return dataList.toArray();
 	}

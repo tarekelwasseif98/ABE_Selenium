@@ -5,7 +5,9 @@
   "username": "PT19",
   "password": "Infy@123",
   "menu": "AEOB",
-  "acceptanceDate": "'07-11-2023",
+  "billId": "'1401EDC23000074",
+  "mixedBillId1": "'1401EDC23000075",
+  "acceptanceDate": "'13-11-2023",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-6854"
  },
@@ -15,7 +17,8 @@
   "username": "PT19",
   "password": "Infy@123",
   "menu": "AEOB",
-  "acceptanceDate": "'07-11-2023",
+  "billId": "'1401EDC23000077",
+  "acceptanceDate": "'13-11-2023",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-6806"
  },
@@ -25,19 +28,10 @@
   "username": "PT19",
   "password": "Infy@123",
   "menu": "AEOB",
-  "acceptanceDate": "'07-11-2023",
+  "billId": "'1401EDC23000078",
+  "acceptanceDate": "'13-11-2023",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-6814"
- },
- {
-  "tcId": "FCB-6825",
-  "summary": "TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Usance_Foreign_EUR_ByMaker_E3",
-  "username": "PT19",
-  "password": "Infy@123",
-  "menu": "AEOB",
-  "acceptanceDate": "'07-11-2023",
-  "expectedResult": "successfully",
-  "linkedTcid": "FCB-6826"
  },
  {
   "tcId": "FCB-6833",
@@ -45,7 +39,10 @@
   "username": "PT19",
   "password": "Infy@123",
   "menu": "AEOB",
-  "acceptanceDate": "'07-11-2023",
+  "billId": "'1401EDC23000079",
+  "mixedBillId1": "'1401EDC23000080",
+  "mixedBillId2": "'1401EDC23000081",
+  "acceptanceDate": "'13-11-2023",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-6834"
  },
@@ -55,7 +52,8 @@
   "username": "PT19",
   "password": "Infy@123",
   "menu": "AEOB",
-  "acceptanceDate": "'07-11-2023",
+  "billId": "'1401EDC23000082",
+  "acceptanceDate": "'13-11-2023",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-7179"
  },
@@ -65,7 +63,8 @@
   "username": "PT19",
   "password": "Infy@123",
   "menu": "AEOB",
-  "acceptanceDate": "'07-11-2023",
+  "billId": "'1401EDC23000083",
+  "acceptanceDate": "'13-11-2023",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-7211"
  },
@@ -75,7 +74,9 @@
   "username": "PT19",
   "password": "Infy@123",
   "menu": "AEOB",
-  "acceptanceDate": "'07-11-2023",
+  "billId": "'1401EDC23000085",
+  "mixedBillId1": "'1401EDC23000086",
+  "acceptanceDate": "'13-11-2023",
   "expectedResult": "successfully",
   "linkedTcid": "FCB-7233"
  }

@@ -130,9 +130,8 @@ public class ABEOpenCorporateLoanCorporateLoansProcedures {
 				    							             									     .pressContinue10Button()
 				    							             									      .pressContinue11Button()
 				    							             									       .pressContinue12Button()
-				    							             									        .sendKeysExpiryDateTextField(data.getExpiryDate())
-				    							             									         .sendKeysDocumentDateTextField(data.getDocumentDate())
-				    							             									          .sendKeysLimitIdTextField(data.getLimitIdPrefix(), data.getLimitIdSuffix());
+				    							             									        .sendKeysDocumentDateTextField(data.getDocumentDate())
+				    							             									         .sendKeysLimitIdTextField(data.getLimitIdPrefix(), data.getLimitIdSuffix());
 				    							             if(data.getDrawingPowerIndicator().equalsIgnoreCase(FinacleFieldsUtils.DRAWINGPOWERINDICATORDERIVED)) {
 				    							            	 openCorporateLoanCorporateLoansPage.selectDrawingPowerIndicatorDerived();
 				    							            	 }
@@ -145,9 +144,8 @@ public class ABEOpenCorporateLoanCorporateLoansProcedures {
 				    							             else if(data.getDrawingPowerIndicator().equalsIgnoreCase(FinacleFieldsUtils.DRAWINGPOWERINDICATORPARENT)) {
 				    							            	 openCorporateLoanCorporateLoansPage.selectDrawingPowerIndicatorParent();
 				    							            	 }
-				    							             openCorporateLoanCorporateLoansPage.pressContinue13Button()
-				    							             									 .pressContinue14Button()
-				    							             									  .pressSubmitButton()
-				    							             									   .saveAccountId(data.getLinkedTcid());				    							                    
+				    							             openCorporateLoanCorporateLoansPage.sendKeysExpiryDateTextField(data.getExpiryDate())
+				    							             									 .pressSubmitButton()
+				    							             									  .saveAccountId(data.getLinkedTcid());				    							                    
 		}
 	}

@@ -115,7 +115,8 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 			lodgeExportBillsTradeFinancePage.pressTenorDetailsEditButton()
 											 .sendKeysBillDateTextField(data.getSightBillDate())
 											  .sendKeysOnboardDateTextField(data.getSightOnboardDate())
-											   .pressTenorDetailsUpdateButton();
+											   .sendKeysDueDateTextField(data.getSightDueDate())
+											    .pressTenorDetailsUpdateButton();
 			}
 		else if(data.getType().equalsIgnoreCase(FinacleFieldsUtils.BILLTYPEUSANCE)) {
 			lodgeExportBillsTradeFinancePage.pressTenorDetailsEditButton()
@@ -131,7 +132,8 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 												 .sendKeysMixedBillAmountTextField(data.getMixedBillAmount1())
 												  .selectBillTenorSight()
 												   .sendKeysBillDateTextField(data.getMixedBillDate1())
-												    .sendKeysOnboardDateTextField(data.getMixedOnboardDate1())
+												    .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate1())
+												     .sendKeysDueDateTextField(data.getMixedBillDueDate1())
 												     .pressTenorDetailsSaveAndPreviewButton();
 				}
 			else if(data.getMixedBillTenor1().equalsIgnoreCase(FinacleFieldsUtils.BILLTENORUSANCE)) {
@@ -141,7 +143,7 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 												   .sendKeysTenorMonthsTextField(data.getMixedBillTenorMonths1())
 												    .sendKeysTenorDaysTextField(data.getMixedBillTenorDays1())
 												     .sendKeysBillDateTextField(data.getMixedBillDate1())
-												      .sendKeysOnboardDateTextField(data.getMixedOnboardDate1())
+												      .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate1())
 												       .pressTenorDetailsSaveAndPreviewButton();
 				}
 		if(data.getMixedBillTenor2().equalsIgnoreCase(FinacleFieldsUtils.BILLTENORSIGHT)) {
@@ -149,8 +151,9 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 											 .sendKeysMixedBillAmountTextField(data.getMixedBillAmount2())
 											  .selectBillTenorSight()
 											   .sendKeysBillDateTextField(data.getMixedBillDate2())
-											    .sendKeysOnboardDateTextField(data.getMixedOnboardDate2())
-											     .pressTenorDetailsSaveAndPreviewButton();
+											    .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate2())
+											     .sendKeysDueDateTextField(data.getMixedBillDueDate2())
+											      .pressTenorDetailsSaveAndPreviewButton();
 			}
 		else if(data.getMixedBillTenor2().equalsIgnoreCase(FinacleFieldsUtils.BILLTENORUSANCE)) {
 				lodgeExportBillsTradeFinancePage.pressTenorDetailsAddButton()
@@ -159,7 +162,7 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 												   .sendKeysTenorMonthsTextField(data.getMixedBillTenorMonths2())
 												    .sendKeysTenorDaysTextField(data.getMixedBillTenorDays2())
 												     .sendKeysBillDateTextField(data.getMixedBillDate2())
-												      .sendKeysOnboardDateTextField(data.getMixedOnboardDate2())
+												      .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate2())
 												       .pressTenorDetailsSaveAndPreviewButton();
 				}
 		}
@@ -174,7 +177,7 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 				 								    .sendKeysTenorMonthsTextField(data.getMixedBillTenorMonths1())
 				 								     .sendKeysTenorDaysTextField(data.getMixedBillTenorDays1())
 				 								      .sendKeysBillDateTextField(data.getMixedBillDate1())
-				 								       .sendKeysOnboardDateTextField(data.getMixedOnboardDate1())
+				 								       .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate1())
 				 								        .pressTenorDetailsSaveAndPreviewButton()
 				 								         .pressTenorDetailsAddButton()
 				 								          .pressTenorDetailsButton()
@@ -185,7 +188,7 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 														       .sendKeysTenorMonthsTextField(data.getMixedBillTenorMonths2())
 														        .sendKeysTenorDaysTextField(data.getMixedBillTenorDays2())
 														         .sendKeysBillDateTextField(data.getMixedBillDate2())
-														          .sendKeysOnboardDateTextField(data.getMixedOnboardDate2())
+														          .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate2())
 														           .pressTenorDetailsSaveAndPreviewButton();
 				} else if(lodgeExportBillsTradeFinancePage.getTextdueDateIndicator1TextField().equalsIgnoreCase(FinacleFieldsUtils.DUEDATEINDICATORSIGHT) && lodgeExportBillsTradeFinancePage.getTextdueDateIndicator2TextField().equalsIgnoreCase(FinacleFieldsUtils.DUEDATEINDICATORSIGHT)) {
 					lodgeExportBillsTradeFinancePage.sendKeysUtilizedAmount1TextField(data.getMixedBillAmount1())
@@ -193,17 +196,19 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 					 								  .sendKeysMixedBillAmountTextField(data.getMixedBillAmount1())
 					 								   .selectBillTenorSight()
 					 								    .sendKeysBillDateTextField(data.getMixedBillDate1())
-					 								     .sendKeysOnboardDateTextField(data.getMixedOnboardDate1())
-					 								      .pressTenorDetailsSaveAndPreviewButton()
-					 								       .pressTenorDetailsAddButton()
-				 								            .pressTenorDetailsButton()
-				 								             .sendKeysUtilizedAmount2TextField(data.getMixedBillAmount2())
-							 								  .pressAcceptTenorDetailsButton()
-							 								   .sendKeysMixedBillAmountTextField(data.getMixedBillAmount2())
-							 								    .selectBillTenorSight()
-							 								     .sendKeysBillDateTextField(data.getMixedBillDate2())
-							 								      .sendKeysOnboardDateTextField(data.getMixedOnboardDate2())
-							 								       .pressTenorDetailsSaveAndPreviewButton();
+					 								     .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate1())
+					 								      .sendKeysDueDateTextField(data.getMixedBillDueDate1())
+					 								       .pressTenorDetailsSaveAndPreviewButton()
+					 								        .pressTenorDetailsAddButton()
+				 								             .pressTenorDetailsButton()
+				 								              .sendKeysUtilizedAmount2TextField(data.getMixedBillAmount2())
+							 								   .pressAcceptTenorDetailsButton()
+							 								    .sendKeysMixedBillAmountTextField(data.getMixedBillAmount2())
+							 								     .selectBillTenorSight()
+							 								      .sendKeysBillDateTextField(data.getMixedBillDate2())
+							 								       .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate2())
+							 								        .sendKeysDueDateTextField(data.getMixedBillDueDate2())
+							 								         .pressTenorDetailsSaveAndPreviewButton();
 					}
 				else if(lodgeExportBillsTradeFinancePage.getTextdueDateIndicator1TextField().equalsIgnoreCase(FinacleFieldsUtils.DUEDATEINDICATORACCEPTANCEDATE) && lodgeExportBillsTradeFinancePage.getTextdueDateIndicator2TextField().equalsIgnoreCase(FinacleFieldsUtils.DUEDATEINDICATORSIGHT)) {
 					if(data.getMixedBillTenor1().equalsIgnoreCase(FinacleFieldsUtils.BILLTENORUSANCE) && data.getMixedBillTenor2().equalsIgnoreCase(FinacleFieldsUtils.BILLTENORSIGHT)) {
@@ -214,7 +219,7 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 						 								    .sendKeysTenorMonthsTextField(data.getMixedBillTenorMonths1())
 						 								     .sendKeysTenorDaysTextField(data.getMixedBillTenorDays1())
 						 								      .sendKeysBillDateTextField(data.getMixedBillDate1())
-						 								       .sendKeysOnboardDateTextField(data.getMixedOnboardDate1())
+						 								       .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate1())
 						 								        .pressTenorDetailsSaveAndPreviewButton()
 						 								         .pressTenorDetailsAddButton()
 						 								          .pressTenorDetailsButton()
@@ -223,8 +228,9 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 								 								     .sendKeysMixedBillAmountTextField(data.getMixedBillAmount2())
 								 								      .selectBillTenorSight()
 								 								       .sendKeysBillDateTextField(data.getMixedBillDate2())
-								 								        .sendKeysOnboardDateTextField(data.getMixedOnboardDate2())
-								 								         .pressTenorDetailsSaveAndPreviewButton();
+								 								        .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate2())
+								 								         .sendKeysDueDateTextField(data.getMixedBillDueDate2())
+								 								          .pressTenorDetailsSaveAndPreviewButton();
 						}
 					else if(data.getMixedBillTenor1().equalsIgnoreCase(FinacleFieldsUtils.BILLTENORSIGHT) && data.getMixedBillTenor2().equalsIgnoreCase(FinacleFieldsUtils.BILLTENORUSANCE)) {
 						lodgeExportBillsTradeFinancePage.sendKeysUtilizedAmount1TextField(data.getMixedBillAmount2())
@@ -234,7 +240,7 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 					    								    .sendKeysTenorMonthsTextField(data.getMixedBillTenorMonths2())
 					    								     .sendKeysTenorDaysTextField(data.getMixedBillTenorDays2())
 					    								      .sendKeysBillDateTextField(data.getMixedBillDate2())
-					    								       .sendKeysOnboardDateTextField(data.getMixedOnboardDate2())
+					    								       .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate2())
 					    								        .pressTenorDetailsSaveAndPreviewButton()
 					    								         .pressTenorDetailsAddButton()
 						 								          .pressTenorDetailsButton()
@@ -243,8 +249,9 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 								 								     .sendKeysMixedBillAmountTextField(data.getMixedBillAmount1())
 								 								      .selectBillTenorSight()
 								 								       .sendKeysBillDateTextField(data.getMixedBillDate1())
-								 								        .sendKeysOnboardDateTextField(data.getMixedOnboardDate1())
-								 								         .pressTenorDetailsSaveAndPreviewButton();
+								 								        .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate1())
+								 								         .sendKeysDueDateTextField(data.getMixedBillDueDate1())
+								 								          .pressTenorDetailsSaveAndPreviewButton();
 						}
 					}
 				else if(lodgeExportBillsTradeFinancePage.getTextdueDateIndicator1TextField().equalsIgnoreCase(FinacleFieldsUtils.DUEDATEINDICATORSIGHT) && lodgeExportBillsTradeFinancePage.getTextdueDateIndicator2TextField().equalsIgnoreCase(FinacleFieldsUtils.DUEDATEINDICATORACCEPTANCEDATE)) {
@@ -254,19 +261,20 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 						 								  .sendKeysMixedBillAmountTextField(data.getMixedBillAmount1())
 						 								   .selectBillTenorSight()
 						 								    .sendKeysBillDateTextField(data.getMixedBillDate1())
-						 								     .sendKeysOnboardDateTextField(data.getMixedOnboardDate1())
-						 								      .pressTenorDetailsSaveAndPreviewButton()
-						 								       .pressTenorDetailsAddButton()
-						 								        .pressTenorDetailsButton()
-						 								         .sendKeysUtilizedAmount2TextField(data.getMixedBillAmount2())
-						 								          .pressAcceptTenorDetailsButton()
-						 								           .sendKeysMixedBillAmountTextField(data.getMixedBillAmount2())
-						 								            .selectBillTenorUsance()
-						 								             .sendKeysTenorMonthsTextField(data.getMixedBillTenorMonths2())
-						 								              .sendKeysTenorDaysTextField(data.getMixedBillTenorDays2())
-						 								               .sendKeysBillDateTextField(data.getMixedBillDate2())
-						 								                .sendKeysOnboardDateTextField(data.getMixedOnboardDate2())
-						 								                 .pressTenorDetailsSaveAndPreviewButton();
+						 								     .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate1())
+						 								      .sendKeysDueDateTextField(data.getMixedBillDueDate1())
+						 								       .pressTenorDetailsSaveAndPreviewButton()
+						 								        .pressTenorDetailsAddButton()
+						 								         .pressTenorDetailsButton()
+						 								          .sendKeysUtilizedAmount2TextField(data.getMixedBillAmount2())
+						 								           .pressAcceptTenorDetailsButton()
+						 								            .sendKeysMixedBillAmountTextField(data.getMixedBillAmount2())
+						 								             .selectBillTenorUsance()
+						 								              .sendKeysTenorMonthsTextField(data.getMixedBillTenorMonths2())
+						 								               .sendKeysTenorDaysTextField(data.getMixedBillTenorDays2())
+						 								                .sendKeysBillDateTextField(data.getMixedBillDate2())
+						 								                 .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate2())
+						 								                  .pressTenorDetailsSaveAndPreviewButton();
 					}
 					else if(data.getMixedBillTenor1().equalsIgnoreCase(FinacleFieldsUtils.BILLTENORUSANCE) && data.getMixedBillTenor2().equalsIgnoreCase(FinacleFieldsUtils.BILLTENORSIGHT)) {
 						lodgeExportBillsTradeFinancePage.sendKeysUtilizedAmount1TextField(data.getMixedBillAmount2())
@@ -274,17 +282,18 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 						  								  .sendKeysMixedBillAmountTextField(data.getMixedBillAmount2())
 						  								   .selectBillTenorSight()
 						  								    .sendKeysBillDateTextField(data.getMixedBillDate2())
-						  								     .sendKeysOnboardDateTextField(data.getMixedOnboardDate2())
-						  								      .pressTenorDetailsSaveAndPreviewButton()
-						  								       .sendKeysUtilizedAmount2TextField(data.getMixedBillAmount1())
-						  								        .pressAcceptTenorDetailsButton()
-						  								         .sendKeysMixedBillAmountTextField(data.getMixedBillAmount1())
-						  								          .selectBillTenorUsance()
-						  								           .sendKeysTenorMonthsTextField(data.getMixedBillTenorMonths1())
-						  								            .sendKeysTenorDaysTextField(data.getMixedBillTenorDays1())
-						  								             .sendKeysBillDateTextField(data.getMixedBillDate1())
-						  								              .sendKeysOnboardDateTextField(data.getMixedOnboardDate1())
-						  								               .pressTenorDetailsSaveAndPreviewButton();
+						  								     .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate2())
+						  								      .sendKeysDueDateTextField(data.getMixedBillDueDate2())
+						  								       .pressTenorDetailsSaveAndPreviewButton()
+						  								        .sendKeysUtilizedAmount2TextField(data.getMixedBillAmount1())
+						  								         .pressAcceptTenorDetailsButton()
+						  								          .sendKeysMixedBillAmountTextField(data.getMixedBillAmount1())
+						  								           .selectBillTenorUsance()
+						  								            .sendKeysTenorMonthsTextField(data.getMixedBillTenorMonths1())
+						  								             .sendKeysTenorDaysTextField(data.getMixedBillTenorDays1())
+						  								              .sendKeysBillDateTextField(data.getMixedBillDate1())
+						  								               .sendKeysOnboardDateTextField(data.getMixedBillOnboardDate1())
+						  								                .pressTenorDetailsSaveAndPreviewButton();
 						}
 					}
 			}
@@ -312,20 +321,19 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 										   .pressContinue6Button()
 										    .pressContinue7Button()
 										     .pressContinue8Button()
-										      .pressContinue9Button()
-										       .pressContinue10Button()
-										        .pressContinue11Button()
-										         .sendKeysPaySysIdTextField(data.getPaySysId())
-										          .pressContinue12Button()
-										           .pressContinue13Button()
-										            .pressContinue14Button()
-										             .pressContinue15Button()
-										              .pressContinue16Button()
-										               .pressContinue17Button()
-										                .pressContinue18Button()
-										                 .pressContinue19Button()
-										                  .pressContinue20Button()
-										                   .pressSubmitButton()
-										                    .saveBillId(data.getLinkedTcid(), data.getAcceptLinkedTcid(), data.getVerifyAcceptLinkedTcid(), data.getPurchaseLinkedTcid(), data.getVerifyPurchaseLinkedTcid(), data.getRealizeLinkedTcid(), data.getVerifyRealizeLinkedTcid());
+										      .pressContinue10Button()
+										       .pressContinue11Button()
+										        .sendKeysPaySysIdTextField(data.getPaySysId())
+										         .pressContinue12Button()
+										          .pressContinue13Button()
+										           .pressContinue14Button()
+										            .pressContinue15Button()
+										             .pressContinue16Button()
+										              .pressContinue17Button()
+										               .pressContinue18Button()
+										                .pressContinue19Button()
+										                 .pressContinue20Button()
+										                  .pressSubmitButton()
+										                   .saveBillId(data.getLinkedTcid(), data.getAcceptLinkedTcid(), data.getVerifyAcceptLinkedTcid(), data.getPurchaseLinkedTcid(), data.getVerifyPurchaseLinkedTcid(), data.getRealizeLinkedTcid(), data.getVerifyRealizeLinkedTcid());
 		}
 	}

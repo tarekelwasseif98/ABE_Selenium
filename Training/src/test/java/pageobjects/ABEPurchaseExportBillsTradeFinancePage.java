@@ -37,7 +37,9 @@ public class ABEPurchaseExportBillsTradeFinancePage {
 	private By continue11Button = By.xpath("(//button[@id='_meobhistory_his_Continue'])[1]");
 	private By continue12Button = By.xpath("(//button[@id='_messagedetails_msgdet_Continue'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
-	private By closeButton = By.xpath("(//span[@id='modalCloseIcon'])[1]");
+	private By repeatTaskButton = By.xpath("(//button[normalize-space()='Repeat Task'])[1]");
+	private By closeButton1 = By.xpath("(//span[@id='modalCloseIcon'])[1]");
+	private By closeButton2 = By.xpath("(//span[@id='modalCloseIcon'])[2]");
 	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Purchase Export and Outward Bill'])[1]");
 
 	public ABEPurchaseExportBillsTradeFinancePage(WebDriver driver) {
@@ -220,7 +222,14 @@ public class ABEPurchaseExportBillsTradeFinancePage {
 		PageFunctionUtils.clickOnElement(driver, continue11Button);
 		try {
 			PageFunctionUtils.switchToParentFrame(driver);
-			PageFunctionUtils.clickOnElement(driver, closeButton);
+			PageFunctionUtils.clickOnElement(driver, closeButton1);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+        } catch (Exception e) {
+        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+		}
+		try {
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.clickOnElement(driver, closeButton2);
 			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
         } catch (Exception e) {
         	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
@@ -239,6 +248,13 @@ public class ABEPurchaseExportBillsTradeFinancePage {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
+		return this;
+	}
+	
+	@Step("Press repeat task button")
+	public ABEPurchaseExportBillsTradeFinancePage pressRepeatTaskButton() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, repeatTaskButton);
+		PageFunctionUtils.clickOnElement(driver, repeatTaskButton);
 		return this;
 	}
 }

@@ -12,8 +12,6 @@
             <include name="ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest"/>
             <include name="ABEDisburseMurabahaAccountMurabahaFinancingTest"/>
             <include name="ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest"/>
-            <include name="ABEPayoffMurabahaAccountMurabahaFinancingTest"/>
-            <include name="ABEVerifyMurabahaAccountPayoffMurabahaFinancingTest"/>
         </run>
     </groups>
     <classes>
@@ -21,8 +19,6 @@
 	 	<class name="tests.ABEVerifyMurabahaAccountOpeningMurabahaFinancingTest"/>
 	 	<class name="tests.ABEDisburseMurabahaAccountMurabahaFinancingTest"/>
 	 	<class name="tests.ABEVerifyMurabahaAccountDisbursementMurabahaFinancingTest"/>
-	 	<class name="tests.ABEPayoffMurabahaAccountMurabahaFinancingTest"/>
-	 	<class name="tests.ABEVerifyMurabahaAccountPayoffMurabahaFinancingTest"/>
     </classes>
 </test>
 </suite>

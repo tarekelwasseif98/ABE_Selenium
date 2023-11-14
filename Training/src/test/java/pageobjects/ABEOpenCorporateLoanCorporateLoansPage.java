@@ -470,11 +470,9 @@ public class ABEOpenCorporateLoanCorporateLoansPage {
 	@Step("Sending expiry date: {0}")
 	public ABEOpenCorporateLoanCorporateLoansPage sendKeysExpiryDateTextField(String expiryDate) throws Exception {
 		if(expiryDate != null) {
-			PageFunctionUtils.waitOnElement(driver, expiryDateTextField);
-			PageFunctionUtils.clearDataInWebElement(driver, expiryDateTextField);
 			PageFunctionUtils.clickOnElement(driver, expiryDateTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, expiryDateTextField, expiryDate.substring(1));
-		}	
+		}
 		return this;
 	}
 	

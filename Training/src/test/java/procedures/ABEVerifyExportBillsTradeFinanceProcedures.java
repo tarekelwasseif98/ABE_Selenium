@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import data.ABEVerifyAcceptExportBillsTradeFinanceData;
 import data.ABEVerifyLodgeExportBillsTradeFinanceData;
 import data.ABEVerifyPurchaseExportBillsTradeFinanceData;
+import data.ABEVerifyRealizeExportBillsTradeFinanceData;
 import pageobjects.ABEVerifyExportBillsTradeFinancePage;
 
 public class ABEVerifyExportBillsTradeFinanceProcedures {
@@ -280,6 +281,130 @@ public class ABEVerifyExportBillsTradeFinanceProcedures {
 					    					                      .pressContinue18Button()
 					    					                       .pressContinue16Button()
 					    					                        .pressSubmitButton();
+			}
+		}
+	public static void verifyRealizeExportBillsTradeFinance(WebDriver driver, ABEVerifyRealizeExportBillsTradeFinanceData data) throws Exception {
+		ABEVerifyExportBillsTradeFinancePage verifyExportBillsTradeFinancePage = new ABEVerifyExportBillsTradeFinancePage(driver);
+		if(data.getMixedBillId1() != null && data.getMixedBillId2() != null) {
+			verifyExportBillsTradeFinancePage.sendKeysSearchBarTextField(data.getMenu())
+											  .switchFormAreaFrame()
+											   .sendKeysBillIdTextField(data.getBillId())
+											    .sendKeysTenorBillIdTextField(data.getMixedBillId1())
+											     .pressGoButton()
+											      .navigateGeneralDetailsSideTabMenu()
+					    					       .pressContinue1Button()
+					    					        .pressContinue2Button()
+					    					         .pressContinue3Button()
+					    					          .pressContinue4Button()
+					    					           .pressContinue5Button()
+					    					            .pressContinue19Button()
+					    					             .pressContinue20Button()
+					    					              .pressContinue8Button()
+					    					               .pressContinue9Button()
+					    					                .pressContinue11Button()
+					    					                 .pressContinue12Button()
+					    					                  .pressContinue13Button()
+					    					                   .pressContinue14Button()
+					    					                    .pressContinue15Button()
+					    					                     .pressContinue18Button()
+					    					                      .pressContinue16Button()
+					    					                       .pressSubmitButton()
+											                        .pressRepeatTaskButton()
+											                         .sendKeysBillIdTextField(data.getBillId())
+												        	          .sendKeysTenorBillIdTextField(data.getMixedBillId2())
+												        			   .pressGoButton()
+												        			    .navigateGeneralDetailsSideTabMenu()
+											    					     .pressContinue1Button()
+											    					      .pressContinue2Button()
+											    					       .pressContinue3Button()
+											    					        .pressContinue4Button()
+											    					         .pressContinue5Button()
+											    					          .pressContinue19Button()
+											    					           .pressContinue20Button()
+											    					            .pressContinue8Button()
+											    					             .pressContinue9Button()
+											    					              .pressContinue11Button()
+											    					               .pressContinue12Button()
+											    					                .pressContinue13Button()
+											    					                 .pressContinue14Button()
+											    					                  .pressContinue15Button()
+											    					                   .pressContinue18Button()
+											    					                    .pressContinue16Button()
+											    					                     .pressSubmitButton();
+			}
+		else if(data.getMixedBillId1() != null && data.getMixedBillId2() == null) {
+			verifyExportBillsTradeFinancePage.sendKeysSearchBarTextField(data.getMenu())
+											  .switchFormAreaFrame()
+											   .sendKeysBillIdTextField(data.getBillId())
+											    .sendKeysTenorBillIdTextField(data.getMixedBillId1())
+											     .pressGoButton()
+											      .navigateGeneralDetailsSideTabMenu()
+					    					       .pressContinue1Button()
+					    					        .pressContinue2Button()
+					    					         .pressContinue3Button()
+					    					          .pressContinue4Button()
+					    					           .pressContinue5Button()
+					    					            .pressContinue19Button()
+					    					             .pressContinue20Button()
+					    					              .pressContinue8Button()
+					    					               .pressContinue9Button()
+					    					                .pressContinue11Button()
+					    					                 .pressContinue12Button()
+					    					                  .pressContinue13Button()
+					    					                   .pressContinue14Button()
+					    					                    .pressContinue15Button()
+					    					                     .pressContinue18Button()
+					    					                      .pressContinue16Button()
+					    					                       .pressSubmitButton();
+			}
+		else if(data.getMixedBillId1() == null && data.getMixedBillId2() != null) {
+			verifyExportBillsTradeFinancePage.sendKeysSearchBarTextField(data.getMenu())
+											  .switchFormAreaFrame()
+											   .sendKeysBillIdTextField(data.getBillId())
+											    .sendKeysTenorBillIdTextField(data.getMixedBillId2())
+											     .pressGoButton()
+					    					      .navigateGeneralDetailsSideTabMenu()
+					    					       .pressContinue1Button()
+					    					        .pressContinue2Button()
+					    					         .pressContinue3Button()
+					    					          .pressContinue4Button()
+					    					           .pressContinue5Button()
+					    					            .pressContinue19Button()
+					    					             .pressContinue20Button()
+					    					              .pressContinue8Button()
+					    					               .pressContinue9Button()
+					    					                .pressContinue11Button()
+					    					                 .pressContinue12Button()
+					    					                  .pressContinue13Button()
+					    					                   .pressContinue14Button()
+					    					                    .pressContinue15Button()
+					    					                     .pressContinue18Button()
+					    					                      .pressContinue16Button()
+					    					                       .pressSubmitButton();
+			}
+		else if(data.getMixedBillId1() == null && data.getMixedBillId2() == null) {
+			verifyExportBillsTradeFinancePage.sendKeysSearchBarTextField(data.getMenu())
+											  .switchFormAreaFrame()
+					    					   .sendKeysBillIdTextField(data.getBillId())
+					    					    .pressGoButton()
+					    					     .navigateGeneralDetailsSideTabMenu()
+					    					      .pressContinue1Button()
+					    					       .pressContinue2Button()
+					    					        .pressContinue3Button()
+					    					         .pressContinue4Button()
+					    					          .pressContinue5Button()
+					    					           .pressContinue19Button()
+					    					            .pressContinue20Button()
+					    					             .pressContinue8Button()
+					    					              .pressContinue9Button()
+					    					               .pressContinue11Button()
+					    					                .pressContinue12Button()
+					    					                 .pressContinue13Button()
+					    					                  .pressContinue14Button()
+					    					                   .pressContinue15Button()
+					    					                    .pressContinue18Button()
+					    					                     .pressContinue16Button()
+					    					                      .pressSubmitButton();
 			}
 		}
 	}

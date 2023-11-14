@@ -46,6 +46,7 @@ public class ABEVerifyExportBillsTradeFinancePage {
 	private By continue17Button = By.xpath("(//button[@id='_meobpur_meobpur_FinButton1'])[1]");
 	private By continue18Button = By.xpath("(//button[@id='_meobhistory_his_Continue'])[1]");
 	private By continue19Button = By.xpath("(//button[@id='_meobpreship_meobpreship_continue'])[1]");
+	private By continue20Button = By.xpath("(//button[@id='_meobreal_meobreal_FinButton1'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Verify Export and Outward Bill'])[1]");
 	private By repeatTaskButton = By.xpath("(//button[normalize-space()='Repeat Task'])[1]");
@@ -316,6 +317,13 @@ public class ABEVerifyExportBillsTradeFinancePage {
 	public ABEVerifyExportBillsTradeFinancePage pressContinue19Button() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, continue19Button);
 		PageFunctionUtils.clickOnElement(driver, continue19Button);
+		return this;
+	}
+	
+	@Step("Press continue button")
+	public ABEVerifyExportBillsTradeFinancePage pressContinue20Button() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, continue20Button);
+		PageFunctionUtils.clickOnElement(driver, continue20Button);
 		return this;
 	}
 	

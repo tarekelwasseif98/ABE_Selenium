@@ -60,6 +60,7 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEVerifyLodg
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABETellerOperationTransferLiabilitiesAndOperationPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEVerifyExportBillsTradeFinanceProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\utils\Properties.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEVerifyRealizeExportBillsTradeFinanceData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEVerifyCurrentAccountOpeningMudarabahCAAProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABECloseCasaAccountMudarabahTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABECreateCASASavingsAccountLiabilitiesAndOperationTest.java
@@ -69,6 +70,8 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\utils\FinacleField
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABECloseTUATest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABECreateOfficeAccountFinanceData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEPayoffMurabahaAccountMurabahaFinancingProcedures.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABERealizeExportBillsTradeFinanceTest.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABERealizeExportBillsTradeFinanceProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEVerifyCurrentAccountOpeningMudarabahCAAPage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEVerifyMurabahaAccountOpeningMurabahaFinancingProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEOpenCurrentAccountMudarabahCAAData.java
@@ -97,8 +100,10 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEClos
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEVerifyAcceptExportBillsTradeFinanceTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEOpenMurabahaAccountMurabahaFinancingData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEAcceptExportBillsTradeFinancePage.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABERealizeExportBillsTradeFinancePage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEVerifyOfficeAccountFinanceProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEVerifyMurabahaAccountOpeningMurabahaFinancingPage.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEVerifyRealizeExportBillsTradeFinanceTest.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEVerifyPurchaseExportBillsTradeFinanceData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABEOpenMurabahaAccountMurabahaFinancingProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEVerifyCurrentAccountOpeningMudarabahCAATest.java
@@ -107,6 +112,7 @@ C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\utils\WebdriverFac
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABEPurchaseExportBillsTradeFinanceData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\procedures\ABECreateCASASavingsAccountLiabilitiesAndOperationProcedures.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\tests\ABEVerifyLodgeExportBillsTradeFinanceTest.java
+C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\data\ABERealizeExportBillsTradeFinanceData.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEVerifyOfficeAccountFinancePage.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\utils\PageFunctionUtils.java
 C:\Users\ammar.shaker\git\ABE_Selenium\Training\src\test\java\pageobjects\ABEVerifyCasaAccountClosureMudarabahPage.java

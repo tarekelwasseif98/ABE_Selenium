@@ -1,9 +1,9 @@
-"tcId","summary","username","password","menu","billId","mixedBillId1","mixedBillId2","acceptanceDate","expectedResult","linkedTcid"
-"FCB-6853","TradeFinance_Export_Bills_Under_Collection_Accept_Mixed Tenor_Local_EGP_ByMaker_H3","PT19","Infy@123","AEOB","","","","'07-11-2023","successfully","FCB-6854"
-"FCB-6805","TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Usance_Local_EGP_ByMaker_C3","PT19","Infy@123","AEOB","","","","'07-11-2023","successfully","FCB-6806"
-"FCB-6813","TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Usance_Foreign_USD_ByMaker_D7","PT19","Infy@123","AEOB","","","","'07-11-2023","successfully","FCB-6814"
-"FCB-6825","TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Usance_Foreign_EUR_ByMaker_E3","PT19","Infy@123","AEOB","","","","'07-11-2023","successfully","FCB-6826"
-"FCB-6833","TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Mixed Tenor_Foreign_USD_ByMaker_F3","PT19","Infy@123","AEOB","","","","'07-11-2023","successfully","FCB-6834"
-"FCB-7178","TradeFinance_Export_Bills_Under_Documentary_Credit_Accept_Lodge_Usance_Local_EGP_ByMaker_A3","PT19","Infy@123","AEOB","","","","'07-11-2023","successfully","FCB-7179"
-"FCB-7210","TradeFinance_Export_Bills_Under_Documentary_Credit_Accept_Lodge_Usance_Foreign_USD_ByMaker_F3","PT19","Infy@123","AEOB","","","","'07-11-2023","successfully","FCB-7211"
-"FCB-7232","TradeFinance_Export_Bills_Under_Documentary_Credit_Accept_Lodge_Mixed Tenor_Foreign_USD_ByMaker_J3","PT19","Infy@123","AEOB","","","","'07-11-2023","successfully","FCB-7233"
+tcId,summary,username,password,menu,billId,mixedBillId1,mixedBillId2,acceptanceDate,expectedResult,linkedTcid
+FCB-6853,TradeFinance_Export_Bills_Under_Collection_Accept_Mixed Tenor_Local_EGP_ByMaker_H3,PT19,Infy@123,AEOB,'1401EDC23000058,'1401EDC23000059,,'13-11-2023,successfully,FCB-6854
+FCB-6805,TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Usance_Local_EGP_ByMaker_C3,PT19,Infy@123,AEOB,'1401EDC23000061,,,'13-11-2023,successfully,FCB-6806
+FCB-6813,TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Usance_Foreign_USD_ByMaker_D7,PT19,Infy@123,AEOB,'1401EDC23000062,,,'13-11-2023,successfully,FCB-6814
+FCB-6825,TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Usance_Foreign_EUR_ByMaker_E3,PT19,Infy@123,AEOB,'1401EDC23000063,,,'13-11-2023,successfully,FCB-6826
+FCB-6833,TradeFinance_Export_Bills_Under_Collection_Accept_Lodge_Mixed Tenor_Foreign_USD_ByMaker_F3,PT19,Infy@123,AEOB,'1401EDC23000064,'1401EDC23000065,'1401EDC23000066,'13-11-2023,successfully,FCB-6834
+FCB-7178,TradeFinance_Export_Bills_Under_Documentary_Credit_Accept_Lodge_Usance_Local_EGP_ByMaker_A3,PT19,Infy@123,AEOB,'1401EDC23000067,,,'13-11-2023,successfully,FCB-7179
+FCB-7210,TradeFinance_Export_Bills_Under_Documentary_Credit_Accept_Lodge_Usance_Foreign_USD_ByMaker_F3,PT19,Infy@123,AEOB,'1401EDC23000068,,,'13-11-2023,successfully,FCB-7211
+FCB-7232,TradeFinance_Export_Bills_Under_Documentary_Credit_Accept_Lodge_Mixed Tenor_Foreign_USD_ByMaker_J3,PT19,Infy@123,AEOB,'1401EDC23000071,'1401EDC23000072,,'13-11-2023,successfully,FCB-7233

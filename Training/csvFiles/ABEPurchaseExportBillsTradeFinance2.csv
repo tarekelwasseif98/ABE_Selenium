@@ -1,7 +1,0 @@
-tcId,summary,username,password,menu,billId,mixedBillId1,mixedBillId2,expectedResult,linkedTcid
-FCB-6809,TradeFinance_Export_Bills_Under_Collection_Purchase_Lodge_Usance_Local_EGP_ByMaker_C5,PT19,Infy@123,PEOBL,'1401EDC23000252,,,successfully,FCB-6810
-FCB-6829,TradeFinance_Export_Bills_Under_Collection_Purchase_Lodge_Usance_Foreign_EUR_ByMaker_E5,PT19,Infy@123,PEOBL,'1401EDC23000254,,,successfully,FCB-6830
-FCB-6839,TradeFinance_Export_Bills_Under_Collection_Purchase_Lodge_Mixed Tenor_Foreign_USD_ByMaker_F5,PT19,Infy@123,PEOBL,'1401EDC23000255,'1401EDC23000256,'1401EDC23000257,successfully,FCB-6840
-FCB-7182,TradeFinance_Export_Bills_Under_Documentary_Credit_Purchase_Lodge_Usance_Local_EGP_ByMaker_A5,PT19,Infy@123,PEOBL,'1401EDC23000258,,,successfully,FCB-7183
-FCB-7216,TradeFinance_Export_Bills_Under_Documentary_Credit_Purchase_Lodge_Usance_Foreign_USD_ByMaker_F7,PT19,Infy@123,PEOBL,'1401EDC23000259,,,successfully,FCB-7217
-FCB-7238,TradeFinance_Export_Bills_Under_Documentary_Credit_Purchase_Lodge_Mixed Tenor_Foreign_USD_ByMaker_J7,PT19,Infy@123,PEOBL,'1401EDC23000262,'1401EDC23000263,'1401EDC23000264,successfully,FCB-7239

@@ -10,15 +10,11 @@
 		<run>
 			<include name="ABEOpenCurrentAccountMudarabahCAATest"/>
             <include name="ABEVerifyCurrentAccountOpeningMudarabahCAATest"/>
-            <include name="ABECloseCasaAccountMudarabahTest"/>
-            <include name="ABEVerifyCasaAccountClosureMudarabahTest"/>
         </run>
     </groups>
     <classes>
 		<class name="tests.ABEOpenCurrentAccountMudarabahCAATest"/>
 	 	<class name="tests.ABEVerifyCurrentAccountOpeningMudarabahCAATest"/>
-	 	<class name="tests.ABECloseCasaAccountMudarabahTest"/>
-	 	<class name="tests.ABEVerifyCasaAccountClosureMudarabahTest"/>
     </classes>
 </test>
 </suite>

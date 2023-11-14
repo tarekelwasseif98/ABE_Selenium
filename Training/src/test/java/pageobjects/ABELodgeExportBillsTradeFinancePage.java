@@ -83,6 +83,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By tenorDaysTextField = By.xpath("(//input[@id='_tenorMonthDays$duration2'])[1]");
 	private By billDateTextField = By.xpath("(//input[@id='_billDate'])[1]");
 	private By onboardDateTextField = By.xpath("(//input[@id='_shpmntDate'])[1]");
+	private By dueDateTextField = By.xpath("(//input[@id='_dueDate'])[1]");
 	private By tenorDetailsUpdateButton = By.xpath("(//button[@id='_tenordetails_updateSummary'])[1]");
 	private By continue3Button = By.xpath("(//button[@id='_meobtenor_continue'])[1]");
 	private By invoiceAmountTextField = By.xpath("(//input[@id='_meobbill_invoiceAmt$amt'])[1]");
@@ -94,9 +95,9 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By continue5Button = By.xpath("(//button[@id='_meobassign_FinButton1'])[1]");
 	private By continue6Button = By.xpath("(//button[@id='_margin_margin_Continue'])[1]");
 	private By continue7Button = By.xpath("(//button[@id='_meoblimit_meoblimit_FinButton1'])[1]");
-	private By closeButton = By.xpath("(//span[@id='modalCloseIcon'])[1]");
-	private By continue8Button = By.xpath("(//button[@id='_meobhca_homeccyadv_FinButton1'])[1]");
-	private By continue9Button = By.xpath("(//button[@id='_meobpur_meobpur_FinButton1'])[1]");
+	private By closeButton1 = By.xpath("(//span[@id='modalCloseIcon'])[1]");
+	private By closeButton2 = By.xpath("(//span[@id='modalCloseIcon'])[2]");
+	private By continue8Button = By.xpath("(//span[@id='fbmpreshipment_textSpan'])[1]");
 	private By continue10Button = By.xpath("(//button[@id='_meobpreship_meobpreship_continue'])[1]");
 	private By continue11Button = By.xpath("(//button[@id='_meobreal_meobreal_FinButton1'])[1]");
 	private By paySysIdTextField = By.xpath("(//input[@id='_meobevent_paySysId'])[1]");
@@ -709,6 +710,16 @@ public class ABELodgeExportBillsTradeFinancePage {
 		return this;
 	}
 	
+	@Step("Sending due date: {0}")
+	public ABELodgeExportBillsTradeFinancePage sendKeysDueDateTextField(String dueDate) throws Exception {
+		if(dueDate != null) {
+			PageFunctionUtils.clearDataInWebElement(driver, dueDateTextField);
+			PageFunctionUtils.clickOnElement(driver, dueDateTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, dueDateTextField, dueDate.substring(1));
+		}
+		return this;
+	}
+	
 	@Step("Press tenor details update button")
 	public ABELodgeExportBillsTradeFinancePage pressTenorDetailsUpdateButton() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, tenorDetailsUpdateButton);
@@ -821,7 +832,14 @@ public class ABELodgeExportBillsTradeFinancePage {
 		PageFunctionUtils.clickOnElement(driver, continue7Button);
 		try {
 			PageFunctionUtils.switchToParentFrame(driver);
-			PageFunctionUtils.clickOnElement(driver, closeButton);
+			PageFunctionUtils.clickOnElement(driver, closeButton1);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+        } catch (Exception e) {
+        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+		}
+		try {
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.clickOnElement(driver, closeButton2);
 			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
         } catch (Exception e) {
         	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
@@ -835,18 +853,11 @@ public class ABELodgeExportBillsTradeFinancePage {
 		PageFunctionUtils.clickOnElement(driver, continue8Button);
 		try {
 			PageFunctionUtils.switchToParentFrame(driver);
-			PageFunctionUtils.clickOnElement(driver, closeButton);
+			PageFunctionUtils.clickOnElement(driver, closeButton1);
 			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
         } catch (Exception e) {
         	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		}
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue9Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue9Button);
-		PageFunctionUtils.clickOnElement(driver, continue9Button);
 		return this;
 	}
 	
@@ -856,7 +867,14 @@ public class ABELodgeExportBillsTradeFinancePage {
 		PageFunctionUtils.clickOnElement(driver, continue10Button);
 		try {
 			PageFunctionUtils.switchToParentFrame(driver);
-			PageFunctionUtils.clickOnElement(driver, closeButton);
+			PageFunctionUtils.clickOnElement(driver, closeButton1);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+        } catch (Exception e) {
+        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+		}
+		try {
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.clickOnElement(driver, closeButton2);
 			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
         } catch (Exception e) {
         	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
@@ -887,7 +905,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 		PageFunctionUtils.clickOnElement(driver, continue12Button);
 		try {
 			PageFunctionUtils.switchToParentFrame(driver);
-			PageFunctionUtils.clickOnElement(driver, closeButton);
+			PageFunctionUtils.clickOnElement(driver, closeButton1);
 			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
         } catch (Exception e) {
         	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);

@@ -42,6 +42,7 @@ public class ABELodgeExportBillsTradeFinanceData {
 	private String correspondentBankAddress;
 	private String sightBillDate;
 	private String sightOnboardDate;
+	private String sightDueDate;
 	private String usanceTenorMonths;
 	private String usanceTenorDays;
 	private String usanceBillDate;
@@ -51,13 +52,15 @@ public class ABELodgeExportBillsTradeFinanceData {
 	private String mixedBillTenorMonths1;
 	private String mixedBillTenorDays1;
 	private String mixedBillDate1;
-	private String mixedOnboardDate1;
+	private String mixedBillOnboardDate1;
+	private String mixedBillDueDate1;
 	private String mixedBillAmount2;
 	private String mixedBillTenor2;
 	private String mixedBillTenorMonths2;
 	private String mixedBillTenorDays2;
 	private String mixedBillDate2;
-	private String mixedOnboardDate2;
+	private String mixedBillOnboardDate2;
+	private String mixedBillDueDate2;
 	private String invoiceAmount;
 	private String invoiceNumber;
 	private String invoiceDate;
@@ -402,6 +405,14 @@ public class ABELodgeExportBillsTradeFinanceData {
 		this.sightOnboardDate = sightOnboardDate;
 	}
 	
+	public String getSightDueDate() {
+		return sightDueDate;
+	}
+
+	public void setSightDueDate(String sightDueDate) {
+		this.sightDueDate = sightDueDate;
+	}
+	
 	public String getUsanceTenorMonths() {
 		return usanceTenorMonths;
 	}
@@ -474,12 +485,20 @@ public class ABELodgeExportBillsTradeFinanceData {
 		this.mixedBillDate1 = mixedBillDate1;
 	}
 	
-	public String getMixedOnboardDate1() {
-		return mixedOnboardDate1;
+	public String getMixedBillOnboardDate1() {
+		return mixedBillOnboardDate1;
+	}
+
+	public void setMixedBillOnboardDate1(String mixedBillOnboardDate1) {
+		this.mixedBillOnboardDate1 = mixedBillOnboardDate1;
 	}
 	
-	public void setMixedOnboardDate1(String mixedOnboardDate1) {
-		this.mixedOnboardDate1 = mixedOnboardDate1;
+	public String getMixedBillDueDate1() {
+		return mixedBillDueDate1;
+	}
+
+	public void setMixedBillDueDate1(String mixedBillDueDate1) {
+		this.mixedBillDueDate1 = mixedBillDueDate1;
 	}
 	
 	public String getMixedBillAmount2() {
@@ -522,12 +541,20 @@ public class ABELodgeExportBillsTradeFinanceData {
 		this.mixedBillDate2 = mixedBillDate2;
 	}
 	
-	public String getMixedOnboardDate2() {
-		return mixedOnboardDate2;
+	public String getMixedBillOnboardDate2() {
+		return mixedBillOnboardDate2;
+	}
+
+	public void setMixedBillOnboardDate2(String mixedBillOnboardDate2) {
+		this.mixedBillOnboardDate2 = mixedBillOnboardDate2;
 	}
 	
-	public void setMixedOnboardDate2(String mixedOnboardDate2) {
-		this.mixedOnboardDate2 = mixedOnboardDate2;
+	public String getMixedBillDueDate2() {
+		return mixedBillDueDate2;
+	}
+
+	public void setMixedBillDueDate2(String mixedBillDueDate2) {
+		this.mixedBillDueDate2 = mixedBillDueDate2;
 	}
 	
 	public String getInvoiceAmount() {
@@ -672,20 +699,21 @@ public class ABELodgeExportBillsTradeFinanceData {
 				+ correspondentBankIdentifier + ", correspondentBankSwiftAddressDetails="
 				+ correspondentBankSwiftAddressDetails + ", correspondentBankName=" + correspondentBankName
 				+ ", correspondentBankAddress=" + correspondentBankAddress + ", sightBillDate=" + sightBillDate
-				+ ", sightOnboardDate=" + sightOnboardDate + ", usanceTenorMonths=" + usanceTenorMonths
-				+ ", usanceTenorDays=" + usanceTenorDays + ", usanceBillDate=" + usanceBillDate + ", usanceOnboardDate="
-				+ usanceOnboardDate + ", mixedBillAmount1=" + mixedBillAmount1 + ", mixedBillTenor1=" + mixedBillTenor1
-				+ ", mixedBillTenorMonths1=" + mixedBillTenorMonths1 + ", mixedBillTenorDays1=" + mixedBillTenorDays1
-				+ ", mixedBillDate1=" + mixedBillDate1 + ", mixedOnboardDate1=" + mixedOnboardDate1
+				+ ", sightOnboardDate=" + sightOnboardDate + ", sightDueDate=" + sightDueDate + ", usanceTenorMonths="
+				+ usanceTenorMonths + ", usanceTenorDays=" + usanceTenorDays + ", usanceBillDate=" + usanceBillDate
+				+ ", usanceOnboardDate=" + usanceOnboardDate + ", mixedBillAmount1=" + mixedBillAmount1
+				+ ", mixedBillTenor1=" + mixedBillTenor1 + ", mixedBillTenorMonths1=" + mixedBillTenorMonths1
+				+ ", mixedBillTenorDays1=" + mixedBillTenorDays1 + ", mixedBillDate1=" + mixedBillDate1
+				+ ", mixedBillOnboardDate1=" + mixedBillOnboardDate1 + ", mixedBillDueDate1=" + mixedBillDueDate1
 				+ ", mixedBillAmount2=" + mixedBillAmount2 + ", mixedBillTenor2=" + mixedBillTenor2
 				+ ", mixedBillTenorMonths2=" + mixedBillTenorMonths2 + ", mixedBillTenorDays2=" + mixedBillTenorDays2
-				+ ", mixedBillDate2=" + mixedBillDate2 + ", mixedOnboardDate2=" + mixedOnboardDate2 + ", invoiceAmount="
-				+ invoiceAmount + ", invoiceNumber=" + invoiceNumber + ", invoiceDate=" + invoiceDate
-				+ ", documentStatus=" + documentStatus + ", notionalConversionRate=" + notionalConversionRate
-				+ ", paySysId=" + paySysId + ", expectedResult=" + expectedResult + ", linkedTcid=" + linkedTcid
-				+ ", acceptLinkedTcid=" + acceptLinkedTcid + ", verifyAcceptLinkedTcid=" + verifyAcceptLinkedTcid
-				+ ", purchaseLinkedTcid=" + purchaseLinkedTcid + ", verifyPurchaseLinkedTcid="
-				+ verifyPurchaseLinkedTcid + ", realizeLinkedTcid=" + realizeLinkedTcid + ", verifyRealizeLinkedTcid="
-				+ verifyRealizeLinkedTcid + "]";
+				+ ", mixedBillDate2=" + mixedBillDate2 + ", mixedBillOnboardDate2=" + mixedBillOnboardDate2
+				+ ", mixedBillDueDate2=" + mixedBillDueDate2 + ", invoiceAmount=" + invoiceAmount + ", invoiceNumber="
+				+ invoiceNumber + ", invoiceDate=" + invoiceDate + ", documentStatus=" + documentStatus
+				+ ", notionalConversionRate=" + notionalConversionRate + ", paySysId=" + paySysId + ", expectedResult="
+				+ expectedResult + ", linkedTcid=" + linkedTcid + ", acceptLinkedTcid=" + acceptLinkedTcid
+				+ ", verifyAcceptLinkedTcid=" + verifyAcceptLinkedTcid + ", purchaseLinkedTcid=" + purchaseLinkedTcid
+				+ ", verifyPurchaseLinkedTcid=" + verifyPurchaseLinkedTcid + ", realizeLinkedTcid=" + realizeLinkedTcid
+				+ ", verifyRealizeLinkedTcid=" + verifyRealizeLinkedTcid + "]";
 	}
 }

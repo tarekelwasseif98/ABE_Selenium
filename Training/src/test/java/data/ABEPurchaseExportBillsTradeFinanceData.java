@@ -14,6 +14,16 @@ public class ABEPurchaseExportBillsTradeFinanceData {
 	private String billPurchaseAccountId;
 	private String billPurchaseAmount;
 	private String valueDate;
+	private String mixedBill1LimitIdPrefix;
+	private String mixedBill1LimitIdSuffix;
+	private String mixedBill1PurchaseAccountId;
+	private String mixedBill1PurchaseAmount;
+	private String mixedBill1ValueDate;
+	private String mixedBill2LimitIdPrefix;
+	private String mixedBill2LimitIdSuffix;
+	private String mixedBill2PurchaseAccountId;
+	private String mixedBill2PurchaseAmount;
+	private String mixedBill2ValueDate;
 	private String expectedResult;
 	private String linkedTcid;
 	
@@ -116,9 +126,89 @@ public class ABEPurchaseExportBillsTradeFinanceData {
 	public String getValueDate() {
 		return valueDate;
 	}
-
+	
 	public void setValueDate(String valueDate) {
 		this.valueDate = valueDate;
+	}
+	
+	public String getMixedBill1LimitIdPrefix() {
+		return mixedBill1LimitIdPrefix;
+	}
+	
+	public void setMixedBill1LimitIdPrefix(String mixedBill1LimitIdPrefix) {
+		this.mixedBill1LimitIdPrefix = mixedBill1LimitIdPrefix;
+	}
+	
+	public String getMixedBill1LimitIdSuffix() {
+		return mixedBill1LimitIdSuffix;
+	}
+	
+	public void setMixedBill1LimitIdSuffix(String mixedBill1LimitIdSuffix) {
+		this.mixedBill1LimitIdSuffix = mixedBill1LimitIdSuffix;
+	}
+	
+	public String getMixedBill1PurchaseAccountId() {
+		return mixedBill1PurchaseAccountId;
+	}
+	
+	public void setMixedBill1PurchaseAccountId(String mixedBill1PurchaseAccountId) {
+		this.mixedBill1PurchaseAccountId = mixedBill1PurchaseAccountId;
+	}
+	
+	public String getMixedBill1PurchaseAmount() {
+		return mixedBill1PurchaseAmount;
+	}
+	
+	public void setMixedBill1PurchaseAmount(String mixedBill1PurchaseAmount) {
+		this.mixedBill1PurchaseAmount = mixedBill1PurchaseAmount;
+	}
+	
+	public String getMixedBill1ValueDate() {
+		return mixedBill1ValueDate;
+	}
+	
+	public void setMixedBill1ValueDate(String mixedBill1ValueDate) {
+		this.mixedBill1ValueDate = mixedBill1ValueDate;
+	}
+	
+	public String getMixedBill2LimitIdPrefix() {
+		return mixedBill2LimitIdPrefix;
+	}
+	
+	public void setMixedBill2LimitIdPrefix(String mixedBill2LimitIdPrefix) {
+		this.mixedBill2LimitIdPrefix = mixedBill2LimitIdPrefix;
+	}
+	
+	public String getMixedBill2LimitIdSuffix() {
+		return mixedBill2LimitIdSuffix;
+	}
+	
+	public void setMixedBill2LimitIdSuffix(String mixedBill2LimitIdSuffix) {
+		this.mixedBill2LimitIdSuffix = mixedBill2LimitIdSuffix;
+	}
+	
+	public String getMixedBill2PurchaseAccountId() {
+		return mixedBill2PurchaseAccountId;
+	}
+	
+	public void setMixedBill2PurchaseAccountId(String mixedBill2PurchaseAccountId) {
+		this.mixedBill2PurchaseAccountId = mixedBill2PurchaseAccountId;
+	}
+	
+	public String getMixedBill2PurchaseAmount() {
+		return mixedBill2PurchaseAmount;
+	}
+	
+	public void setMixedBill2PurchaseAmount(String mixedBill2PurchaseAmount) {
+		this.mixedBill2PurchaseAmount = mixedBill2PurchaseAmount;
+	}
+	
+	public String getMixedBill2ValueDate() {
+		return mixedBill2ValueDate;
+	}
+	
+	public void setMixedBill2ValueDate(String mixedBill2ValueDate) {
+		this.mixedBill2ValueDate = mixedBill2ValueDate;
 	}
 	
 	public String getExpectedResult() {
@@ -143,7 +233,14 @@ public class ABEPurchaseExportBillsTradeFinanceData {
 				+ username + ", password=" + password + ", menu=" + menu + ", billId=" + billId + ", mixedBillId1="
 				+ mixedBillId1 + ", mixedBillId2=" + mixedBillId2 + ", limitIdPrefix=" + limitIdPrefix
 				+ ", limitIdSuffix=" + limitIdSuffix + ", billPurchaseAccountId=" + billPurchaseAccountId
-				+ ", billPurchaseAmount=" + billPurchaseAmount + ", valueDate=" + valueDate + ", expectedResult="
-				+ expectedResult + ", linkedTcid=" + linkedTcid + "]";
-	}
+				+ ", billPurchaseAmount=" + billPurchaseAmount + ", valueDate=" + valueDate
+				+ ", mixedBill1LimitIdPrefix=" + mixedBill1LimitIdPrefix + ", mixedBill1LimitIdSuffix="
+				+ mixedBill1LimitIdSuffix + ", mixedBill1PurchaseAccountId=" + mixedBill1PurchaseAccountId
+				+ ", mixedBill1PurchaseAmount=" + mixedBill1PurchaseAmount + ", mixedBill1ValueDate="
+				+ mixedBill1ValueDate + ", mixedBill2LimitIdPrefix=" + mixedBill2LimitIdPrefix
+				+ ", mixedBill2LimitIdSuffix=" + mixedBill2LimitIdSuffix + ", mixedBill2PurchaseAccountId="
+				+ mixedBill2PurchaseAccountId + ", mixedBill2PurchaseAmount=" + mixedBill2PurchaseAmount
+				+ ", mixedBill2ValueDate=" + mixedBill2ValueDate + ", expectedResult=" + expectedResult
+				+ ", linkedTcid=" + linkedTcid + "]";
+	}	
 }

@@ -1,0 +1,47 @@
+[
+ {
+  "tcId": "FCB-12205",
+  "summary": "Assets_CLA_Corporate_Verify_Unsecured_Floating_CLSMK_EGP_ByChecker_BE2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLA",
+  "accountId": "'2292065788240100095 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12207",
+  "summary": "Assets_CLA_Corporate_Verify_Unsecured_Floating_CLSFT_EGP_ByChecker_BF2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLA",
+  "accountId": "'2293065788240100108 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12209",
+  "summary": "Assets_CLA_Corporate_Verify_Unsecured_Floating_LSMCB_EGP_ByChecker_BG2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLA",
+  "accountId": "'2294065788240100116 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12211",
+  "summary": "Assets_CLA_Corporate_Verify_Unsecured_Floating_LSSCB_EGP_ByChecker_BH2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLA",
+  "accountId": "'2295065788240100124 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12213",
+  "summary": "Assets_CLA_Corporate_Verify_Unsecured_Floating_CPOLN_EGP_ByChecker_BI2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLA",
+  "accountId": "'2296065788240100132 ",
+  "expectedResult": "successfully"
+ }
+]

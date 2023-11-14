@@ -41,6 +41,7 @@ public class FinacleFieldsUtils {
 	public static final String DOCUMENTSTATUSRETURNED = "Returned";
 	public static final String DUEDATEINDICATORSIGHT = "Sight";
 	public static final String DUEDATEINDICATORACCEPTANCEDATE = "Acceptance Date";
+	public static final String PAYSYSIDSWIFT = "SWIFT";
 	public static final String ATTRIBUTETITLE = "title";
 	public static final String ATTRIBUTEVALUE = "value";
 }

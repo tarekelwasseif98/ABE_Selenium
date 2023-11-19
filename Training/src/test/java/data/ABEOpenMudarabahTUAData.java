@@ -1,6 +1,6 @@
 package data;
 
-public class ABEOpenTUAData {
+public class ABEOpenMudarabahTUAData {
 	private String tcId;
 	private String summary;
 	private String username;
@@ -166,9 +166,9 @@ public class ABEOpenTUAData {
 
 	@Override
 	public String toString() {
-		return "ABEOpenTUAData [tcId=" + tcId + ", summary=" + summary + ", username=" + username + ", password="
-				+ password + ", menu=" + menu + ", cif=" + cif + ", schemeCode=" + schemeCode + ", valueDate="
-				+ valueDate + ", depositPeriodMonths=" + depositPeriodMonths + ", depositPeriodDays="
+		return "ABEOpenMudarabahTUAData [tcId=" + tcId + ", summary=" + summary + ", username=" + username
+				+ ", password=" + password + ", menu=" + menu + ", cif=" + cif + ", schemeCode=" + schemeCode
+				+ ", valueDate=" + valueDate + ", depositPeriodMonths=" + depositPeriodMonths + ", depositPeriodDays="
 				+ depositPeriodDays + ", initialDepositAmount=" + initialDepositAmount + ", profitCreditAccountId="
 				+ profitCreditAccountId + ", repaymentAccountId=" + repaymentAccountId + ", debitAccountId="
 				+ debitAccountId + ", expectedResult=" + expectedResult + ", linkedTcid=" + linkedTcid

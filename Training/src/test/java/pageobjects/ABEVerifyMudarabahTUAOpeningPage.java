@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
 import utils.PageFunctionUtils;
 
-public class ABEVerifyTUAOpeningPage {
+public class ABEVerifyMudarabahTUAOpeningPage {
 	private WebDriver driver;
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
@@ -32,12 +32,12 @@ public class ABEVerifyTUAOpeningPage {
 	private By otherDetailsSideTab = By.xpath("(//span[@id='stepXIV_textSpan'])[1]");
 	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Verify Islamic Top Up Deposit Account Opening'])[1]");
 
-	public ABEVerifyTUAOpeningPage(WebDriver driver) {
+	public ABEVerifyMudarabahTUAOpeningPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
 	@Step("Sending menu name: {0}")
-	public ABEVerifyTUAOpeningPage sendKeysSearchBarTextField(String menu) throws Exception {
+	public ABEVerifyMudarabahTUAOpeningPage sendKeysSearchBarTextField(String menu) throws Exception {
 		if(menu != null) {
 			PageFunctionUtils.sleep();
 			PageFunctionUtils.switchToParentFrame(driver);
@@ -59,7 +59,7 @@ public class ABEVerifyTUAOpeningPage {
 	}
 	
 	@Step("Frame switching")
-	public ABEVerifyTUAOpeningPage switchFormAreaFrame() throws Exception {
+	public ABEVerifyMudarabahTUAOpeningPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
@@ -70,7 +70,7 @@ public class ABEVerifyTUAOpeningPage {
 	}
 	
 	@Step("Sending account id: {0}")
-	public ABEVerifyTUAOpeningPage sendKeysAccountIdTextField(String accountId) throws Exception {
+	public ABEVerifyMudarabahTUAOpeningPage sendKeysAccountIdTextField(String accountId) throws Exception {
 		if(accountId != null) {
 			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
 			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
@@ -80,13 +80,13 @@ public class ABEVerifyTUAOpeningPage {
 	}
 	
 	@Step("Press go button")
-	public ABEVerifyTUAOpeningPage pressGoButton() throws Exception {
+	public ABEVerifyMudarabahTUAOpeningPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
 	
 	@Step("Side tab navigation")
-	public ABEVerifyTUAOpeningPage navigateSideTabMenu() throws Exception {
+	public ABEVerifyMudarabahTUAOpeningPage navigateSideTabMenu() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, additionalDetailsSideTab);
 		PageFunctionUtils.clickOnElement(driver, generalDetailsSideTab);
 		PageFunctionUtils.clickOnElement(driver, schemeDetailsSideTab);
@@ -102,7 +102,7 @@ public class ABEVerifyTUAOpeningPage {
 	}
 	
 	@Step("Press submit button")
-	public ABEVerifyTUAOpeningPage pressSubmitButton() throws Exception {
+	public ABEVerifyMudarabahTUAOpeningPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.acceptWarning(driver);

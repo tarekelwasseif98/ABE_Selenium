@@ -10,7 +10,7 @@ import utils.CSVUtils;
 import utils.PageFunctionUtils;
 import utils.Paths;
 
-public class ABEOpenTUAPage {
+public class ABEOpenMudarabahTUAPage {
 	private WebDriver driver;
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
@@ -30,7 +30,6 @@ public class ABEOpenTUAPage {
 	private By debitAccountIdTextField = By.xpath("(//input[@id='_trnActId'])[1]");
 	private By accountOpeningDateTextField = By.xpath("(//input[@id='_gnDtAcOpDte'])[1]");
 	private By applicationDateTextField = By.xpath("(//input[@id='_applicnDte'])[1]");
-	private By peggingFrequencyTextField = By.xpath("(//input[@id='_pegFrenew$duration1'])[1]");
 	private By continue1Button = By.xpath("(//button[@id='_bdtlCtnBtn'])[1]");
 	private By continue2Button = By.xpath("(//button[@id='_gnDtlCtnBtn'])[1]");
 	private By continue3Button = By.xpath("(//button[@id='_shmCont'])[1]");
@@ -38,7 +37,6 @@ public class ABEOpenTUAPage {
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Open Islamic Top Up Deposit Account'])[1]");
 	private By accountIdSuccessMessage = By.xpath("(//p[@id='_resMsg_paraMsg'])[1]");
-	private String peggingFrequencyValue = "1";
 	public static String accountId;
 	public static String  referenceCsvColumnName = "reference";
 	public static String  accountIdCsvColumnName = "accountId";
@@ -46,12 +44,12 @@ public class ABEOpenTUAPage {
 	public static String  linkedTcidCsvColumnName = "linkedTcid";
 	public static String  closeLinkedTcidCsvColumnName = "closeLinkedTcid";
 	
-	public ABEOpenTUAPage(WebDriver driver) {
+	public ABEOpenMudarabahTUAPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
 	@Step("Sending menu name: {0}")
-	public ABEOpenTUAPage sendKeysSearchBarTextField(String menu) throws Exception {
+	public ABEOpenMudarabahTUAPage sendKeysSearchBarTextField(String menu) throws Exception {
 		if(menu != null) {
 			PageFunctionUtils.sleep();
 			PageFunctionUtils.switchToParentFrame(driver);
@@ -73,7 +71,7 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Frame switching")
-	public ABEOpenTUAPage switchFormAreaFrame() throws Exception {
+	public ABEOpenMudarabahTUAPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
@@ -84,7 +82,7 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Sending cif id: {0}")
-	public ABEOpenTUAPage sendKeysCifIdTextField(String cifId) throws Exception {
+	public ABEOpenMudarabahTUAPage sendKeysCifIdTextField(String cifId) throws Exception {
 		if(cifId != null) {
 			PageFunctionUtils.waitOnElement(driver, cifIdTextField);
 			PageFunctionUtils.clickOnElement(driver, cifIdTextField);
@@ -94,7 +92,7 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Sending scheme code: {0}")
-	public ABEOpenTUAPage sendKeysSchemeCodeTextField(String schemeCode) throws Exception {
+	public ABEOpenMudarabahTUAPage sendKeysSchemeCodeTextField(String schemeCode) throws Exception {
 		if(schemeCode != null) {
 			PageFunctionUtils.clickOnElement(driver, schemeCodeTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, schemeCodeTextField, schemeCode);
@@ -103,13 +101,13 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Press go button")
-	public ABEOpenTUAPage pressGoButton() throws Exception {
+	public ABEOpenMudarabahTUAPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
 	
 	@Step("Sending value date: {0}")
-	public ABEOpenTUAPage sendKeysValueDateTextField(String valueDate) throws Exception {
+	public ABEOpenMudarabahTUAPage sendKeysValueDateTextField(String valueDate) throws Exception {
 		if(valueDate != null) {
 			PageFunctionUtils.waitOnElement(driver, valueDateTextField);
 			PageFunctionUtils.clearDataInWebElement(driver, valueDateTextField);
@@ -120,7 +118,7 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Sending deposit period months: {0}")
-	public ABEOpenTUAPage sendKeysDepositPeriodMonthsTextField(String depositPeriodMonths) throws Exception {
+	public ABEOpenMudarabahTUAPage sendKeysDepositPeriodMonthsTextField(String depositPeriodMonths) throws Exception {
 		if(depositPeriodMonths != null) {
 			PageFunctionUtils.clearDataInWebElement(driver, depositPeriodMonthsTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, depositPeriodMonthsTextField, depositPeriodMonths);
@@ -129,7 +127,7 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Sending deposit period days: {0}")
-	public ABEOpenTUAPage sendKeysDepositPeriodDaysTextField(String depositPeriodDays) throws Exception {
+	public ABEOpenMudarabahTUAPage sendKeysDepositPeriodDaysTextField(String depositPeriodDays) throws Exception {
 		if(depositPeriodDays != null) {
 			PageFunctionUtils.clearDataInWebElement(driver, depositPeriodDaysTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, depositPeriodDaysTextField, depositPeriodDays);
@@ -138,7 +136,7 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Sending initial deposit amount: {0}")
-	public ABEOpenTUAPage sendKeysInitialDepositAmountTextField(String initialDepositAmount) throws Exception {
+	public ABEOpenMudarabahTUAPage sendKeysInitialDepositAmountTextField(String initialDepositAmount) throws Exception {
 		if(initialDepositAmount != null) {
 			PageFunctionUtils.clearDataInWebElement(driver, initialDepositAmountTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, initialDepositAmountTextField, initialDepositAmount);
@@ -147,7 +145,7 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Sending profit credit account id: {0}")
-	public ABEOpenTUAPage sendKeysProfitCreditAccountIdTextField(String profitCreditAccountId) throws Exception {
+	public ABEOpenMudarabahTUAPage sendKeysProfitCreditAccountIdTextField(String profitCreditAccountId) throws Exception {
 		if(profitCreditAccountId != null) {
 			PageFunctionUtils.clickOnElement(driver, profitCreditAccountIdTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, profitCreditAccountIdTextField, profitCreditAccountId.substring(1));
@@ -156,7 +154,7 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Sending repayment account id: {0}")
-	public ABEOpenTUAPage sendKeysRepaymentAccountIdTextField(String repaymentAccountId) throws Exception {
+	public ABEOpenMudarabahTUAPage sendKeysRepaymentAccountIdTextField(String repaymentAccountId) throws Exception {
 		if(repaymentAccountId != null) {
 			PageFunctionUtils.clickOnElement(driver, repaymentAccountIdTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, repaymentAccountIdTextField, repaymentAccountId.substring(1));
@@ -165,7 +163,7 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Sending debit account id: {0}")
-	public ABEOpenTUAPage sendKeysDebitAccountIdTextField(String debitAccountId) throws Exception {
+	public ABEOpenMudarabahTUAPage sendKeysDebitAccountIdTextField(String debitAccountId) throws Exception {
 		if(debitAccountId != null) {
 			PageFunctionUtils.clickOnElement(driver, debitAccountIdTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, debitAccountIdTextField, debitAccountId.substring(1));
@@ -174,13 +172,13 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Press continue button")
-	public ABEOpenTUAPage pressContinue1Button() throws Exception {
+	public ABEOpenMudarabahTUAPage pressContinue1Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue1Button);
 		return this;
 	}
 	
 	@Step("Sending account opening date: {0}")
-	public ABEOpenTUAPage sendKeysAccountOpeningDateTextField(String accountOpeningDate) throws Exception {
+	public ABEOpenMudarabahTUAPage sendKeysAccountOpeningDateTextField(String accountOpeningDate) throws Exception {
 		if(accountOpeningDate != null) {
 			PageFunctionUtils.waitOnElement(driver, accountOpeningDateTextField);
 			PageFunctionUtils.clearDataInWebElement(driver, accountOpeningDateTextField);
@@ -191,7 +189,7 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Sending application date: {0}")
-	public ABEOpenTUAPage sendKeysApplicationDateTextField(String applicationDate) throws Exception {
+	public ABEOpenMudarabahTUAPage sendKeysApplicationDateTextField(String applicationDate) throws Exception {
 		if(applicationDate != null) {
 			PageFunctionUtils.clearDataInWebElement(driver, applicationDateTextField);
 			PageFunctionUtils.clickOnElement(driver, applicationDateTextField);
@@ -201,31 +199,26 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Press continue button")
-	public ABEOpenTUAPage pressContinue2Button() throws Exception {
+	public ABEOpenMudarabahTUAPage pressContinue2Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue2Button);
 		return this;
 	}
 	
 	@Step("Press continue button")
-	public ABEOpenTUAPage pressContinue3Button() throws Exception {
+	public ABEOpenMudarabahTUAPage pressContinue3Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue3Button);
-		try {
-			PageFunctionUtils.enterDataInWebElement(driver, peggingFrequencyTextField, peggingFrequencyValue);
-		}
-		catch(Exception e) {
-		}
 		return this;
 	}
 	
 	@Step("Renewal and closure details tab navigation")
-	public ABEOpenTUAPage navigateRenewalAndClosureDetailsTabMenu() throws Exception {
+	public ABEOpenMudarabahTUAPage navigateRenewalAndClosureDetailsTabMenu() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, renewalAndClosureDetailsTab);
 		PageFunctionUtils.clickOnElement(driver, renewalAndClosureDetailsTab);
 		return this;
 	}
 	
 	@Step("Press submit button")
-	public ABEOpenTUAPage pressSubmitButton() throws Exception {
+	public ABEOpenMudarabahTUAPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
@@ -235,20 +228,20 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Save account id")
-	public ABEOpenTUAPage saveAccountId(String linkedId, String closeLinkedTcid) throws Exception {
-		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABEOPENTUACSV, linkedTcidCsvColumnName, linkedId);
-		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.ABEOPENTUACSV, referenceCsvColumnName);
-		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEVERIFYTUAOPENINGCSV, tcIdCsvColumnName, linkedId);
-		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYTUAOPENINGCSV, accountIdCsvColumnName);
+	public ABEOpenMudarabahTUAPage saveAccountId(String linkedId, String closeLinkedTcid) throws Exception {
+		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABEOPENMUDARABAHTUACSV, linkedTcidCsvColumnName, linkedId);
+		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.ABEOPENMUDARABAHTUACSV, referenceCsvColumnName);
+		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEVERIFYMUDARABAHTUAOPENINGCSV, tcIdCsvColumnName, linkedId);
+		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYMUDARABAHTUAOPENINGCSV, accountIdCsvColumnName);
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.ABEOPENTUACSV, rowByTcid1, columnByColumnName1, accountId);
-			CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYTUAOPENINGCSV, rowByTcid2, columnByColumnName2, accountId);
+			CSVUtils.insertValueInCsvCell(Paths.ABEOPENMUDARABAHTUACSV, rowByTcid1, columnByColumnName1, accountId);
+			CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYMUDARABAHTUAOPENINGCSV, rowByTcid2, columnByColumnName2, accountId);
 		}
-		int rowByTcid3 = CSVUtils.getRowByTcid(Paths.ABEOPENTUACSV, closeLinkedTcidCsvColumnName, closeLinkedTcid);
-		int rowByTcid4 = CSVUtils.getRowByTcid(Paths.ABECLOSETUACSV, tcIdCsvColumnName, closeLinkedTcid);
-		int columnByColumnName4 = CSVUtils.getColumnByColumnName(Paths.ABECLOSETUACSV, accountIdCsvColumnName);
+		int rowByTcid3 = CSVUtils.getRowByTcid(Paths.ABEOPENMUDARABAHTUACSV, closeLinkedTcidCsvColumnName, closeLinkedTcid);
+		int rowByTcid4 = CSVUtils.getRowByTcid(Paths.ABECLOSEMUDARABAHTUACSV, tcIdCsvColumnName, closeLinkedTcid);
+		int columnByColumnName4 = CSVUtils.getColumnByColumnName(Paths.ABECLOSEMUDARABAHTUACSV, accountIdCsvColumnName);
 		if(rowByTcid3 != -1 && rowByTcid4 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.ABECLOSETUACSV, rowByTcid4, columnByColumnName4, accountId);
+			CSVUtils.insertValueInCsvCell(Paths.ABECLOSEMUDARABAHTUACSV, rowByTcid4, columnByColumnName4, accountId);
 		}
 		return this;
 	}							

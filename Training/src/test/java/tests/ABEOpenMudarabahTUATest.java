@@ -1,34 +1,46 @@
 package tests;
 
+import java.io.IOException;
 import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.aspose.cells.Workbook;
+import com.opencsv.exceptions.CsvException;
 import data.JsonReader;
-import data.ABEVerifyTUAClosureData;
+import data.ABEOpenMudarabahTUAData;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import pageobjects.FinacleLoginPage;
-import procedures.ABEVerifyTUAClosureProcedures;
+import procedures.ABEOpenMudarabahTUAProcedures;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
 import utils.Paths;
 import utils.AssertionFactory;
+import utils.CSVUtils;
 import io.qameta.allure.testng.AllureTestNg;
 
-@Test(groups = "ABEVerifyTUAClosureTest", dependsOnGroups = "ABECloseTUATest")
+@Test(groups = "ABEOpenMudarabahTUATest")
 @Listeners({AllureTestNg.class})
-public class ABEVerifyTUAClosureTest {
+public class ABEOpenMudarabahTUATest {
+	@BeforeClass
+	public void oneTimeSetUp() throws IOException, CsvException {
+		CSVUtils.clearColumnByName(Paths.ABEOPENMUDARABAHTUACSV, "reference");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYMUDARABAHTUAOPENINGCSV, "accountId");
+		CSVUtils.clearColumnByName(Paths.ABECLOSEMUDARABAHTUACSV, "accountId");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYMUDARABAHTUACLOSURECSV, "accountId");
+	}
+
 	WebDriver driver = null;
 	@BeforeMethod(description= "Initiating Browser")
 	public void beforeTest(Object [] testData) throws Exception {
-		ABEVerifyTUAClosureData data = (ABEVerifyTUAClosureData) testData[0];
+		ABEOpenMudarabahTUAData data = (ABEOpenMudarabahTUAData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FINACLEURL);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
@@ -38,22 +50,22 @@ public class ABEVerifyTUAClosureTest {
 		.clickOnLoginButton(data.getPassword());
 	}
 	
-	@DataProvider(name="Verify TUA Closure DataProvider")
+	@DataProvider(name="Open Mudarabah TUA DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.ABEVERIFYTUACLOSURECSV);
-		workbook.save(Paths.ABEVERIFYTUACLOSUREJSON);
-        Class<ABEVerifyTUAClosureData> targetClass = ABEVerifyTUAClosureData.class;
-        JsonReader<ABEVerifyTUAClosureData> jsonReader = new JsonReader<>(targetClass);
-        List<ABEVerifyTUAClosureData> dataList = jsonReader.readJsonFile(Paths.ABEVERIFYTUACLOSUREJSON);
+    	Workbook workbook = new Workbook(Paths.ABEOPENMUDARABAHTUACSV);
+		workbook.save(Paths.ABEOPENMUDARABAHTUAJSON);
+        Class<ABEOpenMudarabahTUAData> targetClass = ABEOpenMudarabahTUAData.class;
+        JsonReader<ABEOpenMudarabahTUAData> jsonReader = new JsonReader<>(targetClass);
+        List<ABEOpenMudarabahTUAData> dataList = jsonReader.readJsonFile(Paths.ABEOPENMUDARABAHTUAJSON);
         dataList.toArray();
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Verify TUA Closure DataProvider", dataProviderClass = ABEVerifyTUAClosureTest.class)
-	public void verifyTUAClosureTest(ABEVerifyTUAClosureData data) throws Exception {
-		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTCID()));
+	@Test(dataProvider = "Open Mudarabah TUA DataProvider", dataProviderClass = ABEOpenMudarabahTUATest.class)
+	public void openMudarabahTUATest(ABEOpenMudarabahTUAData data) throws Exception {
+		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
 		Allure.parameter("Data: ", data.toString());		
-        ABEVerifyTUAClosureProcedures.verifyTUAClosure(driver, data);
+        ABEOpenMudarabahTUAProcedures.openMudarabahTUA(driver, data);
         AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}
 

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.qameta.allure.Step;
 import utils.PageFunctionUtils;
 
-public class ABEVerifyTUAClosurePage {
+public class ABEVerifyMudarabahTUAClosurePage {
 	private WebDriver driver;
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
@@ -22,12 +22,12 @@ public class ABEVerifyTUAClosurePage {
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By backgroundMenuButton = By.xpath("(//a[@id='GlobalbgMenu_anchor'])[1]");
 	
-	public ABEVerifyTUAClosurePage(WebDriver driver) {
+	public ABEVerifyMudarabahTUAClosurePage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
 	@Step("Sending menu name: {0}")
-	public ABEVerifyTUAClosurePage sendKeysSearchBarTextField(String menu) throws Exception {
+	public ABEVerifyMudarabahTUAClosurePage sendKeysSearchBarTextField(String menu) throws Exception {
 		if(menu != null) {
 			PageFunctionUtils.sleep();
 			PageFunctionUtils.switchToParentFrame(driver);
@@ -49,7 +49,7 @@ public class ABEVerifyTUAClosurePage {
 	}
 	
 	@Step("Frame switching")
-	public ABEVerifyTUAClosurePage switchFormAreaFrame() throws Exception {
+	public ABEVerifyMudarabahTUAClosurePage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
@@ -61,7 +61,7 @@ public class ABEVerifyTUAClosurePage {
 	}
 	
 	@Step("Sending account id: {0}")
-	public ABEVerifyTUAClosurePage sendKeysAccountIdTextField(String accountId) throws Exception {
+	public ABEVerifyMudarabahTUAClosurePage sendKeysAccountIdTextField(String accountId) throws Exception {
 		if(accountId != null) {
 			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
 			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
@@ -71,13 +71,13 @@ public class ABEVerifyTUAClosurePage {
 	}
 	
 	@Step("Press go button")
-	public ABEVerifyTUAClosurePage pressGoButton() throws Exception {
+	public ABEVerifyMudarabahTUAClosurePage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
 	
 	@Step("Press submit button")
-	public ABEVerifyTUAClosurePage pressSubmitButton() throws Exception {
+	public ABEVerifyMudarabahTUAClosurePage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);

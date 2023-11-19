@@ -1,0 +1,16 @@
+tcId,summary,username,password,menu,cif,SchemeCode,ccy,expectedResult,reference,linkedTcid
+FCB-577,Liabilities_CASA_CreateAccount_Retail_CAA_Maker,ABE20,Infy@123,OCA,1111111,1009,EGP,opened successfully,'100901111111015207,FCB-583
+FCB-5777,Liabilities_CASA_Create_CurrentA/C_CHL_1000_EGP_Maker,ABE21,Infy@123,OCA,1111111,1000,EGP,opened successfully,,FCB-5778
+FCB-5779,Liabilities_CASA_Create_CurrentA/C_CHF_EUR_Maker,ABE22,Infy@123,OCA,1111111,1006,EUR,opened successfully,,FCB-5780
+FCB-5781,Liabilities_CASA_Create_CurrentA/C_CHF_USD_Maker,QA49,Infy@123,OCA,1111111,1006,USD,opened successfully,,FCB-5782
+FCB-5783,Liabilities_CASA_Create_CurrentA/C_CHF_1006_GBP_Maker,ABE21,Infy@123,OCA,1111111,1006,GBP,opened successfully,,FCB-5784
+FCB-5785,Liabilities_CASA_Create_CurrentA/C_CSL_1007_EGP_Maker,ABE20,Infy@123,OCA,1998627,1007,EGP,opened successfully,'100701998627010267,FCB-5786
+FCB-5787,Liabilities_CASA_Create_CurrentA/C_CSF_GBP_Maker,ABE21,Infy@123,OCA,1998627,1008,GBP,opened successfully,,FCB-5788
+FCB-5789,Liabilities_CASA_Create_CurrentA/C_CSF_EUR_Maker,ABE20,Infy@123,OCA,1998627,1008,EUR,opened successfully,'100801998627030273,FCB-5790
+FCB-5791,Liabilities_CASA_Create_CurrentA/C_CSF_USD_Maker,ABE21,Infy@123,OCA,1998627,1008,USD,opened successfully,,FCB-5792
+FCB-5793,Liabilities_CASA_Create_CurrentA/C_CLO_EGP_Maker,ABE20,Infy@123,OCA,1111111,1001,EGP,opened successfully,'100101111111015212,FCB-5794
+FCB-5795,Liabilities_CASA_Create_CurrentA/C_FRM_EGP_Maker,ABE32,Infy@123,OCA,1111111,1002,EGP,opened successfully,,FCB-5796
+FCB-5797,Liabilities_CASA_Create_CurrentA/C_CLS_1003_EGP_Maker,ABE31,Infy@123,OCA,1111111,1003,EGP,opened successfully,,FCB-5798
+FCB-5799,Liabilities_CASA_Create_CurrentA/C_SAL_1004_EGP_Maker,ABE32,Infy@123,OCA,1111111,1004,EGP,opened successfully,,FCB-5800
+FCB-5801,Liabilities_CASA_Create_CurrentA/C_CIU_EGP_Maker,ABE33,Infy@123,OCA,1111111,1005,EGP,opened successfully,,FCB-5802
+FCB-5803,Liabilities_CASA_Create_CurrentA/C_HVR_EGP_Maker,ABE34,Infy@123,OCA,1111111,1111,EGP,opened successfully,,FCB-5804

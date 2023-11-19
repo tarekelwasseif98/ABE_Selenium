@@ -44,4 +44,9 @@ public class FinacleFieldsUtils {
 	public static final String PAYSYSIDSWIFT = "SWIFT";
 	public static final String ATTRIBUTETITLE = "title";
 	public static final String ATTRIBUTEVALUE = "value";
+	public static final String NETDISBURSEMENTTYPE = "Net";
+	public static final String GROSSDISBURSEMENTTYPE = "Gross";
+	public static final String FULLDISBURSEMENT = "Yes";
+	public static final String PARTIALDISBURSEMENT = "No";
+	public static final String tradeFinanceBillType3 = "mixed"; 
 }

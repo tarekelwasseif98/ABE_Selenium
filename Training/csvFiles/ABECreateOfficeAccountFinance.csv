@@ -1,0 +1,11 @@
+tcId,summary,username,password,menu,SchemeCode,ccy,accountHeadName,eodMaxBalance,generalLedgerSubhead,expectedResult,reference,linkedTcId
+FCB-458,Finance_ContingentAccounts_Create_OfficeAccount_ContingentAsset_EGP_ByMaker,ABE38,Infy@123,OOAT,CASH,EGP,income and expense,999999,10016,opened successfully,'1401001100160210,FCB-460
+FCB-459,Finance_ContingentAccounts_Create_OfficeAccount_ContingentLiability_EGP_ByMaker,ABE38,Infy@123,OOAT,CASH,EGP,income and expense,999999,10016,opened successfully,'1401001100160211,FCB-461
+FCB-528,Finance_PointingAccounts_Create_OfficeAccount_EGP_ByMaker,ABE38,Infy@123,OOAT,CASH,EGP,income and expense,999999,10016,opened successfully,'1401001100160212,FCB-529
+FCB-540,Finance_PointingAccounts_Create_OfficeAccount_USD_ByMaker,ABE38,Infy@123,OOAT,CASH,EGP,income and expense,999999,10016,opened successfully,,FCB-541
+FCB-298,Finance_CashAccounts_Create_OfficeAccount_Teller_Cash_EGP_ByMaker,ABE38,Infy@123,OOAT,CASH,EGP,OfficeAccountTellerCashEGP,999999,10001,opened successfully,,FCB-299
+FCB-301,Finance_CashAccounts_Create_OfficeAccount_Vault_Cash_USD_ByMaker,ABE38,Infy@123,OOAT,CASH,USD,OfficeAccountVaultCashUSD,999999,10004,opened successfully,,FCB-302
+FCB-304,Finance_CashAccounts_Create_OfficeAccount_Teller_Cash_GBP_ByMaker,ABE38,Infy@123,OOAT,CASH,GBP,OfficeAccountTellerCashGBP,999999,10001,opened successfully,,FCB-305
+FCB-307,Finance_CashAccounts_Create_OfficeAccount_Teller_Cash_EUR_ByMaker,ABE38,Infy@123,OOAT,CASH,EUR,OfficeAccountTellerCashEUR,999999,10001,opened successfully,,FCB-308
+FCB-335,Finance_P/L Zeroization_Create_OfficeAccount_IncomeExpenseAccount_ByMaker,ABE38,Infy@123,OOAT,CASH,EGP,income and expense,999999,10001,opened successfully,,FCB-336
+FCB-337,Finance_P/L Zeroization_Create_OfficeAccount_RetainedEarningsAccount_ByMaker,ABE38,Infy@123,OOAT,CASH,EGP,income and expense,999999,10001,opened successfully,,FCB-338

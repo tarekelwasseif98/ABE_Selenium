@@ -48,5 +48,17 @@ public class FinacleFieldsUtils {
 	public static final String GROSSDISBURSEMENTTYPE = "Gross";
 	public static final String FULLDISBURSEMENT = "Yes";
 	public static final String PARTIALDISBURSEMENT = "No";
-	public static final String tradeFinanceBillType3 = "mixed"; 
+	public static final String tradeFinanceBillType3 = "mixed";
+	public static final String NATIONALID = "NATID";
+	public static final String PASSPORTID = "PASSP";
+	public static final String SALARIED = "Salaried";
+	public static final String UNEMPLOYED = "Unemployed";
+	public static final String ABESTAFF = "ABE staff";
+	public static final String YES = "Y";
+	public static final String NO = "N";
+	public static final String AMOUNTTYPEFIXED = "Fixed";
+	public static final String AMOUNTTYPEDERIVED = "Derived";
+	public static final String FREQUENCYNDAYS = "Every 'N' Days";
+	public static final String NETDISBURSMENTTYPE = "Net";
+	public static final String GROSSDISBURSMENTTYPE = "Gross";
 }

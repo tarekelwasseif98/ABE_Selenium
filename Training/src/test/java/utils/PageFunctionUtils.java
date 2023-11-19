@@ -76,6 +76,10 @@ public class PageFunctionUtils {
 		Thread.sleep(Properties.SLEEPTIME);
 		}
 	
+	public static void sleep2() throws InterruptedException {
+		Thread.sleep(Properties.SLEEPTIME2);
+		}
+	
 	public static void scrollUp(WebDriver driver) throws InterruptedException {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0, -document.body.scrollHeight);");

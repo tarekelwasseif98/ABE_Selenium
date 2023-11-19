@@ -1,0 +1,3 @@
+tcId,summary,username,password,menu,accountId,valueDate,valueDateStatus,disbursmentType,disbursmentAccount,expectedResult,linkedTcId
+FCB-12810,Assets_LAA_Retail_Disburse_Manual_Full_BackDated_Net_UnsecuredLoan_EGP_ByMaker_BP1,ABE45,Infy@123,PCLD,'30190111111101321780,7112023,FutureValueDate,Net,'100901111111013944,The loan disbursement is performed successfully.,FCB-12811
+FCB-12810,Assets_LAA_Retail_Disb,ABE45,Infy@123,PCLD,'30190111111101321780,5112023,CurrentValueDate,Gross,'100901111111013944,The loan disbursement is performed successfully.,FCB-12811

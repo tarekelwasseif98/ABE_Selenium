@@ -1,0 +1,7 @@
+tcId,summary,username,password,menu,paymentStatus,guaranteeId,expectedResult
+FCB-6667,TradeFinance_LGs_Outward_Verify_Counter_BidBond_Guarantee_Foreign_USD_ByChecker_J2,PT45,Infy@123,VOG,Message Ready,,successfully
+FCB-6646,TradeFinance_LGs_Outward_Verify_BidBond_Guarantee_Local_EGP_ByChecker_A2,ABE86,Infy@123,VOG,,,successfully
+FCB-6671,TradeFinance_LGs_Outward_Verify_BidBond_Guarantee_Foreign_EUR_ByChecker_L2,PT45,Infy@123,VOG,Message Ready,,successfully
+FCB-6679,TradeFinance_LGs_Outward_Verify_Performance_Guarantee_Foreign_USD_ByChecker_M2,ABE86,Infy@123,VOG,Message Ready,,successfully
+FCB-6681,TradeFinance_LGs_Outward_Verify_Performance_Guarantee_Foreign_EUR_ByChecker_O2,PT45,Infy@123,VOG,Message Ready,,successfully
+FCB-6648,TradeFinance_LGs_Outward_Verify_Performance_Guarantee_Local_EGP_ByChecker_B2,ABE86,Infy@123,VOG,,,successfully

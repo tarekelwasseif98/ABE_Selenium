@@ -166,4 +166,24 @@ public class Paths {
 	public static final String ABEVERIFYCORPORATELOANDISBURSMENTCORPORATELOANSCSV  = "csvFiles\\ABEVerifyCorporateLoanCorporateLoans.csv";
 	public static final String ABEDISBURSECORPORATELOANCORPORATELOANSJSON =  "jsonFiles\\" + ABEDISBURSECORPORATELOANCORPORATELOANSCSV.substring(9, Paths.ABEDISBURSECORPORATELOANCORPORATELOANSCSV.length()-4) + ".json";
 	public static final String ABEVERIFYCORPORATELOANDISBURSMENTCORPORATELOANSJSON =  "jsonFiles\\" + ABEVERIFYCORPORATELOANDISBURSMENTCORPORATELOANSCSV.substring(9, Paths.ABEVERIFYCORPORATELOANDISBURSMENTCORPORATELOANSCSV.length()-4) + ".json";
+	
+	public static final String OPENOVERDRAFTACCOUNTCSV  = "csvFiles\\OpenOverDraftAccount.csv";
+	public static final String VERIFYOVERDRAFTACCOUNTCSV = "csvFiles\\VerifyOverDraftAccount.csv";
+	public static final String OPENOVERDRAFTACCOUNTJSON =  "jsonFiles\\" + OPENOVERDRAFTACCOUNTCSV.substring(9, Paths.OPENOVERDRAFTACCOUNTCSV.length()-4) + ".json";
+	public static final String VERIFYOVERDRAFTACCOUNTJSON = "jsonFiles\\" + VERIFYOVERDRAFTACCOUNTCSV.substring(9, Paths.VERIFYOVERDRAFTACCOUNTCSV.length()-4) + ".json";
+
+	public static final String MODIFYOVERDRAFTACCOUNTBEFOREVERIFICATIONCSV = "csvFiles\\ModifyOverDraftAccountBeforeVerification.csv";
+	public static final String MODIFYOVERDRAFTACCOUNTBEFOREVERIFICATIONJSON =  "jsonFiles\\" + MODIFYOVERDRAFTACCOUNTBEFOREVERIFICATIONCSV.substring(9, Paths.MODIFYOVERDRAFTACCOUNTBEFOREVERIFICATIONCSV.length()-4) + ".json";
+	
+	public static final String ISSUEOUTWARDLGTRADEFINANCECSV = "csvFiles\\IssueOutwardLGTradeFinance.csv";
+	public static final String ISSUEOUTWARDLGTRADEFINANCEJSON =  "jsonFiles\\" + ISSUEOUTWARDLGTRADEFINANCECSV.substring(9, Paths.ISSUEOUTWARDLGTRADEFINANCECSV.length()-4) + ".json";
+	
+	public static final String VERIFYOUTWARDLGTRADEFINANCECSV = "csvFiles\\VerifyOutwardLGTradeFinance.csv";
+	public static final String VERIFYOUTWARDLGTRADEFINANCEJSON =  "jsonFiles\\" + VERIFYOUTWARDLGTRADEFINANCECSV.substring(9, Paths.VERIFYOUTWARDLGTRADEFINANCECSV.length()-4) + ".json";
+	
+	public static final String ADDINWARDGUARANTEECSV = "csvFiles\\AddInwardGuarantee.csv";
+	public static final String ADDINWARDGUARANTEEJSON = "jsonFiles\\" + ADDINWARDGUARANTEECSV.substring(9, Paths.ADDINWARDGUARANTEECSV.length()-4) + ".json";
+	
+	public static final String VERIFYINWARDGUARANTEECSV = "csvFiles\\VerifyInwardGuarantee.csv";
+	public static final String VERIFYINWARDGUARANTEEJSON = "jsonFiles\\" + VERIFYINWARDGUARANTEECSV.substring(9, Paths.VERIFYINWARDGUARANTEECSV.length()-4) + ".json";
 }

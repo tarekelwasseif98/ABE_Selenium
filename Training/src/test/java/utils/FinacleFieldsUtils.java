@@ -61,4 +61,14 @@ public class FinacleFieldsUtils {
 	public static final String FREQUENCYNDAYS = "Every 'N' Days";
 	public static final String NETDISBURSMENTTYPE = "Net";
 	public static final String GROSSDISBURSMENTTYPE = "Gross";
+	public static final String TYPESSECURED = "Secured";
+	public static final String TYPESUNSECURED = "Unsecured";
+	public static final String CIFTYPERETAIL = "Retail";
+	public static final String CIFTYPECORPORATE = "Corporate";
+    public static final String GUARANTEETYPELOBID = "LOBID";
+    public static final String GURANATEETYPEFBIDG = "FBIDG";
+    public static final String GURANATEETYPEFPERG = "FPERG";
+    public static final String GURANATEETYPELOPER = "LOPER";
+    public static final String GURANATEETYPEOCBID = "OCBID";
+    public static final String PAYMENTSTATUSREADY = "Message Ready";
 }

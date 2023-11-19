@@ -1,0 +1,16 @@
+tcId,summary,username,password,menu,accountId2,types,expiryDate,frequencyMonth,frequencyDay,dropdownMenu,drawingPowerPrecentage,limitId1,limitId2,expectedResult
+FCB-22480,Assets_ODA_Retail_ModifyBeforeVerify_EditExpiryDateField_EGP_ByMaker_A3,ABE95,Infy@123,MOOAV,'500003054733010012,Secured,"""03/10/2027",,,,,,,successfully
+FCB-22481,Assets_ODA_Retail_ModifyBeforeVerify_EditFrequencyField_EGP_ByMaker_T3,ABE83,Infy@123,MOOAV,'500000302137010019,Secured,,10,20,,,,,successfully
+FCB-22482,Assets_ODA_Retail_ModifyBeforeVerify_EditExpiryDateField_EGP_ByMaker_J3,ABE95,Infy@123,MOOAV,'500002150132010019,Secured,"""03/10/2028",,,,,,,successfully
+FCB-13339,Assets_ODA_Retail_ModifyBeforeVerify_EditExpiryDateField_EGP_ByChecker_B1,ABE83,Infy@123,MOOAV,'500002210958010010,Secured,"""03/10/2029",,,,,,,successfully
+FCB-13341,Assets_ODA_Retail_ModifyBeforeVerify_EditStatementFrequencyField_EGP_ByChecker_C1,ABE95,Infy@123,MOOAV,'500002532482010015,Secured,,12,30,,,,,successfully
+FCB-22470,Assets_ODA_Corporate_Modify_OverdraftAccount_Secured_SOVD_SecuredOverDraft_LinkSingleDepositCollateral_EGP_ByChecker_A3,ABE95,Infy@123,MOOAV,'1401502010000114,Secured,"""03/10/2027",,,,,,,successfully
+FCB-13349,Assets_ODA_Retail_Modify_DrawingPower_Derived_ForSecuredOverdraft_EGP_ByMaker_E1,ABE83,Infy@123,MOOAV,'500102945029010268,Unsecured,,,,Derived,,,,successfully
+FCB-22478,Assets_ODA_Corporate_Modify_OverdraftAccount_Secured_SOVD_LinkMultipleDepositCollateral_EGP_ByChecker_W3,ABE95,Infy@123,MOOAV,'1401502010000121,Secured,,10,20,,,,,successfully
+FCB-22479,Assets_ODA_Corporate_Modify_SecuredOverdraftAccount_ModifyLoanToValue_EGP_ByMaker_L3,ABE83,Infy@123,MOOAV,'1401502010000138,Secured,"""03/10/2028",,,,,,,successfully
+FCB-13882,Assets_ODA_Corporate_ModifyBeforeVerify_EditExpiryDateField_EGP_ByMaker_C1,ABE95,Infy@123,MOOAV,'501306233421010096,Secured,"""03/10/2029",,,,,,,successfully
+FCB-13884,Assets_ODA_Corproate_ModifyBeforeVerify_EditStatement FrequencyField_EGP_ByMaker_D1,ABE83,Infy@123,MOOAV,'501306248724020093,Secured,,12,30,,,,,successfully
+FCB-13894,Assets_ODA_Corporate_Modify_DrawingPower_Maintained_EGP_ByMaker_F1,ABE95,Infy@123,MOOAV,'501306227505010207,Unsecured,,,,Maintained,,,,successfully
+FCB-13896,Assets_ODA_Corporate_Modify_DrawingPower_Derived_ForSecuredOverdraft_EGP_ByMaker_G1,ABE83,Infy@123,MOOAV,'501306252281010196,Unsecured,,,,Derived,,,,successfully
+FCB-13900,Assets_ODA_Corporate_Modify_DrawingPower_Parent_EGP_ByMaker_I1,ABE95,Infy@123,MOOAV,'501306235594010057,Unsecured,,,,Parent,100,"""000",CUSTL,successfully
+FCB-13898,Assets_ODA_Corporate_Modify_DrawingPower_Equal_EGP_ByMaker_H1,ABE83,Infy@123,MOOAV,'501306228508010238,Unsecured,,,,Equal,,,,successfully

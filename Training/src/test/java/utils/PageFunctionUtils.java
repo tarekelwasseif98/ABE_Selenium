@@ -128,4 +128,15 @@ public class PageFunctionUtils {
 			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, By.xpath("//iframe[@name='formArea']"));
 		}
 	}
+	
+	public static void closeWarning(WebDriver driver) throws InterruptedException {
+		PageFunctionUtils.switchToParentFrame(driver);
+		Boolean isPresent = driver.findElements(By.xpath("(//button[normalize-space()='Close'])[1]")).size() > 0;
+		if(isPresent) {
+			PageFunctionUtils.clickOnElement(driver, By.xpath("(//button[normalize-space()='Close'])[1]"));
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, By.xpath("//iframe[@name='formArea']"));
+		} else {
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, By.xpath("//iframe[@name='formArea']"));
+		}
+	}
 }

@@ -1,0 +1,2 @@
+tcId,summary,username,password,menu,guaranteeType,currency,cif,guaranteeAmount,name,address,expiryDate,claimDate,rulesdropdown,expectedResult,guaranteeNumberReference,linkedTcid1
+FCB-1,TradeFinance_LGs_Inward_Issue_BidBond_Guarantee_Local_Issued_By_Customer_Foreign_USD_ByMaker_J0,PT44,Infy@123,IOGE,IFBID,USD,"""06617304",1,nariman,maadi,"02/11/2029""","02/11/2029""",None,successfully,,FCB-2

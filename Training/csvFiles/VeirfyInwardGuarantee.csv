@@ -1,0 +1,2 @@
+tcId,summary,username,password,menu,guaranteeNumberReferenceId,expectedResult,linkedTcid2
+FCB-2,TradeFinance_LGs_Inward_Verify_BidBond_Guarantee_Local_EGP_ByChecker_J0,PT45,Infy@123,VIG,,successfully,FCB-6666

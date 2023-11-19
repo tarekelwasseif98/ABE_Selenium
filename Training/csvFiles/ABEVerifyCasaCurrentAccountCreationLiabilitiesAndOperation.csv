@@ -1,0 +1,16 @@
+tcId,summary,username,password,menu,accountId,expectedResult
+FCB-583,Liabilities_CASA_VerifyCreatingAccount_Retail_CAA_Checker,ABE30,Infy@123,VCAO,'100901111111015207,approved successfully
+FCB-5778,Liabilities_CASA_VerifyCreation_CurrentA/C_CHL_1000_EGP_Checker,ABE30,Infy@123,VCAO,,approved successfully
+FCB-5780,Liabilities_CASA_VerifyCreation_CurrentA/C_CHF_EUR_Checker,ABE30,Infy@123,VCAO,,approved successfully
+FCB-5782,Liabilities_CASA_VerifyCreation_CurrentA/C_CHF_USD_Checker,ABE30,Infy@123,VCAO,,approved successfully
+FCB-5784,Liabilities_CASA_VerifyCreation_CurrentA/C_CHF_1006_GBP_Checker,ABE30,Infy@123,VCAO,,approved successfully
+FCB-5786,Liabilities_CASA_VerifyCreation_CurrentA/C_CSL_1007_EGP_Checker,ABE30,Infy@123,VCAO,'100701998627010267,approved successfully
+FCB-5788,Liabilities_CASA_VerifyCreation_CurrentA/C_CSF_GBP_Checker,ABE30,Infy@123,VCAO,,approved successfully
+FCB-5790,Liabilities_CASA_VerifyCreation_CurrentA/C_CSF_EUR_Checker,ABE30,Infy@123,VCAO,'100801998627030273,approved successfully
+FCB-5792,Liabilities_CASA_VerifyCreation_CurrentA/C_CSF_USD_Checker,ABE30,Infy@123,VCAO,,approved successfully
+FCB-5794,Liabilities_CASA_VerifyCreation_CurrentA/C_CLO_EGP_Checker,ABE30,Infy@123,VCAO,'100101111111015212,approved successfully
+FCB-5796,Liabilities_CASA_VerifyCreation_CurrentA/C_FRM_EGP_Checker,ABE30,Infy@123,VCAO,,approved successfully
+FCB-5798,Liabilities_CASA_VerifyCreation_CurrentA/C_CLS_1003_EGP_Checker,ABE30,Infy@123,VCAO,,approved successfully
+FCB-5800,Liabilities_CASA_VerifyCreation_CurrentA/C_SAL_EGP_Checker,ABE30,Infy@123,VCAO,,approved successfully
+FCB-5802,Liabilities_CASA_VerifyCreation_CurrentA/C_CIU_EGP_Checker,ABE30,Infy@123,VCAO,,approved successfully
+FCB-5804,Liabilities_CASA_VerifyCreation_CurrentA/C_HVR_EGP_Checker,ABE30,Infy@123,VCAO,,approved successfully

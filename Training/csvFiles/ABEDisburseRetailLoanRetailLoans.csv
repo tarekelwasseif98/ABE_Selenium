@@ -1,0 +1,7 @@
+"tcId","summary","username","password","menu","accountId","DisbursmentType","finalDisbursment","disbursmentAccount","expectedResult","linkedTcId"
+"FCB-12810","Assets_LAA_Retail_Disburse_Manual_Full_BackDated_Net_UnsecuredLoan_EGP_ByMaker_BP1","ABE38","Infy@123","PLD","","Net","Yes","'100901111111013944","The loan disbursement is performed successfully.","FCB-12811"
+"FCB-12812","Assets_LAA_Retail_Disburse_Manual_Full_Current_Gross_UnsecuredLoan_EGP_ByMaker_BQ1","ABE38","Infy@123","PLD","","Gross","Yes","'100901111111013944","The loan disbursement is performed successfully.","FCB-12813"
+"FCB-12814","Assets_LAA_Retail_Disburse_Manual_Partial_Backdated_Net_UnsecuredLoan_EGP_ByMaker_BR1","ABE38","Infy@123","PLD","","Net","No","'100901111111013944","The loan disbursement is performed successfully.","FCB-12815"
+"FCB-12816","Assets_LAA_Retail_Disburse_Manual_Partial_Current_Gross_UnsecuredLoan_EGP_ByMaker_BS1","ABE38","Infy@123","PLD","","Gross","No","'100901111111013944","The loan disbursement is performed successfully.","FCB-12817"
+"FCB-12943","Assets_LAA_Retail_Disburse_Manual_Full_BackDated_Net_SecuredLoan_EGP_ByMaker_DG1","ABE38","Infy@123","PLD","","Net","Yes","'100901111111013944","The loan disbursement is performed successfully.","FCB-12944"
+"FCB-129433","Assets_LAA_Retail_Disburse_Manual_Full_BackDated_Net_SecuredLoan_EGP_ByMaker_DG1","ABE38","Infy@123","PLD","","Net","Yes","'100901111111013944","The loan disbursement is performed successfully.","FCB-129444"

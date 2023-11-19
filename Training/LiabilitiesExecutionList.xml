@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite" >
+
+<listeners>
+
+       <listener class-name="listeners.Listeners"/>
+       <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+
+</listeners>
+    <test  parallel="classes" thread-count="2" name="Liabilities">
+
+        <groups>
+            <run>
+				                <include name="verifyTd"/>
+
+              <!--     <include name="OpenCasaSavingsAc"/>
+
+               <include name="OpenTd"/>
+                <include name="verifyTd"/>
+                <include name="VerifyCasaSavingsAc"/> 
+                <include name="OpenCasaCurrentAc"/>
+                 <include name="VerifyCasaCurrentAc"/>
+                <include name="TellerTransfer"/>-->
+
+            </run>
+        </groups>
+         <classes>
+			     		 <class name="tests.ABEVerifyTdLiabilitiesAndOperationTest"/>
+
+ 		 	<!--  <class name="tests.ABECreateCASASavingsAccountLiabilitiesAndOperationTest"/>
+
+       	     <class name="tests.ABECreateTdLiabilitiesAndOperationTest"/>
+             <class name="tests.ABEVerifyTdLiabilitiesAndOperationTest"/>
+ 		 	 <class name="tests.ABECreateCASASavingsAccountLiabilitiesAndOperationTest"/>
+  			 <class name="tests.ABEVerifyCASASavingsAccountCreationLiabilitiesAndOperationTest"/>
+  			 <class name="tests.ABECreateCASACurrentAccountLiabilitiesAndOperationTest"/>
+  		     <class name="tests.ABEVerifyCasaCurrentAccountCreationLiabilitiesAndOperationTest"/>
+    		 <class name="tests.ABETellerOperationTransferLiabilitiesAndOperationTest"/>-->
+          </classes>
+     </test>
+</suite>

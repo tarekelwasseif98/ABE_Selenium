@@ -1,0 +1,7 @@
+"tcId","summary","username","password","menu","accountId","expectedResult"
+"FCB-12748","Assets_LAA_Retail_Verify_OpenedUnsecuredLoan_Fixed_ CashLoanPensionTransfer_CLPET_Monthly_Equated_EGP_ByChecker_A2","ABE90","Infy@123","VRLA","","The loan account is verified successfully."
+"FCB-12750","Assets_LAA_Retail_Verify_UnsecuredLoan_Fixed_Loan /passengers cars individuals (Self employed )_LPCSE_Quarterly_Equated_EGP_ByChecker_B2","ABE90","Infy@123","VRLA","","The loan account is verified successfully."
+"FCB-12752","Assets_LAA_Retail_Verify_OpenedUnsecuredLoan_FixedWithCertainPeriod_PersonalLoan_PLABE_EGP_ByChecker_C2","ABE90","Infy@123","VRLA","","The loan account is verified successfully."
+"FCB-12754","Assets_LAA_Retail_Verify_OpenedUnsecuredLoan_Fixed_CashLoanBankers_CLBKR_EGP_ByChecker_D2","ABE90","Infy@123","VRLA","","The loan account is verified successfully."
+"FCB-12756","Assets_LAA_Retail_Verify_OpenedUnsecuredLoan_Fixed_���� ����� �������� ������_CLRCC_EGP_ByChecker_E2","ABE90","Infy@123","VRLA","","The loan account is verified successfully."
+"FCB-12758","Assets_LAA_Retail_Verify_OpenedUnsecuredLoan_Fixed_BuyingTrucksAndSemTransportation_TRSTL_EGP_ByChecker_F2","ABE90","Infy@123","VRLA","","The loan account is verified successfully."

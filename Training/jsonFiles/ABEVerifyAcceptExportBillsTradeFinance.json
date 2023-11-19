@@ -5,8 +5,8 @@
   "username": "PT20",
   "password": "Infy@123",
   "menu": "VEOB",
-  "billId": "'1401EDC23000074",
-  "mixedBillId1": "'1401EDC23000075",
+  "billId": "'1401EDC23000307",
+  "mixedBillId1": "'1401EDC23000308",
   "expectedResult": "successfully"
  },
  {
@@ -15,7 +15,7 @@
   "username": "PT20",
   "password": "Infy@123",
   "menu": "VEOB",
-  "billId": "'1401EDC23000077",
+  "billId": "'1401EDC23000310",
   "expectedResult": "successfully"
  },
  {
@@ -24,7 +24,16 @@
   "username": "PT20",
   "password": "Infy@123",
   "menu": "VEOB",
-  "billId": "'1401EDC23000078",
+  "billId": "'1401EDC23000311",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-6826",
+  "summary": "TradeFinance_Export_Bills_Under_Collection_Verify_Acceptance_Usance_Foreign_EUR_ByChecker_E4",
+  "username": "PT20",
+  "password": "Infy@123",
+  "menu": "VEOB",
+  "billId": "'1401EDC23000312",
   "expectedResult": "successfully"
  },
  {
@@ -33,9 +42,9 @@
   "username": "PT20",
   "password": "Infy@123",
   "menu": "VEOB",
-  "billId": "'1401EDC23000079",
-  "mixedBillId1": "'1401EDC23000080",
-  "mixedBillId2": "'1401EDC23000081",
+  "billId": "'1401EDC23000313",
+  "mixedBillId1": "'1401EDC23000314",
+  "mixedBillId2": "'1401EDC23000315",
   "expectedResult": "successfully"
  },
  {
@@ -44,7 +53,7 @@
   "username": "PT20",
   "password": "Infy@123",
   "menu": "VEOB",
-  "billId": "'1401EDC23000082",
+  "billId": "'1401EDC23000316",
   "expectedResult": "successfully"
  },
  {
@@ -53,7 +62,7 @@
   "username": "PT20",
   "password": "Infy@123",
   "menu": "VEOB",
-  "billId": "'1401EDC23000083",
+  "billId": "'1401EDC23000317",
   "expectedResult": "successfully"
  },
  {
@@ -62,8 +71,8 @@
   "username": "PT20",
   "password": "Infy@123",
   "menu": "VEOB",
-  "billId": "'1401EDC23000085",
-  "mixedBillId1": "'1401EDC23000086",
+  "billId": "'1401EDC23000320",
+  "mixedBillId1": "'1401EDC23000321",
   "expectedResult": "successfully"
  }
 ]

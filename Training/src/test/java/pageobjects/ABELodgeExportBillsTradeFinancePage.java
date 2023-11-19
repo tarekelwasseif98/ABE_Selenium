@@ -92,24 +92,11 @@ public class ABELodgeExportBillsTradeFinancePage {
 	private By documentStatusDropDownList = By.xpath("(//select[@id='_meobbill_docStatus_select'])[1]");
 	private By notionalConversionRateTextField = By.xpath("(//input[@id='_meobbill_notConvRateCode$rateCode'])[1]");
 	private By continue4Button = By.xpath("(//button[@id='_meobbill_meobbill_FinButton1'])[1]");
-	private By continue5Button = By.xpath("(//button[@id='_meobassign_FinButton1'])[1]");
-	private By continue6Button = By.xpath("(//button[@id='_margin_margin_Continue'])[1]");
-	private By continue7Button = By.xpath("(//button[@id='_meoblimit_meoblimit_FinButton1'])[1]");
 	private By closeButton1 = By.xpath("(//span[@id='modalCloseIcon'])[1]");
-	private By closeButton2 = By.xpath("(//span[@id='modalCloseIcon'])[2]");
-	private By continue8Button = By.xpath("(//span[@id='fbmpreshipment_textSpan'])[1]");
-	private By continue10Button = By.xpath("(//button[@id='_meobpreship_meobpreship_continue'])[1]");
-	private By continue11Button = By.xpath("(//button[@id='_meobreal_meobreal_FinButton1'])[1]");
+	private By eventDetailsSideTabMenu = By.xpath("(//span[@id='fbmevent_textSpan'])[1]");
 	private By paySysIdTextField = By.xpath("(//input[@id='_meobevent_paySysId'])[1]");
-	private By continue12Button = By.xpath("(//button[@id='_meobevent_eventdet_FinButton1'])[1]");
-	private By continue13Button = By.xpath("(//button[@id='_charge_charge_Continue'])[1]");
-	private By continue14Button = By.xpath("(//button[@id='_dclatercharge_charge_Continue'])[1]");
-	private By continue15Button = By.xpath("(//button[@id='_meobtran_meobtran_FinButton1'])[1]");
-	private By continue16Button = By.xpath("(//button[@id='_meobinstr_instructContineBtn'])[1]");
-	private By continue17Button = By.xpath("(//button[@id='_meobtracer_tracerdet_FinButton1'])[1]");
-	private By continue18Button = By.xpath("(//button[@id='_meobmisc_meobmisc_FinButton1'])[1]");
-	private By continue19Button = By.xpath("(//button[@id='_meobaddn_meobaddn_FinButton1'])[1]");
-	private By continue20Button = By.xpath("(//button[@id='_messagedetails_msgdet_Continue'])[1]");
+	private By continue5Button = By.xpath("(//button[@id='_meobevent_eventdet_FinButton1'])[1]");
+	private By transactionDetailsSideTabMenu = By.xpath("(//span[@id='fbmtran_textSpan'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By billIdSuccessMessage = By.xpath("(//p[@id='_result_FinMessage1_paraMsg'])[1]");
 	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Lodge Export and Outward Bill'])[1]");
@@ -146,6 +133,7 @@ public class ABELodgeExportBillsTradeFinancePage {
 		        PageFunctionUtils.clickOnElement(driver, searchButton);
 		        }
 	        catch (Exception e) {
+	        	
 	        }
         }
 	return this;
@@ -225,7 +213,6 @@ public class ABELodgeExportBillsTradeFinancePage {
 	@Step("Sending operative account id: {0}")
 	public ABELodgeExportBillsTradeFinancePage sendKeysOperativeAccountIdTextField(String operativeAccountId) throws Exception {
 		if(operativeAccountId != null) {
-			PageFunctionUtils.waitOnElement(driver, operativeAccountIdTextField);
 			PageFunctionUtils.clearDataInWebElement(driver, operativeAccountIdTextField);
 			PageFunctionUtils.clickOnElement(driver, operativeAccountIdTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, operativeAccountIdTextField, operativeAccountId.substring(1));
@@ -588,6 +575,12 @@ public class ABELodgeExportBillsTradeFinancePage {
 	@Step("Sending mixed bill amount: {0}")
 	public ABELodgeExportBillsTradeFinancePage sendKeysMixedBillAmountTextField(String mixedBillAmount) throws Exception {
 		if(mixedBillAmount != null) {
+			try {
+				PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+			}
+			catch(Exception e) {
+				
+			}
 			PageFunctionUtils.waitOnElement(driver, mixedBillAmountTextField);
 			PageFunctionUtils.clickOnElement(driver, mixedBillAmountTextField);
 			PageFunctionUtils.enterDataInWebElement(driver, mixedBillAmountTextField, mixedBillAmount);
@@ -667,6 +660,14 @@ public class ABELodgeExportBillsTradeFinancePage {
 		PageFunctionUtils.waitOnElement(driver, acceptTenorDetailsButton);
 		PageFunctionUtils.clickOnElement(driver, acceptTenorDetailsButton);
 		PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+		try {
+			PageFunctionUtils.switchToParentFrame(driver);
+			PageFunctionUtils.waitOnElement(driver, acceptTenorDetailsButton);
+			PageFunctionUtils.clickOnElement(driver, acceptTenorDetailsButton);
+			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
+		} catch(Exception e) {
+			
+		}
 		return this;
 	}
 	
@@ -812,80 +813,17 @@ public class ABELodgeExportBillsTradeFinancePage {
 		return this;
 	}
 	
-	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue5Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue5Button);
-		PageFunctionUtils.clickOnElement(driver, continue5Button);
+	@Step("Side tab navigation")
+	public ABELodgeExportBillsTradeFinancePage navigateEventDetailsSideTabMenu() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, eventDetailsSideTabMenu);
+		PageFunctionUtils.clickOnElement(driver, eventDetailsSideTabMenu);
 		return this;
 	}
 	
-	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue6Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue6Button);
-		PageFunctionUtils.clickOnElement(driver, continue6Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue7Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue7Button);
-		PageFunctionUtils.clickOnElement(driver, continue7Button);
-		try {
-			PageFunctionUtils.switchToParentFrame(driver);
-			PageFunctionUtils.clickOnElement(driver, closeButton1);
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-        } catch (Exception e) {
-        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-		}
-		try {
-			PageFunctionUtils.switchToParentFrame(driver);
-			PageFunctionUtils.clickOnElement(driver, closeButton2);
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-        } catch (Exception e) {
-        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-		}
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue8Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue8Button);
-		PageFunctionUtils.clickOnElement(driver, continue8Button);
-		try {
-			PageFunctionUtils.switchToParentFrame(driver);
-			PageFunctionUtils.clickOnElement(driver, closeButton1);
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-        } catch (Exception e) {
-        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-		}
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue10Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue10Button);
-		PageFunctionUtils.clickOnElement(driver, continue10Button);
-		try {
-			PageFunctionUtils.switchToParentFrame(driver);
-			PageFunctionUtils.clickOnElement(driver, closeButton1);
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-        } catch (Exception e) {
-        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-		}
-		try {
-			PageFunctionUtils.switchToParentFrame(driver);
-			PageFunctionUtils.clickOnElement(driver, closeButton2);
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-        } catch (Exception e) {
-        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-		}
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue11Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue11Button);
-		PageFunctionUtils.clickOnElement(driver, continue11Button);
+	@Step("Side tab navigation")
+	public ABELodgeExportBillsTradeFinancePage navigateTransactionDetailsSideTabMenu() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, transactionDetailsSideTabMenu);
+		PageFunctionUtils.clickOnElement(driver, transactionDetailsSideTabMenu);
 		return this;
 	}
 	
@@ -900,9 +838,9 @@ public class ABELodgeExportBillsTradeFinancePage {
 	}
 	
 	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue12Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue12Button);
-		PageFunctionUtils.clickOnElement(driver, continue12Button);
+	public ABELodgeExportBillsTradeFinancePage pressContinue5Button() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, continue5Button);
+		PageFunctionUtils.clickOnElement(driver, continue5Button);
 		try {
 			PageFunctionUtils.switchToParentFrame(driver);
 			PageFunctionUtils.clickOnElement(driver, closeButton1);
@@ -910,62 +848,6 @@ public class ABELodgeExportBillsTradeFinancePage {
         } catch (Exception e) {
         	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		}
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue13Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue13Button);
-		PageFunctionUtils.clickOnElement(driver, continue13Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue14Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue14Button);
-		PageFunctionUtils.clickOnElement(driver, continue14Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue15Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue15Button);
-		PageFunctionUtils.clickOnElement(driver, continue15Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue16Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue16Button);
-		PageFunctionUtils.clickOnElement(driver, continue16Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue17Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue17Button);
-		PageFunctionUtils.clickOnElement(driver, continue17Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue18Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue18Button);
-		PageFunctionUtils.clickOnElement(driver, continue18Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue19Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue19Button);
-		PageFunctionUtils.clickOnElement(driver, continue19Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABELodgeExportBillsTradeFinancePage pressContinue20Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue20Button);
-		PageFunctionUtils.clickOnElement(driver, continue20Button);
 		return this;
 	}
 	

@@ -25,15 +25,7 @@ public class ABERealizeExportBillsTradeFinancePage {
 	private By paySysIdTextField = By.xpath("(//input[@id='_meobevent_paySysId'])[1]");
 	private By continue2Button = By.xpath("(//button[@id='_meobevent_eventdet_FinButton1'])[1]");
 	private By continue3Button = By.xpath("(//button[@id='_charge_charge_Continue'])[1]");
-	private By continue4Button = By.xpath("(//button[@id='_meobtran_meobtran_FinButton1'])[1]");
-	private By continue5Button = By.xpath("(//button[@id='_meobinstr_instructContineBtn'])[1]");
-	private By continue6Button = By.xpath("(//button[@id='_meobtracer_tracerdet_FinButton1'])[1]");
-	private By continue7Button = By.xpath("(//button[@id='_meobmisc_meobmisc_FinButton1'])[1]");
-	private By continue8Button = By.xpath("(//button[@id='_meobaddn_meobaddn_FinButton1'])[1]");
-	private By continue9Button = By.xpath("(//button[@id='_meobhistory_his_Continue'])[1]");
 	private By closeButton1 = By.xpath("(//span[@id='modalCloseIcon'])[1]");
-	private By closeButton2 = By.xpath("(//span[@id='modalCloseIcon'])[2]");
-	private By continue10Button = By.xpath("(//button[@id='_messagedetails_msgdet_Continue'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By repeatTaskButton = By.xpath("(//button[normalize-space()='Repeat Task'])[1]");
 	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Perform Export and Outward Bill Realization'])[1]");
@@ -59,6 +51,7 @@ public class ABERealizeExportBillsTradeFinancePage {
 		        PageFunctionUtils.clickOnElement(driver, searchButton);
 		        }
 	        catch (Exception e) {
+	        	
 	        }
         }
 	return this;
@@ -150,49 +143,6 @@ public class ABERealizeExportBillsTradeFinancePage {
 	@Step("Press continue button")
 	public ABERealizeExportBillsTradeFinancePage pressContinue2Button() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, continue2Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABERealizeExportBillsTradeFinancePage pressContinue3Button() throws Exception {
-		PageFunctionUtils.clickOnElement(driver, continue3Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABERealizeExportBillsTradeFinancePage pressContinue4Button() throws Exception {
-		PageFunctionUtils.clickOnElement(driver, continue4Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABERealizeExportBillsTradeFinancePage pressContinue5Button() throws Exception {
-		PageFunctionUtils.clickOnElement(driver, continue5Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABERealizeExportBillsTradeFinancePage pressContinue6Button() throws Exception {
-		PageFunctionUtils.clickOnElement(driver, continue6Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABERealizeExportBillsTradeFinancePage pressContinue7Button() throws Exception {
-		PageFunctionUtils.clickOnElement(driver, continue7Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABERealizeExportBillsTradeFinancePage pressContinue8Button() throws Exception {
-		PageFunctionUtils.clickOnElement(driver, continue8Button);
-		return this;
-	}
-	
-	
-	@Step("Press continue button")
-	public ABERealizeExportBillsTradeFinancePage pressContinue9Button() throws Exception {
-		PageFunctionUtils.clickOnElement(driver, continue9Button);
 		try {
 			PageFunctionUtils.switchToParentFrame(driver);
 			PageFunctionUtils.clickOnElement(driver, closeButton1);
@@ -200,19 +150,12 @@ public class ABERealizeExportBillsTradeFinancePage {
         } catch (Exception e) {
         	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
 		}
-		try {
-			PageFunctionUtils.switchToParentFrame(driver);
-			PageFunctionUtils.clickOnElement(driver, closeButton2);
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-        } catch (Exception e) {
-        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-		}
 		return this;
 	}
 	
 	@Step("Press continue button")
-	public ABERealizeExportBillsTradeFinancePage pressContinue10Button() throws Exception {
-		PageFunctionUtils.clickOnElement(driver, continue10Button);
+	public ABERealizeExportBillsTradeFinancePage pressContinue3Button() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, continue3Button);
 		return this;
 	}
 	

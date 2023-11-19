@@ -1,12 +1,12 @@
 tcId,summary,username,password,menu,billId,expectedResult,acceptLinkedTcid,verifyAcceptLinkedTcid,purchaseLinkedTcid,verifyPurchaseLinkedTcid,realizeLinkedTcid,verifyRealizeLinkedTcid
-FCB-6872,TradeFinance_Export_Bills_Under_Collection_Verify_Sight_Foreign_EUR_ByChecker_M2,PT20,Infy@123,VEOB,'1401EDC23000057,successfully,,,,,FCB-6875,FCB-6876
-FCB-6852,TradeFinance_Export_Bills_Under_Collection_Verify_Mixed Tenor_Local_EGP_ByChecker_H2,PT20,Infy@123,VEOB,'1401EDC23000058,successfully,FCB-6853,FCB-6854,,,FCB-6855,FCB-6856
-FCB-6804,TradeFinance_Export_Bills_Under_Collection_Verify_Usance_Local_EGP_ByChecker_C2,PT20,Infy@123,VEOB,'1401EDC23000061,successfully,FCB-6805,FCB-6806,FCB-6809,FCB-6810,FCB-6807,FCB-6808
-FCB-6812,TradeFinance_Export_Bills_Under_Collection_Verify_Usance_Foreign_USD_ByChecker_D2,PT20,Infy@123,VEOB,'1401EDC23000062,successfully,FCB-6813,FCB-6814,,,,
-FCB-6824,TradeFinance_Export_Bills_Under_Collection_Verify_Usance_Foreign_EUR_ByChecker_E2,PT20,Infy@123,VEOB,'1401EDC23000063,successfully,FCB-6825,FCB-6826,FCB-6829,FCB-6830,FCB-6827,FCB-6828
-FCB-6832,TradeFinance_Export_Bills_Under_Collection_Verify_Mixed Tenor_Foreign_USD_ByChecker_F2,PT20,Infy@123,VEOB,'1401EDC23000064,successfully,FCB-6833,FCB-6834,FCB-6839,FCB-6840,FCB-6835,FCB-6836
-FCB-7177,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Usance_Local_EGP_ByChecker_A2,PT20,Infy@123,VEOB,'1401EDC23000067,successfully,FCB-7178,FCB-7179,FCB-7182,FCB-7183,FCB-7180,FCB-7181
-FCB-7209,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Usance_Foreign_USD_ByChecker_F2,PT20,Infy@123,VEOB,'1401EDC23000068,successfully,FCB-7210,FCB-7211,FCB-7216,FCB-7217,,
-FCB-7201,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Sight_Foreign_EUR_ByChecker_D2,PT20,Infy@123,VEOB,'1401EDC23000069,successfully,,,,,FCB-7202,FCB-7203
-FCB-7205,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Sight_Local_EGP_ByChecker_E2,PT20,Infy@123,VEOB,'1401EDC23000070,successfully,,,,,,
-FCB-7231,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Mixed Tenor_Foreign_USD_ByChecker_J2,PT20,Infy@123,VEOB,'1401EDC23000071,successfully,FCB-7232,FCB-7233,FCB-7238,FCB-7239,FCB-7236,FCB-7237
+FCB-6872,TradeFinance_Export_Bills_Under_Collection_Verify_Sight_Foreign_EUR_ByChecker_M2,PT20,Infy@123,VEOB,'1401EDC23000306,successfully,,,,,FCB-6875,FCB-6876
+FCB-6852,TradeFinance_Export_Bills_Under_Collection_Verify_Mixed Tenor_Local_EGP_ByChecker_H2,PT20,Infy@123,VEOB,'1401EDC23000307,successfully,FCB-6853,FCB-6854,,,FCB-6855,FCB-6856
+FCB-6804,TradeFinance_Export_Bills_Under_Collection_Verify_Usance_Local_EGP_ByChecker_C2,PT20,Infy@123,VEOB,'1401EDC23000310,successfully,FCB-6805,FCB-6806,FCB-6809,FCB-6810,FCB-6807,FCB-6808
+FCB-6812,TradeFinance_Export_Bills_Under_Collection_Verify_Usance_Foreign_USD_ByChecker_D2,PT20,Infy@123,VEOB,'1401EDC23000311,successfully,FCB-6813,FCB-6814,,,,
+FCB-6824,TradeFinance_Export_Bills_Under_Collection_Verify_Usance_Foreign_EUR_ByChecker_E2,PT20,Infy@123,VEOB,'1401EDC23000312,successfully,FCB-6825,FCB-6826,FCB-6829,FCB-6830,FCB-6827,FCB-6828
+FCB-6832,TradeFinance_Export_Bills_Under_Collection_Verify_Mixed Tenor_Foreign_USD_ByChecker_F2,PT20,Infy@123,VEOB,'1401EDC23000313,successfully,FCB-6833,FCB-6834,FCB-6839,FCB-6840,FCB-6835,FCB-6836
+FCB-7177,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Usance_Local_EGP_ByChecker_A2,PT20,Infy@123,VEOB,'1401EDC23000316,successfully,FCB-7178,FCB-7179,FCB-7182,FCB-7183,FCB-7180,FCB-7181
+FCB-7209,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Usance_Foreign_USD_ByChecker_F2,PT20,Infy@123,VEOB,'1401EDC23000317,successfully,FCB-7210,FCB-7211,FCB-7216,FCB-7217,,
+FCB-7201,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Sight_Foreign_EUR_ByChecker_D2,PT20,Infy@123,VEOB,'1401EDC23000318,successfully,,,,,FCB-7202,FCB-7203
+FCB-7205,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Sight_Local_EGP_ByChecker_E2,PT20,Infy@123,VEOB,'1401EDC23000319,successfully,,,,,,
+FCB-7231,TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Mixed Tenor_Foreign_USD_ByChecker_J2,PT20,Infy@123,VEOB,'1401EDC23000320,successfully,FCB-7232,FCB-7233,FCB-7238,FCB-7239,FCB-7236,FCB-7237

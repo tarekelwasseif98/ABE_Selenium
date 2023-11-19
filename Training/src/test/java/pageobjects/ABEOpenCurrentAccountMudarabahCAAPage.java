@@ -125,7 +125,7 @@ public class ABEOpenCurrentAccountMudarabahCAAPage {
 		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.scrollUpToElement(driver, menuNameTextBox);
 		PageFunctionUtils.waitOnElement(driver, accountIdSuccessMessage);
-		acId = driver.findElement(accountIdSuccessMessage).getText().substring(53, 71);
+		acId = driver.findElement(accountIdSuccessMessage).getText().substring(53);
 		return this;
 	}
 	

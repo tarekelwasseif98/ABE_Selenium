@@ -1,13 +1,22 @@
 [
  {
+  "tcId": "FCB-6876",
+  "summary": "TradeFinance_Export_Bills_Under_Collection_Verify_Realize_Sight_Foreign_EUR_ByChecker_M8",
+  "username": "PT20",
+  "password": "Infy@123",
+  "menu": "VEOB",
+  "billId": "'1401EDC23000306",
+  "expectedResult": "successfully"
+ },
+ {
   "tcId": "FCB-6856",
   "summary": "TradeFinance_Export_Bills_Under_Collection_Verify_Realize_Mixed Tenor_Local_EGP_ByChecker_H6",
   "username": "PT20",
   "password": "Infy@123",
   "menu": "VEOB",
-  "billId": "'1401EDC23000074",
-  "mixedBillId1": "'1401EDC23000075",
-  "mixedBillId2": "'1401EDC23000076",
+  "billId": "'1401EDC23000307",
+  "mixedBillId1": "'1401EDC23000308",
+  "mixedBillId2": "'1401EDC23000309",
   "expectedResult": "successfully"
  },
  {
@@ -16,7 +25,16 @@
   "username": "PT20",
   "password": "Infy@123",
   "menu": "VEOB",
-  "billId": "'1401EDC23000077",
+  "billId": "'1401EDC23000310",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-6828",
+  "summary": "TradeFinance_Export_Bills_Under_Collection_Verify_Realize_Usance_Foreign_EUR_ByChecker_E10",
+  "username": "PT20",
+  "password": "Infy@123",
+  "menu": "VEOB",
+  "billId": "'1401EDC23000312",
   "expectedResult": "successfully"
  },
  {
@@ -25,9 +43,9 @@
   "username": "PT20",
   "password": "Infy@123",
   "menu": "VEOB",
-  "billId": "'1401EDC23000079",
-  "mixedBillId1": "'1401EDC23000080",
-  "mixedBillId2": "'1401EDC23000081",
+  "billId": "'1401EDC23000313",
+  "mixedBillId1": "'1401EDC23000314",
+  "mixedBillId2": "'1401EDC23000315",
   "expectedResult": "successfully"
  },
  {
@@ -36,7 +54,16 @@
   "username": "PT20",
   "password": "Infy@123",
   "menu": "VEOB",
-  "billId": "'1401EDC23000082",
+  "billId": "'1401EDC23000316",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-7203",
+  "summary": "TradeFinance_Export_Bills_Under_Documentary_Credit_Verify_Realize_Sight_Foreign_EUR_ByChecker_D4",
+  "username": "PT20",
+  "password": "Infy@123",
+  "menu": "VEOB",
+  "billId": "'1401EDC23000318",
   "expectedResult": "successfully"
  },
  {
@@ -45,9 +72,9 @@
   "username": "PT20",
   "password": "Infy@123",
   "menu": "VEOB",
-  "billId": "'1401EDC23000085",
-  "mixedBillId1": "'1401EDC23000086",
-  "mixedBillId2": "'1401EDC23000087",
+  "billId": "'1401EDC23000320",
+  "mixedBillId1": "'1401EDC23000321",
+  "mixedBillId2": "'1401EDC23000322",
   "expectedResult": "successfully"
  }
 ]

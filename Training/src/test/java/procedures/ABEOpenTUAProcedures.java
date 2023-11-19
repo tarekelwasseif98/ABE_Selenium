@@ -26,6 +26,6 @@ public class ABEOpenTUAProcedures {
 					               .pressContinue3Button()
 					                .navigateRenewalAndClosureDetailsTabMenu()
 					                 .pressSubmitButton()
-					                  .saveAccountId(data.getLinkedTcid());
+					                  .saveAccountId(data.getLinkedTcid(), data.getCloseLinkedTcid());
 		}
 	}

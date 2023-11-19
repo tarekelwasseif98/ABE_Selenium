@@ -317,23 +317,11 @@ public class ABELodgeExportBillsTradeFinanceProcedures {
 		}
 		lodgeExportBillsTradeFinancePage.sendKeysNotionalConversionRateTextField(data.getNotionalConversionRate())
 										 .pressContinue4Button()
-										  .pressContinue5Button()
-										   .pressContinue6Button()
-										    .pressContinue7Button()
-										     .pressContinue8Button()
-										      .pressContinue10Button()
-										       .pressContinue11Button()
-										        .sendKeysPaySysIdTextField(data.getPaySysId())
-										         .pressContinue12Button()
-										          .pressContinue13Button()
-										           .pressContinue14Button()
-										            .pressContinue15Button()
-										             .pressContinue16Button()
-										              .pressContinue17Button()
-										               .pressContinue18Button()
-										                .pressContinue19Button()
-										                 .pressContinue20Button()
-										                  .pressSubmitButton()
-										                   .saveBillId(data.getLinkedTcid(), data.getAcceptLinkedTcid(), data.getVerifyAcceptLinkedTcid(), data.getPurchaseLinkedTcid(), data.getVerifyPurchaseLinkedTcid(), data.getRealizeLinkedTcid(), data.getVerifyRealizeLinkedTcid());
+										  .navigateEventDetailsSideTabMenu()
+										   .sendKeysPaySysIdTextField(FinacleFieldsUtils.PAYSYSIDSWIFT)
+										    .pressContinue5Button()
+										     .navigateTransactionDetailsSideTabMenu()
+										      .pressSubmitButton()
+										       .saveBillId(data.getLinkedTcid(), data.getAcceptLinkedTcid(), data.getVerifyAcceptLinkedTcid(), data.getPurchaseLinkedTcid(), data.getVerifyPurchaseLinkedTcid(), data.getRealizeLinkedTcid(), data.getVerifyRealizeLinkedTcid());
 		}
 	}

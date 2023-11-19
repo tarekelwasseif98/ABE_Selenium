@@ -3,6 +3,7 @@ package procedures;
 import org.openqa.selenium.WebDriver;
 import data.ABEPurchaseExportBillsTradeFinanceData;
 import pageobjects.ABEPurchaseExportBillsTradeFinancePage;
+import utils.FinacleFieldsUtils;
 
 public class ABEPurchaseExportBillsTradeFinanceProcedures {
 	public static void purchaseExportBillsTradeFinance(WebDriver driver, ABEPurchaseExportBillsTradeFinanceData data) throws Exception {
@@ -19,40 +20,24 @@ public class ABEPurchaseExportBillsTradeFinanceProcedures {
 												       .sendKeysBillPurchaseAccountIdTextField(data.getMixedBill1PurchaseAccountId())
 												        .sendKeysBillPurchaseAmountTextField(data.getMixedBill1PurchaseAmount())
 												         .sendKeysValueDateTextField(data.getMixedBill1ValueDate())
-												          .pressContinue2Button()
-												           .pressContinue3Button()
-												            .pressContinue4Button()
-												             .pressContinue5Button()
-												              .pressContinue6Button()
-												               .pressContinue7Button()
-												                .pressContinue8Button()
-												                 .pressContinue9Button()
-												                  .pressContinue10Button()
-												                   .pressContinue11Button()
-												                    .pressContinue12Button()
-												                     .pressSubmitButton()
-												                      .pressRepeatTaskButton()
-																	   .sendKeysBillIdTextField(data.getBillId())
-																	    .sendKeysTenorBillIdTextField(data.getMixedBillId2())
-																	     .pressGoButton()
-																	      .navigateLimitDetailsSideTabMenu()
-																	       .sendKeysLimitIdTextField(data.getMixedBill2LimitIdPrefix(), data.getMixedBill2LimitIdSuffix())
-																	        .pressContinue1Button()
-																	         .sendKeysBillPurchaseAccountIdTextField(data.getMixedBill2PurchaseAccountId())
-																	          .sendKeysBillPurchaseAmountTextField(data.getMixedBill2PurchaseAmount())
-																	           .sendKeysValueDateTextField(data.getMixedBill2ValueDate())
-																		        .pressContinue2Button()
-																		         .pressContinue3Button()
-																		          .pressContinue4Button()
-																		           .pressContinue5Button()
-																		            .pressContinue6Button()
-																		             .pressContinue7Button()
-																		              .pressContinue8Button()
-																		               .pressContinue9Button()
-																		                .pressContinue10Button()
-																		                 .pressContinue11Button()
-																		                  .pressContinue12Button()
-																		                   .pressSubmitButton();
+												          .navigateEventDetailsSideTabMenu()
+											               .sendKeysPaySysIdTextField(FinacleFieldsUtils.PAYSYSIDSWIFT)
+											                .navigateTransactionDetailsSideTabMenu()
+											                 .pressSubmitButton()
+												              .pressRepeatTaskButton()
+															   .sendKeysBillIdTextField(data.getBillId())
+																.sendKeysTenorBillIdTextField(data.getMixedBillId2())
+																 .pressGoButton()
+																  .navigateLimitDetailsSideTabMenu()
+																   .sendKeysLimitIdTextField(data.getMixedBill2LimitIdPrefix(), data.getMixedBill2LimitIdSuffix())
+																	.pressContinue1Button()
+																	 .sendKeysBillPurchaseAccountIdTextField(data.getMixedBill2PurchaseAccountId())
+																	  .sendKeysBillPurchaseAmountTextField(data.getMixedBill2PurchaseAmount())
+																	   .sendKeysValueDateTextField(data.getMixedBill2ValueDate())
+																	    .navigateEventDetailsSideTabMenu()
+															             .sendKeysPaySysIdTextField(FinacleFieldsUtils.PAYSYSIDSWIFT)
+															              .navigateTransactionDetailsSideTabMenu()
+															               .pressSubmitButton();
 			}
 		else if(data.getMixedBillId1() != null && data.getMixedBillId2() == null) {
 			purchaseExportBillsTradeFinancePage.sendKeysSearchBarTextField(data.getMenu())
@@ -66,18 +51,10 @@ public class ABEPurchaseExportBillsTradeFinanceProcedures {
 											           .sendKeysBillPurchaseAccountIdTextField(data.getMixedBill1PurchaseAccountId())
 											            .sendKeysBillPurchaseAmountTextField(data.getMixedBill1PurchaseAmount())
 											             .sendKeysValueDateTextField(data.getMixedBill1ValueDate())
-											              .pressContinue2Button()
-											               .pressContinue3Button()
-											                .pressContinue4Button()
-											                 .pressContinue5Button()
-											                  .pressContinue6Button()
-											                   .pressContinue7Button()
-											                    .pressContinue8Button()
-											                     .pressContinue9Button()
-											                      .pressContinue10Button()
-											                       .pressContinue11Button()
-											                        .pressContinue12Button()
-											                         .pressSubmitButton();
+											              .navigateEventDetailsSideTabMenu()
+											               .sendKeysPaySysIdTextField(FinacleFieldsUtils.PAYSYSIDSWIFT)
+											                .navigateTransactionDetailsSideTabMenu()
+											                 .pressSubmitButton();
 			}
 		else if(data.getMixedBillId1() == null && data.getMixedBillId2() != null) {
 			purchaseExportBillsTradeFinancePage.sendKeysSearchBarTextField(data.getMenu())
@@ -91,18 +68,10 @@ public class ABEPurchaseExportBillsTradeFinanceProcedures {
 											           .sendKeysBillPurchaseAccountIdTextField(data.getMixedBill2PurchaseAccountId())
 											            .sendKeysBillPurchaseAmountTextField(data.getMixedBill2PurchaseAmount())
 											             .sendKeysValueDateTextField(data.getMixedBill2ValueDate())
-											              .pressContinue2Button()
-											               .pressContinue3Button()
-											                .pressContinue4Button()
-											                 .pressContinue5Button()
-											                  .pressContinue6Button()
-											                   .pressContinue7Button()
-											                    .pressContinue8Button()
-											                     .pressContinue9Button()
-											                      .pressContinue10Button()
-											                       .pressContinue11Button()
-											                        .pressContinue12Button()
-											                         .pressSubmitButton();
+											              .navigateEventDetailsSideTabMenu()
+											               .sendKeysPaySysIdTextField(FinacleFieldsUtils.PAYSYSIDSWIFT)
+											                .navigateTransactionDetailsSideTabMenu()
+											                 .pressSubmitButton();
 			}
 		else if(data.getMixedBillId1() == null && data.getMixedBillId2() == null) {
 			purchaseExportBillsTradeFinancePage.sendKeysSearchBarTextField(data.getMenu())
@@ -115,18 +84,10 @@ public class ABEPurchaseExportBillsTradeFinanceProcedures {
 											          .sendKeysBillPurchaseAccountIdTextField(data.getBillPurchaseAccountId())
 											           .sendKeysBillPurchaseAmountTextField(data.getBillPurchaseAmount())
 											            .sendKeysValueDateTextField(data.getValueDate())
-											             .pressContinue2Button()
-											              .pressContinue3Button()
-											               .pressContinue4Button()
-											                .pressContinue5Button()
-											                 .pressContinue6Button()
-											                  .pressContinue7Button()
-											                   .pressContinue8Button()
-											                    .pressContinue9Button()
-											                     .pressContinue10Button()
-											                      .pressContinue11Button()
-											                       .pressContinue12Button()
-											                        .pressSubmitButton();
+											             .navigateEventDetailsSideTabMenu()
+											              .sendKeysPaySysIdTextField(FinacleFieldsUtils.PAYSYSIDSWIFT)
+											               .navigateTransactionDetailsSideTabMenu()
+											                .pressSubmitButton();
 			}
 		}
 	}

@@ -1,0 +1,92 @@
+[
+ {
+  "tcId": "FCB-9973",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_CarsShortTerm_4010_ByChecker_C1",
+  "username": "PT10",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'4010065842560100301 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9974",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_CarsMedium&LongTerm_4011_ByChecker_C2",
+  "username": "PT10",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'4011065842560100319 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9975",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_MicroFinanceShortTerm_4012_ByChecker_C3",
+  "username": "PT10",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'4012065842560100327 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9976",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_RetailProjectsShortTerm_4013_ByChecker_C4",
+  "username": "PT10",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'4013065842560100335 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9977",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_RetailProjectsMedium&LongTerm_4014_ByChecker_C5",
+  "username": "PT10",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'4014065842560100343 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9978",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_LivestockShortTerm_4015_ByChecker_C6",
+  "username": "PT10",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'4015065842560100351 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9979",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_LivestockMedium&LongTerm_4016_ByChecker_C7",
+  "username": "PT10",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'4016065842560100369 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9980",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_MicroFinanceCBEShortTerm_4017_ByChecker_C8",
+  "username": "PT10",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'4017065842560100377 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9981",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_MicroFinanceCBEMedium&LongTerm_4018_ByChecker_C9",
+  "username": "PT10",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'4018065842560100385 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-9982",
+  "summary": "IslamicBanking_MurabahaFinancing_Verify_MurabahaAccount_SMEs-S-CBE-ShortTerm_4000_ByChecker_C10",
+  "username": "PT10",
+  "password": "Infy@123",
+  "menu": "AIFAT",
+  "accountId": "'4000065842560100395 ",
+  "expectedResult": "successfully"
+ }
+]

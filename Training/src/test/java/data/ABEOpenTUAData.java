@@ -18,7 +18,8 @@ public class ABEOpenTUAData {
 	private String expectedResult;
 	private String reference;
 	private String linkedTcid;
-	
+	private String closeLinkedTcid;
+
 	public String getTcId() {
 		return tcId;
 	}
@@ -154,6 +155,14 @@ public class ABEOpenTUAData {
 	public void setLinkedTcid(String linkedTcid) {
 		this.linkedTcid = linkedTcid;
 	}
+	
+	public String getCloseLinkedTcid() {
+		return closeLinkedTcid;
+	}
+
+	public void setCloseLinkedTcid(String closeLinkedTcid) {
+		this.closeLinkedTcid = closeLinkedTcid;
+	}
 
 	@Override
 	public String toString() {
@@ -162,6 +171,7 @@ public class ABEOpenTUAData {
 				+ valueDate + ", depositPeriodMonths=" + depositPeriodMonths + ", depositPeriodDays="
 				+ depositPeriodDays + ", initialDepositAmount=" + initialDepositAmount + ", profitCreditAccountId="
 				+ profitCreditAccountId + ", repaymentAccountId=" + repaymentAccountId + ", debitAccountId="
-				+ debitAccountId + ", expectedResult=" + expectedResult + ", linkedTcid=" + linkedTcid + "]";
+				+ debitAccountId + ", expectedResult=" + expectedResult + ", linkedTcid=" + linkedTcid
+				+ ", closeLinkedTcid=" + closeLinkedTcid + "]";
 	}
 }

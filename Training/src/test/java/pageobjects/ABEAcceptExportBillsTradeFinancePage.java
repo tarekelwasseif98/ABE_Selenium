@@ -26,21 +26,9 @@ public class ABEAcceptExportBillsTradeFinancePage {
 	private By tenorDetailsEditButton2 = By.xpath("(//span[@class='editcontent'])[2]");
 	private By acceptanceDateTextField = By.xpath("(//input[@id='_acceptDate'])[1]");
 	private By tenorDetailsUpdateButton = By.xpath("(//button[@id='_tenordetails_updateSummary'])[1]");
-	private By continue3Button = By.xpath("(//button[@id='_meobtenor_continue'])[1]");
-	private By continue4Button = By.xpath("(//button[@id='_meobbill_meobbill_FinButton1'])[1]");
-	private By continue5Button = By.xpath("(//button[@id='_meobassign_FinButton1'])[1]");
-	private By continue6Button = By.xpath("(//button[@id='_meoblimit_meoblimit_FinButton1'])[1]");
-	private By continue7Button = By.xpath("(//button[@id='_meobpur_meobpur_FinButton1'])[1]");
-	private By continue8Button = By.xpath("(//button[@id='_meobevent_eventdet_FinButton1'])[1]");
-	private By continue9Button = By.xpath("(//button[@id='_charge_charge_Continue'])[1]");
-	private By continue10Button = By.xpath("(//button[@id='_meobtran_meobtran_FinButton1'])[1]");
-	private By continue11Button = By.xpath("(//button[@id='_meobinstr_instructContineBtn'])[1]");
-	private By continue12Button = By.xpath("(//button[@id='_meobtracer_tracerdet_FinButton1'])[1]");
-	private By continue13Button = By.xpath("(//button[@id='_meobmisc_meobmisc_FinButton1'])[1]");
-	private By continue14Button = By.xpath("(//button[@id='_meobaddn_meobaddn_FinButton1'])[1]");
-	private By continue15Button = By.xpath("(//button[@id='_meobhistory_his_Continue'])[1]");
-	private By closeButton = By.xpath("(//span[@id='modalCloseIcon'])[1]");
-	private By continue16Button = By.xpath("(//button[@id='_messagedetails_msgdet_Continue'])[1]");
+	private By eventDetailsSideTabMenu = By.xpath("(//span[@id='fbmevent_textSpan'])[1]");
+	private By paySysIdTextField = By.xpath("(//input[@id='_meobevent_paySysId'])[1]");
+	private By transactionDetailsSideTabMenu = By.xpath("(//span[@id='fbmtran_textSpan'])[1]");
 	private By submitButton = By.xpath("(//button[normalize-space()='Submit'])[1]");
 	private By menuNameTextBox = By.xpath("(//h1[normalize-space()='Accept Export and Outward Bill'])[1]");
 	private By repeatTaskButton = By.xpath("(//button[normalize-space()='Repeat Task'])[1]");
@@ -70,6 +58,7 @@ public class ABEAcceptExportBillsTradeFinancePage {
 		        PageFunctionUtils.clickOnElement(driver, searchButton);
 		        }
 	        catch (Exception e) {
+	        	
 	        }
         }
 	return this;
@@ -112,7 +101,32 @@ public class ABEAcceptExportBillsTradeFinancePage {
 		return this;
 	}
 	
-	@Step("General details side tab navigation")
+	@Step("Side tab navigation")
+	public ABEAcceptExportBillsTradeFinancePage navigateEventDetailsSideTabMenu() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, eventDetailsSideTabMenu);
+		PageFunctionUtils.clickOnElement(driver, eventDetailsSideTabMenu);
+		return this;
+	}
+	
+	@Step("Sending paysys id: {0}")
+	public ABEAcceptExportBillsTradeFinancePage sendKeysPaySysIdTextField(String paySysId) throws Exception {
+		if(paySysId != null) {
+			PageFunctionUtils.waitOnElement(driver, paySysIdTextField);
+			PageFunctionUtils.clearDataInWebElement(driver, paySysIdTextField);
+			PageFunctionUtils.clickOnElement(driver, paySysIdTextField);
+			PageFunctionUtils.enterDataInWebElement(driver, paySysIdTextField, paySysId);
+		}
+		return this;
+	}
+	
+	@Step("Side tab navigation")
+	public ABEAcceptExportBillsTradeFinancePage navigateTransactionDetailsSideTabMenu() throws Exception {
+		PageFunctionUtils.waitOnElement(driver, transactionDetailsSideTabMenu);
+		PageFunctionUtils.clickOnElement(driver, transactionDetailsSideTabMenu);
+		return this;
+	}
+	
+	@Step("Side tab navigation")
 	public ABEAcceptExportBillsTradeFinancePage navigateGeneralDetailsSideTabMenu() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, generalDetailsSideTab);
 		PageFunctionUtils.clickOnElement(driver, generalDetailsSideTab);
@@ -161,111 +175,6 @@ public class ABEAcceptExportBillsTradeFinancePage {
 	public ABEAcceptExportBillsTradeFinancePage pressTenorDetailsUpdateButton() throws Exception {
 		PageFunctionUtils.waitOnElement(driver, tenorDetailsUpdateButton);
 		PageFunctionUtils.clickOnElement(driver, tenorDetailsUpdateButton);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABEAcceptExportBillsTradeFinancePage pressContinue3Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue3Button);
-		PageFunctionUtils.clickOnElement(driver, continue3Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABEAcceptExportBillsTradeFinancePage pressContinue4Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue4Button);
-		PageFunctionUtils.clickOnElement(driver, continue4Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABEAcceptExportBillsTradeFinancePage pressContinue5Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue5Button);
-		PageFunctionUtils.clickOnElement(driver, continue5Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABEAcceptExportBillsTradeFinancePage pressContinue6Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue6Button);
-		PageFunctionUtils.clickOnElement(driver, continue6Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABEAcceptExportBillsTradeFinancePage pressContinue7Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue7Button);
-		PageFunctionUtils.clickOnElement(driver, continue7Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABEAcceptExportBillsTradeFinancePage pressContinue8Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue8Button);
-		PageFunctionUtils.clickOnElement(driver, continue8Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABEAcceptExportBillsTradeFinancePage pressContinue9Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue9Button);
-		PageFunctionUtils.clickOnElement(driver, continue9Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABEAcceptExportBillsTradeFinancePage pressContinue10Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue10Button);
-		PageFunctionUtils.clickOnElement(driver, continue10Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABEAcceptExportBillsTradeFinancePage pressContinue11Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue11Button);
-		PageFunctionUtils.clickOnElement(driver, continue11Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABEAcceptExportBillsTradeFinancePage pressContinue12Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue12Button);
-		PageFunctionUtils.clickOnElement(driver, continue12Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABEAcceptExportBillsTradeFinancePage pressContinue13Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue13Button);
-		PageFunctionUtils.clickOnElement(driver, continue13Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABEAcceptExportBillsTradeFinancePage pressContinue14Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue14Button);
-		PageFunctionUtils.clickOnElement(driver, continue14Button);
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABEAcceptExportBillsTradeFinancePage pressContinue15Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue15Button);
-		PageFunctionUtils.clickOnElement(driver, continue15Button);
-		try {
-			PageFunctionUtils.switchToParentFrame(driver);
-			PageFunctionUtils.clickOnElement(driver, closeButton);
-			PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-        } catch (Exception e) {
-        	PageFunctionUtils.waitOnFrameAndSwitchXpath(driver, formAreaIframeId);
-		}
-		return this;
-	}
-	
-	@Step("Press continue button")
-	public ABEAcceptExportBillsTradeFinancePage pressContinue16Button() throws Exception {
-		PageFunctionUtils.waitOnElement(driver, continue16Button);
-		PageFunctionUtils.clickOnElement(driver, continue16Button);
 		return this;
 	}
 	

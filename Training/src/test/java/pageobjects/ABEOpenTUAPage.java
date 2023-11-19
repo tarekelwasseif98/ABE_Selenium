@@ -44,6 +44,7 @@ public class ABEOpenTUAPage {
 	public static String  accountIdCsvColumnName = "accountId";
 	public static String  tcIdCsvColumnName = "tcId";
 	public static String  linkedTcidCsvColumnName = "linkedTcid";
+	public static String  closeLinkedTcidCsvColumnName = "closeLinkedTcid";
 	
 	public ABEOpenTUAPage(WebDriver driver) {
 		this.driver = driver;
@@ -234,7 +235,7 @@ public class ABEOpenTUAPage {
 	}
 	
 	@Step("Save account id")
-	public ABEOpenTUAPage saveAccountId(String linkedId) throws Exception {
+	public ABEOpenTUAPage saveAccountId(String linkedId, String closeLinkedTcid) throws Exception {
 		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABEOPENTUACSV, linkedTcidCsvColumnName, linkedId);
 		int columnByColumnName1 = CSVUtils.getColumnByColumnName(Paths.ABEOPENTUACSV, referenceCsvColumnName);
 		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEVERIFYTUAOPENINGCSV, tcIdCsvColumnName, linkedId);
@@ -243,6 +244,12 @@ public class ABEOpenTUAPage {
 			CSVUtils.insertValueInCsvCell(Paths.ABEOPENTUACSV, rowByTcid1, columnByColumnName1, accountId);
 			CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYTUAOPENINGCSV, rowByTcid2, columnByColumnName2, accountId);
 		}
+		int rowByTcid3 = CSVUtils.getRowByTcid(Paths.ABEOPENTUACSV, closeLinkedTcidCsvColumnName, closeLinkedTcid);
+		int rowByTcid4 = CSVUtils.getRowByTcid(Paths.ABECLOSETUACSV, tcIdCsvColumnName, closeLinkedTcid);
+		int columnByColumnName4 = CSVUtils.getColumnByColumnName(Paths.ABECLOSETUACSV, accountIdCsvColumnName);
+		if(rowByTcid3 != -1 && rowByTcid4 != -1) {
+			CSVUtils.insertValueInCsvCell(Paths.ABECLOSETUACSV, rowByTcid4, columnByColumnName4, accountId);
+		}
 		return this;
-	}										
+	}							
 }

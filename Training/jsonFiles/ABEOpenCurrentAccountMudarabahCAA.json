@@ -1,0 +1,86 @@
+[
+ {
+  "tcId": "FCB-9827",
+  "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Corporate_CACO_ByMaker_A1",
+  "username": "PT1",
+  "password": "Infy@123",
+  "menu": "OICAC",
+  "cif": "'06579430",
+  "schemeCode": 1610,
+  "generalLedgerSubheadCode": 21901,
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-9836"
+ },
+ {
+  "tcId": "FCB-9829",
+  "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Pension_CAP_ByMaker_A3",
+  "username": "PT1",
+  "password": "Infy@123",
+  "menu": "OICAC",
+  "cif": "'06248951",
+  "schemeCode": 1603,
+  "generalLedgerSubheadCode": 21904,
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-9838"
+ },
+ {
+  "tcId": "FCB-9830",
+  "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Co-OprerativeOrganization_CACOOP_ByMaker_A4",
+  "username": "PT1",
+  "password": "Infy@123",
+  "menu": "OICAC",
+  "cif": "'06248951",
+  "schemeCode": 1604,
+  "generalLedgerSubheadCode": 21902,
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-9839"
+ },
+ {
+  "tcId": "FCB-9831",
+  "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Inherit_CAINH_ByMaker_A5",
+  "username": "PT1",
+  "password": "Infy@123",
+  "menu": "OICAC",
+  "cif": "'06248951",
+  "schemeCode": 1605,
+  "generalLedgerSubheadCode": 21905,
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-9840"
+ },
+ {
+  "tcId": "FCB-9832",
+  "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_Individuals_CAIN_ByMaker_A6",
+  "username": "PT1",
+  "password": "Infy@123",
+  "menu": "OICAC",
+  "cif": "'06248951",
+  "schemeCode": 1606,
+  "generalLedgerSubheadCode": 21903,
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-9841"
+ },
+ {
+  "tcId": "FCB-9833",
+  "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_AgriculturePersons_CAAP_ByMaker_A7",
+  "username": "PT1",
+  "password": "Infy@123",
+  "menu": "OICAC",
+  "cif": "'06248951",
+  "schemeCode": 1607,
+  "generalLedgerSubheadCode": 21906,
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-9842"
+ },
+ {
+  "tcId": "FCB-9834",
+  "summary": "IslamicBanking_MudarabahCAA_Open_IslamicCurrentAccount_FacilityService_CALC_ByMaker_A8",
+  "username": "PT1",
+  "password": "Infy@123",
+  "menu": "OICAC",
+  "cif": "'06248951",
+  "schemeCode": 1609,
+  "generalLedgerSubheadCode": 21908,
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-9843"
+ }
+]

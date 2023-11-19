@@ -70,7 +70,7 @@ public class ABEVerifyMurabahaAccountDisbursementMurabahaFinancingPage {
 		if(accountId != null) {
 			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
 			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
-			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(1));
+			PageFunctionUtils.enterDataInWebElement(driver, accountIdTextField, accountId.substring(2));
 		}
 		return this;
 	}

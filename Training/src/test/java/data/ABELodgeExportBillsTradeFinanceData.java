@@ -66,7 +66,6 @@ public class ABELodgeExportBillsTradeFinanceData {
 	private String invoiceDate;
 	private String documentStatus;
 	private String notionalConversionRate;
-	private String paySysId;
 	private String expectedResult;
 	private String reference;
 	private String linkedTcid;
@@ -597,14 +596,6 @@ public class ABELodgeExportBillsTradeFinanceData {
 		this.notionalConversionRate = notionalConversionRate;
 	}
 	
-	public String getPaySysId() {
-		return paySysId;
-	}
-	
-	public void setPaySysId(String paySysId) {
-		this.paySysId = paySysId;
-	}
-	
 	public String getExpectedResult() {
 		return expectedResult;
 	}
@@ -710,10 +701,10 @@ public class ABELodgeExportBillsTradeFinanceData {
 				+ ", mixedBillDate2=" + mixedBillDate2 + ", mixedBillOnboardDate2=" + mixedBillOnboardDate2
 				+ ", mixedBillDueDate2=" + mixedBillDueDate2 + ", invoiceAmount=" + invoiceAmount + ", invoiceNumber="
 				+ invoiceNumber + ", invoiceDate=" + invoiceDate + ", documentStatus=" + documentStatus
-				+ ", notionalConversionRate=" + notionalConversionRate + ", paySysId=" + paySysId + ", expectedResult="
-				+ expectedResult + ", linkedTcid=" + linkedTcid + ", acceptLinkedTcid=" + acceptLinkedTcid
-				+ ", verifyAcceptLinkedTcid=" + verifyAcceptLinkedTcid + ", purchaseLinkedTcid=" + purchaseLinkedTcid
-				+ ", verifyPurchaseLinkedTcid=" + verifyPurchaseLinkedTcid + ", realizeLinkedTcid=" + realizeLinkedTcid
-				+ ", verifyRealizeLinkedTcid=" + verifyRealizeLinkedTcid + "]";
+				+ ", notionalConversionRate=" + notionalConversionRate + ", expectedResult=" + expectedResult
+				+ ", linkedTcid=" + linkedTcid + ", acceptLinkedTcid=" + acceptLinkedTcid + ", verifyAcceptLinkedTcid="
+				+ verifyAcceptLinkedTcid + ", purchaseLinkedTcid=" + purchaseLinkedTcid + ", verifyPurchaseLinkedTcid="
+				+ verifyPurchaseLinkedTcid + ", realizeLinkedTcid=" + realizeLinkedTcid + ", verifyRealizeLinkedTcid="
+				+ verifyRealizeLinkedTcid + "]";
 	}
 }

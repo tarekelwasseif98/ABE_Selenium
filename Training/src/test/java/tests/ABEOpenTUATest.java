@@ -33,6 +33,8 @@ public class ABEOpenTUATest {
 	public void oneTimeSetUp() throws IOException, CsvException {
 		CSVUtils.clearColumnByName(Paths.ABEOPENTUACSV, "reference");
 		CSVUtils.clearColumnByName(Paths.ABEVERIFYTUAOPENINGCSV, "accountId");
+		CSVUtils.clearColumnByName(Paths.ABECLOSETUACSV, "accountId");
+		CSVUtils.clearColumnByName(Paths.ABEVERIFYTUACLOSURECSV, "accountId");
 	}
 
 	WebDriver driver = null;

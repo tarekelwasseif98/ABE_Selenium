@@ -21,33 +21,19 @@ public class ABERealizeExportBillsTradeFinanceProcedures {
 											            .sendKeysPaySysIdTextField(FinacleFieldsUtils.PAYSYSIDSWIFT)
 											             .pressContinue2Button()
 											              .pressContinue3Button()
-											               .pressContinue4Button()
-											                .pressContinue5Button()
-											                 .pressContinue6Button()
-											                  .pressContinue7Button()
-											                   .pressContinue8Button()
-											                    .pressContinue9Button()
-											                     .pressContinue10Button()
-											                      .pressSubmitButton()
-												                   .pressRepeatTaskButton()
-																	.sendKeysBillIdTextField(data.getBillId())
-																	 .sendKeysTenorBillIdTextField(data.getMixedBillId2())
-																	  .pressGoButton()
-																	   .sendKeysRealizationAccountIdTextField(data.getMixedBill2RealizationAccountId())
-																	    .sendKeysBillRealizationAmountTextField(data.getMixedBill2RealizationAmount())
-																	     .sendKeysValueDateTextField(data.getMixedBill2RealizationValueDate())
-																	      .pressContinue1Button()
-																	       .sendKeysPaySysIdTextField(FinacleFieldsUtils.PAYSYSIDSWIFT)
-																	        .pressContinue2Button()
-																	         .pressContinue3Button()
-																	          .pressContinue4Button()
-																	           .pressContinue5Button()
-																	            .pressContinue6Button()
-																	             .pressContinue7Button()
-																	              .pressContinue8Button()
-																	               .pressContinue9Button()
-																	                .pressContinue10Button()
-																	                 .pressSubmitButton();
+											               .pressSubmitButton()
+												            .pressRepeatTaskButton()
+															 .sendKeysBillIdTextField(data.getBillId())
+															  .sendKeysTenorBillIdTextField(data.getMixedBillId2())
+														       .pressGoButton()
+															    .sendKeysRealizationAccountIdTextField(data.getMixedBill2RealizationAccountId())
+																 .sendKeysBillRealizationAmountTextField(data.getMixedBill2RealizationAmount())
+																  .sendKeysValueDateTextField(data.getMixedBill2RealizationValueDate())
+																   .pressContinue1Button()
+																	.sendKeysPaySysIdTextField(FinacleFieldsUtils.PAYSYSIDSWIFT)
+																	 .pressContinue2Button()
+																	  .pressContinue3Button()
+																	   .pressSubmitButton();
 			}
 		else if(data.getMixedBillId1() != null && data.getMixedBillId2() == null) {
 			realizeExportBillsTradeFinancePage.sendKeysSearchBarTextField(data.getMenu())
@@ -62,14 +48,7 @@ public class ABERealizeExportBillsTradeFinanceProcedures {
 											            .sendKeysPaySysIdTextField(FinacleFieldsUtils.PAYSYSIDSWIFT)
 											             .pressContinue2Button()
 											              .pressContinue3Button()
-											               .pressContinue4Button()
-											                .pressContinue5Button()
-											                 .pressContinue6Button()
-											                  .pressContinue7Button()
-											                   .pressContinue8Button()
-											                    .pressContinue9Button()
-											                     .pressContinue10Button()
-											                      .pressSubmitButton();
+											               .pressSubmitButton();
 			}
 		else if(data.getMixedBillId1() == null && data.getMixedBillId2() != null) {
 			realizeExportBillsTradeFinancePage.sendKeysSearchBarTextField(data.getMenu())
@@ -84,14 +63,7 @@ public class ABERealizeExportBillsTradeFinanceProcedures {
 											            .sendKeysPaySysIdTextField(FinacleFieldsUtils.PAYSYSIDSWIFT)
 											             .pressContinue2Button()
 											              .pressContinue3Button()
-											               .pressContinue4Button()
-											                .pressContinue5Button()
-											                 .pressContinue6Button()
-											                  .pressContinue7Button()
-											                   .pressContinue8Button()
-											                    .pressContinue9Button()
-											                     .pressContinue10Button()
-											                      .pressSubmitButton();
+											               .pressSubmitButton();
 			}
 		else if(data.getMixedBillId1() == null && data.getMixedBillId2() == null) {
 			realizeExportBillsTradeFinancePage.sendKeysSearchBarTextField(data.getMenu())
@@ -105,14 +77,7 @@ public class ABERealizeExportBillsTradeFinanceProcedures {
 											           .sendKeysPaySysIdTextField(FinacleFieldsUtils.PAYSYSIDSWIFT)
 											            .pressContinue2Button()
 											             .pressContinue3Button()
-											              .pressContinue4Button()
-											               .pressContinue5Button()
-											                .pressContinue6Button()
-											                 .pressContinue7Button()
-											                  .pressContinue8Button()
-											                   .pressContinue9Button()
-											                    .pressContinue10Button()
-											                     .pressSubmitButton();
+											              .pressSubmitButton();
 			}
 		}
 	}

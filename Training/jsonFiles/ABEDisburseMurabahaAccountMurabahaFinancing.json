@@ -1,0 +1,122 @@
+[
+ {
+  "tcId": "FCB-10020",
+  "summary": "IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_CarsShortTerm_4010_ByMaker_D1",
+  "username": "PT11",
+  "password": "Infy@123",
+  "menu": "PFAD",
+  "murabahaAccountId": "'4010065842560100301 ",
+  "valueDate": "'10-10-2023",
+  "creditAccountId": "'16100658425601027",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-10055"
+ },
+ {
+  "tcId": "FCB-10021",
+  "summary": "IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_CarsMedium&LongTerm_4011_ByMaker_D2",
+  "username": "PT11",
+  "password": "Infy@123",
+  "menu": "PFAD",
+  "murabahaAccountId": "'4011065842560100319 ",
+  "valueDate": "'10-10-2022",
+  "creditAccountId": "'16100658425601027",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-10056"
+ },
+ {
+  "tcId": "FCB-10022",
+  "summary": "IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_MicroFinanceShortTerm_4012_ByMaker_D3",
+  "username": "PT11",
+  "password": "Infy@123",
+  "menu": "PFAD",
+  "murabahaAccountId": "'4012065842560100327 ",
+  "valueDate": "'10-10-2023",
+  "creditAccountId": "'16100658425601027",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-10057"
+ },
+ {
+  "tcId": "FCB-10023",
+  "summary": "IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_RetailProjectsShortTerm_4013_ByMaker_D4",
+  "username": "PT11",
+  "password": "Infy@123",
+  "menu": "PFAD",
+  "murabahaAccountId": "'4013065842560100335 ",
+  "valueDate": "'10-08-2023",
+  "creditAccountId": "'16100658425601027",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-10058"
+ },
+ {
+  "tcId": "FCB-10024",
+  "summary": "IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_RetailProjectsMedium&LongTerm_4014_ByMaker_D5",
+  "username": "PT11",
+  "password": "Infy@123",
+  "menu": "PFAD",
+  "murabahaAccountId": "'4014065842560100343 ",
+  "valueDate": "'10-10-2023",
+  "creditAccountId": "'16100658425601027",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-10059"
+ },
+ {
+  "tcId": "FCB-10025",
+  "summary": "IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_LivestockShortTerm_4015_ByMaker_D6",
+  "username": "PT11",
+  "password": "Infy@123",
+  "menu": "PFAD",
+  "murabahaAccountId": "'4015065842560100351 ",
+  "valueDate": "'10-05-2023",
+  "creditAccountId": "'16100658425601027",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-10060"
+ },
+ {
+  "tcId": "FCB-10026",
+  "summary": "IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_LivestockMedium&LongTerm_4016_ByMaker_D7",
+  "username": "PT11",
+  "password": "Infy@123",
+  "menu": "PFAD",
+  "murabahaAccountId": "'4016065842560100369 ",
+  "valueDate": "'10-10-2023",
+  "creditAccountId": "'16100658425601027",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-10061"
+ },
+ {
+  "tcId": "FCB-10027",
+  "summary": "IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_MicroFinanceCBEShortTerm_4017_ByMaker_D8",
+  "username": "PT11",
+  "password": "Infy@123",
+  "menu": "PFAD",
+  "murabahaAccountId": "'4017065842560100377 ",
+  "valueDate": "'03-10-2023",
+  "creditAccountId": "'16100658425601027",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-10062"
+ },
+ {
+  "tcId": "FCB-10028",
+  "summary": "IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_MicroFinanceCBEMedium&LongTerm_4018_ByMaker_D9",
+  "username": "PT11",
+  "password": "Infy@123",
+  "menu": "PFAD",
+  "murabahaAccountId": "'4018065842560100385 ",
+  "valueDate": "'10-10-2023",
+  "creditAccountId": "'16100658425601027",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-10063"
+ },
+ {
+  "tcId": "FCB-10029",
+  "summary": "IslamicBanking_MurabahaFinancing_Disburse_MurabahaAccount_SMEs-S-CBE-ShortTerm_4000_ByMaker_D10",
+  "username": "PT11",
+  "password": "Infy@123",
+  "menu": "PFAD",
+  "murabahaAccountId": "'4000065842560100395 ",
+  "valueDate": "'10-10-2023",
+  "creditAccountId": "'16100658425601027",
+  "expectedResult": "successfully",
+  "linkedTcid": "FCB-10064"
+ }
+]

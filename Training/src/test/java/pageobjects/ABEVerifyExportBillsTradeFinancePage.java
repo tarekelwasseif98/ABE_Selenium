@@ -22,6 +22,10 @@ public class ABEVerifyExportBillsTradeFinancePage {
 	private By tenorBillIdTextField = By.xpath("(//input[@id='_tenorBillId'])[1]");
 	private By goButton = By.xpath("(//button[normalize-space()='Go'])[1]");
 	private By generalDetailsSideTabMenu = By.xpath("(//span[@id='fbmgeneral_textSpan'])[1]");
+	private By limitDetailsSideTabMenu = By.xpath("(//span[@id='fbmlimit_textSpan'])[1]");
+	private By eventDetailsSideTabMenu = By.xpath("(//span[@id='fbmevent_textSpan'])[1]");
+	private By chargeDetailsSideTabMenu = By.xpath("(//span[@id='tfccharge_textSpan'])[1]");
+	private By transactionDetailsSideTabMenu = By.xpath("(//span[@id='fbmtran_textSpan'])[1]");
 	private By continue1Button = By.xpath("(//button[@id='_meobgen_meobgen_FinButton1'])[1]");
 	private By continue2Button = By.xpath("(//button[@id='_meobparty_meobparty_FinButton1'])[1]");
 	private By continue3Button = By.xpath("(//button[@id='_meobtenor_continue'])[1]");
@@ -91,8 +95,10 @@ public class ABEVerifyExportBillsTradeFinancePage {
 		        PageFunctionUtils.clickOnElement(driver, searchButton);
 		        }
 	        catch (Exception e) {
+	        	
 	        }
         }
+		
 	return this;
 	}
 	
@@ -136,6 +142,30 @@ public class ABEVerifyExportBillsTradeFinancePage {
 	@Step("Side tab navigation")
 	public ABEVerifyExportBillsTradeFinancePage navigateGeneralDetailsSideTabMenu() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, generalDetailsSideTabMenu);
+		return this;
+	}
+	
+	@Step("Side tab navigation")
+	public ABEVerifyExportBillsTradeFinancePage navigateLimitDetailsSideTabMenu() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, limitDetailsSideTabMenu);
+		return this;
+	}
+	
+	@Step("Side tab navigation")
+	public ABEVerifyExportBillsTradeFinancePage navigateEventDetailsSideTabMenu() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, eventDetailsSideTabMenu);
+		return this;
+	}
+	
+	@Step("Side tab navigation")
+	public ABEVerifyExportBillsTradeFinancePage navigateChargeDetailsSideTabMenu() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, chargeDetailsSideTabMenu);
+		return this;
+	}
+	
+	@Step("Side tab navigation")
+	public ABEVerifyExportBillsTradeFinancePage navigateTransactionDetailsSideTabMenu() throws Exception {
+		PageFunctionUtils.clickOnElement(driver, transactionDetailsSideTabMenu);
 		return this;
 	}
 

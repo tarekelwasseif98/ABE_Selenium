@@ -8,17 +8,17 @@
 <test thread-count="1" name="TUA">
 	<groups>
 		<run>
-			<include name="ABEOpenTUATest"/>
-            <include name="ABEVerifyTUAOpeningTest"/>
-            <include name="ABECloseTUATest"/>
-            <include name="ABEVerifyTUAClosureTest"/>
+			<include name="ABEOpenMudarabahTUATest"/>
+            <include name="ABEVerifyMudarabahTUAOpeningTest"/>
+            <include name="ABECloseMudarabahTUATest"/>
+            <include name="ABEVerifyMudarabahTUAClosureTest"/>
         </run>
     </groups>
     <classes>
-		<class name="tests.ABEOpenTUATest"/>
-	 	<class name="tests.ABEVerifyTUAOpeningTest"/>
-	 	<class name="tests.ABECloseTUATest"/>
-	 	<class name="tests.ABEVerifyTUAClosureTest"/>
+		<class name="tests.ABEOpenMudarabahTUATest"/>
+	 	<class name="tests.ABEVerifyMudarabahTUAOpeningTest"/>
+	 	<class name="tests.ABECloseMudarabahTUATest"/>
+	 	<class name="tests.ABEVerifyMudarabahTUAClosureTest"/>
     </classes>
 </test>
 </suite>

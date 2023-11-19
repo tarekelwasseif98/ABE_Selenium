@@ -10,7 +10,7 @@ import utils.CSVUtils;
 import utils.PageFunctionUtils;
 import utils.Paths;
 
-public class ABECloseTUAPage {
+public class ABECloseMudarabahTUAPage {
 	private WebDriver driver;
 	private String loginFrameIframeId = "loginFrame";
 	private String coreAbeIframeId = "Core_ABE";
@@ -32,12 +32,12 @@ public class ABECloseTUAPage {
 	public static String  tcIdCsvColumnName = "tcId";
 	public static String  linkedTcidCsvColumnName = "linkedTcid";
 	
-	public ABECloseTUAPage(WebDriver driver) {
+	public ABECloseMudarabahTUAPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
 	@Step("Sending menu name: {0}")
-	public ABECloseTUAPage sendKeysSearchBarTextField(String menu) throws Exception {
+	public ABECloseMudarabahTUAPage sendKeysSearchBarTextField(String menu) throws Exception {
 		if(menu != null) {
 			PageFunctionUtils.sleep();
 			PageFunctionUtils.switchToParentFrame(driver);
@@ -59,7 +59,7 @@ public class ABECloseTUAPage {
 	}
 	
 	@Step("Frame switching")
-	public ABECloseTUAPage switchFormAreaFrame() throws Exception {
+	public ABECloseMudarabahTUAPage switchFormAreaFrame() throws Exception {
 		PageFunctionUtils.sleep();
 		PageFunctionUtils.switchToParentFrame(driver);
 		PageFunctionUtils.waitOnFrameAndSwitchId(driver, loginFrameIframeId);
@@ -71,7 +71,7 @@ public class ABECloseTUAPage {
 	}
 	
 	@Step("Sending account id: {0}")
-	public ABECloseTUAPage sendKeysAccountIdTextField(String accountId) throws Exception {
+	public ABECloseMudarabahTUAPage sendKeysAccountIdTextField(String accountId) throws Exception {
 		if(accountId != null) {
 			PageFunctionUtils.waitOnElement(driver, accountIdTextField);
 			PageFunctionUtils.clickOnElement(driver, accountIdTextField);
@@ -81,7 +81,7 @@ public class ABECloseTUAPage {
 	}
 	
 	@Step("Sending closure value date: {0}")
-	public ABECloseTUAPage sendKeysClosureValueDateTextField(String closureValueDate) throws Exception {
+	public ABECloseMudarabahTUAPage sendKeysClosureValueDateTextField(String closureValueDate) throws Exception {
 		if(closureValueDate != null) {
 			PageFunctionUtils.clearDataInWebElement(driver, closureValueDateTextField);
 			PageFunctionUtils.clickOnElement(driver, closureValueDateTextField);
@@ -91,13 +91,13 @@ public class ABECloseTUAPage {
 	}
 	
 	@Step("Press go button")
-	public ABECloseTUAPage pressGoButton() throws Exception {
+	public ABECloseMudarabahTUAPage pressGoButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, goButton);
 		return this;
 	}
 	
 	@Step("Sending repayment account id: {0}")
-	public ABECloseTUAPage sendKeysRepaymentAccountIdTextField(String repaymentAccountId) throws Exception {
+	public ABECloseMudarabahTUAPage sendKeysRepaymentAccountIdTextField(String repaymentAccountId) throws Exception {
 		if(repaymentAccountId != null) {
 			PageFunctionUtils.waitOnElement(driver, repaymentAccountIdTextField);
 			PageFunctionUtils.clearDataInWebElement(driver, repaymentAccountIdTextField);
@@ -108,7 +108,7 @@ public class ABECloseTUAPage {
 	}
 	
 	@Step("Press submit button")
-	public ABECloseTUAPage pressSubmitButton() throws Exception {
+	public ABECloseMudarabahTUAPage pressSubmitButton() throws Exception {
 		PageFunctionUtils.clickOnElement(driver, submitButton);
 		PageFunctionUtils.acceptWarning(driver);
 		PageFunctionUtils.sleep();
@@ -119,12 +119,12 @@ public class ABECloseTUAPage {
 	}
 	
 	@Step("Save account id")
-	public ABECloseTUAPage saveAccountId(String linkedId) throws Exception {
-		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABECLOSETUACSV, linkedTcidCsvColumnName, linkedId);
-		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEVERIFYTUACLOSURECSV, tcIdCsvColumnName, linkedId);
-		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYTUACLOSURECSV, accountIdCsvColumnName);
+	public ABECloseMudarabahTUAPage saveAccountId(String linkedId) throws Exception {
+		int rowByTcid1 = CSVUtils.getRowByTcid(Paths.ABECLOSEMUDARABAHTUACSV, linkedTcidCsvColumnName, linkedId);
+		int rowByTcid2 = CSVUtils.getRowByTcid(Paths.ABEVERIFYMUDARABAHTUACLOSURECSV, tcIdCsvColumnName, linkedId);
+		int columnByColumnName2 = CSVUtils.getColumnByColumnName(Paths.ABEVERIFYMUDARABAHTUACLOSURECSV, accountIdCsvColumnName);
 		if(rowByTcid1 != -1 && rowByTcid2 != -1) {
-			CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYTUACLOSURECSV, rowByTcid2, columnByColumnName2, acId);
+			CSVUtils.insertValueInCsvCell(Paths.ABEVERIFYMUDARABAHTUACLOSURECSV, rowByTcid2, columnByColumnName2, acId);
 		}
 		return this;
 	}	

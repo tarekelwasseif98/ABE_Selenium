@@ -2,13 +2,13 @@ package procedures;
 
 import org.openqa.selenium.WebDriver;
 
-import data.ABECloseTUAData;
-import pageobjects.ABECloseTUAPage;
+import data.ABECloseMudarabahTUAData;
+import pageobjects.ABECloseMudarabahTUAPage;
 
-public class ABECloseTUAProcedures {
-	public static void closeTUA(WebDriver driver, ABECloseTUAData data) throws Exception {
-		ABECloseTUAPage closeTUAPage = new ABECloseTUAPage(driver);
-		closeTUAPage.sendKeysSearchBarTextField(data.getMenu())
+public class ABECloseMudarabahTUAProcedures {
+	public static void closeMudarabahTUA(WebDriver driver, ABECloseMudarabahTUAData data) throws Exception {
+		ABECloseMudarabahTUAPage closeMudarabahTUAPage = new ABECloseMudarabahTUAPage(driver);
+		closeMudarabahTUAPage.sendKeysSearchBarTextField(data.getMenu())
 					 .switchFormAreaFrame()
 					  .sendKeysAccountIdTextField(data.getAccountId())
 					   .sendKeysClosureValueDateTextField(data.getClosureValueDate())

@@ -10,11 +10,11 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.aspose.cells.Workbook;
 import data.JsonReader;
-import data.ABECloseTUAData;
+import data.ABECloseMudarabahTUAData;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import pageobjects.FinacleLoginPage;
-import procedures.ABECloseTUAProcedures;
+import procedures.ABECloseMudarabahTUAProcedures;
 import utils.Properties;
 import utils.ScreenshotHelper;
 import utils.WebdriverFactory;
@@ -22,13 +22,13 @@ import utils.Paths;
 import utils.AssertionFactory;
 import io.qameta.allure.testng.AllureTestNg;
 
-@Test(groups = "ABECloseTUATest")
+@Test(groups = "ABECloseMudarabahTUATest")
 @Listeners({AllureTestNg.class})
-public class ABECloseTUATest {
+public class ABECloseMudarabahTUATest {
 	WebDriver driver = null;
 	@BeforeMethod(description= "Initiating Browser")
 	public void beforeTest(Object [] testData) throws Exception {
-		ABECloseTUAData data = (ABECloseTUAData) testData[0];
+		ABECloseMudarabahTUAData data = (ABECloseMudarabahTUAData) testData[0];
 		driver = WebdriverFactory.initiateWebDriver();
 		driver.get(Properties.FINACLEURL);
 		FinacleLoginPage FinacleLoginPage = new FinacleLoginPage(driver);
@@ -38,22 +38,22 @@ public class ABECloseTUATest {
 		.clickOnLoginButton(data.getPassword());
 	}
 	
-	@DataProvider(name="Close TUA DataProvider")
+	@DataProvider(name="Close Mudarabah TUA DataProvider")
 	public Object[] dpMethod() throws Exception {
-    	Workbook workbook = new Workbook(Paths.ABECLOSETUACSV);
-		workbook.save(Paths.ABECLOSETUAJSON);
-        Class<ABECloseTUAData> targetClass = ABECloseTUAData.class;
-        JsonReader<ABECloseTUAData> jsonReader = new JsonReader<>(targetClass);
-        List<ABECloseTUAData> dataList = jsonReader.readJsonFile(Paths.ABECLOSETUAJSON);
+    	Workbook workbook = new Workbook(Paths.ABECLOSEMUDARABAHTUACSV);
+		workbook.save(Paths.ABECLOSEMUDARABAHTUAJSON);
+        Class<ABECloseMudarabahTUAData> targetClass = ABECloseMudarabahTUAData.class;
+        JsonReader<ABECloseMudarabahTUAData> jsonReader = new JsonReader<>(targetClass);
+        List<ABECloseMudarabahTUAData> dataList = jsonReader.readJsonFile(Paths.ABECLOSEMUDARABAHTUAJSON);
         dataList.toArray();
         return dataList.toArray();
 	}
 	
-	@Test(dataProvider = "Close TUA DataProvider", dataProviderClass = ABECloseTUATest.class)
-	public void closeTUATest(ABECloseTUAData data) throws Exception {
+	@Test(dataProvider = "Close Mudarabah TUA DataProvider", dataProviderClass = ABECloseMudarabahTUATest.class)
+	public void closeMudarabahTUATest(ABECloseMudarabahTUAData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
 		Allure.parameter("Data: ", data.toString());		
-        ABECloseTUAProcedures.closeTUA(driver, data);
+        ABECloseMudarabahTUAProcedures.closeMudarabahTUA(driver, data);
         AssertionFactory.checkExpectedResult(driver, data.getExpectedResult());
 	}
 

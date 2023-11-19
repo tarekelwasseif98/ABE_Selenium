@@ -1,13 +1,13 @@
 package procedures;
 
 import org.openqa.selenium.WebDriver;
-import data.ABEOpenTUAData;
-import pageobjects.ABEOpenTUAPage;
+import data.ABEOpenMudarabahTUAData;
+import pageobjects.ABEOpenMudarabahTUAPage;
 
-public class ABEOpenTUAProcedures {
-	public static void openTUA(WebDriver driver, ABEOpenTUAData data) throws Exception {
-		ABEOpenTUAPage openTUAPage = new ABEOpenTUAPage(driver);
-		openTUAPage.sendKeysSearchBarTextField(data.getMenu())
+public class ABEOpenMudarabahTUAProcedures {
+	public static void openMudarabahTUA(WebDriver driver, ABEOpenMudarabahTUAData data) throws Exception {
+		ABEOpenMudarabahTUAPage openMudarabahTUAPage = new ABEOpenMudarabahTUAPage(driver);
+		openMudarabahTUAPage.sendKeysSearchBarTextField(data.getMenu())
 				    .switchFormAreaFrame()
 					 .sendKeysCifIdTextField(data.getCif())
 					  .sendKeysSchemeCodeTextField(data.getSchemeCode())

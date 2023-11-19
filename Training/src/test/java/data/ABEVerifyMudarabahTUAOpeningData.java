@@ -1,6 +1,6 @@
 package data;
 
-public class ABEVerifyTUAClosureData {
+public class ABEVerifyMudarabahTUAOpeningData {
 	
 	private String tcId;
 	private String summary;
@@ -68,7 +68,7 @@ public class ABEVerifyTUAClosureData {
 
 	@Override
 	public String toString() {
-		return "ABEVerifyTUAClosureData [tcId=" + tcId + ", summary=" + summary + ", username=" + username
+		return "ABEVerifyMudarabahTUAOpeningData [tcId=" + tcId + ", summary=" + summary + ", username=" + username
 				+ ", password=" + password + ", menu=" + menu + ", accountId=" + accountId + ", expectedResult="
 				+ expectedResult + "]";
 	}

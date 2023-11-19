@@ -1,0 +1,2 @@
+tcId,summary,username,password,menu,Pos,expectedResult,paysysID,linkedTcid
+FCB-03333,Automation_Cycle1_AuthorizeESWIFTOutward_ByChecker2,QA49,Infy@123,AOPO,'000000093424,Payment Order is successfully Approved.,ESWFT,FCB-02222

@@ -116,4 +116,54 @@ public class Paths {
 	public static final String ABEVERIFYREALIZEIMPORTBILLSTRADEFINANCECSV  = "csvFiles\\ABEVerifyRealizeImportBillsTradeFinance.csv";
 	public static final String ABEREALIZEIMPORTBILLSTRADEFINANCEJSON =  "jsonFiles\\" + ABEREALIZEIMPORTBILLSTRADEFINANCECSV.substring(9, Paths.ABEREALIZEIMPORTBILLSTRADEFINANCECSV.length()-4) + ".json";
 	public static final String ABEVERIFYREALIZEIMPORTBILLSTRADEFINANCEJSON =  "jsonFiles\\" + ABEVERIFYREALIZEIMPORTBILLSTRADEFINANCECSV.substring(9, Paths.ABEVERIFYREALIZEIMPORTBILLSTRADEFINANCECSV.length()-4) + ".json";
+	
+	public static final String ABECREATERETAILCUSTOMERCSV  = "csvFiles\\ABECreateRetailCustomer.csv";
+	public static final String ABEVERIFYRETAILCUSTOMERCSV = "csvFiles\\ABEVerifyRetailCustomer.csv";
+	public static final String ABECREATERETAILCUSTOMERJSON =  "jsonFiles\\" + ABECREATERETAILCUSTOMERCSV.substring(9, Paths.ABECREATERETAILCUSTOMERCSV.length()-4) + ".json";
+	public static final String ABEVERIFYRETAILCUSTOMERJSON = "jsonFiles\\" + ABEVERIFYRETAILCUSTOMERCSV.substring(9, Paths.ABEVERIFYRETAILCUSTOMERCSV.length()-4) + ".json";	
+
+	public static final String ABECREATEACHOUTWARDCSV  = "csvFiles\\Create_ACH_Outward.csv";
+	public static final String ABEVERIFYACHOUTWARDCSV = "csvFiles\\Verify_ACH_Outward.csv";
+	public static final String ABEATHORIZEACHOUTWARDCSV = "csvFiles\\Authorize_ACH_Outward.csv";
+	public static final String ABECREATEACHOUTWARDJSON =  "jsonFiles\\" + ABECREATEACHOUTWARDCSV.substring(9, Paths.ABECREATEACHOUTWARDCSV.length()-4) + ".json";
+	public static final String ABEVERIFYACHOUTWARDJSON = "jsonFiles\\" + ABEVERIFYACHOUTWARDCSV.substring(9, Paths.ABEVERIFYACHOUTWARDCSV.length()-4) + ".json";
+	public static final String ABEATHORIZEACHOUTWARDJSON =  "jsonFiles\\" + ABEATHORIZEACHOUTWARDCSV.substring(9, Paths.ABEATHORIZEACHOUTWARDCSV.length()-4) + ".json";
+	
+	public static final String ABECREATEACHUSOUTWARDCSV  = "csvFiles\\ABECreateACHUSOutward.csv";
+	public static final String ABEVERIFYACHUSOUTWARDCSV = "csvFiles\\ABEVerifyACHUSOutward.csv";
+	public static final String ABEATHORIZEACHUSOUTWARDCSV = "csvFiles\\ABEAuthorizeACHUSOutward.csv";
+	public static final String ABECREATEACHUSOUTWARDJSON =  "jsonFiles\\" + ABECREATEACHUSOUTWARDCSV.substring(9, Paths.ABECREATEACHUSOUTWARDCSV.length()-4) + ".json";
+	public static final String ABEVERIFYACHUSOUTWARDJSON = "jsonFiles\\" + ABEVERIFYACHUSOUTWARDCSV.substring(9, Paths.ABEVERIFYACHUSOUTWARDCSV.length()-4) + ".json";
+	public static final String ABEATHORIZEACHUSOUTWARDJSON =  "jsonFiles\\" + ABEATHORIZEACHUSOUTWARDCSV.substring(9, Paths.ABEATHORIZEACHUSOUTWARDCSV.length()-4) + ".json";
+	
+	public static final String ABECREATEACHEROUTWARDCSV  = "csvFiles\\ABECreateACHEROutward.csv";
+	public static final String ABEVERIFYACHEROUTWARDCSV = "csvFiles\\ABEVerifyACHEROutward.csv";
+	public static final String ABEATHORIZEACHEROUTWARDCSV = "csvFiles\\ABEAuthorizeACHEROutward.csv";
+	public static final String ABECREATEACHEROUTWARDJSON =  "jsonFiles\\" + ABECREATEACHEROUTWARDCSV.substring(9, Paths.ABECREATEACHEROUTWARDCSV.length()-4) + ".json";
+	public static final String ABEVERIFYACHEROUTWARDJSON = "jsonFiles\\" + ABEVERIFYACHEROUTWARDCSV.substring(9, Paths.ABEVERIFYACHEROUTWARDCSV.length()-4) + ".json";
+	public static final String ABEATHORIZEACHEROUTWARDJSON =  "jsonFiles\\" + ABEATHORIZEACHEROUTWARDCSV.substring(9, Paths.ABEATHORIZEACHEROUTWARDCSV.length()-4) + ".json";
+	
+	public static final String ABECREATESWIFTOUTWARDCSV  = "csvFiles\\ABECreateSWIFTOutward.csv";
+	public static final String ABEVERIFYSWIFTOUTWARDCSV = "csvFiles\\ABEVerifySWIFTOutward.csv";
+	public static final String ABEATHORIZESWIFTOUTWARDCSV = "csvFiles\\ABEAuthorizeSWIFTOutward.csv";
+	public static final String ABECREATESWIFTOUTWARDJSON =  "jsonFiles\\" + ABECREATESWIFTOUTWARDCSV.substring(9, Paths.ABECREATESWIFTOUTWARDCSV.length()-4) + ".json";
+	public static final String ABEVERIFYSWIFTOUTWARDJSON = "jsonFiles\\" + ABEVERIFYSWIFTOUTWARDCSV.substring(9, Paths.ABEVERIFYSWIFTOUTWARDCSV.length()-4) + ".json";
+	public static final String ABEATHORIZESWIFTOUTWARDJSON =  "jsonFiles\\" + ABEATHORIZESWIFTOUTWARDCSV.substring(9, Paths.ABEATHORIZESWIFTOUTWARDCSV.length()-4) + ".json";
+	
+	public static final String ABECREATEESWIFTOUTWARDCSV  = "csvFiles\\ABECreateESWIFTOutward.csv";
+	public static final String ABEVERIFYESWIFTOUTWARDCSV = "csvFiles\\ABEVerifyESWIFTOutward.csv";
+	public static final String ABEATHORIZEESWIFTOUTWARDCSV = "csvFiles\\ABEAuthorizeESWIFTOutward.csv";
+	public static final String ABECREATEESWIFTOUTWARDJSON =  "jsonFiles\\" + ABECREATEESWIFTOUTWARDCSV.substring(9, Paths.ABECREATEESWIFTOUTWARDCSV.length()-4) + ".json";
+	public static final String ABEVERIFYESWIFTOUTWARDJSON = "jsonFiles\\" + ABEVERIFYESWIFTOUTWARDCSV.substring(9, Paths.ABEVERIFYESWIFTOUTWARDCSV.length()-4) + ".json";
+	public static final String ABEATHORIZEESWIFTOUTWARDJSON =  "jsonFiles\\" + ABEATHORIZEESWIFTOUTWARDCSV.substring(9, Paths.ABEATHORIZEESWIFTOUTWARDCSV.length()-4) + ".json";
+	
+	public static final String ABECREATESTOCSV  = "csvFiles\\ABECreateSTO.csv";
+	public static final String ABEVERIFYSTOCSV= "csvFiles\\ABEVerifySTO.csv";
+	public static final String ABECREATESTOJSON =  "jsonFiles\\" + ABECREATESTOCSV.substring(9, Paths.ABECREATESTOCSV.length()-4) + ".json";
+	public static final String ABEVERIFYSTOJSON = "jsonFiles\\" + ABEVERIFYSTOCSV.substring(9, Paths.ABEVERIFYSTOCSV.length()-4) + ".json";
+	
+	public static final String ABEDISBURSECORPORATELOANCORPORATELOANSCSV  = "csvFiles\\ABEOpenCorporateLoanCorporateLoans.csv";
+	public static final String ABEVERIFYCORPORATELOANDISBURSMENTCORPORATELOANSCSV  = "csvFiles\\ABEVerifyCorporateLoanCorporateLoans.csv";
+	public static final String ABEDISBURSECORPORATELOANCORPORATELOANSJSON =  "jsonFiles\\" + ABEDISBURSECORPORATELOANCORPORATELOANSCSV.substring(9, Paths.ABEDISBURSECORPORATELOANCORPORATELOANSCSV.length()-4) + ".json";
+	public static final String ABEVERIFYCORPORATELOANDISBURSMENTCORPORATELOANSJSON =  "jsonFiles\\" + ABEVERIFYCORPORATELOANDISBURSMENTCORPORATELOANSCSV.substring(9, Paths.ABEVERIFYCORPORATELOANDISBURSMENTCORPORATELOANSCSV.length()-4) + ".json";
 }

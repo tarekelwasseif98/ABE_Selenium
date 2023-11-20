@@ -1,2 +1,2 @@
 tcId,summary,username,password,menu,billId,mixedBillId1,mixedBillId2,acceptLinkedTcid,verifyAcceptLinkedTcid,realizeLinkedTcid,verifyRealizeLinkedTcid,expectedResult
-FCB-7000,TradeFinance_Import_Bills_Under_Collection_Verify_Mixed Tenor_Local_EGP_ByChecker_R2,PT74,Infy@123,VIIB,'1408IDC23000081,,,FCB-7001,FCB-7002,FCB-7005,FCB-7006,The bill ID is verified successfully
+FCB-7000,TradeFinance_Import_Bills_Under_Collection_Verify_Mixed Tenor_Local_EGP_ByChecker_R2,PT74,Infy@123,VIIB,'1408IDC23000096,,,FCB-7001,FCB-7002,FCB-7005,FCB-7006,The bill ID is verified successfully

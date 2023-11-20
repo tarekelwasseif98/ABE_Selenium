@@ -179,8 +179,12 @@ public class TradeFinanceImportBillsLodgePage {
 	
 	@Step("Press go Button")
 	public TradeFinanceImportBillsLodgePage PressGoButton() throws Exception {
-
+		try {
 		PageFunctionUtils.clickOnElement(driver,goButton);
+		} catch(Exception e) {
+			PageFunctionUtils.clickOnElement(driver,goButton);
+
+		}
 		return this;
 	}
 	@Step("Press update Button")
@@ -355,6 +359,7 @@ public class TradeFinanceImportBillsLodgePage {
 	public TradeFinanceImportBillsLodgePage PressSubmitButton() throws Exception {
 
 		PageFunctionUtils.clickOnElement(driver,submitButton);
+		PageFunctionUtils.acceptWarning(driver);
 		billId = driver.findElement(accountIdSuccessMessage).getText().substring(45);
 		System.out.println("bill Id: "+ billId);
 		return this;

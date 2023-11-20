@@ -1,0 +1,15 @@
+[
+ {
+  "tcId": "FCB-7000",
+  "summary": "TradeFinance_Import_Bills_Under_Collection_Verify_Mixed Tenor_Local_EGP_ByChecker_R2",
+  "username": "PT74",
+  "password": "Infy@123",
+  "menu": "VIIB",
+  "billId": "'1408IDC23000084",
+  "acceptLinkedTcid": "FCB-7001",
+  "verifyAcceptLinkedTcid": "FCB-7002",
+  "realizeLinkedTcid": "FCB-7005",
+  "verifyRealizeLinkedTcid": "FCB-7006",
+  "expectedResult": "The bill ID is verified successfully"
+ }
+]

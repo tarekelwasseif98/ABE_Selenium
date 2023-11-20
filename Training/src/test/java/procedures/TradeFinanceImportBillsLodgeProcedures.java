@@ -16,7 +16,7 @@ public class TradeFinanceImportBillsLodgeProcedures {
 									   .sendKeysBillType(data.getBillType());
 									   
 									   
-		if(data.getUnderDocumentaryCredit().equals("no"))
+		if(data.getUnderDocumentaryCredit().equals(FinacleFieldsUtils.UNDERDOCUMENTRYCREDITNO))
 		{
 			lodgeImportBills.PressunderDocumentryCreditNoRadioButton();
 		}							   
@@ -40,14 +40,14 @@ public class TradeFinanceImportBillsLodgeProcedures {
 									   .PressPartyDetailsContinueButton();
 									   
 									   
-									   if(data.getType().equals(FinacleFieldsUtils.BILLTYPESIGHT))
+									   if(data.getType().equals(FinacleFieldsUtils.BILLTENORSIGHT))
 									   {
 										   lodgeImportBills.PressEditButton()
 										   .sendKeysOnboardDate(data.getOnboardDate())
 										   .sendKeysBillDate(data.getBillDate())
 										   .PressUpdateButton();
 									   }
-									   else if(data.getType().equals(FinacleFieldsUtils.BILLTYPEUSANCE))
+									   else if(data.getType().equals(FinacleFieldsUtils.BILLTENORUSANCE))
 									   {
 										   lodgeImportBills.PressEditButton()
 										   .sendKeysTenor(data.getMonth(), data.getDay())

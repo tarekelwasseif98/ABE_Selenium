@@ -2,28 +2,28 @@
  {
   "tcId": "FCB-9863",
   "summary": "IslamicBanking_MudarabahTUA_Verify_IslamicTUAAccount_MTD2Y_ByChecker_A2",
-  "username": "PT6",
+  "username": "PT4",
   "password": "Infy@123",
   "menu": "VITUDAO",
-  "accountId": "'1752062489510100104",
+  "accountId": "'1752062489510100715",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-9865",
   "summary": "IslamicBanking_MudarabahTUA_Verify_IslamicTUAAccount_MTD3Y_ByChecker_B2",
-  "username": "PT6",
+  "username": "PT4",
   "password": "Infy@123",
   "menu": "VITUDAO",
-  "accountId": "'1750062489510100115",
+  "accountId": "'1750062489510100726",
   "expectedResult": "successfully"
  },
  {
   "tcId": "FCB-9867",
   "summary": "IslamicBanking_MudarabahTUA_Verify_IslamicTUAAccount_MTD5Y_ByChecker_C2",
-  "username": "PT6",
+  "username": "PT4",
   "password": "Infy@123",
   "menu": "VITUDAO",
-  "accountId": "'1757062489510100127",
+  "accountId": "'1757062489510100738",
   "expectedResult": "successfully"
  }
 ]

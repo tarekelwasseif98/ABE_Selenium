@@ -1,4 +1,4 @@
 tcId,summary,username,password,menu,accountId,closureValueDate,repaymentAccountId,expectedResult,linkedTcid
-FCB-9881,IslamicBanking_Preclose_MudarabahTUA_MTD2Y_RepaymentAccount_ByMaker_F1,PT7,Infy@123,CITUDA,'1752062489510100104,'20-11-2023,'16060624895101023,successfully,FCB-9882
-FCB-20081,IslamicBanking_Preclose_MudarabahTUA_MTD3Y_RepaymentAccount_ByMaker_P1,PT7,Infy@123,CITUDA,'1750062489510100115,'20-11-2023,'16060624895101023,successfully,FCB-20082
-FCB-20083,IslamicBanking_Preclose_MudarabahTUA_MTD5Y_RepaymentAccount_ByMaker_Q1,PT7,Infy@123,CITUDA,'1757062489510100127,'20-11-2023,'16060624895101023,successfully,FCB-20084
+FCB-9881,IslamicBanking_Preclose_MudarabahTUA_MTD2Y_RepaymentAccount_ByMaker_F1,PT5,Infy@123,CITUDA,'1752062489510100715,'21-11-2023,'16060624895101023,successfully,FCB-9882
+FCB-20081,IslamicBanking_Preclose_MudarabahTUA_MTD3Y_RepaymentAccount_ByMaker_P1,PT5,Infy@123,CITUDA,'1750062489510100726,'21-11-2023,'16060624895101023,successfully,FCB-20082
+FCB-20083,IslamicBanking_Preclose_MudarabahTUA_MTD5Y_RepaymentAccount_ByMaker_Q1,PT5,Infy@123,CITUDA,'1757062489510100738,'21-11-2023,'16060624895101023,successfully,FCB-20084

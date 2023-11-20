@@ -1,0 +1,146 @@
+[
+ {
+  "tcId": "FCB-10155",
+  "summary": "IslamicBanking_WakalahTUA_Verify_WTD07_Account_ByChecker_D1",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1770062489510100748",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10156",
+  "summary": "IslamicBanking_WakalahTUA_Verify_WTD1M_Account_ByChecker_D2",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1772062489510100755",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10157",
+  "summary": "IslamicBanking_WakalahTUA_Verify_WTD3M_Account_ByChecker_D3",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1773062489510100763",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10158",
+  "summary": "IslamicBanking_WakalahTUA_Verify_WTD6M_Account_ByChecker_D4",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1774062489510100771",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10159",
+  "summary": "IslamicBanking_WakalahTUA_Verify_WTD9M_Account_ByChecker_D5",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1775062489510100789",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10160",
+  "summary": "IslamicBanking_WakalahTUA_Verify_WTD1Y_Account_ByChecker_D6",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1777062489510100796",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10161",
+  "summary": "IslamicBanking_WakalahTUA_Verify_WTD2Y_Account_ByChecker_D7",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1778062489510100801",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-10162",
+  "summary": "IslamicBanking_WakalahTUA_Verify_WTD3Y_Account_ByChecker_D8",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1779062489510100819",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-14040",
+  "summary": "IslamicBanking_WakalahTUA_Verify_WTD1Y_Account_Monthly_ByChecker_T2",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1780062489510100824",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-14042",
+  "summary": "IslamicBanking_WakalahTUA_Verify_WTD2Y_Account_Monthly_ByChecker_U2",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1782062489510100831",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-14044",
+  "summary": "IslamicBanking_WakalahTUA_Verify_WTD3Y_Account_Monthly_ByChecker_V2",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1784062489510100848",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-14046",
+  "summary": "IslamicBanking_WakalahTUA_Verify_WTD1Y_Account_Quarterly_ByChecker_W2",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1781062489510100850",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-14048",
+  "summary": "IslamicBanking_WakalahTUA_Verify_WTD2Y_Account_Quarterly_ByChecker_X2",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1783062489510100867",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-14050",
+  "summary": "IslamicBanking_WakalahTUA_Verify_WTD3Y_Account_Quarterly_ByChecker_Y2",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1785062489510100874",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-22625",
+  "summary": "IslamicBanking_WakalahTUA_Verify_AlKhayr3Years_Account_Monthly_ByChecker",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1786062489510100882",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-22626",
+  "summary": "IslamicBanking_WakalahTUA_Verify_AlKhayr3Years_Account_Annually_ByChecker",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VTUDAO",
+  "accountId": "'1787062489510100890",
+  "expectedResult": "successfully"
+ }
+]

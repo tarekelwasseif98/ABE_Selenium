@@ -21,6 +21,16 @@ public class Paths {
 	public static final String ABECLOSEMUDARABAHTUAJSON =  "jsonFiles\\" + ABECLOSEMUDARABAHTUACSV.substring(9, Paths.ABECLOSEMUDARABAHTUACSV.length()-4) + ".json";
 	public static final String ABEVERIFYMUDARABAHTUACLOSUREJSON =  "jsonFiles\\" + ABEVERIFYMUDARABAHTUACLOSURECSV.substring(9, Paths.ABEVERIFYMUDARABAHTUACLOSURECSV.length()-4) + ".json";
 	
+	public static final String ABEOPENWAKALAHTUACSV  = "csvFiles\\ABEOpenWakalahTUA.csv";
+	public static final String ABEVERIFYWAKALAHTUAOPENINGCSV  = "csvFiles\\ABEVerifyWakalahTUAOpening.csv";
+	public static final String ABEOPENWAKALAHTUAJSON =  "jsonFiles\\" + ABEOPENWAKALAHTUACSV.substring(9, Paths.ABEOPENWAKALAHTUACSV.length()-4) + ".json";
+	public static final String ABEVERIFYWAKALAHTUAOPENINGJSON =  "jsonFiles\\" + ABEVERIFYWAKALAHTUAOPENINGCSV.substring(9, Paths.ABEVERIFYWAKALAHTUAOPENINGCSV.length()-4) + ".json";
+	
+	public static final String ABECLOSEWAKALAHTUACSV  = "csvFiles\\ABECloseWakalahTUA.csv";
+	public static final String ABEVERIFYWAKALAHTUACLOSURECSV  = "csvFiles\\ABEVerifyWakalahTUAClosure.csv";
+	public static final String ABECLOSEWAKALAHTUAJSON =  "jsonFiles\\" + ABECLOSEWAKALAHTUACSV.substring(9, Paths.ABECLOSEWAKALAHTUACSV.length()-4) + ".json";
+	public static final String ABEVERIFYWAKALAHTUACLOSUREJSON =  "jsonFiles\\" + ABEVERIFYWAKALAHTUACLOSURECSV.substring(9, Paths.ABEVERIFYWAKALAHTUACLOSURECSV.length()-4) + ".json";
+	
 	public static final String ABEOPENMURABAHAACCOUNTMURABAHAFINANCINGCSV  = "csvFiles\\ABEOpenMurabahaAccountMurabahaFinancing.csv";
 	public static final String ABEVERIFYMURABAHAACCOUNTOPENINGMURABAHAFINANCINGCSV  = "csvFiles\\ABEVerifyMurabahaAccountOpeningMurabahaFinancing.csv";
 	public static final String ABEOPENMURABAHAACCOUNTMURABAHAFINANCINGJSON =  "jsonFiles\\" + ABEOPENMURABAHAACCOUNTMURABAHAFINANCINGCSV.substring(9, Paths.ABEOPENMURABAHAACCOUNTMURABAHAFINANCINGCSV.length()-4) + ".json";

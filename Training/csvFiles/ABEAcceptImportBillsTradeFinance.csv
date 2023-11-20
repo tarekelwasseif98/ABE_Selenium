@@ -1,2 +1,2 @@
-tcId,summary,username,password,menu,billId,mixedBillId1,mixedBillId2,acceptanceDate,expectedResult,linkedTcid
-FCB-7001,TradeFinance_Import_Bills_Under_Collection_Accept_Lodge_Mixed Tenor_Local_EGP_ByMaker_R3,,Infy@123,,'1408IDC23000081,,'1408IDC23000083,,,FCB-7002
+"tcId","summary","username","password","menu","billId","mixedBillId1","mixedBillId2","acceptanceDate","expectedResult","linkedTcid"
+"FCB-7001","TradeFinance_Import_Bills_Under_Collection_Accept_Lodge_Mixed Tenor_Local_EGP_ByMaker_R3","PT69","Infy@123","AIIB ","","","'1408IDC23000086","","","FCB-7002"

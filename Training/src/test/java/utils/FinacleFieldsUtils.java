@@ -71,4 +71,6 @@ public class FinacleFieldsUtils {
     public static final String GURANATEETYPELOPER = "LOPER";
     public static final String GURANATEETYPEOCBID = "OCBID";
     public static final String PAYMENTSTATUSREADY = "Message Ready";
+    public static final String UNDERDOCUMENTRYCREDITNO = "no";
+
 }

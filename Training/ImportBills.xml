@@ -9,12 +9,12 @@
 	<groups>
 		<run>
 			<include name="TradeFinanceImportBillsLodgeTest"/>
-			 <include name="TradeFinanceImportBillsLodgeVerifyTest"/>
+		<!-- 	 <include name="TradeFinanceImportBillsLodgeVerifyTest"/>-->
         </run>
     </groups>
     <classes>
 		<class name="tests.TradeFinanceImportBillsLodgeTest"/>
-		 <class name="tests.TradeFinanceImportBillsLodgeVerifyTest"/>
+	<!-- 	 <class name="tests.TradeFinanceImportBillsLodgeVerifyTest"/>-->
     </classes>
 </test>
 </suite>

@@ -1,0 +1,4 @@
+tcId,summary,username,password,menu,cif,schemeCode,valueDate,depositPeriodMonths,depositPeriodDays,initialDepositAmount,profitCreditAccountId,repaymentAccountId,debitAccountId,expectedResult,reference,linkedTcid,closeLinkedTcid
+FCB-9862,IslamicBanking_MudarabahTUA_Open_IslamicTUAAccount_MTD2Y_ByMaker_A1,PT5,Infy@123,OITUDA,'06248951,1752,'15-11-2023,24,0,5000,'16060624895101023,'16060624895101023,'16060624895101023,successfully,'1752062489510100104,FCB-9863,FCB-9881
+FCB-9864,IslamicBanking_MudarabahTUA_Open_IslamicTUAAccount_MTD3Y_ByMaker_B1,PT5,Infy@123,OITUDA,'06248951,1750,'15-11-2023,36,0,5000,'16060624895101023,'16060624895101023,'16060624895101023,successfully,'1750062489510100115,FCB-9865,FCB-20081
+FCB-9866,IslamicBanking_MudarabahTUA_Open_IslamicTUAAccount_MTD5Y_ByMaker_C1,PT5,Infy@123,OITUDA,'06248951,1757,'15-11-2023,50,0,5000,'16060624895101023,'16060624895101023,'16060624895101023,successfully,'1757062489510100127,FCB-9867,FCB-20083

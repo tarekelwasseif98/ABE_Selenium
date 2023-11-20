@@ -1,0 +1,29 @@
+[
+ {
+  "tcId": "FCB-9882",
+  "summary": "IslamicBanking_Verify_Preclosure_MudarabahTUA_MTD2Y_RepaymentAccount_ByChecker_F2",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VITUDAC",
+  "accountId": "'1752062489510100104",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-20082",
+  "summary": "IslamicBanking_Verify_Preclosure_MudarabahTUA_MTD3Y_RepaymentAccount_ByChecker_P2",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VITUDAC",
+  "accountId": "'1750062489510100115",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-20084",
+  "summary": "IslamicBanking_Verify_Preclosure_MudarabahTUA_MTD5Y_RepaymentAccount_ByChecker_Q2",
+  "username": "PT8",
+  "password": "Infy@123",
+  "menu": "VITUDAC",
+  "accountId": "'1757062489510100127",
+  "expectedResult": "successfully"
+ }
+]

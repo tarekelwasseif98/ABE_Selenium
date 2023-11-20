@@ -12,6 +12,11 @@
             <include name="ABEVerifyMudarabahTUAOpeningTest"/>
             <include name="ABECloseMudarabahTUATest"/>
             <include name="ABEVerifyMudarabahTUAClosureTest"/>
+            <include name="ABEOpenWakalahTUATest"/>
+            <include name="ABEVerifyWakalahTUAOpeningTest"/>
+            <include name="ABECloseWakalahTUATest"/>
+            <include name="ABEVerifyWakalahTUAClosureTest"/>
+            
         </run>
     </groups>
     <classes>
@@ -19,6 +24,10 @@
 	 	<class name="tests.ABEVerifyMudarabahTUAOpeningTest"/>
 	 	<class name="tests.ABECloseMudarabahTUATest"/>
 	 	<class name="tests.ABEVerifyMudarabahTUAClosureTest"/>
+	 	<class name="tests.ABEOpenWakalahTUATest"/>
+	 	<class name="tests.ABEVerifyWakalahTUAOpeningTest"/>
+	 	<class name="tests.ABECloseWakalahTUATest"/>
+	 	<class name="tests.ABEVerifyWakalahTUAClosureTest"/>
     </classes>
 </test>
 </suite>

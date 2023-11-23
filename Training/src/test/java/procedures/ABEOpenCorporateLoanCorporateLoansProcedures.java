@@ -146,6 +146,6 @@ public class ABEOpenCorporateLoanCorporateLoansProcedures {
 				    							            	 }
 				    							             openCorporateLoanCorporateLoansPage.sendKeysExpiryDateTextField(data.getExpiryDate())
 				    							             									 .pressSubmitButton()
-				    							             									  .saveAccountId(data.getLinkedTcid());				    							                    
+				    							             									  .saveAccountId(data.getLinkedTcid(), data.getModifyLinkedTcid(), data.getDisburseLinkedTcid());				    							                    
 		}
 	}

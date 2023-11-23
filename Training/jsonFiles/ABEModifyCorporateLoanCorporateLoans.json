@@ -1,0 +1,58 @@
+[
+ {
+  "tcId": "FCB-12012",
+  "summary": "Assets_CLA_Corporate_Modify_LoanInterest_EditStartDateField_EGP_ByMaker_E1",
+  "username": "PT17",
+  "password": "Infy@123",
+  "menu": "MOCLAV",
+  "accountId": "'2292065788240100899 ",
+  "installmentStartDate": "'17-11-2023",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12021",
+  "summary": "Assets_CLA_Corporate_ModifyBeforeVerification_UnsecuredLoan_EditLoanAmtField_EGP_ByMaker_F1",
+  "username": "PT17",
+  "password": "Infy@123",
+  "menu": "MOCLAV",
+  "accountId": "'2293065788240100904 ",
+  "loanAmount": 15000,
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12023",
+  "summary": "Assets_CLA_Corporate_ModifyBeforeVerification_UnsecuredLoan_EditNumberOfInstallmentsField_EGP_ByMaker_G1",
+  "username": "PT17",
+  "password": "Infy@123",
+  "menu": "MOCLAV",
+  "accountId": "'2294065788240100912 ",
+  "numberOfInstallments": 6,
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12025",
+  "summary": "Assets_CLA_Corporate_ModifyBeforeVerification_UnsecuredLoan_EditInstallmentsFrequencyField_EGP_ByMaker_H1",
+  "username": "PT17",
+  "password": "Infy@123",
+  "menu": "MOCLAV",
+  "accountId": "'2295065788240100920 ",
+  "equatedInstallment": "no",
+  "numberOfInstallments": 1,
+  "installmentFrequency": "bullet",
+  "installmentStartDate": "'17-11-2024",
+  "date": 17,
+  "interestFrequency": "monthly",
+  "interestStartDate": "'17-10-2023",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12027",
+  "summary": "Assets_CLA_Corporate_ModifyBeforeVerification_UnsecuredLoan_EditRepricingPlanField_EGP_ByMaker_I1",
+  "username": "PT17",
+  "password": "Infy@123",
+  "menu": "MOCLAV",
+  "accountId": "'2296065788240100938 ",
+  "interestPlan": "Floating up to Maturity",
+  "expectedResult": "successfully"
+ }
+]

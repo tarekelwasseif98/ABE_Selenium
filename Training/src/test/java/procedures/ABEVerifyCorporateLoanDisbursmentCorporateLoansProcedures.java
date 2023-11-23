@@ -6,15 +6,14 @@ import pageobjects.ABEVerifyCorporateLoanDisbursmentCorporateLoansPage;
 
 public class ABEVerifyCorporateLoanDisbursmentCorporateLoansProcedures {
 	
-	public static void ABEVerifyCorporateLoanDisbursmentCorporateLoans(WebDriver driver, ABEVerifyCorporateLoanDisbursmentCorporateLoansData data) throws Exception {
+	public static void verifyCorporateLoanDisbursmentCorporateLoans(WebDriver driver, ABEVerifyCorporateLoanDisbursmentCorporateLoansData data) throws Exception {
 		ABEVerifyCorporateLoanDisbursmentCorporateLoansPage ABEVerifyCorporateLoanDisbursmentCorporateLoansByChecker = new ABEVerifyCorporateLoanDisbursmentCorporateLoansPage(driver);
 		ABEVerifyCorporateLoanDisbursmentCorporateLoansByChecker.sendKeysSearchBarTextField(data.getMenu())
-					 .switchFormAreaFrame()
-					 .sendKeysAcidTextField(data.getAccountId())
-					 .pressDrawdownDetailsContinueButton()
-					 .pressAdditionalDetailsContinueButton	()
-					 .pressdrawdownModeDetailsContinueButton()
-					 .pressSubmitButton()
-					 .saveTransactionId(data.getTcId());
+					 											 .switchFormAreaFrame()
+					 											  .sendKeysAccountIdTextField(data.getAccountId())
+					 											   .pressDrawdownDetailsContinueButton()
+					 											    .pressAdditionalDetailsContinueButton()
+					 											     .pressDrawdownModeDetailsContinueButton()
+					 											      .pressSubmitButton();
 		}
-}
+	}

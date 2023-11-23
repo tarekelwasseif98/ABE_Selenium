@@ -1,0 +1,92 @@
+[
+ {
+  "tcId": "FCB-12040",
+  "summary": "Assets_CLA_Corporate_Verify_ManualDisbursement_Full_BackDated_Gross_UnsecuredLoan_EGP_ByChecker_M2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLDR",
+  "accountId": "''2292065788240100899 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12042",
+  "summary": "Assets_CLA_Corporate_Verify_ManualDisbursement_Full_CurrentDate_Net_UnsecuredLoan_EGP_ByChecker_N2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLDR",
+  "accountId": "''2293065788240100904 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12044",
+  "summary": "Assets_CLA_Corporate_Verify_ManualDisbursement_Full_UnsecuredLoan_USD_ByChecker_O2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLDR",
+  "accountId": "''2294065788240100912 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12046",
+  "summary": "Assets_CLA_Corporate_Verify_ManualDisbursement_Full_FutureDate_UnsecuredLoan_EGP_ByChecker_P2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLDR",
+  "accountId": "''2295065788240100920 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12048",
+  "summary": "Assets_CLA_Corporate_Verify_ManualDisbursement_Partial_BackDated_Gross_UnsecuredLoan_EGP_ByChecker_Q2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLDR",
+  "accountId": "''2296065788240100938 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12050",
+  "summary": "Assets_CLA_Corporate_Verify_ManualDisbursement_Partial_CurrentDate_Net_UnsecuredLoan_EGP_ByChecker_R2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLDR",
+  "accountId": "''2292065788240100941 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12052",
+  "summary": "Assets_CLA_Corporate_Verify_ManualDisbursement_Partial_FutureDate_UnsecuredLoan_EGP_ByChecker_S2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLDR",
+  "accountId": "''2293065788240100959 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-22651",
+  "summary": "Assets_CLA_Corporate_Verify_ManualDisbursement_Full_CurrentDate_Net_UnsecuredLoan_EGP_ByChecker",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLDR",
+  "accountId": "''2294065788240100967 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-22652",
+  "summary": "Assets_CLA_Corporate_Verify_ManualDisbursement_Full_CurrentDate_Net_UnsecuredLoan_EGP_ByChecker",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLDR",
+  "accountId": "''2295065788240100975 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-22653",
+  "summary": "Assets_CLA_Corporate_Verify_ManualDisbursement_Full_CurrentDate_Net_UnsecuredLoan_EGP_ByChecker",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLDR",
+  "accountId": "''2296065788240100983 ",
+  "expectedResult": "successfully"
+ }
+]

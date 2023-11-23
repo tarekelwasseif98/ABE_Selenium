@@ -47,8 +47,10 @@ public class Paths {
 	public static final String ABEVERIFYMURABAHAACCOUNTPAYOFFMURABAHAFINANCINGJSON =  "jsonFiles\\" + ABEVERIFYMURABAHAACCOUNTPAYOFFMURABAHAFINANCINGCSV.substring(9, Paths.ABEVERIFYMURABAHAACCOUNTPAYOFFMURABAHAFINANCINGCSV.length()-4) + ".json";
 	
 	public static final String ABEOPENCORPORATELOANCORPORATELOANSCSV  = "csvFiles\\ABEOpenCorporateLoanCorporateLoans.csv";
+	public static final String ABEMODIFYCORPORATELOANCORPORATELOANSCSV  = "csvFiles\\ABEModifyCorporateLoanCorporateLoans.csv";
 	public static final String ABEVERIFYCORPORATELOANCORPORATELOANSCSV  = "csvFiles\\ABEVerifyCorporateLoanCorporateLoans.csv";
 	public static final String ABEOPENCORPORATELOANCORPORATELOANSJSON =  "jsonFiles\\" + ABEOPENCORPORATELOANCORPORATELOANSCSV.substring(9, Paths.ABEOPENCORPORATELOANCORPORATELOANSCSV.length()-4) + ".json";
+	public static final String ABEMODIFYCORPORATELOANCORPORATELOANSJSON =  "jsonFiles\\" + ABEMODIFYCORPORATELOANCORPORATELOANSCSV.substring(9, Paths.ABEMODIFYCORPORATELOANCORPORATELOANSCSV.length()-4) + ".json";
 	public static final String ABEVERIFYCORPORATELOANCORPORATELOANSJSON =  "jsonFiles\\" + ABEVERIFYCORPORATELOANCORPORATELOANSCSV.substring(9, Paths.ABEVERIFYCORPORATELOANCORPORATELOANSCSV.length()-4) + ".json";
 	
 	public static final String ABELODGEEXPORTBILLSTRADEFINANCECSV  = "csvFiles\\ABELodgeExportBillsTradeFinance.csv";
@@ -172,8 +174,8 @@ public class Paths {
 	public static final String ABECREATESTOJSON =  "jsonFiles\\" + ABECREATESTOCSV.substring(9, Paths.ABECREATESTOCSV.length()-4) + ".json";
 	public static final String ABEVERIFYSTOJSON = "jsonFiles\\" + ABEVERIFYSTOCSV.substring(9, Paths.ABEVERIFYSTOCSV.length()-4) + ".json";
 	
-	public static final String ABEDISBURSECORPORATELOANCORPORATELOANSCSV  = "csvFiles\\ABEOpenCorporateLoanCorporateLoans.csv";
-	public static final String ABEVERIFYCORPORATELOANDISBURSMENTCORPORATELOANSCSV  = "csvFiles\\ABEVerifyCorporateLoanCorporateLoans.csv";
+	public static final String ABEDISBURSECORPORATELOANCORPORATELOANSCSV  = "csvFiles\\ABEDisburseCorporateLoanCorporateLoans.csv";
+	public static final String ABEVERIFYCORPORATELOANDISBURSMENTCORPORATELOANSCSV  = "csvFiles\\ABEVerifyCorporateLoanDisbursmentCorporateLoans.csv";
 	public static final String ABEDISBURSECORPORATELOANCORPORATELOANSJSON =  "jsonFiles\\" + ABEDISBURSECORPORATELOANCORPORATELOANSCSV.substring(9, Paths.ABEDISBURSECORPORATELOANCORPORATELOANSCSV.length()-4) + ".json";
 	public static final String ABEVERIFYCORPORATELOANDISBURSMENTCORPORATELOANSJSON =  "jsonFiles\\" + ABEVERIFYCORPORATELOANDISBURSMENTCORPORATELOANSCSV.substring(9, Paths.ABEVERIFYCORPORATELOANDISBURSMENTCORPORATELOANSCSV.length()-4) + ".json";
 	

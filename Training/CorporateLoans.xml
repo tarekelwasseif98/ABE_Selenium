@@ -9,12 +9,18 @@
 	<groups>
 		<run>
 			<include name="ABEOpenCorporateLoanCorporateLoansTest"/>
+			<include name="ABEModifyCorporateLoanCorporateLoansTest"/>
             <include name="ABEVerifyCorporateLoanCorporateLoansTest"/>
+            <include name="ABEDisburseCorporateLoanCorporateLoansTest"/>
+            <include name="ABEVerifyCorporateLoanDisbursmentCorporateLoansTest"/>
         </run>
     </groups>
     <classes>
 		<class name="tests.ABEOpenCorporateLoanCorporateLoansTest"/>
+		<class name="tests.ABEModifyCorporateLoanCorporateLoansTest"/>
 	 	<class name="tests.ABEVerifyCorporateLoanCorporateLoansTest"/>
+	 	<class name="tests.ABEDisburseCorporateLoanCorporateLoansTest"/>
+	 	<class name="tests.ABEVerifyCorporateLoanDisbursmentCorporateLoansTest"/>
     </classes>
 </test>
 </suite>

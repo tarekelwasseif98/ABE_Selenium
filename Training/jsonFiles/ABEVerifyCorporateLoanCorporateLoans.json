@@ -5,7 +5,7 @@
   "username": "PT18",
   "password": "Infy@123",
   "menu": "VCLA",
-  "accountId": "'2292065788240100394 ",
+  "accountId": "'2292065788240100941 ",
   "expectedResult": "successfully"
  },
  {
@@ -14,7 +14,7 @@
   "username": "PT18",
   "password": "Infy@123",
   "menu": "VCLA",
-  "accountId": "'2293065788240100409 ",
+  "accountId": "'2293065788240100959 ",
   "expectedResult": "successfully"
  },
  {
@@ -23,7 +23,7 @@
   "username": "PT18",
   "password": "Infy@123",
   "menu": "VCLA",
-  "accountId": "'2294065788240100417 ",
+  "accountId": "'2294065788240100967 ",
   "expectedResult": "successfully"
  },
  {
@@ -32,7 +32,7 @@
   "username": "PT18",
   "password": "Infy@123",
   "menu": "VCLA",
-  "accountId": "'2295065788240100425 ",
+  "accountId": "'2295065788240100975 ",
   "expectedResult": "successfully"
  },
  {
@@ -41,7 +41,52 @@
   "username": "PT18",
   "password": "Infy@123",
   "menu": "VCLA",
-  "accountId": "'2296065788240100433 ",
+  "accountId": "'2296065788240100983 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12013",
+  "summary": "Assets_CLA_Corporate_Verify_ModifedLoanInterest_t_EditStartDateField_EGP_ByChecker_E2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLA",
+  "accountId": "'2292065788240100899 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12022",
+  "summary": "Assets_CLA_Corporate_Verify_ModifiedBeforeVerification_UnsecuredLoan_EditLoanAmtField_EGP_ByChecker_F2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLA",
+  "accountId": "'2293065788240100904 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12024",
+  "summary": "Assets_CLA_Corporate_Verify_ModifiedBeforeVerification_UnsecuredLoan_EditNumberOfInstallmentsField_EGP_ByChecker_G2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLA",
+  "accountId": "'2294065788240100912 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12026",
+  "summary": "Assets_CLA_Corporate_Verify_ModifiedBeforeVerification_UnsecuredLoan_EditInstallmentsFrequencyField_EGP_ByChecker_H2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLA",
+  "accountId": "'2295065788240100920 ",
+  "expectedResult": "successfully"
+ },
+ {
+  "tcId": "FCB-12028",
+  "summary": "Assets_CLA_Corporate_Verify_ModifiedBeforeVerification_UnsecuredLoan_EditRepricingPlanField_EGP_ByChecker_I2",
+  "username": "PT18",
+  "password": "Infy@123",
+  "menu": "VCLA",
+  "accountId": "'2296065788240100938 ",
   "expectedResult": "successfully"
  }
 ]

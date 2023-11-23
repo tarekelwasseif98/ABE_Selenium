@@ -1,3 +1,11 @@
-tcId,summary,username,password,menu,accountId,valueDate,valueDateStatus,disbursmentType,disbursmentAccount,expectedResult,linkedTcId
-FCB-12810,Assets_LAA_Retail_Disburse_Manual_Full_BackDated_Net_UnsecuredLoan_EGP_ByMaker_BP1,ABE45,Infy@123,PCLD,'30190111111101321780,7112023,FutureValueDate,Net,'100901111111013944,The loan disbursement is performed successfully.,FCB-12811
-FCB-12810,Assets_LAA_Retail_Disb,ABE45,Infy@123,PCLD,'30190111111101321780,5112023,CurrentValueDate,Gross,'100901111111013944,The loan disbursement is performed successfully.,FCB-12811
+tcId,summary,username,password,menu,accountId,valueDate,disbursmentType,disbursmentAccount,expectedResult,linkedTcId
+FCB-12039,Assets_CLA_Corporate_Disburse_Manual_Full_BackDated_Gross_UnsecuredLoan_EGP_ByMaker_M1,PT17,Infy@123,PCLD,'2292065788240100899 ,'17-10-2023,Gross,'10010657882401001,successfully,FCB-12040
+FCB-12041,Assets_CLA_Corporate_Disburse_Manual_Full_CurrentDate_Net_UnsecuredLoan_EGP_ByMaker_N1,PT17,Infy@123,PCLD,'2293065788240100904 ,'17-10-2023,Net,'10010657882401001,successfully,FCB-12042
+FCB-12043,Assets_CLA_Corporate_Disburse_Manual_Full_UnsecuredLoan_USD_ByMaker_O1,PT17,Infy@123,PCLD,'2294065788240100912 ,'17-10-2023,Net,'10010657882401001,successfully,FCB-12044
+FCB-12045,Assets_CLA_Corporate_Disburse_Manual_Full_FutureDate_UnsecuredLoan_EGP_ByMaker_P1,PT17,Infy@123,PCLD,'2295065788240100920 ,'17-10-2023,Net,'10010657882401001,successfully,FCB-12046
+FCB-12047,Assets_CLA_Corporate_Disburse_Manual_Partial_BackDated_Gross_UnsecuredLoan_EGP_ByMaker_Q1,PT17,Infy@123,PCLD,'2296065788240100938 ,'17-10-2023,Gross,'10010657882401001,successfully,FCB-12048
+FCB-12049,Assets_CLA_Corporate_Disburse_Manual_Partial_CurrentDate_Net_UnsecuredLoan_EGP_ByMaker_R1,PT17,Infy@123,PCLD,'2292065788240100941 ,'17-10-2023,Net,'10010657882401001,successfully,FCB-12050
+FCB-12051,Assets_CLA_Corporate_Disburse_Manual_Partial_FutureDate_UnsecuredLoan_EGP_ByMaker_S1,PT17,Infy@123,PCLD,'2293065788240100959 ,'17-10-2023,Net,'10010657882401001,successfully,FCB-12052
+FCB-22648,Assets_CLA_Corporate_Disburse_Manual_Full_CurrentDate_Net_UnsecuredLoan_EGP_ByMaker,PT17,Infy@123,PCLD,'2294065788240100967 ,'17-10-2023,Net,'10010657882401001,successfully,FCB-22651
+FCB-22649,Assets_CLA_Corporate_Disburse_Manual_Full_CurrentDate_Net_UnsecuredLoan_EGP_ByMaker,PT17,Infy@123,PCLD,'2295065788240100975 ,'17-10-2023,Net,'10010657882401001,successfully,FCB-22652
+FCB-22650,Assets_CLA_Corporate_Disburse_Manual_Full_CurrentDate_Net_UnsecuredLoan_EGP_ByMaker,PT17,Infy@123,PCLD,'2296065788240100983 ,'17-10-2023,Net,'10010657882401001,successfully,FCB-22653

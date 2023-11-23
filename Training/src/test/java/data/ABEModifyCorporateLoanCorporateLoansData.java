@@ -1,17 +1,17 @@
 package data;
 
-public class ABEOpenCorporateLoanCorporateLoansData {
+public class ABEModifyCorporateLoanCorporateLoansData {
 	private String tcId;
 	private String summary;
 	private String username;
 	private String password;
 	private String menu;
-	private String cif;
-	private String schemeCode;
+	private String accountId;
 	private String accountOpeningDate;
 	private String loanAmount;
 	private String loanPeriodMonths;
 	private String loanPeriodDays;
+	private String interestPlan;
 	private String equatedInstallment;
 	private String numberOfInstallments;
 	private String installmentFrequency;
@@ -26,10 +26,6 @@ public class ABEOpenCorporateLoanCorporateLoansData {
 	private String limitIdSuffix;
 	private String drawingPowerIndicator;
 	private String expectedResult;
-	private String reference;
-	private String linkedTcid;
-	private String modifyLinkedTcid;
-	private String disburseLinkedTcid;
 	
 	public String getTcId() {
 		return tcId;
@@ -71,20 +67,12 @@ public class ABEOpenCorporateLoanCorporateLoansData {
 		this.menu = menu;
 	}
 	
-	public String getCif() {
-		return cif;
+	public String getAccountId() {
+		return accountId;
 	}
 	
-	public void setCif(String cif) {
-		this.cif = cif;
-	}
-	
-	public String getSchemeCode() {
-		return schemeCode;
-	}
-	
-	public void setSchemeCode(String schemeCode) {
-		this.schemeCode = schemeCode;
+	public void setAccountId(String accountId) {
+		this.accountId = accountId;
 	}
 	
 	public String getAccountOpeningDate() {
@@ -117,6 +105,14 @@ public class ABEOpenCorporateLoanCorporateLoansData {
 	
 	public void setLoanPeriodDays(String loanPeriodDays) {
 		this.loanPeriodDays = loanPeriodDays;
+	}
+	
+	public String getInterestPlan() {
+		return interestPlan;
+	}
+
+	public void setInterestPlan(String interestPlan) {
+		this.interestPlan = interestPlan;
 	}
 	
 	public String getEquatedInstallment() {
@@ -230,51 +226,19 @@ public class ABEOpenCorporateLoanCorporateLoansData {
 	public void setExpectedResult(String expectedResult) {
 		this.expectedResult = expectedResult;
 	}
-	
-	public String getReference() {
-		return reference;
-	}
-	
-	public void setReference(String reference) {
-		this.reference = reference;
-	}
-	
-	public String getLinkedTcid() {
-		return linkedTcid;
-	}
-	
-	public void setLinkedTcid(String linkedTcid) {
-		this.linkedTcid = linkedTcid;
-	}
-
-	public String getModifyLinkedTcid() {
-		return modifyLinkedTcid;
-	}
-
-	public void setModifyLinkedTcid(String modifyLinkedTcid) {
-		this.modifyLinkedTcid = modifyLinkedTcid;
-	}
-	
-	public String getDisburseLinkedTcid() {
-		return disburseLinkedTcid;
-	}
-
-	public void setDisburseLinkedTcid(String disburseLinkedTcid) {
-		this.disburseLinkedTcid = disburseLinkedTcid;
-	}
 
 	@Override
 	public String toString() {
-		return "ABEOpenCorporateLoanCorporateLoansData [tcId=" + tcId + ", summary=" + summary + ", username="
-				+ username + ", password=" + password + ", menu=" + menu + ", cif=" + cif + ", schemeCode=" + schemeCode
+		return "ABEModifyCorporateLoanCorporateLoansData [tcId=" + tcId + ", summary=" + summary + ", username="
+				+ username + ", password=" + password + ", menu=" + menu + ", accountId=" + accountId
 				+ ", accountOpeningDate=" + accountOpeningDate + ", loanAmount=" + loanAmount + ", loanPeriodMonths="
-				+ loanPeriodMonths + ", loanPeriodDays=" + loanPeriodDays + ", equatedInstallment=" + equatedInstallment
-				+ ", numberOfInstallments=" + numberOfInstallments + ", installmentFrequency=" + installmentFrequency
-				+ ", installmentStartDate=" + installmentStartDate + ", date=" + date + ", interestFrequency="
-				+ interestFrequency + ", interestStartDate=" + interestStartDate + ", operativeAccountId="
-				+ operativeAccountId + ", expiryDate=" + expiryDate + ", documentDate=" + documentDate
-				+ ", limitIdPrefix=" + limitIdPrefix + ", limitIdSuffix=" + limitIdSuffix + ", drawingPowerIndicator="
-				+ drawingPowerIndicator + ", expectedResult=" + expectedResult + ", linkedTcid=" + linkedTcid
-				+ ", modifyLinkedTcid=" + modifyLinkedTcid + ", disburseLinkedTcid=" + disburseLinkedTcid + "]";
+				+ loanPeriodMonths + ", loanPeriodDays=" + loanPeriodDays + ", interestPlan=" + interestPlan
+				+ ", equatedInstallment=" + equatedInstallment + ", numberOfInstallments=" + numberOfInstallments
+				+ ", installmentFrequency=" + installmentFrequency + ", installmentStartDate=" + installmentStartDate
+				+ ", date=" + date + ", interestFrequency=" + interestFrequency + ", interestStartDate="
+				+ interestStartDate + ", operativeAccountId=" + operativeAccountId + ", expiryDate=" + expiryDate
+				+ ", documentDate=" + documentDate + ", limitIdPrefix=" + limitIdPrefix + ", limitIdSuffix="
+				+ limitIdSuffix + ", drawingPowerIndicator=" + drawingPowerIndicator + ", expectedResult="
+				+ expectedResult + "]";
 	}
 }

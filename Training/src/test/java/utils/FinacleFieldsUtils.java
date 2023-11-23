@@ -72,5 +72,12 @@ public class FinacleFieldsUtils {
     public static final String GURANATEETYPEOCBID = "OCBID";
     public static final String PAYMENTSTATUSREADY = "Message Ready";
     public static final String UNDERDOCUMENTRYCREDITNO = "no";
-
+    public static final String INTERESTPLANRELATIVELYPEGGEDTOCOLLATERAL = "Relatively Pegged to Collateral";
+    public static final String INTERESTPLANFIXEDUPTOMATURITYDATE = "Fixed up to Maturity Date";
+    public static final String INTERESTPLANFIXEDWITHREPRICINGANDFULLYFLOATING = "Fixed with Repricing and Fully Floating";
+    public static final String INTERESTPLANFIXEDFORATERMANDFLOATINGWITHREPRICING = "Fixed for a Term and Floating with Repricing";
+    public static final String INTERESTPLANFIXEDTILLMATURITYWITHREPRICING = "Fixed till Maturity with Repricing";
+    public static final String INTERESTPLANFIXEDANDFLOATINGWITHOUTREPRICING = "Fixed and Floating without Repricing";
+    public static final String INTERESTPLANFIXEDANDFLOATINGWITHREPRICING = "Fixed and Floating with Repricing";
+    public static final String INTERESTPLANFLOATINGUPTOMATURITY = "Floating up to Maturity";
 }

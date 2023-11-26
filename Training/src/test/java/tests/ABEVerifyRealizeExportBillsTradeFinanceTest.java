@@ -49,7 +49,7 @@ public class ABEVerifyRealizeExportBillsTradeFinanceTest {
 	}
 	
 	@Test(dataProvider = "Verify Realize Export Bills Trade Finance DataProvider", dataProviderClass = ABEVerifyRealizeExportBillsTradeFinanceTest.class)
-	public void verifyPurchaseExportBillsTradeFinanceTest(ABEVerifyRealizeExportBillsTradeFinanceData data) throws Exception {
+	public void verifyRealizeExportBillsTradeFinanceTest(ABEVerifyRealizeExportBillsTradeFinanceData data) throws Exception {
 		Allure.getLifecycle().updateTestCase(tc -> tc.setName("Test Case ID: " + data.getTcId()));
 		Allure.parameter("Data: ", data.toString());
         ABEVerifyExportBillsTradeFinanceProcedures.verifyRealizeExportBillsTradeFinance(driver, data);

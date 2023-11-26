@@ -155,7 +155,7 @@
     		 <version>3.0.0-M4</version>
     		 <configuration>
 				 <suiteXmlFiles>
-					 <suiteXmlFile>Batch_CorporateLoans_MurabahaFinancing.xml</suiteXmlFile>
+					 <suiteXmlFile>.xml</suiteXmlFile>
 				</suiteXmlFiles>
 				<properties>
 					<property>
